@@ -1,0 +1,152 @@
+[
+  {
+    "id": "birkebeinerrittet",
+    "name": "Birkebeinerrittet",
+    "officialDate": "2025-08-23",
+    "distance": 88,
+    "region": "Innlandet",
+    "url": "https://birkebeiner.no/sykkelritt/",
+    "waypoints": [
+      { "label": "Start – Rena", "lat": 61.133, "lon": 11.377, "altitude": 256 },
+      { "label": "25% – Høsbjør", "lat": 61.05, "lon": 11.12, "altitude": 620 },
+      { "label": "50% – Sjusjøen", "lat": 61.248, "lon": 10.578, "altitude": 900 },
+      { "label": "75% – Nordseter", "lat": 61.18, "lon": 10.5, "altitude": 710 },
+      { "label": "Mål – Lillehammer", "lat": 61.115, "lon": 10.466, "altitude": 185 }
+    ]
+  },
+  {
+    "id": "styrkeproven",
+    "name": "Styrkeprøven",
+    "officialDate": "2025-06-14",
+    "distance": 540,
+    "region": "Trøndelag / Innlandet",
+    "url": "https://styrkeproven.no/",
+    "waypoints": [
+      { "label": "Start – Trondheim", "lat": 63.431, "lon": 10.395, "altitude": 10 },
+      { "label": "25% – Støren", "lat": 62.966, "lon": 10.297, "altitude": 50 },
+      { "label": "50% – Røros", "lat": 62.574, "lon": 11.386, "altitude": 628 },
+      { "label": "75% – Alvdal", "lat": 62.115, "lon": 10.626, "altitude": 480 },
+      { "label": "Mål – Lillehammer", "lat": 61.115, "lon": 10.466, "altitude": 185 }
+    ]
+  },
+  {
+    "id": "jotunheimen-rundt",
+    "name": "Jotunheimen Rundt",
+    "officialDate": "2025-07-05",
+    "distance": 322,
+    "region": "Innlandet / Vestland",
+    "url": "https://jotunheimenrundt.no/",
+    "waypoints": [
+      { "label": "Start – Lom", "lat": 61.838, "lon": 8.566, "altitude": 380 },
+      { "label": "25% – Sognefjell", "lat": 61.545, "lon": 8.22, "altitude": 1434 },
+      { "label": "50% – Øvre Årdal", "lat": 61.31, "lon": 7.8, "altitude": 50 },
+      { "label": "75% – Fagernes", "lat": 60.989, "lon": 9.233, "altitude": 300 },
+      { "label": "Mål – Lom", "lat": 61.838, "lon": 8.566, "altitude": 380 }
+    ]
+  },
+  {
+    "id": "nordsjorittet",
+    "name": "Nordsjørittet",
+    "officialDate": "2025-05-31",
+    "distance": 91,
+    "region": "Rogaland",
+    "url": "https://nordsjorittet.no/",
+    "waypoints": [
+      { "label": "Start – Egersund", "lat": 58.452, "lon": 6.002, "altitude": 10 },
+      { "label": "25% – Hellvik", "lat": 58.418, "lon": 5.844, "altitude": 60 },
+      { "label": "50% – Hauge i Dalane", "lat": 58.34, "lon": 6.016, "altitude": 50 },
+      { "label": "75% – Sokndal", "lat": 58.329, "lon": 6.175, "altitude": 80 },
+      { "label": "Mål – Flekkefjord", "lat": 58.298, "lon": 6.668, "altitude": 10 }
+    ]
+  },
+  {
+    "id": "grenserittet",
+    "name": "Grenserittet",
+    "officialDate": "2025-08-09",
+    "distance": 160,
+    "region": "Innlandet / Viken",
+    "url": "https://grenserittet.no/",
+    "waypoints": [
+      { "label": "Start – Kongsvinger", "lat": 60.192, "lon": 12.003, "altitude": 140 },
+      { "label": "25% – Magnor", "lat": 60.035, "lon": 12.215, "altitude": 200 },
+      { "label": "50% – Eda (Sverige)", "lat": 59.85, "lon": 12.35, "altitude": 170 },
+      { "label": "75% – Charlottenberg", "lat": 59.884, "lon": 12.274, "altitude": 100 },
+      { "label": "Mål – Kongsvinger", "lat": 60.192, "lon": 12.003, "altitude": 140 }
+    ]
+  },
+  {
+    "id": "valdresrittet",
+    "name": "Valdresrittet",
+    "officialDate": "2025-07-19",
+    "distance": 130,
+    "region": "Innlandet",
+    "url": "https://valdresrittet.no/",
+    "waypoints": [
+      { "label": "Start – Fagernes", "lat": 60.989, "lon": 9.233, "altitude": 300 },
+      { "label": "25% – Beitostølen", "lat": 61.243, "lon": 8.907, "altitude": 900 },
+      { "label": "50% – Filefjell", "lat": 61.101, "lon": 8.567, "altitude": 1020 },
+      { "label": "75% – Bagn", "lat": 60.817, "lon": 9.559, "altitude": 280 },
+      { "label": "Mål – Fagernes", "lat": 60.989, "lon": 9.233, "altitude": 300 }
+    ]
+  },
+  {
+    "id": "mjosrittet",
+    "name": "Mjøsrittet",
+    "officialDate": "2025-06-28",
+    "distance": 167,
+    "region": "Innlandet",
+    "url": "https://mjosrittet.no/",
+    "waypoints": [
+      { "label": "Start – Hamar", "lat": 60.794, "lon": 11.067, "altitude": 130 },
+      { "label": "25% – Gjøvik", "lat": 60.795, "lon": 10.692, "altitude": 130 },
+      { "label": "50% – Lillehammer", "lat": 61.115, "lon": 10.466, "altitude": 185 },
+      { "label": "75% – Moelv", "lat": 60.935, "lon": 10.703, "altitude": 130 },
+      { "label": "Mål – Hamar", "lat": 60.794, "lon": 11.067, "altitude": 130 }
+    ]
+  },
+  {
+    "id": "haugastol-bergen",
+    "name": "Haugastøl–Bergen",
+    "officialDate": "2025-07-12",
+    "distance": 182,
+    "region": "Vestland",
+    "url": "https://haugastol-bergen.no/",
+    "waypoints": [
+      { "label": "Start – Haugastøl", "lat": 60.507, "lon": 7.857, "altitude": 988 },
+      { "label": "25% – Finse", "lat": 60.594, "lon": 7.524, "altitude": 1222 },
+      { "label": "50% – Voss", "lat": 60.628, "lon": 6.418, "altitude": 60 },
+      { "label": "75% – Dale", "lat": 60.586, "lon": 5.841, "altitude": 20 },
+      { "label": "Mål – Bergen", "lat": 60.391, "lon": 5.322, "altitude": 10 }
+    ]
+  },
+  {
+    "id": "rallarvegen",
+    "name": "Rallarvegen",
+    "officialDate": "2025-07-26",
+    "distance": 82,
+    "region": "Vestland / Viken",
+    "url": "https://rallarvegen.com/",
+    "waypoints": [
+      { "label": "Start – Haugastøl", "lat": 60.507, "lon": 7.857, "altitude": 988 },
+      { "label": "25% – Finse", "lat": 60.594, "lon": 7.524, "altitude": 1222 },
+      { "label": "50% – Hallingskeid", "lat": 60.644, "lon": 7.218, "altitude": 1130 },
+      { "label": "75% – Myrdal", "lat": 60.732, "lon": 7.11, "altitude": 867 },
+      { "label": "Mål – Flåm", "lat": 60.863, "lon": 7.117, "altitude": 2 }
+    ]
+  },
+  {
+    "id": "lysebotn-opp",
+    "name": "Lysebotn Opp",
+    "officialDate": "2025-05-17",
+    "distance": 14,
+    "region": "Rogaland",
+    "url": "https://lysebotnopp.no/",
+    "waypoints": [
+      { "label": "Start – Lysebotn", "lat": 59.058, "lon": 6.647, "altitude": 0 },
+      { "label": "25% – Svingen 1", "lat": 59.069, "lon": 6.638, "altitude": 250 },
+      { "label": "50% – Midtvegs", "lat": 59.077, "lon": 6.625, "altitude": 500 },
+      { "label": "75% – Svingen 2", "lat": 59.083, "lon": 6.611, "altitude": 700 },
+      { "label": "Mål – Øygardsstøl", "lat": 59.092, "lon": 6.596, "altitude": 985 }
+    ]
+  }
+]
