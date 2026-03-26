@@ -8,7 +8,7 @@ Pick a Norwegian cycling race, choose a date, and get weather conditions at ~5 k
 
 ## Features
 
-- Browse 10 well-known Norwegian sykkelritt with official race dates
+- Browse 18 well-known Norwegian sykkelritt with official race dates
 - Select any date to see weather along the route
 - **Forecast mode** — live data from Open-Meteo when the date is ≤ 16 days away
 - **Climate average mode** — 10-year historical average (2015–2024) for dates further in the future
@@ -19,9 +19,17 @@ Pick a Norwegian cycling race, choose a date, and get weather conditions at ~5 k
 | Ritt | Distance | Region |
 |---|---|---|
 | Birkebeinerrittet | 88 km | Innlandet |
+| GravelBirken | 92 km | Innlandet |
+| HalvBirken Sykkel | 46 km | Innlandet |
 | Styrkeprøven | 540 km | Trøndelag / Innlandet |
 | Jotunheimen Rundt | 322 km | Innlandet / Vestland |
-| Nordsjørittet | 91 km | Rogaland |
+| Bergen-Voss | 78 km | Vestland |
+| Nordsjørittet (Egersund–Flekkefjord) | 91 km | Rogaland |
+| Nordsjørittet (Jæren, Egersund–Sandnes) | 88 km | Rogaland |
+| L'Étape Trondheim | 130 km | Trøndelag |
+| Nordmarka Rundt | 148 km | Oslo / Viken |
+| Color Line Tour | 210 km | Agder |
+| Tyrifjorden Rundt | 145 km | Viken |
 | Grenserittet | 160 km | Innlandet / Viken |
 | Valdresrittet | 130 km | Innlandet |
 | Mjøsrittet | 167 km | Innlandet |
@@ -89,7 +97,7 @@ src/
 
 - [ ] **Map view** — Leaflet map with waypoint pins on the ritt detail page
 - [ ] **GPX upload** — derive waypoints automatically from a GPX file
-- [ ] **More ritt** — expand beyond 10; sync with [sykling.no terminliste](https://sykling.no/sykkelritt/terminliste/) each season
+- [x] **More ritt** — expanded to 18; sync with [sykling.no terminliste](https://sykling.no/sykkelritt/terminliste/) each season
 - [ ] **Langrenn** — add cross-country ski races (e.g. Birkebeinerrennet, Holmenkollmarsjen) with a `type` field in the data model
 - [ ] **Copy link button** — explicit share button alongside the existing URL-based state
 - [ ] **Comparison mode** — show official date vs custom date side by side

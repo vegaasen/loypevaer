@@ -2,7 +2,7 @@
   {
     "id": "birkebeinerrittet",
     "name": "Birkebeinerrittet",
-    "officialDate": "2025-08-23",
+    "officialDate": "2026-08-29",
     "distance": 88,
     "region": "Innlandet",
     "url": "https://birkebeiner.no/sykkelritt/",
@@ -17,7 +17,7 @@
   {
     "id": "styrkeproven",
     "name": "Styrkeprøven",
-    "officialDate": "2025-06-14",
+    "officialDate": "2026-06-20",
     "distance": 540,
     "region": "Trøndelag / Innlandet",
     "url": "https://styrkeproven.no/",
@@ -32,7 +32,7 @@
   {
     "id": "jotunheimen-rundt",
     "name": "Jotunheimen Rundt",
-    "officialDate": "2025-07-05",
+    "officialDate": "2026-06-19",
     "distance": 322,
     "region": "Innlandet / Vestland",
     "url": "https://jotunheimenrundt.no/",
@@ -47,7 +47,7 @@
   {
     "id": "nordsjorittet",
     "name": "Nordsjørittet",
-    "officialDate": "2025-05-31",
+    "officialDate": "2026-06-13",
     "distance": 91,
     "region": "Rogaland",
     "url": "https://nordsjorittet.no/",
@@ -147,6 +147,126 @@
       { "label": "50% – Midtvegs", "lat": 59.077, "lon": 6.625, "altitude": 500 },
       { "label": "75% – Svingen 2", "lat": 59.083, "lon": 6.611, "altitude": 700 },
       { "label": "Mål – Øygardsstøl", "lat": 59.092, "lon": 6.596, "altitude": 985 }
+    ]
+  },
+  {
+    "id": "bergen-voss",
+    "name": "Bergen-Voss",
+    "officialDate": "2026-06-06",
+    "distance": 78,
+    "region": "Vestland",
+    "url": "https://bergenvoss.no/",
+    "waypoints": [
+      { "label": "Start – Bergen (Bryggen)", "lat": 60.3929, "lon": 5.3241, "altitude": 5 },
+      { "label": "25% – Arna", "lat": 60.4243, "lon": 5.4738, "altitude": 80 },
+      { "label": "50% – Stanghelle", "lat": 60.5647, "lon": 5.8532, "altitude": 40 },
+      { "label": "75% – Dale", "lat": 60.5869, "lon": 6.0986, "altitude": 55 },
+      { "label": "Mål – Voss", "lat": 60.6282, "lon": 6.4169, "altitude": 56 }
+    ]
+  },
+  {
+    "id": "gravel-birken",
+    "name": "GravelBirken",
+    "officialDate": "2026-08-29",
+    "distance": 92,
+    "region": "Innlandet",
+    "url": "https://birkebeiner.no/sykkelritt/",
+    "waypoints": [
+      { "label": "Start – Rena", "lat": 61.1367, "lon": 11.3745, "altitude": 252 },
+      { "label": "25% – Åsta", "lat": 61.1805, "lon": 11.158, "altitude": 480 },
+      { "label": "50% – Sjusjøen (plateau)", "lat": 61.2203, "lon": 10.955, "altitude": 890 },
+      { "label": "75% – Nevelfjell", "lat": 61.2012, "lon": 10.758, "altitude": 820 },
+      { "label": "Mål – Lillehammer", "lat": 61.1153, "lon": 10.4663, "altitude": 185 }
+    ]
+  },
+  {
+    "id": "halv-birken",
+    "name": "HalvBirken Sykkel",
+    "officialDate": "2026-08-29",
+    "distance": 46,
+    "region": "Innlandet",
+    "url": "https://birkebeiner.no/sykkelritt/",
+    "waypoints": [
+      { "label": "Start – Sjusjøen", "lat": 61.2203, "lon": 10.955, "altitude": 870 },
+      { "label": "25% – Nevelfjell", "lat": 61.198, "lon": 10.84, "altitude": 820 },
+      { "label": "50% – Fåberg skog", "lat": 61.165, "lon": 10.701, "altitude": 500 },
+      { "label": "75% – Vingrom", "lat": 61.135, "lon": 10.568, "altitude": 260 },
+      { "label": "Mål – Lillehammer", "lat": 61.1153, "lon": 10.4663, "altitude": 185 }
+    ]
+  },
+  {
+    "id": "nordsjorittet-jaeren",
+    "name": "Nordsjørittet (Jæren)",
+    "officialDate": "2026-06-13",
+    "distance": 88,
+    "region": "Rogaland",
+    "url": "https://nordsjorittet.no/",
+    "waypoints": [
+      { "label": "Start – Egersund", "lat": 58.4524, "lon": 6.0033, "altitude": 10 },
+      { "label": "25% – Brusand", "lat": 58.5369, "lon": 5.9124, "altitude": 30 },
+      { "label": "50% – Nærbø", "lat": 58.6692, "lon": 5.6475, "altitude": 25 },
+      { "label": "75% – Bryne", "lat": 58.7328, "lon": 5.6428, "altitude": 30 },
+      { "label": "Mål – Sandnes", "lat": 58.8521, "lon": 5.7353, "altitude": 20 }
+    ]
+  },
+  {
+    "id": "letape-trondheim",
+    "name": "L'Étape Trondheim",
+    "officialDate": "2026-06-13",
+    "distance": 130,
+    "region": "Trøndelag",
+    "url": "https://trondheim.letapeseries.com/",
+    "waypoints": [
+      { "label": "Start – Trondheim", "lat": 63.4305, "lon": 10.3951, "altitude": 5 },
+      { "label": "25% – Klæbu", "lat": 63.3612, "lon": 10.4863, "altitude": 280 },
+      { "label": "50% – Støren", "lat": 63.0553, "lon": 10.2985, "altitude": 90 },
+      { "label": "75% – Melhus", "lat": 63.2783, "lon": 10.2833, "altitude": 60 },
+      { "label": "Mål – Trondheim", "lat": 63.4305, "lon": 10.3951, "altitude": 5 }
+    ]
+  },
+  {
+    "id": "nordmarka-rundt",
+    "name": "Nordmarka Rundt",
+    "officialDate": "2026-05-24",
+    "distance": 148,
+    "region": "Oslo / Viken",
+    "url": "http://www.nordmarkarundt.no/",
+    "waypoints": [
+      { "label": "Start – Årvoll, Oslo", "lat": 59.9531, "lon": 10.8193, "altitude": 155 },
+      { "label": "25% – Hakadal", "lat": 60.0945, "lon": 10.8432, "altitude": 210 },
+      { "label": "50% – Harestua (Nordmarka vest)", "lat": 60.2135, "lon": 10.536, "altitude": 355 },
+      { "label": "75% – Lommedalen", "lat": 59.998, "lon": 10.4825, "altitude": 180 },
+      { "label": "Mål – Årvoll, Oslo", "lat": 59.9531, "lon": 10.8193, "altitude": 155 }
+    ]
+  },
+  {
+    "id": "color-line-tour",
+    "name": "Color Line Tour",
+    "officialDate": "2026-05-30",
+    "distance": 210,
+    "region": "Agder",
+    "url": "https://www.colorlinetour.no/",
+    "waypoints": [
+      { "label": "Start – Kristiansand", "lat": 58.1467, "lon": 7.9956, "altitude": 10 },
+      { "label": "25% – Evje", "lat": 58.5876, "lon": 7.8058, "altitude": 115 },
+      { "label": "50% – Valle", "lat": 59.205, "lon": 7.5338, "altitude": 235 },
+      { "label": "75% – Bykle", "lat": 59.3878, "lon": 7.356, "altitude": 625 },
+      { "label": "Mål – Hovden", "lat": 59.5465, "lon": 7.3753, "altitude": 930 }
+    ]
+  },
+  {
+    "id": "tyrifjorden-rundt",
+    "name": "Tyrifjorden Rundt",
+    "officialDate": "2026-06-07",
+    "distance": 145,
+    "region": "Viken",
+    "url": "http://www.tyrifjordenrundt.no/",
+    "waypoints": [
+      { "label": "Start – Sandvika", "lat": 59.89, "lon": 10.5231, "altitude": 10 },
+      { "label": "25% – Krokkleiva", "lat": 60.0418, "lon": 10.29, "altitude": 310 },
+      { "label": "50% – Jevnaker", "lat": 60.233, "lon": 10.2265, "altitude": 130 },
+      { "label": "75% – Vikersund", "lat": 59.987, "lon": 10.0462, "altitude": 95 },
+      { "label": "Mål – Sandvika", "lat": 59.89, "lon": 10.5231, "altitude": 10 }
     ]
   }
 ]
