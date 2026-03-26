@@ -122,4 +122,5 @@ src/
 
 - Weather: [Open-Meteo](https://open-meteo.com) — free, CORS-friendly, no API key required
 - Race calendar: [sykling.no](https://sykling.no/sykkelritt/terminliste/)
+- EQTimer' APIs: https://api.eqtiming.com/docs#!/Event
 - Route waypoints: manually curated from maps and race websites
