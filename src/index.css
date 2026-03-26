@@ -67,7 +67,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: var(--heading);
   font-weight: 500;
   color: var(--text-h);
@@ -90,6 +91,63 @@ h2 {
   @media (max-width: 1024px) {
     font-size: 20px;
   }
+}
+h3 {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin: 0 0 12px;
+}
+
+/* Home page layout */
+.home-page__header {
+  padding: 0 32px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  @media (max-width: 1024px) {
+    padding: 0 16px;
+  }
+}
+
+.home-page__sections {
+  display: flex;
+  flex-direction: column;
+  padding: 0 32px 64px;
+  @media (max-width: 1024px) {
+    padding: 0 16px 48px;
+  }
+}
+
+.home-page__year-section {
+  margin-top: 48px;
+  @media (max-width: 1024px) {
+    margin-top: 32px;
+  }
+}
+
+.home-page__year-heading {
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0;
+}
+
+.home-page__month-section {
+  margin-top: 32px;
+  @media (max-width: 1024px) {
+    margin-top: 24px;
+  }
+}
+
+.home-page__month-heading {
+  margin-bottom: 12px;
+}
+
+.home-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
 }
 p {
   margin: 0;
