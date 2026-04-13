@@ -1,0 +1,52 @@
+name: Foreslå ett ritt
+description: Foreslå et norsk sykkelritt som mangler i Rittvær
+title: "Forslag: [Ritt-navn]"
+labels: ["suggestion"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Navn på rittet
+      placeholder: f.eks. Jotunheimen Rundt
+    validations:
+      required: true
+
+  - type: input
+    id: website
+    attributes:
+      label: Offisiell nettside
+      placeholder: https://...
+    validations:
+      required: false
+
+  - type: input
+    id: date
+    attributes:
+      label: Offisiell dato (hvis kjent)
+      placeholder: f.eks. 2025-06-14
+    validations:
+      required: false
+
+  - type: input
+    id: start
+    attributes:
+      label: Startsted
+      placeholder: f.eks. Lom
+    validations:
+      required: false
+
+  - type: input
+    id: finish
+    attributes:
+      label: Målsted (hvis annet enn start)
+      placeholder: f.eks. Fagernes
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Andre kommentarer
+      placeholder: Eventuelle ekstra opplysninger om ruten, distanse, o.l.
+    validations:
+      required: false

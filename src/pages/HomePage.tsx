@@ -1,4 +1,5 @@
 import { RittCard } from "../components/RittCard";
+import { useMyRitt } from "../hooks/useMyRitt";
 import ritt from "../data/ritt.json";
 
 type Race = (typeof ritt)[number];
@@ -25,9 +26,31 @@ function monthName(month: number): string {
 }
 
 export function HomePage() {
+  const { plannedIds, isPlanned, getPlanned, add, remove } = useMyRitt();
+
   const grouped = groupByYearMonth(ritt);
   // Years descending (newest first, oldest at bottom)
   const years = [...grouped.keys()].sort((a, b) => b - a);
+
+  const plannedRaces = plannedIds
+    .map((id) => ritt.find((r) => r.id === id))
+    .filter((r): r is Race => r !== undefined)
+    // Sort by saved date
+    .sort((a, b) => {
+      const da = getPlanned(a.id)?.date ?? a.officialDate;
+      const db = getPlanned(b.id)?.date ?? b.officialDate;
+      return new Date(da).getTime() - new Date(db).getTime();
+    });
+
+  function handleToggle(id: string, officialDate: string, e: React.MouseEvent<HTMLButtonElement>) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (isPlanned(id)) {
+      remove(id);
+    } else {
+      add(id, { date: officialDate, startTime: "", finishTime: "" });
+    }
+  }
 
   return (
     <div className="home-page">
@@ -35,6 +58,31 @@ export function HomePage() {
         <h1>Rittvær</h1>
         <p>Sjekk været langs ruten for norske sykkelritt</p>
       </header>
+
+      {plannedRaces.length > 0 && (
+        <section className="home-page__mine-section">
+          <h2 className="home-page__mine-heading">Mine ritt</h2>
+          <div className="home-page__grid">
+            {plannedRaces.map((r) => {
+              const entry = getPlanned(r.id);
+              return (
+                <RittCard
+                  key={r.id}
+                  id={r.id}
+                  name={r.name}
+                  officialDate={r.officialDate}
+                  distance={r.distance}
+                  region={r.region}
+                  displayDate={entry?.date}
+                  planned
+                  onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
+                />
+              );
+            })}
+          </div>
+        </section>
+      )}
+
       <main className="home-page__sections">
         {years.map((year) => {
           const byMonth = grouped.get(year)!;
@@ -54,6 +102,8 @@ export function HomePage() {
                         officialDate={r.officialDate}
                         distance={r.distance}
                         region={r.region}
+                        planned={isPlanned(r.id)}
+                        onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
                       />
                     ))}
                   </div>

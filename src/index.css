@@ -249,6 +249,20 @@ code {
   gap: 12px;
 }
 
+.home-page__mine-section {
+  padding: 24px 32px 0;
+  @media (max-width: 1024px) {
+    padding: 20px 16px 0;
+  }
+}
+
+.home-page__mine-heading {
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--accent-border);
+  margin-bottom: 16px;
+  color: var(--accent);
+}
+
 /* ─── Ritt card ──────────────────────────────────────────────────────── */
 
 .ritt-card {
@@ -270,6 +284,10 @@ code {
   }
 }
 
+.ritt-card--planned {
+  border-left: 3px solid var(--accent);
+}
+
 .ritt-card__name {
   font-size: 16px;
   font-weight: 600;
@@ -289,9 +307,39 @@ code {
   color: var(--accent);
 }
 
+.ritt-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 2px;
+}
+
 .ritt-card__date {
   font-size: 13px;
   color: var(--text);
+}
+
+.ritt-card__bookmark {
+  font-size: 14px;
+  line-height: 1;
+  background: transparent;
+  border: none;
+  padding: 2px 4px;
+  cursor: pointer;
+  border-radius: 4px;
+  opacity: 0.5;
+  transition: opacity 0.15s, background 0.12s;
+  flex-shrink: 0;
+
+  &:hover {
+    opacity: 1;
+    background: var(--accent-bg);
+  }
+}
+
+.ritt-card__bookmark--active {
+  opacity: 1;
 }
 
 /* ─── Ritt page layout ───────────────────────────────────────────────── */
@@ -344,6 +392,36 @@ code {
   color: var(--accent);
   text-decoration: none;
   &:hover { text-decoration: underline; }
+}
+
+.ritt-page__bookmark-btn {
+  font: inherit;
+  font-size: 13px;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.12s, color 0.12s;
+
+  &:hover {
+    border-color: var(--accent-border);
+    background: var(--accent-bg);
+    color: var(--text-h);
+  }
+}
+
+.ritt-page__bookmark-btn--active {
+  color: var(--accent);
+  border-color: var(--accent-border);
+  background: var(--accent-bg);
+
+  &:hover {
+    background: transparent;
+    color: var(--text);
+    border-color: var(--border);
+  }
 }
 
 .ritt-page__map-section {

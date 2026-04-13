@@ -20,6 +20,15 @@ function SiteFooter() {
           OpenStreetMap
         </a>
       </span>
+      <span>
+        <a
+          href="https://github.com/vegaasen/bike-ritt-weathery/issues/new?template=suggest-ritt.yml"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Foreslå ett ritt
+        </a>
+      </span>
     </footer>
   );
 }

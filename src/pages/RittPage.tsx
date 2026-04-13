@@ -6,19 +6,32 @@ import { WeatherStrip } from "../components/WeatherStrip";
 import { RittMap } from "../components/RittMap";
 import { HistoricalWeatherTable } from "../components/HistoricalWeatherTable";
 import { computeElevationGain } from "../lib/ritt";
+import { useMyRitt } from "../hooks/useMyRitt";
 import ritt from "../data/ritt.json";
 
 export function RittPage() {
   const { id } = useParams<{ id: string }>();
   const [searchParams, setSearchParams] = useSearchParams();
+  const { isPlanned, getPlanned, add, remove } = useMyRitt();
 
   const rittData = ritt.find((r) => r.id === id);
 
-  const initialDate = searchParams.get("date") ?? rittData?.officialDate ?? "";
+  // Restore saved planned entry when there are no URL params
+  const savedEntry = id ? getPlanned(id) : undefined;
+
+  const initialDate =
+    searchParams.get("date") ??
+    savedEntry?.date ??
+    rittData?.officialDate ??
+    "";
   const [selectedDate, setSelectedDate] = useState<string>(initialDate);
 
-  const [startTime, setStartTime] = useState<string>(searchParams.get("start") ?? "");
-  const [finishTime, setFinishTime] = useState<string>(searchParams.get("finish") ?? "");
+  const [startTime, setStartTime] = useState<string>(
+    searchParams.get("start") ?? savedEntry?.startTime ?? ""
+  );
+  const [finishTime, setFinishTime] = useState<string>(
+    searchParams.get("finish") ?? savedEntry?.finishTime ?? ""
+  );
 
   // Keep URL in sync with date and timing params
   useEffect(() => {
@@ -29,6 +42,14 @@ export function RittPage() {
     setSearchParams(params, { replace: true });
   }, [selectedDate, startTime, finishTime, setSearchParams]);
 
+  // Auto-save to "mine ritt" whenever date/time changes while the ritt is planned
+  useEffect(() => {
+    if (id && isPlanned(id)) {
+      add(id, { date: selectedDate, startTime, finishTime });
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedDate, startTime, finishTime]);
+
   if (!rittData) {
     return (
       <div className="ritt-page ritt-page--not-found">
@@ -36,6 +57,17 @@ export function RittPage() {
         <Link to="/">Tilbake til oversikt</Link>
       </div>
     );
+  }
+
+  const planned = id ? isPlanned(id) : false;
+
+  function handleBookmarkToggle() {
+    if (!id) return;
+    if (planned) {
+      remove(id);
+    } else {
+      add(id, { date: selectedDate, startTime, finishTime });
+    }
   }
 
   const formattedOfficialDate = new Date(rittData.officialDate).toLocaleDateString(
@@ -68,6 +100,14 @@ export function RittPage() {
               Offisiell nettside ↗
             </a>
           )}
+          <button
+            className={`ritt-page__bookmark-btn${planned ? " ritt-page__bookmark-btn--active" : ""}`}
+            onClick={handleBookmarkToggle}
+            aria-pressed={planned}
+            title={planned ? "Fjern fra mine ritt" : "Legg til mine ritt"}
+          >
+            {planned ? "📌 Mine ritt" : "📍 Legg til mine ritt"}
+          </button>
         </div>
       </header>
 
