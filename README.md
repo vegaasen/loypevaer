@@ -104,7 +104,7 @@ src/
 - [ ] **Hourly breakdown** — expand a waypoint card to show hour-by-hour forecast
 - [ ] **Wind direction** — add degrees → compass label to WeatherCard
 - [ ] **Feels-like temperature** — show apparent temperature alongside raw temp (available free from Open-Meteo)
-- [ ] **Precipitation probability** — show % chance of rain in addition to expected mm; more actionable for gear decisions
+- [x] **Precipitation probability** — show % chance of rain in addition to expected mm; more actionable for gear decisions
 - [ ] **Pacing model** — replace linear interpolation with speed-based arrival times; user inputs expected avg km/h, waypoint times derived from actual route distances
 - [ ] **Gear suggestion** — rule-based output ("Bring arm warmers", "Rain jacket recommended") derived from the weather strip data
 - [ ] **My planned ritt** — localStorage-persisted bookmarks of ritt + date combos, accessible from the navbar

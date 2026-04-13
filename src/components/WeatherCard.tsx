@@ -54,7 +54,12 @@ export function WeatherCard({ waypoint, data, isLoading, isError, arrivalTime }:
               )}
             </div>
             <div className="weather-card__detail">
-              <span title="Nedbør">🌧 {data.precipitation} mm</span>
+              <span title="Nedbør">
+                🌧 {data.precipitation} mm
+                {data.precipitationProbability != null && (
+                  <span className="weather-card__precip-prob"> · {data.precipitationProbability}%</span>
+                )}
+              </span>
             </div>
             <div className="weather-card__detail">
               <span title="Vind">💨 {data.windSpeed} km/t</span>

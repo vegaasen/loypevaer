@@ -14,6 +14,8 @@ export type WeatherData = {
   precipitation: number;
   windSpeed: number;
   weatherCode: number;
+  /** 0–100 %. Only present for forecast data; archive API does not provide this. */
+  precipitationProbability?: number;
   /** Present when fetched for a specific hour (hourly mode) */
   hourlyTemp?: number;
   hourlyPrecipitation?: number;
@@ -52,7 +54,7 @@ export async function fetchForecastWeather(
     latitude: String(waypoint.lat),
     longitude: String(waypoint.lon),
     ...(waypoint.altitude !== undefined ? { elevation: String(waypoint.altitude) } : {}),
-    daily: DAILY_PARAMS,
+    daily: `${DAILY_PARAMS},precipitation_probability_max`,
     start_date: date,
     end_date: date,
     timezone: "Europe/Oslo",
@@ -70,6 +72,7 @@ export async function fetchForecastWeather(
     precipitation: d.precipitation_sum[0] ?? 0,
     windSpeed: d.wind_speed_10m_max[0] ?? 0,
     weatherCode: d.weather_code[0] ?? 0,
+    precipitationProbability: d.precipitation_probability_max?.[0] ?? undefined,
   };
 }
 
@@ -175,7 +178,7 @@ export async function fetchForecastWeatherHourly(
     latitude: String(waypoint.lat),
     longitude: String(waypoint.lon),
     ...(waypoint.altitude !== undefined ? { elevation: String(waypoint.altitude) } : {}),
-    hourly: HOURLY_PARAMS,
+    hourly: `${HOURLY_PARAMS},precipitation_probability`,
     daily: "temperature_2m_max,temperature_2m_min",
     start_date: date,
     end_date: date,
@@ -195,6 +198,7 @@ export async function fetchForecastWeatherHourly(
     precipitation: h.precipitation[hour] ?? 0,
     windSpeed: h.wind_speed_10m[hour] ?? 0,
     weatherCode: h.weather_code[hour] ?? 0,
+    precipitationProbability: h.precipitation_probability?.[hour] ?? undefined,
     hourlyTemp: h.temperature_2m[hour] ?? null,
     hourlyPrecipitation: h.precipitation[hour] ?? 0,
     hourlyWindSpeed: h.wind_speed_10m[hour] ?? 0,
