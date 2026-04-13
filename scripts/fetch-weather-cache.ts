@@ -258,9 +258,6 @@ async function main() {
   console.log("Computing climate averages…");
 
   // Group per (wp, MM, DD) and average across years
-  const grouped: Record<string, (number | null)[][]> = {};
-  // Index: 0=tempMax, 1=tempMin, 2=precipitation, 3=windSpeed, 4=weatherCode
-
   for (const ritt of ritts) {
     const [, mm, dd] = ritt.officialDate.split("-");
     for (const wp of ritt.waypoints) {
