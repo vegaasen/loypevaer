@@ -6,10 +6,16 @@ type Props = {
   officialDate: string;
   distance: number;
   region: string;
+  discipline?: "landevei" | "terreng";
   /** Override the displayed date (e.g. show saved planned date instead of official date) */
   displayDate?: string;
   planned?: boolean;
   onTogglePlanned?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+};
+
+const DISCIPLINE_LABEL: Record<"landevei" | "terreng", string> = {
+  landevei: "Landevei",
+  terreng: "Terreng",
 };
 
 export function RittCard({
@@ -18,6 +24,7 @@ export function RittCard({
   officialDate,
   distance,
   region,
+  discipline,
   displayDate,
   planned = false,
   onTogglePlanned,
@@ -38,6 +45,11 @@ export function RittCard({
       <div className="ritt-card__meta">
         <span className="ritt-card__region">{region}</span>
         <span className="ritt-card__distance">{distance} km</span>
+        {discipline && (
+          <span className={`ritt-card__discipline ritt-card__discipline--${discipline}`}>
+            {DISCIPLINE_LABEL[discipline]}
+          </span>
+        )}
       </div>
       <div className="ritt-card__footer">
         <span className="ritt-card__date">{formattedDate}</span>

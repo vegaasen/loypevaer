@@ -210,6 +210,38 @@ code {
   margin-top: 0;
 }
 
+.home-page__filter {
+  display: flex;
+  gap: 8px;
+  padding: 0 32px 24px;
+  @media (max-width: 1024px) {
+    padding: 0 16px 20px;
+  }
+}
+
+.home-page__filter-pill {
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+
+  &:hover {
+    border-color: var(--accent-border);
+    color: var(--accent);
+  }
+}
+
+.home-page__filter-pill--active {
+  background: var(--accent-bg);
+  border-color: var(--accent-border);
+  color: var(--accent);
+}
+
 .home-page__sections {
   display: flex;
   flex-direction: column;
@@ -305,6 +337,38 @@ code {
 .ritt-card__distance {
   font-weight: 500;
   color: var(--accent);
+}
+
+.ritt-card__distance {
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.ritt-card__discipline {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 1px 7px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-left: auto;
+}
+
+.ritt-card__discipline--landevei {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent);
+}
+
+.ritt-card__discipline--terreng {
+  background: color-mix(in srgb, #7c6f2e 12%, transparent);
+  color: #7c6f2e;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ritt-card__discipline--terreng {
+    background: color-mix(in srgb, #c8a84b 12%, transparent);
+    color: #c8a84b;
+  }
 }
 
 .ritt-card__footer {

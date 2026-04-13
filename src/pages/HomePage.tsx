@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { RittCard } from "../components/RittCard";
 import { useMyRitt } from "../hooks/useMyRitt";
 import ritt from "../data/ritt.json";
 
 type Race = (typeof ritt)[number];
+type Discipline = "alle" | "landevei" | "terreng";
 
 function groupByYearMonth(races: Race[]): Map<number, Map<number, Race[]>> {
   const sorted = [...races].sort(
@@ -25,10 +27,18 @@ function monthName(month: number): string {
   return new Date(2000, month, 1).toLocaleDateString("nb-NO", { month: "long" });
 }
 
+const DISCIPLINE_LABELS: Record<Discipline, string> = {
+  alle: "Alle",
+  landevei: "Landevei",
+  terreng: "Terreng",
+};
+
 export function HomePage() {
   const { plannedIds, isPlanned, getPlanned, add, remove } = useMyRitt();
+  const [discipline, setDiscipline] = useState<Discipline>("alle");
 
-  const grouped = groupByYearMonth(ritt);
+  const filtered = discipline === "alle" ? ritt : ritt.filter((r) => r.discipline === discipline);
+  const grouped = groupByYearMonth(filtered);
   // Years descending (newest first, oldest at bottom)
   const years = [...grouped.keys()].sort((a, b) => b - a);
 
@@ -59,6 +69,18 @@ export function HomePage() {
         <p>Sjekk været langs ruten for norske sykkelritt</p>
       </header>
 
+      <div className="home-page__filter">
+        {(["alle", "landevei", "terreng"] as Discipline[]).map((d) => (
+          <button
+            key={d}
+            className={`home-page__filter-pill${discipline === d ? " home-page__filter-pill--active" : ""}`}
+            onClick={() => setDiscipline(d)}
+          >
+            {DISCIPLINE_LABELS[d]}
+          </button>
+        ))}
+      </div>
+
       {plannedRaces.length > 0 && (
         <section className="home-page__mine-section">
           <h2 className="home-page__mine-heading">Mine ritt</h2>
@@ -73,6 +95,7 @@ export function HomePage() {
                   officialDate={r.officialDate}
                   distance={r.distance}
                   region={r.region}
+                  discipline={r.discipline as "landevei" | "terreng"}
                   displayDate={entry?.date}
                   planned
                   onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
@@ -102,6 +125,7 @@ export function HomePage() {
                         officialDate={r.officialDate}
                         distance={r.distance}
                         region={r.region}
+                        discipline={r.discipline as "landevei" | "terreng"}
                         planned={isPlanned(r.id)}
                         onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
                       />

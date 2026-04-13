@@ -2,6 +2,7 @@
   {
     "id": "birkebeinerrittet",
     "name": "Birkebeinerrittet",
+    "discipline": "terreng",
     "officialDate": "2026-08-29",
     "distance": 88,
     "region": "Innlandet",
@@ -17,6 +18,7 @@
   {
     "id": "styrkeproven",
     "name": "Styrkeprøven",
+    "discipline": "landevei",
     "officialDate": "2026-06-20",
     "distance": 540,
     "region": "Trøndelag / Innlandet",
@@ -32,6 +34,7 @@
   {
     "id": "jotunheimen-rundt",
     "name": "Jotunheimen Rundt",
+    "discipline": "landevei",
     "officialDate": "2026-06-19",
     "distance": 322,
     "region": "Innlandet / Vestland",
@@ -47,6 +50,7 @@
   {
     "id": "nordsjorittet",
     "name": "Nordsjørittet",
+    "discipline": "landevei",
     "officialDate": "2026-06-13",
     "distance": 91,
     "region": "Rogaland",
@@ -62,7 +66,8 @@
   {
     "id": "grenserittet",
     "name": "Grenserittet",
-    "officialDate": "2025-08-09",
+    "discipline": "terreng",
+    "officialDate": "2026-08-15",
     "distance": 160,
     "region": "Innlandet / Viken",
     "url": "https://grenserittet.no/",
@@ -77,21 +82,23 @@
   {
     "id": "valdresrittet",
     "name": "Valdresrittet",
-    "officialDate": "2025-07-19",
-    "distance": 130,
+    "discipline": "terreng",
+    "officialDate": "2026-07-18",
+    "distance": 54,
     "region": "Innlandet",
-    "url": "https://valdresrittet.no/",
+    "url": "https://www.valdrestrippelen.no/",
     "waypoints": [
-      { "label": "Start – Fagernes", "lat": 60.989, "lon": 9.233, "altitude": 300 },
-      { "label": "25% – Beitostølen", "lat": 61.243, "lon": 8.907, "altitude": 900 },
-      { "label": "50% – Filefjell", "lat": 61.101, "lon": 8.567, "altitude": 1020 },
-      { "label": "75% – Bagn", "lat": 60.817, "lon": 9.559, "altitude": 280 },
-      { "label": "Mål – Fagernes", "lat": 60.989, "lon": 9.233, "altitude": 300 }
+      { "label": "Start – Vaset Stadion", "lat": 61.244, "lon": 8.887, "altitude": 955 },
+      { "label": "25% – Platå nord", "lat": 61.289, "lon": 8.931, "altitude": 1000 },
+      { "label": "50% – Syndin øst", "lat": 61.318, "lon": 9.032, "altitude": 960 },
+      { "label": "75% – Retur sør", "lat": 61.262, "lon": 9.015, "altitude": 940 },
+      { "label": "Mål – Vaset Stadion", "lat": 61.244, "lon": 8.887, "altitude": 955 }
     ]
   },
   {
     "id": "mjosrittet",
     "name": "Mjøsrittet",
+    "discipline": "landevei",
     "officialDate": "2025-06-28",
     "distance": 167,
     "region": "Innlandet",
@@ -107,6 +114,7 @@
   {
     "id": "haugastol-bergen",
     "name": "Haugastøl–Bergen",
+    "discipline": "landevei",
     "officialDate": "2025-07-12",
     "distance": 182,
     "region": "Vestland",
@@ -122,6 +130,7 @@
   {
     "id": "rallarvegen",
     "name": "Rallarvegen",
+    "discipline": "terreng",
     "officialDate": "2025-07-26",
     "distance": 82,
     "region": "Vestland / Viken",
@@ -137,7 +146,8 @@
   {
     "id": "lysebotn-opp",
     "name": "Lysebotn Opp",
-    "officialDate": "2025-05-17",
+    "discipline": "landevei",
+    "officialDate": "2026-05-17",
     "distance": 14,
     "region": "Rogaland",
     "url": "https://lysebotnopp.no/",
@@ -152,6 +162,7 @@
   {
     "id": "bergen-voss",
     "name": "Bergen-Voss",
+    "discipline": "landevei",
     "officialDate": "2026-06-06",
     "distance": 78,
     "region": "Vestland",
@@ -167,6 +178,7 @@
   {
     "id": "gravel-birken",
     "name": "GravelBirken",
+    "discipline": "terreng",
     "officialDate": "2026-08-29",
     "distance": 92,
     "region": "Innlandet",
@@ -182,6 +194,7 @@
   {
     "id": "halv-birken",
     "name": "HalvBirken Sykkel",
+    "discipline": "terreng",
     "officialDate": "2026-08-29",
     "distance": 46,
     "region": "Innlandet",
@@ -197,6 +210,7 @@
   {
     "id": "nordsjorittet-jaeren",
     "name": "Nordsjørittet (Jæren)",
+    "discipline": "landevei",
     "officialDate": "2026-06-13",
     "distance": 88,
     "region": "Rogaland",
@@ -212,6 +226,7 @@
   {
     "id": "letape-trondheim",
     "name": "L'Étape Trondheim",
+    "discipline": "landevei",
     "officialDate": "2026-06-13",
     "distance": 130,
     "region": "Trøndelag",
@@ -227,6 +242,7 @@
   {
     "id": "nordmarka-rundt",
     "name": "Nordmarka Rundt",
+    "discipline": "landevei",
     "officialDate": "2026-05-24",
     "distance": 148,
     "region": "Oslo / Viken",
@@ -242,6 +258,7 @@
   {
     "id": "color-line-tour",
     "name": "Color Line Tour",
+    "discipline": "landevei",
     "officialDate": "2026-05-30",
     "distance": 210,
     "region": "Agder",
@@ -257,6 +274,7 @@
   {
     "id": "tyrifjorden-rundt",
     "name": "Tyrifjorden Rundt",
+    "discipline": "landevei",
     "officialDate": "2026-06-07",
     "distance": 145,
     "region": "Viken",
@@ -267,6 +285,278 @@
       { "label": "50% – Jevnaker", "lat": 60.233, "lon": 10.2265, "altitude": 130 },
       { "label": "75% – Vikersund", "lat": 59.987, "lon": 10.0462, "altitude": 95 },
       { "label": "Mål – Sandvika", "lat": 59.89, "lon": 10.5231, "altitude": 10 }
+    ]
+  },
+  {
+    "id": "eikerrittet",
+    "name": "Eikerrittet",
+    "discipline": "landevei",
+    "officialDate": "2026-05-02",
+    "distance": 90,
+    "region": "Viken",
+    "url": "http://eikerrittet.no/",
+    "waypoints": [
+      { "label": "Start – Hokksund", "lat": 59.770, "lon": 9.983, "altitude": 30 },
+      { "label": "25% – Darbu", "lat": 59.830, "lon": 9.660, "altitude": 150 },
+      { "label": "50% – Flesberg", "lat": 59.854, "lon": 9.458, "altitude": 200 },
+      { "label": "75% – Kongsberg", "lat": 59.672, "lon": 9.656, "altitude": 170 },
+      { "label": "Mål – Hokksund", "lat": 59.770, "lon": 9.983, "altitude": 30 }
+    ]
+  },
+  {
+    "id": "stenhoggerrittet",
+    "name": "Stenhoggerrittet",
+    "discipline": "terreng",
+    "officialDate": "2026-05-09",
+    "distance": 46,
+    "region": "Viken",
+    "url": "https://www.stenhoggerrittet.no",
+    "waypoints": [
+      { "label": "Start – Nyborg/Halden", "lat": 59.107, "lon": 11.452, "altitude": 100 },
+      { "label": "25% – Ørsjøen", "lat": 59.083, "lon": 11.523, "altitude": 150 },
+      { "label": "50% – Prestebakke", "lat": 59.059, "lon": 11.562, "altitude": 200 },
+      { "label": "75% – Iddefjorden", "lat": 59.086, "lon": 11.378, "altitude": 50 },
+      { "label": "Mål – Nyborg", "lat": 59.107, "lon": 11.452, "altitude": 100 }
+    ]
+  },
+  {
+    "id": "garborgriket-rundt",
+    "name": "Garborgriket Rundt",
+    "discipline": "terreng",
+    "officialDate": "2026-05-10",
+    "distance": 70,
+    "region": "Rogaland",
+    "url": "",
+    "waypoints": [
+      { "label": "Start – Vestly/Jæren", "lat": 58.737, "lon": 5.698, "altitude": 20 },
+      { "label": "25% – Nærbø", "lat": 58.668, "lon": 5.651, "altitude": 25 },
+      { "label": "50% – Vigrestad", "lat": 58.561, "lon": 5.687, "altitude": 30 },
+      { "label": "75% – Klepp", "lat": 58.777, "lon": 5.632, "altitude": 30 },
+      { "label": "Mål – Vestly", "lat": 58.737, "lon": 5.698, "altitude": 20 }
+    ]
+  },
+  {
+    "id": "victoriarunden",
+    "name": "Victoriarunden",
+    "discipline": "landevei",
+    "officialDate": "2026-05-14",
+    "distance": 120,
+    "region": "Trøndelag",
+    "url": "https://www.facebook.com/events/2164044493940939",
+    "waypoints": [
+      { "label": "Start – Børsa/Skaun", "lat": 63.376, "lon": 9.992, "altitude": 30 },
+      { "label": "25% – Orkanger", "lat": 63.300, "lon": 9.853, "altitude": 15 },
+      { "label": "50% – Kyrksæterøra/Hemne", "lat": 63.186, "lon": 9.420, "altitude": 30 },
+      { "label": "75% – Orkdal", "lat": 63.297, "lon": 10.063, "altitude": 50 },
+      { "label": "Mål – Børsa", "lat": 63.376, "lon": 9.992, "altitude": 30 }
+    ]
+  },
+  {
+    "id": "haugesund-sauda",
+    "name": "Haugesund-Sauda",
+    "discipline": "landevei",
+    "officialDate": "2026-05-30",
+    "distance": 107,
+    "region": "Rogaland / Vestland",
+    "url": "https://saudask.no/",
+    "waypoints": [
+      { "label": "Start – Haugesund", "lat": 59.413, "lon": 5.268, "altitude": 15 },
+      { "label": "25% – Aksdal", "lat": 59.494, "lon": 5.676, "altitude": 20 },
+      { "label": "50% – Etne", "lat": 59.666, "lon": 5.980, "altitude": 30 },
+      { "label": "75% – Nesflaten/Saudafjord", "lat": 59.771, "lon": 6.351, "altitude": 30 },
+      { "label": "Mål – Sauda", "lat": 59.650, "lon": 6.356, "altitude": 30 }
+    ]
+  },
+  {
+    "id": "randsfjorden-rundt",
+    "name": "Randsfjorden Rundt",
+    "discipline": "landevei",
+    "officialDate": "2026-05-30",
+    "distance": 152,
+    "region": "Viken",
+    "url": "http://www.randsfjordenrundt.no/",
+    "waypoints": [
+      { "label": "Start – Brandbu", "lat": 60.432, "lon": 10.508, "altitude": 195 },
+      { "label": "25% – Grua", "lat": 60.568, "lon": 10.356, "altitude": 215 },
+      { "label": "50% – Dokka", "lat": 60.828, "lon": 10.068, "altitude": 160 },
+      { "label": "75% – Odnes/Skreia", "lat": 60.650, "lon": 10.287, "altitude": 165 },
+      { "label": "Mål – Brandbu", "lat": 60.432, "lon": 10.508, "altitude": 195 }
+    ]
+  },
+  {
+    "id": "tour-de-froya",
+    "name": "Tour de Frøya",
+    "discipline": "landevei",
+    "officialDate": "2026-05-30",
+    "distance": 44,
+    "region": "Trøndelag",
+    "url": "https://tourdefroya.no",
+    "waypoints": [
+      { "label": "Start – Sistranda/Frøya", "lat": 63.726, "lon": 8.632, "altitude": 10 },
+      { "label": "25% – Titran/SW", "lat": 63.614, "lon": 8.328, "altitude": 20 },
+      { "label": "50% – Nordøya/North", "lat": 63.790, "lon": 8.490, "altitude": 15 },
+      { "label": "75% – Knarrlagsund/East", "lat": 63.770, "lon": 8.840, "altitude": 20 },
+      { "label": "Mål – Sistranda", "lat": 63.726, "lon": 8.632, "altitude": 10 }
+    ]
+  },
+  {
+    "id": "elgrittet",
+    "name": "Elgrittet",
+    "discipline": "terreng",
+    "officialDate": "2026-05-31",
+    "distance": 54,
+    "region": "Viken",
+    "url": "http://www.elgrittet.no",
+    "waypoints": [
+      { "label": "Start – Høland Stadion/Løken", "lat": 59.973, "lon": 11.407, "altitude": 195 },
+      { "label": "25% – Fosser", "lat": 59.947, "lon": 11.435, "altitude": 210 },
+      { "label": "50% – Ørsjøen", "lat": 59.928, "lon": 11.496, "altitude": 250 },
+      { "label": "75% – Nisseberget", "lat": 59.958, "lon": 11.518, "altitude": 310 },
+      { "label": "Mål – Høland Stadion", "lat": 59.973, "lon": 11.407, "altitude": 195 }
+    ]
+  },
+  {
+    "id": "skjaergaardsrittet",
+    "name": "Skjærgårdsrittet",
+    "discipline": "landevei",
+    "officialDate": "2026-05-31",
+    "distance": 75,
+    "region": "Vestland",
+    "url": "http://www.cksotra.no/",
+    "waypoints": [
+      { "label": "Start – Straume/Fjell", "lat": 60.360, "lon": 5.092, "altitude": 10 },
+      { "label": "25% – Skogsvåg", "lat": 60.251, "lon": 4.972, "altitude": 50 },
+      { "label": "50% – Rong/Øygarden", "lat": 60.508, "lon": 4.915, "altitude": 20 },
+      { "label": "75% – Misje/Bildøy", "lat": 60.484, "lon": 5.039, "altitude": 30 },
+      { "label": "Mål – Straume", "lat": 60.360, "lon": 5.092, "altitude": 10 }
+    ]
+  },
+  {
+    "id": "obos-terrengsykkelrittet",
+    "name": "OBOS Terrengsykkelrittet",
+    "discipline": "terreng",
+    "officialDate": "2026-06-13",
+    "distance": 28,
+    "region": "Oslo",
+    "url": "https://tsr.froy.no/",
+    "waypoints": [
+      { "label": "Start – Skullerud/Østmarka", "lat": 59.857, "lon": 10.872, "altitude": 175 },
+      { "label": "25% – Nord runde", "lat": 59.900, "lon": 10.893, "altitude": 200 },
+      { "label": "50% – Ulsrud", "lat": 59.883, "lon": 10.927, "altitude": 210 },
+      { "label": "75% – Sør retur", "lat": 59.855, "lon": 10.880, "altitude": 180 },
+      { "label": "Mål – Skullerud", "lat": 59.857, "lon": 10.872, "altitude": 175 }
+    ]
+  },
+  {
+    "id": "tour-de-lyngen",
+    "name": "Tour de Lyngen",
+    "discipline": "landevei",
+    "officialDate": "2026-06-13",
+    "distance": 94,
+    "region": "Troms",
+    "url": "",
+    "waypoints": [
+      { "label": "Start – Jægervatnet/Lyngen", "lat": 69.650, "lon": 20.097, "altitude": 50 },
+      { "label": "25% – Nord Lyngen", "lat": 70.030, "lon": 20.600, "altitude": 50 },
+      { "label": "50% – Furuflaten/Kåfjord", "lat": 69.835, "lon": 20.020, "altitude": 30 },
+      { "label": "75% – Lyngseidet", "lat": 69.582, "lon": 20.224, "altitude": 10 },
+      { "label": "Mål – Jægervatnet", "lat": 69.650, "lon": 20.097, "altitude": 50 }
+    ]
+  },
+  {
+    "id": "midnattsolrittet",
+    "name": "Midnattsolrittet",
+    "discipline": "landevei",
+    "officialDate": "2026-06-20",
+    "distance": 46,
+    "region": "Nordland",
+    "url": "",
+    "waypoints": [
+      { "label": "Start – Bodø", "lat": 67.283, "lon": 14.395, "altitude": 10 },
+      { "label": "25% – Tverlandet", "lat": 67.263, "lon": 14.605, "altitude": 40 },
+      { "label": "50% – Saltstraumen", "lat": 67.245, "lon": 14.636, "altitude": 30 },
+      { "label": "75% – Kystretur", "lat": 67.270, "lon": 14.500, "altitude": 20 },
+      { "label": "Mål – Bodø", "lat": 67.283, "lon": 14.395, "altitude": 10 }
+    ]
+  },
+  {
+    "id": "skjebergrittet",
+    "name": "Skjebergrittet",
+    "discipline": "terreng",
+    "officialDate": "2026-06-20",
+    "distance": 38,
+    "region": "Østfold",
+    "url": "https://www.skjebergrittet.no",
+    "waypoints": [
+      { "label": "Start – Skjeberg", "lat": 59.273, "lon": 11.183, "altitude": 65 },
+      { "label": "25% – Tune singletrack", "lat": 59.288, "lon": 11.115, "altitude": 80 },
+      { "label": "50% – Hafslund skog", "lat": 59.234, "lon": 11.101, "altitude": 50 },
+      { "label": "75% – Retur", "lat": 59.265, "lon": 11.220, "altitude": 75 },
+      { "label": "Mål – Skjeberg", "lat": 59.273, "lon": 11.183, "altitude": 65 }
+    ]
+  },
+  {
+    "id": "trysil-knut-gravel",
+    "name": "Trysil-Knut / Osensjøen Rundt Gravel",
+    "discipline": "terreng",
+    "officialDate": "2026-06-20",
+    "distance": 60,
+    "region": "Innlandet",
+    "url": "",
+    "waypoints": [
+      { "label": "Start – Søre Osen", "lat": 61.340, "lon": 11.675, "altitude": 330 },
+      { "label": "25% – Østsiden", "lat": 61.400, "lon": 11.750, "altitude": 340 },
+      { "label": "50% – Nordenden Osensjøen", "lat": 61.550, "lon": 11.595, "altitude": 330 },
+      { "label": "75% – Vestsiden retur", "lat": 61.440, "lon": 11.510, "altitude": 340 },
+      { "label": "Mål – Søre Osen", "lat": 61.340, "lon": 11.675, "altitude": 330 }
+    ]
+  },
+  {
+    "id": "sjusjorettet",
+    "name": "Sjusjørittet",
+    "discipline": "terreng",
+    "officialDate": "2026-07-25",
+    "distance": 56,
+    "region": "Innlandet",
+    "url": "http://www.brottum-il.no/sjusjorittet/",
+    "waypoints": [
+      { "label": "Start – Sjusjøen", "lat": 61.157, "lon": 10.699, "altitude": 870 },
+      { "label": "25% – Nordseter", "lat": 61.176, "lon": 10.497, "altitude": 710 },
+      { "label": "50% – Hornsjø", "lat": 61.207, "lon": 10.402, "altitude": 780 },
+      { "label": "75% – Åstdalen", "lat": 61.263, "lon": 10.815, "altitude": 820 },
+      { "label": "Mål – Sjusjøen", "lat": 61.157, "lon": 10.699, "altitude": 870 }
+    ]
+  },
+  {
+    "id": "oyungen-rundt",
+    "name": "Øyungen Rundt",
+    "discipline": "terreng",
+    "officialDate": "2026-07-25",
+    "distance": 45,
+    "region": "Trøndelag",
+    "url": "http://hessdalenil.no/",
+    "waypoints": [
+      { "label": "Start – Hessdalen", "lat": 62.867, "lon": 11.183, "altitude": 600 },
+      { "label": "25% – Nord dalen", "lat": 62.927, "lon": 11.197, "altitude": 620 },
+      { "label": "50% – Øyungen øst", "lat": 62.883, "lon": 11.317, "altitude": 640 },
+      { "label": "75% – Sør retur", "lat": 62.830, "lon": 11.207, "altitude": 610 },
+      { "label": "Mål – Hessdalen", "lat": 62.867, "lon": 11.183, "altitude": 600 }
+    ]
+  },
+  {
+    "id": "lysebotn-bryne",
+    "name": "Lysebotn-Bryne Rittet",
+    "discipline": "landevei",
+    "officialDate": "2026-08-15",
+    "distance": 147,
+    "region": "Rogaland",
+    "url": "https://lysebotn-bryne.no",
+    "waypoints": [
+      { "label": "Start – Lysebotn", "lat": 59.058, "lon": 6.647, "altitude": 0 },
+      { "label": "25% – Platå V for Sirdal", "lat": 58.980, "lon": 6.200, "altitude": 650 },
+      { "label": "50% – Gjesdal/Ålgård", "lat": 58.773, "lon": 5.813, "altitude": 100 },
+      { "label": "75% – Sandnes/Jæren", "lat": 58.756, "lon": 5.713, "altitude": 30 },
+      { "label": "Mål – Vestly/Bryne", "lat": 58.736, "lon": 5.697, "altitude": 20 }
     ]
   }
 ]
