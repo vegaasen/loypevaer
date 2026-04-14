@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import type { DifficultyResult } from "../lib/difficulty";
 
 type Props = {
   id: string;
@@ -7,20 +6,12 @@ type Props = {
   officialDate: string;
   distance: number;
   region: string;
-  discipline?: "landevei" | "terreng";
   /** Override the displayed date (e.g. show saved planned date instead of official date) */
   displayDate?: string;
   planned?: boolean;
   onTogglePlanned?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   /** Countdown string, e.g. "om 3 dager" or "i dag" */
   countdown?: string;
-  /** Static physical difficulty badge */
-  difficulty?: DifficultyResult;
-};
-
-const DISCIPLINE_LABEL: Record<"landevei" | "terreng", string> = {
-  landevei: "Landevei",
-  terreng: "Terreng",
 };
 
 export function RittCard({
@@ -29,12 +20,10 @@ export function RittCard({
   officialDate,
   distance,
   region,
-  discipline,
   displayDate,
   planned = false,
   onTogglePlanned,
   countdown,
-  difficulty,
 }: Props) {
   const dateStr = displayDate ?? officialDate;
   const formattedDate = new Date(dateStr).toLocaleDateString("nb-NO", {
@@ -52,16 +41,7 @@ export function RittCard({
       <div className="ritt-card__meta">
         <span className="ritt-card__region">{region}</span>
         <span className="ritt-card__distance">{distance} km</span>
-        {discipline && (
-          <span className={`ritt-card__discipline ritt-card__discipline--${discipline}`}>
-            {DISCIPLINE_LABEL[discipline]}
-          </span>
-        )}
-        {difficulty && (
-          <span className={`ritt-card__difficulty ritt-card__difficulty--${difficulty.level}`}>
-            {difficulty.label}
-          </span>
-        )}
+
       </div>
       <div className="ritt-card__footer">
         <div className="ritt-card__footer-left">
