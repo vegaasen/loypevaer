@@ -72,17 +72,20 @@ h1,
 h2,
 h3 {
   font-family: var(--heading);
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text-h);
 }
 
+h1 { font-weight: 700; }
+
 h1 {
   font-size: 48px;
+  font-weight: 700;
   letter-spacing: -1.4px;
-  margin: 28px 0 12px;
+  margin: 0 0 10px;
   @media (max-width: 1024px) {
     font-size: 32px;
-    margin: 20px 0 8px;
+    margin: 0 0 8px;
   }
 }
 h2 {
@@ -195,46 +198,76 @@ code {
 /* ─── Home page layout ───────────────────────────────────────────────── */
 
 .home-page__header {
-  padding: 0 32px 20px;
+  padding: 28px 32px 24px;
   text-align: left;
   border-bottom: 1px solid var(--border);
+  background:
+    radial-gradient(ellipse 60% 120% at 0% 0%, var(--accent-bg) 0%, transparent 70%);
 
   @media (max-width: 1024px) {
-    padding: 0 16px 16px;
+    padding: 20px 16px 20px;
   }
 }
 
 .home-page__header p {
   color: var(--text);
-  font-size: 16px;
+  font-size: 17px;
   margin-top: 0;
+}
+
+.home-page__header-stats {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--text);
+  flex-wrap: wrap;
+}
+
+.home-page__header-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+}
+
+.home-page__header-stat strong {
+  color: var(--text-h);
+  font-weight: 700;
 }
 
 .home-page__filter {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
-  padding: 0 32px 24px;
+  gap: 10px;
+  padding: 20px 32px 24px;
   @media (max-width: 1024px) {
-    padding: 0 16px 20px;
+    padding: 16px 16px 20px;
   }
 }
 
 .home-page__search {
   margin-left: auto;
-  padding: 5px 12px;
+  padding: 7px 14px;
   border-radius: 999px;
   border: 1px solid var(--border);
   background: var(--bg);
   color: var(--text);
   font-size: 14px;
-  min-width: 180px;
-  transition: border-color 0.15s;
+  min-width: 200px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+
+  &::placeholder {
+    color: var(--text);
+    opacity: 0.55;
+  }
 
   &:focus {
     outline: none;
     border-color: var(--accent-border);
+    box-shadow: 0 0 0 3px var(--accent-bg);
   }
 
   @media (max-width: 600px) {
@@ -251,7 +284,7 @@ code {
 }
 
 .home-page__filter-pill {
-  padding: 6px 16px;
+  padding: 7px 18px;
   border-radius: 999px;
   border: 1px solid var(--border);
   background: var(--bg);
@@ -335,8 +368,9 @@ code {
 
 .home-page__upcoming-heading {
   padding-bottom: 12px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--accent-border);
   margin-bottom: 16px;
+  color: var(--accent);
 }
 
 /* ─── Ritt card ──────────────────────────────────────────────────────── */

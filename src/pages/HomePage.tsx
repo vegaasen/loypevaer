@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { RittCard } from "../components/RittCard";
 import { useMyRitt } from "../hooks/useMyRitt";
 import { usePageTitle } from "../hooks/usePageTitle";
@@ -60,6 +60,9 @@ export function HomePage() {
   const [discipline, setDiscipline] = useState<Discipline>("alle");
   const [search, setSearch] = useState("");
 
+  const totalLandevei = useMemo(() => ritt.filter((r) => r.discipline === "landevei").length, []);
+  const totalTerreng = useMemo(() => ritt.filter((r) => r.discipline === "terreng").length, []);
+
   const searchQuery = search.trim().toLowerCase();
   const filtered = ritt
     .filter((r) => discipline === "alle" || r.discipline === discipline)
@@ -100,6 +103,17 @@ export function HomePage() {
       <header className="home-page__header">
         <h1>Rittvær</h1>
         <p>Sjekk været langs ruten for norske sykkelritt</p>
+        <div className="home-page__header-stats">
+          <span className="home-page__header-stat">
+            <strong>{ritt.length}</strong> ritt totalt
+          </span>
+          <span className="home-page__header-stat">
+            <strong>{totalLandevei}</strong> landevei
+          </span>
+          <span className="home-page__header-stat">
+            <strong>{totalTerreng}</strong> terreng
+          </span>
+        </div>
       </header>
 
       <div className="home-page__filter">
@@ -137,6 +151,7 @@ export function HomePage() {
                   officialDate={r.officialDate}
                   distance={r.distance}
                   region={r.region}
+                  discipline={r.discipline as "landevei" | "terreng"}
                   displayDate={entry?.date}
                   countdown={formatCountdown(date)}
                   planned
@@ -160,6 +175,7 @@ export function HomePage() {
                 officialDate={r.officialDate}
                 distance={r.distance}
                 region={r.region}
+                discipline={r.discipline as "landevei" | "terreng"}
                 countdown={formatCountdown(r.officialDate)}
                 planned={isPlanned(r.id)}
                 onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
@@ -191,6 +207,7 @@ export function HomePage() {
                          officialDate={r.officialDate}
                          distance={r.distance}
                          region={r.region}
+                         discipline={r.discipline as "landevei" | "terreng"}
                          planned={isPlanned(r.id)}
                          onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
                        />

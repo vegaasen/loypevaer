@@ -6,6 +6,7 @@ type Props = {
   officialDate: string;
   distance: number;
   region: string;
+  discipline: "landevei" | "terreng";
   /** Override the displayed date (e.g. show saved planned date instead of official date) */
   displayDate?: string;
   planned?: boolean;
@@ -14,12 +15,18 @@ type Props = {
   countdown?: string;
 };
 
+const DISCIPLINE_LABEL: Record<"landevei" | "terreng", string> = {
+  landevei: "Landevei",
+  terreng: "Terreng",
+};
+
 export function RittCard({
   id,
   name,
   officialDate,
   distance,
   region,
+  discipline,
   displayDate,
   planned = false,
   onTogglePlanned,
@@ -41,7 +48,9 @@ export function RittCard({
       <div className="ritt-card__meta">
         <span className="ritt-card__region">{region}</span>
         <span className="ritt-card__distance">{distance} km</span>
-
+        <span className={`ritt-card__discipline ritt-card__discipline--${discipline}`}>
+          {DISCIPLINE_LABEL[discipline]}
+        </span>
       </div>
       <div className="ritt-card__footer">
         <div className="ritt-card__footer-left">
