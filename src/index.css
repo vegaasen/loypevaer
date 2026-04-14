@@ -488,6 +488,21 @@ code {
   }
 }
 
+.ritt-page__share-btn--copied {
+  color: #2d7a2d;
+  border-color: #2d7a2d;
+  background: #edfaed;
+  cursor: default;
+  pointer-events: none;
+}
+
+.ritt-page__share-btn--error {
+  color: var(--warning, #b84c00);
+  border-color: currentColor;
+  cursor: default;
+  pointer-events: none;
+}
+
 .ritt-page__map-section {
   padding: 0 32px;
   margin-top: 24px;

@@ -12,6 +12,7 @@ import { useMyRitt } from "../hooks/useMyRitt";
 import { usePageTitle } from "../hooks/usePageTitle";
 import { useWeather } from "../hooks/useWeather";
 import { calcWaypointTimes, WAYPOINT_FRACTIONS } from "../lib/timing";
+import { ShareButton } from "../components/ShareButton";
 import ritt from "../data/ritt.json";
 
 export function RittPage() {
@@ -131,6 +132,7 @@ export function RittPage() {
           >
             {planned ? "📌 Mine ritt" : "📍 Legg til mine ritt"}
           </button>
+          <ShareButton />
         </div>
       </header>
 
