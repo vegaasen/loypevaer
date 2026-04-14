@@ -593,5 +593,22 @@
       { "label": "75% – Sandnes/Jæren", "lat": 58.756, "lon": 5.713, "altitude": 30 },
       { "label": "Mål – Vestly/Bryne", "lat": 58.736, "lon": 5.697, "altitude": 20 }
     ]
+  },
+  {
+    "id": "ultrabirken",
+    "name": "UltraBirken",
+    "discipline": "terreng",
+    "officialDate": "2026-08-29",
+    "distance": 110,
+    "elevationGain": 2800,
+    "region": "Innlandet",
+    "url": "https://birken.no/no/sykkel/ultrabirken-sykkel",
+    "waypoints": [
+      { "label": "Start – Pellestova", "lat": 61.247, "lon": 10.419, "altitude": 826 },
+      { "label": "25% – Hita", "lat": 61.383, "lon": 10.559, "altitude": 900 },
+      { "label": "50% – Korsen", "lat": 61.35, "lon": 10.85, "altitude": 820 },
+      { "label": "75% – Elgåsen", "lat": 61.25, "lon": 10.73, "altitude": 760 },
+      { "label": "Mål – Lillehammer", "lat": 61.115, "lon": 10.466, "altitude": 185 }
+    ]
   }
 ]
