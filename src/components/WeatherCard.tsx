@@ -136,6 +136,15 @@ export function WeatherCard({ waypoint, data, isLoading, isError, arrivalTime, r
             <div className="weather-card__detail">
               <span title="Vind">
                 💨 {windSpeed} km/t
+                {windDir !== undefined && (
+                  <span
+                    className="weather-card__wind-arrow"
+                    style={{ transform: `rotate(${windDir}deg)` }}
+                    aria-hidden="true"
+                  >
+                    ↑
+                  </span>
+                )}
                 {windDirLabel && (
                   <span className="weather-card__wind-dir"> · {windDirLabel}</span>
                 )}

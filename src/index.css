@@ -212,11 +212,42 @@ code {
 
 .home-page__filter {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 8px;
   padding: 0 32px 24px;
   @media (max-width: 1024px) {
     padding: 0 16px 20px;
   }
+}
+
+.home-page__search {
+  margin-left: auto;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  min-width: 180px;
+  transition: border-color 0.15s;
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent-border);
+  }
+
+  @media (max-width: 600px) {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.home-page__empty {
+  padding: 32px;
+  color: var(--text);
+  opacity: 0.6;
+  font-size: 15px;
 }
 
 .home-page__filter-pill {
@@ -293,6 +324,19 @@ code {
   border-bottom: 1px solid var(--accent-border);
   margin-bottom: 16px;
   color: var(--accent);
+}
+
+.home-page__upcoming-section {
+  padding: 24px 32px 0;
+  @media (max-width: 1024px) {
+    padding: 20px 16px 0;
+  }
+}
+
+.home-page__upcoming-heading {
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 16px;
 }
 
 /* ─── Ritt card ──────────────────────────────────────────────────────── */
@@ -379,9 +423,22 @@ code {
   margin-top: 2px;
 }
 
+.ritt-card__footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
 .ritt-card__date {
   font-size: 13px;
   color: var(--text);
+}
+
+.ritt-card__countdown {
+  font-size: 11px;
+  color: var(--accent);
+  font-weight: 500;
 }
 
 .ritt-card__bookmark {
@@ -728,6 +785,14 @@ details[open] .history-table__summary::before {
 
 .weather-card__wind-dir {
   font-weight: 500;
+}
+
+.weather-card__wind-arrow {
+  display: inline-block;
+  margin-left: 4px;
+  font-style: normal;
+  line-height: 1;
+  opacity: 0.7;
 }
 
 /* ─── Warning state modifiers ────────────────────────────────────────── */

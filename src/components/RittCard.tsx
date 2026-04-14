@@ -11,6 +11,8 @@ type Props = {
   displayDate?: string;
   planned?: boolean;
   onTogglePlanned?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  /** Countdown string, e.g. "om 3 dager" or "i dag" */
+  countdown?: string;
 };
 
 const DISCIPLINE_LABEL: Record<"landevei" | "terreng", string> = {
@@ -28,6 +30,7 @@ export function RittCard({
   displayDate,
   planned = false,
   onTogglePlanned,
+  countdown,
 }: Props) {
   const dateStr = displayDate ?? officialDate;
   const formattedDate = new Date(dateStr).toLocaleDateString("nb-NO", {
@@ -52,7 +55,12 @@ export function RittCard({
         )}
       </div>
       <div className="ritt-card__footer">
-        <span className="ritt-card__date">{formattedDate}</span>
+        <div className="ritt-card__footer-left">
+          <span className="ritt-card__date">{formattedDate}</span>
+          {countdown && (
+            <span className="ritt-card__countdown">{countdown}</span>
+          )}
+        </div>
         {onTogglePlanned && (
           <button
             className={`ritt-card__bookmark${planned ? " ritt-card__bookmark--active" : ""}`}
