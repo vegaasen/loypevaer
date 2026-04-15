@@ -1399,3 +1399,44 @@ details[open] .history-table__summary::before {
   text-decoration: none;
   &:hover { text-decoration: underline; }
 }
+
+/* ─── PWA reload prompt ──────────────────────────────────────────────── */
+
+.reload-prompt {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 1rem;
+  background: var(--bg);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-size: 0.875rem;
+  color: var(--text-h);
+  white-space: nowrap;
+}
+
+.reload-prompt button {
+  padding: 0.3rem 0.75rem;
+  border-radius: calc(var(--radius) - 2px);
+  border: 1px solid var(--accent-border);
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.15s;
+  &:hover { background: var(--accent); color: #fff; }
+}
+
+.reload-prompt__dismiss {
+  padding: 0.2rem 0.5rem !important;
+  background: transparent !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+  &:hover { background: var(--border) !important; color: var(--text-h) !important; }
+}

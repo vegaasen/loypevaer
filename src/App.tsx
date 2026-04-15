@@ -5,6 +5,7 @@ import { RittPage } from "./pages/RittPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { NavBar } from "./components/NavBar";
 import { ErrorBoundary } from "./components/ErrorBoundary";
+import { ReloadPrompt } from "./components/ReloadPrompt";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +49,7 @@ function App() {
           </Routes>
           <SiteFooter />
         </BrowserRouter>
+        <ReloadPrompt />
       </QueryClientProvider>
     </ErrorBoundary>
   );
