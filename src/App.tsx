@@ -33,6 +33,12 @@ function SiteFooter() {
           Foreslå et ritt
         </a>
       </span>
+      <span>
+        Laget av{" "}
+        <a href="https://www.vegaasen.com" target="_blank" rel="noopener noreferrer">
+          Vegard Aasen
+        </a>
+      </span>
     </footer>
   );
 }
