@@ -26,6 +26,10 @@ export function RittPage() {
 
   usePageTitle(rittData ? `${rittData.name} – Startstreken` : "Fant ikke ritt – Startstreken");
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
+
   // Restore saved planned entry when there are no URL params
   const savedEntry = id ? getPlanned(id) : undefined;
 
