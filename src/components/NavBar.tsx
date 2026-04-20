@@ -1,24 +1,32 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { allArrangements as ritt, getNextRitt, type RittEntry } from "../lib/ritt";
+import { allArrangements as ritt, getNextRitt, type Discipline, type RittEntry } from "../lib/ritt";
 
 type Race = RittEntry;
 
-function groupByYear(races: Race[]): Map<number, Race[]> {
+const DISCIPLINE_ORDER: Discipline[] = ["terreng", "landevei", "langrenn", "triathlon", "ultraløp"];
+
+const DISCIPLINE_LABEL: Record<Discipline, string> = {
+  terreng: "🚵 Terreng",
+  landevei: "🚴 Landevei",
+  langrenn: "⛷️ Langrenn",
+  triathlon: "🏊 Triathlon",
+  ultraløp: "🏃 Ultraløp",
+};
+
+function groupByDiscipline(races: Race[]): Map<Discipline, Race[]> {
   const sorted = [...races].sort(
     (a, b) => new Date(a.officialDate + "T00:00:00").getTime() - new Date(b.officialDate + "T00:00:00").getTime()
   );
-  const grouped = new Map<number, Race[]>();
+  const grouped = new Map<Discipline, Race[]>();
+  for (const discipline of DISCIPLINE_ORDER) grouped.set(discipline, []);
   for (const race of sorted) {
-    const year = new Date(race.officialDate + "T00:00:00").getFullYear();
-    if (!grouped.has(year)) grouped.set(year, []);
-    grouped.get(year)!.push(race);
+    grouped.get(race.discipline)!.push(race);
   }
   return grouped;
 }
 
 // Computed once at module load — both are derived from static ritt data.
-const grouped = groupByYear(ritt);
-const years = [...grouped.keys()].sort((a, b) => b - a);
+const grouped = groupByDiscipline(ritt);
 const nextId = getNextRitt(ritt)?.id ?? ritt[0]?.id ?? "";
 
 export function NavBar() {
@@ -49,9 +57,9 @@ export function NavBar() {
             <option value="" disabled>
               Velg arrangement…
             </option>
-            {years.map((year) => (
-              <optgroup key={year} label={String(year)}>
-                {grouped.get(year)!.map((r) => (
+            {DISCIPLINE_ORDER.filter((d) => (grouped.get(d)?.length ?? 0) > 0).map((d) => (
+              <optgroup key={d} label={DISCIPLINE_LABEL[d]}>
+                {grouped.get(d)!.map((r) => (
                   <option key={r.id} value={r.id}>
                     {r.name} — {r.distance} km
                   </option>
