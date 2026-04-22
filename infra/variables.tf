@@ -7,7 +7,7 @@ variable "aws_region" {
 variable "domain_name" {
   description = "Root domain name (e.g. loypevaer.com)"
   type        = string
-  default     = "løypevær.com"
+  default     = "xn--lypevr-tua3l.com"
 }
 
 variable "s3_bucket_name" {
