@@ -5,7 +5,7 @@ variable "aws_region" {
 }
 
 variable "domain_name" {
-  description = "Root domain name (e.g. løypevær.com)"
+  description = "Root domain name (e.g. loypevaer.com)"
   type        = string
   default     = "løypevær.com"
 }
@@ -13,7 +13,7 @@ variable "domain_name" {
 variable "s3_bucket_name" {
   description = "Name of the S3 bucket used for site hosting"
   type        = string
-  default     = "løypevær-no-site"
+  default     = "loypevaer-no-site"
 }
 
 variable "cloudfront_price_class" {
