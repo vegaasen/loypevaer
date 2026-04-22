@@ -14,7 +14,7 @@ export function SiteFooter() {
       </span>
       <span>
         <a
-          href="https://github.com/vegaasen/startstreken/issues/new?template=suggest-ritt.yml"
+          href="https://github.com/vegaasen/loypevaer/issues/new?template=suggest-ritt.yml"
           target="_blank"
           rel="noopener noreferrer"
         >

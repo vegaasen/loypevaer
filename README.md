@@ -1,7 +1,7 @@
 # Løypevær 🚴
 
-![CI](https://github.com/vegaasen/startstreken/actions/workflows/ci.yml/badge.svg)
-![Deploy](https://github.com/vegaasen/startstreken/actions/workflows/pages.yml/badge.svg)
+![CI](https://github.com/vegaasen/loypevaer/actions/workflows/ci.yml/badge.svg)
+![Deploy](https://github.com/vegaasen/loypevaer/actions/workflows/pages.yml/badge.svg)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-6-3178C6?logo=typescript&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)
