@@ -11,7 +11,7 @@ terraform {
   backend "s3" {
     # Values provided via -backend-config flags in CI or via ~/.terraform/backend.tfvars locally
     # bucket = <TF_STATE_BUCKET>
-    # key    = "løypevær.no/terraform.tfstate"
+    # key    = "løypevær.com/terraform.tfstate"
     # region = <TF_STATE_REGION>
   }
 }

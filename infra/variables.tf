@@ -5,9 +5,9 @@ variable "aws_region" {
 }
 
 variable "domain_name" {
-  description = "Root domain name (e.g. løypevær.no)"
+  description = "Root domain name (e.g. løypevær.com)"
   type        = string
-  default     = "løypevær.no"
+  default     = "løypevær.com"
 }
 
 variable "s3_bucket_name" {
