@@ -33,12 +33,12 @@ export function NavBar() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const match = location.pathname.match(/^\/ritt\/([^/]+)/);
+  const match = location.pathname.match(/^\/arrangement\/([^/]+)/);
   const currentId = match ? match[1] : "";
 
   function handleChange(e: React.ChangeEvent<HTMLSelectElement>) {
     const value = e.target.value;
-    if (value) void navigate(`/ritt/${value}`);
+    if (value) void navigate(`/arrangement/${value}`);
   }
 
   return (
@@ -68,7 +68,7 @@ export function NavBar() {
             ))}
           </select>
           {nextId && (
-            <Link to={`/ritt/${nextId}`} className="site-nav__cta">
+            <Link to={`/arrangement/${nextId}`} className="site-nav__cta">
               Sjekk været →
             </Link>
           )}

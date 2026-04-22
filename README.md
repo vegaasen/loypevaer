@@ -13,30 +13,30 @@
 
 Pick a Norwegian race, choose a date, and get weather conditions at ~5 key points along the route — from start to finish. Uses live forecasts when the date is close, and 10-year historical climate averages when planning further ahead.
 
-**Live app: [vegaasen.github.io/startstreken](https://vegaasen.github.io/startstreken/)**
+**Live app: [vegaasen.github.io/loypevaer](https://vegaasen.github.io/loypevaer/)**
 
 ---
 
 ## Features
 
-- Browse 36 well-known Norwegian sykkelritt with official race dates
+- Browse Norwegian endurance events across sykkel (landevei + terreng), langrenn, triathlon, and ultraløp
 - Select any date to see weather along the route
 - **Forecast mode** — live data from Open-Meteo when the date is ≤ 16 days away
-- **Climate average mode** — 10-year historical average (2015–2024) for dates further in the future
+- **Climate average mode** — rolling 10-year historical average for dates further in the future
 - **Pacing** — set start/finish time to get waypoint-specific hourly forecasts
 - **Gear suggestions** — rule-based recommendations from temperature, precipitation, and wind
 - **Elevation profile** — SVG chart with waypoint markers
 - **Map view** — Leaflet map with colour-coded waypoint pins and OSRM route polyline
-- **Bookmarks** — save ritt + date combos via "Mine ritt" (persisted in localStorage)
+- **Bookmarks** — save arrangement + date combos via "Mine arrangement" (persisted in localStorage)
 - **Wind direction** — compass bearing + relative label (Medvind/Motvind/Sidevind)
 - **Feels-like temperature** — `apparent_temperature` from Open-Meteo
 - **Precipitation probability** — % chance of rain alongside expected mm
-- Shareable URLs — date is stored in the query string (`/ritt/birkebeinerrittet?date=2025-08-23`)
+- Shareable URLs — date is stored in the query string (`/arrangement/birkebeinerrittet?date=2025-08-23`)
 - Dark mode via `prefers-color-scheme`
 
-## Ritt included
+## Events included
 
-| Ritt | Distance | Region | Disiplin |
+| Arrangement | Distance | Region | Disiplin |
 |---|---|---|---|
 | Birkebeinerrittet | 88 km | Innlandet | Terreng |
 | GravelBirken | 92 km | Innlandet | Terreng |
@@ -94,7 +94,8 @@ The weather cache (`src/data/weather-cache.json`) is also refreshed nightly via 
 ```
 src/
   data/
-    ritt.json                    # Curated ritt with waypoints
+    arrangements.json            # Curated events with waypoints (sykkel, langrenn, ultraløp)
+    triathlon-events.json        # Auto-synced triathlon events
     weather-cache.json           # Nightly-refreshed historical weather cache (auto-generated)
   lib/
     weather.ts                   # Open-Meteo forecast + historical fetchers
@@ -102,14 +103,14 @@ src/
     wind.ts                      # Wind direction helpers + relative label (Medvind/Motvind/Sidevind)
     timing.ts                    # Waypoint arrival time calculator from start/finish time
     difficulty.ts                # Difficulty rating derived from weather + route conditions
-    ritt.ts                      # Ritt data helpers and type definitions
+    ritt.ts                      # Event data helpers and type definitions
   hooks/
     useWeather.ts                # TanStack Query wrapper (useQueries per waypoint)
-    useMyRitt.ts                 # Bookmark persistence in localStorage
+    useMyEvents.ts               # Bookmark persistence in localStorage
     usePageTitle.ts              # Sets <title> per route
   components/
-    RittCard.tsx                 # Race card on the home page
-    RittMap.tsx                  # Leaflet map with waypoints + OSRM route polyline
+    EventCard.tsx                # Race card on the home page
+    EventMap.tsx                 # Leaflet map with waypoints + OSRM route polyline
     DatePicker.tsx               # Date input with reset-to-official-date button
     TimePicker.tsx               # Start/finish time inputs
     WeatherStrip.tsx             # Row of weather cards + forecast/climate banner
@@ -122,8 +123,8 @@ src/
     ErrorBoundary.tsx            # App-level + per-strip error boundary
     ReloadPrompt.tsx             # PWA update prompt
   pages/
-    HomePage.tsx                 # Ritt grid, sorted by official date
-    RittPage.tsx                 # Detail: meta + date picker + weather strip
+    HomePage.tsx                 # Event grid, sorted by official date
+    EventPage.tsx                # Detail: meta + date picker + weather strip
     NotFoundPage.tsx             # 404 catch-all
   App.tsx                        # Router + QueryClientProvider
 scripts/
@@ -148,25 +149,29 @@ scripts/
 
 ### Open
 
-- [ ] **Langrenn** — add cross-country ski races (Birkebeinerrennet, Holmenkollmarsjen etc.); add `type` field to data model; show relative humidity for ski disciplines
-- [ ] **Triathlon** — add Norwegian triathlon events (e.g. Norseman, Isklar Norseman Xtreme); multi-discipline waypoint support
-- [ ] **Ultraløp** — add Norwegian ultra runs (e.g. Nordmarka 100, Romeriksåsen Ultra); adapt waypoint model for running
 - [ ] **GPX upload** — derive waypoints automatically from a GPX file
-- [ ] **Official start time pre-fill** — pre-populate start time with the known mass-start time per ritt
 - [ ] **Comparison mode** — show official date vs custom date side by side
 - [ ] **Hourly breakdown** — expand a waypoint card to show hour-by-hour forecast
 - [ ] **Elevation-aware pacing** — `calcFinishTimeFromSpeed` currently uses linear distance; add elevation correction
 - [ ] **Tests** — Vitest unit tests for `weather.ts` (mocked fetch) and `wmo.ts`
 - [ ] **Offline / PWA** — cache last-fetched weather for use without connectivity
 - [ ] **Weather trend indicator** — warmer/colder arrow relative to day before
-- [ ] **UV index** — relevant for long summer ritt on exposed mountain terrain
+- [ ] **UV index** — relevant for long summer events on exposed mountain terrain
 - [ ] **Wet road risk** — combine recent precip + temp to flag likely icy/wet conditions
 
 ### Data quality
 
-- [ ] **Verify waypoint coordinates** — several ritt are manually curated; cross-check against GPX files or Strava segments
+- [ ] **Verify waypoint coordinates** — several events are manually curated; cross-check against GPX files or Strava segments
 - [ ] **Altitude values** — confirm `altitude` per waypoint for accurate temperature correction
-- [ ] **Official dates** — update `ritt.json` each year when terminlisten is published
+- [ ] **Official dates** — update `arrangements.json` each year when terminlisten is published
+- [ ] **Triathlon waypoints** — most triathlon events currently have only a single waypoint (venue); expand with swim/bike/run course points
+
+### Done
+
+- [x] **Langrenn** — cross-country ski races added (Birkebeinerrennet, Holmenkollmarsjen etc.)
+- [x] **Triathlon** — Norwegian triathlon events added (Norseman etc.) via auto-synced feed
+- [x] **Ultraløp** — Norwegian ultra runs added; waypoint model supports running disciplines
+- [x] **Official start time pre-fill** — start time pre-populated from known mass-start time per event
 
 ---
 

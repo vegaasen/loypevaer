@@ -212,8 +212,8 @@ export async function fetchClimateAverage(
     return { ...cached, tempTrend };
   }
 
-  const startYear = 2015;
-  const endYear = 2024;
+  const endYear = new Date().getFullYear() - 1;
+  const startYear = endYear - 9;
 
   // Build start/end covering all years in one request (full months to avoid
   // missing days at boundaries) — then filter client-side to the exact month-day.
@@ -377,8 +377,8 @@ export async function fetchClimateAverageHourly(
   const weatherCache = await getWeatherCache();
   const prevCached = (weatherCache.climateAverages as Record<string, { tempMax: number } | undefined>)[prevCacheKey];
 
-  const startYear = 2015;
-  const endYear = 2024;
+  const endYear = new Date().getFullYear() - 1;
+  const startYear = endYear - 9;
 
   const yearFetches = Array.from({ length: endYear - startYear + 1 }, (_, i) => {
     const year = startYear + i;

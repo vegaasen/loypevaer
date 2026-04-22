@@ -26,7 +26,7 @@ const DISCIPLINE_LABEL: Record<Discipline, string> = {
   ultraløp: "Ultraløp",
 };
 
-export function RittCard({
+export function EventCard({
   id,
   name,
   officialDate,
@@ -48,7 +48,7 @@ export function RittCard({
 
   return (
     <Link
-      to={`ritt/${id}`}
+      to={`arrangement/${id}`}
       className={`ritt-card${planned ? " ritt-card--planned" : ""}${isPast ? " ritt-card--past" : ""}`}
     >
       <div className="ritt-card__name">{name}</div>

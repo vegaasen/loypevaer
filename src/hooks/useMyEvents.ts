@@ -27,7 +27,7 @@ function writeStore(store: Store): void {
   }
 }
 
-export function useMyRitt() {
+export function useMyEvents() {
   const [store, setStore] = useState<Store>(readStore);
 
   const save = useCallback((next: Store) => {

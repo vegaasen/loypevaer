@@ -9,7 +9,7 @@ import { ReloadPrompt } from "./components/ReloadPrompt";
 import { usePageTracking } from "./hooks/usePageTracking";
 import "./App.css";
 
-const RittPage = lazy(() => import("./pages/RittPage").then((m) => ({ default: m.RittPage })));
+const EventPage = lazy(() => import("./pages/EventPage").then((m) => ({ default: m.EventPage })));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage").then((m) => ({ default: m.NotFoundPage })));
 
 const queryClient = new QueryClient({
@@ -29,7 +29,7 @@ function RouterContent() {
       <Suspense fallback={<div className="page-loading" aria-label="Laster…" />}>
         <Routes>
           <Route index element={<HomePage />} />
-          <Route path="/ritt/:id" element={<RittPage />} />
+          <Route path="/arrangement/:id" element={<EventPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>

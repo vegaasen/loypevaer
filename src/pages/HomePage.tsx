@@ -1,8 +1,8 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { RittCard } from "../components/RittCard";
+import { EventCard } from "../components/EventCard";
 import { useFilterContext } from "../context/useFilterContext";
-import { useMyRitt } from "../hooks/useMyRitt";
+import { useMyEvents } from "../hooks/useMyEvents";
 import { usePageTitle } from "../hooks/usePageTitle";
 import { allArrangements as ritt, getNextRitt, type RittEntry } from "../lib/ritt";
 
@@ -56,7 +56,7 @@ const DISCIPLINE_LABELS: Record<Discipline, string> = {
 
 export function HomePage() {
   usePageTitle("Løypevær");
-  const { plannedIds, isPlanned, getPlanned, add, remove } = useMyRitt();
+  const { plannedIds, isPlanned, getPlanned, add, remove } = useMyEvents();
   const { discipline, setDiscipline } = useFilterContext();
   const [search, setSearch] = useState("");
 
@@ -217,7 +217,7 @@ export function HomePage() {
               const entry = getPlanned(r.id);
               const date = entry?.date ?? r.officialDate;
               return (
-                <RittCard
+                <EventCard
                   key={r.id}
                   id={r.id}
                   name={r.name}
@@ -243,7 +243,7 @@ export function HomePage() {
           <h2 className="home-page__upcoming-heading">Kommer snart</h2>
           <div className="home-page__grid">
             {upcomingRaces.map((r) => (
-              <RittCard
+              <EventCard
                 key={r.id}
                 id={r.id}
                 name={r.name}
@@ -276,7 +276,7 @@ export function HomePage() {
                   <h3 className="home-page__month-heading">{monthName(month)}</h3>
                   <div className="home-page__grid">
                     {byMonth.get(month)!.map((r) => (
-                      <RittCard
+                      <EventCard
                         key={r.id}
                         id={r.id}
                         name={r.name}
@@ -309,7 +309,7 @@ export function HomePage() {
             </p>
           </div>
           <div className="home-page__cta-banner-action">
-            <Link to={`/ritt/${nextRitt.id}`} className="home-page__cta-banner-btn">
+            <Link to={`/arrangement/${nextRitt.id}`} className="home-page__cta-banner-btn">
               Sjekk været nå →
             </Link>
             <span className="home-page__cta-banner-meta">

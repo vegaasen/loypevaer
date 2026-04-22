@@ -3,23 +3,23 @@ import { useState, useEffect } from "react";
 import { DatePicker } from "../components/DatePicker";
 import { TimePicker } from "../components/TimePicker";
 import { WeatherStrip } from "../components/WeatherStrip";
-import { RittMap } from "../components/RittMap";
+import { EventMap } from "../components/EventMap";
 import { HistoricalWeatherTable } from "../components/HistoricalWeatherTable";
 import { GearSuggestion } from "../components/GearSuggestion";
 import { ElevationProfile } from "../components/ElevationProfile";
 import { ErrorBoundary } from "../components/ErrorBoundary";
 import { computeElevationGain, allArrangements } from "../lib/ritt";
 import { physicalScore, weatherAdjustment, scoreToLabel } from "../lib/difficulty";
-import { useMyRitt } from "../hooks/useMyRitt";
+import { useMyEvents } from "../hooks/useMyEvents";
 import { usePageTitle } from "../hooks/usePageTitle";
 import { useWeather } from "../hooks/useWeather";
 import { calcWaypointTimes, WAYPOINT_FRACTIONS } from "../lib/timing";
 import { ShareButton } from "../components/ShareButton";
 
-export function RittPage() {
+export function EventPage() {
   const { id } = useParams<{ id: string }>();
   const [searchParams, setSearchParams] = useSearchParams();
-  const { isPlanned, getPlanned, add, remove } = useMyRitt();
+  const { isPlanned, getPlanned, add, remove } = useMyEvents();
 
   const rittData = allArrangements.find((r) => r.id === id);
 
@@ -165,7 +165,7 @@ export function RittPage() {
       </header>
 
       <section className="ritt-page__map-section">
-        <RittMap waypoints={rittData.waypoints} name={rittData.name} discipline={rittData.discipline} />
+        <EventMap waypoints={rittData.waypoints} name={rittData.name} discipline={rittData.discipline} />
       </section>
 
       <section className="ritt-page__elevation-section">

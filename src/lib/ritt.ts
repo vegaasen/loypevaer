@@ -22,6 +22,8 @@ export interface RittEntry {
   /** "pending" = date not yet officially confirmed for this season. */
   dateStatus?: "pending";
   url?: string;
+  /** Human-readable distance description, used for multi-discipline events like triathlon. */
+  distanceLabel?: string;
   waypoints: Waypoint[];
   elevationGain?: number;
 }

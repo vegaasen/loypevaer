@@ -44,7 +44,7 @@ async function fetchOsrmRoute(waypoints: Waypoint[], discipline: Discipline): Pr
   return route.geometry.coordinates.map(([lon, lat]) => [lat, lon]);
 }
 
-export function RittMap({ waypoints, name, discipline }: Props) {
+export function EventMap({ waypoints, name, discipline }: Props) {
   const mapRef = useRef<HTMLDivElement>(null);
   const detailsRef = useRef<HTMLDetailsElement>(null);
   // Keep a ref to the Leaflet map instance so we can destroy it on unmount
