@@ -762,5 +762,41 @@
       { "label": "75% – Elgåsen", "lat": 61.25, "lon": 10.73, "altitude": 760 },
       { "label": "Mål – Lillehammer", "lat": 61.115, "lon": 10.466, "altitude": 185 }
     ]
+  },
+  {
+    "id": "halvvatternrundan",
+    "name": "Halvvätternrundan",
+    "discipline": "landevei",
+    "officialDate": "2026-06-13",
+    "officialStartTime": "06:00",
+    "distance": 150,
+    "elevationGain": 800,
+    "region": "Östergötland",
+    "url": "https://vatternrundan.se",
+    "waypoints": [
+      { "label": "Start/Mål – Motala", "lat": 58.537, "lon": 15.044, "altitude": 90 },
+      { "label": "25% – Karlsborg", "lat": 58.533, "lon": 14.509, "altitude": 95 },
+      { "label": "50% – Hjo", "lat": 58.306, "lon": 14.302, "altitude": 95 },
+      { "label": "75% – Hästholmen", "lat": 58.452, "lon": 14.659, "altitude": 90 },
+      { "label": "Mål – Motala", "lat": 58.537, "lon": 15.044, "altitude": 90 }
+    ]
+  },
+  {
+    "id": "vatternrundan",
+    "name": "Vätternrundan",
+    "discipline": "landevei",
+    "officialDate": "2026-06-13",
+    "officialStartTime": "06:00",
+    "distance": 300,
+    "elevationGain": 2500,
+    "region": "Östergötland",
+    "url": "https://vatternrundan.se",
+    "waypoints": [
+      { "label": "Start/Mål – Motala", "lat": 58.537, "lon": 15.044, "altitude": 90 },
+      { "label": "25% – Karlsborg", "lat": 58.533, "lon": 14.509, "altitude": 95 },
+      { "label": "50% – Jönköping", "lat": 57.782, "lon": 14.165, "altitude": 95 },
+      { "label": "75% – Vadstena", "lat": 58.449, "lon": 14.891, "altitude": 90 },
+      { "label": "Mål – Motala", "lat": 58.537, "lon": 15.044, "altitude": 90 }
+    ]
   }
 ]

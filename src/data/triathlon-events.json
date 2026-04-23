@@ -134,6 +134,23 @@
       "waypoints": [
         { "label": "Start/Mål – Bygland", "lat": 58.997, "lon": 7.806, "altitude": 185 }
       ]
+    },
+    {
+      "id": "axtri",
+      "name": "Aurlandsfjellet Xtreme Triathlon (AXTRI)",
+      "discipline": "triathlon",
+      "officialDate": "2026-08-15",
+      "officialStartTime": "08:00",
+      "distance": 120,
+      "distanceLabel": "Mellomdistanse (1.9km svøm / 98km sykkel / 21km løp)",
+      "region": "Vestland",
+      "url": "https://axtri.no",
+      "waypoints": [
+        { "label": "Start svøm – Laguna Beach, Aurland", "lat": 60.902, "lon": 7.190, "altitude": 0 },
+        { "label": "Topp sykkel – Aurlandsfjellet", "lat": 60.739, "lon": 7.142, "altitude": 1320 },
+        { "label": "T2 – Vassbygdi", "lat": 60.888, "lon": 7.316, "altitude": 30 },
+        { "label": "Mål – Østerbø", "lat": 60.947, "lon": 7.374, "altitude": 843 }
+      ]
     }
   ]
 }

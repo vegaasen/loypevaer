@@ -6,6 +6,18 @@ on:
     - cron: "0 3 * * *"
   # Allow manual triggering from the Actions tab
   workflow_dispatch:
+  # Trigger when race/event data changes on main
+  # Note: pushes by github-actions[bot] via GITHUB_TOKEN do NOT re-trigger workflows,
+  # so the commit this job makes will never cause a loop.
+  push:
+    branches: [main]
+    paths:
+      - "src/data/arrangements.json"
+      - "src/data/triathlon-events.json"
+
+concurrency:
+  group: refresh-weather
+  cancel-in-progress: true
 
 permissions:
   contents: write
