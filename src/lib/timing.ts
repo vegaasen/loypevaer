@@ -89,9 +89,10 @@ export function calcFinishTimeFromSpeed(
   const durationMinutes = Math.round((distanceKm / speedKmh) * 60);
   const finishMinutes = startMinutes + durationMinutes;
 
-  // Allow times past midnight (e.g. "25:30" for 01:30 next day) — callers
-  // display this as-is; calcWaypointTimes handles the date rollover.
-  const h = Math.floor(finishMinutes / 60);
-  const m = finishMinutes % 60;
+  // Wrap past-midnight times back into 00:00–23:59 so the result is always a
+  // valid HTML time value. calcWaypointTimes handles the date rollover separately.
+  const wrappedMinutes = finishMinutes % (24 * 60);
+  const h = Math.floor(wrappedMinutes / 60);
+  const m = wrappedMinutes % 60;
   return `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}`;
 }

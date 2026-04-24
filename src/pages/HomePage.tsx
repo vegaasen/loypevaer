@@ -4,8 +4,8 @@ import { Helmet } from "react-helmet-async";
 import { EventCard } from "../components/EventCard";
 import { useFilterContext } from "../context/useFilterContext";
 import { useMyEvents } from "../hooks/useMyEvents";
-import { usePageTitle } from "../hooks/usePageTitle";
 import { allArrangements as ritt, getNextRitt, type RittEntry } from "../lib/ritt";
+import { FILTER_DISCIPLINE_LABEL } from "../lib/disciplines";
 
 type Discipline = "alle" | "landevei" | "terreng" | "langrenn" | "triathlon" | "ultraløp";
 
@@ -46,18 +46,7 @@ function formatCountdown(dateStr: string): string {
   return `${Math.abs(diff)} dager siden`;
 }
 
-const DISCIPLINE_LABELS: Record<Discipline, string> = {
-  alle: "Alle",
-  landevei: "Landevei",
-  terreng: "Terreng",
-  langrenn: "Langrenn",
-  triathlon: "Triathlon",
-  ultraløp: "Ultraløp",
-};
-
 export function HomePage() {
-  usePageTitle("Løypevær");
-
   const BASE_URL = "https://vegaasen.github.io/loypevaer";
   const description =
     `Værvarsler og historiske klimasnitt for ${ritt.length} norske utholdenhetsarrangement — sykkelritt, langrenn, triathlon og ultraløp. Timebasert vær for hvert punkt langs ruten.`;
@@ -77,7 +66,7 @@ export function HomePage() {
     () =>
       ritt
         .filter((r) => discipline === "alle" || r.discipline === discipline)
-        .filter((r) => !searchQuery || r.name.toLowerCase().includes(searchQuery)),
+        .filter((r) => !searchQuery || r.name.toLowerCase().includes(searchQuery) || r.region.toLowerCase().includes(searchQuery)),
     [discipline, searchQuery]
   );
 
@@ -208,15 +197,18 @@ export function HomePage() {
 
       {/* ── Filter + search ───────────────────────────────────────────── */}
       <div id="alle-arrangement" className="home-page__filter">
-        {(["alle", "landevei", "terreng", "langrenn", "triathlon", "ultraløp"] as Discipline[]).map((d) => (
-          <button
-            key={d}
-            className={`home-page__filter-pill${discipline === d ? " home-page__filter-pill--active" : ""}`}
-            onClick={() => setDiscipline(d)}
-          >
-            {DISCIPLINE_LABELS[d]}
-          </button>
-        ))}
+        <div role="group" aria-label="Filtrer etter disiplin" className="home-page__filter-pills">
+          {(["alle", "landevei", "terreng", "langrenn", "triathlon", "ultraløp"] as Discipline[]).map((d) => (
+            <button
+              key={d}
+              className={`home-page__filter-pill${discipline === d ? " home-page__filter-pill--active" : ""}`}
+              onClick={() => setDiscipline(d)}
+              aria-pressed={discipline === d}
+            >
+              {FILTER_DISCIPLINE_LABEL[d]}
+            </button>
+          ))}
+        </div>
         <input
           type="search"
           className="home-page__search"
@@ -228,7 +220,7 @@ export function HomePage() {
       </div>
 
       {/* ── Mine ritt ─────────────────────────────────────────────────── */}
-      {plannedRaces.length > 0 && (
+      {plannedRaces.length > 0 ? (
         <section className="home-page__mine-section">
           <h2 className="home-page__mine-heading">Mine arrangement</h2>
           <div className="home-page__grid">
@@ -242,18 +234,24 @@ export function HomePage() {
                   name={r.name}
                   officialDate={r.officialDate}
                   distance={r.distance}
+                  distanceLabel={r.distanceLabel}
                   region={r.region}
                   discipline={r.discipline}
                   displayDate={entry?.date}
                   countdown={formatCountdown(date)}
                   planned
                   isPast={daysUntil(date) < 0}
+                  dateStatus={r.dateStatus}
                   onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
                 />
               );
             })}
           </div>
         </section>
+      ) : (
+        <p className="home-page__mine-hint">
+          Trykk 📍 på et arrangement for å lagre det under «Mine arrangement».
+        </p>
       )}
 
       {/* ── Kommer snart ──────────────────────────────────────────────── */}
@@ -268,10 +266,12 @@ export function HomePage() {
                 name={r.name}
                 officialDate={r.officialDate}
                 distance={r.distance}
+                distanceLabel={r.distanceLabel}
                 region={r.region}
                 discipline={r.discipline}
                 countdown={formatCountdown(r.officialDate)}
                 planned={isPlanned(r.id)}
+                dateStatus={r.dateStatus}
                 onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
               />
             ))}
@@ -301,10 +301,12 @@ export function HomePage() {
                         name={r.name}
                         officialDate={r.officialDate}
                         distance={r.distance}
+                        distanceLabel={r.distanceLabel}
                         region={r.region}
                         discipline={r.discipline}
                         planned={isPlanned(r.id)}
                         isPast={daysUntil(r.officialDate) < 0}
+                        dateStatus={r.dateStatus}
                         onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
                       />
                     ))}

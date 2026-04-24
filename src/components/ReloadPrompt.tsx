@@ -12,7 +12,7 @@ export function ReloadPrompt() {
     <div className="reload-prompt">
       <span>Ny versjon tilgjengelig</span>
       <button onClick={() => void updateServiceWorker(true)}>Last inn på nytt</button>
-      <button className="reload-prompt__dismiss" onClick={() => setNeedRefresh(false)}>
+      <button className="reload-prompt__dismiss" aria-label="Lukk" onClick={() => setNeedRefresh(false)}>
         ✕
       </button>
     </div>

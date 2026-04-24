@@ -1,17 +1,10 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { allArrangements as ritt, getNextRitt, type Discipline, type RittEntry } from "../lib/ritt";
+import { DISCIPLINE_LABEL_WITH_EMOJI } from "../lib/disciplines";
 
 type Race = RittEntry;
 
 const DISCIPLINE_ORDER: Discipline[] = ["terreng", "landevei", "langrenn", "triathlon", "ultraløp"];
-
-const DISCIPLINE_LABEL: Record<Discipline, string> = {
-  terreng: "🚵 Terreng",
-  landevei: "🚴 Landevei",
-  langrenn: "⛷️ Langrenn",
-  triathlon: "🏊 Triathlon",
-  ultraløp: "🏃 Ultraløp",
-};
 
 function groupByDiscipline(races: Race[]): Map<Discipline, Race[]> {
   const sorted = [...races].sort(
@@ -58,7 +51,7 @@ export function NavBar() {
               Velg arrangement…
             </option>
             {DISCIPLINE_ORDER.filter((d) => (grouped.get(d)?.length ?? 0) > 0).map((d) => (
-              <optgroup key={d} label={DISCIPLINE_LABEL[d]}>
+              <optgroup key={d} label={DISCIPLINE_LABEL_WITH_EMOJI[d]}>
                 {grouped.get(d)!.map((r) => (
                   <option key={r.id} value={r.id}>
                     {r.name} — {r.distance} km

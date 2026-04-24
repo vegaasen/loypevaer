@@ -1,4 +1,4 @@
-import { useWeather } from "../hooks/useWeather";
+import { useWeather, type WeatherResult } from "../hooks/useWeather";
 import { isForecastRange } from "../lib/weather";
 import { WeatherCard } from "./WeatherCard";
 import type { Waypoint } from "../lib/weather";
@@ -10,9 +10,11 @@ type Props = {
   date: string | null;
   startTime?: string | null;
   finishTime?: string | null;
+  /** Optional pre-fetched results. If provided, skips the internal useWeather call. */
+  externalResults?: WeatherResult[];
 };
 
-export function WeatherStrip({ waypoints, date, startTime, finishTime }: Props) {
+export function WeatherStrip({ waypoints, date, startTime, finishTime, externalResults }: Props) {
   const timingActive =
     date != null &&
     startTime != null &&
@@ -24,7 +26,8 @@ export function WeatherStrip({ waypoints, date, startTime, finishTime }: Props) 
     ? calcWaypointTimes(date, startTime, finishTime, [...WAYPOINT_FRACTIONS])
     : null;
 
-  const results = useWeather(waypoints, date, datetimes);
+  const internalResults = useWeather(externalResults ? [] : waypoints, date, datetimes);
+  const results = externalResults ?? internalResults;
 
   const mode =
     date == null

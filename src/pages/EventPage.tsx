@@ -1,5 +1,5 @@
 import { useParams, useSearchParams, Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import { DatePicker } from "../components/DatePicker";
 import { TimePicker } from "../components/TimePicker";
@@ -12,7 +12,6 @@ import { ErrorBoundary } from "../components/ErrorBoundary";
 import { computeElevationGain, allArrangements } from "../lib/ritt";
 import { physicalScore, weatherAdjustment, scoreToLabel } from "../lib/difficulty";
 import { useMyEvents } from "../hooks/useMyEvents";
-import { usePageTitle } from "../hooks/usePageTitle";
 import { useWeather } from "../hooks/useWeather";
 import { calcWaypointTimes, WAYPOINT_FRACTIONS } from "../lib/timing";
 import { ShareButton } from "../components/ShareButton";
@@ -22,9 +21,13 @@ export function EventPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const { isPlanned, getPlanned, add, remove } = useMyEvents();
 
-  const rittData = allArrangements.find((r) => r.id === id);
+  // Keep a ref to always call the latest add/isPlanned without re-triggering the auto-save effect
+  const addRef = useRef(add);
+  const isPlannedRef = useRef(isPlanned);
+  useEffect(() => { addRef.current = add; }, [add]);
+  useEffect(() => { isPlannedRef.current = isPlanned; }, [isPlanned]);
 
-  usePageTitle(rittData ? `${rittData.name} – Løypevær` : "Fant ikke arrangement – Løypevær");
+  const rittData = allArrangements.find((r) => r.id === id);
 
   const BASE_URL = "https://vegaasen.github.io/loypevaer";
   const pageUrl = rittData ? `${BASE_URL}/arrangement/${rittData.id}` : BASE_URL;
@@ -67,11 +70,10 @@ export function EventPage() {
 
   // Auto-save to "mine ritt" whenever date/time changes while the ritt is planned
   useEffect(() => {
-    if (id && isPlanned(id)) {
-      add(id, { date: selectedDate, startTime, finishTime });
+    if (id && isPlannedRef.current(id)) {
+      addRef.current(id, { date: selectedDate, startTime, finishTime });
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedDate, startTime, finishTime]);
+  }, [selectedDate, startTime, finishTime, id]);
 
   const timingActive =
     selectedDate !== "" &&
@@ -147,10 +149,13 @@ export function EventPage() {
         <meta name="twitter:title" content={pageTitle} />
         {pageDescription && <meta name="twitter:description" content={pageDescription} />}
       </Helmet>
+      <Link to="/" className="ritt-page__back-link">← Alle arrangement</Link>
       <header className="ritt-page__header">
         <h1>{rittData.name}</h1>
         <div className="ritt-page__meta">
-          <span className="ritt-page__meta-item">{rittData.distance} km</span>
+          <span className="ritt-page__meta-item">
+            {rittData.distanceLabel ?? `${rittData.distance} km`}
+          </span>
           {elevationGain != null && (
             <span className="ritt-page__meta-item ritt-page__meta-item--elevation">
               ↑ {elevationGain} m
@@ -165,6 +170,11 @@ export function EventPage() {
           )}
           <span className="ritt-page__meta-item">{rittData.region}</span>
           <span className="ritt-page__meta-item">Offisiell dato: {formattedOfficialDate}</span>
+          {rittData.dateStatus === "pending" && (
+            <span className="ritt-page__meta-item ritt-page__pending-badge" title="Datoen er ikke offisielt bekreftet ennå">
+              Tentativ dato
+            </span>
+          )}
           {rittData.url && (
             <a
               href={rittData.url}
@@ -228,6 +238,7 @@ export function EventPage() {
             date={selectedDate || null}
             startTime={startTime || null}
             finishTime={finishTime || null}
+            externalResults={weatherResults}
           />
           {selectedDate && (
             <>

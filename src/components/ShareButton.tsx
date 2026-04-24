@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
+const canNativeShare = typeof navigator !== "undefined" && typeof navigator.share === "function";
+
 type CopyState = "idle" | "copied" | "error";
 
 export function ShareButton() {
@@ -14,7 +16,11 @@ export function ShareButton() {
 
   async function handleShare() {
     try {
-      await navigator.clipboard.writeText(window.location.href);
+      if (canNativeShare) {
+        await navigator.share({ url: window.location.href });
+      } else {
+        await navigator.clipboard.writeText(window.location.href);
+      }
       setState("copied");
     } catch {
       setState("error");
@@ -24,7 +30,7 @@ export function ShareButton() {
   }
 
   const label =
-    state === "copied" ? "Kopiert!" : state === "error" ? "Feil" : "Del lenke";
+    state === "copied" ? (canNativeShare ? "Delt!" : "Kopiert!") : state === "error" ? "Feil" : "Del lenke";
 
   return (
     <button

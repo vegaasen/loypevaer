@@ -9,6 +9,9 @@ export type WaypointWeather = {
   isError: boolean;
 };
 
+/** Alias for external consumers */
+export type WeatherResult = WaypointWeather;
+
 /**
  * Fetches weather for each waypoint.
  *

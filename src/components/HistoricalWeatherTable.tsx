@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useMemo } from "react";
 import { useQueries } from "@tanstack/react-query";
 import { fetchWeather, getWeatherCache } from "../lib/weather";
 import { describeWeatherCode } from "../lib/wmo";
+import { avg, mode } from "../lib/stats";
 import type { Waypoint, WeatherData } from "../lib/weather";
 
 type Props = {
@@ -11,21 +12,6 @@ type Props = {
 };
 
 const HISTORY_YEARS = Array.from({ length: 10 }, (_, i) => 2015 + i); // 2015–2024
-
-/** Average an array of numbers, ignoring nullish entries */
-function avg(vals: (number | undefined | null)[]): number | null {
-  const clean = vals.filter((v): v is number => v != null);
-  if (clean.length === 0) return null;
-  return clean.reduce((a, b) => a + b, 0) / clean.length;
-}
-
-/** Most frequent item in an array */
-function mode<T>(arr: T[]): T | undefined {
-  if (arr.length === 0) return undefined;
-  const counts = new Map<T, number>();
-  for (const v of arr) counts.set(v, (counts.get(v) ?? 0) + 1);
-  return [...counts.entries()].sort((a, b) => b[1] - a[1])[0][0];
-}
 
 export function HistoricalWeatherTable({ waypoints, officialDate }: Props) {
   const detailsRef = useRef<HTMLDetailsElement>(null);

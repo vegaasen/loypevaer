@@ -90,7 +90,7 @@ export function TimePicker({
 
         <div className="time-picker__field">
           <label htmlFor="ritt-finish-time" className="time-picker__label">
-            Forventet slutttid
+            Forventet sluttid
           </label>
           <input
             id="ritt-finish-time"
