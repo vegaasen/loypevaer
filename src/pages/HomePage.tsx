@@ -160,7 +160,11 @@ export function HomePage() {
             </p>
           </div>
           <div className="home-page__feature-visual">
-            <div className="home-page__feature-visual-icon">🗺️</div>
+            <svg className="home-page__feature-visual-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21" />
+              <line x1="9" y1="3" x2="9" y2="18" />
+              <line x1="15" y1="6" x2="15" y2="21" />
+            </svg>
             <div className="home-page__feature-visual-title">Etappepunkter</div>
             <ul className="home-page__feature-visual-items">
               <li className="home-page__feature-visual-item">Start — 200 moh. &nbsp;☁️ 12°C</li>
@@ -182,7 +186,11 @@ export function HomePage() {
             </p>
           </div>
           <div className="home-page__feature-visual">
-            <div className="home-page__feature-visual-icon">📊</div>
+            <svg className="home-page__feature-visual-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10" />
+              <line x1="12" y1="20" x2="12" y2="4" />
+              <line x1="6" y1="20" x2="6" y2="14" />
+            </svg>
             <div className="home-page__feature-visual-title">Datakilder</div>
             <ul className="home-page__feature-visual-items">
               <li className="home-page__feature-visual-item">Timebasert varsel (0–16 dager)</li>
