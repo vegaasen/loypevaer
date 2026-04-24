@@ -131,7 +131,7 @@ export function GpxPage() {
       <header className="ritt-page__header">
         <h1>Værvarsеl for GPX</h1>
         <p className="ritt-page__subtitle">
-          Last opp en GPX-fil eller oppgi en URL for å se værvarselet langs ruten.
+          Last opp en GPX-fil eller oppgi en GPX-URL for å se værvarselet langs ruten.
         </p>
       </header>
 
@@ -147,7 +147,10 @@ export function GpxPage() {
             onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") fileInputRef.current?.click(); }}
             aria-label="Last opp GPX-fil"
           >
-            <span className="gpx-upload__icon" aria-hidden="true">📂</span>
+            <svg className="gpx-upload__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 16V4m0 0L8 8m4-4 4 4" />
+              <path d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2" />
+            </svg>
             <p className="gpx-upload__primary">Dra og slipp en GPX-fil her</p>
             <p className="gpx-upload__secondary">(klikk for å velge)</p>
             <input
@@ -165,7 +168,7 @@ export function GpxPage() {
             <input
               type="url"
               className="gpx-upload__url-input"
-              placeholder="Lim inn URL til GPX-fil…"
+              placeholder="Lim inn URL til GPX…"
               value={urlInput}
               onChange={(e) => setUrlInput(e.target.value)}
               onKeyDown={(e) => { if (e.key === "Enter") void handleUrlLoad(); }}
