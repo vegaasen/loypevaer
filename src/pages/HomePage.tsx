@@ -59,6 +59,7 @@ export function HomePage() {
   const totalLangrenn = useMemo(() => ritt.filter((r) => r.discipline === "langrenn").length, []);
   const totalLoping = useMemo(() => ritt.filter((r) => r.discipline === "ultraløp").length, []);
   const totalTriathlon = useMemo(() => ritt.filter((r) => r.discipline === "triathlon").length, []);
+  const totalKortereLop = useMemo(() => ritt.filter((r) => r.discipline === "løping").length, []);
 
   const searchQuery = search.trim().toLowerCase();
 
@@ -154,6 +155,7 @@ export function HomePage() {
           {totalLangrenn > 0 && <span><strong>{totalLangrenn}</strong> langrenn</span>}
           {totalLoping > 0 && <span><strong>{totalLoping}</strong> ultraløp</span>}
           {totalTriathlon > 0 && <span><strong>{totalTriathlon}</strong> triathlon</span>}
+          {totalKortereLop > 0 && <span><strong>{totalKortereLop}</strong> kortere løp</span>}
         </div>
       </section>
 

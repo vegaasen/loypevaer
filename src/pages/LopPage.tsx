@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { EventCard } from "../components/EventCard";
@@ -54,10 +54,41 @@ function formatCountdown(dateStr: string): string {
   return `${Math.abs(diff)} dager siden`;
 }
 
+type DistanceFilter = "alle" | "10k" | "halvmaraton" | "maraton";
+
+const DISTANCE_LABELS: Record<DistanceFilter, string> = {
+  alle: "Alle",
+  "10k": "≤ 10 km",
+  halvmaraton: "Halvmaraton",
+  maraton: "Maraton",
+};
+
+function matchesDistance(distance: number, filter: DistanceFilter): boolean {
+  if (filter === "alle") return true;
+  if (filter === "10k") return distance <= 10;
+  if (filter === "halvmaraton") return distance > 10 && distance <= 22;
+  if (filter === "maraton") return distance > 22;
+  return true;
+}
+
 export function LopPage() {
   const { isPlanned, add, remove } = useMyEvents();
+  const [search, setSearch] = useState("");
+  const [distanceFilter, setDistanceFilter] = useState<DistanceFilter>("alle");
 
-  const grouped = useMemo(() => groupByYearMonth(lopingRaces), []);
+  const searchQuery = search.trim().toLowerCase();
+
+  const filtered = useMemo(
+    () =>
+      lopingRaces.filter(
+        (r) =>
+          matchesDistance(r.distance, distanceFilter) &&
+          (!searchQuery || r.name.toLowerCase().includes(searchQuery) || r.region.toLowerCase().includes(searchQuery)),
+      ),
+    [searchQuery, distanceFilter],
+  );
+
+  const grouped = useMemo(() => groupByYearMonth(filtered), [filtered]);
   const years = useMemo(
     () => [...grouped.keys()].sort((a, b) => b - a),
     [grouped],
@@ -105,9 +136,32 @@ export function LopPage() {
         </div>
       </section>
 
+      <div className="home-page__filter">
+        <div role="group" aria-label="Filtrer etter distanse" className="home-page__filter-pills">
+          {(["alle", "10k", "halvmaraton", "maraton"] as DistanceFilter[]).map((d) => (
+            <button
+              key={d}
+              className={`home-page__filter-pill${distanceFilter === d ? " home-page__filter-pill--active" : ""}`}
+              onClick={() => setDistanceFilter(d)}
+              aria-pressed={distanceFilter === d}
+            >
+              {DISTANCE_LABELS[d]}
+            </button>
+          ))}
+        </div>
+        <input
+          type="search"
+          className="home-page__search"
+          placeholder="Filtrer løp…"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          aria-label="Filtrer løp"
+        />
+      </div>
+
       <main className="home-page__sections">
         {years.length === 0 && (
-          <p className="home-page__empty">Ingen løp lagt til ennå.</p>
+          <p className="home-page__empty">Ingen løp funnet.</p>
         )}
         {years.map((year) => {
           const byMonth = grouped.get(year)!;
