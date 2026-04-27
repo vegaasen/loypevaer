@@ -8,6 +8,36 @@ import { SITE_URL } from "../lib/seo";
 
 const lopingRaces = allArrangements.filter((r) => r.discipline === "løping");
 
+const MONTH_NAMES = [
+  "Januar", "Februar", "Mars", "April", "Mai", "Juni",
+  "Juli", "August", "September", "Oktober", "November", "Desember",
+];
+
+function monthName(month: number): string {
+  return MONTH_NAMES[month] ?? "";
+}
+
+function groupByYearMonth(
+  races: typeof lopingRaces,
+): Map<number, Map<number, typeof lopingRaces>> {
+  const sorted = [...races].sort(
+    (a, b) =>
+      new Date(a.officialDate + "T00:00:00").getTime() -
+      new Date(b.officialDate + "T00:00:00").getTime(),
+  );
+  const grouped = new Map<number, Map<number, typeof lopingRaces>>();
+  for (const race of sorted) {
+    const d = new Date(race.officialDate + "T00:00:00");
+    const year = d.getFullYear();
+    const month = d.getMonth();
+    if (!grouped.has(year)) grouped.set(year, new Map());
+    const byMonth = grouped.get(year)!;
+    if (!byMonth.has(month)) byMonth.set(month, []);
+    byMonth.get(month)!.push(race);
+  }
+  return grouped;
+}
+
 function daysUntil(dateStr: string): number {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
@@ -27,14 +57,10 @@ function formatCountdown(dateStr: string): string {
 export function LopPage() {
   const { isPlanned, add, remove } = useMyEvents();
 
-  const sorted = useMemo(
-    () =>
-      [...lopingRaces].sort(
-        (a, b) =>
-          new Date(a.officialDate + "T00:00:00").getTime() -
-          new Date(b.officialDate + "T00:00:00").getTime()
-      ),
-    []
+  const grouped = useMemo(() => groupByYearMonth(lopingRaces), []);
+  const years = useMemo(
+    () => [...grouped.keys()].sort((a, b) => b - a),
+    [grouped],
   );
 
   const pageTitle = "Løping – Løypevær";
@@ -80,32 +106,42 @@ export function LopPage() {
       </section>
 
       <main className="home-page__sections">
-        {sorted.length === 0 && (
+        {years.length === 0 && (
           <p className="home-page__empty">Ingen løp lagt til ennå.</p>
         )}
-        {sorted.length > 0 && (
-          <section className="home-page__year-section">
-            <div className="home-page__grid">
-              {sorted.map((r) => (
-                <EventCard
-                  key={r.id}
-                  id={r.id}
-                  name={r.name}
-                  officialDate={r.officialDate}
-                  distance={r.distance}
-                  distanceLabel={r.distanceLabel}
-                  region={r.region}
-                  discipline={r.discipline}
-                  countdown={formatCountdown(r.officialDate)}
-                  planned={isPlanned(r.id)}
-                  isPast={daysUntil(r.officialDate) < 0}
-                  dateStatus={r.dateStatus}
-                  onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
-                />
+        {years.map((year) => {
+          const byMonth = grouped.get(year)!;
+          const months = [...byMonth.keys()].sort((a, b) => a - b);
+          return (
+            <section key={year} className="home-page__year-section">
+              <h2 className="home-page__year-heading">{year}</h2>
+              {months.map((month) => (
+                <div key={month} className="home-page__month-section">
+                  <h3 className="home-page__month-heading">{monthName(month)}</h3>
+                  <div className="home-page__grid">
+                    {byMonth.get(month)!.map((r) => (
+                      <EventCard
+                        key={r.id}
+                        id={r.id}
+                        name={r.name}
+                        officialDate={r.officialDate}
+                        distance={r.distance}
+                        distanceLabel={r.distanceLabel}
+                        region={r.region}
+                        discipline={r.discipline}
+                        countdown={formatCountdown(r.officialDate)}
+                        planned={isPlanned(r.id)}
+                        isPast={daysUntil(r.officialDate) < 0}
+                        dateStatus={r.dateStatus}
+                        onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
+                      />
+                    ))}
+                  </div>
+                </div>
               ))}
-            </div>
-          </section>
-        )}
+            </section>
+          );
+        })}
       </main>
 
       <div className="home-page__cta-banner" style={{ marginTop: "var(--space-xl)" }}>

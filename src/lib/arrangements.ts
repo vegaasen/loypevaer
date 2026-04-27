@@ -1,11 +1,13 @@
 import type { Waypoint } from "./weather";
 import arrangements from "../data/arrangements.json";
 import triathlonData from "../data/triathlon-events.json";
+import runningData from "../data/running-events.json";
 
-/** All arrangements merged: manually curated + auto-synced triathlon events. */
+/** All arrangements merged: manually curated + auto-synced triathlon + running events. */
 export const allArrangements: RittEntry[] = [
   ...(arrangements as RittEntry[]),
   ...(triathlonData.events as RittEntry[]),
+  ...(runningData.events as RittEntry[]),
 ];
 
 export type Discipline = "landevei" | "terreng" | "langrenn" | "triathlon" | "ultraløp" | "løping";

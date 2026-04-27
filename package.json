@@ -11,6 +11,7 @@
     "preview": "vite preview",
     "fetch-weather": "bun scripts/fetch-weather-cache.ts",
     "fetch-triathlon": "bun scripts/fetch-triathlon-events.ts",
+    "fetch-running": "bun scripts/fetch-running-events.ts",
     "generate-sitemap": "bun scripts/generate-sitemap.ts"
   },
   "dependencies": {
