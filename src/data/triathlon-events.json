@@ -1,114 +1,7 @@
 {
-  "generatedAt": "2026-04-20T00:00:00.000Z",
+  "generatedAt": "2026-04-27T05:08:42.737Z",
   "source": "triatlonforbundet.no",
   "events": [
-    {
-      "id": "norseman-xtreme-triathlon",
-      "name": "Norseman Xtreme Triathlon",
-      "discipline": "triathlon",
-      "officialDate": "2026-08-01",
-      "distance": 226,
-      "distanceLabel": "Langdistanse (3.8km svøm / 180km sykkel / 42km løp)",
-      "region": "Vestland",
-      "url": "https://www.triatlonforbundet.no/terminliste/terminliste-2026/norseman-xtreme-triathlon/",
-      "waypoints": [
-        { "label": "Start svøm – Eidfjord", "lat": 60.469, "lon": 7.072, "altitude": 0 },
-        { "label": "50% sykkel – Hardangervidda", "lat": 60.380, "lon": 7.513, "altitude": 1250 },
-        { "label": "T2 – Austbygd, Notodden", "lat": 59.789, "lon": 8.988, "altitude": 70 },
-        { "label": "Mål – Gaustablikk", "lat": 59.842, "lon": 8.657, "altitude": 1150 }
-      ]
-    },
-    {
-      "id": "jevnakerfull",
-      "name": "JevnakerFULL",
-      "discipline": "triathlon",
-      "officialDate": "2026-08-30",
-      "distance": 226,
-      "distanceLabel": "Langdistanse (3.8km svøm / 180km sykkel / 42km løp)",
-      "region": "Innlandet",
-      "url": "https://www.triatlonforbundet.no/terminliste/terminliste-2026/jevnakerfull/",
-      "waypoints": [
-        { "label": "Start/Mål – Jevnaker", "lat": 60.233, "lon": 10.226, "altitude": 130 }
-      ]
-    },
-    {
-      "id": "challenge-sandefjord",
-      "name": "Challenge Sandefjord",
-      "discipline": "triathlon",
-      "officialDate": "2026-06-28",
-      "distance": 226,
-      "distanceLabel": "Langdistanse (3.8km svøm / 180km sykkel / 42km løp)",
-      "region": "Vestfold",
-      "url": "https://www.triatlonforbundet.no/terminliste/terminliste-2026/challenge-sandefjord/",
-      "waypoints": [
-        { "label": "Start/Mål – Sandefjord", "lat": 59.131, "lon": 10.216, "altitude": 5 }
-      ]
-    },
-    {
-      "id": "hove-tri",
-      "name": "Hove Tri",
-      "discipline": "triathlon",
-      "officialDate": "2026-06-13",
-      "distance": 51,
-      "distanceLabel": "Standarddistanse (1.5km svøm / 40km sykkel / 10km løp)",
-      "region": "Agder",
-      "url": "https://www.triatlonforbundet.no/terminliste/terminliste-2026/hove-tri-2026/",
-      "waypoints": [
-        { "label": "Start/Mål – Hove, Arendal", "lat": 58.446, "lon": 8.838, "altitude": 5 }
-      ]
-    },
-    {
-      "id": "brynetri-2026",
-      "name": "BryneTri 2026",
-      "discipline": "triathlon",
-      "officialDate": "2026-06-06",
-      "distance": 51,
-      "distanceLabel": "Standarddistanse (1.5km svøm / 40km sykkel / 10km løp)",
-      "region": "Rogaland",
-      "url": "https://www.triatlonforbundet.no/terminliste/terminliste-2026/brynetri-2026/",
-      "waypoints": [
-        { "label": "Start/Mål – Bryne", "lat": 58.733, "lon": 5.642, "altitude": 30 }
-      ]
-    },
-    {
-      "id": "stavanger-triathlon",
-      "name": "Stavanger Triathlon",
-      "discipline": "triathlon",
-      "officialDate": "2026-06-21",
-      "distance": 51,
-      "distanceLabel": "Standarddistanse (1.5km svøm / 40km sykkel / 10km løp)",
-      "region": "Rogaland",
-      "url": "https://www.triatlonforbundet.no/terminliste/terminliste-2026/stavanger-triathlon/",
-      "waypoints": [
-        { "label": "Start/Mål – Stavanger", "lat": 58.970, "lon": 5.733, "altitude": 5 }
-      ]
-    },
-    {
-      "id": "trondheim-triatlon-2026",
-      "name": "Trondheim triatlon",
-      "discipline": "triathlon",
-      "officialDate": "2026-08-22",
-      "distance": 51,
-      "distanceLabel": "Standarddistanse (1.5km svøm / 40km sykkel / 10km løp)",
-      "region": "Trøndelag",
-      "url": "https://www.triatlonforbundet.no/terminliste/terminliste-2026/trondheim-triatlon-2026/",
-      "waypoints": [
-        { "label": "Start/Mål – Trondheim", "lat": 63.431, "lon": 10.395, "altitude": 10 }
-      ]
-    },
-    {
-      "id": "soon-tryathlon-2026",
-      "name": "Soon Tryathlon",
-      "discipline": "triathlon",
-      "officialDate": "2026-09-05",
-      "distance": 51,
-      "distanceLabel": "Standarddistanse (1.5km svøm / 40km sykkel / 10km løp)",
-      "region": "Viken",
-      "url": "https://www.triatlonforbundet.no/terminliste/terminliste-2026/soon-tryathlon-2026/",
-      "waypoints": [
-        { "label": "Start/Mål – Hvaler", "lat": 59.053, "lon": 11.014, "altitude": 5 }
-      ]
-    },
     {
       "id": "sunnfjord-triatlon",
       "name": "Sunnfjord Triatlon",
@@ -119,7 +12,62 @@
       "region": "Vestland",
       "url": "https://www.triatlonforbundet.no/terminliste/terminliste-2026/sunnfjord-triatlon-i-vakre-naustdal/",
       "waypoints": [
-        { "label": "Start/Mål – Naustdal", "lat": 61.514, "lon": 5.702, "altitude": 10 }
+        {
+          "label": "Start/Mål – Sunnfjord",
+          "lat": 61.4685824,
+          "lon": 6.0491718
+        }
+      ]
+    },
+    {
+      "id": "stavanger-triathlon",
+      "name": "Stavanger Triathlon ",
+      "discipline": "triathlon",
+      "officialDate": "2026-06-21",
+      "distance": 51,
+      "distanceLabel": "Standarddistanse (1.5km svøm / 40km sykkel / 10km løp)",
+      "region": "Rogaland",
+      "url": "https://www.triatlonforbundet.no/terminliste/terminliste-2026/stavanger-triathlon/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Stavanger",
+          "lat": 58.9699675,
+          "lon": 5.7318101
+        }
+      ]
+    },
+    {
+      "id": "trollveggen-triatlon",
+      "name": "Trollveggen Triatlon",
+      "discipline": "triathlon",
+      "officialDate": "2026-06-27",
+      "distance": 51,
+      "distanceLabel": "Standarddistanse (1.5km svøm / 40km sykkel / 10km løp)",
+      "region": "Møre og Romsdal",
+      "url": "https://www.triatlonforbundet.no/terminliste/terminliste-2026/trollveggen-triatlon/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Trollveggen",
+          "lat": 62.4829997,
+          "lon": 7.7216888
+        }
+      ]
+    },
+    {
+      "id": "challenge-sandefjord",
+      "name": "Challenge Sandefjord ",
+      "discipline": "triathlon",
+      "officialDate": "2026-06-28",
+      "distance": 226,
+      "distanceLabel": "Langdistanse (3.8km svøm / 180km sykkel / 42km løp)",
+      "region": "Trøndelag",
+      "url": "https://www.triatlonforbundet.no/terminliste/terminliste-2026/challenge-sandefjord/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Challenge",
+          "lat": 63.5179266,
+          "lon": 12.055969
+        }
       ]
     },
     {
@@ -132,24 +80,28 @@
       "region": "Agder",
       "url": "https://www.triatlonforbundet.no/terminliste/terminliste-2026/bygland-triatlon-2/",
       "waypoints": [
-        { "label": "Start/Mål – Bygland", "lat": 58.997, "lon": 7.806, "altitude": 185 }
+        {
+          "label": "Start/Mål – Bygland",
+          "lat": 58.8720193,
+          "lon": 7.7338501
+        }
       ]
     },
     {
-      "id": "axtri",
-      "name": "Aurlandsfjellet Xtreme Triathlon (AXTRI)",
+      "id": "trondheim-triatlon",
+      "name": "Trondheim triatlon",
       "discipline": "triathlon",
-      "officialDate": "2026-08-15",
-      "officialStartTime": "08:00",
-      "distance": 120,
-      "distanceLabel": "Mellomdistanse (1.9km svøm / 98km sykkel / 21km løp)",
-      "region": "Vestland",
-      "url": "https://axtri.no",
+      "officialDate": "2026-08-22",
+      "distance": 51,
+      "distanceLabel": "Standarddistanse (1.5km svøm / 40km sykkel / 10km løp)",
+      "region": "Trøndelag",
+      "url": "https://www.triatlonforbundet.no/terminliste/terminliste-2026/trondheim-triatlon-2026/",
       "waypoints": [
-        { "label": "Start svøm – Laguna Beach, Aurland", "lat": 60.902, "lon": 7.190, "altitude": 0 },
-        { "label": "Topp sykkel – Aurlandsfjellet", "lat": 60.739, "lon": 7.142, "altitude": 1320 },
-        { "label": "T2 – Vassbygdi", "lat": 60.888, "lon": 7.316, "altitude": 30 },
-        { "label": "Mål – Østerbø", "lat": 60.947, "lon": 7.374, "altitude": 843 }
+        {
+          "label": "Start/Mål – Trondheim",
+          "lat": 63.4304475,
+          "lon": 10.3952118
+        }
       ]
     }
   ]
