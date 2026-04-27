@@ -11,8 +11,8 @@ import { writeFileSync } from "fs";
 import { resolve } from "path";
 import ritt from "../src/data/arrangements.json" with { type: "json" };
 
-// Punycode form — XML should use ASCII-safe URLs.
-const BASE_URL = "https://www.xn--lypevaer-d8a.no";
+// Unicode IDN form — must match the verified Google Search Console property.
+const BASE_URL = "https://www.løypevær.no";
 
 type RittEntry = {
   id: string;
