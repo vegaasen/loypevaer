@@ -12,6 +12,7 @@ import "./App.css";
 const EventPage = lazy(() => import("./pages/EventPage").then((m) => ({ default: m.EventPage })));
 const GpxPage = lazy(() => import("./pages/GpxPage").then((m) => ({ default: m.GpxPage })));
 const LopPage = lazy(() => import("./pages/LopPage").then((m) => ({ default: m.LopPage })));
+const HvaErRittvaerPage = lazy(() => import("./pages/HvaErRittvaerPage").then((m) => ({ default: m.HvaErRittvaerPage })));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage").then((m) => ({ default: m.NotFoundPage })));
 
 const queryClient = new QueryClient({
@@ -34,6 +35,7 @@ function RouterContent() {
           <Route path="/arrangement/:id" element={<EventPage />} />
           <Route path="/lop" element={<LopPage />} />
           <Route path="/gpx" element={<GpxPage />} />
+          <Route path="/hva-er-rittvaer" element={<HvaErRittvaerPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>

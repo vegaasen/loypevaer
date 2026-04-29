@@ -94,8 +94,8 @@ export function LopPage() {
     [grouped],
   );
 
-  const pageTitle = "Løping – Løypevær";
-  const description = `Værvarsler for ${lopingRaces.length} norske løp — bare sanntidsvarsler, ingen historikk.`;
+  const pageTitle = "Løpsvær – Vær for norske løp | Løypevær";
+  const description = `Løypevær gir deg løpsvær og sanntidsvarsler for ${lopingRaces.length} norske løp — 10 km, halvmaraton og maraton. Sjekk temperatur, vind og nedbør langs hele ruten.`;
   const pageUrl = `${SITE_URL}/lop`;
 
   function handleToggle(id: string, officialDate: string, e: React.MouseEvent<HTMLButtonElement>) {
@@ -113,6 +113,7 @@ export function LopPage() {
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={description} />
+        <meta name="keywords" content="løpsvær, maratonvær, halvmaratonvær, 10 km vær, løp vær Norge, vær løpsdag, norske løp vær" />
         <link rel="canonical" href={pageUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={pageUrl} />
@@ -122,6 +123,21 @@ export function LopPage() {
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={description} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Norske løp – løpsvær og værmeldinger",
+            url: pageUrl,
+            numberOfItems: lopingRaces.length,
+            itemListElement: lopingRaces.map((r, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              name: r.name,
+              url: `${SITE_URL}/arrangement/${r.id}`,
+            })),
+          })}
+        </script>
       </Helmet>
 
       <section className="home-page__hero">

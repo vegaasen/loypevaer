@@ -84,6 +84,9 @@ export default defineConfig({
     open: true,
   },
   build: {
+    modulePreload: {
+      polyfill: true,
+    },
     rollupOptions: {
       output: {
         manualChunks(id) {

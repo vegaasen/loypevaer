@@ -7,6 +7,7 @@ import { useMyEvents } from "../hooks/useMyEvents";
 import { allArrangements as ritt, getNextRitt, type RittEntry } from "../lib/arrangements";
 import { FILTER_DISCIPLINE_LABEL } from "../lib/disciplines";
 import { SITE_URL } from "../lib/seo";
+import { allArrangements as allForJsonLd } from "../lib/arrangements";
 
 type Discipline = "alle" | "landevei" | "terreng" | "langrenn" | "triathlon" | "ultraløp";
 
@@ -49,7 +50,7 @@ function formatCountdown(dateStr: string): string {
 
 export function HomePage() {
   const description =
-    `Værvarsler og historiske klimasnitt for ${ritt.length} norske utholdenhetsarrangement — sykkelritt, langrenn, triathlon og ultraløp. Timebasert vær for hvert punkt langs ruten.`;
+    `Løypevær gir deg rittvær og værmelding for ${ritt.length} norske utholdenhetsarrangement — sykkelritt, langrenn, triathlon og ultraløp. Timebasert vær langs hele løypa, tilpasset din starttid.`;
 
   const { plannedIds, isPlanned, getPlanned, add, remove } = useMyEvents();
   const { discipline, setDiscipline } = useFilterContext();
@@ -115,16 +116,17 @@ export function HomePage() {
   return (
     <div className="home-page">
       <Helmet>
-        <title>Løypevær – Vær langs ruten for norske utholdenhetsarrangement</title>
+        <title>Løypevær – Rittvær og vær for norske utholdenhetsarrangement</title>
         <meta name="description" content={description} />
+        <meta name="keywords" content="rittvær, sykkelritt vær, langrenn vær, triathlon vær, ultraløp vær, løpsvær, værmelding ritt, etappevær" />
         <link rel="canonical" href={SITE_URL} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={SITE_URL} />
-        <meta property="og:title" content="Løypevær – Vær langs ruten for norske utholdenhetsarrangement" />
+        <meta property="og:title" content="Løypevær – Rittvær og vær for norske utholdenhetsarrangement" />
         <meta property="og:description" content={description} />
         <meta property="og:locale" content="nb_NO" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Løypevær – Vær langs ruten for norske utholdenhetsarrangement" />
+        <meta name="twitter:title" content="Løypevær – Rittvær og vær for norske utholdenhetsarrangement" />
         <meta name="twitter:description" content={description} />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -134,6 +136,26 @@ export function HomePage() {
             url: SITE_URL,
             description,
             inLanguage: "nb-NO",
+            potentialAction: {
+              "@type": "SearchAction",
+              target: `${SITE_URL}/arrangement/{id}`,
+              "query-input": "required name=id",
+            },
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Norske utholdenhetsarrangement – rittvær og værmeldinger",
+            url: SITE_URL,
+            numberOfItems: allForJsonLd.length,
+            itemListElement: allForJsonLd.map((r, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              name: r.name,
+              url: `${SITE_URL}/arrangement/${r.id}`,
+            })),
           })}
         </script>
       </Helmet>
@@ -193,9 +215,9 @@ export function HomePage() {
             <div className="home-page__feature-eyebrow">Historikk + sanntid</div>
             <h2>Sanntidsvarsel møter historiske data</h2>
             <p>
-              Kommende ritt viser live-varsler direkte fra Open-Meteo. For ritt langt frem
-              i tid bruker vi klimasnitt fra de siste 15 årene — samme dato, samme
-              sted. Du vet alltid hva slags vær du kan forvente.
+              Live-varsler direkte fra Open-Meteo for arrangement som nærmer seg. For
+              datoer langt frem i tid bruker vi historiske klimasnitt fra de siste 15
+              årene — samme dato, samme sted. Du vet alltid hva slags vær du kan forvente.
             </p>
           </div>
           <div className="home-page__feature-visual">

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function SiteFooter() {
   return (
     <footer className="site-footer">
@@ -11,6 +13,9 @@ export function SiteFooter() {
         <a href="https://www.openstreetmap.org" target="_blank" rel="noopener noreferrer">
           OpenStreetMap
         </a>
+      </span>
+      <span>
+        <Link to="/hva-er-rittvaer">Hva er rittvær?</Link>
       </span>
       <span>
         <a

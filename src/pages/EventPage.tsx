@@ -11,7 +11,7 @@ import { ElevationProfile } from "../components/ElevationProfile";
 import { ErrorBoundary } from "../components/ErrorBoundary";
 import { computeElevationGain, allArrangements } from "../lib/arrangements";
 import { physicalScore, weatherAdjustment, scoreToLabel } from "../lib/difficulty";
-import { SITE_URL, disciplineToSport } from "../lib/seo";
+import { SITE_URL, disciplineToSport, disciplineKeywords, disciplineSeoLabel } from "../lib/seo";
 import { useMyEvents } from "../hooks/useMyEvents";
 import { useWeather } from "../hooks/useWeather";
 import { calcWaypointTimes, WAYPOINT_FRACTIONS } from "../lib/timing";
@@ -32,14 +32,14 @@ export function EventPage() {
   const rittData = allArrangements.find((r) => r.id === id);
 
   const pageUrl = rittData ? `${SITE_URL}/arrangement/${rittData.id}` : SITE_URL;
-  const pageTitle = rittData
-    ? `${rittData.name} – Løypevær`
-    : "Fant ikke arrangement – Løypevær";
   const rittYear = rittData
     ? new Date(rittData.officialDate + "T00:00:00").getFullYear()
     : null;
+  const pageTitle = rittData
+    ? `Vær for ${rittData.name} ${rittYear ?? ""} – rittvær, temperatur og vind | Løypevær`
+    : "Fant ikke arrangement – Løypevær";
   const pageDescription = rittData
-    ? `Vær og klimasnitt for ${rittData.name} ${rittYear} – ${rittData.distanceLabel ?? `${rittData.distance} km`}, ${rittData.elevationGain} hm i ${rittData.region}. Sjekk temperatur, vind og nedbør for hvert punkt langs løypa.`
+    ? `${rittData.name} ${rittYear}: rittvær og værmelding for ${disciplineSeoLabel(rittData.discipline)} – ${rittData.distanceLabel ?? `${rittData.distance} km`}, ${rittData.elevationGain} hm i ${rittData.region}. Timebasert temperatur, vind og nedbør langs hele løypa.`
     : undefined;
 
   useEffect(() => {
@@ -145,6 +145,12 @@ export function EventPage() {
       <Helmet>
         <title>{pageTitle}</title>
         {pageDescription && <meta name="description" content={pageDescription} />}
+        {rittData && (
+          <meta
+            name="keywords"
+            content={`${rittData.name.toLowerCase()}, ${rittData.name.toLowerCase()} vær, ${disciplineKeywords(rittData.discipline)}, værmelding ${rittData.region.toLowerCase()}`}
+          />
+        )}
         <link rel="canonical" href={pageUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={pageUrl} />

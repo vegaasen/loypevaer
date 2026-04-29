@@ -30,6 +30,22 @@ const urls: string[] = [
     <priority>1.0</priority>
   </url>`,
 
+  // SEO landing page — targets "rittvær" searches
+  `  <url>
+    <loc>${BASE_URL}/hva-er-rittvaer</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>`,
+
+  // Løping / kortere løp page
+  `  <url>
+    <loc>${BASE_URL}/lop</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>`,
+
   // GPX upload page
   `  <url>
     <loc>${BASE_URL}/gpx</loc>
@@ -57,4 +73,4 @@ ${urls.join("\n")}
 
 const outPath = resolve(import.meta.dirname, "../public/sitemap.xml");
 writeFileSync(outPath, xml, "utf-8");
-console.log(`Sitemap written to ${outPath} (${(ritt as RittEntry[]).length + 2} URLs)`);
+console.log(`Sitemap written to ${outPath} (${(ritt as RittEntry[]).length + 4} URLs)`);
