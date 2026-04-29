@@ -1,5 +1,6 @@
 import { memo } from "react";
 import type { WeatherData } from "../lib/weather";
+import { resolveWeatherValues } from "../lib/weather";
 import { describeWeatherCode } from "../lib/wmo";
 import type { Waypoint } from "../lib/weather";
 import { windRelativeLabel, degreesToCompass } from "../lib/wind";
@@ -18,12 +19,7 @@ type Props = {
 /** Determines warning CSS modifier classes based on weather thresholds. */
 function warningClasses(data: WeatherData, routeBearing?: number): string[] {
   const classes: string[] = [];
-
-  // Use hourly values when available (timing mode), otherwise daily
-  const temp = data.hourlyTemp ?? data.tempMin;
-  const precip = data.hourlyPrecipitation ?? data.precipitation;
-  const windSpeed = data.hourlyWindSpeed ?? data.windSpeed;
-  const windDir = data.hourlyWindDirection ?? data.windDirection;
+  const { temp, precipitation: precip, windSpeed, windDirection: windDir } = resolveWeatherValues(data);
 
   if (temp < 0) {
     classes.push("weather-card--warn-freeze");
@@ -57,8 +53,7 @@ function uvLevel(uv: number): { label: string; mod: string } {
 
 /** Wet road / ice risk based on temperature and precipitation */
 function roadRisk(data: WeatherData): "ice" | "slush" | "wet" | null {
-  const temp = data.hourlyTemp ?? data.tempMin;
-  const precip = data.hourlyPrecipitation ?? data.precipitation;
+  const { temp, precipitation: precip } = resolveWeatherValues(data);
   if (precip <= 0) return null;
   if (temp < 0)                    return "ice";
   if (temp < 3 && precip > 0.5)   return "slush";
@@ -83,8 +78,7 @@ function WeatherCardContent({
   const { label: wLabel, emoji } = describeWeatherCode(data.weatherCode);
 
   // Effective wind direction and speed for display
-  const windDir = data.hourlyWindDirection ?? data.windDirection;
-  const windSpeed = data.hourlyWindSpeed ?? data.windSpeed;
+  const { windSpeed, windDirection: windDir } = resolveWeatherValues(data);
 
   // Wind direction label
   let windDirLabel: string | null = null;

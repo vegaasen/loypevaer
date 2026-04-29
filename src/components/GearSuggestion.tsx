@@ -1,6 +1,7 @@
 import type { WaypointWeather } from "../hooks/useWeather";
 import { windRelativeLabel, routeBearingForWaypoint } from "../lib/wind";
 import type { Waypoint } from "../lib/weather";
+import { resolveWeatherValues } from "../lib/weather";
 
 type Suggestion = {
   key: string;
@@ -18,23 +19,17 @@ function buildSuggestions(
 
   const suggestions: Suggestion[] = [];
 
-  const temps = loaded.map((r) => r.data!.hourlyTemp ?? r.data!.tempMin);
+  const temps = loaded.map((r) => resolveWeatherValues(r.data!).temp);
   const minTemp = Math.min(...temps);
 
-  const precipValues = loaded.map(
-    (r) => r.data!.hourlyPrecipitation ?? r.data!.precipitation
-  );
+  const precipValues = loaded.map((r) => resolveWeatherValues(r.data!).precipitation);
   const maxPrecip = Math.max(...precipValues);
 
-  const windSpeeds = loaded.map(
-    (r) => r.data!.hourlyWindSpeed ?? r.data!.windSpeed
-  );
+  const windSpeeds = loaded.map((r) => resolveWeatherValues(r.data!).windSpeed);
 
   // Check for headwind at any waypoint
   const hasSignificantHeadwind = loaded.some((r, i) => {
-    const windDir =
-      r.data!.hourlyWindDirection ?? r.data!.windDirection;
-    const windSpeed = r.data!.hourlyWindSpeed ?? r.data!.windSpeed;
+    const { windDirection: windDir, windSpeed } = resolveWeatherValues(r.data!);
     if (windDir === undefined || windSpeed <= 10) return false;
     const bearing = routeBearingForWaypoint(waypoints, i);
     if (bearing === null) return false;

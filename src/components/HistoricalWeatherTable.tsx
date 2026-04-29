@@ -1,9 +1,10 @@
-import { useState, useEffect, useRef, useMemo } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useQueries } from "@tanstack/react-query";
 import { fetchWeather, getWeatherCache } from "../lib/weather";
 import { describeWeatherCode } from "../lib/wmo";
 import { avg, mode } from "../lib/stats";
 import type { Waypoint, WeatherData } from "../lib/weather";
+import { useDetailsOpen } from "../hooks/useDetailsOpen";
 
 type Props = {
   waypoints: Waypoint[];
@@ -14,19 +15,8 @@ type Props = {
 const HISTORY_YEARS = Array.from({ length: 10 }, (_, i) => 2015 + i); // 2015–2024
 
 export function HistoricalWeatherTable({ waypoints, officialDate }: Props) {
-  const detailsRef = useRef<HTMLDetailsElement>(null);
-  const [isOpen, setIsOpen] = useState(false);
+  const { detailsRef, isOpen } = useDetailsOpen();
   const [historicalByYear, setHistoricalByYear] = useState<Record<string, WeatherData> | null>(null);
-
-  // Use the toggle event (fires after browser commits open state) instead of
-  // inferring next state from onClick — avoids off-by-one on rapid clicks.
-  useEffect(() => {
-    const el = detailsRef.current;
-    if (!el) return;
-    const handler = () => setIsOpen(el.open);
-    el.addEventListener("toggle", handler);
-    return () => el.removeEventListener("toggle", handler);
-  }, []);
 
   // Load the weather cache eagerly on mount so it is ready before the
   // details panel is opened. This prevents all 50 queries from firing live

@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useQuery } from "@tanstack/react-query";
 import type { Waypoint } from "../lib/weather";
 import type { Discipline } from "../lib/arrangements";
+import { useDetailsOpen } from "../hooks/useDetailsOpen";
 
 type Props = {
   waypoints: Waypoint[];
@@ -47,21 +48,10 @@ async function fetchOsrmRoute(waypoints: Waypoint[], discipline: Discipline): Pr
 
 export function EventMap({ waypoints, name, discipline }: Props) {
   const mapRef = useRef<HTMLDivElement>(null);
-  const detailsRef = useRef<HTMLDetailsElement>(null);
   // Keep a ref to the Leaflet map instance so we can destroy it on unmount
   // We import Leaflet dynamically to avoid SSR issues and because it needs the DOM
   const leafletMapRef = useRef<import("leaflet").Map | null>(null);
-  const [isOpen, setIsOpen] = useState(false);
-
-  // Use the toggle event (fires after browser commits open state) instead of
-  // inferring next state from onClick — avoids off-by-one on rapid clicks.
-  useEffect(() => {
-    const el = detailsRef.current;
-    if (!el) return;
-    const handler = () => setIsOpen(el.open);
-    el.addEventListener("toggle", handler);
-    return () => el.removeEventListener("toggle", handler);
-  }, []);
+  const { detailsRef, isOpen } = useDetailsOpen();
 
   const { data: routeCoords, isError: routeError } = useQuery({
     queryKey: ["osrm-route", waypoints.map((w) => `${w.lat},${w.lon}`).join("|"), discipline],

@@ -8,44 +8,13 @@ import { allArrangements as ritt, getNextRitt, type RittEntry } from "../lib/arr
 import { FILTER_DISCIPLINE_LABEL } from "../lib/disciplines";
 import { SITE_URL } from "../lib/seo";
 import { allArrangements as allForJsonLd } from "../lib/arrangements";
+import { daysUntil, formatCountdown, parseDateLocal } from "../lib/dates";
+import { groupByYearMonth } from "../lib/grouping";
 
 type Discipline = "alle" | "landevei" | "terreng" | "langrenn" | "triathlon" | "ultraløp";
 
-function groupByYearMonth(races: RittEntry[]): Map<number, Map<number, RittEntry[]>> {
-  const sorted = [...races].sort(
-    (a, b) => new Date(a.officialDate + "T00:00:00").getTime() - new Date(b.officialDate + "T00:00:00").getTime()
-  );
-  const grouped = new Map<number, Map<number, RittEntry[]>>();
-  for (const race of sorted) {
-    const d = new Date(race.officialDate + "T00:00:00");
-    const year = d.getFullYear();
-    const month = d.getMonth();
-    if (!grouped.has(year)) grouped.set(year, new Map());
-    const byMonth = grouped.get(year)!;
-    if (!byMonth.has(month)) byMonth.set(month, []);
-    byMonth.get(month)!.push(race);
-  }
-  return grouped;
-}
-
 function monthName(month: number): string {
   return new Date(2000, month, 1).toLocaleDateString("nb-NO", { month: "long" });
-}
-
-function daysUntil(dateStr: string): number {
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-  const target = new Date(dateStr + "T00:00:00");
-  return Math.round((target.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
-}
-
-function formatCountdown(dateStr: string): string {
-  const diff = daysUntil(dateStr);
-  if (diff === 0) return "i dag";
-  if (diff === 1) return "i morgen";
-  if (diff === -1) return "i går";
-  if (diff > 0) return `om ${diff} dager`;
-  return `${Math.abs(diff)} dager siden`;
 }
 
 export function HomePage() {
@@ -83,7 +52,7 @@ export function HomePage() {
           const days = daysUntil(r.officialDate);
           return days >= 0 && days <= 14;
         })
-        .sort((a, b) => new Date(a.officialDate + "T00:00:00").getTime() - new Date(b.officialDate + "T00:00:00").getTime()),
+        .sort((a, b) => parseDateLocal(a.officialDate).getTime() - parseDateLocal(b.officialDate).getTime()),
     [filtered]
   );
 
@@ -95,7 +64,7 @@ export function HomePage() {
         .sort((a, b) => {
           const da = getPlanned(a.id)?.date ?? a.officialDate;
           const db = getPlanned(b.id)?.date ?? b.officialDate;
-          return new Date(da + "T00:00:00").getTime() - new Date(db + "T00:00:00").getTime();
+          return parseDateLocal(da).getTime() - parseDateLocal(db).getTime();
         }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [plannedIds]

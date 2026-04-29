@@ -3,6 +3,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 
 import { allArrangements as ritt, type Discipline, type RittEntry } from "../lib/arrangements";
 import { DISCIPLINE_LABEL_WITH_EMOJI } from "../lib/disciplines";
+import { parseDateLocal } from "../lib/dates";
 
 type Race = RittEntry;
 
@@ -10,7 +11,7 @@ const DISCIPLINE_ORDER: Discipline[] = ["terreng", "landevei", "langrenn", "tria
 
 function groupByDiscipline(races: Race[]): Map<Discipline, Race[]> {
   const sorted = [...races].sort(
-    (a, b) => new Date(a.officialDate + "T00:00:00").getTime() - new Date(b.officialDate + "T00:00:00").getTime()
+    (a, b) => parseDateLocal(a.officialDate).getTime() - parseDateLocal(b.officialDate).getTime()
   );
   const grouped = new Map<Discipline, Race[]>();
   for (const discipline of DISCIPLINE_ORDER) grouped.set(discipline, []);

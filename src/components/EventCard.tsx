@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { type Discipline } from "../lib/arrangements";
 import { DISCIPLINE_LABEL } from "../lib/disciplines";
+import { formatNorwegianDate } from "../lib/dates";
 
 type Props = {
   id: string;
@@ -39,11 +40,7 @@ export function EventCard({
   dateStatus,
 }: Props) {
   const dateStr = displayDate ?? officialDate;
-  const formattedDate = new Date(dateStr + "T00:00:00").toLocaleDateString("nb-NO", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
+  const formattedDate = formatNorwegianDate(dateStr);
 
   return (
     <Link

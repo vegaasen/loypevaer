@@ -17,6 +17,7 @@ import { useWeather } from "../hooks/useWeather";
 import { calcWaypointTimes, WAYPOINT_FRACTIONS } from "../lib/timing";
 import { isForecastRange } from "../lib/weather";
 import { ShareButton } from "../components/ShareButton";
+import { formatNorwegianDate, parseDateLocal } from "../lib/dates";
 
 export function EventPage() {
   const { id } = useParams<{ id: string }>();
@@ -33,7 +34,7 @@ export function EventPage() {
 
   const pageUrl = rittData ? `${SITE_URL}/arrangement/${rittData.id}` : SITE_URL;
   const rittYear = rittData
-    ? new Date(rittData.officialDate + "T00:00:00").getFullYear()
+    ? parseDateLocal(rittData.officialDate).getFullYear()
     : null;
   const pageTitle = rittData
     ? `Vær for ${rittData.name} ${rittYear ?? ""} – rittvær, temperatur og vind | Løypevær`
@@ -115,10 +116,7 @@ export function EventPage() {
     }
   }
 
-  const formattedOfficialDate = new Date(rittData.officialDate + "T00:00:00").toLocaleDateString(
-    "nb-NO",
-    { day: "numeric", month: "long", year: "numeric" }
-  );
+  const formattedOfficialDate = formatNorwegianDate(rittData.officialDate);
 
   const elevationGain = rittData?.elevationGain ?? computeElevationGain(rittData.waypoints);
 

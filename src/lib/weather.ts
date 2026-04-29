@@ -56,6 +56,26 @@ export type WeatherData = {
   tempTrend?: number;
 };
 
+/**
+ * Resolved weather values that prefer hourly (timing mode) data over daily data.
+ * Use this instead of repeating the `hourlyXxx ?? dailyXxx` pattern inline.
+ */
+export type ResolvedWeatherValues = {
+  temp: number;
+  precipitation: number;
+  windSpeed: number;
+  windDirection: number | undefined;
+};
+
+export function resolveWeatherValues(data: WeatherData): ResolvedWeatherValues {
+  return {
+    temp: data.hourlyTemp ?? data.tempMin,
+    precipitation: data.hourlyPrecipitation ?? data.precipitation,
+    windSpeed: data.hourlyWindSpeed ?? data.windSpeed,
+    windDirection: data.hourlyWindDirection ?? data.windDirection,
+  };
+}
+
 /** Shape of the Open-Meteo daily-only API response used by this app */
 interface OpenMeteoDailyResponse {
   daily: {
