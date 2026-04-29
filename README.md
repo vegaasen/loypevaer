@@ -34,7 +34,7 @@ Pick a Norwegian race, choose a date, and get weather conditions at key waypoint
 
 ## Features
 
-- Browse Norwegian endurance events across sykkel (landevei + terreng), langrenn, triathlon, and ultraløp
+- Browse Norwegian endurance events across sykkel (landevei + terreng), langrenn, triathlon, ultraløp, and løping
 - Select any date to see weather along the route
 - **Forecast mode** — live data from Open-Meteo when the date is ≤ 16 days away
 - **Climate average mode** — rolling 10-year historical average for dates further in the future
@@ -46,8 +46,10 @@ Pick a Norwegian race, choose a date, and get weather conditions at key waypoint
 - **Wind direction** — compass bearing + relative label (Medvind/Motvind/Sidevind)
 - **Feels-like temperature** — `apparent_temperature` from Open-Meteo
 - **Precipitation probability** — % chance of rain alongside expected mm
+- **GPX upload** — drag-and-drop or URL load a `.gpx` file to auto-derive waypoints, with adjustable waypoint count and export guides for Strava, Garmin Connect, and Komoot
 - Shareable URLs — date is stored in the query string (`/arrangement/birkebeinerrittet?date=2025-08-23`)
 - Dark mode via `prefers-color-scheme`
+- SEO sitemap generated automatically at build time; per-discipline canonical URLs
 
 ---
 
@@ -79,35 +81,62 @@ Pick a Norwegian race, choose a date, and get weather conditions at key waypoint
 |---|---|---|
 | Styrkeprøven | 540 km | Trøndelag / Innlandet |
 | Jotunheimen Rundt | 430 km | Innlandet / Vestland |
-| Bergen-Voss | 78 km | Vestland |
+| Vätternrundan | 300 km | Östergötland |
+| Color Line Tour | 210 km | Agder |
 | Haugastøl–Bergen | 182 km | Vestland |
-| Nordsjørittet (Egersund–Flekkefjord) | 91 km | Rogaland |
-| Nordsjørittet (Jæren, Egersund–Sandnes) | 88 km | Rogaland |
-| Lysebotn Opp | 14 km | Rogaland |
+| Mjøsrittet | 167 km | Innlandet |
 | Lysebotn-Bryne Rittet | 147 km | Rogaland |
-| Haugesund-Sauda | 107 km | Rogaland / Vestland |
+| Halvvätternrundan | 150 km | Östergötland |
+| Tyrifjorden Rundt | 145 km | Viken |
+| Randsfjorden Rundt | 152 km | Viken |
 | L'Étape Trondheim | 130 km | Trøndelag |
 | Victoriarunden | 120 km | Trøndelag |
-| Tour de Frøya | 44 km | Trøndelag |
+| Haugesund-Sauda | 107 km | Rogaland / Vestland |
 | Nordmarka Rundt | 148 km | Oslo / Viken |
-| Color Line Tour | 210 km | Agder |
-| Tyrifjorden Rundt | 145 km | Viken |
+| Nordsjørittet (Egersund–Flekkefjord) | 91 km | Rogaland |
 | Eikerrittet | 90 km | Viken |
-| Randsfjorden Rundt | 152 km | Viken |
-| Mjøsrittet | 167 km | Innlandet |
+| Nordsjørittet (Jæren, Egersund–Sandnes) | 88 km | Rogaland |
 | Skjærgårdsrittet | 75 km | Vestland |
 | Tour de Lyngen | 94 km | Troms |
+| Bergen-Voss | 78 km | Vestland |
 | Midnattsolrittet | 46 km | Nordland |
+| Tour de Frøya | 44 km | Trøndelag |
+| Lysebotn Opp | 14 km | Rogaland |
 
-### Langrenn, Triathlon & Ultraløp
+### Langrenn
 
-| Arrangement | Disiplin | Region |
+| Arrangement | Distance | Region |
 |---|---|---|
-| Birkebeinerrennet | Langrenn | Innlandet |
-| Holmenkollmarsjen | Langrenn | Oslo |
-| Norseman Xtreme Triathlon | Triathlon | Vestland |
-| *(+ auto-synced Norwegian triathlon events)* | Triathlon | — |
-| *(Norwegian ultra races)* | Ultraløp | — |
+| Birkebeinerrennet | 53 km | Innlandet |
+| SkøyteBirken | 53 km | Innlandet |
+| Holmenkollmarsjen | 52 km | Oslo |
+| Skarverennet | 44 km | Viken / Vestland |
+
+### Triathlon
+
+| Arrangement | Region |
+|---|---|
+| Norseman Xtreme Triathlon | Vestland |
+| *(+ auto-synced Norwegian triathlon events)* | — |
+
+### Ultraløp
+
+| Arrangement | Distance | Region |
+|---|---|---|
+| Lofoten Ultra-Trail 100M | 162 km | Nordland |
+| Blefjellsbeste | 96 km | Numedal |
+| Lofoten Ultra-Trail 50M | 88 km | Nordland |
+| Ecotrail Oslo | 80 km | Oslo / Viken |
+| Jotunheimen Trail Run Ultra | 73 km | Innlandet |
+| UltraBirken Løp | 60 km | Innlandet |
+
+### Løping
+
+| Arrangement | Distance | Region |
+|---|---|---|
+| Birkebeinerløpet | 21 km | Innlandet |
+| Sentrumsløpet | 10 km | Oslo |
+| *(+ auto-synced Norwegian road races and trail runs)* | — | — |
 
 ---
 

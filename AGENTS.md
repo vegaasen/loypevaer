@@ -6,6 +6,8 @@ Guidelines for AI coding agents working in this repository.
 
 **Løypevær** is a React + TypeScript single-page app that shows weather forecasts and historical climate averages at key waypoints along Norwegian endurance races — sykkelritt, langrenn, triathlon, and ultraløp. It uses the free [Open-Meteo](https://open-meteo.com) API — no API key needed. The app is deployed to both GitHub Pages at [vegaasen.github.io/loypevaer](https://vegaasen.github.io/loypevaer/) and via AWS (S3 + CloudFront).
 
+> Note: the repository/directory is named `rittvær`; the app brand name is **Løypevær**.
+
 ## Commands
 
 ```bash
@@ -15,6 +17,7 @@ bun run build              # typecheck (tsc -b) + production build (also auto-ru
 bun run lint               # ESLint with type-aware rules
 bun run fetch-weather      # refresh src/data/weather-cache.json from Open-Meteo
 bun run fetch-triathlon    # refresh src/data/triathlon-events.json
+bun run fetch-running      # refresh src/data/running-events.json
 bun run generate-sitemap   # generate sitemap (also runs automatically before every build)
 bun run preview            # preview production build locally (vite preview)
 ```
@@ -38,8 +41,9 @@ bun run lint && bun run build
 ## Project layout
 
 ```
-src/data/arrangements.json   # Race definitions — edit this to add/modify a ritt
+src/data/arrangements.json   # Cycling ritt definitions — edit this to add/modify a ritt
 src/data/triathlon-events.json # Auto-generated; do NOT manually edit
+src/data/running-events.json # Auto-generated; do NOT manually edit
 src/data/weather-cache.json  # Auto-generated nightly; do NOT manually edit
 src/context/                 # React context providers and hooks
 src/lib/                     # Pure utility functions (no React)
@@ -52,7 +56,7 @@ infra/                       # Terraform configuration for AWS (S3, CloudFront, 
 
 ## Adding a ritt
 
-Edit `src/data/arrangements.json`. Each entry must follow the existing schema:
+Edit `src/data/arrangements.json`. This file covers **cycling ritt only** — triathlon and running events are sourced separately (see Weather cache section). Each entry must follow the existing schema:
 
 ```jsonc
 {
@@ -80,6 +84,8 @@ Waypoint coordinates should be verified against GPX files or race maps — many 
 
 `src/data/triathlon-events.json` is written by `scripts/fetch-triathlon-events.ts` and committed by `.github/workflows/refresh-triathlon.yml`. Do not hand-edit this file.
 
+`src/data/running-events.json` is written by `scripts/fetch-running-events.ts` and committed by `.github/workflows/refresh-running.yml`. Do not hand-edit this file.
+
 ## CI / deploy
 
 | Workflow | Trigger | What it does |
@@ -89,5 +95,8 @@ Waypoint coordinates should be verified against GPX files or race maps — many 
 | `deploy-aws.yml` | push to `main` (non-doc files) | build + deploy to AWS (S3 + CloudFront) |
 | `refresh-weather.yml` | nightly 03:00 UTC + manual | fetch weather cache + commit |
 | `refresh-triathlon.yml` | scheduled + manual | fetch triathlon events + commit |
+| `refresh-running.yml` | Monday 04:30 UTC + manual | fetch running events + commit |
+| `infra.yml` | manual | Terraform plan/apply/destroy for AWS infra |
+| `dependabot-automerge.yml` | Dependabot PRs | auto-merge Dependabot updates via squash |
 
 Markdown files and issue templates are excluded from triggering CI and deploy via `paths-ignore`.

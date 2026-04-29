@@ -4,6 +4,13 @@ import { resolveWeatherValues } from "../lib/weather";
 import { describeWeatherCode } from "../lib/wmo";
 import type { Waypoint } from "../lib/weather";
 import { windRelativeLabel, degreesToCompass } from "../lib/wind";
+import {
+  TEMP_FREEZE,
+  TEMP_COLD,
+  PRECIP_LIGHT,
+  PRECIP_HEAVY,
+  WIND_SIGNIFICANT,
+} from "../lib/weatherThresholds";
 
 type Props = {
   waypoint: Waypoint;
@@ -21,18 +28,18 @@ function warningClasses(data: WeatherData, routeBearing?: number): string[] {
   const classes: string[] = [];
   const { temp, precipitation: precip, windSpeed, windDirection: windDir } = resolveWeatherValues(data);
 
-  if (temp < 0) {
+  if (temp < TEMP_FREEZE) {
     classes.push("weather-card--warn-freeze");
-  } else if (temp < 10) {
+  } else if (temp < TEMP_COLD) {
     classes.push("weather-card--warn-cold");
   }
 
-  if (precip > 0.5) {
+  if (precip > PRECIP_LIGHT) {
     classes.push("weather-card--warn-rain");
   }
 
   // Headwind warning: only when we know the route direction
-  if (windDir !== undefined && routeBearing !== undefined && windSpeed > 10) {
+  if (windDir !== undefined && routeBearing !== undefined && windSpeed > WIND_SIGNIFICANT) {
     const label = windRelativeLabel(windDir, routeBearing);
     if (label === "Motvind") {
       classes.push("weather-card--warn-wind");
@@ -55,9 +62,9 @@ function uvLevel(uv: number): { label: string; mod: string } {
 function roadRisk(data: WeatherData): "ice" | "slush" | "wet" | null {
   const { temp, precipitation: precip } = resolveWeatherValues(data);
   if (precip <= 0) return null;
-  if (temp < 0)                    return "ice";
-  if (temp < 3 && precip > 0.5)   return "slush";
-  if (temp >= 3 && precip > 2)    return "wet";
+  if (temp < TEMP_FREEZE)                         return "ice";
+  if (temp < 3 && precip > PRECIP_LIGHT)          return "slush";
+  if (temp >= 3 && precip > PRECIP_HEAVY)         return "wet";
   return null;
 }
 

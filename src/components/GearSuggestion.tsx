@@ -2,6 +2,15 @@ import type { WaypointWeather } from "../hooks/useWeather";
 import { windRelativeLabel, routeBearingForWaypoint } from "../lib/wind";
 import type { Waypoint } from "../lib/weather";
 import { resolveWeatherValues } from "../lib/weather";
+import {
+  TEMP_FREEZE,
+  TEMP_VERY_COLD,
+  TEMP_COLD,
+  PRECIP_LIGHT,
+  PRECIP_HEAVY,
+  WIND_SIGNIFICANT,
+  WIND_STRONG,
+} from "../lib/weatherThresholds";
 
 type Suggestion = {
   key: string;
@@ -30,7 +39,7 @@ function buildSuggestions(
   // Check for headwind at any waypoint
   const hasSignificantHeadwind = loaded.some((r, i) => {
     const { windDirection: windDir, windSpeed } = resolveWeatherValues(r.data!);
-    if (windDir === undefined || windSpeed <= 10) return false;
+    if (windDir === undefined || windSpeed <= WIND_SIGNIFICANT) return false;
     const bearing = routeBearingForWaypoint(waypoints, i);
     if (bearing === null) return false;
     return windRelativeLabel(windDir, bearing) === "Motvind";
@@ -39,21 +48,21 @@ function buildSuggestions(
   const maxWindSpeed = Math.max(...windSpeeds);
 
   // --- Temperature rules ---
-  if (minTemp < 0) {
+  if (minTemp < TEMP_FREEZE) {
     suggestions.push({
       key: "freeze",
       icon: "🧊",
       text: "Under 0 °C: vinterhansker, balaklava og varmende lag anbefalt",
       severity: "danger",
     });
-  } else if (minTemp < 5) {
+  } else if (minTemp < TEMP_VERY_COLD) {
     suggestions.push({
       key: "very-cold",
       icon: "🥶",
       text: "Under 5 °C: votter, hette og ekstra lag",
       severity: "danger",
     });
-  } else if (minTemp < 10) {
+  } else if (minTemp < TEMP_COLD) {
     suggestions.push({
       key: "cold",
       icon: "🧊",
@@ -63,14 +72,14 @@ function buildSuggestions(
   }
 
   // --- Rain rules ---
-  if (maxPrecip > 2) {
+  if (maxPrecip > PRECIP_HEAVY) {
     suggestions.push({
       key: "heavy-rain",
       icon: "🌧",
       text: "Mye nedbør: regnjakke og regnbukse anbefalt",
       severity: "danger",
     });
-  } else if (maxPrecip > 0.5) {
+  } else if (maxPrecip > PRECIP_LIGHT) {
     suggestions.push({
       key: "light-rain",
       icon: "🌦",
@@ -80,7 +89,7 @@ function buildSuggestions(
   }
 
   // --- Wind rules ---
-  if (hasSignificantHeadwind && maxWindSpeed > 20) {
+  if (hasSignificantHeadwind && maxWindSpeed > WIND_STRONG) {
     suggestions.push({
       key: "headwind-strong",
       icon: "💨",
@@ -94,7 +103,7 @@ function buildSuggestions(
       text: "Motvind underveis: vindtett plagg anbefalt",
       severity: "warn",
     });
-  } else if (maxWindSpeed > 20) {
+  } else if (maxWindSpeed > WIND_STRONG) {
     suggestions.push({
       key: "strong-wind",
       icon: "💨",

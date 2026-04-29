@@ -1,11 +1,12 @@
 type Props = {
   value: string;
   onChange: (date: string) => void;
-  officialDate: string;
+  /** The race's official date. When provided, a reset button and hint are shown. */
+  officialDate?: string;
 };
 
 export function DatePicker({ value, onChange, officialDate }: Props) {
-  const isOfficialDate = value === officialDate;
+  const isOfficialDate = officialDate !== undefined && value === officialDate;
 
   return (
     <div className="date-picker">
@@ -22,7 +23,7 @@ export function DatePicker({ value, onChange, officialDate }: Props) {
             onChange={(e) => onChange(e.target.value)}
             className="date-picker__input"
           />
-        {!isOfficialDate && (
+        {officialDate !== undefined && !isOfficialDate && (
           <button
             type="button"
             onClick={() => onChange(officialDate)}
