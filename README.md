@@ -144,10 +144,13 @@ Pick a Norwegian race, choose a date, and get weather conditions at key waypoint
 
 ```bash
 bun install
-bun run dev            # starts dev server
-bun run build          # production build (tsc + vite)
-bun run lint           # ESLint (type-aware)
-bun run fetch-weather  # refresh src/data/weather-cache.json manually
+bun run dev              # starts dev server
+bun run build            # production build (tsc + vite, includes sitemap generation)
+bun run lint             # ESLint (type-aware)
+bun run fetch-weather    # refresh src/data/weather-cache.json manually
+bun run fetch-triathlon  # refresh src/data/triathlon-events.json manually
+bun run fetch-running    # refresh src/data/running-events.json manually
+bun run generate-sitemap # regenerate public/sitemap.xml (also runs automatically before build)
 ```
 
 The weather cache (`src/data/weather-cache.json`) is refreshed nightly via GitHub Actions — you only need `fetch-weather` locally if you want fresh historical data before committing.
@@ -159,8 +162,9 @@ The weather cache (`src/data/weather-cache.json`) is refreshed nightly via GitHu
 ```
 src/
   data/
-    arrangements.json            # Curated events with waypoints (sykkel, langrenn, ultraløp)
+    arrangements.json            # Curated events with waypoints (sykkel, langrenn, ultraløp, løping)
     triathlon-events.json        # Auto-synced triathlon events
+    running-events.json          # Auto-synced running/løping events
     weather-cache.json           # Nightly-refreshed historical weather cache (auto-generated)
   lib/
     weather.ts                   # Open-Meteo forecast + historical fetchers
@@ -168,11 +172,19 @@ src/
     wind.ts                      # Wind direction helpers + relative label (Medvind/Motvind/Sidevind)
     timing.ts                    # Waypoint arrival time calculator from start/finish time
     difficulty.ts                # Difficulty rating derived from weather + route conditions
-    ritt.ts                      # Event data helpers and type definitions
+    arrangements.ts              # Event data helpers and type definitions
+    dates.ts                     # Norwegian date formatting, daysUntil, countdown helpers
+    disciplines.ts               # Discipline enum and display helpers
+    gpx.ts                       # GPX parsing, downsampling, distance calculation, URL fetch
+    grouping.ts                  # Group events by year/month for list views
+    seo.ts                       # Canonical URL helpers, per-discipline SEO keywords
+    stats.ts                     # Statistical utilities (avg, mode) for climate aggregation
   hooks/
     useWeather.ts                # TanStack Query wrapper (useQueries per waypoint)
     useMyEvents.ts               # Bookmark persistence in localStorage
     usePageTitle.ts              # Sets <title> per route
+    useDetailsOpen.ts            # Tracks open state of native <details> elements
+    usePageTracking.ts           # Fires gtag page_view on route changes
   components/
     EventCard.tsx                # Race card on the home page
     EventMap.tsx                 # Leaflet map with waypoints + OSRM route polyline
@@ -185,15 +197,22 @@ src/
     HistoricalWeatherTable.tsx   # Historical averages table view
     ShareButton.tsx              # Copy shareable link to clipboard
     NavBar.tsx                   # Top navigation bar
+    SiteFooter.tsx               # Footer with attribution links
     ErrorBoundary.tsx            # App-level + per-strip error boundary
     ReloadPrompt.tsx             # PWA update prompt
   pages/
     HomePage.tsx                 # Event grid, sorted by official date
     EventPage.tsx                # Detail: meta + date picker + weather strip
+    GpxPage.tsx                  # GPX upload / URL load → derive waypoints + weather
+    LopPage.tsx                  # Running events list grouped by year/month
+    HvaErRittvaerPage.tsx        # About / SEO landing page
     NotFoundPage.tsx             # 404 catch-all
   App.tsx                        # Router + QueryClientProvider
 scripts/
   fetch-weather-cache.ts         # Fetches historical data and writes weather-cache.json
+  fetch-triathlon-events.ts      # Fetches triathlon events and writes triathlon-events.json
+  fetch-running-events.ts        # Fetches running events and writes running-events.json
+  generate-sitemap.ts            # Generates public/sitemap.xml (also runs as prebuild)
 ```
 
 ---
@@ -216,7 +235,6 @@ scripts/
 
 ### Open
 
-- [ ] **GPX upload** — derive waypoints automatically from a GPX file
 - [ ] **Comparison mode** — show official date vs custom date side by side
 - [ ] **Hourly breakdown** — expand a waypoint card to show hour-by-hour forecast
 - [ ] **Elevation-aware pacing** — `calcFinishTimeFromSpeed` currently uses linear distance; add elevation correction
@@ -232,12 +250,15 @@ scripts/
 - [ ] **Altitude values** — confirm `altitude` per waypoint for accurate temperature correction
 - [ ] **Official dates** — update `arrangements.json` each year when terminlisten is published
 - [ ] **Triathlon waypoints** — most triathlon events currently have only a single waypoint (venue); expand with swim/bike/run course points
+- [ ] **Løping waypoints** — auto-synced running events have only a single start/finish waypoint; add intermediate course points where GPX data is available
 
 ### Done
 
-- [x] **Langrenn** — cross-country ski races added (Birkebeinerrennet, Holmenkollmarsjen etc.)
+- [x] **Langrenn** — cross-country ski races added (Birkebeinerrennet, Holmenkollmarsjen, SkøyteBirken, Skarverennet)
 - [x] **Triathlon** — Norwegian triathlon events added (Norseman etc.) via auto-synced feed
 - [x] **Ultraløp** — Norwegian ultra runs added; waypoint model supports running disciplines
+- [x] **Løping** — Norwegian road races and trail runs added via auto-synced feed; dedicated `/løp` page
+- [x] **GPX upload** — derive waypoints automatically from a GPX file (drag-and-drop, URL load, waypoint count slider, export guides for Strava/Garmin/Komoot)
 - [x] **Official start time pre-fill** — start time pre-populated from known mass-start time per event
 
 ---
