@@ -1275,6 +1275,17 @@ code {
   filter: saturate(0.65);
 }
 
+.ritt-card--cancelled {
+  opacity: 0.7;
+  filter: saturate(0.5) sepia(0.45) hue-rotate(5deg);
+  transition: opacity 0.15s, filter 0.15s;
+}
+
+.ritt-card--cancelled:hover {
+  opacity: 0.85;
+  filter: saturate(0.65) sepia(0.3) hue-rotate(5deg);
+}
+
 .ritt-card__name {
   display: flex;
   align-items: flex-start;
@@ -1501,6 +1512,28 @@ code {
     background: color-mix(in srgb, #f0c040 15%, transparent);
     color: #f0c040;
     border-color: color-mix(in srgb, #f0c040 30%, transparent);
+  }
+}
+
+.ritt-card__footer-cancelled {
+  margin-top: 4px;
+}
+
+.ritt-card__cancelled-badge {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: color-mix(in srgb, #c0392b 15%, transparent);
+  color: #922b21;
+  border: 1px solid color-mix(in srgb, #c0392b 30%, transparent);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+
+  @media (prefers-color-scheme: dark) {
+    background: color-mix(in srgb, #e74c3c 15%, transparent);
+    color: #e74c3c;
+    border-color: color-mix(in srgb, #e74c3c 30%, transparent);
   }
 }
 

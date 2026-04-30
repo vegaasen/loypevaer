@@ -50,7 +50,7 @@ export function HomePage() {
       filtered
         .filter((r) => {
           const days = daysUntil(r.officialDate);
-          return days >= 0 && days <= 14;
+          return days >= 0 && days <= 14 && r.dateStatus !== "cancelled";
         })
         .sort((a, b) => parseDateLocal(a.officialDate).getTime() - parseDateLocal(b.officialDate).getTime()),
     [filtered]
@@ -60,7 +60,7 @@ export function HomePage() {
     () =>
       plannedIds
         .map((id) => ritt.find((r) => r.id === id))
-        .filter((r): r is RittEntry => r !== undefined)
+        .filter((r): r is RittEntry => r !== undefined && r.dateStatus !== "cancelled")
         .sort((a, b) => {
           const da = getPlanned(a.id)?.date ?? a.officialDate;
           const db = getPlanned(b.id)?.date ?? b.officialDate;

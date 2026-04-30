@@ -20,8 +20,8 @@ type Props = {
   countdown?: string;
   /** True when the race date has already passed */
   isPast?: boolean;
-  /** "pending" = date not yet officially confirmed */
-  dateStatus?: "pending";
+  /** "pending" = date not yet officially confirmed; "cancelled" = event has been cancelled */
+  dateStatus?: "pending" | "cancelled";
 };
 
 export function EventCard({
@@ -41,11 +41,12 @@ export function EventCard({
 }: Props) {
   const dateStr = displayDate ?? officialDate;
   const formattedDate = formatNorwegianDate(dateStr);
+  const isCancelled = dateStatus === "cancelled";
 
   return (
     <Link
       to={`/arrangement/${id}`}
-      className={`ritt-card${planned ? " ritt-card--planned" : ""}${isPast ? " ritt-card--past" : ""}`}
+      className={`ritt-card${planned ? " ritt-card--planned" : ""}${isPast ? " ritt-card--past" : ""}${isCancelled ? " ritt-card--cancelled" : ""}`}
     >
       <div className="ritt-card__name">
         <span>{name}</span>
@@ -65,14 +66,16 @@ export function EventCard({
         <span className="ritt-card__region">{region}</span>
         <span className="ritt-card__distance">{distanceLabel ?? `${distance} km`}</span>
       </div>
-      <div className={`ritt-card__footer${dateStatus === "pending" ? " ritt-card__footer--pending" : ""}`}>
+      <div
+        className={`ritt-card__footer${dateStatus === "pending" ? " ritt-card__footer--pending" : ""}${isCancelled ? " ritt-card__footer--cancelled" : ""}`}
+      >
         <div className="ritt-card__footer-main">
           <span className={`ritt-card__discipline ritt-card__discipline--${discipline}`}>
             {DISCIPLINE_LABEL[discipline]}
           </span>
           <div className="ritt-card__footer-right">
             <span className="ritt-card__date">{formattedDate}</span>
-            {countdown && (
+            {countdown && !isCancelled && (
               <span className="ritt-card__countdown">{countdown}</span>
             )}
           </div>
@@ -80,6 +83,11 @@ export function EventCard({
         {dateStatus === "pending" && (
           <div className="ritt-card__footer-tentative">
             <span className="ritt-card__pending" title="Datoen er ikke offisielt bekreftet ennå">Tentativ dato</span>
+          </div>
+        )}
+        {isCancelled && (
+          <div className="ritt-card__footer-cancelled">
+            <span className="ritt-card__cancelled-badge" title="Dette arrangementet er avlyst">Avlyst</span>
           </div>
         )}
       </div>

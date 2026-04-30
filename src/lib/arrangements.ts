@@ -21,8 +21,8 @@ export interface RittEntry {
   officialDate: string;
   /** Known mass-start time in "HH:MM" format, e.g. "08:00". Optional — not all ritt have a confirmed time. */
   officialStartTime?: string;
-  /** "pending" = date not yet officially confirmed for this season. */
-  dateStatus?: "pending";
+  /** "pending" = date not yet officially confirmed for this season. "cancelled" = event has been cancelled. */
+  dateStatus?: "pending" | "cancelled";
   url?: string;
   /** Human-readable distance description, used for multi-discipline events like triathlon. */
   distanceLabel?: string;

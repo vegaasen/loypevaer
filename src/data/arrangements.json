@@ -320,15 +320,15 @@
     "discipline": "landevei",
     "officialDate": "2026-05-02",
     "distance": 90,
-    "elevationGain": 1100,
+    "elevationGain": 850,
     "region": "Viken",
     "url": "http://eikerrittet.no/",
     "waypoints": [
-      { "label": "Start – Hokksund", "lat": 59.770, "lon": 9.983, "altitude": 30 },
-      { "label": "25% – Darbu", "lat": 59.830, "lon": 9.660, "altitude": 150 },
-      { "label": "50% – Flesberg", "lat": 59.854, "lon": 9.458, "altitude": 200 },
-      { "label": "75% – Kongsberg", "lat": 59.672, "lon": 9.656, "altitude": 170 },
-      { "label": "Mål – Hokksund", "lat": 59.770, "lon": 9.983, "altitude": 30 }
+      { "label": "Start – Røren barneskole", "lat": 59.774, "lon": 9.975, "altitude": 30 },
+      { "label": "25% – Eidsfoss", "lat": 59.583, "lon": 10.085, "altitude": 50 },
+      { "label": "50% – Hvittingfoss", "lat": 59.527, "lon": 9.976, "altitude": 80 },
+      { "label": "75% – Skollenborg", "lat": 59.620, "lon": 9.799, "altitude": 90 },
+      { "label": "Mål – Eiker-Kvikk klubbhus", "lat": 59.763, "lon": 9.970, "altitude": 30 }
     ]
   },
   {
@@ -341,11 +341,11 @@
     "region": "Viken",
     "url": "https://www.stenhoggerrittet.no",
     "waypoints": [
-      { "label": "Start – Nyborg/Halden", "lat": 59.107, "lon": 11.452, "altitude": 100 },
-      { "label": "25% – Ørsjøen", "lat": 59.083, "lon": 11.523, "altitude": 150 },
-      { "label": "50% – Prestebakke", "lat": 59.059, "lon": 11.562, "altitude": 200 },
-      { "label": "75% – Iddefjorden", "lat": 59.086, "lon": 11.378, "altitude": 50 },
-      { "label": "Mål – Nyborg", "lat": 59.107, "lon": 11.452, "altitude": 100 }
+      { "label": "Start – Aspedammen", "lat": 59.058482, "lon": 11.486429, "altitude": 155 },
+      { "label": "25% – Tangen", "lat": 59.027525, "lon": 11.569128, "altitude": 140 },
+      { "label": "50% – Folkeset", "lat": 59.003447, "lon": 11.504332, "altitude": 112 },
+      { "label": "75% – Nordre Knegterød", "lat": 59.02469, "lon": 11.463782, "altitude": 154 },
+      { "label": "Mål – Aspedammen", "lat": 59.054925, "lon": 11.480561, "altitude": 171 }
     ]
   },
   {
@@ -353,6 +353,7 @@
     "name": "Garborgriket Rundt",
     "discipline": "terreng",
     "officialDate": "2026-05-10",
+    "dateStatus": "cancelled",
     "distance": 70,
     "elevationGain": 250,
     "region": "Rogaland",
