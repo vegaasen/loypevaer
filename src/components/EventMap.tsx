@@ -136,10 +136,14 @@ export function EventMap({ waypoints, name, discipline }: Props) {
     <details ref={detailsRef} className="ritt-map__details">
       <summary className="ritt-map__summary">
         Kart over ruten — {name}
+        <span className="beta-badge">BETA</span>
         {routeError && (
           <span className="ritt-map__fallback-note"> (rett-linje)</span>
         )}
       </summary>
+      <p className="ritt-map__beta-note">
+        Kartet er automatisk generert og kan avvike fra faktisk løype.
+      </p>
       <div className="ritt-map__container" ref={mapRef} />
     </details>
   );
