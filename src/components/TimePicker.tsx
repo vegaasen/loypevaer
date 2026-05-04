@@ -4,7 +4,7 @@ import type { Discipline } from "../lib/arrangements";
 
 const SPEED_OPTIONS = [15, 18, 20, 22, 25, 28, 30, 32, 35, 38, 40] as const;
 // Pace options in decimal min/km — displayed as mm:ss
-const PACE_OPTIONS = [4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 9.0, 10.0, 12.0] as const;
+const PACE_OPTIONS = [3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 9.0, 10.0, 12.0] as const;
 
 type Props = {
   startTime: string;
