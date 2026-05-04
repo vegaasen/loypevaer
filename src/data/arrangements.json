@@ -919,12 +919,12 @@
     "region": "Innlandet / Vestland",
     "url": "https://www.jotunheimenrundt.no/sognefjellrittet",
     "waypoints": [
-      { "label": "Start – Lom", "lat": 61.840, "lon": 8.566, "altitude": 370 },
-      { "label": "Sognefjellet", "lat": 61.570, "lon": 7.930, "altitude": 1413 },
-      { "label": "Fortun", "lat": 61.440, "lon": 7.640, "altitude": 40 },
-      { "label": "Luster", "lat": 61.397, "lon": 7.530, "altitude": 25 },
-      { "label": "Hafslo", "lat": 61.280, "lon": 7.230, "altitude": 90 },
-      { "label": "Mål – Sogndal", "lat": 61.229, "lon": 7.100, "altitude": 10 }
+      { "label": "Start – Lom", "lat": 61.839, "lon": 8.566, "altitude": 380 },
+      { "label": "Sognefjellet", "lat": 61.566, "lon": 8.007, "altitude": 1427 },
+      { "label": "Fortun", "lat": 61.483, "lon": 7.634, "altitude": 8 },
+      { "label": "Luster", "lat": 61.452, "lon": 7.503, "altitude": 9 },
+      { "label": "Hafslo", "lat": 61.304, "lon": 7.214, "altitude": 200 },
+      { "label": "Mål – Sogndal", "lat": 61.231, "lon": 7.103, "altitude": 13 }
     ]
   }
 ]
