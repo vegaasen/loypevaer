@@ -171,6 +171,13 @@ code {
   }
 }
 
+.site-nav__logo-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
 .site-nav__logo {
   font-family: var(--heading);
   font-size: 20px;
@@ -179,11 +186,24 @@ code {
   text-decoration: none;
   letter-spacing: -0.3px;
   white-space: nowrap;
-  flex-shrink: 0;
 
   &:hover {
     color: var(--accent);
   }
+}
+
+.site-nav__beta {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--accent);
+  border-radius: 4px;
+  padding: 2px 5px;
+  line-height: 1.4;
+  align-self: center;
 }
 
 .site-nav__selector {

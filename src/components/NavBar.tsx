@@ -61,9 +61,12 @@ export function NavBar() {
   return (
     <div className="site-nav-wrapper" ref={menuRef}>
       <nav className="site-nav">
-        <Link to="/" className="site-nav__logo">
-          Løypevær
-        </Link>
+        <div className="site-nav__logo-group">
+          <Link to="/" className="site-nav__logo">
+            Løypevær
+          </Link>
+          <span className="site-nav__beta">BETA</span>
+        </div>
         {/* Desktop nav controls */}
         <div className="site-nav__selector">
           <Link
