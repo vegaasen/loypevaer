@@ -871,5 +871,23 @@
       { "label": "~75% – Kroken", "lat": 61.120, "lon": 10.492, "altitude": 240 },
       { "label": "Mål – Håkons Hall, Lillehammer", "lat": 61.117, "lon": 10.460, "altitude": 200 }
     ]
+  },
+  {
+    "id": "oyeren-rundt",
+    "name": "Øyeren Rundt",
+    "discipline": "landevei",
+    "officialDate": "2026-08-09",
+    "officialStartTime": "09:00",
+    "distance": 124,
+    "elevationGain": 800,
+    "region": "Viken",
+    "url": "https://www.oyerenrundt.no/",
+    "waypoints": [
+      { "label": "Start/Mål – Rælingen", "lat": 59.946, "lon": 11.073, "altitude": 110 },
+      { "label": "Fetsund", "lat": 59.921, "lon": 11.154, "altitude": 100 },
+      { "label": "Solbergfoss (matstasjon)", "lat": 59.685, "lon": 11.333, "altitude": 90 },
+      { "label": "Spydeberg", "lat": 59.627, "lon": 11.081, "altitude": 110 },
+      { "label": "Enebakk (drikkestasjon)", "lat": 59.757, "lon": 10.927, "altitude": 140 }
+    ]
   }
 ]
