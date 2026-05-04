@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { EventCard } from "../components/EventCard";
+import { RunningEventRow } from "../components/RunningEventRow";
 import { useMyEvents } from "../hooks/useMyEvents";
 import { allArrangements } from "../lib/arrangements";
 import { SITE_URL } from "../lib/seo";
@@ -153,9 +153,9 @@ export function LopPage() {
               {months.map((month) => (
                 <div key={month} className="home-page__month-section">
                   <h3 className="home-page__month-heading">{monthName(month)}</h3>
-                  <div className="home-page__grid">
+                  <div className="lop-list">
                     {byMonth.get(month)!.map((r) => (
-                      <EventCard
+                      <RunningEventRow
                         key={r.id}
                         id={r.id}
                         name={r.name}

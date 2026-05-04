@@ -87,6 +87,17 @@ type NominatimResult = {
 };
 
 // ---------------------------------------------------------------------------
+// Distance overrides
+// Override the auto-selected (longest) distance for specific events where
+// the racedays.run data is incorrect or we want a specific distance.
+// Key: event slug, Value: preferred distance in meters
+// ---------------------------------------------------------------------------
+
+const DISTANCE_OVERRIDES: Record<string, number> = {
+  "obos-fornebulopet-2026": 10000, // racedays lists 18 km which doesn't exist; race is 10 km
+};
+
+// ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
 
@@ -197,7 +208,10 @@ async function main() {
   const seenIds = new Set<string>();
 
   for (const event of filtered) {
-    const race = pickLongestRace(event.races)!;
+    const overrideMeters = DISTANCE_OVERRIDES[event.slug];
+    const race = overrideMeters
+      ? (event.races.find((r) => r.meters === overrideMeters) ?? pickLongestRace(event.races))!
+      : pickLongestRace(event.races)!;
     const location = event.location;
 
     console.log(`  Processing: ${event.name} @ ${location} (${race.distanceName})`);

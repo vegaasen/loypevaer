@@ -1587,6 +1587,254 @@ code {
   opacity: 1;
 }
 
+/* ─── Running event list (LopPage) ──────────────────────────────────── */
+
+.lop-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.running-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 12px 20px;
+  padding: 12px 16px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.12s, border-color 0.12s;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background: color-mix(in srgb, var(--accent) 4%, var(--bg));
+    border-color: var(--accent-border);
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+  }
+}
+
+.running-row--planned {
+  border-left: 3px solid var(--accent);
+}
+
+.running-row--past {
+  opacity: 0.45;
+  filter: saturate(0.35);
+  transition: opacity 0.15s, filter 0.15s;
+
+  &:hover {
+    opacity: 0.75;
+    filter: saturate(0.65);
+  }
+}
+
+.running-row--cancelled {
+  opacity: 0.65;
+  filter: saturate(0.4) sepia(0.4);
+}
+
+.running-row__name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-h);
+  min-width: 0;
+
+  > span:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 640px) {
+    grid-column: 1 / -1;
+  }
+}
+
+.running-row__cancelled-badge,
+.running-row__pending-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.running-row__cancelled-badge {
+  background: color-mix(in srgb, #c0392b 12%, transparent);
+  color: #c0392b;
+}
+
+@media (prefers-color-scheme: dark) {
+  .running-row__cancelled-badge {
+    background: color-mix(in srgb, #e57373 12%, transparent);
+    color: #e57373;
+  }
+}
+
+.running-row__pending-badge {
+  background: color-mix(in srgb, #b07d2a 12%, transparent);
+  color: #b07d2a;
+}
+
+@media (prefers-color-scheme: dark) {
+  .running-row__pending-badge {
+    background: color-mix(in srgb, #e8b84b 12%, transparent);
+    color: #e8b84b;
+  }
+}
+
+.running-row__meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+
+  @media (max-width: 640px) {
+    grid-column: 1;
+  }
+}
+
+.running-row__region {
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.running-row__distance {
+  color: var(--text-muted);
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+/* Distance category chip */
+
+.running-row__category {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 7px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.running-row__category--10k {
+  background: color-mix(in srgb, #2e7d4f 14%, transparent);
+  color: #2e7d4f;
+}
+
+@media (prefers-color-scheme: dark) {
+  .running-row__category--10k {
+    background: color-mix(in srgb, #5abf82 14%, transparent);
+    color: #5abf82;
+  }
+}
+
+.running-row__category--halvmaraton {
+  background: color-mix(in srgb, #3a7fc1 14%, transparent);
+  color: #3a7fc1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .running-row__category--halvmaraton {
+    background: color-mix(in srgb, #6fb3f5 14%, transparent);
+    color: #6fb3f5;
+  }
+}
+
+.running-row__category--maraton {
+  background: color-mix(in srgb, #8b4f9e 14%, transparent);
+  color: #8b4f9e;
+}
+
+@media (prefers-color-scheme: dark) {
+  .running-row__category--maraton {
+    background: color-mix(in srgb, #c485d8 14%, transparent);
+    color: #c485d8;
+  }
+}
+
+.running-row__category--ultra {
+  background: color-mix(in srgb, #7a5c3e 14%, transparent);
+  color: #7a5c3e;
+}
+
+@media (prefers-color-scheme: dark) {
+  .running-row__category--ultra {
+    background: color-mix(in srgb, #b89070 14%, transparent);
+    color: #b89070;
+  }
+}
+
+.running-row__right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+
+  @media (max-width: 640px) {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+  }
+}
+
+.running-row__date {
+  font-size: 13px;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.running-row__countdown {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent);
+  white-space: nowrap;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+.running-row__bookmark {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  line-height: 1;
+  opacity: 0.5;
+  transition: opacity 0.15s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.running-row__bookmark--active {
+  opacity: 1;
+}
+
 /* ─── Ritt page layout ───────────────────────────────────────────────── */
 
 .ritt-page {
