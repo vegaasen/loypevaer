@@ -71,6 +71,24 @@ export function formatArrivalTime(datetime: string): string {
 export const WAYPOINT_FRACTIONS = [0, 0.25, 0.5, 0.75, 1.0] as const;
 
 /**
+ * Converts a pace in min/km to km/h.
+ * e.g. 5.5 min/km → 10.909... km/h
+ */
+export function paceToKmh(paceMinPerKm: number): number {
+  return 60 / paceMinPerKm;
+}
+
+/**
+ * Formats a decimal pace (min/km) as "mm:ss".
+ * e.g. 5.5 → "5:30", 4.0 → "4:00", 10.0 → "10:00"
+ */
+export function formatPace(paceMinPerKm: number): string {
+  const minutes = Math.floor(paceMinPerKm);
+  const seconds = Math.round((paceMinPerKm - minutes) * 60);
+  return `${minutes}:${String(seconds).padStart(2, "0")}`;
+}
+
+/**
  * Given a start time ("HH:MM") and a distance + average speed, computes
  * the predicted finish time ("HH:MM").
  *

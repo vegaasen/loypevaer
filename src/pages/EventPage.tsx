@@ -257,6 +257,7 @@ export function EventPage() {
           }}
           distanceKm={rittData.distance}
           officialStartTime={rittData.officialStartTime}
+          discipline={rittData.discipline}
         />
       </section>
 

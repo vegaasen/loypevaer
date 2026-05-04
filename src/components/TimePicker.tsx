@@ -1,7 +1,10 @@
 import { useState } from "react";
-import { calcFinishTimeFromSpeed } from "../lib/timing";
+import { calcFinishTimeFromSpeed, formatPace, paceToKmh } from "../lib/timing";
+import type { Discipline } from "../lib/arrangements";
 
 const SPEED_OPTIONS = [15, 18, 20, 22, 25, 28, 30, 32, 35, 38, 40] as const;
+// Pace options in decimal min/km — displayed as mm:ss
+const PACE_OPTIONS = [4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 9.0, 10.0, 12.0] as const;
 
 type Props = {
   startTime: string;
@@ -13,6 +16,8 @@ type Props = {
   distanceKm?: number;
   /** Known mass-start time in "HH:MM". When provided and startTime is empty, shows a prefill hint. */
   officialStartTime?: string;
+  /** When "løping", shows a pace picker (min/km) instead of a speed picker (km/t). */
+  discipline?: Discipline;
 };
 
 export function TimePicker({
@@ -23,16 +28,19 @@ export function TimePicker({
   onClear,
   distanceKm,
   officialStartTime,
+  discipline,
 }: Props) {
   const hasValues = startTime !== "" || finishTime !== "";
   const timingActive = startTime !== "" && finishTime !== "";
   const [selectedSpeed, setSelectedSpeed] = useState("");
+  const isPace = discipline === "løping";
 
   function handleSpeedChange(e: React.ChangeEvent<HTMLSelectElement>) {
-    const speed = Number(e.target.value);
-    if (!speed || !startTime || !distanceKm) return;
+    const raw = Number(e.target.value);
+    if (!raw || !startTime || !distanceKm) return;
     setSelectedSpeed(e.target.value);
-    const computed = calcFinishTimeFromSpeed(startTime, distanceKm, speed);
+    const kmh = isPace ? paceToKmh(raw) : raw;
+    const computed = calcFinishTimeFromSpeed(startTime, distanceKm, kmh);
     onFinishChange(computed);
   }
 
@@ -64,7 +72,7 @@ export function TimePicker({
         {distanceKm != null && (
           <div className="time-picker__field">
             <label htmlFor="ritt-speed" className="time-picker__label">
-              Fart (km/t)
+              {isPace ? "Tempo (min/km)" : "Fart (km/t)"}
             </label>
             <select
               id="ritt-speed"
@@ -74,16 +82,28 @@ export function TimePicker({
               disabled={!startTime}
             >
               <option value="" disabled>
-                Velg fart…
+                {isPace ? "Velg tempo…" : "Velg fart…"}
               </option>
-              {SPEED_OPTIONS.map((s) => (
-                <option key={s} value={s}>
-                  {s} km/t
-                  {distanceKm
-                    ? ` ≈ ${Math.round((distanceKm / s) * 10) / 10} t`
-                    : ""}
-                </option>
-              ))}
+              {isPace
+                ? PACE_OPTIONS.map((p) => {
+                    const estHours = distanceKm
+                      ? Math.round((distanceKm * p) / 60 * 10) / 10
+                      : null;
+                    return (
+                      <option key={p} value={p}>
+                        {formatPace(p)} min/km
+                        {estHours != null ? ` ≈ ${estHours} t` : ""}
+                      </option>
+                    );
+                  })
+                : SPEED_OPTIONS.map((s) => (
+                    <option key={s} value={s}>
+                      {s} km/t
+                      {distanceKm
+                        ? ` ≈ ${Math.round((distanceKm / s) * 10) / 10} t`
+                        : ""}
+                    </option>
+                  ))}
             </select>
           </div>
         )}
