@@ -70,7 +70,7 @@ export function HomePage() {
     [plannedIds]
   );
 
-  const nextRitt = getNextRitt(ritt);
+  const nextRitt = getNextRitt(ritt.filter((r) => r.discipline !== "løping"));
 
   function handleToggle(id: string, officialDate: string, e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
