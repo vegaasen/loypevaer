@@ -1246,6 +1246,11 @@ code {
 
 .home-page__month-heading {
   margin-bottom: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  padding: 8px 0;
 }
 
 .home-page__grid {
