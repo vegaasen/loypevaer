@@ -54,10 +54,13 @@ export function LopPage() {
   );
 
   const grouped = useMemo(() => groupByYearMonth(filtered), [filtered]);
+  const currentYear = new Date().getFullYear();
   const years = useMemo(
     () => [...grouped.keys()].sort((a, b) => b - a),
     [grouped],
   );
+  const currentAndPastYears = useMemo(() => years.filter((y) => y <= currentYear), [years, currentYear]);
+  const futureYears = useMemo(() => years.filter((y) => y > currentYear), [years, currentYear]);
 
   const pageTitle = "Løpsvær – Vær for norske løp | Løypevær";
   const description = `Løypevær gir deg løpsvær og sanntidsvarsler for ${lopingRaces.length} norske løp — 10 km, halvmaraton og maraton. Sjekk temperatur, vind og nedbør langs hele ruten.`;
@@ -144,7 +147,7 @@ export function LopPage() {
         {years.length === 0 && (
           <p className="home-page__empty">Ingen løp funnet.</p>
         )}
-        {years.map((year) => {
+        {currentAndPastYears.map((year) => {
           const byMonth = grouped.get(year)!;
           const months = [...byMonth.keys()].sort((a, b) => a - b);
           return (
@@ -177,6 +180,46 @@ export function LopPage() {
             </section>
           );
         })}
+        {futureYears.length > 0 && (
+          <details className="home-page__future-years">
+            <summary className="home-page__future-years-summary">
+              Kommende sesonger ({futureYears.sort((a, b) => a - b).join(", ")})
+            </summary>
+            {futureYears.map((year) => {
+              const byMonth = grouped.get(year)!;
+              const months = [...byMonth.keys()].sort((a, b) => a - b);
+              return (
+                <section key={year} className="home-page__year-section">
+                  <h2 className="home-page__year-heading">{year}</h2>
+                  {months.map((month) => (
+                    <div key={month} className="home-page__month-section">
+                      <h3 className="home-page__month-heading">{monthName(month)}</h3>
+                      <div className="lop-list">
+                        {byMonth.get(month)!.map((r) => (
+                          <RunningEventRow
+                            key={r.id}
+                            id={r.id}
+                            name={r.name}
+                            officialDate={r.officialDate}
+                            distance={r.distance}
+                            distanceLabel={r.distanceLabel}
+                            region={r.region}
+                            discipline={r.discipline}
+                            countdown={formatCountdown(r.officialDate)}
+                            planned={isPlanned(r.id)}
+                            isPast={daysUntil(r.officialDate) < 0}
+                            dateStatus={r.dateStatus}
+                            onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </section>
+              );
+            })}
+          </details>
+        )}
       </main>
 
       <div className="home-page__cta-banner" style={{ marginTop: "var(--space-xl)" }}>

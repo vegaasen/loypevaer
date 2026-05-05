@@ -53,6 +53,9 @@ export function RunningEventRow({
     >
       <div className="running-row__name">
         <span>{name}</span>
+        <span className={`running-row__category running-row__category--${category} running-row__category--mobile`}>
+          {categoryLabel}
+        </span>
         {isCancelled && (
           <span className="running-row__cancelled-badge" title="Avlyst">Avlyst</span>
         )}
@@ -63,9 +66,6 @@ export function RunningEventRow({
 
       <div className="running-row__meta">
         <span className="running-row__region">{region}</span>
-        <span className={`running-row__category running-row__category--${category}`}>
-          {categoryLabel}
-        </span>
         <span className="running-row__distance">{distanceLabel ?? `${distance} km`}</span>
       </div>
 
@@ -83,6 +83,13 @@ export function RunningEventRow({
           >
             <span aria-hidden="true">{planned ? "📌" : "📍"}</span>
           </button>
+        )}
+      </div>
+
+      <div className="running-row__bottom">
+        <span className="running-row__date">{formattedDate}</span>
+        {countdown && !isCancelled && (
+          <span className="running-row__countdown">{countdown}</span>
         )}
       </div>
     </Link>
