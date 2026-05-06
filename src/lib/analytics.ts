@@ -1,7 +1,26 @@
 /**
  * Thin typed wrappers around gtag for custom GA4 events.
- * All functions are no-ops if gtag is not loaded (e.g. blocked by an ad-blocker).
+ * All functions are no-ops if gtag is not loaded (e.g. blocked by an ad-blocker)
+ * or if the user has not granted analytics consent.
  */
+
+const STORAGE_KEY = "loypevaer:cookie-consent";
+
+/**
+ * Called once at app start-up to restore a previously stored consent decision
+ * into the GA4 consent state (so returning visitors don't need to re-accept).
+ */
+export function restoreConsentFromStorage(): void {
+  if (typeof gtag === "undefined") return;
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored === "granted" || stored === "denied") {
+      gtag("consent", "update", { analytics_storage: stored });
+    }
+  } catch {
+    // private mode — leave default denied
+  }
+}
 
 function safeGtagEvent(
   eventName: string,

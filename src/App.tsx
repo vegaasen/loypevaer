@@ -6,8 +6,13 @@ import { NavBar } from "./components/NavBar";
 import { SiteFooter } from "./components/SiteFooter";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import { ReloadPrompt } from "./components/ReloadPrompt";
+import { CookieBanner } from "./components/CookieBanner";
 import { usePageTracking } from "./hooks/usePageTracking";
+import { restoreConsentFromStorage } from "./lib/analytics";
 import "./App.css";
+
+// Restore previously stored consent so returning visitors don't lose their choice
+restoreConsentFromStorage();
 
 const EventPage = lazy(() => import("./pages/EventPage").then((m) => ({ default: m.EventPage })));
 const GpxPage = lazy(() => import("./pages/GpxPage").then((m) => ({ default: m.GpxPage })));
@@ -52,6 +57,7 @@ function App() {
           <RouterContent />
         </BrowserRouter>
         <ReloadPrompt />
+        <CookieBanner />
       </QueryClientProvider>
     </ErrorBoundary>
   );
