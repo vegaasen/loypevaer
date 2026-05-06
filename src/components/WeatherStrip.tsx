@@ -12,9 +12,11 @@ type Props = {
   finishTime?: string | null;
   /** Optional pre-fetched results. If provided, skips the internal useWeather call. */
   externalResults?: WeatherResult[];
+  /** Optional callback fired when a waypoint card is clicked. */
+  onWaypointClick?: (waypoint: Waypoint, index: number) => void;
 };
 
-export function WeatherStrip({ waypoints, date, startTime, finishTime, externalResults }: Props) {
+export function WeatherStrip({ waypoints, date, startTime, finishTime, externalResults, onWaypointClick }: Props) {
   const timingActive =
     date != null &&
     startTime != null &&
@@ -56,6 +58,7 @@ export function WeatherStrip({ waypoints, date, startTime, finishTime, externalR
             isError={isError}
             arrivalTime={datetimes ? formatArrivalTime(datetimes[i]) : undefined}
             routeBearing={routeBearingForWaypoint(waypoints, i) ?? undefined}
+            onClick={onWaypointClick ? () => onWaypointClick(waypoint, i) : undefined}
           />
         ))}
       </div>

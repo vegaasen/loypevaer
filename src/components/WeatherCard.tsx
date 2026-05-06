@@ -21,6 +21,8 @@ type Props = {
   arrivalTime?: string;
   /** Route bearing at this waypoint (degrees). Used to classify head/tail/crosswind. */
   routeBearing?: number;
+  /** Optional click handler, e.g. for analytics. */
+  onClick?: () => void;
 };
 
 /** Determines warning CSS modifier classes based on weather thresholds. */
@@ -194,6 +196,7 @@ export const WeatherCard = memo(function WeatherCard({
   isError,
   arrivalTime,
   routeBearing,
+  onClick,
 }: Props) {
   const { label } = waypoint;
 
@@ -203,7 +206,11 @@ export const WeatherCard = memo(function WeatherCard({
       : "";
 
   return (
-    <div className={`weather-card${extraClasses ? " " + extraClasses : ""}`}>
+    <div
+      className={`weather-card${extraClasses ? " " + extraClasses : ""}`}
+      onClick={onClick}
+      style={onClick ? { cursor: "pointer" } : undefined}
+    >
       <div className="weather-card__label">{label}</div>
       {waypoint.altitude != null && (
         <div className="weather-card__altitude">{waypoint.altitude} m o.h.</div>

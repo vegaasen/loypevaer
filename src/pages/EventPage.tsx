@@ -18,6 +18,7 @@ import { calcWaypointTimes, WAYPOINT_FRACTIONS } from "../lib/timing";
 import { isForecastRange } from "../lib/weather";
 import { ShareButton } from "../components/ShareButton";
 import { formatNorwegianDate, parseDateLocal } from "../lib/dates";
+import { trackRaceSelected, trackExternalLinkClick, trackWaypointSelected } from "../lib/analytics";
 
 export function EventPage() {
   const { id } = useParams<{ id: string }>();
@@ -46,6 +47,11 @@ export function EventPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]);
+
+  useEffect(() => {
+    if (!rittData) return;
+    trackRaceSelected(rittData.id, rittData.name, rittData.discipline);
+  }, [rittData?.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Restore saved planned entry when there are no URL params
   const savedEntry = id ? getPlanned(id) : undefined;
@@ -214,6 +220,7 @@ export function EventPage() {
               target="_blank"
               rel="noopener noreferrer"
               className="ritt-page__meta-item ritt-page__meta-link"
+              onClick={() => trackExternalLinkClick(rittData.url!, rittData.name)}
             >
               Offisiell nettside ↗
             </a>
@@ -280,6 +287,9 @@ export function EventPage() {
               startTime={startTime || null}
               finishTime={finishTime || null}
               externalResults={weatherResults}
+              onWaypointClick={(wp, i) =>
+                trackWaypointSelected(rittData.id, wp.label, i)
+              }
             />
           )}
           {!forecastOnly && selectedDate && (
