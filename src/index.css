@@ -730,6 +730,15 @@ code {
     background: var(--accent);
     opacity: 0.5;
   }
+
+  @media (max-width: 600px) {
+    font-size: 11px;
+    letter-spacing: 0.07em;
+
+    &::before, &::after {
+      display: none;
+    }
+  }
 }
 
 .home-page__hero h1 {
