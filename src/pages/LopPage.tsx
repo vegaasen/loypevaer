@@ -56,7 +56,7 @@ export function LopPage() {
   const futureYears = useMemo(() => years.filter((y) => y > currentYear), [years, currentYear]);
 
   const pageTitle = "Løpsvær – Vær for norske løp | Løypevær";
-  const description = `Løypevær gir deg løpsvær og sanntidsvarsler for ${lopingRaces.length} norske løp — 10 km, halvmaraton og maraton. Sjekk temperatur, vind og nedbør langs hele ruten.`;
+  const description = `Sjekk løpsvær for ${lopingRaces.length} norske løp — 10 km, halvmaraton og maraton. Sanntidsvarsler for temperatur, vind og nedbør langs hele ruten, tilpasset din starttid.`;
   const pageUrl = `${SITE_URL}/lop`;
 
   function handleToggle(id: string, officialDate: string, e: React.MouseEvent<HTMLButtonElement>) {
@@ -99,8 +99,8 @@ export function LopPage() {
         <div className="home-page__hero-eyebrow">Løping</div>
         <h1>Sjekk været.<br />Løp forberedt.</h1>
         <p className="home-page__hero-sub">
-          Sanntidsvarsler for hvert nøkkelpunkt langs ruten — kun for løp innenfor
-          16-dagersvinduet. Ingen historikk, bare aktuelt vær.
+          Sjekk temperatur, vind og nedbør langs hele ruten din — sanntidsvarsler for løp
+          innenfor 16 dager. Tilpasset din starttid.
         </p>
         <div className="home-page__hero-stats">
           <span><strong>{lopingRaces.length}</strong> løp</span>

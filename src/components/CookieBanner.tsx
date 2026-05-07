@@ -9,7 +9,7 @@ export function CookieBanner() {
   return (
     <div className="cookie-banner" role="region" aria-label="Informasjonskapsel-samtykke">
       <p className="cookie-banner__text">
-        Vi bruker analyseverktøy for å forstå hvordan siden brukes.{" "}
+        Vi bruker anonyme analysedata for å gjøre siden bedre.{" "}
         <a
           href="https://policies.google.com/privacy"
           target="_blank"

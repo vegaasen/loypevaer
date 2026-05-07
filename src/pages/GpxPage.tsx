@@ -114,7 +114,7 @@ export function GpxPage() {
     <div className="ritt-page">
       <PageMeta
         title="Værvarsеl for din løype – Løypevær"
-        description="Last opp ruten din og få værvarsеl langs hele løypa — fra start til mål."
+        description="Last opp GPX-filen din og få timebasert vær for hvert punkt langs ruten — tilpasset din starttid."
         canonicalUrl="https://www.løypevær.no/gpx"
       />
 
@@ -123,7 +123,7 @@ export function GpxPage() {
       <header className="ritt-page__header">
         <h1>Værvarsеl for din løype</h1>
         <p className="ritt-page__subtitle">
-          Last opp ruten din og se værvarselet langs veien — fra start til mål.
+          Last opp GPX-filen din og få timebasert vær for hvert punkt langs ruten — tilpasset din starttid.
         </p>
       </header>
 

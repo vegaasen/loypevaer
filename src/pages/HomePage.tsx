@@ -17,7 +17,7 @@ type Discipline = "alle" | "landevei" | "terreng" | "langrenn" | "triathlon" | "
 
 export function HomePage() {
   const description =
-    `Løypevær gir deg rittvær og værmelding for ${ritt.length} norske utholdenhetsarrangement — sykkelritt, langrenn, triathlon og ultraløp. Timebasert vær langs hele løypa, tilpasset din starttid.`;
+    `Sjekk rittvær og værvarsler for ${ritt.length} norske utholdenhetsarrangement — sykkelritt, langrenn, triathlon og ultraløp. Se temperatur, vind og nedbør punkt for punkt langs løypa, tilpasset din starttid.`;
 
   const { plannedIds, isPlanned, getPlanned, add, remove } = useMyEvents();
   const { discipline, setDiscipline } = useFilterContext();
@@ -123,14 +123,14 @@ export function HomePage() {
 
       {/* ── Hero ──────────────────────────────────────────────────────── */}
       <section className="home-page__hero">
-        <div className="home-page__hero-eyebrow">Norske utholdenhetsarrangement</div>
+        <div className="home-page__hero-eyebrow">Sykkel · Langrenn · Triathlon · Ultraløp</div>
         <h1>Sjekk været.<br />Kom forberedt til start.</h1>
         <p className="home-page__hero-sub">
-          Timebasert værvarsling og historiske klimasnitt for hvert punkt
-          langs ruten — tilpasset din starttid.
+          Temperaturen på toppen, vinden i motbakkene, nedbøren ved mål —
+          timebasert vær langs hele løypa, tilpasset din starttid.
         </p>
         <a href="#alle-arrangement" className="home-page__hero-cta">
-          Se alle arrangement →
+          Finn ditt arrangement →
         </a>
         <div className="home-page__hero-stats">
           <span><strong>{ritt.length}</strong> arrangement totalt</span>
@@ -147,12 +147,12 @@ export function HomePage() {
 
         <div className="home-page__feature">
           <div className="home-page__feature-text">
-            <div className="home-page__feature-eyebrow">Etappevær</div>
+            <div className="home-page__feature-eyebrow">Punkt for punkt</div>
             <h2>Vær for hele løypa — ikke bare starten</h2>
             <p>
               Vi henter værvarsler for alle nøkkelpunktene langs ruten — start,
               topp, nedstigning og mål. Du ser temperatur, vind og nedbør akkurat der det
-              teller.
+              teller, ikke bare ved startstreken.
             </p>
           </div>
           <div className="home-page__feature-visual">
@@ -173,12 +173,13 @@ export function HomePage() {
 
         <div className="home-page__feature home-page__feature--reverse">
           <div className="home-page__feature-text">
-            <div className="home-page__feature-eyebrow">Historikk + sanntid</div>
-            <h2>Sanntidsvarsel møter historiske data</h2>
+            <div className="home-page__feature-eyebrow">Alltid relevant data</div>
+            <h2>Langt frem i tid? Vi bruker 15 års historikk.</h2>
             <p>
-              Live-varsler direkte fra Open-Meteo for arrangement som nærmer seg. For
-              datoer langt frem i tid bruker vi historiske klimasnitt fra de siste 15
-              årene — samme dato, samme sted. Du vet alltid hva slags vær du kan forvente.
+              Innenfor 16 dager henter vi live-varsler direkte fra Open-Meteo for hvert
+              punkt langs ruten. For arrangement lenger frem i tid bruker vi historiske
+              klimasnitt fra de siste 15 årene — samme dato, samme sted.
+              Du vet alltid hva slags vær du kan forvente.
             </p>
           </div>
           <div className="home-page__feature-visual">
@@ -254,7 +255,7 @@ export function HomePage() {
         </section>
       ) : (
         <p className="home-page__mine-hint">
-          Trykk 📍 på et arrangement for å lagre det under «Mine arrangement».
+          Trykk 📍 på et arrangement for å lagre det her — så finner du det raskt igjen.
         </p>
       )}
 
@@ -333,8 +334,8 @@ export function HomePage() {
           <div className="home-page__feature-eyebrow">Løping</div>
           <h2>Kortere løp fortjener like godt værvarsel.</h2>
           <p>
-            Vi holder også oversikt over kortere løp som Sentrumsløpet og Birkebeinerløpet.
-            Her viser vi kun sanntidsvarsler — ingen historikk, bare aktuelt vær for løpsdagen.
+            Vi holder oversikt over kortere løp som Sentrumsløpet og Birkebeinerløpet.
+            Her viser vi sanntidsvarsler for løpsdagen — temperatur, vind og nedbør der det teller.
           </p>
         </div>
         <Link to="/lop" className="home-page__lop-teaser-btn">
