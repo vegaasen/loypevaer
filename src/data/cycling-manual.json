@@ -1,0 +1,81 @@
+{
+  "note": "Hand-curated cycling events not available via NCF/EQ Timing. Edit this file manually.",
+  "events": [
+    {
+      "id": "sognefjellrittet",
+      "name": "Sognefjellrittet",
+      "discipline": "landevei",
+      "officialDate": "2026-06-20",
+      "officialStartTime": "08:00",
+      "distance": 137,
+      "distanceLabel": "137 km",
+      "elevationGain": 2690,
+      "region": "Vestland",
+      "url": "https://www.jotunheimenrundt.no/sognefjellrittet",
+      "waypoints": [
+        { "label": "Start – Lom", "lat": 61.839, "lon": 8.566, "altitude": 380 },
+        { "label": "25% – Sognefjellet", "lat": 61.633, "lon": 8.05, "altitude": 966 },
+        { "label": "50% – Fortun", "lat": 61.499, "lon": 7.727, "altitude": 394 },
+        { "label": "75% – Luster", "lat": 61.391, "lon": 7.329, "altitude": 21 },
+        { "label": "Mål – Sogndal", "lat": 61.231, "lon": 7.103, "altitude": 13 }
+      ]
+    },
+    {
+      "id": "ultrabirken",
+      "name": "UltraBirken",
+      "discipline": "terreng",
+      "officialDate": "2026-08-29",
+      "officialStartTime": "07:00",
+      "distance": 110,
+      "distanceLabel": "110 km",
+      "elevationGain": 2800,
+      "region": "Innlandet",
+      "url": "https://birken.no/no/sykkel/ultrabirken-sykkel",
+      "waypoints": [
+        { "label": "Start – Pellestova", "lat": 61.247, "lon": 10.419, "altitude": 826 },
+        { "label": "25% – Hita", "lat": 61.383, "lon": 10.559, "altitude": 900 },
+        { "label": "50% – Korsen", "lat": 61.35, "lon": 10.85, "altitude": 820 },
+        { "label": "75% – Elgåsen", "lat": 61.25, "lon": 10.73, "altitude": 760 },
+        { "label": "Mål – Lillehammer", "lat": 61.115, "lon": 10.466, "altitude": 185 }
+      ]
+    },
+    {
+      "id": "halvvatternrundan",
+      "name": "Halvvätternrundan",
+      "discipline": "landevei",
+      "officialDate": "2026-06-13",
+      "officialStartTime": "06:00",
+      "distance": 150,
+      "distanceLabel": "150 km",
+      "elevationGain": 800,
+      "region": "Östergötland",
+      "url": "https://vatternrundan.se",
+      "waypoints": [
+        { "label": "Start/Mål – Motala", "lat": 58.537, "lon": 15.044, "altitude": 90 },
+        { "label": "25% – Karlsborg", "lat": 58.533, "lon": 14.509, "altitude": 95 },
+        { "label": "50% – Hjo", "lat": 58.306, "lon": 14.302, "altitude": 95 },
+        { "label": "75% – Hästholmen", "lat": 58.452, "lon": 14.659, "altitude": 90 },
+        { "label": "Mål – Motala", "lat": 58.537, "lon": 15.044, "altitude": 90 }
+      ]
+    },
+    {
+      "id": "vatternrundan",
+      "name": "Vätternrundan",
+      "discipline": "landevei",
+      "officialDate": "2026-06-13",
+      "officialStartTime": "06:00",
+      "distance": 300,
+      "distanceLabel": "300 km",
+      "elevationGain": 2500,
+      "region": "Östergötland",
+      "url": "https://vatternrundan.se",
+      "waypoints": [
+        { "label": "Start/Mål – Motala", "lat": 58.537, "lon": 15.044, "altitude": 90 },
+        { "label": "25% – Karlsborg", "lat": 58.533, "lon": 14.509, "altitude": 95 },
+        { "label": "50% – Jönköping", "lat": 57.782, "lon": 14.165, "altitude": 95 },
+        { "label": "75% – Vadstena", "lat": 58.449, "lon": 14.891, "altitude": 90 },
+        { "label": "Mål – Motala", "lat": 58.537, "lon": 15.044, "altitude": 90 }
+      ]
+    }
+  ]
+}

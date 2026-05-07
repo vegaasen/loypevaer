@@ -2,22 +2,15 @@ import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { RunningEventRow } from "../components/RunningEventRow";
+import { PageMeta } from "../components/PageMeta";
 import { useMyEvents } from "../hooks/useMyEvents";
 import { allArrangements } from "../lib/arrangements";
 import { SITE_URL } from "../lib/seo";
 import { daysUntil, formatCountdown } from "../lib/dates";
 import { groupByYearMonth } from "../lib/grouping";
+import { monthName } from "../lib/month";
 
 const lopingRaces = allArrangements.filter((r) => r.discipline === "løping");
-
-const MONTH_NAMES = [
-  "Januar", "Februar", "Mars", "April", "Mai", "Juni",
-  "Juli", "August", "September", "Oktober", "November", "Desember",
-];
-
-function monthName(month: number): string {
-  return MONTH_NAMES[month] ?? "";
-}
 
 type DistanceFilter = "alle" | "10k" | "halvmaraton" | "maraton";
 
@@ -78,19 +71,13 @@ export function LopPage() {
 
   return (
     <div className="home-page">
+      <PageMeta
+        title={pageTitle}
+        description={description}
+        canonicalUrl={pageUrl}
+      />
       <Helmet>
-        <title>{pageTitle}</title>
-        <meta name="description" content={description} />
         <meta name="keywords" content="løpsvær, maratonvær, halvmaratonvær, 10 km vær, løp vær Norge, vær løpsdag, norske løp vær" />
-        <link rel="canonical" href={pageUrl} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={description} />
-        <meta property="og:locale" content="nb_NO" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={description} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -155,25 +142,30 @@ export function LopPage() {
               <h2 className="home-page__year-heading">{year}</h2>
               {months.map((month) => (
                 <div key={month} className="home-page__month-section">
-                  <h3 className="home-page__month-heading">{monthName(month)}</h3>
+                  <h3 className="home-page__month-heading">
+                    {monthName(month)}
+                    {byMonth.get(month)!.length > 1 && (
+                      <span className="month-count-badge">{byMonth.get(month)!.length}</span>
+                    )}
+                  </h3>
                   <div className="lop-list">
-                    {byMonth.get(month)!.map((r) => (
-                      <RunningEventRow
-                        key={r.id}
-                        id={r.id}
-                        name={r.name}
-                        officialDate={r.officialDate}
-                        distance={r.distance}
-                        distanceLabel={r.distanceLabel}
-                        region={r.region}
-                        discipline={r.discipline}
-                        countdown={formatCountdown(r.officialDate)}
-                        planned={isPlanned(r.id)}
-                        isPast={daysUntil(r.officialDate) < 0}
-                        dateStatus={r.dateStatus}
-                        onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
-                      />
-                    ))}
+                     {byMonth.get(month)!.map((r) => (
+                       <RunningEventRow
+                         key={r.id}
+                         id={r.id}
+                         name={r.name}
+                         officialDate={r.officialDate}
+                         distance={r.distance}
+                         distanceLabel={r.distanceLabel}
+                         region={r.region}
+                         discipline={r.discipline}
+                         countdown={formatCountdown(r.officialDate)}
+                         planned={isPlanned(r.id)}
+                         isPast={daysUntil(r.officialDate) < 0}
+                         dateStatus={r.dateStatus}
+                         onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
+                       />
+                     ))}
                   </div>
                 </div>
               ))}
@@ -193,7 +185,12 @@ export function LopPage() {
                   <h2 className="home-page__year-heading">{year}</h2>
                   {months.map((month) => (
                     <div key={month} className="home-page__month-section">
-                      <h3 className="home-page__month-heading">{monthName(month)}</h3>
+                      <h3 className="home-page__month-heading">
+                        {monthName(month)}
+                        {byMonth.get(month)!.length > 1 && (
+                          <span className="month-count-badge">{byMonth.get(month)!.length}</span>
+                        )}
+                      </h3>
                       <div className="lop-list">
                         {byMonth.get(month)!.map((r) => (
                           <RunningEventRow

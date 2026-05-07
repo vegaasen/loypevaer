@@ -2,15 +2,19 @@ import type { Waypoint } from "./weather";
 import arrangements from "../data/arrangements.json";
 import triathlonData from "../data/triathlon-events.json";
 import runningData from "../data/running-events.json";
+import cyclingData from "../data/cycling-events.json";
+import cyclingManualData from "../data/cycling-manual.json";
 
-/** All arrangements merged: manually curated + auto-synced triathlon + running events. */
+/** All arrangements merged: manually curated + auto-synced triathlon + running + cycling events. */
 export const allArrangements: RittEntry[] = [
   ...(arrangements as RittEntry[]),
   ...(triathlonData.events as RittEntry[]),
   ...(runningData.events as RittEntry[]),
+  ...(cyclingData.events as RittEntry[]),
+  ...(cyclingManualData.events as RittEntry[]),
 ];
 
-export type Discipline = "landevei" | "terreng" | "langrenn" | "triathlon" | "ultraløp" | "løping";
+export type Discipline = "landevei" | "terreng" | "langrenn" | "triathlon" | "ultraløp" | "løping" | "cx";
 
 export interface RittEntry {
   id: string;

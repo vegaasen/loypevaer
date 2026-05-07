@@ -1,6 +1,5 @@
 import { useState, useCallback } from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import { WeatherStrip } from "../components/WeatherStrip";
 import { EventMap } from "../components/EventMap";
 import { ElevationProfile } from "../components/ElevationProfile";
@@ -8,6 +7,7 @@ import { TimePicker } from "../components/TimePicker";
 import { DatePicker } from "../components/DatePicker";
 import { ErrorBoundary } from "../components/ErrorBoundary";
 import { GpxUploader } from "../components/GpxUploader";
+import { PageMeta } from "../components/PageMeta";
 import {
   parseGpx,
   downsampleGpx,
@@ -16,6 +16,8 @@ import {
   type GpxTrackPoint,
 } from "../lib/gpx";
 import { computeElevationGain } from "../lib/arrangements";
+import type { Discipline } from "../lib/arrangements";
+import { DISCIPLINE_LABEL } from "../lib/disciplines";
 import type { Waypoint } from "../lib/weather";
 
 const TODAY = new Date().toISOString().slice(0, 10);
@@ -44,6 +46,7 @@ export function GpxPage() {
   const [selectedDate, setSelectedDate] = useState<string>(TODAY);
   const [startTime, setStartTime] = useState<string>("");
   const [finishTime, setFinishTime] = useState<string>("");
+  const [discipline, setDiscipline] = useState<Discipline>("landevei");
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -109,10 +112,11 @@ export function GpxPage() {
 
   return (
     <div className="ritt-page">
-      <Helmet>
-        <title>Værvarsеl for din løype – Løypevær</title>
-        <meta name="description" content="Last opp ruten din og få værvarsеl langs hele løypa — fra start til mål." />
-      </Helmet>
+      <PageMeta
+        title="Værvarsеl for din løype – Løypevær"
+        description="Last opp ruten din og få værvarsеl langs hele løypa — fra start til mål."
+        canonicalUrl="https://www.løypevær.no/gpx"
+      />
 
       <Link to="/" className="ritt-page__back-link">← Alle arrangement</Link>
 
@@ -169,8 +173,24 @@ export function GpxPage() {
             <span className="gpx-waypoint-count__value">{waypointCount}</span>
           </div>
 
+          <div className="gpx-discipline">
+            <label htmlFor="gpx-discipline" className="gpx-discipline__label">
+              Aktivitetstype:
+            </label>
+            <select
+              id="gpx-discipline"
+              className="gpx-discipline__select"
+              value={discipline}
+              onChange={(e) => setDiscipline(e.target.value as Discipline)}
+            >
+              {(Object.entries(DISCIPLINE_LABEL) as [Discipline, string][]).map(([value, label]) => (
+                <option key={value} value={value}>{label}</option>
+              ))}
+            </select>
+          </div>
+
           <section className="ritt-page__map-section">
-            <EventMap waypoints={route.waypoints} name={route.name} discipline="landevei" />
+            <EventMap waypoints={route.waypoints} name={route.name} discipline={discipline} />
           </section>
 
           <section className="ritt-page__elevation-section">
@@ -189,6 +209,7 @@ export function GpxPage() {
               onFinishChange={setFinishTime}
               onClear={() => { setStartTime(""); setFinishTime(""); }}
               distanceKm={route.distanceKm}
+              discipline={discipline}
             />
           </section>
 

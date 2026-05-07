@@ -1251,6 +1251,20 @@ code {
   z-index: 10;
   background: var(--bg);
   padding: 8px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.month-count-badge {
+  font-size: 0.7em;
+  font-weight: 500;
+  color: var(--text-muted, #888);
+  background: var(--bg-subtle, rgba(128, 128, 128, 0.12));
+  border-radius: 10px;
+  padding: 1px 7px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
 }
 
 .home-page__grid {

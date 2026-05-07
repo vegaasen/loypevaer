@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { allArrangements } from "../lib/arrangements";
 import { SITE_URL } from "../lib/seo";
+import { PageMeta } from "../components/PageMeta";
 
 const pageUrl = `${SITE_URL}/hva-er-rittvaer`;
 const pageTitle = "Hva er rittvær? – Vær for sykkelritt, triathlon og ultraløp | Løypevær";
@@ -21,22 +22,17 @@ const langrenn = allArrangements.filter((r) => r.discipline === "langrenn").slic
 export function HvaErRittvaerPage() {
   return (
     <div className="home-page">
+      <PageMeta
+        title={pageTitle}
+        description={description}
+        canonicalUrl={pageUrl}
+        ogType="article"
+      />
       <Helmet>
-        <title>{pageTitle}</title>
-        <meta name="description" content={description} />
         <meta
           name="keywords"
           content="rittvær, hva er rittvær, sykkelritt vær, triathlon vær, ultraløp vær, langrenn vær, vær ritt, løpsvær, vær for idrettsarrangement"
         />
-        <link rel="canonical" href={pageUrl} />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={description} />
-        <meta property="og:locale" content="nb_NO" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={description} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

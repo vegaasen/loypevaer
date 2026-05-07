@@ -9,12 +9,13 @@ import { HistoricalWeatherTable } from "../components/HistoricalWeatherTable";
 import { GearSuggestion } from "../components/GearSuggestion";
 import { ElevationProfile } from "../components/ElevationProfile";
 import { ErrorBoundary } from "../components/ErrorBoundary";
+import { PageMeta } from "../components/PageMeta";
 import { computeElevationGain, allArrangements } from "../lib/arrangements";
 import { physicalScore, weatherAdjustment, scoreToLabel } from "../lib/difficulty";
 import { SITE_URL, disciplineToSport, disciplineKeywords, disciplineSeoLabel } from "../lib/seo";
 import { useMyEvents } from "../hooks/useMyEvents";
 import { useWeather } from "../hooks/useWeather";
-import { calcWaypointTimes, WAYPOINT_FRACTIONS } from "../lib/timing";
+import { calcWaypointTimes } from "../lib/timing";
 import { isForecastRange } from "../lib/weather";
 import { ShareButton } from "../components/ShareButton";
 import { formatNorwegianDate, parseDateLocal } from "../lib/dates";
@@ -91,8 +92,14 @@ export function EventPage() {
     startTime !== "" &&
     finishTime !== "";
 
+  const waypointCount = rittData?.waypoints.length ?? 5;
+  const dynamicFractions = Array.from(
+    { length: waypointCount },
+    (_, i) => (waypointCount === 1 ? 0 : i / (waypointCount - 1))
+  );
+
   const datetimes = timingActive
-    ? calcWaypointTimes(selectedDate, startTime, finishTime, [...WAYPOINT_FRACTIONS])
+    ? calcWaypointTimes(selectedDate, startTime, finishTime, dynamicFractions)
     : null;
 
   // useWeather shares query keys with WeatherStrip — TanStack Query deduplicates the fetches
@@ -146,24 +153,18 @@ export function EventPage() {
 
   return (
     <div className="ritt-page">
+      <PageMeta
+        title={pageTitle}
+        description={pageDescription ?? ""}
+        canonicalUrl={pageUrl}
+      />
       <Helmet>
-        <title>{pageTitle}</title>
-        {pageDescription && <meta name="description" content={pageDescription} />}
         {rittData && (
           <meta
             name="keywords"
             content={`${rittData.name.toLowerCase()}, ${rittData.name.toLowerCase()} vær, ${disciplineKeywords(rittData.discipline)}, værmelding ${rittData.region.toLowerCase()}`}
           />
         )}
-        <link rel="canonical" href={pageUrl} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content={pageTitle} />
-        {pageDescription && <meta property="og:description" content={pageDescription} />}
-        <meta property="og:locale" content="nb_NO" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={pageTitle} />
-        {pageDescription && <meta name="twitter:description" content={pageDescription} />}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

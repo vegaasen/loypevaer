@@ -1,0 +1,1568 @@
+{
+  "generatedAt": "2026-05-07T07:48:29.940Z",
+  "source": "eqtiming.com / Norges Cykleforbund (organizationId=13)",
+  "events": [
+    {
+      "id": "byglandsfjorden-rundt",
+      "name": "Byglandsfjorden Rundt 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-05-24",
+      "distance": 80,
+      "distanceLabel": "80 km",
+      "sportLevel": "Tur",
+      "region": "Agder",
+      "url": "https://sykkel.otrail.no/blog/post/143866/byglandsfjorden-rundt-2019?ispage=true",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Evjemoen",
+          "lat": 58.5645946,
+          "lon": 7.7817478
+        }
+      ]
+    },
+    {
+      "id": "ceresrittet-master",
+      "name": "Ceresrittet Master 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-05-10",
+      "distance": 83,
+      "distanceLabel": "83 km",
+      "sportLevel": "MC",
+      "region": "Akershus",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Leirsund",
+          "lat": 59.9999567,
+          "lon": 11.0870456
+        }
+      ]
+    },
+    {
+      "id": "fat-viking",
+      "name": "Fat Viking 2026",
+      "discipline": "terreng",
+      "officialDate": "2026-01-24",
+      "distance": 50,
+      "distanceLabel": "50 km",
+      "sportLevel": "Tur",
+      "region": "Buskerud",
+      "url": "https://www.fat-viking.com/en",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Geilo",
+          "lat": 60.5337182,
+          "lon": 8.2089732
+        }
+      ]
+    },
+    {
+      "id": "enebakk-rundt",
+      "name": "Enebakk Rundt 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-05-01",
+      "distance": 83,
+      "distanceLabel": "83 km",
+      "sportLevel": "Tur",
+      "region": "Oslo",
+      "url": "https://www.ikhero.no/services",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Oslo",
+          "lat": 59.9133301,
+          "lon": 10.7389701
+        }
+      ]
+    },
+    {
+      "id": "styrkeproven-trondheim-lillehammer-eidsvoll-oslo",
+      "name": "Styrkeprøven Trondheim/Lillehammer/Eidsvoll - Oslo 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-06-20",
+      "distance": 180,
+      "distanceLabel": "180 km",
+      "sportLevel": "Tur",
+      "region": "Trøndelag",
+      "url": "https://styrkeproven.no/",
+      "waypoints": [
+        {
+          "label": "Start – Trondheim",
+          "lat": 63.431,
+          "lon": 10.395,
+          "altitude": 10
+        },
+        {
+          "label": "25% – Støren",
+          "lat": 62.966,
+          "lon": 10.297,
+          "altitude": 50
+        },
+        {
+          "label": "50% – Røros",
+          "lat": 62.574,
+          "lon": 11.386,
+          "altitude": 628
+        },
+        {
+          "label": "75% – Alvdal",
+          "lat": 62.115,
+          "lon": 10.626,
+          "altitude": 480
+        },
+        {
+          "label": "Mål – Lillehammer",
+          "lat": 61.115,
+          "lon": 10.466,
+          "altitude": 185
+        }
+      ]
+    },
+    {
+      "id": "tyrifjorden-rundt",
+      "name": "Tyrifjorden Rundt 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-06-07",
+      "distance": 145,
+      "distanceLabel": "145 km",
+      "sportLevel": "Tur",
+      "region": "Norge",
+      "url": "http://www.tyrifjordenrundt.no/",
+      "waypoints": [
+        {
+          "label": "Start – Sandvika",
+          "lat": 59.89,
+          "lon": 10.5231,
+          "altitude": 10
+        },
+        {
+          "label": "25% – Krokkleiva",
+          "lat": 60.0418,
+          "lon": 10.29,
+          "altitude": 310
+        },
+        {
+          "label": "50% – Jevnaker",
+          "lat": 60.233,
+          "lon": 10.2265,
+          "altitude": 130
+        },
+        {
+          "label": "75% – Vikersund",
+          "lat": 59.987,
+          "lon": 10.0462,
+          "altitude": 95
+        },
+        {
+          "label": "Mål – Sandvika",
+          "lat": 59.89,
+          "lon": 10.5231,
+          "altitude": 10
+        }
+      ]
+    },
+    {
+      "id": "bergen-voss",
+      "name": "Bergen-Voss 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-06-06",
+      "distance": 78,
+      "distanceLabel": "78 km",
+      "sportLevel": "Tur",
+      "region": "Vestland",
+      "url": "www.bergenvoss.no",
+      "waypoints": [
+        {
+          "label": "Start – Bergen (Bryggen)",
+          "lat": 60.3929,
+          "lon": 5.3241,
+          "altitude": 5
+        },
+        {
+          "label": "25% – Arna",
+          "lat": 60.4243,
+          "lon": 5.4738,
+          "altitude": 80
+        },
+        {
+          "label": "50% – Stanghelle",
+          "lat": 60.5647,
+          "lon": 5.8532,
+          "altitude": 40
+        },
+        {
+          "label": "75% – Dale",
+          "lat": 60.5869,
+          "lon": 6.0986,
+          "altitude": 55
+        },
+        {
+          "label": "Mål – Voss",
+          "lat": 60.6282,
+          "lon": 6.4169,
+          "altitude": 56
+        }
+      ]
+    },
+    {
+      "id": "midnattsolrittet",
+      "name": "Midnattsolrittet 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-06-20",
+      "distance": 46,
+      "distanceLabel": "46 km",
+      "sportLevel": "Tur",
+      "region": "Norge",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start – midnattsolrittet",
+          "lat": 66.873,
+          "lon": 13.706,
+          "altitude": 0
+        },
+        {
+          "label": "25%",
+          "lat": 66.948,
+          "lon": 13.904,
+          "altitude": 10
+        },
+        {
+          "label": "50%",
+          "lat": 67.006,
+          "lon": 14.231,
+          "altitude": 37
+        },
+        {
+          "label": "75%",
+          "lat": 67.159,
+          "lon": 14.417,
+          "altitude": 187
+        },
+        {
+          "label": "Mål – midnattsolrittet",
+          "lat": 67.236,
+          "lon": 14.617,
+          "altitude": 24
+        }
+      ]
+    },
+    {
+      "id": "tour-de-lyngen",
+      "name": "Tour de Lyngen 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-06-13",
+      "distance": 94,
+      "distanceLabel": "94 km",
+      "sportLevel": "Tur",
+      "region": "Troms",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start – Jægervatnet/Lyngen",
+          "lat": 69.65,
+          "lon": 20.097,
+          "altitude": 50
+        },
+        {
+          "label": "25% – Nord Lyngen",
+          "lat": 70.03,
+          "lon": 20.6,
+          "altitude": 50
+        },
+        {
+          "label": "50% – Furuflaten/Kåfjord",
+          "lat": 69.835,
+          "lon": 20.02,
+          "altitude": 30
+        },
+        {
+          "label": "75% – Lyngseidet",
+          "lat": 69.582,
+          "lon": 20.224,
+          "altitude": 10
+        },
+        {
+          "label": "Mål – Jægervatnet",
+          "lat": 69.65,
+          "lon": 20.097,
+          "altitude": 50
+        }
+      ]
+    },
+    {
+      "id": "valdresrittet-20ars-jubileum",
+      "name": "Valdresrittet 20års jubileum 2026",
+      "discipline": "terreng",
+      "officialDate": "2026-07-18",
+      "distance": 54,
+      "distanceLabel": "54 km",
+      "sportLevel": "Reg",
+      "region": "Norge",
+      "url": "www.valdrestrippelen.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Vaset stadion",
+          "lat": 60.9929331,
+          "lon": 8.9708557
+        }
+      ]
+    },
+    {
+      "id": "jotunheimen-rundt-sognefjellrittet-av-sogn-ck",
+      "name": "Jotunheimen Rundt/Sognefjellrittet av Sogn CK 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-06-19",
+      "distance": 430,
+      "distanceLabel": "430 km",
+      "sportLevel": "Tur",
+      "region": "Norge",
+      "url": "https://www.facebook.com/JotunheimenRundt",
+      "waypoints": [
+        {
+          "label": "Start – Lærdal",
+          "lat": 61.099,
+          "lon": 7.477,
+          "altitude": 50
+        },
+        {
+          "label": "25% – Fagernes",
+          "lat": 60.989,
+          "lon": 9.233,
+          "altitude": 300
+        },
+        {
+          "label": "50% – Beitostølen",
+          "lat": 61.257,
+          "lon": 8.907,
+          "altitude": 900
+        },
+        {
+          "label": "75% – Lom / Sognefjell",
+          "lat": 61.838,
+          "lon": 8.566,
+          "altitude": 1440
+        },
+        {
+          "label": "Mål – Sogndal",
+          "lat": 61.229,
+          "lon": 7.1,
+          "altitude": 10
+        }
+      ]
+    },
+    {
+      "id": "color-line-tour",
+      "name": "Color Line Tour 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-05-30",
+      "distance": 210,
+      "distanceLabel": "210 km",
+      "sportLevel": "Tur",
+      "region": "Agder",
+      "url": "www.colorlinetour.no",
+      "waypoints": [
+        {
+          "label": "Start – Kristiansand",
+          "lat": 58.1467,
+          "lon": 7.9956,
+          "altitude": 10
+        },
+        {
+          "label": "25% – Evje",
+          "lat": 58.5876,
+          "lon": 7.8058,
+          "altitude": 115
+        },
+        {
+          "label": "50% – Valle",
+          "lat": 59.205,
+          "lon": 7.5338,
+          "altitude": 235
+        },
+        {
+          "label": "75% – Bykle",
+          "lat": 59.3878,
+          "lon": 7.356,
+          "altitude": 625
+        },
+        {
+          "label": "Mål – Hovden",
+          "lat": 59.5465,
+          "lon": 7.3753,
+          "altitude": 930
+        }
+      ]
+    },
+    {
+      "id": "nordhordland-rundt",
+      "name": "Nordhordland Rundt 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-05-10",
+      "distance": 87,
+      "distanceLabel": "87 km",
+      "sportLevel": "Tur",
+      "region": "Vestland",
+      "url": "www.nordhordlandsk.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Alversund ",
+          "lat": 60.5711002,
+          "lon": 5.2347922
+        }
+      ]
+    },
+    {
+      "id": "nordmarka-rundt",
+      "name": "Nordmarka Rundt 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-05-24",
+      "distance": 148,
+      "distanceLabel": "148 km",
+      "sportLevel": "Tur",
+      "region": "Oslo",
+      "url": "http://www.nordmarkarundt.no/",
+      "waypoints": [
+        {
+          "label": "Start – Årvoll, Oslo",
+          "lat": 59.9531,
+          "lon": 10.8193,
+          "altitude": 155
+        },
+        {
+          "label": "25% – Hakadal",
+          "lat": 60.0945,
+          "lon": 10.8432,
+          "altitude": 210
+        },
+        {
+          "label": "50% – Harestua (Nordmarka vest)",
+          "lat": 60.2135,
+          "lon": 10.536,
+          "altitude": 355
+        },
+        {
+          "label": "75% – Lommedalen",
+          "lat": 59.998,
+          "lon": 10.4825,
+          "altitude": 180
+        },
+        {
+          "label": "Mål – Årvoll, Oslo",
+          "lat": 59.9531,
+          "lon": 10.8193,
+          "altitude": 155
+        }
+      ]
+    },
+    {
+      "id": "birkebeinerrittet",
+      "name": "Birkebeinerrittet 2026",
+      "discipline": "terreng",
+      "officialDate": "2026-08-29",
+      "distance": 92,
+      "distanceLabel": "92 km",
+      "sportLevel": "Tur",
+      "region": "Innlandet",
+      "url": "https://www.birkebeiner.no",
+      "waypoints": [
+        {
+          "label": "Start – Rena",
+          "lat": 61.133,
+          "lon": 11.377,
+          "altitude": 256
+        },
+        {
+          "label": "25% – Høsbjør",
+          "lat": 61.05,
+          "lon": 11.12,
+          "altitude": 620
+        },
+        {
+          "label": "50% – Sjusjøen",
+          "lat": 61.248,
+          "lon": 10.578,
+          "altitude": 900
+        },
+        {
+          "label": "75% – Nordseter",
+          "lat": 61.18,
+          "lon": 10.5,
+          "altitude": 710
+        },
+        {
+          "label": "Mål – Lillehammer",
+          "lat": 61.115,
+          "lon": 10.466,
+          "altitude": 185
+        }
+      ]
+    },
+    {
+      "id": "birkebeinerrittet-elite",
+      "name": "Birkebeinerrittet Elite 2026",
+      "discipline": "terreng",
+      "officialDate": "2026-08-29",
+      "distance": 92,
+      "distanceLabel": "92 km",
+      "sportLevel": "Reg",
+      "region": "Innlandet",
+      "url": "https://www.birkebeiner.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Rena",
+          "lat": 61.1327634,
+          "lon": 11.3721973
+        }
+      ]
+    },
+    {
+      "id": "gravelbirken",
+      "name": "GravelBirken 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-08-29",
+      "distance": 92,
+      "distanceLabel": "92 km",
+      "sportLevel": "Tur",
+      "region": "Innlandet",
+      "url": "https://www.birkebeiner.no",
+      "waypoints": [
+        {
+          "label": "Start – Rena",
+          "lat": 61.1367,
+          "lon": 11.3745,
+          "altitude": 252
+        },
+        {
+          "label": "25% – Åsta",
+          "lat": 61.1805,
+          "lon": 11.158,
+          "altitude": 480
+        },
+        {
+          "label": "50% – Sjusjøen (plateau)",
+          "lat": 61.2203,
+          "lon": 10.955,
+          "altitude": 890
+        },
+        {
+          "label": "75% – Nevelfjell",
+          "lat": 61.2012,
+          "lon": 10.758,
+          "altitude": 820
+        },
+        {
+          "label": "Mål – Lillehammer",
+          "lat": 61.1153,
+          "lon": 10.4663,
+          "altitude": 185
+        }
+      ]
+    },
+    {
+      "id": "halvbirken-sykkel",
+      "name": "HalvBirken Sykkel 2026",
+      "discipline": "terreng",
+      "officialDate": "2026-08-29",
+      "distance": 92,
+      "distanceLabel": "92 km",
+      "sportLevel": "Tur",
+      "region": "Innlandet",
+      "url": "https://www.birkebeiner.no",
+      "waypoints": [
+        {
+          "label": "Start – Sjusjøen",
+          "lat": 61.2203,
+          "lon": 10.955,
+          "altitude": 870
+        },
+        {
+          "label": "25% – Nevelfjell",
+          "lat": 61.198,
+          "lon": 10.84,
+          "altitude": 820
+        },
+        {
+          "label": "50% – Fåberg skog",
+          "lat": 61.165,
+          "lon": 10.701,
+          "altitude": 500
+        },
+        {
+          "label": "75% – Vingrom",
+          "lat": 61.135,
+          "lon": 10.568,
+          "altitude": 260
+        },
+        {
+          "label": "Mål – Lillehammer",
+          "lat": 61.1153,
+          "lon": 10.4663,
+          "altitude": 185
+        }
+      ]
+    },
+    {
+      "id": "jaeren-gran-fondo",
+      "name": "Jæren Gran Fondo 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-04-11",
+      "distance": 100,
+      "distanceLabel": "100 km",
+      "sportLevel": "Trim",
+      "region": "Norge",
+      "url": "https://gran-fondo.no/index.php",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Sandnes (Modena Fliser)",
+          "lat": 58.8552544,
+          "lon": 5.7075943
+        }
+      ]
+    },
+    {
+      "id": "birkenesrunden",
+      "name": "Birkenesrunden 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-06-21",
+      "distance": 92,
+      "distanceLabel": "92 km",
+      "sportLevel": "Tur",
+      "region": "Agder",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Birkenesparken",
+          "lat": 58.3347296,
+          "lon": 8.2296328
+        }
+      ]
+    },
+    {
+      "id": "smaalenene-rundt",
+      "name": "Smaalenene Rundt 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-04-26",
+      "distance": 85,
+      "distanceLabel": "85 km",
+      "sportLevel": "Tur",
+      "region": "Østfold",
+      "url": "https://www.facebook.com/share/VqLijkUQyhQzTw5M/?",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Korsgård skole",
+          "lat": 59.5887939,
+          "lon": 11.1964899
+        }
+      ]
+    },
+    {
+      "id": "randsfjorden-rundt",
+      "name": "Randsfjorden Rundt 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-05-30",
+      "distance": 152,
+      "distanceLabel": "152 km",
+      "sportLevel": "Tur",
+      "region": "Innlandet",
+      "url": "http://www.randsfjordenrundt.no/",
+      "waypoints": [
+        {
+          "label": "Start – Brandbu",
+          "lat": 60.432,
+          "lon": 10.508,
+          "altitude": 195
+        },
+        {
+          "label": "25% – Grua",
+          "lat": 60.568,
+          "lon": 10.356,
+          "altitude": 215
+        },
+        {
+          "label": "50% – Dokka",
+          "lat": 60.828,
+          "lon": 10.068,
+          "altitude": 160
+        },
+        {
+          "label": "75% – Odnes/Skreia",
+          "lat": 60.65,
+          "lon": 10.287,
+          "altitude": 165
+        },
+        {
+          "label": "Mål – Brandbu",
+          "lat": 60.432,
+          "lon": 10.508,
+          "altitude": 195
+        }
+      ]
+    },
+    {
+      "id": "haugesund-sauda",
+      "name": "Haugesund-Sauda 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-05-30",
+      "distance": 107,
+      "distanceLabel": "107 km",
+      "sportLevel": "Tur",
+      "region": "Rogaland",
+      "url": "https://saudask.no/",
+      "waypoints": [
+        {
+          "label": "Start – Haugesund",
+          "lat": 59.413,
+          "lon": 5.268,
+          "altitude": 15
+        },
+        {
+          "label": "25% – Aksdal",
+          "lat": 59.494,
+          "lon": 5.676,
+          "altitude": 20
+        },
+        {
+          "label": "50% – Etne",
+          "lat": 59.666,
+          "lon": 5.98,
+          "altitude": 30
+        },
+        {
+          "label": "75% – Nesflaten/Saudafjord",
+          "lat": 59.771,
+          "lon": 6.351,
+          "altitude": 30
+        },
+        {
+          "label": "Mål – Sauda",
+          "lat": 59.65,
+          "lon": 6.356,
+          "altitude": 30
+        }
+      ]
+    },
+    {
+      "id": "ringerike-grand-prix",
+      "name": "Ringerike Grand Prix 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-05-10",
+      "distance": 171.6,
+      "distanceLabel": "171.6 km",
+      "sportLevel": "UCI",
+      "region": "Buskerud",
+      "url": " ",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Hønefoss",
+          "lat": 60.1662082,
+          "lon": 10.255486
+        }
+      ]
+    },
+    {
+      "id": "hamarrittet",
+      "name": "Hamarrittet 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-05-12",
+      "distance": 45,
+      "distanceLabel": "45 km",
+      "sportLevel": "Tur",
+      "region": "Innlandet",
+      "url": " ",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Stange kirke",
+          "lat": 60.7097997,
+          "lon": 11.1359455
+        }
+      ]
+    },
+    {
+      "id": "ceresrittet-tur",
+      "name": "Ceresrittet Tur 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-05-10",
+      "distance": 83,
+      "distanceLabel": "83 km",
+      "sportLevel": "Tur",
+      "region": "Akershus",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Leirsund",
+          "lat": 59.9999567,
+          "lon": 11.0870456
+        }
+      ]
+    },
+    {
+      "id": "l-etape-trondheim-by-tour-de-france",
+      "name": "L'etape Trondheim by Tour de France",
+      "discipline": "landevei",
+      "officialDate": "2026-06-13",
+      "distance": 130,
+      "distanceLabel": "130 km",
+      "sportLevel": "Tur",
+      "region": "Trøndelag",
+      "url": "https://trondheim.letapeseries.com/",
+      "waypoints": [
+        {
+          "label": "Start – Trondheim",
+          "lat": 63.4305,
+          "lon": 10.3951,
+          "altitude": 5
+        },
+        {
+          "label": "25% – Klæbu",
+          "lat": 63.3612,
+          "lon": 10.4863,
+          "altitude": 280
+        },
+        {
+          "label": "50% – Støren",
+          "lat": 63.0553,
+          "lon": 10.2985,
+          "altitude": 90
+        },
+        {
+          "label": "75% – Melhus",
+          "lat": 63.2783,
+          "lon": 10.2833,
+          "altitude": 60
+        },
+        {
+          "label": "Mål – Trondheim",
+          "lat": 63.4305,
+          "lon": 10.3951,
+          "altitude": 5
+        }
+      ]
+    },
+    {
+      "id": "ryfylkerittet",
+      "name": "Ryfylkerittet 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-09-05",
+      "distance": 56,
+      "distanceLabel": "56 km",
+      "sportLevel": "Tur",
+      "region": "Rogaland",
+      "url": "http://ryfylkesykkelklubb.no/informasjon-om-ryfylkerittet/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Jørpeland",
+          "lat": 59.0208917,
+          "lon": 6.0393553
+        }
+      ]
+    },
+    {
+      "id": "atlantic-gravel",
+      "name": "Atlantic Gravel 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-07-12",
+      "distance": 85,
+      "distanceLabel": "85 km",
+      "sportLevel": "Trim",
+      "region": "Møre og Romsdal",
+      "url": "atlanticgravel.com",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Bud, Hustadvika",
+          "lat": 62.9072555,
+          "lon": 6.9140743
+        }
+      ]
+    },
+    {
+      "id": "herefoss-rundt",
+      "name": "Herefoss Rundt 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-05-10",
+      "distance": 90,
+      "distanceLabel": "90 km",
+      "sportLevel": "Tur",
+      "region": "Oslo",
+      "url": "www.arendalcc.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Arendal",
+          "lat": 58.4652,
+          "lon": 8.7098,
+          "altitude": 49
+        },
+        {
+          "label": "Froland",
+          "lat": 58.396,
+          "lon": 8.456,
+          "altitude": 156
+        },
+        {
+          "label": "Birkenes",
+          "lat": 58.612,
+          "lon": 8.4,
+          "altitude": 131
+        },
+        {
+          "label": "Herefoss",
+          "lat": 58.715,
+          "lon": 8.303,
+          "altitude": 127
+        },
+        {
+          "label": "Vegårshei-retur",
+          "lat": 58.637,
+          "lon": 8.354,
+          "altitude": 130
+        }
+      ]
+    },
+    {
+      "id": "dalane-rundt",
+      "name": "Dalane Rundt 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-09-20",
+      "distance": 70,
+      "distanceLabel": "70 km",
+      "sportLevel": "Tur",
+      "region": "Rogaland",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Egersund",
+          "lat": 58.4515121,
+          "lon": 6.0007554
+        }
+      ]
+    },
+    {
+      "id": "lillehammer-sykkelfestival-2026-sondag",
+      "name": "Lillehammer Sykkelfestival 2026, søndag",
+      "discipline": "landevei",
+      "officialDate": "2026-09-13",
+      "distance": 60.2,
+      "distanceLabel": "60.2 km",
+      "sportLevel": "NC",
+      "region": "Innlandet",
+      "url": "https://lillehammerck.no/lillehammer-petit-prix/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Tingberg, Øyer",
+          "lat": 61.2651046,
+          "lon": 10.4144342
+        }
+      ]
+    },
+    {
+      "id": "spenst-skjebergrittet",
+      "name": "Spenst Skjebergrittet 2026",
+      "discipline": "terreng",
+      "officialDate": "2026-06-20",
+      "distance": 65,
+      "distanceLabel": "65 km",
+      "sportLevel": "NC",
+      "region": "Østfold",
+      "url": "https://www.skjebergrittet.no",
+      "waypoints": [
+        {
+          "label": "Start – Skjeberg",
+          "lat": 59.273,
+          "lon": 11.183,
+          "altitude": 65
+        },
+        {
+          "label": "25% – Tune singletrack",
+          "lat": 59.288,
+          "lon": 11.115,
+          "altitude": 80
+        },
+        {
+          "label": "50% – Hafslund skog",
+          "lat": 59.234,
+          "lon": 11.101,
+          "altitude": 50
+        },
+        {
+          "label": "75% – Retur",
+          "lat": 59.265,
+          "lon": 11.22,
+          "altitude": 75
+        },
+        {
+          "label": "Mål – Skjeberg",
+          "lat": 59.273,
+          "lon": 11.183,
+          "altitude": 65
+        }
+      ]
+    },
+    {
+      "id": "reistadrittet",
+      "name": "Reistadrittet 2026",
+      "discipline": "terreng",
+      "officialDate": "2026-06-27",
+      "distance": 60,
+      "distanceLabel": "60 km",
+      "sportLevel": "Tur",
+      "region": "Troms",
+      "url": "www.reistadrittet.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Setermoen",
+          "lat": 68.8609408,
+          "lon": 18.3482428
+        }
+      ]
+    },
+    {
+      "id": "reistadgravel-100",
+      "name": "Reistadgravel 100",
+      "discipline": "landevei",
+      "officialDate": "2026-06-28",
+      "distance": 70,
+      "distanceLabel": "70 km",
+      "sportLevel": "Trim",
+      "region": "Troms",
+      "url": " ",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Setermoen",
+          "lat": 68.8609408,
+          "lon": 18.3482428
+        }
+      ]
+    },
+    {
+      "id": "uno-x-norgesup-gylne-gutuer",
+      "name": "Uno-X Norgesup Gylne gutuer 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-05-03",
+      "distance": 100,
+      "distanceLabel": "100 km",
+      "sportLevel": "NC",
+      "region": "Innlandet",
+      "url": " ",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Romedal",
+          "lat": 60.7371579,
+          "lon": 11.2916086
+        }
+      ]
+    },
+    {
+      "id": "sparebanken-norge-kermesse-ritt-1",
+      "name": "Sparebanken Norge - Kermesse ritt 1",
+      "discipline": "landevei",
+      "officialDate": "2026-04-19",
+      "distance": 75,
+      "distanceLabel": "75 km",
+      "sportLevel": "Reg",
+      "region": "Rogaland",
+      "url": "https://sandnessk.spond.club/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Orrehallen, Pollestad",
+          "lat": 58.718399,
+          "lon": 5.5708208
+        }
+      ]
+    },
+    {
+      "id": "alesundsrittet",
+      "name": "Ålesundsrittet 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-05-25",
+      "distance": 94,
+      "distanceLabel": "94 km",
+      "sportLevel": "Tur",
+      "region": "Møre og Romsdal",
+      "url": "https://www.facebook.com/groups/AalesundOCK",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Ålesund",
+          "lat": 62.4802364,
+          "lon": 6.5550739
+        }
+      ]
+    },
+    {
+      "id": "follorittet-2026-mastercup-og-turritt",
+      "name": "Follorittet 2026 Mastercup og Turritt",
+      "discipline": "landevei",
+      "officialDate": "2026-05-10",
+      "distance": 68,
+      "distanceLabel": "68 km",
+      "sportLevel": "MC",
+      "region": "Akershus",
+      "url": "www.follorittet.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Ski Næringspark",
+          "lat": 59.7168604,
+          "lon": 10.8654252
+        }
+      ]
+    },
+    {
+      "id": "bukkene-bruse",
+      "name": "Bukkene Bruse 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-06-07",
+      "distance": 77,
+      "distanceLabel": "77 km",
+      "sportLevel": "Tur",
+      "region": "Agder",
+      "url": "http://www.grimstadsk.no/p/20407/bukkene-bruse",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Grimstad",
+          "lat": 58.2839967,
+          "lon": 8.7128291
+        }
+      ]
+    },
+    {
+      "id": "tysvaerrittet",
+      "name": "Tysværrittet - 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-08-23",
+      "distance": 76,
+      "distanceLabel": "76 km",
+      "sportLevel": "Tur",
+      "region": "Rogaland",
+      "url": "https://www.ckh.no/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Tysværvåg",
+          "lat": 59.32349942,
+          "lon": 5.48129614
+        }
+      ]
+    },
+    {
+      "id": "finnskogkureren",
+      "name": "Finnskogkureren 2026",
+      "discipline": "terreng",
+      "officialDate": "2026-06-06",
+      "distance": 48,
+      "distanceLabel": "48 km",
+      "sportLevel": "Reg",
+      "region": "Innlandet",
+      "url": "finnskogkureren.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Lunderseter",
+          "lat": 60.2969423,
+          "lon": 12.2723937
+        }
+      ]
+    },
+    {
+      "id": "skjaergardsrittet",
+      "name": "Skjærgårdsrittet 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-05-31",
+      "distance": 75,
+      "distanceLabel": "75 km",
+      "sportLevel": "Tur",
+      "region": "Vestland",
+      "url": "http://www.cksotra.no/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Sotra",
+          "lat": 60.315733,
+          "lon": 5.1011699
+        }
+      ]
+    },
+    {
+      "id": "styggmannen-gravel-og-terrengritt",
+      "name": "Styggmannen, gravel og terrengritt 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-08-22",
+      "distance": 63.9,
+      "distanceLabel": "63.9 km",
+      "sportLevel": "Tur",
+      "region": "Telemark",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Skien",
+          "lat": 59.2662883,
+          "lon": 9.5311354
+        }
+      ]
+    },
+    {
+      "id": "oyungen-rundt",
+      "name": "Øyungen Rundt 2026",
+      "discipline": "terreng",
+      "officialDate": "2026-07-25",
+      "distance": 45,
+      "distanceLabel": "45 km",
+      "sportLevel": "Tur",
+      "region": "Trøndelag",
+      "url": "http://hessdalenil.no/",
+      "waypoints": [
+        {
+          "label": "Start – Hessdalen",
+          "lat": 62.867,
+          "lon": 11.183,
+          "altitude": 600
+        },
+        {
+          "label": "25% – Nord dalen",
+          "lat": 62.927,
+          "lon": 11.197,
+          "altitude": 620
+        },
+        {
+          "label": "50% – Øyungen øst",
+          "lat": 62.883,
+          "lon": 11.317,
+          "altitude": 640
+        },
+        {
+          "label": "75% – Sør retur",
+          "lat": 62.83,
+          "lon": 11.207,
+          "altitude": 610
+        },
+        {
+          "label": "Mål – Hessdalen",
+          "lat": 62.867,
+          "lon": 11.183,
+          "altitude": 600
+        }
+      ]
+    },
+    {
+      "id": "arctic-alta-fatbikerace",
+      "name": "Arctic Alta Fatbikerace 2027",
+      "discipline": "terreng",
+      "officialDate": "2027-02-21",
+      "distance": 46,
+      "distanceLabel": "46 km",
+      "sportLevel": "Tur",
+      "region": "Finnmark",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Alta",
+          "lat": 69.9666046,
+          "lon": 23.2733282
+        }
+      ]
+    },
+    {
+      "id": "spinnsprinten",
+      "name": "Spinnsprinten 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-04-26",
+      "distance": 45,
+      "distanceLabel": "45 km",
+      "sportLevel": "Tur",
+      "region": "Rogaland",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Vestly",
+          "lat": 58.7290674,
+          "lon": 5.71071
+        }
+      ]
+    },
+    {
+      "id": "garborgriket-rundt",
+      "name": "Garborgriket Rundt",
+      "discipline": "terreng",
+      "officialDate": "2026-05-10",
+      "distance": 70,
+      "distanceLabel": "70 km",
+      "sportLevel": "Tur",
+      "region": "Rogaland",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start – Vestly/Jæren",
+          "lat": 58.737,
+          "lon": 5.698,
+          "altitude": 20
+        },
+        {
+          "label": "25% – Nærbø",
+          "lat": 58.668,
+          "lon": 5.651,
+          "altitude": 25
+        },
+        {
+          "label": "50% – Vigrestad",
+          "lat": 58.561,
+          "lon": 5.687,
+          "altitude": 30
+        },
+        {
+          "label": "75% – Klepp",
+          "lat": 58.777,
+          "lon": 5.632,
+          "altitude": 30
+        },
+        {
+          "label": "Mål – Vestly",
+          "lat": 58.737,
+          "lon": 5.698,
+          "altitude": 20
+        }
+      ]
+    },
+    {
+      "id": "lysebotn-bryne-rittet",
+      "name": "Lysebotn - Bryne Rittet",
+      "discipline": "landevei",
+      "officialDate": "2026-08-15",
+      "distance": 147,
+      "distanceLabel": "147 km",
+      "sportLevel": "Tur",
+      "region": "Rogaland",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start – Lysebotn",
+          "lat": 59.058,
+          "lon": 6.647,
+          "altitude": 0
+        },
+        {
+          "label": "25% – Platå V for Sirdal",
+          "lat": 58.98,
+          "lon": 6.2,
+          "altitude": 650
+        },
+        {
+          "label": "50% – Gjesdal/Ålgård",
+          "lat": 58.773,
+          "lon": 5.813,
+          "altitude": 100
+        },
+        {
+          "label": "75% – Sandnes/Jæren",
+          "lat": 58.756,
+          "lon": 5.713,
+          "altitude": 30
+        },
+        {
+          "label": "Mål – Vestly/Bryne",
+          "lat": 58.736,
+          "lon": 5.697,
+          "altitude": 20
+        }
+      ]
+    },
+    {
+      "id": "sirdal-bryne-rittet",
+      "name": "Sirdal - Bryne Rittet",
+      "discipline": "landevei",
+      "officialDate": "2026-08-15",
+      "distance": 101,
+      "distanceLabel": "101 km",
+      "sportLevel": "Tur",
+      "region": "Rogaland",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Vestly",
+          "lat": 58.7290674,
+          "lon": 5.71071
+        }
+      ]
+    },
+    {
+      "id": "arn-challenge",
+      "name": "ARN Challenge 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-08-15",
+      "distance": 76,
+      "distanceLabel": "76 km",
+      "sportLevel": "Tur",
+      "region": "Nordland",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Stokmarknes",
+          "lat": 68.5670003,
+          "lon": 14.9133484
+        }
+      ]
+    },
+    {
+      "id": "uno-x-noregskopp-voss-3-etappars-bomoen-fellesstart",
+      "name": "Uno-X Noregskøpp: Voss 3-etappars, Bømoen fellesstart",
+      "discipline": "landevei",
+      "officialDate": "2026-08-09",
+      "distance": 100,
+      "distanceLabel": "100 km",
+      "sportLevel": "NC",
+      "region": "Nordland",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Bømoen",
+          "lat": 68.38465,
+          "lon": 16.8869723
+        }
+      ]
+    },
+    {
+      "id": "master-nm-fellesstart",
+      "name": "Master NM Fellesstart 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-06-28",
+      "distance": 50,
+      "distanceLabel": "50 km",
+      "sportLevel": "NM",
+      "region": "Trøndelag",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Trondheim",
+          "lat": 63.4304475,
+          "lon": 10.3952118
+        }
+      ]
+    },
+    {
+      "id": "ullensaker-rundt",
+      "name": "Ullensaker Rundt 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-09-13",
+      "distance": 62,
+      "distanceLabel": "62 km",
+      "sportLevel": "Tur",
+      "region": "Norge",
+      "url": "http://www.uck.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Anna Willersrudsveg, Nordkisa",
+          "lat": 60.19146276,
+          "lon": 11.25806808
+        }
+      ]
+    },
+    {
+      "id": "trysil-knut-rittet-og-osensjoen-rundt-gravel",
+      "name": "Trysil-Knut rittet og Osensjøen Rundt Gravel 2026",
+      "discipline": "terreng",
+      "officialDate": "2026-06-20",
+      "distance": 60,
+      "distanceLabel": "60 km",
+      "sportLevel": "Tur",
+      "region": "Innlandet",
+      "url": " ",
+      "waypoints": [
+        {
+          "label": "Start – Søre Osen",
+          "lat": 61.34,
+          "lon": 11.675,
+          "altitude": 330
+        },
+        {
+          "label": "25% – Østsiden",
+          "lat": 61.4,
+          "lon": 11.75,
+          "altitude": 340
+        },
+        {
+          "label": "50% – Nordenden Osensjøen",
+          "lat": 61.55,
+          "lon": 11.595,
+          "altitude": 330
+        },
+        {
+          "label": "75% – Vestsiden retur",
+          "lat": 61.44,
+          "lon": 11.51,
+          "altitude": 340
+        },
+        {
+          "label": "Mål – Søre Osen",
+          "lat": 61.34,
+          "lon": 11.675,
+          "altitude": 330
+        }
+      ]
+    },
+    {
+      "id": "tour-of-norway-for-kids-sundvollen",
+      "name": "Tour of Norway for Kids,Sundvollen",
+      "discipline": "landevei",
+      "officialDate": "2026-05-03",
+      "distance": 600,
+      "distanceLabel": "600 km",
+      "sportLevel": "Reg",
+      "region": "Buskerud",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Hole",
+          "lat": 60.0416318,
+          "lon": 10.302044
+        }
+      ]
+    },
+    {
+      "id": "tromsorittene-2026-pamelding-alle-ritt",
+      "name": "Tromsørittene 2026 påmelding alle ritt",
+      "discipline": "landevei",
+      "officialDate": "2026-06-04",
+      "distance": 70,
+      "distanceLabel": "70 km",
+      "sportLevel": "Reg",
+      "region": "Troms",
+      "url": "http://www.tcyk.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Tromsø",
+          "lat": 69.6516345,
+          "lon": 18.9558585
+        }
+      ]
+    },
+    {
+      "id": "sykkelkarusell-tromso-ritt-2",
+      "name": "Sykkelkarusell Tromsø - ritt 2",
+      "discipline": "landevei",
+      "officialDate": "2026-05-14",
+      "distance": 58,
+      "distanceLabel": "58 km",
+      "sportLevel": "Tur",
+      "region": "Troms",
+      "url": "http://www.tcyk.no/index.php?article=sykkelkarusell",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Skjelnan",
+          "lat": 69.6972754,
+          "lon": 19.081696
+        }
+      ]
+    },
+    {
+      "id": "sykkelkarusell-tromso-ritt-11",
+      "name": "Sykkelkarusell Tromsø - ritt 11",
+      "discipline": "landevei",
+      "officialDate": "2026-08-27",
+      "distance": 56,
+      "distanceLabel": "56 km",
+      "sportLevel": "Tur",
+      "region": "Troms",
+      "url": "http://www.tcyk.no/index.php?article=sykkelkarusell",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Eidkjosen",
+          "lat": 69.6771797,
+          "lon": 18.7470302
+        }
+      ]
+    }
+  ]
+}

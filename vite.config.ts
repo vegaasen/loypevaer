@@ -19,7 +19,7 @@ export default defineConfig({
       manifest: {
         name: 'Løypevær',
         short_name: 'Løypevær',
-        description: 'Sjekk været langs ruten for norske sykkelritt og langrenn.',
+        description: 'Sjekk været langs ruten for norske sykkelritt, langrenn, triathlon og løp.',
         theme_color: '#1a3300',
         background_color: '#f7f5ef',
         display: 'standalone',

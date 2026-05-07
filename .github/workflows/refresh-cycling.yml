@@ -1,0 +1,38 @@
+name: Refresh cycling events
+
+on:
+  schedule:
+    # Run every Monday at 05:00 UTC (30 min after running refresh)
+    - cron: "0 5 * * 1"
+  # Allow manual triggering from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    name: Fetch & commit cycling events
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Fetch cycling events
+        run: bun run fetch-cycling
+
+      - name: Commit updated events
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/cycling-events.json
+          if git diff --cached --quiet; then
+            echo "No changes to cycling events, skipping commit."
+          else
+            git commit -m "chore: refresh cycling events [$(date -u +%Y-%m-%d)]"
+            git push
+          fi

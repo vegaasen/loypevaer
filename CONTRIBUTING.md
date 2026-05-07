@@ -15,15 +15,24 @@ Both `lint` and `build` must pass before submitting a PR.
 
 ## Ways to contribute
 
-### Add or update a cycling ritt
+### Add or update an event
 
-Edit `src/data/arrangements.json`. Each entry must follow this schema:
+Which file to edit depends on the discipline and whether the event is auto-fetched:
+
+| Discipline | Auto-fetched? | File to edit |
+|---|---|---|
+| Langrenn, or any discipline without an auto-sync script | No | `src/data/arrangements.json` |
+| Cycling — **not** listed in the NCF/EQ Timing API | No | `src/data/cycling-manual.json` |
+| Cycling — already fetched by NCF/EQ Timing, but missing waypoints | Yes (auto) | `src/data/cycling-waypoints.json` via `enrich-cycling-waypoints.ts` |
+| Triathlon, running | Yes (auto) | Do not edit — fix the fetch script or source data |
+
+Each manually curated entry must follow this schema:
 
 ```jsonc
 {
   "id": "kebab-case-id",           // used in the URL: /arrangement/<id>
-  "name": "Ritt Name",
-  "discipline": "landevei",        // "landevei" or "terreng"
+  "name": "Event Name",
+  "discipline": "landevei",        // "langrenn", "landevei", "terreng", etc.
   "distance": 88,                  // km
   "elevationGain": 1200,           // metres
   "region": "Innlandet",
@@ -37,9 +46,11 @@ Edit `src/data/arrangements.json`. Each entry must follow this schema:
 }
 ```
 
-**Waypoint coordinates must be verified** against GPX files or official race maps — please don't use rough approximations.
+**Waypoint coordinates must be verified** against GPX files or official race maps — please don't use rough approximations. For NCF-fetched cycling events with missing waypoints, use the enrichment script:
 
-For triathlon, running, and other auto-synced events, see [Auto-generated data](#auto-generated-data) below.
+```bash
+bun scripts/enrich-cycling-waypoints.ts <event-id> <path/to/route.gpx>
+```
 
 ### Fix a bug or improve a feature
 
@@ -55,6 +66,7 @@ Do **not** manually edit these files — they are overwritten by scheduled GitHu
 
 | File | Source script | Workflow |
 |---|---|---|
+| `src/data/cycling-events.json` | `scripts/fetch-cycling-events.ts` | Weekly |
 | `src/data/weather-cache.json` | `scripts/fetch-weather-cache.ts` | Nightly |
 | `src/data/triathlon-events.json` | `scripts/fetch-triathlon-events.ts` | Scheduled |
 | `src/data/running-events.json` | `scripts/fetch-running-events.ts` | Monday 04:30 UTC |

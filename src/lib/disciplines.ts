@@ -10,6 +10,7 @@ export const DISCIPLINE_LABEL: Record<Discipline, string> = {
   triathlon: "Triathlon",
   ultraløp: "Ultraløp",
   løping: "Løping",
+  cx: "Sykkelkross",
 };
 
 /** Labels with emoji, used in grouped selects (e.g. NavBar). */
@@ -20,6 +21,7 @@ export const DISCIPLINE_LABEL_WITH_EMOJI: Record<Discipline, string> = {
   triathlon: "🏊 Triathlon",
   ultraløp: "🏃 Ultraløp",
   løping: "🏃 Løping",
+  cx: "🚵 Sykkelkross",
 };
 
 /** Labels including the "alle" catch-all filter, used in filter pills. */

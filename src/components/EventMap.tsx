@@ -28,7 +28,9 @@ function osrmProfile(discipline: Discipline): string {
     case "løping":
       return "foot"; // ski/running use pedestrian/foot routing
     case "triathlon":
-      return "foot"; // mixed; foot is safest fallback for swim/run legs
+      return "foot"; // mixed; safest fallback for swim/run legs
+    case "cx":
+      return "bike"; // cyclocross — bike profile
   }
 }
 

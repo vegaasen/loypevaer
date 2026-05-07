@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { EventCard } from "../components/EventCard";
+import { PageMeta } from "../components/PageMeta";
 import { useFilterContext } from "../context/useFilterContext";
 import { useMyEvents } from "../hooks/useMyEvents";
 import { allArrangements as ritt, getNextRitt, type RittEntry } from "../lib/arrangements";
@@ -10,12 +11,9 @@ import { SITE_URL } from "../lib/seo";
 import { allArrangements as allForJsonLd } from "../lib/arrangements";
 import { daysUntil, formatCountdown, parseDateLocal } from "../lib/dates";
 import { groupByYearMonth } from "../lib/grouping";
+import { monthName } from "../lib/month";
 
 type Discipline = "alle" | "landevei" | "terreng" | "langrenn" | "triathlon" | "ultraløp";
-
-function monthName(month: number): string {
-  return new Date(2000, month, 1).toLocaleDateString("nb-NO", { month: "long" });
-}
 
 export function HomePage() {
   const description =
@@ -84,19 +82,13 @@ export function HomePage() {
 
   return (
     <div className="home-page">
+      <PageMeta
+        title="Løypevær – Rittvær og vær for norske utholdenhetsarrangement"
+        description={description}
+        canonicalUrl={SITE_URL}
+      />
       <Helmet>
-        <title>Løypevær – Rittvær og vær for norske utholdenhetsarrangement</title>
-        <meta name="description" content={description} />
         <meta name="keywords" content="rittvær, sykkelritt vær, langrenn vær, triathlon vær, ultraløp vær, løpsvær, værmelding ritt, etappevær" />
-        <link rel="canonical" href={SITE_URL} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={SITE_URL} />
-        <meta property="og:title" content="Løypevær – Rittvær og vær for norske utholdenhetsarrangement" />
-        <meta property="og:description" content={description} />
-        <meta property="og:locale" content="nb_NO" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Løypevær – Rittvær og vær for norske utholdenhetsarrangement" />
-        <meta name="twitter:description" content={description} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -304,7 +296,12 @@ export function HomePage() {
               <h2 className="home-page__year-heading">{year}</h2>
               {months.map((month) => (
                 <div key={month} className="home-page__month-section">
-                  <h3 className="home-page__month-heading">{monthName(month)}</h3>
+                  <h3 className="home-page__month-heading">
+                    {monthName(month)}
+                    {byMonth.get(month)!.length > 1 && (
+                      <span className="month-count-badge">{byMonth.get(month)!.length}</span>
+                    )}
+                  </h3>
                   <div className="home-page__grid">
                     {byMonth.get(month)!.map((r) => (
                       <EventCard

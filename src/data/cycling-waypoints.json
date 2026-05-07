@@ -1,0 +1,1320 @@
+{
+  "birkebeinerrittet": [
+    {
+      "label": "Start – Rena",
+      "lat": 61.133,
+      "lon": 11.377,
+      "altitude": 256
+    },
+    {
+      "label": "25% – Høsbjør",
+      "lat": 61.05,
+      "lon": 11.12,
+      "altitude": 620
+    },
+    {
+      "label": "50% – Sjusjøen",
+      "lat": 61.248,
+      "lon": 10.578,
+      "altitude": 900
+    },
+    {
+      "label": "75% – Nordseter",
+      "lat": 61.18,
+      "lon": 10.5,
+      "altitude": 710
+    },
+    {
+      "label": "Mål – Lillehammer",
+      "lat": 61.115,
+      "lon": 10.466,
+      "altitude": 185
+    }
+  ],
+  "styrkeproven-trondheim-lillehammer-eidsvoll-oslo": [
+    {
+      "label": "Start – Trondheim",
+      "lat": 63.431,
+      "lon": 10.395,
+      "altitude": 10
+    },
+    {
+      "label": "25% – Støren",
+      "lat": 62.966,
+      "lon": 10.297,
+      "altitude": 50
+    },
+    {
+      "label": "50% – Røros",
+      "lat": 62.574,
+      "lon": 11.386,
+      "altitude": 628
+    },
+    {
+      "label": "75% – Alvdal",
+      "lat": 62.115,
+      "lon": 10.626,
+      "altitude": 480
+    },
+    {
+      "label": "Mål – Lillehammer",
+      "lat": 61.115,
+      "lon": 10.466,
+      "altitude": 185
+    }
+  ],
+  "jotunheimen-rundt-sognefjellrittet-av-sogn-ck": [
+    {
+      "label": "Start – Lærdal",
+      "lat": 61.099,
+      "lon": 7.477,
+      "altitude": 50
+    },
+    {
+      "label": "25% – Fagernes",
+      "lat": 60.989,
+      "lon": 9.233,
+      "altitude": 300
+    },
+    {
+      "label": "50% – Beitostølen",
+      "lat": 61.257,
+      "lon": 8.907,
+      "altitude": 900
+    },
+    {
+      "label": "75% – Lom / Sognefjell",
+      "lat": 61.838,
+      "lon": 8.566,
+      "altitude": 1440
+    },
+    {
+      "label": "Mål – Sogndal",
+      "lat": 61.229,
+      "lon": 7.1,
+      "altitude": 10
+    }
+  ],
+  "nordsjorittet": [
+    {
+      "label": "Start – Egersund",
+      "lat": 58.452,
+      "lon": 6.002,
+      "altitude": 10
+    },
+    {
+      "label": "25% – Hellvik",
+      "lat": 58.418,
+      "lon": 5.844,
+      "altitude": 60
+    },
+    {
+      "label": "50% – Hauge i Dalane",
+      "lat": 58.34,
+      "lon": 6.016,
+      "altitude": 50
+    },
+    {
+      "label": "75% – Sokndal",
+      "lat": 58.329,
+      "lon": 6.175,
+      "altitude": 80
+    },
+    {
+      "label": "Mål – Flekkefjord",
+      "lat": 58.298,
+      "lon": 6.668,
+      "altitude": 10
+    }
+  ],
+  "grenserittet": [
+    {
+      "label": "Start – Strömstad",
+      "lat": 58.94,
+      "lon": 11.166,
+      "altitude": 10
+    },
+    {
+      "label": "25% – Idefjord",
+      "lat": 59.01,
+      "lon": 11.29,
+      "altitude": 80
+    },
+    {
+      "label": "50% – Midtveis skog",
+      "lat": 59.065,
+      "lon": 11.45,
+      "altitude": 160
+    },
+    {
+      "label": "75% – Halden innland",
+      "lat": 59.11,
+      "lon": 11.38,
+      "altitude": 100
+    },
+    {
+      "label": "Mål – Halden",
+      "lat": 59.122,
+      "lon": 11.388,
+      "altitude": 20
+    }
+  ],
+  "valdresrittet": [
+    {
+      "label": "Start – Vaset Stadion",
+      "lat": 61.244,
+      "lon": 8.887,
+      "altitude": 955
+    },
+    {
+      "label": "25% – Platå nord",
+      "lat": 61.289,
+      "lon": 8.931,
+      "altitude": 1000
+    },
+    {
+      "label": "50% – Syndin øst",
+      "lat": 61.318,
+      "lon": 9.032,
+      "altitude": 960
+    },
+    {
+      "label": "75% – Retur sør",
+      "lat": 61.262,
+      "lon": 9.015,
+      "altitude": 940
+    },
+    {
+      "label": "Mål – Vaset Stadion",
+      "lat": 61.244,
+      "lon": 8.887,
+      "altitude": 955
+    }
+  ],
+  "mjosrittet": [
+    {
+      "label": "Start – Hamar",
+      "lat": 60.794,
+      "lon": 11.067,
+      "altitude": 130
+    },
+    {
+      "label": "25% – Gjøvik",
+      "lat": 60.795,
+      "lon": 10.692,
+      "altitude": 130
+    },
+    {
+      "label": "50% – Lillehammer",
+      "lat": 61.115,
+      "lon": 10.466,
+      "altitude": 185
+    },
+    {
+      "label": "75% – Moelv",
+      "lat": 60.935,
+      "lon": 10.703,
+      "altitude": 130
+    },
+    {
+      "label": "Mål – Hamar",
+      "lat": 60.794,
+      "lon": 11.067,
+      "altitude": 130
+    }
+  ],
+  "haugastol-bergen": [
+    {
+      "label": "Start – Haugastøl",
+      "lat": 60.507,
+      "lon": 7.857,
+      "altitude": 988
+    },
+    {
+      "label": "25% – Finse",
+      "lat": 60.594,
+      "lon": 7.524,
+      "altitude": 1222
+    },
+    {
+      "label": "50% – Voss",
+      "lat": 60.628,
+      "lon": 6.418,
+      "altitude": 60
+    },
+    {
+      "label": "75% – Dale",
+      "lat": 60.586,
+      "lon": 5.841,
+      "altitude": 20
+    },
+    {
+      "label": "Mål – Bergen",
+      "lat": 60.391,
+      "lon": 5.322,
+      "altitude": 10
+    }
+  ],
+  "rallarvegen": [
+    {
+      "label": "Start – Haugastøl",
+      "lat": 60.507,
+      "lon": 7.857,
+      "altitude": 988
+    },
+    {
+      "label": "25% – Finse",
+      "lat": 60.594,
+      "lon": 7.524,
+      "altitude": 1222
+    },
+    {
+      "label": "50% – Hallingskeid",
+      "lat": 60.644,
+      "lon": 7.218,
+      "altitude": 1130
+    },
+    {
+      "label": "75% – Myrdal",
+      "lat": 60.732,
+      "lon": 7.11,
+      "altitude": 867
+    },
+    {
+      "label": "Mål – Flåm",
+      "lat": 60.863,
+      "lon": 7.117,
+      "altitude": 2
+    }
+  ],
+  "lysebotn-opp": [
+    {
+      "label": "Start – Lysebotn",
+      "lat": 59.058,
+      "lon": 6.647,
+      "altitude": 0
+    },
+    {
+      "label": "25% – Svingen 1",
+      "lat": 59.069,
+      "lon": 6.638,
+      "altitude": 250
+    },
+    {
+      "label": "50% – Midtvegs",
+      "lat": 59.077,
+      "lon": 6.625,
+      "altitude": 500
+    },
+    {
+      "label": "75% – Svingen 2",
+      "lat": 59.083,
+      "lon": 6.611,
+      "altitude": 700
+    },
+    {
+      "label": "Mål – Øygardsstøl",
+      "lat": 59.092,
+      "lon": 6.596,
+      "altitude": 985
+    }
+  ],
+  "bergen-voss": [
+    {
+      "label": "Start – Bergen (Bryggen)",
+      "lat": 60.3929,
+      "lon": 5.3241,
+      "altitude": 5
+    },
+    {
+      "label": "25% – Arna",
+      "lat": 60.4243,
+      "lon": 5.4738,
+      "altitude": 80
+    },
+    {
+      "label": "50% – Stanghelle",
+      "lat": 60.5647,
+      "lon": 5.8532,
+      "altitude": 40
+    },
+    {
+      "label": "75% – Dale",
+      "lat": 60.5869,
+      "lon": 6.0986,
+      "altitude": 55
+    },
+    {
+      "label": "Mål – Voss",
+      "lat": 60.6282,
+      "lon": 6.4169,
+      "altitude": 56
+    }
+  ],
+  "gravelbirken": [
+    {
+      "label": "Start – Rena",
+      "lat": 61.1367,
+      "lon": 11.3745,
+      "altitude": 252
+    },
+    {
+      "label": "25% – Åsta",
+      "lat": 61.1805,
+      "lon": 11.158,
+      "altitude": 480
+    },
+    {
+      "label": "50% – Sjusjøen (plateau)",
+      "lat": 61.2203,
+      "lon": 10.955,
+      "altitude": 890
+    },
+    {
+      "label": "75% – Nevelfjell",
+      "lat": 61.2012,
+      "lon": 10.758,
+      "altitude": 820
+    },
+    {
+      "label": "Mål – Lillehammer",
+      "lat": 61.1153,
+      "lon": 10.4663,
+      "altitude": 185
+    }
+  ],
+  "halvbirken-sykkel": [
+    {
+      "label": "Start – Sjusjøen",
+      "lat": 61.2203,
+      "lon": 10.955,
+      "altitude": 870
+    },
+    {
+      "label": "25% – Nevelfjell",
+      "lat": 61.198,
+      "lon": 10.84,
+      "altitude": 820
+    },
+    {
+      "label": "50% – Fåberg skog",
+      "lat": 61.165,
+      "lon": 10.701,
+      "altitude": 500
+    },
+    {
+      "label": "75% – Vingrom",
+      "lat": 61.135,
+      "lon": 10.568,
+      "altitude": 260
+    },
+    {
+      "label": "Mål – Lillehammer",
+      "lat": 61.1153,
+      "lon": 10.4663,
+      "altitude": 185
+    }
+  ],
+  "nordsjorittet-jaeren": [
+    {
+      "label": "Start – Egersund",
+      "lat": 58.4524,
+      "lon": 6.0033,
+      "altitude": 10
+    },
+    {
+      "label": "25% – Brusand",
+      "lat": 58.5369,
+      "lon": 5.9124,
+      "altitude": 30
+    },
+    {
+      "label": "50% – Nærbø",
+      "lat": 58.6692,
+      "lon": 5.6475,
+      "altitude": 25
+    },
+    {
+      "label": "75% – Bryne",
+      "lat": 58.7328,
+      "lon": 5.6428,
+      "altitude": 30
+    },
+    {
+      "label": "Mål – Sandnes",
+      "lat": 58.8521,
+      "lon": 5.7353,
+      "altitude": 20
+    }
+  ],
+  "l-etape-trondheim-by-tour-de-france": [
+    {
+      "label": "Start – Trondheim",
+      "lat": 63.4305,
+      "lon": 10.3951,
+      "altitude": 5
+    },
+    {
+      "label": "25% – Klæbu",
+      "lat": 63.3612,
+      "lon": 10.4863,
+      "altitude": 280
+    },
+    {
+      "label": "50% – Støren",
+      "lat": 63.0553,
+      "lon": 10.2985,
+      "altitude": 90
+    },
+    {
+      "label": "75% – Melhus",
+      "lat": 63.2783,
+      "lon": 10.2833,
+      "altitude": 60
+    },
+    {
+      "label": "Mål – Trondheim",
+      "lat": 63.4305,
+      "lon": 10.3951,
+      "altitude": 5
+    }
+  ],
+  "nordmarka-rundt": [
+    {
+      "label": "Start – Årvoll, Oslo",
+      "lat": 59.9531,
+      "lon": 10.8193,
+      "altitude": 155
+    },
+    {
+      "label": "25% – Hakadal",
+      "lat": 60.0945,
+      "lon": 10.8432,
+      "altitude": 210
+    },
+    {
+      "label": "50% – Harestua (Nordmarka vest)",
+      "lat": 60.2135,
+      "lon": 10.536,
+      "altitude": 355
+    },
+    {
+      "label": "75% – Lommedalen",
+      "lat": 59.998,
+      "lon": 10.4825,
+      "altitude": 180
+    },
+    {
+      "label": "Mål – Årvoll, Oslo",
+      "lat": 59.9531,
+      "lon": 10.8193,
+      "altitude": 155
+    }
+  ],
+  "color-line-tour": [
+    {
+      "label": "Start – Kristiansand",
+      "lat": 58.1467,
+      "lon": 7.9956,
+      "altitude": 10
+    },
+    {
+      "label": "25% – Evje",
+      "lat": 58.5876,
+      "lon": 7.8058,
+      "altitude": 115
+    },
+    {
+      "label": "50% – Valle",
+      "lat": 59.205,
+      "lon": 7.5338,
+      "altitude": 235
+    },
+    {
+      "label": "75% – Bykle",
+      "lat": 59.3878,
+      "lon": 7.356,
+      "altitude": 625
+    },
+    {
+      "label": "Mål – Hovden",
+      "lat": 59.5465,
+      "lon": 7.3753,
+      "altitude": 930
+    }
+  ],
+  "tyrifjorden-rundt": [
+    {
+      "label": "Start – Sandvika",
+      "lat": 59.89,
+      "lon": 10.5231,
+      "altitude": 10
+    },
+    {
+      "label": "25% – Krokkleiva",
+      "lat": 60.0418,
+      "lon": 10.29,
+      "altitude": 310
+    },
+    {
+      "label": "50% – Jevnaker",
+      "lat": 60.233,
+      "lon": 10.2265,
+      "altitude": 130
+    },
+    {
+      "label": "75% – Vikersund",
+      "lat": 59.987,
+      "lon": 10.0462,
+      "altitude": 95
+    },
+    {
+      "label": "Mål – Sandvika",
+      "lat": 59.89,
+      "lon": 10.5231,
+      "altitude": 10
+    }
+  ],
+  "eikerrittet": [
+    {
+      "label": "Start – Røren barneskole",
+      "lat": 59.774,
+      "lon": 9.975,
+      "altitude": 30
+    },
+    {
+      "label": "25% – Eidsfoss",
+      "lat": 59.583,
+      "lon": 10.085,
+      "altitude": 50
+    },
+    {
+      "label": "50% – Hvittingfoss",
+      "lat": 59.527,
+      "lon": 9.976,
+      "altitude": 80
+    },
+    {
+      "label": "75% – Skollenborg",
+      "lat": 59.62,
+      "lon": 9.799,
+      "altitude": 90
+    },
+    {
+      "label": "Mål – Eiker-Kvikk klubbhus",
+      "lat": 59.763,
+      "lon": 9.97,
+      "altitude": 30
+    }
+  ],
+  "stenhoggerrittet": [
+    {
+      "label": "Start – Aspedammen",
+      "lat": 59.058482,
+      "lon": 11.486429,
+      "altitude": 155
+    },
+    {
+      "label": "25% – Tangen",
+      "lat": 59.027525,
+      "lon": 11.569128,
+      "altitude": 140
+    },
+    {
+      "label": "50% – Folkeset",
+      "lat": 59.003447,
+      "lon": 11.504332,
+      "altitude": 112
+    },
+    {
+      "label": "75% – Nordre Knegterød",
+      "lat": 59.02469,
+      "lon": 11.463782,
+      "altitude": 154
+    },
+    {
+      "label": "Mål – Aspedammen",
+      "lat": 59.054925,
+      "lon": 11.480561,
+      "altitude": 171
+    }
+  ],
+  "garborgriket-rundt": [
+    {
+      "label": "Start – Vestly/Jæren",
+      "lat": 58.737,
+      "lon": 5.698,
+      "altitude": 20
+    },
+    {
+      "label": "25% – Nærbø",
+      "lat": 58.668,
+      "lon": 5.651,
+      "altitude": 25
+    },
+    {
+      "label": "50% – Vigrestad",
+      "lat": 58.561,
+      "lon": 5.687,
+      "altitude": 30
+    },
+    {
+      "label": "75% – Klepp",
+      "lat": 58.777,
+      "lon": 5.632,
+      "altitude": 30
+    },
+    {
+      "label": "Mål – Vestly",
+      "lat": 58.737,
+      "lon": 5.698,
+      "altitude": 20
+    }
+  ],
+  "victoriarunden": [
+    {
+      "label": "Start – Børsa/Skaun",
+      "lat": 63.376,
+      "lon": 9.992,
+      "altitude": 30
+    },
+    {
+      "label": "25% – Orkanger",
+      "lat": 63.3,
+      "lon": 9.853,
+      "altitude": 15
+    },
+    {
+      "label": "50% – Kyrksæterøra/Hemne",
+      "lat": 63.186,
+      "lon": 9.42,
+      "altitude": 30
+    },
+    {
+      "label": "75% – Orkdal",
+      "lat": 63.297,
+      "lon": 10.063,
+      "altitude": 50
+    },
+    {
+      "label": "Mål – Børsa",
+      "lat": 63.376,
+      "lon": 9.992,
+      "altitude": 30
+    }
+  ],
+  "haugesund-sauda": [
+    {
+      "label": "Start – Haugesund",
+      "lat": 59.413,
+      "lon": 5.268,
+      "altitude": 15
+    },
+    {
+      "label": "25% – Aksdal",
+      "lat": 59.494,
+      "lon": 5.676,
+      "altitude": 20
+    },
+    {
+      "label": "50% – Etne",
+      "lat": 59.666,
+      "lon": 5.98,
+      "altitude": 30
+    },
+    {
+      "label": "75% – Nesflaten/Saudafjord",
+      "lat": 59.771,
+      "lon": 6.351,
+      "altitude": 30
+    },
+    {
+      "label": "Mål – Sauda",
+      "lat": 59.65,
+      "lon": 6.356,
+      "altitude": 30
+    }
+  ],
+  "randsfjorden-rundt": [
+    {
+      "label": "Start – Brandbu",
+      "lat": 60.432,
+      "lon": 10.508,
+      "altitude": 195
+    },
+    {
+      "label": "25% – Grua",
+      "lat": 60.568,
+      "lon": 10.356,
+      "altitude": 215
+    },
+    {
+      "label": "50% – Dokka",
+      "lat": 60.828,
+      "lon": 10.068,
+      "altitude": 160
+    },
+    {
+      "label": "75% – Odnes/Skreia",
+      "lat": 60.65,
+      "lon": 10.287,
+      "altitude": 165
+    },
+    {
+      "label": "Mål – Brandbu",
+      "lat": 60.432,
+      "lon": 10.508,
+      "altitude": 195
+    }
+  ],
+  "tour-de-froya": [
+    {
+      "label": "Start – Sistranda/Frøya",
+      "lat": 63.726,
+      "lon": 8.632,
+      "altitude": 10
+    },
+    {
+      "label": "25% – Titran/SW",
+      "lat": 63.614,
+      "lon": 8.328,
+      "altitude": 20
+    },
+    {
+      "label": "50% – Nordøya/North",
+      "lat": 63.79,
+      "lon": 8.49,
+      "altitude": 15
+    },
+    {
+      "label": "75% – Knarrlagsund/East",
+      "lat": 63.77,
+      "lon": 8.84,
+      "altitude": 20
+    },
+    {
+      "label": "Mål – Sistranda",
+      "lat": 63.726,
+      "lon": 8.632,
+      "altitude": 10
+    }
+  ],
+  "elgrittet": [
+    {
+      "label": "Start – Høland Stadion/Løken",
+      "lat": 59.973,
+      "lon": 11.407,
+      "altitude": 195
+    },
+    {
+      "label": "25% – Fosser",
+      "lat": 59.947,
+      "lon": 11.435,
+      "altitude": 210
+    },
+    {
+      "label": "50% – Ørsjøen",
+      "lat": 59.928,
+      "lon": 11.496,
+      "altitude": 250
+    },
+    {
+      "label": "75% – Nisseberget",
+      "lat": 59.958,
+      "lon": 11.518,
+      "altitude": 310
+    },
+    {
+      "label": "Mål – Høland Stadion",
+      "lat": 59.973,
+      "lon": 11.407,
+      "altitude": 195
+    }
+  ],
+  "skjaergaardsrittet": [
+    {
+      "label": "Start – Straume/Fjell",
+      "lat": 60.36,
+      "lon": 5.092,
+      "altitude": 10
+    },
+    {
+      "label": "25% – Skogsvåg",
+      "lat": 60.251,
+      "lon": 4.972,
+      "altitude": 50
+    },
+    {
+      "label": "50% – Rong/Øygarden",
+      "lat": 60.508,
+      "lon": 4.915,
+      "altitude": 20
+    },
+    {
+      "label": "75% – Misje/Bildøy",
+      "lat": 60.484,
+      "lon": 5.039,
+      "altitude": 30
+    },
+    {
+      "label": "Mål – Straume",
+      "lat": 60.36,
+      "lon": 5.092,
+      "altitude": 10
+    }
+  ],
+  "obos-terrengsykkelrittet": [
+    {
+      "label": "Start – Skullerud/Østmarka",
+      "lat": 59.857,
+      "lon": 10.872,
+      "altitude": 175
+    },
+    {
+      "label": "25% – Nord runde",
+      "lat": 59.9,
+      "lon": 10.893,
+      "altitude": 200
+    },
+    {
+      "label": "50% – Ulsrud",
+      "lat": 59.883,
+      "lon": 10.927,
+      "altitude": 210
+    },
+    {
+      "label": "75% – Sør retur",
+      "lat": 59.855,
+      "lon": 10.88,
+      "altitude": 180
+    },
+    {
+      "label": "Mål – Skullerud",
+      "lat": 59.857,
+      "lon": 10.872,
+      "altitude": 175
+    }
+  ],
+  "tour-de-lyngen": [
+    {
+      "label": "Start – Jægervatnet/Lyngen",
+      "lat": 69.65,
+      "lon": 20.097,
+      "altitude": 50
+    },
+    {
+      "label": "25% – Nord Lyngen",
+      "lat": 70.03,
+      "lon": 20.6,
+      "altitude": 50
+    },
+    {
+      "label": "50% – Furuflaten/Kåfjord",
+      "lat": 69.835,
+      "lon": 20.02,
+      "altitude": 30
+    },
+    {
+      "label": "75% – Lyngseidet",
+      "lat": 69.582,
+      "lon": 20.224,
+      "altitude": 10
+    },
+    {
+      "label": "Mål – Jægervatnet",
+      "lat": 69.65,
+      "lon": 20.097,
+      "altitude": 50
+    }
+  ],
+  "midnattsolrittet": [
+    {
+      "label": "Start – midnattsolrittet",
+      "lat": 66.873,
+      "lon": 13.706,
+      "altitude": 0
+    },
+    {
+      "label": "25%",
+      "lat": 66.948,
+      "lon": 13.904,
+      "altitude": 10
+    },
+    {
+      "label": "50%",
+      "lat": 67.006,
+      "lon": 14.231,
+      "altitude": 37
+    },
+    {
+      "label": "75%",
+      "lat": 67.159,
+      "lon": 14.417,
+      "altitude": 187
+    },
+    {
+      "label": "Mål – midnattsolrittet",
+      "lat": 67.236,
+      "lon": 14.617,
+      "altitude": 24
+    }
+  ],
+  "spenst-skjebergrittet": [
+    {
+      "label": "Start – Skjeberg",
+      "lat": 59.273,
+      "lon": 11.183,
+      "altitude": 65
+    },
+    {
+      "label": "25% – Tune singletrack",
+      "lat": 59.288,
+      "lon": 11.115,
+      "altitude": 80
+    },
+    {
+      "label": "50% – Hafslund skog",
+      "lat": 59.234,
+      "lon": 11.101,
+      "altitude": 50
+    },
+    {
+      "label": "75% – Retur",
+      "lat": 59.265,
+      "lon": 11.22,
+      "altitude": 75
+    },
+    {
+      "label": "Mål – Skjeberg",
+      "lat": 59.273,
+      "lon": 11.183,
+      "altitude": 65
+    }
+  ],
+  "trysil-knut-rittet-og-osensjoen-rundt-gravel": [
+    {
+      "label": "Start – Søre Osen",
+      "lat": 61.34,
+      "lon": 11.675,
+      "altitude": 330
+    },
+    {
+      "label": "25% – Østsiden",
+      "lat": 61.4,
+      "lon": 11.75,
+      "altitude": 340
+    },
+    {
+      "label": "50% – Nordenden Osensjøen",
+      "lat": 61.55,
+      "lon": 11.595,
+      "altitude": 330
+    },
+    {
+      "label": "75% – Vestsiden retur",
+      "lat": 61.44,
+      "lon": 11.51,
+      "altitude": 340
+    },
+    {
+      "label": "Mål – Søre Osen",
+      "lat": 61.34,
+      "lon": 11.675,
+      "altitude": 330
+    }
+  ],
+  "sjusjorettet": [
+    {
+      "label": "Start – Sjusjøen",
+      "lat": 61.157,
+      "lon": 10.699,
+      "altitude": 870
+    },
+    {
+      "label": "25% – Nordseter",
+      "lat": 61.176,
+      "lon": 10.497,
+      "altitude": 710
+    },
+    {
+      "label": "50% – Hornsjø",
+      "lat": 61.207,
+      "lon": 10.402,
+      "altitude": 780
+    },
+    {
+      "label": "75% – Åstdalen",
+      "lat": 61.263,
+      "lon": 10.815,
+      "altitude": 820
+    },
+    {
+      "label": "Mål – Sjusjøen",
+      "lat": 61.157,
+      "lon": 10.699,
+      "altitude": 870
+    }
+  ],
+  "oyungen-rundt": [
+    {
+      "label": "Start – Hessdalen",
+      "lat": 62.867,
+      "lon": 11.183,
+      "altitude": 600
+    },
+    {
+      "label": "25% – Nord dalen",
+      "lat": 62.927,
+      "lon": 11.197,
+      "altitude": 620
+    },
+    {
+      "label": "50% – Øyungen øst",
+      "lat": 62.883,
+      "lon": 11.317,
+      "altitude": 640
+    },
+    {
+      "label": "75% – Sør retur",
+      "lat": 62.83,
+      "lon": 11.207,
+      "altitude": 610
+    },
+    {
+      "label": "Mål – Hessdalen",
+      "lat": 62.867,
+      "lon": 11.183,
+      "altitude": 600
+    }
+  ],
+  "lysebotn-bryne-rittet": [
+    {
+      "label": "Start – Lysebotn",
+      "lat": 59.058,
+      "lon": 6.647,
+      "altitude": 0
+    },
+    {
+      "label": "25% – Platå V for Sirdal",
+      "lat": 58.98,
+      "lon": 6.2,
+      "altitude": 650
+    },
+    {
+      "label": "50% – Gjesdal/Ålgård",
+      "lat": 58.773,
+      "lon": 5.813,
+      "altitude": 100
+    },
+    {
+      "label": "75% – Sandnes/Jæren",
+      "lat": 58.756,
+      "lon": 5.713,
+      "altitude": 30
+    },
+    {
+      "label": "Mål – Vestly/Bryne",
+      "lat": 58.736,
+      "lon": 5.697,
+      "altitude": 20
+    }
+  ],
+  "ultrabirken": [
+    {
+      "label": "Start – Pellestova",
+      "lat": 61.247,
+      "lon": 10.419,
+      "altitude": 826
+    },
+    {
+      "label": "25% – Hita",
+      "lat": 61.383,
+      "lon": 10.559,
+      "altitude": 900
+    },
+    {
+      "label": "50% – Korsen",
+      "lat": 61.35,
+      "lon": 10.85,
+      "altitude": 820
+    },
+    {
+      "label": "75% – Elgåsen",
+      "lat": 61.25,
+      "lon": 10.73,
+      "altitude": 760
+    },
+    {
+      "label": "Mål – Lillehammer",
+      "lat": 61.115,
+      "lon": 10.466,
+      "altitude": 185
+    }
+  ],
+  "halvvatternrundan": [
+    {
+      "label": "Start/Mål – Motala",
+      "lat": 58.537,
+      "lon": 15.044,
+      "altitude": 90
+    },
+    {
+      "label": "25% – Karlsborg",
+      "lat": 58.533,
+      "lon": 14.509,
+      "altitude": 95
+    },
+    {
+      "label": "50% – Hjo",
+      "lat": 58.306,
+      "lon": 14.302,
+      "altitude": 95
+    },
+    {
+      "label": "75% – Hästholmen",
+      "lat": 58.452,
+      "lon": 14.659,
+      "altitude": 90
+    },
+    {
+      "label": "Mål – Motala",
+      "lat": 58.537,
+      "lon": 15.044,
+      "altitude": 90
+    }
+  ],
+  "vatternrundan": [
+    {
+      "label": "Start/Mål – Motala",
+      "lat": 58.537,
+      "lon": 15.044,
+      "altitude": 90
+    },
+    {
+      "label": "25% – Karlsborg",
+      "lat": 58.533,
+      "lon": 14.509,
+      "altitude": 95
+    },
+    {
+      "label": "50% – Jönköping",
+      "lat": 57.782,
+      "lon": 14.165,
+      "altitude": 95
+    },
+    {
+      "label": "75% – Vadstena",
+      "lat": 58.449,
+      "lon": 14.891,
+      "altitude": 90
+    },
+    {
+      "label": "Mål – Motala",
+      "lat": 58.537,
+      "lon": 15.044,
+      "altitude": 90
+    }
+  ],
+  "oyeren-rundt": [
+    {
+      "label": "Start/Mål – Rælingen",
+      "lat": 59.946,
+      "lon": 11.073,
+      "altitude": 110
+    },
+    {
+      "label": "Fetsund",
+      "lat": 59.921,
+      "lon": 11.154,
+      "altitude": 100
+    },
+    {
+      "label": "Solbergfoss (matstasjon)",
+      "lat": 59.685,
+      "lon": 11.333,
+      "altitude": 90
+    },
+    {
+      "label": "Spydeberg",
+      "lat": 59.627,
+      "lon": 11.081,
+      "altitude": 110
+    },
+    {
+      "label": "Enebakk (drikkestasjon)",
+      "lat": 59.757,
+      "lon": 10.927,
+      "altitude": 140
+    }
+  ],
+  "herefoss-rundt": [
+    {
+      "label": "Start/Mål – Arendal",
+      "lat": 58.4652,
+      "lon": 8.7098,
+      "altitude": 49
+    },
+    {
+      "label": "Froland",
+      "lat": 58.396,
+      "lon": 8.456,
+      "altitude": 156
+    },
+    {
+      "label": "Birkenes",
+      "lat": 58.612,
+      "lon": 8.4,
+      "altitude": 131
+    },
+    {
+      "label": "Herefoss",
+      "lat": 58.715,
+      "lon": 8.303,
+      "altitude": 127
+    },
+    {
+      "label": "Vegårshei-retur",
+      "lat": 58.637,
+      "lon": 8.354,
+      "altitude": 130
+    }
+  ],
+  "sognefjellrittet": [
+    {
+      "label": "Start – Lom",
+      "lat": 61.839,
+      "lon": 8.566,
+      "altitude": 380
+    },
+    {
+      "label": "Sognefjellet",
+      "lat": 61.566,
+      "lon": 8.007,
+      "altitude": 1427
+    },
+    {
+      "label": "Fortun",
+      "lat": 61.483,
+      "lon": 7.634,
+      "altitude": 8
+    },
+    {
+      "label": "Luster",
+      "lat": 61.452,
+      "lon": 7.503,
+      "altitude": 9
+    },
+    {
+      "label": "Hafslo",
+      "lat": 61.304,
+      "lon": 7.214,
+      "altitude": 200
+    },
+    {
+      "label": "Mål – Sogndal",
+      "lat": 61.231,
+      "lon": 7.103,
+      "altitude": 13
+    }
+  ]
+}

@@ -2,7 +2,7 @@ import { useWeather, type WeatherResult } from "../hooks/useWeather";
 import { isForecastRange } from "../lib/weather";
 import { WeatherCard } from "./WeatherCard";
 import type { Waypoint } from "../lib/weather";
-import { calcWaypointTimes, formatArrivalTime, WAYPOINT_FRACTIONS } from "../lib/timing";
+import { calcWaypointTimes, formatArrivalTime } from "../lib/timing";
 import { routeBearingForWaypoint } from "../lib/wind";
 
 type Props = {
@@ -24,8 +24,14 @@ export function WeatherStrip({ waypoints, date, startTime, finishTime, externalR
     finishTime != null &&
     finishTime !== "";
 
+  const n = waypoints.length;
+  const dynamicFractions = Array.from(
+    { length: n },
+    (_, i) => (n === 1 ? 0 : i / (n - 1))
+  );
+
   const datetimes = timingActive
-    ? calcWaypointTimes(date, startTime, finishTime, [...WAYPOINT_FRACTIONS])
+    ? calcWaypointTimes(date, startTime, finishTime, dynamicFractions)
     : null;
 
   const internalResults = useWeather(externalResults ? [] : waypoints, date, datetimes);

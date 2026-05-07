@@ -16,6 +16,7 @@ bun run dev                # start dev server (Vite)
 bun run build              # typecheck (tsc -b) + production build (also auto-runs generate-sitemap as prebuild)
 bun run lint               # ESLint with type-aware rules
 bun run fetch-weather      # refresh src/data/weather-cache.json from Open-Meteo
+bun run fetch-cycling      # refresh src/data/cycling-events.json from NCF/EQ Timing API
 bun run fetch-triathlon    # refresh src/data/triathlon-events.json
 bun run fetch-running      # refresh src/data/running-events.json
 bun run generate-sitemap   # generate sitemap (also runs automatically before every build)
@@ -41,7 +42,10 @@ bun run lint && bun run build
 ## Project layout
 
 ```
-src/data/arrangements.json   # Cycling ritt definitions — edit this to add/modify a ritt
+src/data/arrangements.json   # Hand-curated events for langrenn and other non-auto-synced disciplines — edit this to add/modify
+src/data/cycling-manual.json # Hand-curated cycling events NOT available via NCF/EQ Timing API — edit this to add/modify
+src/data/cycling-events.json # Auto-generated from NCF/EQ Timing API; do NOT manually edit
+src/data/cycling-waypoints.json # Manual waypoint enrichment for auto-fetched cycling events; edit via enrich-cycling-waypoints.ts
 src/data/triathlon-events.json # Auto-generated; do NOT manually edit
 src/data/running-events.json # Auto-generated; do NOT manually edit
 src/data/weather-cache.json  # Auto-generated nightly; do NOT manually edit
@@ -54,19 +58,30 @@ scripts/                     # Node/Bun scripts run outside the browser bundle
 infra/                       # Terraform configuration for AWS (S3, CloudFront, ACM, Route53)
 ```
 
-## Adding a ritt
+## Adding an event
 
-Edit `src/data/arrangements.json`. This file covers **cycling ritt only** — triathlon and running events are sourced separately (see Weather cache section). Each entry must follow the existing schema:
+Which file to edit depends on the discipline and whether the event is auto-fetched:
+
+| Discipline | Auto-fetched? | File to edit |
+|---|---|---|
+| Langrenn, or any discipline without an auto-sync script | No | `src/data/arrangements.json` |
+| Cycling — **not** listed in the NCF/EQ Timing API | No | `src/data/cycling-manual.json` |
+| Cycling — already fetched by NCF/EQ Timing, but missing waypoints | Yes (auto) | `src/data/cycling-waypoints.json` via `enrich-cycling-waypoints.ts` |
+| Triathlon, running | Yes (auto) | Do not edit — fix the fetch script or source data |
+
+### `arrangements.json` — langrenn and other manual events
+
+Edit `src/data/arrangements.json`. Each entry must follow the existing schema:
 
 ```jsonc
 {
-  "id": "kebab-case-id",            // used in the URL: /ritt/<id>
-  "name": "Ritt Name",
-  "discipline": "landevei",         // "landevei" or "terreng"
-  "distance": 88,                   // km
-  "elevationGain": 1200,            // metres
+  "id": "kebab-case-id",            // used in the URL: /arrangement/<id>
+  "name": "Event Name",
+  "discipline": "langrenn",         // "langrenn", "landevei", "terreng", etc.
+  "distance": 53,                   // km
+  "elevationGain": 1121,            // metres
   "region": "Innlandet",
-  "officialDate": "2025-08-23",     // ISO date, update each season
+  "officialDate": "2025-03-14",     // ISO date, update each season
   "officialStartTime": "08:00",     // optional HH:MM
   "url": "https://example.no/",     // optional race website
   "waypoints": [
@@ -75,6 +90,20 @@ Edit `src/data/arrangements.json`. This file covers **cycling ritt only** — tr
   ]
 }
 ```
+
+### `cycling-manual.json` — hand-curated cycling events
+
+Edit `src/data/cycling-manual.json` for cycling events that are **not** available via the NCF/EQ Timing API. The schema is the same as above plus an optional `distanceLabel` field for display purposes. Waypoints are inline.
+
+### `cycling-waypoints.json` — waypoint enrichment for NCF-fetched events
+
+If an event is already auto-fetched from the NCF API but has no waypoints, use the enrichment script:
+
+```bash
+bun scripts/enrich-cycling-waypoints.ts <event-id> <path/to/route.gpx>
+```
+
+This samples 5 evenly-spaced waypoints from the GPX, fetches terrain altitudes from Open-Meteo, and writes them into `cycling-waypoints.json`. They are merged into `cycling-events.json` on the next `bun run fetch-cycling` run.
 
 Waypoint coordinates should be verified against GPX files or race maps — many are still manually approximated.
 
