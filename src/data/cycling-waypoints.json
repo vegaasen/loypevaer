@@ -1759,6 +1759,582 @@
       "altitude": 10
     }
   ],
+  "skjaergardsrittet": [
+    {
+      "label": "Start – Straume/Sotra",
+      "lat": 60.36,
+      "lon": 5.092,
+      "altitude": 10
+    },
+    {
+      "label": "25% – Skogsvåg/Bjorøy",
+      "lat": 60.251,
+      "lon": 4.972,
+      "altitude": 50
+    },
+    {
+      "label": "50% – Rong/Øygarden",
+      "lat": 60.508,
+      "lon": 4.915,
+      "altitude": 20
+    },
+    {
+      "label": "75% – Bildøy/Kolltveit",
+      "lat": 60.484,
+      "lon": 5.039,
+      "altitude": 30
+    },
+    {
+      "label": "Mål – Straume",
+      "lat": 60.36,
+      "lon": 5.092,
+      "altitude": 10
+    }
+  ],
+  "byglandsfjorden-rundt": [
+    {
+      "label": "Start – Evjemoen",
+      "lat": 58.565,
+      "lon": 7.782,
+      "altitude": 100
+    },
+    {
+      "label": "25% – Bygland",
+      "lat": 58.672,
+      "lon": 7.797,
+      "altitude": 110
+    },
+    {
+      "label": "50% – Valle",
+      "lat": 59.205,
+      "lon": 7.534,
+      "altitude": 235
+    },
+    {
+      "label": "75% – Nomeland",
+      "lat": 58.8,
+      "lon": 7.748,
+      "altitude": 120
+    },
+    {
+      "label": "Mål – Evjemoen",
+      "lat": 58.565,
+      "lon": 7.782,
+      "altitude": 100
+    }
+  ],
+  "enebakk-rundt": [
+    {
+      "label": "Start – Enebakk",
+      "lat": 59.757,
+      "lon": 10.927,
+      "altitude": 140
+    },
+    {
+      "label": "25% – Ski/Langhus",
+      "lat": 59.717,
+      "lon": 10.865,
+      "altitude": 100
+    },
+    {
+      "label": "50% – Kråkstad/Hobøl",
+      "lat": 59.627,
+      "lon": 10.95,
+      "altitude": 120
+    },
+    {
+      "label": "75% – Ytre Enebakk",
+      "lat": 59.713,
+      "lon": 11.013,
+      "altitude": 130
+    },
+    {
+      "label": "Mål – Enebakk",
+      "lat": 59.757,
+      "lon": 10.927,
+      "altitude": 140
+    }
+  ],
+  "ceresrittet-master": [
+    {
+      "label": "Start – Leirsund",
+      "lat": 60.0,
+      "lon": 11.087,
+      "altitude": 110
+    },
+    {
+      "label": "25% – Sørum/Blaker",
+      "lat": 59.942,
+      "lon": 11.31,
+      "altitude": 130
+    },
+    {
+      "label": "50% – Nes/Årnes",
+      "lat": 60.065,
+      "lon": 11.48,
+      "altitude": 110
+    },
+    {
+      "label": "75% – Jessheim",
+      "lat": 60.142,
+      "lon": 11.175,
+      "altitude": 180
+    },
+    {
+      "label": "Mål – Leirsund",
+      "lat": 60.0,
+      "lon": 11.087,
+      "altitude": 110
+    }
+  ],
+  "ceresrittet-tur": [
+    {
+      "label": "Start – Leirsund",
+      "lat": 60.0,
+      "lon": 11.087,
+      "altitude": 110
+    },
+    {
+      "label": "25% – Sørum/Blaker",
+      "lat": 59.942,
+      "lon": 11.31,
+      "altitude": 130
+    },
+    {
+      "label": "50% – Nes/Årnes",
+      "lat": 60.065,
+      "lon": 11.48,
+      "altitude": 110
+    },
+    {
+      "label": "75% – Jessheim",
+      "lat": 60.142,
+      "lon": 11.175,
+      "altitude": 180
+    },
+    {
+      "label": "Mål – Leirsund",
+      "lat": 60.0,
+      "lon": 11.087,
+      "altitude": 110
+    }
+  ],
+  "follorittet-2026-mastercup-og-turritt": [
+    {
+      "label": "Start – Ski",
+      "lat": 59.717,
+      "lon": 10.865,
+      "altitude": 100
+    },
+    {
+      "label": "25% – Ås/Vinterbro",
+      "lat": 59.66,
+      "lon": 10.77,
+      "altitude": 90
+    },
+    {
+      "label": "50% – Vestby/Hølen",
+      "lat": 59.593,
+      "lon": 10.753,
+      "altitude": 80
+    },
+    {
+      "label": "75% – Drøbak/Frogn",
+      "lat": 59.667,
+      "lon": 10.618,
+      "altitude": 60
+    },
+    {
+      "label": "Mål – Ski",
+      "lat": 59.717,
+      "lon": 10.865,
+      "altitude": 100
+    }
+  ],
+  "ullensaker-rundt": [
+    {
+      "label": "Start – Nordkisa",
+      "lat": 60.191,
+      "lon": 11.258,
+      "altitude": 140
+    },
+    {
+      "label": "25% – Jessheim nord",
+      "lat": 60.184,
+      "lon": 11.164,
+      "altitude": 170
+    },
+    {
+      "label": "50% – Kløfta/Dal",
+      "lat": 60.084,
+      "lon": 11.142,
+      "altitude": 120
+    },
+    {
+      "label": "75% – Eidsvoll Verk",
+      "lat": 60.329,
+      "lon": 11.199,
+      "altitude": 130
+    },
+    {
+      "label": "Mål – Nordkisa",
+      "lat": 60.191,
+      "lon": 11.258,
+      "altitude": 140
+    }
+  ],
+  "finnskogkureren": [
+    {
+      "label": "Start – Lunderseter",
+      "lat": 60.297,
+      "lon": 12.272,
+      "altitude": 330
+    },
+    {
+      "label": "25% – Magnor",
+      "lat": 60.25,
+      "lon": 12.133,
+      "altitude": 280
+    },
+    {
+      "label": "50% – Vestmarka",
+      "lat": 60.194,
+      "lon": 12.1,
+      "altitude": 310
+    },
+    {
+      "label": "75% – Rørvik/Skotterud",
+      "lat": 60.238,
+      "lon": 12.249,
+      "altitude": 260
+    },
+    {
+      "label": "Mål – Lunderseter",
+      "lat": 60.297,
+      "lon": 12.272,
+      "altitude": 330
+    }
+  ],
+  "styggmannen-gravel-og-terrengritt": [
+    {
+      "label": "Start – Skien",
+      "lat": 59.266,
+      "lon": 9.531,
+      "altitude": 20
+    },
+    {
+      "label": "25% – Gvarv/Sauherad",
+      "lat": 59.378,
+      "lon": 9.303,
+      "altitude": 100
+    },
+    {
+      "label": "50% – Styggmannen topp",
+      "lat": 59.446,
+      "lon": 9.152,
+      "altitude": 600
+    },
+    {
+      "label": "75% – Kviteseid/Kvitsjø",
+      "lat": 59.397,
+      "lon": 9.028,
+      "altitude": 200
+    },
+    {
+      "label": "Mål – Skien",
+      "lat": 59.266,
+      "lon": 9.531,
+      "altitude": 20
+    }
+  ],
+  "tysvaerrittet": [
+    {
+      "label": "Start – Tysværvåg",
+      "lat": 59.323,
+      "lon": 5.481,
+      "altitude": 10
+    },
+    {
+      "label": "25% – Aksdal",
+      "lat": 59.494,
+      "lon": 5.676,
+      "altitude": 20
+    },
+    {
+      "label": "50% – Ølen/Vindafjord",
+      "lat": 59.6,
+      "lon": 5.795,
+      "altitude": 30
+    },
+    {
+      "label": "75% – Vats/Imsland",
+      "lat": 59.497,
+      "lon": 5.594,
+      "altitude": 40
+    },
+    {
+      "label": "Mål – Tysværvåg",
+      "lat": 59.323,
+      "lon": 5.481,
+      "altitude": 10
+    }
+  ],
+  "reistadgravel-100": [
+    {
+      "label": "Start – Setermoen",
+      "lat": 68.861,
+      "lon": 18.348,
+      "altitude": 100
+    },
+    {
+      "label": "25% – Bardufoss",
+      "lat": 69.058,
+      "lon": 18.54,
+      "altitude": 80
+    },
+    {
+      "label": "50% – Øverbygd",
+      "lat": 69.12,
+      "lon": 19.0,
+      "altitude": 120
+    },
+    {
+      "label": "75% – Målselv dal",
+      "lat": 68.995,
+      "lon": 18.819,
+      "altitude": 90
+    },
+    {
+      "label": "Mål – Setermoen",
+      "lat": 68.861,
+      "lon": 18.348,
+      "altitude": 100
+    }
+  ],
+  "sykkelkarusell-tromso-ritt-2": [
+    {
+      "label": "Start – Skjelnan",
+      "lat": 69.697,
+      "lon": 19.082,
+      "altitude": 20
+    },
+    {
+      "label": "25% – Tromsdalen",
+      "lat": 69.675,
+      "lon": 19.017,
+      "altitude": 30
+    },
+    {
+      "label": "50% – Tromsø sentrum",
+      "lat": 69.652,
+      "lon": 18.956,
+      "altitude": 10
+    },
+    {
+      "label": "75% – Breivika",
+      "lat": 69.683,
+      "lon": 18.975,
+      "altitude": 15
+    },
+    {
+      "label": "Mål – Skjelnan",
+      "lat": 69.697,
+      "lon": 19.082,
+      "altitude": 20
+    }
+  ],
+  "sykkelkarusell-tromso-ritt-11": [
+    {
+      "label": "Start – Eidkjosen",
+      "lat": 69.677,
+      "lon": 18.747,
+      "altitude": 10
+    },
+    {
+      "label": "25% – Kvaløysletta",
+      "lat": 69.722,
+      "lon": 18.817,
+      "altitude": 30
+    },
+    {
+      "label": "50% – Tromsø sentrum",
+      "lat": 69.652,
+      "lon": 18.956,
+      "altitude": 10
+    },
+    {
+      "label": "75% – Tromsdalen",
+      "lat": 69.675,
+      "lon": 19.017,
+      "altitude": 30
+    },
+    {
+      "label": "Mål – Eidkjosen",
+      "lat": 69.677,
+      "lon": 18.747,
+      "altitude": 10
+    }
+  ],
+  "arn-challenge": [
+    {
+      "label": "Start – Stokmarknes",
+      "lat": 68.567,
+      "lon": 14.913,
+      "altitude": 10
+    },
+    {
+      "label": "25% – Melbu/Hadsel",
+      "lat": 68.503,
+      "lon": 14.803,
+      "altitude": 30
+    },
+    {
+      "label": "50% – Sortland",
+      "lat": 68.697,
+      "lon": 15.413,
+      "altitude": 20
+    },
+    {
+      "label": "75% – Bø i Vesterålen",
+      "lat": 68.647,
+      "lon": 14.463,
+      "altitude": 30
+    },
+    {
+      "label": "Mål – Stokmarknes",
+      "lat": 68.567,
+      "lon": 14.913,
+      "altitude": 10
+    }
+  ],
+  "arctic-alta-fatbikerace": [
+    {
+      "label": "Start – Alta",
+      "lat": 69.967,
+      "lon": 23.273,
+      "altitude": 10
+    },
+    {
+      "label": "25% – Gargia/Altadalen",
+      "lat": 69.89,
+      "lon": 23.142,
+      "altitude": 120
+    },
+    {
+      "label": "50% – Mathisdalen",
+      "lat": 69.829,
+      "lon": 23.037,
+      "altitude": 250
+    },
+    {
+      "label": "75% – Kviby",
+      "lat": 69.913,
+      "lon": 23.395,
+      "altitude": 60
+    },
+    {
+      "label": "Mål – Alta",
+      "lat": 69.967,
+      "lon": 23.273,
+      "altitude": 10
+    }
+  ],
+  "hamarrittet": [
+    {
+      "label": "Start – Stange",
+      "lat": 60.71,
+      "lon": 11.136,
+      "altitude": 130
+    },
+    {
+      "label": "25% – Ottestad",
+      "lat": 60.771,
+      "lon": 11.057,
+      "altitude": 130
+    },
+    {
+      "label": "50% – Hamar sentrum",
+      "lat": 60.794,
+      "lon": 11.067,
+      "altitude": 130
+    },
+    {
+      "label": "75% – Ridabu",
+      "lat": 60.754,
+      "lon": 11.13,
+      "altitude": 135
+    },
+    {
+      "label": "Mål – Stange",
+      "lat": 60.71,
+      "lon": 11.136,
+      "altitude": 130
+    }
+  ],
+  "spinnsprinten": [
+    {
+      "label": "Start – Vestly/Jæren",
+      "lat": 58.729,
+      "lon": 5.711,
+      "altitude": 20
+    },
+    {
+      "label": "25% – Klepp",
+      "lat": 58.777,
+      "lon": 5.632,
+      "altitude": 30
+    },
+    {
+      "label": "50% – Bryne",
+      "lat": 58.733,
+      "lon": 5.643,
+      "altitude": 30
+    },
+    {
+      "label": "75% – Time/Undheim",
+      "lat": 58.686,
+      "lon": 5.725,
+      "altitude": 30
+    },
+    {
+      "label": "Mål – Vestly",
+      "lat": 58.729,
+      "lon": 5.711,
+      "altitude": 20
+    }
+  ],
+  "lillehammer-sykkelfestival-2026-sondag": [
+    {
+      "label": "Start – Tingberg/Øyer",
+      "lat": 61.265,
+      "lon": 10.414,
+      "altitude": 200
+    },
+    {
+      "label": "25% – Tretten",
+      "lat": 61.354,
+      "lon": 10.297,
+      "altitude": 180
+    },
+    {
+      "label": "50% – Sjusjøen",
+      "lat": 61.248,
+      "lon": 10.578,
+      "altitude": 900
+    },
+    {
+      "label": "75% – Nordseter",
+      "lat": 61.18,
+      "lon": 10.5,
+      "altitude": 710
+    },
+    {
+      "label": "Mål – Tingberg/Øyer",
+      "lat": 61.265,
+      "lon": 10.414,
+      "altitude": 200
+    }
+  ],
   "sognefjellrittet": [
     {
       "label": "Start – Lom",
