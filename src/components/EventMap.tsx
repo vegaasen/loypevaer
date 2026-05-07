@@ -134,6 +134,14 @@ export function EventMap({ waypoints, name, discipline }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen, polylineCoords]);
 
+  if (waypoints.length < 2) {
+    return (
+      <section>
+        <p>Kartet er ikke tilgjengelig – veipunkter mangler.</p>
+      </section>
+    );
+  }
+
   return (
     <details ref={detailsRef} className="ritt-map__details">
       <summary className="ritt-map__summary">
