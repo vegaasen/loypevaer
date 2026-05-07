@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-07T07:48:29.940Z",
+  "generatedAt": "2026-05-07T07:56:46.767Z",
   "source": "eqtiming.com / Norges Cykleforbund (organizationId=13)",
   "events": [
     {
@@ -301,9 +301,34 @@
       "url": "www.valdrestrippelen.no",
       "waypoints": [
         {
-          "label": "Start/Mål – Vaset stadion",
-          "lat": 60.9929331,
-          "lon": 8.9708557
+          "label": "Start – Vaset Stadion",
+          "lat": 61.007,
+          "lon": 8.976,
+          "altitude": 955
+        },
+        {
+          "label": "25% – Slidrefjord nord",
+          "lat": 61.074,
+          "lon": 9.112,
+          "altitude": 430
+        },
+        {
+          "label": "50% – Beito/Beitostølen",
+          "lat": 61.257,
+          "lon": 8.907,
+          "altitude": 900
+        },
+        {
+          "label": "75% – Øystre Slidre",
+          "lat": 61.15,
+          "lon": 8.97,
+          "altitude": 700
+        },
+        {
+          "label": "Mål – Vaset Stadion",
+          "lat": 61.007,
+          "lon": 8.976,
+          "altitude": 955
         }
       ]
     },
@@ -405,9 +430,34 @@
       "url": "www.nordhordlandsk.no",
       "waypoints": [
         {
-          "label": "Start/Mål – Alversund ",
-          "lat": 60.5711002,
-          "lon": 5.2347922
+          "label": "Start – Alversund",
+          "lat": 60.571,
+          "lon": 5.235,
+          "altitude": 10
+        },
+        {
+          "label": "25% – Isdalstø/Radøy",
+          "lat": 60.657,
+          "lon": 5.121,
+          "altitude": 30
+        },
+        {
+          "label": "50% – Manger/Radøy nord",
+          "lat": 60.741,
+          "lon": 5.014,
+          "altitude": 50
+        },
+        {
+          "label": "75% – Knarvik",
+          "lat": 60.544,
+          "lon": 5.296,
+          "altitude": 20
+        },
+        {
+          "label": "Mål – Alversund",
+          "lat": 60.571,
+          "lon": 5.235,
+          "altitude": 10
         }
       ]
     },
@@ -509,9 +559,34 @@
       "url": "https://www.birkebeiner.no",
       "waypoints": [
         {
-          "label": "Start/Mål – Rena",
-          "lat": 61.1327634,
-          "lon": 11.3721973
+          "label": "Start – Rena",
+          "lat": 61.133,
+          "lon": 11.377,
+          "altitude": 256
+        },
+        {
+          "label": "25% – Høsbjør",
+          "lat": 61.05,
+          "lon": 11.12,
+          "altitude": 620
+        },
+        {
+          "label": "50% – Sjusjøen",
+          "lat": 61.248,
+          "lon": 10.578,
+          "altitude": 900
+        },
+        {
+          "label": "75% – Nordseter",
+          "lat": 61.18,
+          "lon": 10.5,
+          "altitude": 710
+        },
+        {
+          "label": "Mål – Lillehammer",
+          "lat": 61.115,
+          "lon": 10.466,
+          "altitude": 185
         }
       ]
     },
@@ -613,9 +688,34 @@
       "url": "https://gran-fondo.no/index.php",
       "waypoints": [
         {
-          "label": "Start/Mål – Sandnes (Modena Fliser)",
-          "lat": 58.8552544,
-          "lon": 5.7075943
+          "label": "Start – Sandnes",
+          "lat": 58.855,
+          "lon": 5.708,
+          "altitude": 20
+        },
+        {
+          "label": "25% – Bryne",
+          "lat": 58.733,
+          "lon": 5.643,
+          "altitude": 30
+        },
+        {
+          "label": "50% – Nærbø",
+          "lat": 58.669,
+          "lon": 5.648,
+          "altitude": 25
+        },
+        {
+          "label": "75% – Klepp/Kleppe",
+          "lat": 58.777,
+          "lon": 5.632,
+          "altitude": 30
+        },
+        {
+          "label": "Mål – Sandnes",
+          "lat": 58.855,
+          "lon": 5.708,
+          "altitude": 20
         }
       ]
     },
@@ -631,9 +731,34 @@
       "url": "",
       "waypoints": [
         {
-          "label": "Start/Mål – Birkenesparken",
-          "lat": 58.3347296,
-          "lon": 8.2296328
+          "label": "Start – Birkenesparken",
+          "lat": 58.335,
+          "lon": 8.23,
+          "altitude": 70
+        },
+        {
+          "label": "25% – Herefoss",
+          "lat": 58.715,
+          "lon": 8.303,
+          "altitude": 127
+        },
+        {
+          "label": "50% – Birkenes",
+          "lat": 58.612,
+          "lon": 8.4,
+          "altitude": 131
+        },
+        {
+          "label": "75% – Engesland",
+          "lat": 58.499,
+          "lon": 8.176,
+          "altitude": 100
+        },
+        {
+          "label": "Mål – Birkenesparken",
+          "lat": 58.335,
+          "lon": 8.23,
+          "altitude": 70
         }
       ]
     },
@@ -649,9 +774,34 @@
       "url": "https://www.facebook.com/share/VqLijkUQyhQzTw5M/?",
       "waypoints": [
         {
-          "label": "Start/Mål – Korsgård skole",
-          "lat": 59.5887939,
-          "lon": 11.1964899
+          "label": "Start – Korsgård/Råde",
+          "lat": 59.589,
+          "lon": 11.196,
+          "altitude": 40
+        },
+        {
+          "label": "25% – Rygge",
+          "lat": 59.378,
+          "lon": 10.713,
+          "altitude": 50
+        },
+        {
+          "label": "50% – Sarpsborg",
+          "lat": 59.284,
+          "lon": 11.108,
+          "altitude": 50
+        },
+        {
+          "label": "75% – Skiptvet",
+          "lat": 59.464,
+          "lon": 11.175,
+          "altitude": 60
+        },
+        {
+          "label": "Mål – Korsgård/Råde",
+          "lat": 59.589,
+          "lon": 11.196,
+          "altitude": 40
         }
       ]
     },
@@ -754,8 +904,33 @@
       "waypoints": [
         {
           "label": "Start/Mål – Hønefoss",
-          "lat": 60.1662082,
-          "lon": 10.255486
+          "lat": 60.166,
+          "lon": 10.255,
+          "altitude": 80
+        },
+        {
+          "label": "25% – Jevnaker",
+          "lat": 60.233,
+          "lon": 10.227,
+          "altitude": 130
+        },
+        {
+          "label": "50% – Noresund/Krødsherad",
+          "lat": 60.194,
+          "lon": 9.9,
+          "altitude": 150
+        },
+        {
+          "label": "75% – Tyristrand",
+          "lat": 60.081,
+          "lon": 10.099,
+          "altitude": 120
+        },
+        {
+          "label": "Mål – Hønefoss",
+          "lat": 60.166,
+          "lon": 10.255,
+          "altitude": 80
         }
       ]
     },
@@ -850,9 +1025,34 @@
       "url": "http://ryfylkesykkelklubb.no/informasjon-om-ryfylkerittet/",
       "waypoints": [
         {
-          "label": "Start/Mål – Jørpeland",
-          "lat": 59.0208917,
-          "lon": 6.0393553
+          "label": "Start – Jørpeland",
+          "lat": 59.021,
+          "lon": 6.039,
+          "altitude": 10
+        },
+        {
+          "label": "25% – Forsand",
+          "lat": 58.898,
+          "lon": 6.099,
+          "altitude": 50
+        },
+        {
+          "label": "50% – Høle",
+          "lat": 58.978,
+          "lon": 5.904,
+          "altitude": 80
+        },
+        {
+          "label": "75% – Tau",
+          "lat": 59.062,
+          "lon": 5.912,
+          "altitude": 20
+        },
+        {
+          "label": "Mål – Jørpeland",
+          "lat": 59.021,
+          "lon": 6.039,
+          "altitude": 10
         }
       ]
     },
@@ -868,9 +1068,34 @@
       "url": "atlanticgravel.com",
       "waypoints": [
         {
-          "label": "Start/Mål – Bud, Hustadvika",
-          "lat": 62.9072555,
-          "lon": 6.9140743
+          "label": "Start – Bud",
+          "lat": 62.907,
+          "lon": 6.914,
+          "altitude": 10
+        },
+        {
+          "label": "25% – Aukra/Otrøya",
+          "lat": 62.867,
+          "lon": 6.559,
+          "altitude": 40
+        },
+        {
+          "label": "50% – Molde ytre",
+          "lat": 62.736,
+          "lon": 6.978,
+          "altitude": 60
+        },
+        {
+          "label": "75% – Fræna",
+          "lat": 62.853,
+          "lon": 7.258,
+          "altitude": 50
+        },
+        {
+          "label": "Mål – Bud",
+          "lat": 62.907,
+          "lon": 6.914,
+          "altitude": 10
         }
       ]
     },
@@ -929,9 +1154,34 @@
       "url": "",
       "waypoints": [
         {
-          "label": "Start/Mål – Egersund",
-          "lat": 58.4515121,
-          "lon": 6.0007554
+          "label": "Start – Egersund",
+          "lat": 58.452,
+          "lon": 6.001,
+          "altitude": 10
+        },
+        {
+          "label": "25% – Sokndal",
+          "lat": 58.329,
+          "lon": 6.175,
+          "altitude": 80
+        },
+        {
+          "label": "50% – Lund/Moi",
+          "lat": 58.357,
+          "lon": 6.538,
+          "altitude": 120
+        },
+        {
+          "label": "75% – Bjerkreim",
+          "lat": 58.566,
+          "lon": 6.317,
+          "altitude": 150
+        },
+        {
+          "label": "Mål – Egersund",
+          "lat": 58.452,
+          "lon": 6.001,
+          "altitude": 10
         }
       ]
     },
@@ -1008,9 +1258,34 @@
       "url": "www.reistadrittet.no",
       "waypoints": [
         {
-          "label": "Start/Mål – Setermoen",
-          "lat": 68.8609408,
-          "lon": 18.3482428
+          "label": "Start – Setermoen",
+          "lat": 68.861,
+          "lon": 18.348,
+          "altitude": 100
+        },
+        {
+          "label": "25% – Innset",
+          "lat": 68.901,
+          "lon": 18.526,
+          "altitude": 350
+        },
+        {
+          "label": "50% – Reisafjell platå",
+          "lat": 68.944,
+          "lon": 18.673,
+          "altitude": 600
+        },
+        {
+          "label": "75% – Nedstigning",
+          "lat": 68.916,
+          "lon": 18.512,
+          "altitude": 280
+        },
+        {
+          "label": "Mål – Setermoen",
+          "lat": 68.861,
+          "lon": 18.348,
+          "altitude": 100
         }
       ]
     },
@@ -1080,9 +1355,34 @@
       "url": "https://www.facebook.com/groups/AalesundOCK",
       "waypoints": [
         {
-          "label": "Start/Mål – Ålesund",
-          "lat": 62.4802364,
-          "lon": 6.5550739
+          "label": "Start – Ålesund",
+          "lat": 62.473,
+          "lon": 6.149,
+          "altitude": 10
+        },
+        {
+          "label": "25% – Ørskog/Skodje",
+          "lat": 62.487,
+          "lon": 6.726,
+          "altitude": 120
+        },
+        {
+          "label": "50% – Sykkylven",
+          "lat": 62.389,
+          "lon": 6.577,
+          "altitude": 30
+        },
+        {
+          "label": "75% – Sula",
+          "lat": 62.428,
+          "lon": 6.135,
+          "altitude": 50
+        },
+        {
+          "label": "Mål – Ålesund",
+          "lat": 62.473,
+          "lon": 6.149,
+          "altitude": 10
         }
       ]
     },
@@ -1116,9 +1416,34 @@
       "url": "http://www.grimstadsk.no/p/20407/bukkene-bruse",
       "waypoints": [
         {
-          "label": "Start/Mål – Grimstad",
-          "lat": 58.2839967,
-          "lon": 8.7128291
+          "label": "Start – Grimstad",
+          "lat": 58.284,
+          "lon": 8.713,
+          "altitude": 20
+        },
+        {
+          "label": "25% – Lillesand",
+          "lat": 58.251,
+          "lon": 8.379,
+          "altitude": 30
+        },
+        {
+          "label": "50% – Birkenes",
+          "lat": 58.335,
+          "lon": 8.23,
+          "altitude": 70
+        },
+        {
+          "label": "75% – Froland",
+          "lat": 58.396,
+          "lon": 8.456,
+          "altitude": 100
+        },
+        {
+          "label": "Mål – Grimstad",
+          "lat": 58.284,
+          "lon": 8.713,
+          "altitude": 20
         }
       ]
     },
@@ -1371,9 +1696,34 @@
       "url": "",
       "waypoints": [
         {
-          "label": "Start/Mål – Vestly",
-          "lat": 58.7290674,
-          "lon": 5.71071
+          "label": "Start – Sirdal/Sinnes",
+          "lat": 58.982,
+          "lon": 6.648,
+          "altitude": 450
+        },
+        {
+          "label": "25% – Tonstad",
+          "lat": 58.674,
+          "lon": 6.697,
+          "altitude": 75
+        },
+        {
+          "label": "50% – Ålgård",
+          "lat": 58.766,
+          "lon": 5.853,
+          "altitude": 80
+        },
+        {
+          "label": "75% – Klepp/Jæren",
+          "lat": 58.777,
+          "lon": 5.632,
+          "altitude": 30
+        },
+        {
+          "label": "Mål – Bryne",
+          "lat": 58.733,
+          "lon": 5.643,
+          "altitude": 30
         }
       ]
     },
@@ -1522,9 +1872,34 @@
       "url": "http://www.tcyk.no",
       "waypoints": [
         {
-          "label": "Start/Mål – Tromsø",
-          "lat": 69.6516345,
-          "lon": 18.9558585
+          "label": "Start – Tromsø sentrum",
+          "lat": 69.652,
+          "lon": 18.956,
+          "altitude": 10
+        },
+        {
+          "label": "25% – Kvaløysletta",
+          "lat": 69.722,
+          "lon": 18.817,
+          "altitude": 30
+        },
+        {
+          "label": "50% – Kvaløya vest",
+          "lat": 69.791,
+          "lon": 18.622,
+          "altitude": 50
+        },
+        {
+          "label": "75% – Tromsøya nord",
+          "lat": 69.71,
+          "lon": 19,
+          "altitude": 20
+        },
+        {
+          "label": "Mål – Tromsø sentrum",
+          "lat": 69.652,
+          "lon": 18.956,
+          "altitude": 10
         }
       ]
     },
