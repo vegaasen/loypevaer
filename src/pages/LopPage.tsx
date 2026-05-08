@@ -12,20 +12,24 @@ import { monthName } from "../lib/month";
 
 const lopingRaces = allArrangements.filter((r) => r.discipline === "løping");
 
-type DistanceFilter = "alle" | "10k" | "halvmaraton" | "maraton";
+type DistanceFilter = "alle" | "10k" | "10-20km" | "halvmaraton" | "halvmaraton-pluss" | "maraton";
 
 const DISTANCE_LABELS: Record<DistanceFilter, string> = {
   alle: "Alle",
   "10k": "≤ 10 km",
+  "10-20km": "10–20 km",
   halvmaraton: "Halvmaraton",
+  "halvmaraton-pluss": "Halvmaraton+",
   maraton: "Maraton",
 };
 
 function matchesDistance(distance: number, filter: DistanceFilter): boolean {
   if (filter === "alle") return true;
   if (filter === "10k") return distance <= 10;
-  if (filter === "halvmaraton") return distance > 10 && distance <= 22;
-  if (filter === "maraton") return distance > 22;
+  if (filter === "10-20km") return distance > 10 && distance <= 20;
+  if (filter === "halvmaraton") return distance > 20 && distance <= 22;
+  if (filter === "halvmaraton-pluss") return distance > 22 && distance <= 44;
+  if (filter === "maraton") return distance > 44 && distance <= 46;
   return true;
 }
 
@@ -109,7 +113,7 @@ export function LopPage() {
 
       <div className="home-page__filter">
         <div role="group" aria-label="Filtrer etter distanse" className="home-page__filter-pills">
-          {(["alle", "10k", "halvmaraton", "maraton"] as DistanceFilter[]).map((d) => (
+          {(["alle", "10k", "10-20km", "halvmaraton", "halvmaraton-pluss", "maraton"] as DistanceFilter[]).map((d) => (
             <button
               key={d}
               className={`home-page__filter-pill${distanceFilter === d ? " home-page__filter-pill--active" : ""}`}

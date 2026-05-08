@@ -1827,7 +1827,19 @@ code {
 }
 
 @media (prefers-color-scheme: dark) {
-  .running-row__category--halvmaraton {
+.running-row__category--10-20km {
+  background: color-mix(in srgb, #1a9e8f 14%, transparent);
+  color: #1a9e8f;
+}
+
+@media (prefers-color-scheme: dark) {
+  .running-row__category--10-20km {
+    background: color-mix(in srgb, #4dd4c4 14%, transparent);
+    color: #4dd4c4;
+  }
+}
+
+.running-row__category--halvmaraton {
     background: color-mix(in srgb, #6fb3f5 14%, transparent);
     color: #6fb3f5;
   }
@@ -1839,7 +1851,19 @@ code {
 }
 
 @media (prefers-color-scheme: dark) {
-  .running-row__category--maraton {
+.running-row__category--halvmaraton-pluss {
+  background: color-mix(in srgb, #c0623a 14%, transparent);
+  color: #c0623a;
+}
+
+@media (prefers-color-scheme: dark) {
+  .running-row__category--halvmaraton-pluss {
+    background: color-mix(in srgb, #f0956a 14%, transparent);
+    color: #f0956a;
+  }
+}
+
+.running-row__category--maraton {
     background: color-mix(in srgb, #c485d8 14%, transparent);
     color: #c485d8;
   }

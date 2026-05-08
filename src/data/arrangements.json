@@ -560,5 +560,102 @@
         "altitude": 930
       }
     ]
+  },
+  {
+    "id": "norseman-xtreme-triathlon",
+    "name": "Norseman Xtreme Triathlon",
+    "discipline": "triathlon",
+    "officialDate": "2026-08-01",
+    "officialStartTime": "05:00",
+    "distance": 226,
+    "elevationGain": 5000,
+    "distanceLabel": "Langdistanse (3.8km svøm / 180km sykkel / 42km løp)",
+    "region": "Vestland",
+    "url": "https://nxtri.com",
+    "waypoints": [
+      {
+        "label": "Svømmestart – Eidfjord (ferge)",
+        "lat": 60.4629,
+        "lon": 7.0732,
+        "altitude": 0
+      },
+      {
+        "label": "Sykkel – Dyranut (topp Hardangervidda)",
+        "lat": 60.3872,
+        "lon": 7.4251,
+        "altitude": 1246
+      },
+      {
+        "label": "Sykkel – Imingfjell",
+        "lat": 60.1605,
+        "lon": 8.5786,
+        "altitude": 1165
+      },
+      {
+        "label": "Løpestart – Austbygde",
+        "lat": 59.9167,
+        "lon": 8.9167,
+        "altitude": 700
+      },
+      {
+        "label": "Mål – Gaustatoppen",
+        "lat": 59.8533,
+        "lon": 8.6494,
+        "altitude": 1883
+      }
+    ]
+  },
+  {
+    "id": "oslo-triathlon",
+    "name": "Oslo Triathlon",
+    "discipline": "triathlon",
+    "officialDate": "2026-08-08",
+    "distance": 51,
+    "distanceLabel": "Standarddistanse (1.5km svøm / 40km sykkel / 10km løp)",
+    "region": "Oslo",
+    "url": "https://www.oslo-tri.no",
+    "waypoints": [
+      {
+        "label": "Start/Mål – Sørenga, Oslo",
+        "lat": 59.9027,
+        "lon": 10.7528,
+        "altitude": 2
+      }
+    ]
+  },
+  {
+    "id": "bergen-triathlon",
+    "name": "Bergen Triathlon",
+    "discipline": "triathlon",
+    "officialDate": "2026-09-01",
+    "distance": 51,
+    "distanceLabel": "Standarddistanse (1.5km svøm / 40km sykkel / 10km løp)",
+    "region": "Vestland",
+    "url": "https://www.bergentriatlon.no",
+    "waypoints": [
+      {
+        "label": "Start/Mål – Bergen",
+        "lat": 60.3913,
+        "lon": 5.3221,
+        "altitude": 5
+      }
+    ]
+  },
+  {
+    "id": "konnerudlopet",
+    "name": "Konnerudløpet",
+    "discipline": "terrengløp",
+    "distance": 21,
+    "officialDate": "2026-05-30",
+    "officialStartTime": "10:45",
+    "region": "Viken",
+    "url": "https://konnerud.no/konnerudlopet",
+    "waypoints": [
+      { "label": "Start – Konnerudhallen", "lat": 59.71382, "lon": 10.14797, "altitude": 200 },
+      { "label": "25% – Konnerudmarka", "lat": 59.71023, "lon": 10.18190, "altitude": 224 },
+      { "label": "50% – Høydepunkt", "lat": 59.72759, "lon": 10.15963, "altitude": 301 },
+      { "label": "75% – Nedstigning", "lat": 59.72012, "lon": 10.17110, "altitude": 298 },
+      { "label": "Mål – Konnerudhallen", "lat": 59.71374, "lon": 10.14837, "altitude": 199 }
+    ]
   }
 ]
