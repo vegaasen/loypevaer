@@ -511,5 +511,54 @@
         "altitude": 200
       }
     ]
+  },
+  {
+    "id": "axtri-2026",
+    "name": "AXTRI 2026",
+    "discipline": "triathlon",
+    "officialDate": "2026-08-15",
+    "officialStartTime": "07:00",
+    "distance": 120,
+    "elevationGain": 4200,
+    "region": "Vestland",
+    "url": "https://axtri.no",
+    "waypoints": [
+      {
+        "label": "Svømmestart – Laguna Beach, Aurland",
+        "lat": 60.902,
+        "lon": 7.185,
+        "altitude": 2
+      },
+      {
+        "label": "Sykkel – Stegastein utsiktspunkt",
+        "lat": 60.858,
+        "lon": 7.132,
+        "altitude": 650
+      },
+      {
+        "label": "Sykkel – Aurlandsfjellet (høydepunkt)",
+        "lat": 60.820,
+        "lon": 7.250,
+        "altitude": 1320
+      },
+      {
+        "label": "Sykkel – Erdal/Flåm (vendepunkt)",
+        "lat": 60.863,
+        "lon": 7.107,
+        "altitude": 5
+      },
+      {
+        "label": "Løpestart – Vassbygdi",
+        "lat": 60.887,
+        "lon": 7.270,
+        "altitude": 50
+      },
+      {
+        "label": "Mål – Østerbø",
+        "lat": 60.830,
+        "lon": 7.360,
+        "altitude": 930
+      }
+    ]
   }
 ]
