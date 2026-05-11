@@ -69,3 +69,14 @@ export function trackExternalLinkClick(url: string, raceName: string) {
     link_url: url,
   });
 }
+
+/**
+ * Fired when a user submits feedback via the snackbar prompt.
+ * value: 5 = thumbs up, 1 = thumbs down (extensible to full 1–5 scale).
+ */
+export function trackFeedback(value: 1 | 5, eventId: string): void {
+  safeGtagEvent("user_feedback", {
+    feedback_value: value,
+    event_id: eventId,
+  });
+}
