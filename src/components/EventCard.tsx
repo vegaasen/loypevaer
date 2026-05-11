@@ -46,6 +46,7 @@ export function EventCard({
   return (
     <Link
       to={`/arrangement/${id}`}
+      state={{ from: "/" }}
       className={`ritt-card${planned ? " ritt-card--planned" : ""}${isPast ? " ritt-card--past" : ""}${isCancelled ? " ritt-card--cancelled" : ""}`}
     >
       <div className="ritt-card__name">

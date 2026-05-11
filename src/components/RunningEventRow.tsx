@@ -42,6 +42,7 @@ export function RunningEventRow({
   return (
     <Link
       to={`/arrangement/${id}`}
+      state={{ from: "/lop" }}
       className={[
         "running-row",
         planned ? "running-row--planned" : "",

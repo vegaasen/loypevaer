@@ -20,6 +20,7 @@ import { isForecastRange } from "../lib/weather";
 import { ShareButton } from "../components/ShareButton";
 import { formatNorwegianDate, parseDateLocal } from "../lib/dates";
 import { trackRaceSelected, trackExternalLinkClick, trackWaypointSelected } from "../lib/analytics";
+import { FeedbackSnackbar } from "../components/FeedbackSnackbar";
 
 export function EventPage() {
   const { id } = useParams<{ id: string }>();
@@ -333,6 +334,7 @@ export function EventPage() {
           />
         </section>
       )}
+      <FeedbackSnackbar eventId={id ?? ""} />
     </div>
   );
 }
