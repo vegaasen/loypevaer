@@ -1,4 +1,5 @@
-import { defineConfig } from 'vite'
+/// <reference types="vitest" />
+import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 
@@ -98,6 +99,14 @@ export default defineConfig({
             id.includes("node_modules/react-router")
           ) return "vendor-react";
         },
+      },
+    },
+  },
+  test: {
+    environment: 'jsdom',
+    environmentOptions: {
+      jsdom: {
+        url: 'http://localhost',
       },
     },
   },
