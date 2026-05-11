@@ -13,7 +13,7 @@ on:
 
 jobs:
   ci:
-    name: Lint & Build
+    name: Lint, Test & Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -27,6 +27,9 @@ jobs:
 
       - name: Lint
         run: bun run lint
+
+      - name: Test
+        run: bun run test
 
       - name: Build
         run: bun run build

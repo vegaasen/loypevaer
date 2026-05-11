@@ -20,15 +20,16 @@ bun run fetch-cycling      # refresh src/data/cycling-events.json from NCF/EQ Ti
 bun run fetch-triathlon    # refresh src/data/triathlon-events.json
 bun run fetch-running      # refresh src/data/running-events.json
 bun run generate-sitemap   # generate sitemap (also runs automatically before every build)
+bun run test               # run Vitest tests
+bun run test:watch         # run Vitest in watch mode
+bun run test:coverage      # run tests with coverage report
 bun run preview            # preview production build locally (vite preview)
 ```
 
-**There is no test suite yet.** Do not run `vitest`, `jest`, or `npm test` — they will fail. Adding Vitest is an open roadmap item.
-
-CI runs `lint` + `build` on every push/PR. Always verify both pass before considering a task done:
+CI runs `lint` + `test` + `build` on every push/PR. Always verify all three pass before considering a task done:
 
 ```bash
-bun run lint && bun run build
+bun run lint && bun run test && bun run build
 ```
 
 ## Key conventions
@@ -119,7 +120,7 @@ Waypoint coordinates should be verified against GPX files or race maps — many 
 
 | Workflow | Trigger | What it does |
 |---|---|---|
-| `ci.yml` | push/PR (non-doc files) | lint + build |
+| `ci.yml` | push/PR (non-doc files) | lint + test + build |
 | `pages.yml` | push to `main` (non-doc files) | build + deploy to GitHub Pages |
 | `deploy-aws.yml` | push to `main` (non-doc files) | build + deploy to AWS (S3 + CloudFront) |
 | `refresh-weather.yml` | nightly 03:00 UTC + manual | fetch weather cache + commit |
