@@ -7,6 +7,7 @@ export function ScrollToTopButton() {
     const onScroll = () => {
       setVisible(window.scrollY > 300);
     };
+    onScroll(); // check initial position on mount
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);

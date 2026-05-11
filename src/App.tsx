@@ -9,6 +9,7 @@ import { ReloadPrompt } from "./components/ReloadPrompt";
 import { CookieBanner } from "./components/CookieBanner";
 import { usePageTracking } from "./hooks/usePageTracking";
 import { restoreConsentFromStorage } from "./lib/analytics";
+import { ScrollToTopButton } from "./components/ScrollToTopButton";
 import "./App.css";
 
 // Restore previously stored consent so returning visitors don't lose their choice
@@ -45,6 +46,7 @@ function RouterContent() {
         </Routes>
       </Suspense>
       <SiteFooter />
+      <ScrollToTopButton />
     </>
   );
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 const STORAGE_KEY = "loypevaer:feedback-last-shown";
@@ -36,13 +36,16 @@ export function useFeedbackPrompt(): FeedbackPromptState {
   const from =
     (location.state as { from?: string } | null)?.from ?? null;
 
-  const [visible, setVisible] = useState<boolean>(() => {
-    const shouldShow = from !== null && LIST_ROUTES.has(from) && isCooledDown();
+  const shouldShow = from !== null && LIST_ROUTES.has(from) && isCooledDown();
+
+  const [visible, setVisible] = useState<boolean>(shouldShow);
+
+  useEffect(() => {
     if (shouldShow) {
       recordShown();
     }
-    return shouldShow;
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // intentionally runs once on mount
 
   return {
     visible,
