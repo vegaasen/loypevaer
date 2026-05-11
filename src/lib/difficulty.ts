@@ -2,7 +2,7 @@ import type { WaypointWeather } from "../hooks/useWeather";
 import type { Waypoint } from "./weather";
 import { windRelativeLabel, routeBearingForWaypoint } from "./wind";
 
-export type DifficultyLevel = "lett" | "moderat" | "krevende" | "hardt";
+type DifficultyLevel = "lett" | "moderat" | "krevende" | "hardt";
 
 export type DifficultyResult = {
   label: string;

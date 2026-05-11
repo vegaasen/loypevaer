@@ -156,7 +156,7 @@ export function isForecastRange(date: string): boolean {
   return diffDays >= 0 && diffDays <= 16;
 }
 
-export async function fetchForecastWeather(
+async function fetchForecastWeather(
   waypoint: Waypoint,
   date: string
 ): Promise<WeatherData> {
@@ -210,7 +210,7 @@ export async function fetchForecastWeather(
  * Checks the pre-built weather cache first (src/data/weather-cache.json).
  * Falls back to live API calls only if the cache entry is missing.
  */
-export async function fetchClimateAverage(
+async function fetchClimateAverage(
   waypoint: Waypoint,
   date: string
 ): Promise<WeatherData> {
@@ -322,7 +322,7 @@ export async function fetchWeather(
  * Fetches hourly forecast weather for a specific datetime ("YYYY-MM-DDTHH:00").
  * Falls back to daily data for tempMax/tempMin.
  */
-export async function fetchForecastWeatherHourly(
+async function fetchForecastWeatherHourly(
   waypoint: Waypoint,
   datetime: string
 ): Promise<WeatherData> {
@@ -384,7 +384,7 @@ export async function fetchForecastWeatherHourly(
 /**
  * Fetches hourly climate average for a specific datetime across the past 10 years.
  */
-export async function fetchClimateAverageHourly(
+async function fetchClimateAverageHourly(
   waypoint: Waypoint,
   datetime: string
 ): Promise<WeatherData> {

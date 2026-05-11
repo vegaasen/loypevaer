@@ -6,8 +6,6 @@
 /** Canonical base URL (unicode form, for meta tags / OG). No trailing slash. */
 export const SITE_URL = "https://www.løypevær.no";
 
-/** ASCII-safe (punycode) base URL for XML sitemap and robots.txt. No trailing slash. */
-export const SITE_URL_ASCII = "https://www.xn--lypevaer-d8a.no";
 
 /**
  * Norwegian SEO keywords per discipline — used in meta titles and descriptions

@@ -17,6 +17,7 @@ Pick a Norwegian race, choose a date, and get weather conditions at key waypoint
   <a href="https://bun.sh"><img src="https://img.shields.io/badge/Bun-runtime-F9F1E1?style=for-the-badge&logo=bun&logoColor=black" alt="Bun"></a>
   <a href="https://tanstack.com/query"><img src="https://img.shields.io/badge/TanStack_Query-v5-FF4154?style=for-the-badge&logo=reactquery&logoColor=white" alt="TanStack Query"></a>
   <a href="https://open-meteo.com"><img src="https://img.shields.io/badge/Open--Meteo-free_API-00B4D8?style=for-the-badge" alt="Open-Meteo"></a>
+  <a href="https://vitest.dev"><img src="https://img.shields.io/badge/Vitest-4-6E9F18?style=for-the-badge&logo=vitest&logoColor=white" alt="Vitest"></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-brightgreen?style=for-the-badge" alt="License"></a>
 </p>
 
@@ -147,6 +148,9 @@ bun install
 bun run dev              # starts dev server
 bun run build            # production build (tsc + vite, includes sitemap generation)
 bun run lint             # ESLint (type-aware)
+bun run test             # run test suite (Vitest)
+bun run test:watch       # run tests in watch mode
+bun run test:coverage    # run tests with v8 coverage report
 bun run fetch-weather    # refresh src/data/weather-cache.json manually
 bun run fetch-triathlon  # refresh src/data/triathlon-events.json manually
 bun run fetch-running    # refresh src/data/running-events.json manually
@@ -207,6 +211,10 @@ src/
     LopPage.tsx                  # Running events list grouped by year/month
     HvaErRittvaerPage.tsx        # About / SEO landing page
     NotFoundPage.tsx             # 404 catch-all
+  test/
+    setup.ts                     # jest-dom matchers + MSW server lifecycle
+    handlers.ts                  # MSW mock handlers for Open-Meteo APIs
+    server.ts                    # MSW node server instance
   App.tsx                        # Router + QueryClientProvider
 scripts/
   fetch-weather-cache.ts         # Fetches historical data and writes weather-cache.json
@@ -227,6 +235,7 @@ scripts/
 | Data fetching | ![TanStack Query](https://img.shields.io/badge/-TanStack_Query_v5-FF4154?logo=reactquery&logoColor=white&style=flat-square) |
 | Map | ![Leaflet](https://img.shields.io/badge/-Leaflet-199900?logo=leaflet&logoColor=white&style=flat-square) |
 | PWA | ![PWA](https://img.shields.io/badge/-vite--plugin--pwa-5A0FC8?logo=pwa&logoColor=white&style=flat-square) |
+| Testing | ![Vitest](https://img.shields.io/badge/-Vitest_4-6E9F18?logo=vitest&logoColor=white&style=flat-square) ![Testing Library](https://img.shields.io/badge/-Testing_Library-E33332?logo=testinglibrary&logoColor=white&style=flat-square) ![MSW](https://img.shields.io/badge/-MSW-FF6A33?style=flat-square) |
 | Weather API | ![Open-Meteo](https://img.shields.io/badge/-Open--Meteo-00B4D8?style=flat-square) — free, no auth required |
 
 ---
@@ -238,7 +247,6 @@ scripts/
 - [ ] **Comparison mode** — show official date vs custom date side by side
 - [ ] **Hourly breakdown** — expand a waypoint card to show hour-by-hour forecast
 - [ ] **Elevation-aware pacing** — `calcFinishTimeFromSpeed` currently uses linear distance; add elevation correction
-- [ ] **Tests** — Vitest unit tests for `weather.ts` (mocked fetch) and `wmo.ts`
 - [ ] **Offline / PWA** — cache last-fetched weather for use without connectivity
 - [ ] **Weather trend indicator** — warmer/colder arrow relative to day before
 - [ ] **UV index** — relevant for long summer events on exposed mountain terrain
@@ -260,6 +268,7 @@ scripts/
 - [x] **Løping** — Norwegian road races and trail runs added via auto-synced feed; dedicated `/løp` page
 - [x] **GPX upload** — derive waypoints automatically from a GPX file (drag-and-drop, URL load, waypoint count slider, export guides for Strava/Garmin/Komoot)
 - [x] **Official start time pre-fill** — start time pre-populated from known mass-start time per event
+- [x] **Tests** — Vitest unit tests for lib utilities (`stats`, `difficulty`, `wind`, `wmo`, `dates`) and component tests for `EventCard` + `WeatherCard`; MSW for Open-Meteo API mocking
 
 ---
 
@@ -271,7 +280,7 @@ Contributions are welcome! Here's how to get started:
 
 **Reporting issues or suggesting events:** Open an issue at [github.com/vegaasen/loypevaer/issues](https://github.com/vegaasen/loypevaer/issues).
 
-**Before submitting a PR:** Run `bun run lint && bun run build` — both must pass. There is no test suite yet.
+**Before submitting a PR:** Run `bun run lint && bun run build && bun run test` — all three must pass.
 
 ---
 

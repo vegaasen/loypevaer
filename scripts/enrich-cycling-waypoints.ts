@@ -6,17 +6,25 @@
  *
  * Usage:
  *   bun scripts/enrich-cycling-waypoints.ts <event-id> <path/to/route.gpx>
+ *   bun scripts/enrich-cycling-waypoints.ts <event-id> <url>
  *
  * Examples:
  *   bun scripts/enrich-cycling-waypoints.ts birkebeinerrittet ~/Downloads/birken.gpx
  *   bun scripts/enrich-cycling-waypoints.ts styrkeproven ./routes/styrkeproven.gpx
+ *   bun scripts/enrich-cycling-waypoints.ts haugesund-sauda https://ridewithgps.com/routes/26544294
+ *   bun scripts/enrich-cycling-waypoints.ts haugesund-sauda https://ridewithgps.com/routes/26544294.gpx
+ *
+ * The second argument can be:
+ *   - A local file path (absolute or relative, ~ supported)
+ *   - A RideWithGPS route URL (https://ridewithgps.com/routes/<id>) — .gpx is appended automatically
+ *   - Any direct URL to a GPX file (https://...)
  *
  * The script:
  *   1. Loads src/data/cycling-waypoints.json
- *   2. Parses the GPX file and extracts the track points
+ *   2. Fetches or reads the GPX and extracts track points
  *   3. Samples NUM_WAYPOINTS evenly-spaced points (start, ~25%, ~50%, ~75%, finish)
  *   4. Fetches terrain altitude for each point from Open-Meteo /v1/elevation
- *   5. Generates human-readable labels (Start, 25%, 50%, 75%, Mål)
+ *   5. Generates human-readable labels (Start, 25%, 50%, 75%, Mål) using the GPX name
  *   6. Writes the enriched waypoints back into cycling-waypoints.json keyed by event ID
  *
  * The fetch-cycling-events.ts script will automatically pick up the waypoints
@@ -54,8 +62,65 @@ type TrackPoint = {
 };
 
 // ---------------------------------------------------------------------------
+// GPX source resolution (file or URL)
+// ---------------------------------------------------------------------------
+
+/**
+ * Normalise a RideWithGPS route page URL to its direct GPX download URL.
+ * https://ridewithgps.com/routes/12345  →  https://ridewithgps.com/routes/12345.gpx
+ * Already-suffixed .gpx URLs are returned as-is.
+ */
+function toGpxUrl(raw: string): string {
+  const url = new URL(raw);
+  if (!url.pathname.endsWith(".gpx")) {
+    url.pathname = url.pathname.replace(/\/$/, "") + ".gpx";
+  }
+  return url.toString();
+}
+
+/**
+ * Load GPX content from either a local file path or a URL.
+ */
+async function loadGpxContent(source: string): Promise<string> {
+  if (source.startsWith("https://") || source.startsWith("http://")) {
+    const gpxUrl = toGpxUrl(source);
+    console.log(`  Fetching GPX from: ${gpxUrl}`);
+    const res = await fetch(gpxUrl, {
+      headers: {
+        "User-Agent": "loypevaer-enrichment/1.0 (github.com/vegaasen/loypevaer)",
+      },
+    });
+    if (!res.ok) {
+      throw new Error(`Failed to fetch GPX: HTTP ${res.status} from ${gpxUrl}`);
+    }
+    return await res.text();
+  }
+
+  // Local file
+  const { readFileSync } = await import("node:fs");
+  const resolved = source.startsWith("~")
+    ? source.replace("~", process.env.HOME ?? "")
+    : resolve(process.cwd(), source);
+  try {
+    return readFileSync(resolved, "utf-8");
+  } catch {
+    throw new Error(`Cannot read GPX file: ${resolved}`);
+  }
+}
+
+// ---------------------------------------------------------------------------
 // GPX parsing
 // ---------------------------------------------------------------------------
+
+/**
+ * Extract track name from GPX metadata or track name element.
+ */
+function parseGpxName(gpxContent: string): string | null {
+  const match =
+    /<metadata[^>]*>[\s\S]*?<name[^>]*>([^<]+)<\/name>/.exec(gpxContent) ??
+    /<trk[^>]*>[\s\S]*?<name[^>]*>([^<]+)<\/name>/.exec(gpxContent);
+  return match ? match[1].trim() : null;
+}
 
 /**
  * Extract all track points from a GPX file.
@@ -154,18 +219,18 @@ async function main() {
   const args = process.argv.slice(2);
   if (args.length < 2) {
     console.error(
-      "Usage: bun scripts/enrich-cycling-waypoints.ts <event-id> <path/to/route.gpx>"
+      "Usage: bun scripts/enrich-cycling-waypoints.ts <event-id> <path/to/route.gpx|url>"
     );
     console.error(
       "Example: bun scripts/enrich-cycling-waypoints.ts birkebeinerrittet ~/Downloads/birken.gpx"
     );
+    console.error(
+      "Example: bun scripts/enrich-cycling-waypoints.ts haugesund-sauda https://ridewithgps.com/routes/26544294"
+    );
     process.exit(1);
   }
 
-  const [eventId, gpxPath] = args;
-  const resolvedGpx = gpxPath.startsWith("~")
-    ? gpxPath.replace("~", process.env.HOME ?? "")
-    : resolve(process.cwd(), gpxPath);
+  const [eventId, gpxSource] = args;
 
   // Load cycling-waypoints.json
   const waypointsPath = resolve(__dirname, "../src/data/cycling-waypoints.json");
@@ -177,14 +242,18 @@ async function main() {
     console.log(`  Existing waypoints for "${eventId}": ${existing.length} points — will be overwritten`);
   }
 
-  // Parse GPX
+  // Load GPX content from file or URL
   let gpxContent: string;
   try {
-    gpxContent = readFileSync(resolvedGpx, "utf-8");
-  } catch {
-    console.error(`Cannot read GPX file: ${resolvedGpx}`);
+    gpxContent = await loadGpxContent(gpxSource);
+  } catch (err) {
+    console.error(String(err));
     process.exit(1);
   }
+
+  // Extract GPX name for labels (fall back to event ID)
+  const gpxName = parseGpxName(gpxContent);
+  const cityName = gpxName ?? eventId;
 
   const allPoints = parseGpxTrackPoints(gpxContent);
   if (allPoints.length === 0) {
@@ -195,6 +264,7 @@ async function main() {
   }
 
   console.log(`\nEnriching waypoints for: ${eventId}`);
+  if (gpxName) console.log(`  GPX name: ${gpxName}`);
   console.log(`  GPX track: ${allPoints.length} points`);
 
   // Sample evenly-spaced points
@@ -204,9 +274,6 @@ async function main() {
   // Fetch elevations in one batch request
   console.log("  Fetching terrain altitude from Open-Meteo…");
   const elevations = await fetchElevations(sampled);
-
-  // Use event ID as city name fallback for labels
-  const cityName = eventId;
 
   // Build enriched waypoints
   const enriched: Waypoint[] = sampled.map((pt, i) => {

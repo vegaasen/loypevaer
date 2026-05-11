@@ -706,33 +706,33 @@
   "haugesund-sauda": [
     {
       "label": "Start – Haugesund",
-      "lat": 59.413,
-      "lon": 5.268,
-      "altitude": 15
+      "lat": 59.394,
+      "lon": 5.331,
+      "altitude": 60
     },
     {
-      "label": "25% – Aksdal",
-      "lat": 59.494,
-      "lon": 5.676,
-      "altitude": 20
+      "label": "25%",
+      "lat": 59.52,
+      "lon": 5.699,
+      "altitude": 40
     },
     {
-      "label": "50% – Etne",
-      "lat": 59.666,
-      "lon": 5.98,
-      "altitude": 30
+      "label": "50%",
+      "lat": 59.481,
+      "lon": 5.898,
+      "altitude": 52
     },
     {
-      "label": "75% – Nesflaten/Saudafjord",
-      "lat": 59.771,
-      "lon": 6.351,
-      "altitude": 30
+      "label": "75%",
+      "lat": 59.516,
+      "lon": 6.229,
+      "altitude": 206
     },
     {
       "label": "Mål – Sauda",
       "lat": 59.65,
-      "lon": 6.356,
-      "altitude": 30
+      "lon": 6.354,
+      "altitude": 10
     }
   ],
   "randsfjorden-rundt": [
@@ -1475,7 +1475,7 @@
     {
       "label": "Start – Birkenesparken",
       "lat": 58.335,
-      "lon": 8.230,
+      "lon": 8.23,
       "altitude": 70
     },
     {
@@ -1499,7 +1499,7 @@
     {
       "label": "Mål – Birkenesparken",
       "lat": 58.335,
-      "lon": 8.230,
+      "lon": 8.23,
       "altitude": 70
     }
   ],
@@ -1621,7 +1621,7 @@
     {
       "label": "75% – Tromsøya nord",
       "lat": 69.71,
-      "lon": 19.0,
+      "lon": 19,
       "altitude": 20
     },
     {
@@ -1793,34 +1793,34 @@
   ],
   "byglandsfjorden-rundt": [
     {
-      "label": "Start – Evjemoen",
+      "label": "Start – Byglandsfjord",
+      "lat": 58.586,
+      "lon": 7.804,
+      "altitude": 177
+    },
+    {
+      "label": "25%",
+      "lat": 58.719,
+      "lon": 7.794,
+      "altitude": 201
+    },
+    {
+      "label": "50%",
+      "lat": 58.829,
+      "lon": 7.765,
+      "altitude": 216
+    },
+    {
+      "label": "75%",
+      "lat": 58.733,
+      "lon": 7.821,
+      "altitude": 201
+    },
+    {
+      "label": "Mål – Byglandsfjord",
       "lat": 58.565,
-      "lon": 7.782,
-      "altitude": 100
-    },
-    {
-      "label": "25% – Bygland",
-      "lat": 58.672,
-      "lon": 7.797,
-      "altitude": 110
-    },
-    {
-      "label": "50% – Valle",
-      "lat": 59.205,
-      "lon": 7.534,
-      "altitude": 235
-    },
-    {
-      "label": "75% – Nomeland",
-      "lat": 58.8,
-      "lon": 7.748,
-      "altitude": 120
-    },
-    {
-      "label": "Mål – Evjemoen",
-      "lat": 58.565,
-      "lon": 7.782,
-      "altitude": 100
+      "lon": 7.785,
+      "altitude": 179
     }
   ],
   "enebakk-rundt": [
@@ -1858,7 +1858,7 @@
   "ceresrittet-master": [
     {
       "label": "Start – Leirsund",
-      "lat": 60.0,
+      "lat": 60,
       "lon": 11.087,
       "altitude": 110
     },
@@ -1882,7 +1882,7 @@
     },
     {
       "label": "Mål – Leirsund",
-      "lat": 60.0,
+      "lat": 60,
       "lon": 11.087,
       "altitude": 110
     }
@@ -1890,7 +1890,7 @@
   "ceresrittet-tur": [
     {
       "label": "Start – Leirsund",
-      "lat": 60.0,
+      "lat": 60,
       "lon": 11.087,
       "altitude": 110
     },
@@ -1914,7 +1914,7 @@
     },
     {
       "label": "Mål – Leirsund",
-      "lat": 60.0,
+      "lat": 60,
       "lon": 11.087,
       "altitude": 110
     }
@@ -2095,7 +2095,7 @@
     {
       "label": "50% – Øverbygd",
       "lat": 69.12,
-      "lon": 19.0,
+      "lon": 19,
       "altitude": 120
     },
     {

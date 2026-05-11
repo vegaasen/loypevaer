@@ -65,12 +65,6 @@ export function formatArrivalTime(datetime: string): string {
 }
 
 /**
- * Returns the fractions [0, 0.25, 0.5, 0.75, 1.0] for the standard 5-waypoint
- * layout used in all ritt.
- */
-export const WAYPOINT_FRACTIONS = [0, 0.25, 0.5, 0.75, 1.0] as const;
-
-/**
  * Converts a pace in min/km to km/h.
  * e.g. 5.5 min/km → 10.909... km/h
  */
