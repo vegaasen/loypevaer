@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-07T08:06:02.474Z",
+  "generatedAt": "2026-05-11T06:18:19.361Z",
   "source": "eqtiming.com / Norges Cykleforbund (organizationId=13)",
   "events": [
     {
@@ -46,45 +46,20 @@
       ]
     },
     {
-      "id": "ceresrittet-master",
-      "name": "Ceresrittet Master 2026",
+      "id": "ceresrittet",
+      "name": "Ceresrittet 2026",
       "discipline": "landevei",
       "officialDate": "2026-05-10",
       "distance": 83,
       "distanceLabel": "83 km",
-      "sportLevel": "MC",
+      "sportLevel": "Reg",
       "region": "Akershus",
       "url": "",
       "waypoints": [
         {
-          "label": "Start – Leirsund",
-          "lat": 60,
-          "lon": 11.087,
-          "altitude": 110
-        },
-        {
-          "label": "25% – Sørum/Blaker",
-          "lat": 59.942,
-          "lon": 11.31,
-          "altitude": 130
-        },
-        {
-          "label": "50% – Nes/Årnes",
-          "lat": 60.065,
-          "lon": 11.48,
-          "altitude": 110
-        },
-        {
-          "label": "75% – Jessheim",
-          "lat": 60.142,
-          "lon": 11.175,
-          "altitude": 180
-        },
-        {
-          "label": "Mål – Leirsund",
-          "lat": 60,
-          "lon": 11.087,
-          "altitude": 110
+          "label": "Start/Mål – Leirsund",
+          "lat": 59.9999567,
+          "lon": 11.0870456
         }
       ]
     },
@@ -967,6 +942,24 @@
       ]
     },
     {
+      "id": "sundvolden-grand-prix",
+      "name": "Sundvolden Grand Prix 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-05-09",
+      "distance": 158,
+      "distanceLabel": "158 km",
+      "sportLevel": "UCI",
+      "region": "Buskerud",
+      "url": " ",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Sundvolden",
+          "lat": 60.0624765,
+          "lon": 10.311344
+        }
+      ]
+    },
+    {
       "id": "ringerike-grand-prix",
       "name": "Ringerike Grand Prix 2026",
       "discipline": "landevei",
@@ -1049,49 +1042,6 @@
           "lat": 60.71,
           "lon": 11.136,
           "altitude": 130
-        }
-      ]
-    },
-    {
-      "id": "ceresrittet-tur",
-      "name": "Ceresrittet Tur 2026",
-      "discipline": "landevei",
-      "officialDate": "2026-05-10",
-      "distance": 83,
-      "distanceLabel": "83 km",
-      "sportLevel": "Tur",
-      "region": "Akershus",
-      "url": "",
-      "waypoints": [
-        {
-          "label": "Start – Leirsund",
-          "lat": 60,
-          "lon": 11.087,
-          "altitude": 110
-        },
-        {
-          "label": "25% – Sørum/Blaker",
-          "lat": 59.942,
-          "lon": 11.31,
-          "altitude": 130
-        },
-        {
-          "label": "50% – Nes/Årnes",
-          "lat": 60.065,
-          "lon": 11.48,
-          "altitude": 110
-        },
-        {
-          "label": "75% – Jessheim",
-          "lat": 60.142,
-          "lon": 11.175,
-          "altitude": 180
-        },
-        {
-          "label": "Mål – Leirsund",
-          "lat": 60,
-          "lon": 11.087,
-          "altitude": 110
         }
       ]
     },
@@ -1777,6 +1727,49 @@
       ]
     },
     {
+      "id": "eikerrittet",
+      "name": "Eikerrittet 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-05-02",
+      "distance": 90,
+      "distanceLabel": "90 km",
+      "sportLevel": "Trim",
+      "region": "Buskerud",
+      "url": "http://eikerrittet.no/",
+      "waypoints": [
+        {
+          "label": "Start – Røren barneskole",
+          "lat": 59.774,
+          "lon": 9.975,
+          "altitude": 30
+        },
+        {
+          "label": "25% – Eidsfoss",
+          "lat": 59.583,
+          "lon": 10.085,
+          "altitude": 50
+        },
+        {
+          "label": "50% – Hvittingfoss",
+          "lat": 59.527,
+          "lon": 9.976,
+          "altitude": 80
+        },
+        {
+          "label": "75% – Skollenborg",
+          "lat": 59.62,
+          "lon": 9.799,
+          "altitude": 90
+        },
+        {
+          "label": "Mål – Eiker-Kvikk klubbhus",
+          "lat": 59.763,
+          "lon": 9.97,
+          "altitude": 30
+        }
+      ]
+    },
+    {
       "id": "styggmannen-gravel-og-terrengritt",
       "name": "Styggmannen, gravel og terrengritt 2026",
       "discipline": "landevei",
@@ -2164,7 +2157,7 @@
       "distance": 62,
       "distanceLabel": "62 km",
       "sportLevel": "Tur",
-      "region": "Norge",
+      "region": "Akershus",
       "url": "http://www.uck.no",
       "waypoints": [
         {
