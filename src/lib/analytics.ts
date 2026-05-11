@@ -71,6 +71,22 @@ export function trackExternalLinkClick(url: string, raceName: string) {
 }
 
 /**
+ * Fired when a GPX file or URL is successfully parsed on the /gpx route.
+ * source: "file" = local upload, "url" = loaded from URL.
+ */
+export function trackGpxLoaded(
+  source: "file" | "url",
+  distanceKm: number,
+  waypointCount: number,
+): void {
+  safeGtagEvent("gpx_loaded", {
+    gpx_source: source,
+    gpx_distance_km: distanceKm,
+    gpx_waypoint_count: waypointCount,
+  });
+}
+
+/**
  * Fired when a user submits feedback via the snackbar prompt.
  * value: 5 = thumbs up, 1 = thumbs down (extensible to full 1–5 scale).
  */

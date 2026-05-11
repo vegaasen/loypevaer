@@ -19,6 +19,7 @@ import { computeElevationGain } from "../lib/arrangements";
 import type { Discipline } from "../lib/arrangements";
 import { DISCIPLINE_LABEL } from "../lib/disciplines";
 import type { Waypoint } from "../lib/weather";
+import { trackGpxLoaded } from "../lib/analytics";
 
 const TODAY = new Date().toISOString().slice(0, 10);
 const DEFAULT_WAYPOINT_COUNT = 8;
@@ -71,6 +72,7 @@ export function GpxPage() {
         const points = parseGpx(text);
         const name = file.name.replace(/\.gpx$/i, "");
         applyPoints(points, name, waypointCount);
+        trackGpxLoaded("file", gpxTotalDistanceKm(points), Math.min(waypointCount, points.length));
       } catch (err) {
         setError(err instanceof Error ? err.message : "Ukjent feil ved parsing av GPX.");
       }
@@ -86,6 +88,7 @@ export function GpxPage() {
       const points = await fetchGpxFromUrl(urlInput.trim());
       const name = urlInput.split("/").pop()?.replace(/\.gpx$/i, "") ?? "GPX-løype";
       applyPoints(points, name, waypointCount);
+      trackGpxLoaded("url", gpxTotalDistanceKm(points), Math.min(waypointCount, points.length));
     } catch (err) {
       setError(err instanceof Error ? err.message : "Ukjent feil ved nedlasting av GPX.");
     } finally {
