@@ -23,6 +23,19 @@
   --radius: 14px;
   --section-gap: 100px;
 
+  /* ── Additional tokens ─────────────────────────────────────────── */
+  --text-muted: #7a7d72;
+  --text-secondary: #6b6e63;
+  --text-sm: 13px;
+  --surface: #f0ede6;
+  --surface-2: #e8e5dd;
+  --bg-card: #ffffff;
+  --bg-subtle: rgba(128, 128, 128, 0.08);
+  --space-xs: 4px;
+  --space-lg: 24px;
+  --space-xl: 48px;
+  --warning: #c0542a;
+
   --sans: 'Inter Variable', system-ui, 'Segoe UI', sans-serif;
   --heading: 'Playfair Display', Georgia, serif;
   --mono: 'Roboto Mono Variable', ui-monospace, Consolas, monospace;
@@ -61,6 +74,13 @@
       rgba(0, 0, 0, 0.5) 0 10px 15px -3px, rgba(0, 0, 0, 0.3) 0 4px 6px -2px;
     --shadow-sm: rgba(0, 0, 0, 0.35) 0 2px 8px;
     --shadow-warm: 0 8px 32px rgba(212, 168, 48, 0.12), 0 2px 8px rgba(0, 0, 0, 0.3);
+    --text-muted: #6a7a5e;
+    --text-secondary: #5a6a4e;
+    --surface: #192210;
+    --surface-2: #1e2a14;
+    --bg-card: #1a2414;
+    --bg-subtle: rgba(128, 128, 128, 0.12);
+    --warning: #e07a50;
   }
 }
 
@@ -89,17 +109,17 @@ h3 {
 h1 { font-weight: 800; }
 
 h1 {
-  font-size: 64px;
+  font-size: 88px;
   font-weight: 800;
-  letter-spacing: -1.5px;
+  letter-spacing: -2px;
   line-height: 1.05;
   margin: 0 0 10px;
   @media (max-width: 1024px) {
-    font-size: 40px;
+    font-size: 52px;
     margin: 0 0 8px;
   }
   @media (max-width: 600px) {
-    font-size: 32px;
+    font-size: 36px;
   }
 }
 h2 {
@@ -1209,9 +1229,14 @@ code {
 }
 
 .home-page__year-heading {
+  font-family: var(--heading);
+  font-weight: 800;
+  font-size: 72px;
+  color: color-mix(in srgb, var(--text) 18%, transparent);
+  line-height: 1;
+  margin-bottom: 0.25em;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--border);
-  margin-bottom: 0;
 }
 
 .home-page__future-years {
@@ -1248,13 +1273,18 @@ code {
 
 .home-page__month-section {
   margin-top: 32px;
+  scroll-margin-top: 8px;
   @media (max-width: 1024px) {
     margin-top: 24px;
   }
 }
 
 .home-page__month-heading {
-  margin-bottom: 12px;
+  font-size: 15px;
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 1.25rem;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -1263,6 +1293,15 @@ code {
   display: flex;
   align-items: baseline;
   gap: 8px;
+}
+
+.home-page__month-anchor {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .month-count-badge {
@@ -1371,10 +1410,11 @@ code {
   align-items: flex-start;
   justify-content: space-between;
   gap: 8px;
-  font-size: 16px;
-  font-weight: 600;
+  font-family: var(--heading);
+  font-size: 18px;
+  font-weight: 700;
   color: var(--text-h);
-  line-height: 1.3;
+  line-height: 1.2;
 }
 
 .ritt-card__meta {
@@ -1645,6 +1685,283 @@ code {
 
 .ritt-card__bookmark--active {
   opacity: 1;
+}
+
+/* ─── Featured section (bento grid layout) ──────────────────────────── */
+
+.home-page__featured-section {
+  padding: 0 32px;
+  margin-top: 48px;
+  margin-bottom: 48px;
+
+  @media (max-width: 1024px) {
+    padding: 0 16px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+}
+
+.home-page__featured-heading {
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--accent-border);
+  margin-bottom: 16px;
+  color: var(--accent);
+}
+
+.home-page__featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+
+  & > :first-child {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 641px) {
+  .home-page__featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    & > :first-child {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .home-page__featured-grid {
+    grid-template-columns: 1fr;
+
+    & > :first-child {
+      grid-column: span 1;
+    }
+  }
+}
+
+/* Single card: span full width */
+.home-page__featured-grid:has(> :only-child) > :first-child {
+  grid-column: 1 / -1;
+}
+
+/* Two cards: equal columns */
+.home-page__featured-grid:has(> :nth-child(2)):not(:has(> :nth-child(3))) {
+  grid-template-columns: repeat(2, 1fr);
+
+  & > :first-child {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-page__featured-grid:has(> :nth-child(2)):not(:has(> :nth-child(3))) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Featured event card (bento grid) ──────────────────────────────── */
+
+.featured-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  min-height: 220px;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--accent);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s, box-shadow 0.15s;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+  }
+
+  @media (max-width: 640px) {
+    min-height: auto;
+    padding: 16px;
+  }
+}
+
+.featured-card--past {
+  opacity: 0.45;
+  filter: saturate(0.35);
+}
+
+.featured-card--cancelled {
+  opacity: 0.7;
+  filter: saturate(0.5) sepia(0.45) hue-rotate(5deg);
+}
+
+.featured-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.featured-card__discipline {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.featured-card__discipline--landevei {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent);
+}
+
+.featured-card__discipline--terreng {
+  background: color-mix(in srgb, #7c6f2e 12%, transparent);
+  color: #7c6f2e;
+}
+
+@media (prefers-color-scheme: dark) {
+  .featured-card__discipline--terreng {
+    background: color-mix(in srgb, #c8a84b 12%, transparent);
+    color: #c8a84b;
+  }
+}
+
+.featured-card__discipline--langrenn {
+  background: color-mix(in srgb, #3a7fc1 12%, transparent);
+  color: #3a7fc1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .featured-card__discipline--langrenn {
+    background: color-mix(in srgb, #6fb3f5 12%, transparent);
+    color: #6fb3f5;
+  }
+}
+
+.featured-card__discipline--triathlon {
+  background: color-mix(in srgb, #1a9a8a 12%, transparent);
+  color: #1a9a8a;
+}
+
+@media (prefers-color-scheme: dark) {
+  .featured-card__discipline--triathlon {
+    background: color-mix(in srgb, #3dd6c0 12%, transparent);
+    color: #3dd6c0;
+  }
+}
+
+.featured-card__discipline--ultraløp {
+  background: color-mix(in srgb, #7a5c3e 12%, transparent);
+  color: #7a5c3e;
+}
+
+@media (prefers-color-scheme: dark) {
+  .featured-card__discipline--ultraløp {
+    background: color-mix(in srgb, #b89070 12%, transparent);
+    color: #b89070;
+  }
+}
+
+.featured-card__countdown {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent);
+  background: var(--accent-bg);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.featured-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.featured-card__name {
+  font-family: var(--heading);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-h);
+  line-height: 1.2;
+
+  @media (max-width: 640px) {
+    font-size: 20px;
+  }
+}
+
+.featured-card__region {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.featured-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.featured-card__distance {
+  font-family: var(--mono);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+
+  @media (max-width: 640px) {
+    font-size: 28px;
+  }
+}
+
+.featured-card__bookmark {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 4px;
+  opacity: 0.5;
+  transition: opacity 0.15s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.featured-card__bookmark--active {
+  opacity: 1;
+}
+
+/* Border color per discipline */
+.featured-card:has(.featured-card__discipline--terreng) {
+  border-left-color: #7c6f2e;
+}
+.featured-card:has(.featured-card__discipline--langrenn) {
+  border-left-color: #3a7fc1;
+}
+.featured-card:has(.featured-card__discipline--triathlon) {
+  border-left-color: #1a9a8a;
+}
+.featured-card:has(.featured-card__discipline--ultraløp) {
+  border-left-color: #7a5c3e;
+}
+
+@media (prefers-color-scheme: dark) {
+  .featured-card:has(.featured-card__discipline--terreng) {
+    border-left-color: #c8a84b;
+  }
+  .featured-card:has(.featured-card__discipline--langrenn) {
+    border-left-color: #6fb3f5;
+  }
+  .featured-card:has(.featured-card__discipline--triathlon) {
+    border-left-color: #3dd6c0;
+  }
+  .featured-card:has(.featured-card__discipline--ultraløp) {
+    border-left-color: #b89070;
+  }
 }
 
 /* ─── Running event list (LopPage) ──────────────────────────────────── */

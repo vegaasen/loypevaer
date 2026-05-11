@@ -145,9 +145,11 @@ export function LopPage() {
             <section key={year} className="home-page__year-section">
               <h2 className="home-page__year-heading">{year}</h2>
               {months.map((month) => (
-                <div key={month} className="home-page__month-section">
+                <div key={month} id={`month-${year}-${month}`} className="home-page__month-section">
                   <h3 className="home-page__month-heading">
-                    {monthName(month)}
+                    <a href={`#month-${year}-${month}`} className="home-page__month-anchor">
+                      {monthName(month)}
+                    </a>
                     {byMonth.get(month)!.length > 1 && (
                       <span className="month-count-badge">{byMonth.get(month)!.length}</span>
                     )}
@@ -188,9 +190,11 @@ export function LopPage() {
                 <section key={year} className="home-page__year-section">
                   <h2 className="home-page__year-heading">{year}</h2>
                   {months.map((month) => (
-                    <div key={month} className="home-page__month-section">
+                    <div key={month} id={`month-${year}-${month}`} className="home-page__month-section">
                       <h3 className="home-page__month-heading">
-                        {monthName(month)}
+                        <a href={`#month-${year}-${month}`} className="home-page__month-anchor">
+                          {monthName(month)}
+                        </a>
                         {byMonth.get(month)!.length > 1 && (
                           <span className="month-count-badge">{byMonth.get(month)!.length}</span>
                         )}

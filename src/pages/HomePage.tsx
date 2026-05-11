@@ -5,7 +5,8 @@ import { EventCard } from "../components/EventCard";
 import { PageMeta } from "../components/PageMeta";
 import { useFilterContext } from "../context/useFilterContext";
 import { useMyEvents } from "../hooks/useMyEvents";
-import { allArrangements as ritt, getNextRitt, type RittEntry } from "../lib/arrangements";
+import { allArrangements as ritt, getNextPerDiscipline, type RittEntry } from "../lib/arrangements";
+import { FeaturedEventCard } from "../components/FeaturedEventCard";
 import { FILTER_DISCIPLINE_LABEL } from "../lib/disciplines";
 import { SITE_URL } from "../lib/seo";
 import { allArrangements as allForJsonLd } from "../lib/arrangements";
@@ -43,15 +44,9 @@ export function HomePage() {
   const grouped = useMemo(() => groupByYearMonth(filtered), [filtered]);
   const years = useMemo(() => [...grouped.keys()].sort((a, b) => b - a), [grouped]);
 
-  const upcomingRaces = useMemo(
-    () =>
-      filtered
-        .filter((r) => {
-          const days = daysUntil(r.officialDate);
-          return days >= 0 && days <= 14 && r.dateStatus !== "cancelled";
-        })
-        .sort((a, b) => parseDateLocal(a.officialDate).getTime() - parseDateLocal(b.officialDate).getTime()),
-    [filtered]
+  const featuredEvents = useMemo(
+    () => getNextPerDiscipline(ritt.filter((r) => r.discipline !== "løping")),
+    []
   );
 
   const plannedRaces = useMemo(
@@ -68,7 +63,6 @@ export function HomePage() {
     [plannedIds]
   );
 
-  const nextRitt = getNextRitt(ritt.filter((r) => r.discipline !== "løping"));
 
   function handleToggle(id: string, officialDate: string, e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
@@ -259,13 +253,13 @@ export function HomePage() {
         </p>
       )}
 
-      {/* ── Kommer snart ──────────────────────────────────────────────── */}
-      {upcomingRaces.length > 0 && (
-        <section className="home-page__upcoming-section">
-          <h2 className="home-page__upcoming-heading">Kommer snart</h2>
-          <div className="home-page__grid">
-            {upcomingRaces.map((r) => (
-              <EventCard
+      {/* ── Featured (neste per disiplin) ────────────────────────────── */}
+      {featuredEvents.length > 0 && discipline === "alle" && (
+        <section className="home-page__featured-section">
+          <h2 className="home-page__featured-heading">Neste arrangement</h2>
+          <div className="home-page__featured-grid">
+            {featuredEvents.map((r) => (
+              <FeaturedEventCard
                 key={r.id}
                 id={r.id}
                 name={r.name}
@@ -296,9 +290,11 @@ export function HomePage() {
             <section key={year} className="home-page__year-section">
               <h2 className="home-page__year-heading">{year}</h2>
               {months.map((month) => (
-                <div key={month} className="home-page__month-section">
+                <div key={month} id={`month-${year}-${month}`} className="home-page__month-section">
                   <h3 className="home-page__month-heading">
-                    {monthName(month)}
+                    <a href={`#month-${year}-${month}`} className="home-page__month-anchor">
+                      {monthName(month)}
+                    </a>
                     {byMonth.get(month)!.length > 1 && (
                       <span className="month-count-badge">{byMonth.get(month)!.length}</span>
                     )}
@@ -343,27 +339,6 @@ export function HomePage() {
         </Link>
       </section>
 
-      {/* ── CTA banner ────────────────────────────────────────────────── */}
-      {nextRitt && (
-        <div className="home-page__cta-banner">
-          <div className="home-page__cta-banner-text">
-            <div className="home-page__cta-banner-eyebrow">Neste arrangement</div>
-            <h2>Klar for årets arrangement?</h2>
-            <p>
-              {nextRitt.name} — {nextRitt.distance} km i {nextRitt.region}.{" "}
-              {formatCountdown(nextRitt.officialDate)}.
-            </p>
-          </div>
-          <div className="home-page__cta-banner-action">
-            <Link to={`/arrangement/${nextRitt.id}`} className="home-page__cta-banner-btn">
-              Sjekk været nå →
-            </Link>
-            <span className="home-page__cta-banner-meta">
-              Oppdateres daglig · Værdata for hele løypa
-            </span>
-          </div>
-        </div>
-      )}
 
     </div>
   );

@@ -51,6 +51,45 @@ export function getNextRitt(races: RittEntry[]): RittEntry | undefined {
 }
 
 /**
+ * Returns the soonest upcoming event per discipline (max 7), excluding
+ * cancelled/past events and the "løping" and "cx" disciplines.
+ */
+export function getNextPerDiscipline(events: RittEntry[], now: Date = new Date()): RittEntry[] {
+  const today = new Date(now);
+  today.setHours(0, 0, 0, 0);
+
+  const excludedDisciplines: Discipline[] = ["løping", "cx"];
+
+  const upcoming = events
+    .filter(
+      (e) =>
+        e.dateStatus !== "cancelled" &&
+        new Date(e.officialDate + "T00:00:00") >= today &&
+        !excludedDisciplines.includes(e.discipline)
+    )
+    .sort(
+      (a, b) =>
+        new Date(a.officialDate + "T00:00:00").getTime() -
+        new Date(b.officialDate + "T00:00:00").getTime()
+    );
+
+  const seen = new Map<Discipline, RittEntry>();
+  for (const event of upcoming) {
+    if (!seen.has(event.discipline)) {
+      seen.set(event.discipline, event);
+    }
+  }
+
+  return [...seen.values()]
+    .sort(
+      (a, b) =>
+        new Date(a.officialDate + "T00:00:00").getTime() -
+        new Date(b.officialDate + "T00:00:00").getTime()
+    )
+    .slice(0, 7);
+}
+
+/**
  * Computes accumulated elevation gain (metres climbed) from an ordered list
  * of waypoints with altitude data. Only positive altitude differences are summed.
  */
