@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-04T05:13:15.115Z",
+  "generatedAt": "2026-05-11T05:23:16.328Z",
   "source": "triatlonforbundet.no",
   "events": [
     {
@@ -84,6 +84,23 @@
           "label": "Start/Mål – Bygland",
           "lat": 58.8720193,
           "lon": 7.7338501
+        }
+      ]
+    },
+    {
+      "id": "oslotri-norges-eldste-og-storste-triatlonarrangement",
+      "name": "Oslotri - Norges eldste og største triatlonarrangement!",
+      "discipline": "triathlon",
+      "officialDate": "2026-08-08",
+      "distance": 51,
+      "distanceLabel": "Standarddistanse (1.5km svøm / 40km sykkel / 10km løp)",
+      "region": "Oslo",
+      "url": "https://www.triatlonforbundet.no/terminliste/terminliste-2026/oslo-triatlon/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Norges",
+          "lat": 59.9087342,
+          "lon": 10.7444419
         }
       ]
     },
