@@ -67,11 +67,11 @@ describe("FeedbackSnackbar", () => {
     expect(dismiss).toHaveBeenCalled();
   });
 
-  it("calls dismiss (no trackFeedback) after 15s auto-dismiss", async () => {
+  it("calls dismiss (no trackFeedback) after 15s auto-dismiss", () => {
     vi.useFakeTimers();
     const dismiss = makeMock(true);
     render(<FeedbackSnackbar eventId="birken-2025" />);
-    await act(async () => {
+    act(() => {
       vi.advanceTimersByTime(15000);
     });
     expect(analytics.trackFeedback).not.toHaveBeenCalled();
