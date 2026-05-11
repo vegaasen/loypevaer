@@ -33,21 +33,21 @@ export function FeedbackSnackbar({ eventId }: Props) {
         <button
           className="feedback-snackbar__btn"
           onClick={() => handleVote(5)}
-          aria-label="👍"
+          aria-label="Nyttig"
         >
           👍
         </button>
         <button
           className="feedback-snackbar__btn"
           onClick={() => handleVote(1)}
-          aria-label="👎"
+          aria-label="Ikke nyttig"
         >
           👎
         </button>
         <button
           className="feedback-snackbar__dismiss"
           onClick={dismiss}
-          aria-label="×"
+          aria-label="Lukk"
         >
           ×
         </button>
