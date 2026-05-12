@@ -12,7 +12,8 @@ type Props = {
   officialDate: string;
 };
 
-const HISTORY_YEARS = Array.from({ length: 10 }, (_, i) => 2015 + i); // 2015–2024
+const END_YEAR = new Date().getFullYear() - 1;
+const HISTORY_YEARS = Array.from({ length: 10 }, (_, i) => END_YEAR - 9 + i); // rolling 10-year window
 
 export function HistoricalWeatherTable({ waypoints, officialDate }: Props) {
   const { detailsRef, isOpen } = useDetailsOpen();
@@ -80,7 +81,7 @@ export function HistoricalWeatherTable({ waypoints, officialDate }: Props) {
   return (
     <details ref={detailsRef} className="history-table__details">
       <summary className="history-table__summary">
-        Historisk vær på startdagen (2015–2024)
+        {`Historisk vær på startdagen (${END_YEAR - 9}–${END_YEAR})`}
       </summary>
       <div className="history-table__wrapper">
         <table className="history-table">

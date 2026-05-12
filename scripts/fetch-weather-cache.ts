@@ -63,8 +63,8 @@ type WeatherCache = {
 const ARCHIVE_URL = "https://archive-api.open-meteo.com/v1/archive";
 const DAILY_PARAMS =
   "temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum,wind_speed_10m_max,weather_code,uv_index_max";
-const START_YEAR = 2015;
-const END_YEAR = 2024;
+const END_YEAR = new Date().getFullYear() - 1;
+const START_YEAR = END_YEAR - 9; // rolling 10-year window
 const CONCURRENCY = 2; // max parallel requests (Open-Meteo free tier: gentle rate limit)
 const REQUEST_DELAY_MS = 200; // delay between requests per worker
 
