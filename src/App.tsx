@@ -10,6 +10,7 @@ import { CookieBanner } from "./components/CookieBanner";
 import { usePageTracking } from "./hooks/usePageTracking";
 import { restoreConsentFromStorage } from "./lib/analytics";
 import { ScrollToTopButton } from "./components/ScrollToTopButton";
+import { ScrollToTop } from "./components/ScrollToTop";
 import "./App.css";
 
 // Restore previously stored consent so returning visitors don't lose their choice
@@ -34,6 +35,7 @@ function RouterContent() {
   usePageTracking();
   return (
     <>
+      <ScrollToTop />
       <NavBar />
       <Suspense fallback={<div className="page-loading" aria-label="Laster…" />}>
         <Routes>
