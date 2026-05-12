@@ -31,6 +31,7 @@ export function FeaturedEventCard({
   dateStatus,
 }: Props) {
   const isCancelled = dateStatus === "cancelled";
+  const isLongLabel = !!distanceLabel && (distanceLabel.includes("/") || distanceLabel.length > 15);
 
   return (
     <Link
@@ -53,7 +54,7 @@ export function FeaturedEventCard({
       </div>
 
       <div className="featured-card__footer">
-        <span className="featured-card__distance">
+        <span className={`featured-card__distance${isLongLabel ? " featured-card__distance--compact" : ""}`}>
           {distanceLabel ?? `${distance} km`}
         </span>
         {onTogglePlanned && (

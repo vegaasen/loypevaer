@@ -29,7 +29,7 @@
   --text-sm: 13px;
   --surface: #f0ede6;
   --surface-2: #e8e5dd;
-  --bg-card: #ffffff;
+  --bg-card: #f0ece2;
   --bg-subtle: rgba(128, 128, 128, 0.08);
   --space-xs: 4px;
   --space-lg: 24px;
@@ -1425,7 +1425,7 @@ code {
 }
 
 .ritt-card__distance {
-  font-weight: 500;
+  font-weight: 600;
   color: var(--accent);
 }
 
@@ -1883,7 +1883,7 @@ code {
 
 .featured-card__name {
   font-family: var(--heading);
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
   color: var(--text-h);
   line-height: 1.2;
@@ -1907,14 +1907,21 @@ code {
 
 .featured-card__distance {
   font-family: var(--mono);
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 600;
   color: var(--accent);
   line-height: 1;
 
   @media (max-width: 640px) {
-    font-size: 28px;
+    font-size: 17px;
   }
+}
+
+.featured-card__distance--compact {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-muted);
+  line-height: 1.4;
 }
 
 .featured-card__bookmark {
