@@ -1,3 +1,5 @@
+import { getTodayMidnight } from "./dates";
+
 type WeatherCacheData = {
   climateAverages: Record<string, WeatherData>;
   historicalByYear: Record<string, WeatherData>;
@@ -7,8 +9,8 @@ let _cachePromise: Promise<WeatherCacheData> | null = null;
 
 export function getWeatherCache(): Promise<WeatherCacheData> {
   if (!_cachePromise) {
-    _cachePromise = import("../data/weather-cache.json").then(
-      (m) => m.default as unknown as WeatherCacheData
+    _cachePromise = fetch(import.meta.env.BASE_URL + "weather-cache.json").then(
+      (r) => r.json() as Promise<WeatherCacheData>
     );
   }
   return _cachePromise;
@@ -149,8 +151,7 @@ function prevCalendarMonthDay(month: string, day: string): { prevMM: string; pre
 
 /** Returns true if selectedDate is within 16 days from today */
 export function isForecastRange(date: string): boolean {
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
+  const today = getTodayMidnight();
   const target = new Date(date);
   const diffDays = (target.getTime() - today.getTime()) / (1000 * 60 * 60 * 24);
   return diffDays >= 0 && diffDays <= 16;

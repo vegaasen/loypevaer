@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { useDebouncedValue } from "../hooks/useDebouncedValue";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { RunningEventRow } from "../components/RunningEventRow";
@@ -38,7 +39,8 @@ export function LopPage() {
   const [search, setSearch] = useState("");
   const [distanceFilter, setDistanceFilter] = useState<DistanceFilter>("alle");
 
-  const searchQuery = search.trim().toLowerCase();
+  const debouncedSearch = useDebouncedValue(search);
+  const searchQuery = debouncedSearch.trim().toLowerCase();
 
   const filtered = useMemo(
     () =>

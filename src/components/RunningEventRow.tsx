@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Link } from "react-router-dom";
 import { type Discipline } from "../lib/arrangements";
 import { formatNorwegianDate } from "../lib/dates";
@@ -19,7 +20,7 @@ type Props = {
   dateStatus?: "pending" | "cancelled";
 };
 
-export function RunningEventRow({
+export const RunningEventRow = memo(function RunningEventRow({
   id,
   name,
   officialDate,
@@ -95,4 +96,4 @@ export function RunningEventRow({
       </div>
     </Link>
   );
-}
+});

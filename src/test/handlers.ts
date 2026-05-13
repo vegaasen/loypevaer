@@ -56,7 +56,15 @@ const mockHourlyResponse = {
   },
 };
 
+/** Minimal weather cache response for tests */
+const mockWeatherCache = {
+  climateAverages: {},
+  historicalByYear: {},
+};
+
 export const handlers = [
+  http.get("/weather-cache.json", () => HttpResponse.json(mockWeatherCache)),
+
   http.get("https://api.open-meteo.com/v1/forecast", ({ request }) => {
     const url = new URL(request.url);
     if (url.searchParams.has("hourly")) {

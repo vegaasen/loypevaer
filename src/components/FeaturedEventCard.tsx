@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Link } from "react-router-dom";
 import { type Discipline } from "../lib/arrangements";
 import { DISCIPLINE_LABEL } from "../lib/disciplines";
@@ -17,7 +18,7 @@ type Props = {
   dateStatus?: "pending" | "cancelled";
 };
 
-export function FeaturedEventCard({
+export const FeaturedEventCard = memo(function FeaturedEventCard({
   id,
   name,
   distance,
@@ -70,4 +71,4 @@ export function FeaturedEventCard({
       </div>
     </Link>
   );
-}
+});

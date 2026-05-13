@@ -2,7 +2,7 @@
  * Build-time script: pre-fetches all climate-average and historical-by-year
  * weather data for every arrangement in arrangements.json, using the Open-Meteo archive API.
  *
- * Writes the result to src/data/weather-cache.json.
+ * Writes the result to public/weather-cache.json.
  *
  * Usage:
  *   bun scripts/fetch-weather-cache.ts
@@ -208,7 +208,7 @@ async function main() {
   const runningPath = resolve(__dirname, "../src/data/running-events.json");
   const cyclingPath = resolve(__dirname, "../src/data/cycling-events.json");
   const cyclingManualPath = resolve(__dirname, "../src/data/cycling-manual.json");
-  const outputPath = resolve(__dirname, "../src/data/weather-cache.json");
+  const outputPath = resolve(__dirname, "../public/weather-cache.json");
 
   const arrangements: Ritt[] = JSON.parse(readFileSync(rittPath, "utf-8")) as Ritt[];
   const triathlonData = JSON.parse(readFileSync(triathlonPath, "utf-8")) as { events: Ritt[] };
@@ -343,7 +343,7 @@ async function main() {
   );
 
   writeFileSync(outputPath, JSON.stringify(cache, null, 2));
-  console.log(`\nCache written to src/data/weather-cache.json`);
+  console.log(`\nCache written to public/weather-cache.json`);
 }
 
 main().catch((err) => {

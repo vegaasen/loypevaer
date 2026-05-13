@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { useDebouncedValue } from "../hooks/useDebouncedValue";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { EventCard } from "../components/EventCard";
@@ -30,7 +31,8 @@ export function HomePage() {
   const totalTriathlon = useMemo(() => ritt.filter((r) => r.discipline === "triathlon").length, []);
   const totalKortereLop = useMemo(() => ritt.filter((r) => r.discipline === "løping").length, []);
 
-  const searchQuery = search.trim().toLowerCase();
+  const debouncedSearch = useDebouncedValue(search);
+  const searchQuery = debouncedSearch.trim().toLowerCase();
 
   const filtered = useMemo(
     () =>

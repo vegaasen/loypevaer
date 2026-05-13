@@ -6,6 +6,17 @@ export function parseDateLocal(dateStr: string): Date {
 }
 
 /**
+ * Returns a new Date set to local midnight of today.
+ * Centralises the `new Date() + setHours(0,0,0,0)` pattern so callers avoid
+ * repeating it and tests can control the clock via vi.setSystemTime().
+ */
+export function getTodayMidnight(): Date {
+  const d = new Date();
+  d.setHours(0, 0, 0, 0);
+  return d;
+}
+
+/**
  * Format a YYYY-MM-DD date string in Norwegian long format,
  * e.g. "23. august 2025".
  */
@@ -22,8 +33,7 @@ export function formatNorwegianDate(dateStr: string): string {
  * Negative = in the past.
  */
 export function daysUntil(dateStr: string): number {
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
+  const today = getTodayMidnight();
   const target = parseDateLocal(dateStr);
   return Math.round((target.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
 }
