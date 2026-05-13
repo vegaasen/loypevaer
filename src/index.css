@@ -992,6 +992,38 @@ code {
   text-decoration: none;
 }
 
+/* ─── Løping filter promo block ─────────────────────────────────────── */
+
+.home-page__lop-promo {
+  margin: var(--section-gap) 24px;
+  padding: 48px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+
+  @media (max-width: 900px) {
+    padding: 32px 28px;
+    margin: 40px 16px;
+  }
+}
+
+.home-page__lop-promo-content {
+  max-width: 540px;
+}
+
+.home-page__lop-promo-content h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: var(--space-xs) 0;
+}
+
+.home-page__lop-promo-content p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  max-width: 48ch;
+  margin: 0.5rem 0 1.5rem;
+}
+
 /* ─── Bottom CTA banner ──────────────────────────────────────────────── */
 
 .home-page__cta-banner {
