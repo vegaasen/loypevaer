@@ -76,6 +76,18 @@
         { "label": "75% – Vadstena", "lat": 58.449, "lon": 14.891, "altitude": 90 },
         { "label": "Mål – Motala", "lat": 58.537, "lon": 15.044, "altitude": 90 }
       ]
+    },
+    {
+      "id": "styrkeproven-trondheim-lillehammer-eidsvoll-oslo",
+      "name": "Styrkeprøven Trondheim/Lillehammer/Eidsvoll - Oslo 2026",
+      "discipline": "landevei",
+      "dateStatus": "cancelled",
+      "officialDate": "2026-06-20",
+      "distance": 180,
+      "distanceLabel": "180 km",
+      "region": "Trøndelag",
+      "url": "https://styrkeproven.no/",
+      "waypoints": []
     }
   ]
 }

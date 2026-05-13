@@ -128,6 +128,7 @@
       "id": "styrkeproven-trondheim-lillehammer-eidsvoll-oslo",
       "name": "Styrkeprøven Trondheim/Lillehammer/Eidsvoll - Oslo 2026",
       "discipline": "landevei",
+      "dateStatus": "cancelled",
       "officialDate": "2026-06-20",
       "distance": 180,
       "distanceLabel": "180 km",
