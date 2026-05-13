@@ -485,6 +485,132 @@ async function fetchClimateAverageHourly(
   };
 }
 
+export type HourlyEntry = {
+  hour: number;
+  temp: number;
+  feelsLike?: number;
+  precipitation: number;
+  precipitationProbability?: number;
+  windSpeed: number;
+  windDirection?: number;
+  weatherCode: number;
+};
+
+/**
+ * Fetches all 24 hourly slots for a given waypoint and date.
+ * Uses the forecast API when within 16 days, archive average across 10 years otherwise.
+ */
+export async function fetchHourlyBreakdown(
+  waypoint: Waypoint,
+  date: string
+): Promise<HourlyEntry[]> {
+  if (isForecastRange(date)) {
+    return fetchForecastHourlyBreakdown(waypoint, date);
+  }
+  return fetchClimateAverageHourlyBreakdown(waypoint, date);
+}
+
+async function fetchForecastHourlyBreakdown(
+  waypoint: Waypoint,
+  date: string
+): Promise<HourlyEntry[]> {
+  const params = new URLSearchParams({
+    latitude: String(waypoint.lat),
+    longitude: String(waypoint.lon),
+    ...(waypoint.altitude !== undefined ? { elevation: String(waypoint.altitude) } : {}),
+    hourly: `${HOURLY_PARAMS},precipitation_probability`,
+    start_date: date,
+    end_date: date,
+    timezone: "Europe/Oslo",
+  });
+
+  const res = await fetch(`${FORECAST_URL}?${params}`);
+  if (!res.ok) throw new Error(`Open-Meteo forecast error: ${res.status}`);
+  const json = await res.json() as OpenMeteoHourlyResponse;
+  const h = json.hourly;
+
+  return Array.from({ length: 24 }, (_, hour) => ({
+    hour,
+    temp: h.temperature_2m[hour] ?? 0,
+    feelsLike: h.apparent_temperature[hour] ?? undefined,
+    precipitation: h.precipitation[hour] ?? 0,
+    precipitationProbability: h.precipitation_probability?.[hour] ?? undefined,
+    windSpeed: h.wind_speed_10m[hour] ?? 0,
+    windDirection: h.wind_direction_10m[hour] ?? undefined,
+    weatherCode: h.weather_code[hour] ?? 0,
+  }));
+}
+
+async function fetchClimateAverageHourlyBreakdown(
+  waypoint: Waypoint,
+  date: string
+): Promise<HourlyEntry[]> {
+  const [, month, day] = date.split("-");
+  const endYear = new Date().getFullYear() - 1;
+  const startYear = endYear - 9;
+
+  const yearFetches = Array.from({ length: endYear - startYear + 1 }, (_, i) => {
+    const year = startYear + i;
+    const d = `${year}-${month}-${day}`;
+    const params = new URLSearchParams({
+      latitude: String(waypoint.lat),
+      longitude: String(waypoint.lon),
+      ...(waypoint.altitude !== undefined ? { elevation: String(waypoint.altitude) } : {}),
+      hourly: HOURLY_PARAMS,
+      start_date: d,
+      end_date: d,
+      timezone: "Europe/Oslo",
+    });
+    return fetch(`${ARCHIVE_URL}?${params}`).then((r) => {
+      if (!r.ok) return null;
+      return r.json() as Promise<OpenMeteoHourlyResponse>;
+    });
+  });
+
+  const results = await Promise.all(yearFetches);
+  const valid = results.filter((r): r is OpenMeteoHourlyResponse => r !== null);
+
+  if (valid.length === 0) throw new Error("No climate archive data available");
+
+  const avgAt = (
+    accessor: (r: OpenMeteoHourlyResponse, h: number) => number | null | undefined
+  , hour: number): number => {
+    const vals = valid
+      .map((r) => accessor(r, hour))
+      .filter((v): v is number => v !== null && v !== undefined);
+    return vals.length > 0
+      ? Math.round((vals.reduce((a, b) => a + b, 0) / vals.length) * 10) / 10
+      : 0;
+  };
+
+  return Array.from({ length: 24 }, (_, hour) => {
+    const codes = valid
+      .map((r) => r.hourly.weather_code?.[hour])
+      .filter((v): v is number => v !== null && v !== undefined);
+    const weatherCode =
+      codes.length > 0
+        ? Number(
+            Object.entries(
+              codes.reduce<Record<number, number>>((acc, c) => {
+                acc[c] = (acc[c] ?? 0) + 1;
+                return acc;
+              }, {})
+            ).sort((a, b) => b[1] - a[1])[0][0]
+          )
+        : 0;
+
+    return {
+      hour,
+      temp: avgAt((r, h) => r.hourly.temperature_2m[h], hour),
+      feelsLike: avgAt((r, h) => r.hourly.apparent_temperature[h], hour) || undefined,
+      precipitation: avgAt((r, h) => r.hourly.precipitation[h], hour),
+      windSpeed: avgAt((r, h) => r.hourly.wind_speed_10m[h], hour),
+      windDirection: Math.round(avgAt((r, h) => r.hourly.wind_direction_10m[h], hour)),
+      weatherCode,
+    };
+  });
+}
+
 /**
  * Fetches weather for a specific datetime (hourly mode).
  * When datetime is provided, uses hourly data; otherwise falls back to daily.

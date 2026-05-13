@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, useState } from "react";
 import type { WeatherData } from "../lib/weather";
 import { resolveWeatherValues } from "../lib/weather";
 import { describeWeatherCode } from "../lib/wmo";
@@ -11,6 +11,8 @@ import {
   PRECIP_HEAVY,
   WIND_SIGNIFICANT,
 } from "../lib/weatherThresholds";
+import { useHourlyBreakdown } from "../hooks/useHourlyBreakdown";
+import { HourlyBreakdown } from "./HourlyBreakdown";
 
 type Props = {
   waypoint: Waypoint;
@@ -23,6 +25,8 @@ type Props = {
   routeBearing?: number;
   /** Optional click handler, e.g. for analytics. */
   onClick?: () => void;
+  /** Selected date ("YYYY-MM-DD"). Enables the hourly breakdown toggle when present. */
+  date?: string | null;
 };
 
 /** Determines warning CSS modifier classes based on weather thresholds. */
@@ -197,8 +201,13 @@ export const WeatherCard = memo(function WeatherCard({
   arrivalTime,
   routeBearing,
   onClick,
+  date,
 }: Props) {
   const { label } = waypoint;
+  const [expanded, setExpanded] = useState(false);
+
+  const { data: hourlyEntries, isLoading: hourlyLoading, isError: hourlyError } =
+    useHourlyBreakdown(waypoint, date, expanded);
 
   const extraClasses =
     data && !isLoading && !isError
@@ -239,6 +248,28 @@ export const WeatherCard = memo(function WeatherCard({
 
       {!isLoading && !isError && !data && (
         <div className="weather-card__placeholder">Velg dato for å se vær</div>
+      )}
+
+      {data && date && (
+        <button
+          className="weather-card__hourly-toggle"
+          onClick={(e) => { e.stopPropagation(); setExpanded((v) => !v); }}
+          aria-expanded={expanded}
+        >
+          {expanded ? "▴ Skjul time for time" : "▾ Time for time"}
+        </button>
+      )}
+
+      {expanded && data && date && (
+        <div className="weather-card__hourly-panel">
+          {hourlyLoading && (
+            <div className="weather-card__hourly-loading">Laster...</div>
+          )}
+          {hourlyError && (
+            <div className="weather-card__hourly-error">Kunne ikke hente timedata</div>
+          )}
+          {hourlyEntries && <HourlyBreakdown entries={hourlyEntries} />}
+        </div>
       )}
     </div>
   );

@@ -2986,6 +2986,108 @@ details[open] .history-table__summary::before {
 .weather-card__skeleton-line--medium { width: 60%; animation-delay: 0.1s; }
 .weather-card__skeleton-line--narrow { width: 45%; animation-delay: 0.2s; }
 
+/* ─── Hourly breakdown toggle + panel ────────────────────────────────── */
+
+.weather-card__hourly-toggle {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 5px 0;
+  background: none;
+  border: none;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--accent);
+  cursor: pointer;
+  text-align: center;
+  font-family: inherit;
+}
+
+.weather-card__hourly-toggle:hover {
+  opacity: 0.8;
+}
+
+.weather-card__hourly-panel {
+  margin-top: 6px;
+}
+
+.weather-card__hourly-loading,
+.weather-card__hourly-error {
+  font-size: 12px;
+  color: var(--text);
+  font-style: italic;
+  padding: 4px 0;
+}
+
+.weather-card__hourly-error {
+  color: #ef4444;
+  font-style: normal;
+}
+
+/* ─── Hourly breakdown table ─────────────────────────────────────────── */
+
+.hourly-breakdown {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.hourly-breakdown__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+  color: var(--text);
+}
+
+.hourly-breakdown__th {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text);
+  opacity: 0.7;
+  text-align: left;
+  padding: 3px 4px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.hourly-breakdown__td {
+  padding: 3px 4px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.hourly-breakdown__td--hour {
+  font-weight: 600;
+  color: var(--text-h);
+  font-size: 11px;
+}
+
+.hourly-breakdown__td--icon {
+  font-size: 14px;
+}
+
+.hourly-breakdown__td--temp {
+  font-weight: 500;
+}
+
+.hourly-breakdown__feels-like {
+  color: var(--text);
+  font-weight: 400;
+  font-size: 10px;
+}
+
+.hourly-breakdown__prob {
+  color: var(--text);
+  opacity: 0.8;
+}
+
+.hourly-breakdown__wind-dir {
+  font-weight: 500;
+}
+
+.hourly-breakdown__row:last-child .hourly-breakdown__td {
+  border-bottom: none;
+}
+
 .weather-strip__source-banner {
   font-size: 12px;
   color: var(--text);
