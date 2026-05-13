@@ -1449,6 +1449,13 @@ code {
   line-height: 1.2;
 }
 
+.ritt-card__name span:first-child {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .ritt-card__meta {
   display: flex;
   gap: 8px;

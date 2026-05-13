@@ -50,7 +50,7 @@ export function EventCard({
       className={`ritt-card${planned ? " ritt-card--planned" : ""}${isPast ? " ritt-card--past" : ""}${isCancelled ? " ritt-card--cancelled" : ""}`}
     >
       <div className="ritt-card__name">
-        <span>{name}</span>
+        <span title={name}>{name}</span>
         {onTogglePlanned && (
           <button
             className={`ritt-card__bookmark${planned ? " ritt-card__bookmark--active" : ""}`}
