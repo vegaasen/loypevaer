@@ -657,5 +657,35 @@
       { "label": "75% – Nedstigning", "lat": 59.72012, "lon": 10.17110, "altitude": 298 },
       { "label": "Mål – Konnerudhallen", "lat": 59.71374, "lon": 10.14837, "altitude": 199 }
     ]
+  },
+  {
+    "id": "grunnlovsmila",
+    "name": "Grunnlovsmila",
+    "discipline": "løping",
+    "officialDate": "2026-05-09",
+    "distance": 10,
+    "elevationGain": 0,
+    "region": "Innlandet",
+    "url": "https://runagain.com/find-event/grunnlovsmila",
+    "waypoints": [
+      { "label": "Start – Elverum", "lat": 60.8814, "lon": 11.5622, "altitude": 185 },
+      { "label": "5 km", "lat": 60.8620, "lon": 11.5300, "altitude": 183 },
+      { "label": "Mål – Heradsbygd", "lat": 60.8440, "lon": 11.4990, "altitude": 180 }
+    ]
+  },
+  {
+    "id": "nidaros-lopefest-10k",
+    "name": "Nidaros Løpefest 10k",
+    "discipline": "løping",
+    "officialDate": "2026-05-23",
+    "officialStartTime": "10:00",
+    "distance": 10,
+    "elevationGain": 0,
+    "region": "Trøndelag",
+    "url": "https://nidaroslopefest.no/",
+    "waypoints": [
+      { "label": "Start/Mål – Skansen", "lat": 63.4340, "lon": 10.3900, "altitude": 5 },
+      { "label": "5 km – Promenaden", "lat": 63.4510, "lon": 10.3650, "altitude": 3 }
+    ]
   }
 ]
