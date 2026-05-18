@@ -1,126 +1,7 @@
 {
-  "generatedAt": "2026-05-11T05:56:14.533Z",
+  "generatedAt": "2026-05-18T06:02:48.861Z",
   "source": "racedays.run",
   "events": [
-    {
-      "id": "kanada-rundt-2026",
-      "name": "Kanada Rundt 2026",
-      "discipline": "løping",
-      "officialDate": "2026-05-12",
-      "distance": 12,
-      "distanceLabel": "12 km",
-      "region": "Buskerud",
-      "url": "https://www.racedays.run/event/kanada-rundt-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Lier",
-          "lat": 59.8453135,
-          "lon": 10.2115525
-        }
-      ]
-    },
-    {
-      "id": "knartamarsjen-2026",
-      "name": "Knartamarsjen 2026",
-      "discipline": "løping",
-      "officialDate": "2026-05-14",
-      "distance": 7.2,
-      "distanceLabel": "7.2 km",
-      "region": "Innlandet",
-      "url": "https://www.racedays.run/event/knartamarsjen-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Sør-Odal",
-          "lat": 60.212297,
-          "lon": 11.748138
-        }
-      ]
-    },
-    {
-      "id": "revetal-halvmaraton-2026",
-      "name": "Revetal Halvmaraton 2026",
-      "discipline": "løping",
-      "officialDate": "2026-05-14",
-      "distance": 21.1,
-      "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Vestfold",
-      "url": "https://www.racedays.run/event/revetal-halvmaraton-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Tønsberg",
-          "lat": 59.3549795,
-          "lon": 10.2820491
-        }
-      ]
-    },
-    {
-      "id": "tjomsevannet-rundt-2026",
-      "name": "Tjomsevannet Rundt 2026",
-      "discipline": "løping",
-      "officialDate": "2026-05-14",
-      "distance": 6.5,
-      "distanceLabel": "6.5 km",
-      "region": "Agder",
-      "url": "https://www.racedays.run/event/tjomsevannet-rundt-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Kristiansand",
-          "lat": 58.0856276,
-          "lon": 7.931858
-        }
-      ]
-    },
-    {
-      "id": "bislettmila-2026",
-      "name": "Bislettmila 2026",
-      "discipline": "løping",
-      "officialDate": "2026-05-15",
-      "distance": 10,
-      "distanceLabel": "10 km",
-      "region": "Oslo",
-      "url": "https://www.racedays.run/event/bislettmila-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Oslo",
-          "lat": 59.9133301,
-          "lon": 10.7389701
-        }
-      ]
-    },
-    {
-      "id": "skifjellopet-2026",
-      "name": "Skifjelløpet 2026",
-      "discipline": "løping",
-      "officialDate": "2026-05-15",
-      "distance": 6.5,
-      "distanceLabel": "6.5 km",
-      "region": "Agder",
-      "url": "https://www.racedays.run/event/skifjellopet-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Lillesand",
-          "lat": 58.1161123,
-          "lon": 8.4403257
-        }
-      ]
-    },
-    {
-      "id": "prestfoss-stafetten-2026",
-      "name": "Prestfoss-stafetten 2026",
-      "discipline": "løping",
-      "officialDate": "2026-05-17",
-      "distance": 6.4,
-      "distanceLabel": "6.4 km",
-      "region": "Buskerud",
-      "url": "https://www.racedays.run/event/prestfoss-stafetten-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Sigdal",
-          "lat": 60.1301824,
-          "lon": 9.4097767
-        }
-      ]
-    },
     {
       "id": "hafrsfjordlopet-2026",
       "name": "Hafrsfjordløpet 2026",
@@ -309,14 +190,14 @@
       ]
     },
     {
-      "id": "obos-fornebulopet-2026",
-      "name": "OBOS Fornebuløpet 2026",
+      "id": "fornebulopet-2026",
+      "name": "Fornebuløpet 2026",
       "discipline": "løping",
       "officialDate": "2026-05-27",
-      "distance": 10,
-      "distanceLabel": "10 km",
+      "distance": 18,
+      "distanceLabel": "18 km",
       "region": "Akershus",
-      "url": "https://www.racedays.run/event/obos-fornebulopet-2026",
+      "url": "https://www.racedays.run/event/fornebulopet-2026",
       "waypoints": [
         {
           "label": "Start/Mål – Bærum",
@@ -1578,7 +1459,7 @@
       "waypoints": [
         {
           "label": "Start/Mål – Vefsn",
-          "lat": 65.820747,
+          "lat": 65.8207471,
           "lon": 13.1786356
         }
       ]
@@ -2315,6 +2196,23 @@
       ]
     },
     {
+      "id": "kjelsaslopet-2026",
+      "name": "Kjelsåsløpet 2026",
+      "discipline": "løping",
+      "officialDate": "2026-08-29",
+      "distance": 8,
+      "distanceLabel": "8 km",
+      "region": "Oslo",
+      "url": "https://www.racedays.run/event/kjelsaaslopet-2026",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Oslo",
+          "lat": 59.9133301,
+          "lon": 10.7389701
+        }
+      ]
+    },
+    {
       "id": "tinde-sparebank-molde-maraton-hostlopet-2026",
       "name": "Tinde Sparebank Molde Maraton - Høstløpet 2026",
       "discipline": "løping",
@@ -2430,23 +2328,6 @@
           "label": "Start/Mål – Holtålen",
           "lat": 62.8653919,
           "lon": 11.3595676
-        }
-      ]
-    },
-    {
-      "id": "kjelsaslopet-2026",
-      "name": "Kjelsåsløpet 2026",
-      "discipline": "løping",
-      "officialDate": "2026-08-29",
-      "distance": 8,
-      "distanceLabel": "8 km",
-      "region": "Oslo",
-      "url": "https://www.racedays.run/event/kjelsaaslopet-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Oslo",
-          "lat": 59.9133301,
-          "lon": 10.7389701
         }
       ]
     },
@@ -2700,7 +2581,7 @@
       "waypoints": [
         {
           "label": "Start/Mål – Volda",
-          "lat": 62.0803798,
+          "lat": 62.0803797,
           "lon": 6.2744108
         }
       ]
@@ -2853,7 +2734,7 @@
       "waypoints": [
         {
           "label": "Start/Mål – Drangedal",
-          "lat": 59.0908937,
+          "lat": 59.0908938,
           "lon": 8.9687835
         }
       ]
@@ -2940,6 +2821,23 @@
           "label": "Start/Mål – Ålesund",
           "lat": 62.4802364,
           "lon": 6.5550739
+        }
+      ]
+    },
+    {
+      "id": "nydalslopet-2026",
+      "name": "Nydalsløpet 2026",
+      "discipline": "løping",
+      "officialDate": "2026-09-10",
+      "distance": 5,
+      "distanceLabel": "5 km",
+      "region": "Oslo",
+      "url": "https://www.racedays.run/event/nydalslopet-2026",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Oslo",
+          "lat": 59.9133301,
+          "lon": 10.7389701
         }
       ]
     },
@@ -3943,6 +3841,23 @@
           "label": "Start/Mål – Askøy",
           "lat": 60.5023024,
           "lon": 5.0948199
+        }
+      ]
+    },
+    {
+      "id": "revetal-halvmaraton-2027",
+      "name": "Revetal Halvmaraton 2027",
+      "discipline": "løping",
+      "officialDate": "2027-05-06",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Vestfold",
+      "url": "https://www.racedays.run/event/revetal-halvmaraton-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Tønsberg",
+          "lat": 59.3549795,
+          "lon": 10.2820491
         }
       ]
     },
