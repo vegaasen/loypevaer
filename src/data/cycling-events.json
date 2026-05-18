@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-11T08:50:51.000Z",
+  "generatedAt": "2026-05-18T06:28:37.432Z",
   "source": "eqtiming.com / Norges Cykleforbund (organizationId=13)",
   "events": [
     {
@@ -83,9 +83,9 @@
     },
     {
       "id": "enebakk-rundt",
-      "name": "Enebakk Rundt 2026",
+      "name": "Enebakk Rundt 2027",
       "discipline": "landevei",
-      "officialDate": "2026-05-01",
+      "officialDate": "2027-05-01",
       "distance": 83,
       "distanceLabel": "83 km",
       "sportLevel": "Tur",
@@ -121,50 +121,6 @@
           "lat": 59.757,
           "lon": 10.927,
           "altitude": 140
-        }
-      ]
-    },
-    {
-      "id": "styrkeproven-trondheim-lillehammer-eidsvoll-oslo",
-      "name": "Styrkeprøven Trondheim/Lillehammer/Eidsvoll - Oslo 2026",
-      "discipline": "landevei",
-      "dateStatus": "cancelled",
-      "officialDate": "2026-06-20",
-      "distance": 180,
-      "distanceLabel": "180 km",
-      "sportLevel": "Tur",
-      "region": "Trøndelag",
-      "url": "https://styrkeproven.no/",
-      "waypoints": [
-        {
-          "label": "Start – Trondheim",
-          "lat": 63.431,
-          "lon": 10.395,
-          "altitude": 10
-        },
-        {
-          "label": "25% – Støren",
-          "lat": 62.966,
-          "lon": 10.297,
-          "altitude": 50
-        },
-        {
-          "label": "50% – Røros",
-          "lat": 62.574,
-          "lon": 11.386,
-          "altitude": 628
-        },
-        {
-          "label": "75% – Alvdal",
-          "lat": 62.115,
-          "lon": 10.626,
-          "altitude": 480
-        },
-        {
-          "label": "Mål – Lillehammer",
-          "lat": 61.115,
-          "lon": 10.466,
-          "altitude": 185
         }
       ]
     },
@@ -1177,9 +1133,9 @@
     },
     {
       "id": "herefoss-rundt",
-      "name": "Herefoss Rundt 2026",
+      "name": "Herefoss Rundt 2027",
       "discipline": "landevei",
-      "officialDate": "2026-05-10",
+      "officialDate": "2027-05-09",
       "distance": 90,
       "distanceLabel": "90 km",
       "sportLevel": "Tur",
@@ -1693,7 +1649,7 @@
       "distanceLabel": "75 km",
       "sportLevel": "Tur",
       "region": "Vestland",
-      "url": "http://www.cksotra.no/",
+      "url": "",
       "waypoints": [
         {
           "label": "Start – Straume/Sotra",
@@ -2380,6 +2336,60 @@
           "lat": 69.677,
           "lon": 18.747,
           "altitude": 10
+        }
+      ]
+    },
+    {
+      "id": "uno-x-cup-i-glamdal-fellesstart-lordag",
+      "name": "UNO-X Cup i Glåmdal Fellesstart lørdag",
+      "discipline": "landevei",
+      "officialDate": "2026-08-22",
+      "distance": 96.3,
+      "distanceLabel": "96.3 km",
+      "sportLevel": "NC",
+      "region": "Innlandet",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Slobrua",
+          "lat": 60.2476197,
+          "lon": 11.7461343
+        }
+      ]
+    },
+    {
+      "id": "uno-x-cup-i-glamdal-fellesstart-sondag",
+      "name": "UNO-X Cup i Glåmdal fellesstart søndag",
+      "discipline": "landevei",
+      "officialDate": "2026-08-23",
+      "distance": 73.3,
+      "distanceLabel": "73.3 km",
+      "sportLevel": "NC",
+      "region": "Innlandet",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Sand",
+          "lat": 60.3921461,
+          "lon": 11.5402005
+        }
+      ]
+    },
+    {
+      "id": "vossagravel-7-juni",
+      "name": "Vossagravel 7. juni",
+      "discipline": "landevei",
+      "officialDate": "2026-06-07",
+      "distance": 72,
+      "distanceLabel": "72 km",
+      "sportLevel": "Tur",
+      "region": "Vestland",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Voss",
+          "lat": 60.6837067,
+          "lon": 6.4079051
         }
       ]
     }
