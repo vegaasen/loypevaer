@@ -50,16 +50,21 @@ export function WeatherStrip({ waypoints, date, startTime, finishTime, externalR
 
   useEffect(() => {
     if (!date) return;
+    let cancelled = false;
     getWeatherCache()
       .then((cache) => {
+        if (cancelled) return;
         const all = waypoints.map((wp) =>
           getHistoricalYears(cache, wp.lat, wp.lon, date)
         );
         setHistoricalYearsPerWaypoint(all);
       })
       .catch(() => {
-        setHistoricalYearsPerWaypoint([]);
+        if (!cancelled) setHistoricalYearsPerWaypoint([]);
       });
+    return () => {
+      cancelled = true;
+    };
   }, [waypoints, date]);
 
   return (
@@ -84,7 +89,7 @@ export function WeatherStrip({ waypoints, date, startTime, finishTime, externalR
             routeBearing={routeBearingForWaypoint(waypoints, i) ?? undefined}
             onClick={onWaypointClick ? () => onWaypointClick(waypoint, i) : undefined}
             date={date}
-            historicalYears={historicalYearsPerWaypoint[i]}
+            historicalYears={date ? historicalYearsPerWaypoint[i] : undefined}
           />
         ))}
       </div>
