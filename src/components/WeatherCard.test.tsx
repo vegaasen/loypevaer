@@ -141,4 +141,35 @@ describe("WeatherCard", () => {
     fireEvent.click(btn);
     expect(btn).toHaveAttribute("aria-expanded", "false");
   });
+
+  it("renders ClimateHistoryBadge when historicalYears is provided", () => {
+    const years = Array.from({ length: 10 }, () => ({
+      precipitation: 2,
+      windSpeed: 25,
+      tempMax: 3,
+    }));
+    renderWithQuery(
+      <WeatherCard
+        waypoint={waypoint}
+        data={undefined}
+        isLoading={false}
+        isError={false}
+        historicalYears={years}
+      />
+    );
+    expect(screen.getByText("Historisk")).toBeInTheDocument();
+    expect(screen.getByText("Krevende forhold")).toBeInTheDocument();
+  });
+
+  it("does not render ClimateHistoryBadge when historicalYears is absent", () => {
+    renderWithQuery(
+      <WeatherCard
+        waypoint={waypoint}
+        data={undefined}
+        isLoading={false}
+        isError={false}
+      />
+    );
+    expect(screen.queryByText("Historisk")).not.toBeInTheDocument();
+  });
 });

@@ -13,6 +13,8 @@ import {
 } from "../lib/weatherThresholds";
 import { useHourlyBreakdown } from "../hooks/useHourlyBreakdown";
 import { HourlyBreakdown } from "./HourlyBreakdown";
+import { ClimateHistoryBadge } from "./ClimateHistoryBadge";
+import type { ClimateStoryInput } from "../lib/climateStory";
 
 type Props = {
   waypoint: Waypoint;
@@ -27,6 +29,8 @@ type Props = {
   onClick?: () => void;
   /** Selected date ("YYYY-MM-DD"). Enables the hourly breakdown toggle when present. */
   date?: string | null;
+  /** Historical year-entries for climate storytelling badge. */
+  historicalYears?: ClimateStoryInput;
 };
 
 /** Determines warning CSS modifier classes based on weather thresholds. */
@@ -202,6 +206,7 @@ export const WeatherCard = memo(function WeatherCard({
   routeBearing,
   onClick,
   date,
+  historicalYears,
 }: Props) {
   const { label } = waypoint;
   const [expanded, setExpanded] = useState(false);
@@ -244,6 +249,13 @@ export const WeatherCard = memo(function WeatherCard({
 
       {data && (
         <WeatherCardContent data={data} routeBearing={routeBearing} />
+      )}
+
+      {historicalYears && historicalYears.length > 0 && (
+        <>
+          <hr className="weather-card__climate-divider" />
+          <ClimateHistoryBadge years={historicalYears} />
+        </>
       )}
 
       {!isLoading && !isError && !data && (
