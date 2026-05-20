@@ -34,6 +34,7 @@ export function getHistoricalYears(
 ): ClimateStoryInput {
   const [, , mm, dd] = date.split("-");
   const years: ClimateStoryInput = [];
+  // Fixed range matches the pre-built weather-cache.json window (2015–2024)
   for (let y = 2015; y <= 2024; y++) {
     const key = `${lat},${lon},${mm},${dd},${y}`;
     const entry = cache.historicalByYear[key];
