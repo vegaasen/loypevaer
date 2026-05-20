@@ -1,9 +1,11 @@
 import { useWeather, type WeatherResult } from "../hooks/useWeather";
-import { isForecastRange } from "../lib/weather";
+import { isForecastRange, getWeatherCache, getHistoricalYears } from "../lib/weather";
 import { WeatherCard } from "./WeatherCard";
 import type { Waypoint } from "../lib/weather";
 import { calcWaypointTimes, formatArrivalTime } from "../lib/timing";
 import { routeBearingForWaypoint } from "../lib/wind";
+import { useEffect, useState } from "react";
+import type { ClimateStoryInput } from "../lib/climateStory";
 
 type Props = {
   waypoints: Waypoint[];
@@ -44,6 +46,22 @@ export function WeatherStrip({ waypoints, date, startTime, finishTime, externalR
       ? "forecast"
       : "climate-average";
 
+  const [historicalYearsPerWaypoint, setHistoricalYearsPerWaypoint] = useState<ClimateStoryInput[]>([]);
+
+  useEffect(() => {
+    if (!date) return;
+    getWeatherCache()
+      .then((cache) => {
+        const all = waypoints.map((wp) =>
+          getHistoricalYears(cache, wp.lat, wp.lon, date)
+        );
+        setHistoricalYearsPerWaypoint(all);
+      })
+      .catch(() => {
+        setHistoricalYearsPerWaypoint([]);
+      });
+  }, [waypoints, date]);
+
   return (
     <div className="weather-strip">
       {date && (
@@ -66,6 +84,7 @@ export function WeatherStrip({ waypoints, date, startTime, finishTime, externalR
             routeBearing={routeBearingForWaypoint(waypoints, i) ?? undefined}
             onClick={onWaypointClick ? () => onWaypointClick(waypoint, i) : undefined}
             date={date}
+            historicalYears={historicalYearsPerWaypoint[i]}
           />
         ))}
       </div>
