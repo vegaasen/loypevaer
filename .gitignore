@@ -26,4 +26,5 @@ AWS_DEPLOY_NOTES.md
 *.njsproj
 *.sln
 *.sw?
-.junie
+.junie/plans
+.junie/memory
