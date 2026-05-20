@@ -1,4 +1,5 @@
 import { getTodayMidnight } from "./dates";
+import type { ClimateStoryInput } from "./climateStory";
 
 type WeatherCacheData = {
   climateAverages: Record<string, WeatherData>;
@@ -14,6 +15,37 @@ export function getWeatherCache(): Promise<WeatherCacheData> {
     );
   }
   return _cachePromise;
+}
+
+/**
+ * Extracts up to 10 historical year-entries for a waypoint + calendar date
+ * from the already-loaded weather cache, for use in climate storytelling.
+ *
+ * @param cache - The loaded WeatherCacheData object
+ * @param lat - Waypoint latitude
+ * @param lon - Waypoint longitude
+ * @param date - ISO date string "YYYY-MM-DD"
+ */
+export function getHistoricalYears(
+  cache: WeatherCacheData,
+  lat: number,
+  lon: number,
+  date: string
+): ClimateStoryInput {
+  const [, , mm, dd] = date.split("-");
+  const years: ClimateStoryInput = [];
+  for (let y = 2015; y <= 2024; y++) {
+    const key = `${lat},${lon},${mm},${dd},${y}`;
+    const entry = cache.historicalByYear[key];
+    if (entry) {
+      years.push({
+        precipitation: entry.precipitation,
+        windSpeed: entry.windSpeed,
+        tempMax: entry.tempMax,
+      });
+    }
+  }
+  return years;
 }
 
 export type Waypoint = {
