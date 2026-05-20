@@ -3512,3 +3512,32 @@ details[open] .history-table__summary::before {
 .feedback-snackbar__dismiss:hover {
   opacity: 1;
 }
+
+/* ── Climate History Badge ───────────────────────────── */
+.weather-card__climate-divider {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0.5rem 0 0.35rem;
+}
+
+.climate-history-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+}
+
+.climate-history-badge__prefix {
+  color: var(--color-text-muted, #888);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.climate-history-badge__pill {
+  background: rgba(0, 0, 0, 0.07);
+  color: var(--color-text-muted, #666);
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+  font-weight: 500;
+}
