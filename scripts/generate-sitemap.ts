@@ -10,6 +10,10 @@
 import { writeFileSync } from "fs";
 import { resolve } from "path";
 import ritt from "../src/data/arrangements.json" with { type: "json" };
+import triathlonData from "../src/data/triathlon-events.json" with { type: "json" };
+import runningData from "../src/data/running-events.json" with { type: "json" };
+import cyclingData from "../src/data/cycling-events.json" with { type: "json" };
+import cyclingManualData from "../src/data/cycling-manual.json" with { type: "json" };
 
 // Unicode IDN form — must match the verified Google Search Console property.
 const BASE_URL = "https://www.løypevær.no";
@@ -54,8 +58,14 @@ const urls: string[] = [
     <priority>0.6</priority>
   </url>`,
 
-  // One entry per arrangement
-  ...(ritt as RittEntry[]).map(
+  // One entry per arrangement — all data sources mirroring src/lib/arrangements.ts
+  ...[
+    ...(ritt as RittEntry[]),
+    ...((triathlonData as { events: RittEntry[] }).events),
+    ...((runningData as { events: RittEntry[] }).events),
+    ...((cyclingData as { events: RittEntry[] }).events),
+    ...((cyclingManualData as { events: RittEntry[] }).events),
+  ].map(
     (r) => `  <url>
     <loc>${BASE_URL}/arrangement/${r.id}</loc>
     <lastmod>${r.officialDate}</lastmod>
@@ -73,4 +83,4 @@ ${urls.join("\n")}
 
 const outPath = resolve(import.meta.dirname, "../public/sitemap.xml");
 writeFileSync(outPath, xml, "utf-8");
-console.log(`Sitemap written to ${outPath} (${(ritt as RittEntry[]).length + 4} URLs)`);
+console.log(`Sitemap written to ${outPath} (${urls.length} URLs)`);

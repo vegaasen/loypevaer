@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.xn--lypevaer-d8a.no/sitemap.xml
+Sitemap: https://www.løypevær.no/sitemap.xml
