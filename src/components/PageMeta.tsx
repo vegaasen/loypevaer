@@ -17,7 +17,7 @@ type Props = {
  * - meta description
  * - canonical link
  * - Open Graph: type, url, title, description, locale, image
- * - Twitter card: summary, title, description, image
+ * - Twitter card: summary_large_image, title, description, image
  *
  * Page-specific extras (keywords, ld+json, etc.) should be added in a
  * separate <Helmet> block in the page component.
@@ -34,7 +34,7 @@ export function PageMeta({ title, description, canonicalUrl, ogType = "website" 
       <meta property="og:description" content={description} />
       <meta property="og:locale" content="nb_NO" />
       <meta property="og:image" content={OG_IMAGE} />
-      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={OG_IMAGE} />
