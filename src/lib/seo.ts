@@ -53,6 +53,28 @@ export function disciplineSeoLabel(discipline: string): string {
 }
 
 /**
+ * Norwegian verb phrase for use in "Skal du [verb] X?"-style descriptions.
+ */
+export function disciplineVerb(discipline: string): string {
+  switch (discipline) {
+    case "landevei":
+      return "sykle";
+    case "terreng":
+      return "sykle";
+    case "langrenn":
+      return "gå";
+    case "triathlon":
+      return "gjennomføre";
+    case "ultraløp":
+      return "løpe";
+    case "løping":
+      return "løpe";
+    default:
+      return "delta i";
+  }
+}
+
+/**
  * Map internal discipline keys to English sport names for Schema.org.
  */
 export function disciplineToSport(discipline: string): string {

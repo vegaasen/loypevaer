@@ -12,7 +12,7 @@ import { ErrorBoundary } from "../components/ErrorBoundary";
 import { PageMeta } from "../components/PageMeta";
 import { computeElevationGain, allArrangements } from "../lib/arrangements";
 import { physicalScore, weatherAdjustment, scoreToLabel } from "../lib/difficulty";
-import { SITE_URL, disciplineToSport, disciplineKeywords, disciplineSeoLabel } from "../lib/seo";
+import { SITE_URL, disciplineToSport, disciplineKeywords, disciplineVerb } from "../lib/seo";
 import { useMyEvents } from "../hooks/useMyEvents";
 import { useWeather } from "../hooks/useWeather";
 import { calcWaypointTimes } from "../lib/timing";
@@ -43,7 +43,7 @@ export function EventPage() {
     ? `Vær for ${rittData.name} ${rittYear ?? ""} – rittvær, temperatur og vind | Løypevær`
     : "Fant ikke arrangement – Løypevær";
   const pageDescription = rittData
-    ? `${rittData.name} ${rittYear}: rittvær og værmelding for ${disciplineSeoLabel(rittData.discipline)} – ${rittData.distanceLabel ?? `${rittData.distance} km`}, ${rittData.elevationGain} hm i ${rittData.region}. Timebasert temperatur, vind og nedbør langs hele løypa.`
+    ? `Skal du ${disciplineVerb(rittData.discipline)} ${rittData.name} ${rittYear ?? ""}? Sjekk timebasert værmelding og historiske klimasnitt for alle veipunkter langs løypa – temperatur, vind og nedbør for ${rittData.distanceLabel ?? `${rittData.distance} km`} og ${rittData.elevationGain} hm i ${rittData.region}.`
     : undefined;
 
   useEffect(() => {
