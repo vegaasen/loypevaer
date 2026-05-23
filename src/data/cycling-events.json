@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-18T06:28:37.432Z",
+  "generatedAt": "2026-05-22T17:15:53.248Z",
   "source": "eqtiming.com / Norges Cykleforbund (organizationId=13)",
   "events": [
     {
@@ -906,7 +906,7 @@
       "distance": 158,
       "distanceLabel": "158 km",
       "sportLevel": "UCI",
-      "region": "Buskerud",
+      "region": "Hole",
       "url": " ",
       "waypoints": [
         {
@@ -1691,7 +1691,7 @@
       "distance": 90,
       "distanceLabel": "90 km",
       "sportLevel": "Trim",
-      "region": "Buskerud",
+      "region": "Øvre Eiker",
       "url": "http://eikerrittet.no/",
       "waypoints": [
         {
@@ -2390,6 +2390,114 @@
           "label": "Start/Mål – Voss",
           "lat": 60.6837067,
           "lon": 6.4079051
+        }
+      ]
+    },
+    {
+      "id": "sykkelgledecup-ritt-1",
+      "name": "Sykkelgledecup Ritt 1",
+      "discipline": "landevei",
+      "officialDate": "2026-06-01",
+      "distance": 600,
+      "distanceLabel": "600 km",
+      "sportLevel": "Reg",
+      "region": "Norge",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Gokartbanen  Eggemoen",
+          "lat": 60.20482924,
+          "lon": 10.31022017
+        }
+      ]
+    },
+    {
+      "id": "sykkelgledecup-ritt-2",
+      "name": "Sykkelgledecup Ritt 2",
+      "discipline": "terreng",
+      "officialDate": "2026-06-22",
+      "distance": 600,
+      "distanceLabel": "600 km",
+      "sportLevel": "Reg",
+      "region": "Akershus",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Puttemyra",
+          "lat": 60.22881605,
+          "lon": 10.36213701
+        }
+      ]
+    },
+    {
+      "id": "sykkelgledecup-ritt-3",
+      "name": "Sykkelgledecup Ritt 3",
+      "discipline": "landevei",
+      "officialDate": "2026-08-17",
+      "distance": 600,
+      "distanceLabel": "600 km",
+      "sportLevel": "Reg",
+      "region": "Norge",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Gokartbanen  Eggemoen",
+          "lat": 60.20482924,
+          "lon": 10.31022017
+        }
+      ]
+    },
+    {
+      "id": "sykkelgledecup-ritt-4",
+      "name": "Sykkelgledecup Ritt 4",
+      "discipline": "terreng",
+      "officialDate": "2026-08-31",
+      "distance": 600,
+      "distanceLabel": "600 km",
+      "sportLevel": "Reg",
+      "region": "Akershus",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Puttemyra",
+          "lat": 60.22881605,
+          "lon": 10.36213701
+        }
+      ]
+    },
+    {
+      "id": "sykkelgledecup-ritt-5",
+      "name": "Sykkelgledecup Ritt 5",
+      "discipline": "landevei",
+      "officialDate": "2026-09-07",
+      "distance": 600,
+      "distanceLabel": "600 km",
+      "sportLevel": "Reg",
+      "region": "Norge",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Gokartbanen  Eggemoen",
+          "lat": 60.20482924,
+          "lon": 10.31022017
+        }
+      ]
+    },
+    {
+      "id": "sykkelgledecup-ritt-6",
+      "name": "Sykkelgledecup Ritt 6",
+      "discipline": "terreng",
+      "officialDate": "2026-09-21",
+      "distance": 600,
+      "distanceLabel": "600 km",
+      "sportLevel": "Reg",
+      "region": "Akershus",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Puttemyra",
+          "lat": 60.22881605,
+          "lon": 10.36213701
         }
       ]
     }

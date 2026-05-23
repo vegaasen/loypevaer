@@ -2372,5 +2372,37 @@
       "lon": 7.103,
       "altitude": 13
     }
+  ],
+  "Bergen-Voss": [
+    {
+      "label": "Start – Bergen Voss Official Route",
+      "lat": 60.388,
+      "lon": 5.327,
+      "altitude": 7
+    },
+    {
+      "label": "25%",
+      "lat": 60.423,
+      "lon": 5.628,
+      "altitude": 158
+    },
+    {
+      "label": "50%",
+      "lat": 60.369,
+      "lon": 6.021,
+      "altitude": 359
+    },
+    {
+      "label": "75%",
+      "lat": 60.456,
+      "lon": 6.555,
+      "altitude": 95
+    },
+    {
+      "label": "Mål – Bergen Voss Official Route",
+      "lat": 60.637,
+      "lon": 6.439,
+      "altitude": 81
+    }
   ]
 }
