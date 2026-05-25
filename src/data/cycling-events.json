@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T17:15:53.248Z",
+  "generatedAt": "2026-05-25T06:33:17.999Z",
   "source": "eqtiming.com / Norges Cykleforbund (organizationId=13)",
   "events": [
     {
@@ -1691,7 +1691,7 @@
       "distance": 90,
       "distanceLabel": "90 km",
       "sportLevel": "Trim",
-      "region": "Øvre Eiker",
+      "region": "Buskerud",
       "url": "http://eikerrittet.no/",
       "waypoints": [
         {
@@ -2085,24 +2085,6 @@
           "label": "Start/Mål – Bømoen",
           "lat": 68.38465,
           "lon": 16.8869723
-        }
-      ]
-    },
-    {
-      "id": "master-nm-fellesstart",
-      "name": "Master NM Fellesstart 2026",
-      "discipline": "landevei",
-      "officialDate": "2026-06-28",
-      "distance": 50,
-      "distanceLabel": "50 km",
-      "sportLevel": "NM",
-      "region": "Trøndelag",
-      "url": "",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Trondheim",
-          "lat": 63.4304475,
-          "lon": 10.3952118
         }
       ]
     },
