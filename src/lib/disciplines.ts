@@ -5,6 +5,7 @@ export type FilterDiscipline = "alle" | Discipline;
 /** Plain text labels for each discipline, used in cards and filter pills. */
 export const DISCIPLINE_LABEL: Record<Discipline, string> = {
   landevei: "Landevei",
+  gravel: "Gravel",
   terreng: "Terreng",
   langrenn: "Langrenn",
   triathlon: "Triathlon",
@@ -17,6 +18,7 @@ export const DISCIPLINE_LABEL: Record<Discipline, string> = {
 export const DISCIPLINE_LABEL_WITH_EMOJI: Record<Discipline, string> = {
   terreng: "🚵 Terreng",
   landevei: "🚴 Landevei",
+  gravel: "🪨 Gravel",
   langrenn: "⛷️ Langrenn",
   triathlon: "🏊 Triathlon",
   ultraløp: "🏃 Ultraløp",

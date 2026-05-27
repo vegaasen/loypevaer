@@ -1482,6 +1482,18 @@ code {
   color: var(--accent);
 }
 
+.ritt-card__discipline--gravel {
+  background: color-mix(in srgb, #8b6914 12%, transparent);
+  color: #8b6914;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ritt-card__discipline--gravel {
+    background: color-mix(in srgb, #d4a84b 12%, transparent);
+    color: #d4a84b;
+  }
+}
+
 .ritt-card__discipline--terreng {
   background: color-mix(in srgb, #7c6f2e 12%, transparent);
   color: #7c6f2e;
@@ -1853,6 +1865,18 @@ code {
 .featured-card__discipline--landevei {
   background: color-mix(in srgb, var(--accent) 12%, transparent);
   color: var(--accent);
+}
+
+.featured-card__discipline--gravel {
+  background: color-mix(in srgb, #8b6914 12%, transparent);
+  color: #8b6914;
+}
+
+@media (prefers-color-scheme: dark) {
+  .featured-card__discipline--gravel {
+    background: color-mix(in srgb, #d4a84b 12%, transparent);
+    color: #d4a84b;
+  }
 }
 
 .featured-card__discipline--terreng {

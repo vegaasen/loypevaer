@@ -46,9 +46,24 @@ const INCLUDED_SPORTS = new Set(["Landevei", "Terreng", "Gravel", "Sykkelkross"]
 /** Discipline mapping from EQ Timing Sport.Name to our Discipline type */
 const SPORT_TO_DISCIPLINE: Record<string, string> = {
   Landevei: "landevei",
-  Gravel: "landevei",
+  Gravel: "gravel",
   Terreng: "terreng",
   Sykkelkross: "cx",
+};
+
+/**
+ * Hardcoded distance overrides for events where EQ Timing returns bad data.
+ * Values are in km. Applied after EQ API distance calculation.
+ */
+const DISTANCE_OVERRIDES: Record<string, number> = {
+  "halvbirken-sykkel": 46,
+  "tour-of-norway-for-kids-sundvollen": 6,
+  "sykkelgledecup-ritt-1": 60,
+  "sykkelgledecup-ritt-2": 60,
+  "sykkelgledecup-ritt-3": 60,
+  "sykkelgledecup-ritt-4": 60,
+  "sykkelgledecup-ritt-5": 60,
+  "sykkelgledecup-ritt-6": 60,
 };
 
 // ---------------------------------------------------------------------------
@@ -357,10 +372,18 @@ async function main() {
       .map((r) => r.Distance)
       .filter((d) => d > 0);
     const metres = distances.length > 0 ? Math.max(...distances) : 0;
-    const km = metres > 0 ? Math.round(metres / 100) / 10 : 0;
 
     // Generate stable year-less ID
     const id = stripYear(toId(event.Name));
+
+    // Apply hardcoded override if available (corrects known bad EQ Timing data)
+    const kmOverride = DISTANCE_OVERRIDES[id];
+    const km = kmOverride !== undefined
+      ? kmOverride
+      : metres > 0 ? Math.round(metres / 100) / 10 : 0;
+    if (kmOverride !== undefined) {
+      console.log(`    ⚠ Distance override applied for "${id}": ${Math.round(metres / 100) / 10} km → ${kmOverride} km`);
+    }
 
     console.log(
       `  Processing: ${event.Name} → id: ${id} (${officialDate}, ${event.Sport.Name}, ${cityName})`
@@ -406,7 +429,7 @@ async function main() {
       discipline,
       officialDate,
       distance: km,
-      distanceLabel: distanceLabel(metres),
+      distanceLabel: kmOverride !== undefined ? `${kmOverride} km` : distanceLabel(metres),
       sportLevel: event.Sportlevel.Code,
       region,
       url: event.Homepage ?? "",

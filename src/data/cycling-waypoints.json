@@ -2404,5 +2404,13 @@
       "lon": 6.439,
       "altitude": 81
     }
+  ],
+  "uno-x-noregskopp-voss-3-etappars-bomoen-fellesstart": [
+    {
+      "label": "Start/Mål – Bømoen, Voss",
+      "lat": 60.6748,
+      "lon": 6.5176,
+      "altitude": 56
+    }
   ]
 }

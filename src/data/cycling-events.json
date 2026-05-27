@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T17:15:53.248Z",
+  "generatedAt": "2026-05-25T19:47:25.648Z",
   "source": "eqtiming.com / Norges Cykleforbund (organizationId=13)",
   "events": [
     {
@@ -71,7 +71,7 @@
       "distance": 50,
       "distanceLabel": "50 km",
       "sportLevel": "Tur",
-      "region": "Buskerud",
+      "region": "Hol",
       "url": "https://www.fat-viking.com/en",
       "waypoints": [
         {
@@ -600,7 +600,7 @@
     {
       "id": "gravelbirken",
       "name": "GravelBirken 2026",
-      "discipline": "landevei",
+      "discipline": "gravel",
       "officialDate": "2026-08-29",
       "distance": 92,
       "distanceLabel": "92 km",
@@ -645,8 +645,8 @@
       "name": "HalvBirken Sykkel 2026",
       "discipline": "terreng",
       "officialDate": "2026-08-29",
-      "distance": 92,
-      "distanceLabel": "92 km",
+      "distance": 46,
+      "distanceLabel": "46 km",
       "sportLevel": "Tur",
       "region": "Innlandet",
       "url": "https://www.birkebeiner.no",
@@ -924,7 +924,7 @@
       "distance": 171.6,
       "distanceLabel": "171.6 km",
       "sportLevel": "UCI",
-      "region": "Buskerud",
+      "region": "Ringerike",
       "url": " ",
       "waypoints": [
         {
@@ -1091,7 +1091,7 @@
     {
       "id": "atlantic-gravel",
       "name": "Atlantic Gravel 2026",
-      "discipline": "landevei",
+      "discipline": "gravel",
       "officialDate": "2026-07-12",
       "distance": 85,
       "distanceLabel": "85 km",
@@ -1349,7 +1349,7 @@
     {
       "id": "reistadgravel-100",
       "name": "Reistadgravel 100",
-      "discipline": "landevei",
+      "discipline": "gravel",
       "officialDate": "2026-06-28",
       "distance": 70,
       "distanceLabel": "70 km",
@@ -1691,7 +1691,7 @@
       "distance": 90,
       "distanceLabel": "90 km",
       "sportLevel": "Trim",
-      "region": "Øvre Eiker",
+      "region": "Buskerud",
       "url": "http://eikerrittet.no/",
       "waypoints": [
         {
@@ -1729,7 +1729,7 @@
     {
       "id": "styggmannen-gravel-og-terrengritt",
       "name": "Styggmannen, gravel og terrengritt 2026",
-      "discipline": "landevei",
+      "discipline": "gravel",
       "officialDate": "2026-08-22",
       "distance": 63.9,
       "distanceLabel": "63.9 km",
@@ -2082,27 +2082,10 @@
       "url": "",
       "waypoints": [
         {
-          "label": "Start/Mål – Bømoen",
-          "lat": 68.38465,
-          "lon": 16.8869723
-        }
-      ]
-    },
-    {
-      "id": "master-nm-fellesstart",
-      "name": "Master NM Fellesstart 2026",
-      "discipline": "landevei",
-      "officialDate": "2026-06-28",
-      "distance": 50,
-      "distanceLabel": "50 km",
-      "sportLevel": "NM",
-      "region": "Trøndelag",
-      "url": "",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Trondheim",
-          "lat": 63.4304475,
-          "lon": 10.3952118
+          "label": "Start/Mål – Bømoen, Voss",
+          "lat": 60.6748,
+          "lon": 6.5176,
+          "altitude": 56
         }
       ]
     },
@@ -2197,8 +2180,8 @@
       "name": "Tour of Norway for Kids,Sundvollen",
       "discipline": "landevei",
       "officialDate": "2026-05-03",
-      "distance": 600,
-      "distanceLabel": "600 km",
+      "distance": 6,
+      "distanceLabel": "6 km",
       "sportLevel": "Reg",
       "region": "Buskerud",
       "url": "",
@@ -2378,7 +2361,7 @@
     {
       "id": "vossagravel-7-juni",
       "name": "Vossagravel 7. juni",
-      "discipline": "landevei",
+      "discipline": "gravel",
       "officialDate": "2026-06-07",
       "distance": 72,
       "distanceLabel": "72 km",
@@ -2398,8 +2381,8 @@
       "name": "Sykkelgledecup Ritt 1",
       "discipline": "landevei",
       "officialDate": "2026-06-01",
-      "distance": 600,
-      "distanceLabel": "600 km",
+      "distance": 60,
+      "distanceLabel": "60 km",
       "sportLevel": "Reg",
       "region": "Norge",
       "url": "",
@@ -2416,8 +2399,8 @@
       "name": "Sykkelgledecup Ritt 2",
       "discipline": "terreng",
       "officialDate": "2026-06-22",
-      "distance": 600,
-      "distanceLabel": "600 km",
+      "distance": 60,
+      "distanceLabel": "60 km",
       "sportLevel": "Reg",
       "region": "Akershus",
       "url": "",
@@ -2434,8 +2417,8 @@
       "name": "Sykkelgledecup Ritt 3",
       "discipline": "landevei",
       "officialDate": "2026-08-17",
-      "distance": 600,
-      "distanceLabel": "600 km",
+      "distance": 60,
+      "distanceLabel": "60 km",
       "sportLevel": "Reg",
       "region": "Norge",
       "url": "",
@@ -2452,8 +2435,8 @@
       "name": "Sykkelgledecup Ritt 4",
       "discipline": "terreng",
       "officialDate": "2026-08-31",
-      "distance": 600,
-      "distanceLabel": "600 km",
+      "distance": 60,
+      "distanceLabel": "60 km",
       "sportLevel": "Reg",
       "region": "Akershus",
       "url": "",
@@ -2470,8 +2453,8 @@
       "name": "Sykkelgledecup Ritt 5",
       "discipline": "landevei",
       "officialDate": "2026-09-07",
-      "distance": 600,
-      "distanceLabel": "600 km",
+      "distance": 60,
+      "distanceLabel": "60 km",
       "sportLevel": "Reg",
       "region": "Norge",
       "url": "",
@@ -2488,8 +2471,8 @@
       "name": "Sykkelgledecup Ritt 6",
       "discipline": "terreng",
       "officialDate": "2026-09-21",
-      "distance": 600,
-      "distanceLabel": "600 km",
+      "distance": 60,
+      "distanceLabel": "60 km",
       "sportLevel": "Reg",
       "region": "Akershus",
       "url": "",

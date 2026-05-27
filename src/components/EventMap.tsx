@@ -21,6 +21,8 @@ function osrmProfile(discipline: Discipline): string {
   switch (discipline) {
     case "landevei":
       return "bike"; // road cycling — bike profile is closest
+    case "gravel":
+      return "bike"; // gravel — bike profile (same as road)
     case "terreng":
       return "bike"; // MTB — bike profile
     case "langrenn":

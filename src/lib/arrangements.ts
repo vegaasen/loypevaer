@@ -14,7 +14,7 @@ export const allArrangements: RittEntry[] = [
   ...(cyclingManualData.events as RittEntry[]),
 ];
 
-export type Discipline = "landevei" | "terreng" | "langrenn" | "triathlon" | "ultraløp" | "løping" | "cx";
+export type Discipline = "landevei" | "gravel" | "terreng" | "langrenn" | "triathlon" | "ultraløp" | "løping" | "cx";
 
 export interface RittEntry {
   id: string;
