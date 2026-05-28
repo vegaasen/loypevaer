@@ -1,5 +1,5 @@
 import { useParams, useSearchParams, Link } from "react-router-dom";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import { DatePicker } from "../components/DatePicker";
 import { TimePicker } from "../components/TimePicker";
@@ -121,7 +121,7 @@ export function EventPage() {
     ? `${SITE_URL}${getOgImagePath(rittData.discipline, import.meta.env.BASE_URL)}`
     : undefined;
 
-  const shareUrl = (() => {
+  const shareUrl = useMemo(() => {
     const url = new URL(window.location.href);
     if (selectedDate) {
       url.searchParams.set("date", selectedDate);
@@ -131,7 +131,7 @@ export function EventPage() {
     url.searchParams.delete("start");
     url.searchParams.delete("finish");
     return url.toString();
-  })();
+  }, [selectedDate]);
 
   if (!rittData) {
     return (
@@ -314,15 +314,15 @@ export function EventPage() {
                 startWaypointWeather={weatherResults[0]?.data ?? null}
               />
               <WeatherStrip
-              waypoints={rittData.waypoints}
-              date={selectedDate || null}
-              startTime={startTime || null}
-              finishTime={finishTime || null}
-              externalResults={weatherResults}
-              onWaypointClick={(wp, i) =>
-                trackWaypointSelected(rittData.id, wp.label, i)
-              }
-            />
+                waypoints={rittData.waypoints}
+                date={selectedDate || null}
+                startTime={startTime || null}
+                finishTime={finishTime || null}
+                externalResults={weatherResults}
+                onWaypointClick={(wp, i) =>
+                  trackWaypointSelected(rittData.id, wp.label, i)
+                }
+              />
             </>
           )}
           {!forecastOnly && selectedDate && (
