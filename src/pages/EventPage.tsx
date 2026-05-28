@@ -217,36 +217,38 @@ export function EventPage() {
         ← {forecastOnly ? "Alle løp" : "Alle arrangement"}
       </Link>
       <header className="ritt-page__header">
-        <h1>{rittData.name}</h1>
-        <div className="ritt-page__meta">
-          <span className="ritt-page__meta-item">
-            {rittData.distanceLabel ?? `${rittData.distance} km`}
-          </span>
-          {elevationGain != null && (
-            <span className="ritt-page__meta-item ritt-page__meta-item--elevation">
-              ↑ {elevationGain} m
-            </span>
-          )}
+        <div className="ritt-page__title-row">
+          <h1>{rittData.name}</h1>
           {!forecastOnly && physDifficulty && (
             <span
-              className={`ritt-page__meta-item ritt-page__difficulty-badge ritt-page__difficulty-badge--${physDifficulty.level}`}
+              className={`ritt-page__difficulty-badge ritt-page__difficulty-badge--${physDifficulty.level}`}
             >
               {physDifficulty.label}
             </span>
           )}
-          <span className="ritt-page__meta-item">{rittData.region}</span>
-          <span className="ritt-page__meta-item">Offisiell dato: {formattedOfficialDate}</span>
-          {rittData.dateStatus === "pending" && (
-            <span className="ritt-page__meta-item ritt-page__pending-badge" title="Datoen er ikke offisielt bekreftet ennå">
-              Tentativ dato
-            </span>
+        </div>
+        <div className="ritt-page__stats-row">
+          <span>{rittData.distanceLabel ?? `${rittData.distance} km`}</span>
+          {elevationGain != null && (
+            <span className="ritt-page__stats-elevation">↑ {elevationGain} m</span>
           )}
+          <span>{rittData.region}</span>
+        </div>
+        <div className="ritt-page__actions-row">
+          <span className="ritt-page__actions-date">
+            {formattedOfficialDate}
+            {rittData.dateStatus === "pending" && (
+              <span className="ritt-page__pending-badge" title="Datoen er ikke offisielt bekreftet ennå">
+                Tentativ
+              </span>
+            )}
+          </span>
           {rittData.url && (
             <a
               href={rittData.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="ritt-page__meta-item ritt-page__meta-link"
+              className="ritt-page__meta-link"
               onClick={() => trackExternalLinkClick(rittData.url!, rittData.name)}
             >
               Offisiell nettside ↗
