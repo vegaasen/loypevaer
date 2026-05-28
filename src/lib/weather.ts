@@ -93,6 +93,13 @@ export type WeatherData = {
   tempTrend?: number;
 };
 
+export type WeatherResult = {
+  waypoint: Waypoint;
+  data: WeatherData | null;
+  loading: boolean;
+  error: unknown;
+};
+
 /**
  * Resolved weather values that prefer hourly (timing mode) data over daily data.
  * Use this instead of repeating the `hourlyXxx ?? dailyXxx` pattern inline.
