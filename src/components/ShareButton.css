@@ -1,19 +1,22 @@
 .share-button {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-xs, 0.25rem);
-  padding: var(--space-xs, 0.25rem) var(--space-sm, 0.5rem);
-  border: 1px solid currentColor;
-  border-radius: 4px;
+  gap: 4px;
+  font: inherit;
+  font-size: 13px;
+  color: var(--text);
   background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 4px 10px;
   cursor: pointer;
-  font-size: 0.875rem;
-  color: inherit;
-  transition: opacity 0.15s;
+  transition: border-color 0.15s, background 0.12s, color 0.12s;
 }
 
 .share-button:hover {
-  opacity: 0.75;
+  border-color: var(--accent-border);
+  background: var(--accent-bg);
+  color: var(--text-h);
 }
 
 .share-button__icon {
