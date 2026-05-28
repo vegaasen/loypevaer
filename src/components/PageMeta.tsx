@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { SITE_URL } from "../lib/seo";
 
-const OG_IMAGE = `${SITE_URL}/web-app-manifest-512x512.png`;
+const DEFAULT_OG_IMAGE = `${SITE_URL}/web-app-manifest-512x512.png`;
 
 type Props = {
   title: string;
@@ -9,6 +9,8 @@ type Props = {
   canonicalUrl: string;
   /** Defaults to "website" */
   ogType?: "website" | "article";
+  /** Override the default og:image. Must be an absolute URL. */
+  ogImage?: string;
 };
 
 /**
@@ -22,7 +24,8 @@ type Props = {
  * Page-specific extras (keywords, ld+json, etc.) should be added in a
  * separate <Helmet> block in the page component.
  */
-export function PageMeta({ title, description, canonicalUrl, ogType = "website" }: Props) {
+export function PageMeta({ title, description, canonicalUrl, ogType = "website", ogImage }: Props) {
+  const image = ogImage ?? DEFAULT_OG_IMAGE;
   return (
     <Helmet>
       <title>{title}</title>
@@ -33,11 +36,11 @@ export function PageMeta({ title, description, canonicalUrl, ogType = "website" 
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:locale" content="nb_NO" />
-      <meta property="og:image" content={OG_IMAGE} />
+      <meta property="og:image" content={image} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={OG_IMAGE} />
+      <meta name="twitter:image" content={image} />
     </Helmet>
   );
 }
