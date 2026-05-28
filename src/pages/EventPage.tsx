@@ -234,15 +234,15 @@ export function EventPage() {
           )}
           <span>{rittData.region}</span>
         </div>
+        <span className="ritt-page__actions-date">
+          {formattedOfficialDate}
+          {rittData.dateStatus === "pending" && (
+            <span className="ritt-page__pending-badge" title="Datoen er ikke offisielt bekreftet ennå">
+              Tentativ
+            </span>
+          )}
+        </span>
         <div className="ritt-page__actions-row">
-          <span className="ritt-page__actions-date">
-            {formattedOfficialDate}
-            {rittData.dateStatus === "pending" && (
-              <span className="ritt-page__pending-badge" title="Datoen er ikke offisielt bekreftet ennå">
-                Tentativ
-              </span>
-            )}
-          </span>
           {rittData.url && (
             <a
               href={rittData.url}
