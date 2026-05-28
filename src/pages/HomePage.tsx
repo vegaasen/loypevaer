@@ -355,26 +355,6 @@ export function HomePage() {
                           <span className="month-count-badge">{monthEvents.length}</span>
                         )}
                       </h3>
-                      {upcoming.length > 0 && (
-                        <div className="home-page__grid">
-                          {upcoming.map((r) => (
-                            <EventCard
-                              key={r.id}
-                              id={r.id}
-                              name={r.name}
-                              officialDate={r.officialDate}
-                              distance={r.distance}
-                              distanceLabel={r.distanceLabel}
-                              region={r.region}
-                              discipline={r.discipline}
-                              planned={isPlanned(r.id)}
-                              isPast={false}
-                              dateStatus={r.dateStatus}
-                              onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
-                            />
-                          ))}
-                        </div>
-                      )}
                       {past.length > 0 && (
                         <div className={`home-page__grid home-page__grid--past-list${upcoming.length > 0 ? " home-page__grid--past-list-separated" : ""}`}>
                           {past.map((r) => (
@@ -389,6 +369,26 @@ export function HomePage() {
                               discipline={r.discipline}
                               planned={isPlanned(r.id)}
                               isPast={true}
+                              dateStatus={r.dateStatus}
+                              onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
+                            />
+                          ))}
+                        </div>
+                      )}
+                      {upcoming.length > 0 && (
+                        <div className={`home-page__grid${past.length > 0 ? " home-page__grid--upcoming-separated" : ""}`}>
+                          {upcoming.map((r) => (
+                            <EventCard
+                              key={r.id}
+                              id={r.id}
+                              name={r.name}
+                              officialDate={r.officialDate}
+                              distance={r.distance}
+                              distanceLabel={r.distanceLabel}
+                              region={r.region}
+                              discipline={r.discipline}
+                              planned={isPlanned(r.id)}
+                              isPast={false}
                               dateStatus={r.dateStatus}
                               onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
                             />

@@ -1533,14 +1533,20 @@ code {
   flex-shrink: 0;
 }
 
-/* Override the grid to single-column when all items in it are compact */
+/* Past events grid: 4 columns on desktop, compact rows */
 .home-page__grid--past-list {
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 4px;
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* Visual separator when past list follows an upcoming grid in the same month */
-.home-page__grid--past-list-separated {
+/* Visual separator: upcoming grid gets a top border when past rows precede it */
+.home-page__grid--upcoming-separated {
   margin-top: 12px;
   padding-top: 12px;
   border-top: 1px solid var(--border);
