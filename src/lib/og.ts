@@ -1,11 +1,16 @@
-import type { WeatherResult } from "./weather";
+import type { WeatherData, Waypoint } from "./weather";
+
+type WeatherEntry = {
+  waypoint: Waypoint;
+  data: WeatherData | null | undefined;
+};
 
 /**
  * Builds a short weather summary for og:description.
  * Returns null if no weather data is available yet.
  * Example: "Start: 12°C, lett bris · Toppen: 8°C, stiv kuling · Mål: 14°C, svak vind"
  */
-export function buildOgDescription(weatherResults: WeatherResult[]): string | null {
+export function buildOgDescription(weatherResults: WeatherEntry[]): string | null {
   const parts: string[] = [];
 
   for (const result of weatherResults) {

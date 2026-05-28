@@ -1,4 +1,5 @@
 import "./RaceDayCountdown.css";
+import { useMemo, useState } from "react";
 import type { WeatherData } from "../lib/weather";
 
 const FORECAST_DAYS = 16;
@@ -9,19 +10,19 @@ type Props = {
 };
 
 export function RaceDayCountdown({ selectedDate, startWaypointWeather }: Props) {
-  if (!selectedDate) return null;
+  const [nowMs] = useState<number>(() => Date.now());
 
-  const todayMs = Date.now();
-  const [year, month, day] = selectedDate.split("-").map(Number);
-  const raceDateMs = Date.UTC(year, month - 1, day);
+  const diffDays = useMemo(() => {
+    if (!selectedDate) return null;
+    const [year, month, day] = selectedDate.split("-").map(Number);
+    const raceDateMs = Date.UTC(year, month - 1, day);
+    // Days difference (both normalised to UTC midnight)
+    const todayUtcMidnight = nowMs - (nowMs % (1000 * 60 * 60 * 24));
+    const diffMs = raceDateMs - todayUtcMidnight;
+    return Math.round(diffMs / (1000 * 60 * 60 * 24));
+  }, [selectedDate, nowMs]);
 
-  // Days difference (both normalised to UTC midnight)
-  const todayUtcMidnight =
-    todayMs - (todayMs % (1000 * 60 * 60 * 24));
-  const diffMs = raceDateMs - todayUtcMidnight;
-  const diffDays = Math.round(diffMs / (1000 * 60 * 60 * 24));
-
-  if (diffDays < 0) return null;
+  if (!selectedDate || diffDays === null || diffDays < 0) return null;
 
   if (diffDays === 0) {
     return (

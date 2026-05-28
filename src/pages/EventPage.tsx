@@ -18,6 +18,8 @@ import { useWeather } from "../hooks/useWeather";
 import { calcWaypointTimes } from "../lib/timing";
 import { isForecastRange } from "../lib/weather";
 import { ShareButton } from "../components/ShareButton";
+import { RaceDayCountdown } from "../components/RaceDayCountdown";
+import { buildOgDescription, getOgImagePath } from "../lib/og";
 import { formatNorwegianDate, parseDateLocal } from "../lib/dates";
 import { trackRaceSelected, trackExternalLinkClick, trackWaypointSelected } from "../lib/analytics";
 import { FeedbackSnackbar } from "../components/FeedbackSnackbar";
@@ -110,6 +112,27 @@ export function EventPage() {
     datetimes
   );
 
+  // Dynamic og values
+  const ogDescription =
+    buildOgDescription(weatherResults) ??
+    (rittData ? `${rittData.name} – værmeldingen langs løypa` : "Løypevær");
+
+  const ogImage = rittData
+    ? `${SITE_URL}${getOgImagePath(rittData.discipline, import.meta.env.BASE_URL)}`
+    : undefined;
+
+  const shareUrl = (() => {
+    const url = new URL(window.location.href);
+    if (selectedDate) {
+      url.searchParams.set("date", selectedDate);
+    } else {
+      url.searchParams.delete("date");
+    }
+    url.searchParams.delete("start");
+    url.searchParams.delete("finish");
+    return url.toString();
+  })();
+
   if (!rittData) {
     return (
       <div className="ritt-page ritt-page--not-found">
@@ -156,8 +179,10 @@ export function EventPage() {
     <div className="ritt-page">
       <PageMeta
         title={pageTitle}
-        description={pageDescription ?? ""}
+        description={ogDescription}
         canonicalUrl={pageUrl}
+        ogType="website"
+        ogImage={ogImage}
       />
       <Helmet>
         {rittData && (
@@ -235,7 +260,7 @@ export function EventPage() {
           >
             {planned ? "📌 Mine arrangement" : "📍 Legg til mine arrangement"}
           </button>
-          <ShareButton url={window.location.href} />
+          <ShareButton url={shareUrl} />
         </div>
       </header>
 
@@ -283,7 +308,12 @@ export function EventPage() {
               Værmeldingen er ikke klar ennå — sjekk igjen nærmere løpsdagen.
             </p>
           ) : (
-            <WeatherStrip
+            <>
+              <RaceDayCountdown
+                selectedDate={selectedDate}
+                startWaypointWeather={weatherResults[0]?.data ?? null}
+              />
+              <WeatherStrip
               waypoints={rittData.waypoints}
               date={selectedDate || null}
               startTime={startTime || null}
@@ -293,6 +323,7 @@ export function EventPage() {
                 trackWaypointSelected(rittData.id, wp.label, i)
               }
             />
+            </>
           )}
           {!forecastOnly && selectedDate && (
             <>
