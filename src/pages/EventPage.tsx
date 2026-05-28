@@ -319,29 +319,27 @@ export function EventPage() {
               />
             </>
           )}
-          {!forecastOnly && selectedDate && (
+          {!forecastOnly && selectedDate && adjDifficulty && physDifficulty && (
             <div className="dag-vurdering">
-              {adjDifficulty && physDifficulty && (
-                adjDifficulty.level !== physDifficulty.level ? (
-                  <>
-                    <span className="dag-vurdering__label">Dag-vurdering:</span>
-                    <span className={`dag-vurdering__badge dag-vurdering__badge--${physDifficulty.level}`}>
-                      {physDifficulty.label}
-                    </span>
-                    <span className="dag-vurdering__arrow">→</span>
-                    <span className={`dag-vurdering__badge dag-vurdering__badge--${adjDifficulty.level}`}>
-                      {adjDifficulty.label}
-                    </span>
-                    <span className="dag-vurdering__note">pga. vær</span>
-                  </>
-                ) : (
-                  <>
-                    <span className="dag-vurdering__label">Dag-vurdering:</span>
-                    <span className={`dag-vurdering__badge dag-vurdering__badge--${adjDifficulty.level}`}>
-                      {adjDifficulty.label}
-                    </span>
-                  </>
-                )
+              {adjDifficulty.level !== physDifficulty.level ? (
+                <>
+                  <span className="dag-vurdering__label">Dag-vurdering:</span>
+                  <span className={`dag-vurdering__badge dag-vurdering__badge--${physDifficulty.level}`}>
+                    {physDifficulty.label}
+                  </span>
+                  <span className="dag-vurdering__arrow">→</span>
+                  <span className={`dag-vurdering__badge dag-vurdering__badge--${adjDifficulty.level}`}>
+                    {adjDifficulty.label}
+                  </span>
+                  <span className="dag-vurdering__note">pga. vær</span>
+                </>
+              ) : (
+                <>
+                  <span className="dag-vurdering__label">Dag-vurdering:</span>
+                  <span className={`dag-vurdering__badge dag-vurdering__badge--${adjDifficulty.level}`}>
+                    {adjDifficulty.label}
+                  </span>
+                </>
               )}
             </div>
           )}
