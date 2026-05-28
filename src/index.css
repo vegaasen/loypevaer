@@ -2641,9 +2641,37 @@ code {
 
 .ritt-page__map-section {
   padding: 0 32px;
-  margin-top: 24px;
+  margin-top: 32px;
   @media (max-width: 1024px) {
     padding: 0 16px;
+  }
+}
+
+/* ── Grouped accordion for secondary sections ── */
+.ritt-page__secondary-sections {
+  margin: 32px 32px 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+
+  /* Each direct child collapsible: remove its own border/radius, add top divider */
+  > details,
+  > .ritt-map__details,
+  > .elevation-profile__details,
+  > .gear-suggestion__details,
+  > .history-table__details {
+    border: none;
+    border-radius: 0;
+    border-top: 1px solid var(--border);
+    overflow: visible;
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    margin: 32px 16px 0;
   }
 }
 
@@ -2666,7 +2694,7 @@ code {
 }
 
 .ritt-page__history-section {
-  margin-top: 32px;
+  margin-top: 8px;
   padding: 0 32px;
   @media (max-width: 1024px) {
     padding: 0 16px;
@@ -2674,12 +2702,13 @@ code {
 }
 
 .ritt-page__gear-section {
-  margin-top: 24px;
+  margin-top: 8px;
   padding: 0 32px;
   @media (max-width: 1024px) {
     padding: 0 16px;
   }
 }
+/* (these sections are now inside .ritt-page__secondary-sections — kept for fallback) */
 
 /* ─── Map component ──────────────────────────────────────────────────── */
 
@@ -3315,9 +3344,10 @@ details[open] .history-table__summary::before {
 /* ─── Elevation profile ──────────────────────────────────────────────── */
 
 .ritt-page__elevation-section {
-  padding: 0 32px 4px;
+  padding: 0 32px;
+  margin-top: 8px;
   @media (max-width: 1024px) {
-    padding: 0 16px 4px;
+    padding: 0 16px;
   }
 }
 

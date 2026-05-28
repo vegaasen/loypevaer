@@ -346,37 +346,25 @@ export function EventPage() {
         </ErrorBoundary>
       </section>
 
-      {/* ── Map (collapsible — already collapsed by default) ── */}
-      <section className="ritt-page__map-section">
+      {/* ── Secondary sections — grouped collapsible accordion ── */}
+      <div className="ritt-page__secondary-sections">
         <EventMap waypoints={rittData.waypoints} name={rittData.name} discipline={rittData.discipline} />
-      </section>
-
-      {/* ── Elevation profile (collapsible) ── */}
-      {!forecastOnly && (
-        <section className="ritt-page__elevation-section">
+        {!forecastOnly && (
           <ElevationProfile waypoints={rittData.waypoints} distanceKm={rittData.distance} />
-        </section>
-      )}
-
-      {/* ── Gear suggestion (collapsible) ── */}
-      {!forecastOnly && selectedDate && (
-        <section className="ritt-page__gear-section">
+        )}
+        {!forecastOnly && selectedDate && (
           <GearSuggestion
             results={weatherResults}
             waypoints={rittData.waypoints}
           />
-        </section>
-      )}
-
-      {/* ── Historical weather table (collapsible — already) ── */}
-      {!forecastOnly && (
-        <section className="ritt-page__history-section">
+        )}
+        {!forecastOnly && (
           <HistoricalWeatherTable
             waypoints={rittData.waypoints}
             officialDate={rittData.officialDate}
           />
-        </section>
-      )}
+        )}
+      </div>
       <FeedbackSnackbar eventId={id ?? ""} />
     </div>
   );
