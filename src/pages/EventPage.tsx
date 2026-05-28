@@ -266,16 +266,7 @@ export function EventPage() {
         </div>
       </header>
 
-      <section className="ritt-page__map-section">
-        <EventMap waypoints={rittData.waypoints} name={rittData.name} discipline={rittData.discipline} />
-      </section>
-
-      {!forecastOnly && (
-        <section className="ritt-page__elevation-section">
-          <ElevationProfile waypoints={rittData.waypoints} distanceKm={rittData.distance} />
-        </section>
-      )}
-
+      {/* ── Date & time pickers ── */}
       <section className="ritt-page__date-section">
         <DatePicker
           value={selectedDate}
@@ -297,6 +288,7 @@ export function EventPage() {
         />
       </section>
 
+      {/* ── Weather ── */}
       <section className="ritt-page__weather-section">
         <ErrorBoundary
           fallback={
@@ -328,37 +320,57 @@ export function EventPage() {
             </>
           )}
           {!forecastOnly && selectedDate && (
-            <>
+            <div className="dag-vurdering">
               {adjDifficulty && physDifficulty && (
-                <div className="dag-vurdering">
-                  <span className="dag-vurdering__label">Dag-vurdering:</span>
-                  {adjDifficulty.level !== physDifficulty.level ? (
-                    <>
-                      <span className={`dag-vurdering__badge dag-vurdering__badge--${physDifficulty.level}`}>
-                        {physDifficulty.label}
-                      </span>
-                      <span className="dag-vurdering__arrow">→</span>
-                      <span className={`dag-vurdering__badge dag-vurdering__badge--${adjDifficulty.level}`}>
-                        {adjDifficulty.label}
-                      </span>
-                      <span className="dag-vurdering__note">pga. vær</span>
-                    </>
-                  ) : (
+                adjDifficulty.level !== physDifficulty.level ? (
+                  <>
+                    <span className="dag-vurdering__label">Dag-vurdering:</span>
+                    <span className={`dag-vurdering__badge dag-vurdering__badge--${physDifficulty.level}`}>
+                      {physDifficulty.label}
+                    </span>
+                    <span className="dag-vurdering__arrow">→</span>
                     <span className={`dag-vurdering__badge dag-vurdering__badge--${adjDifficulty.level}`}>
                       {adjDifficulty.label}
                     </span>
-                  )}
-                </div>
+                    <span className="dag-vurdering__note">pga. vær</span>
+                  </>
+                ) : (
+                  <>
+                    <span className="dag-vurdering__label">Dag-vurdering:</span>
+                    <span className={`dag-vurdering__badge dag-vurdering__badge--${adjDifficulty.level}`}>
+                      {adjDifficulty.label}
+                    </span>
+                  </>
+                )
               )}
-              <GearSuggestion
-                results={weatherResults}
-                waypoints={rittData.waypoints}
-              />
-            </>
+            </div>
           )}
         </ErrorBoundary>
       </section>
 
+      {/* ── Map (collapsible — already collapsed by default) ── */}
+      <section className="ritt-page__map-section">
+        <EventMap waypoints={rittData.waypoints} name={rittData.name} discipline={rittData.discipline} />
+      </section>
+
+      {/* ── Elevation profile (collapsible) ── */}
+      {!forecastOnly && (
+        <section className="ritt-page__elevation-section">
+          <ElevationProfile waypoints={rittData.waypoints} distanceKm={rittData.distance} />
+        </section>
+      )}
+
+      {/* ── Gear suggestion (collapsible) ── */}
+      {!forecastOnly && selectedDate && (
+        <section className="ritt-page__gear-section">
+          <GearSuggestion
+            results={weatherResults}
+            waypoints={rittData.waypoints}
+          />
+        </section>
+      )}
+
+      {/* ── Historical weather table (collapsible — already) ── */}
       {!forecastOnly && (
         <section className="ritt-page__history-section">
           <HistoricalWeatherTable
