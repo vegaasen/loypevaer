@@ -293,7 +293,7 @@ export function HomePage() {
       {/* ── Featured (neste per disiplin) ────────────────────────────── */}
       {featuredEvents.length > 0 && discipline === "alle" && (
         <section className="home-page__featured-section">
-          <h2 className="home-page__featured-heading">Neste arrangement</h2>
+          <h2 className="home-page__featured-heading">Kommende arrangement</h2>
           <div className="home-page__featured-grid">
             {featuredEvents.map((r) => (
               <FeaturedEventCard
