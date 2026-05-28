@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useDebouncedValue } from "../hooks/useDebouncedValue";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -76,6 +76,33 @@ export function HomePage() {
     }
   }
 
+  const feature1Ref = useRef<HTMLDivElement>(null);
+  const feature2Ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const refs = [feature1Ref.current, feature2Ref.current].filter(
+      (el): el is HTMLDivElement => el !== null
+    );
+
+    refs.forEach((el) => el.classList.add("js-animate"));
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    refs.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="home-page">
       <PageMeta
@@ -120,7 +147,15 @@ export function HomePage() {
       {/* ── Hero ──────────────────────────────────────────────────────── */}
       <section className="home-page__hero">
         <div className="home-page__hero-eyebrow">Sykkel · Langrenn · Triathlon · Ultraløp</div>
-        <h1>Sjekk været.<br />Kom forberedt til start.</h1>
+        <h1>
+          <span className="hero-weather-word" aria-label="Sjekk været">
+            <span aria-hidden="true">Vind.</span>
+            <span aria-hidden="true">Sol.</span>
+            <span aria-hidden="true">Regn.</span>
+            <span aria-hidden="true">Snø.</span>
+          </span>
+          <br />Kom forberedt til start.
+        </h1>
         <p className="home-page__hero-sub">
           Temperaturen på toppen, vinden i motbakkene, nedbøren ved mål —
           timebasert vær langs hele løypa, tilpasset din starttid.
@@ -141,7 +176,7 @@ export function HomePage() {
       {/* ── Feature sections ──────────────────────────────────────────── */}
       <div className="home-page__features">
 
-        <div className="home-page__feature">
+        <div className="home-page__feature" ref={feature1Ref}>
           <div className="home-page__feature-text">
             <div className="home-page__feature-eyebrow">Punkt for punkt</div>
             <h2>Vær for hele løypa — ikke bare starten</h2>
@@ -167,7 +202,7 @@ export function HomePage() {
           </div>
         </div>
 
-        <div className="home-page__feature home-page__feature--reverse">
+        <div className="home-page__feature home-page__feature--reverse" ref={feature2Ref}>
           <div className="home-page__feature-text">
             <div className="home-page__feature-eyebrow">Alltid relevant data</div>
             <h2>Langt frem i tid? Vi bruker 15 års historikk.</h2>

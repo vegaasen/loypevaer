@@ -817,6 +817,48 @@ code {
   font-weight: 700;
 }
 
+/* ─── Hero cycling weather word ─────────────────────────────────────── */
+
+@keyframes heroWord {
+  0%        { opacity: 0; transform: translateY(60%); }
+  6%        { opacity: 1; transform: translateY(0); }
+  22%       { opacity: 1; transform: translateY(0); }
+  28%       { opacity: 0; transform: translateY(-60%); }
+  100%      { opacity: 0; transform: translateY(-60%); }
+}
+
+.hero-weather-word {
+  position: relative;
+  display: inline-block;
+  height: 1.05em;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.hero-weather-word > span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  white-space: nowrap;
+  opacity: 0;
+  animation: heroWord 14s ease-in-out infinite;
+}
+
+.hero-weather-word > span:nth-child(1) { animation-delay: 0s; }
+.hero-weather-word > span:nth-child(2) { animation-delay: 3.5s; }
+.hero-weather-word > span:nth-child(3) { animation-delay: 7s; }
+.hero-weather-word > span:nth-child(4) { animation-delay: 10.5s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-weather-word > span {
+    animation: none;
+    opacity: 0;
+  }
+  .hero-weather-word > span:nth-child(1) {
+    opacity: 1;
+  }
+}
+
 /* ─── Feature sections ───────────────────────────────────────────────── */
 
 .home-page__features {
@@ -824,6 +866,28 @@ code {
   flex-direction: column;
   gap: 0;
   border-top: 1px solid var(--border);
+}
+
+.home-page__feature.js-animate {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+  will-change: opacity, transform;
+}
+
+.home-page__feature.is-visible {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page__feature.js-animate {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
 }
 
 .home-page__feature {
