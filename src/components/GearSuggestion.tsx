@@ -140,19 +140,26 @@ export function GearSuggestion({ results, waypoints }: Props) {
   if (suggestions.length === 0) return null;
 
   return (
-    <div className="gear-suggestion">
-      <div className="gear-suggestion__heading">Bekledningsråd</div>
-      <ul className="gear-suggestion__list">
-        {suggestions.map((s) => (
-          <li
-            key={s.key}
-            className={`gear-suggestion__item gear-suggestion__item--${s.severity}`}
-          >
-            <span className="gear-suggestion__icon">{s.icon}</span>
-            <span>{s.text}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <details className="gear-suggestion__details">
+      <summary className="gear-suggestion__summary">
+        Utstyrstips
+      </summary>
+      <div className="gear-suggestion__body">
+        <div className="gear-suggestion">
+          <div className="gear-suggestion__heading">Bekledningsråd</div>
+          <ul className="gear-suggestion__list">
+            {suggestions.map((s) => (
+              <li
+                key={s.key}
+                className={`gear-suggestion__item gear-suggestion__item--${s.severity}`}
+              >
+                <span className="gear-suggestion__icon">{s.icon}</span>
+                <span>{s.text}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </details>
   );
 }

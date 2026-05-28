@@ -66,6 +66,11 @@ export function ElevationProfile({ waypoints, distanceKm }: Props) {
   const { points, lineCoords, areaPath, rawMin, rawMax, visMin, visMax } = derived;
 
   return (
+    <details className="elevation-profile__details">
+      <summary className="elevation-profile__summary">
+        Høydeprofil
+      </summary>
+      <div className="elevation-profile__body">
     <div className="elevation-profile">
       <svg
         viewBox={`0 0 ${VW} ${VH}`}
@@ -126,5 +131,7 @@ export function ElevationProfile({ waypoints, distanceKm }: Props) {
         </text>
       </svg>
     </div>
+      </div>
+    </details>
   );
 }
