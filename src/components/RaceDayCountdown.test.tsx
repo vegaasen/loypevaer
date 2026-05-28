@@ -17,19 +17,13 @@ function renderCountdown(selectedDate: string, tempMax = 12, windSpeed = 4) {
 }
 
 describe("RaceDayCountdown", () => {
-  const RealDate = Date;
-
   function mockToday(dateStr: string) {
-    const fixed = new RealDate(dateStr);
-    vi.spyOn(globalThis, "Date").mockImplementation((arg?: unknown) => {
-      if (arg === undefined) return fixed;
-      return new RealDate(arg as string | number);
-    });
-    (globalThis.Date as unknown as { now: () => number }).now = () => fixed.getTime();
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date(dateStr));
   }
 
   afterEach(() => {
-    vi.restoreAllMocks();
+    vi.useRealTimers();
   });
 
   it("renders nothing when selectedDate is empty", () => {

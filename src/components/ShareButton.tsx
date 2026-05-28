@@ -7,7 +7,7 @@ type Props = {
 };
 
 export function ShareButton({ url, label = "Del" }: Props) {
-  const [copied, setCopied] = useState(false);
+  const [copied, setCopied] = useState<"idle" | "copied" | "error">("idle");
 
   async function handleShare() {
     if (navigator.share) {
@@ -20,10 +20,11 @@ export function ShareButton({ url, label = "Del" }: Props) {
     }
     try {
       await navigator.clipboard.writeText(url);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2500);
+      setCopied("copied");
+      setTimeout(() => setCopied("idle"), 2500);
     } catch {
-      // Clipboard API unavailable (non-https, old browser) — silent fail
+      setCopied("error");
+      setTimeout(() => setCopied("idle"), 2500);
     }
   }
 
@@ -35,7 +36,11 @@ export function ShareButton({ url, label = "Del" }: Props) {
         </svg>
         {label}
       </button>
-      {copied && <div className="share-snackbar" role="status" aria-live="polite">Kopiert!</div>}
+      {copied !== "idle" && (
+        <div className="share-snackbar" role="status" aria-live="polite">
+          {copied === "copied" ? "Kopiert!" : "Kunne ikke kopiere lenken"}
+        </div>
+      )}
     </>
   );
 }

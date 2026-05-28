@@ -45,7 +45,7 @@ export function RaceDayCountdown({ selectedDate, startWaypointWeather }: Props) 
     statusText = `Prognose klar!${summary ? `  –  Start: ${summary}` : ""}`;
     statusClass += " race-day-countdown__status--ready";
   } else {
-    const daysUntilForecast = diffDays - 16;
+    const daysUntilForecast = diffDays - FORECAST_DAYS;
     statusText = `Prognose tilgjengelig om ca. ${daysUntilForecast} dager`;
   }
 
