@@ -1533,16 +1533,9 @@ code {
   flex-shrink: 0;
 }
 
-/* Past events grid: 4 columns on desktop, compact rows */
+/* Past events grid: same auto-fill as the normal grid, tighter gap */
 .home-page__grid--past-list {
-  grid-template-columns: repeat(4, 1fr);
   gap: 4px;
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media (max-width: 600px) {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* Visual separator: upcoming grid gets a top border when past rows precede it */
