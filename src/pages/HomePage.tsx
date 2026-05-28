@@ -343,9 +343,8 @@ export function HomePage() {
                 <h2 className="home-page__year-heading">{year}</h2>
                 {months.map((month) => {
                   const monthEvents = byMonth.get(month)!;
-                  const allPast = monthEvents.every(
-                    (r) => daysUntil(r.officialDate) < 0
-                  );
+                  const upcoming = monthEvents.filter((r) => daysUntil(r.officialDate) >= 0);
+                  const past = monthEvents.filter((r) => daysUntil(r.officialDate) < 0);
                   return (
                     <div key={month} id={`month-${year}-${month}`} className="home-page__month-section">
                       <h3 className="home-page__month-heading">
@@ -356,24 +355,46 @@ export function HomePage() {
                           <span className="month-count-badge">{monthEvents.length}</span>
                         )}
                       </h3>
-                      <div className={`home-page__grid${allPast ? " home-page__grid--past-list" : ""}`}>
-                        {monthEvents.map((r) => (
-                          <EventCard
-                            key={r.id}
-                            id={r.id}
-                            name={r.name}
-                            officialDate={r.officialDate}
-                            distance={r.distance}
-                            distanceLabel={r.distanceLabel}
-                            region={r.region}
-                            discipline={r.discipline}
-                            planned={isPlanned(r.id)}
-                            isPast={daysUntil(r.officialDate) < 0}
-                            dateStatus={r.dateStatus}
-                            onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
-                          />
-                        ))}
-                      </div>
+                      {upcoming.length > 0 && (
+                        <div className="home-page__grid">
+                          {upcoming.map((r) => (
+                            <EventCard
+                              key={r.id}
+                              id={r.id}
+                              name={r.name}
+                              officialDate={r.officialDate}
+                              distance={r.distance}
+                              distanceLabel={r.distanceLabel}
+                              region={r.region}
+                              discipline={r.discipline}
+                              planned={isPlanned(r.id)}
+                              isPast={false}
+                              dateStatus={r.dateStatus}
+                              onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
+                            />
+                          ))}
+                        </div>
+                      )}
+                      {past.length > 0 && (
+                        <div className={`home-page__grid home-page__grid--past-list${upcoming.length > 0 ? " home-page__grid--past-list-separated" : ""}`}>
+                          {past.map((r) => (
+                            <EventCard
+                              key={r.id}
+                              id={r.id}
+                              name={r.name}
+                              officialDate={r.officialDate}
+                              distance={r.distance}
+                              distanceLabel={r.distanceLabel}
+                              region={r.region}
+                              discipline={r.discipline}
+                              planned={isPlanned(r.id)}
+                              isPast={true}
+                              dateStatus={r.dateStatus}
+                              onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
+                            />
+                          ))}
+                        </div>
+                      )}
                     </div>
                   );
                 })}

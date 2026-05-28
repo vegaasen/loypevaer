@@ -62,7 +62,7 @@ export const EventCard = memo(function EventCard({
     >
       <div className="ritt-card__name">
         <span title={name}>{name}</span>
-        {onTogglePlanned && (
+        {onTogglePlanned && !isCompactPast && (
           <button
             className={`ritt-card__bookmark${planned ? " ritt-card__bookmark--active" : ""}`}
             onClick={onTogglePlanned}
