@@ -235,7 +235,7 @@ export function EventPage() {
           >
             {planned ? "📌 Mine arrangement" : "📍 Legg til mine arrangement"}
           </button>
-          <ShareButton />
+          <ShareButton url={window.location.href} />
         </div>
       </header>
 

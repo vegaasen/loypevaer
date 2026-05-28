@@ -1,0 +1,42 @@
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs, 0.25rem);
+  padding: var(--space-xs, 0.25rem) var(--space-sm, 0.5rem);
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: inherit;
+  transition: opacity 0.15s;
+}
+
+.share-button:hover {
+  opacity: 0.75;
+}
+
+.share-button__icon {
+  width: 1em;
+  height: 1em;
+}
+
+.share-snackbar {
+  position: fixed;
+  bottom: var(--space-lg, 1.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  color: #fff;
+  padding: var(--space-xs, 0.25rem) var(--space-md, 1rem);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  pointer-events: none;
+  animation: share-snackbar-in 0.2s ease;
+  z-index: 1000;
+}
+
+@keyframes share-snackbar-in {
+  from { opacity: 0; transform: translateX(-50%) translateY(8px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}

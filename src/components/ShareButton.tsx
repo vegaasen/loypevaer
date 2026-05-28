@@ -1,45 +1,41 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
+import "./ShareButton.css";
 
-const canNativeShare = typeof navigator !== "undefined" && typeof navigator.share === "function";
+type Props = {
+  url: string;
+  label?: string;
+};
 
-type CopyState = "idle" | "copied" | "error";
-
-export function ShareButton() {
-  const [state, setState] = useState<CopyState>("idle");
-  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  useEffect(() => {
-    return () => {
-      if (timeoutRef.current !== null) clearTimeout(timeoutRef.current);
-    };
-  }, []);
+export function ShareButton({ url, label = "Del" }: Props) {
+  const [copied, setCopied] = useState(false);
 
   async function handleShare() {
-    try {
-      if (canNativeShare) {
-        await navigator.share({ url: window.location.href });
-      } else {
-        await navigator.clipboard.writeText(window.location.href);
+    if (navigator.share) {
+      try {
+        await navigator.share({ url });
+        return;
+      } catch {
+        // User cancelled or API unavailable — fall through to clipboard
       }
-      setState("copied");
-    } catch {
-      setState("error");
     }
-    if (timeoutRef.current !== null) clearTimeout(timeoutRef.current);
-    timeoutRef.current = setTimeout(() => setState("idle"), 2000);
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    } catch {
+      // Clipboard API unavailable (non-https, old browser) — silent fail
+    }
   }
 
-  const label =
-    state === "copied" ? (canNativeShare ? "Delt!" : "Kopiert!") : state === "error" ? "Feil" : "Del lenke";
-
   return (
-    <button
-      className={`ritt-page__bookmark-btn ritt-page__share-btn${state !== "idle" ? ` ritt-page__share-btn--${state}` : ""}`}
-      onClick={() => void handleShare()}
-      title="Kopier lenke til utklippstavlen"
-      aria-live="polite"
-    >
-      {label}
-    </button>
+    <>
+      <button className="share-button" onClick={() => void handleShare()} aria-label={label}>
+        <svg className="share-button__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+          <path d="M11 2.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM5 5.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM11 8.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM8.5 6.5l-3 2M8.5 9.5l-3-2" />
+        </svg>
+        {label}
+      </button>
+      {copied && <div className="share-snackbar" role="status" aria-live="polite">Kopiert!</div>}
+    </>
   );
 }
