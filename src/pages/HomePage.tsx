@@ -341,36 +341,42 @@ export function HomePage() {
             return (
               <section key={year} className="home-page__year-section">
                 <h2 className="home-page__year-heading">{year}</h2>
-                {months.map((month) => (
-                  <div key={month} id={`month-${year}-${month}`} className="home-page__month-section">
-                    <h3 className="home-page__month-heading">
-                      <a href={`#month-${year}-${month}`} className="home-page__month-anchor">
-                        {monthName(month)}
-                      </a>
-                      {byMonth.get(month)!.length > 1 && (
-                        <span className="month-count-badge">{byMonth.get(month)!.length}</span>
-                      )}
-                    </h3>
-                    <div className="home-page__grid">
-                      {byMonth.get(month)!.map((r) => (
-                        <EventCard
-                          key={r.id}
-                          id={r.id}
-                          name={r.name}
-                          officialDate={r.officialDate}
-                          distance={r.distance}
-                          distanceLabel={r.distanceLabel}
-                          region={r.region}
-                          discipline={r.discipline}
-                          planned={isPlanned(r.id)}
-                          isPast={daysUntil(r.officialDate) < 0}
-                          dateStatus={r.dateStatus}
-                          onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
-                        />
-                      ))}
+                {months.map((month) => {
+                  const monthEvents = byMonth.get(month)!;
+                  const allPast = monthEvents.every(
+                    (r) => daysUntil(r.officialDate) < 0
+                  );
+                  return (
+                    <div key={month} id={`month-${year}-${month}`} className="home-page__month-section">
+                      <h3 className="home-page__month-heading">
+                        <a href={`#month-${year}-${month}`} className="home-page__month-anchor">
+                          {monthName(month)}
+                        </a>
+                        {monthEvents.length > 1 && (
+                          <span className="month-count-badge">{monthEvents.length}</span>
+                        )}
+                      </h3>
+                      <div className={`home-page__grid${allPast ? " home-page__grid--past-list" : ""}`}>
+                        {monthEvents.map((r) => (
+                          <EventCard
+                            key={r.id}
+                            id={r.id}
+                            name={r.name}
+                            officialDate={r.officialDate}
+                            distance={r.distance}
+                            distanceLabel={r.distanceLabel}
+                            region={r.region}
+                            discipline={r.discipline}
+                            planned={isPlanned(r.id)}
+                            isPast={daysUntil(r.officialDate) < 0}
+                            dateStatus={r.dateStatus}
+                            onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
+                          />
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </section>
             );
           })}

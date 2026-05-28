@@ -1490,6 +1490,55 @@ code {
   filter: saturate(0.65);
 }
 
+/* Compact layout for past events — name + date only, single-line strip */
+.ritt-card--past-compact {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+  gap: 12px;
+  opacity: 0.5;
+  filter: saturate(0.25);
+  min-height: 0;
+}
+
+.ritt-card--past-compact:hover {
+  opacity: 0.8;
+  filter: saturate(0.5);
+}
+
+/* Hide the meta row and footer inside compact past cards */
+.ritt-card--past-compact .ritt-card__meta,
+.ritt-card--past-compact .ritt-card__footer {
+  display: none;
+}
+
+/* Name text: no wrapping, truncate with ellipsis */
+.ritt-card--past-compact .ritt-card__name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Compact past date: shown via a data attribute on the card link itself */
+.ritt-card--past-compact::after {
+  content: attr(data-date);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Override the grid to single-column when all items in it are compact */
+.home-page__grid--past-list {
+  grid-template-columns: 1fr;
+  gap: 4px;
+}
+
 .ritt-card--cancelled {
   opacity: 0.7;
   filter: saturate(0.5) sepia(0.45) hue-rotate(5deg);

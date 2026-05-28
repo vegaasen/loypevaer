@@ -43,12 +43,22 @@ export const EventCard = memo(function EventCard({
   const dateStr = displayDate ?? officialDate;
   const formattedDate = formatNorwegianDate(dateStr);
   const isCancelled = dateStatus === "cancelled";
+  const isCompactPast = isPast && !planned && !isCancelled;
 
   return (
     <Link
       to={`/arrangement/${id}`}
       state={{ from: "/" }}
-      className={`ritt-card${planned ? " ritt-card--planned" : ""}${isPast ? " ritt-card--past" : ""}${isCancelled ? " ritt-card--cancelled" : ""}`}
+      className={[
+        "ritt-card",
+        planned ? "ritt-card--planned" : "",
+        isPast ? "ritt-card--past" : "",
+        isCompactPast ? "ritt-card--past-compact" : "",
+        isCancelled ? "ritt-card--cancelled" : "",
+      ]
+        .filter(Boolean)
+        .join(" ")}
+      data-date={isCompactPast ? formattedDate : undefined}
     >
       <div className="ritt-card__name">
         <span title={name}>{name}</span>

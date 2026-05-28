@@ -102,4 +102,25 @@ describe("EventCard", () => {
     renderCard({ dateStatus: "cancelled" });
     expect(screen.getByRole("link")).toHaveClass("ritt-card--cancelled");
   });
+
+  it("applies ritt-card--past-compact when isPast=true and not planned and not cancelled", () => {
+    renderCard({ isPast: true });
+    expect(screen.getByRole("link")).toHaveClass("ritt-card--past-compact");
+  });
+
+  it("does NOT apply ritt-card--past-compact when isPast=true but planned=true", () => {
+    renderCard({ isPast: true, planned: true });
+    expect(screen.getByRole("link")).not.toHaveClass("ritt-card--past-compact");
+  });
+
+  it("does NOT apply ritt-card--past-compact when isPast=true but cancelled", () => {
+    renderCard({ isPast: true, dateStatus: "cancelled" });
+    expect(screen.getByRole("link")).not.toHaveClass("ritt-card--past-compact");
+  });
+
+  it("sets data-date attribute on compact past card", () => {
+    renderCard({ isPast: true, officialDate: "2025-03-14" });
+    const link = screen.getByRole("link");
+    expect(link).toHaveAttribute("data-date");
+  });
 });
