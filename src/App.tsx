@@ -55,15 +55,15 @@ function RouterContent() {
 
 function App() {
   return (
-    <ErrorBoundary>
-      <QueryClientProvider client={queryClient}>
-        <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
+        <ErrorBoundary>
           <RouterContent />
-        </BrowserRouter>
-        <ReloadPrompt />
-        <CookieBanner />
-      </QueryClientProvider>
-    </ErrorBoundary>
+        </ErrorBoundary>
+      </BrowserRouter>
+      <ReloadPrompt />
+      <CookieBanner />
+    </QueryClientProvider>
   );
 }
 

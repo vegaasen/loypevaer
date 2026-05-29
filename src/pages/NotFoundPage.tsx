@@ -14,10 +14,18 @@ export function NotFoundPage() {
       <Helmet>
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
-      <div className="ritt-page ritt-page--not-found">
-        <h1>404</h1>
-        <p>Siden finnes ikke.</p>
-        <Link to="/">Tilbake til oversikt</Link>
+      <div className="status-page">
+        <div className="status-card">
+          <h1 className="status-card__title">Siden finnes ikke</h1>
+          <p className="status-card__body">
+            Adressen du besøkte finnes ikke. Den kan ha blitt flyttet eller slettet.
+          </p>
+          <div className="status-card__actions">
+            <Link to="/" className="status-card__btn">
+              ← Tilbake til forsiden
+            </Link>
+          </div>
+        </div>
       </div>
     </>
   );

@@ -1,4 +1,6 @@
 import { Component, type ErrorInfo, type ReactNode } from "react";
+import { Link } from "react-router-dom";
+import { NavBar } from "./NavBar";
 
 type Props = {
   children: ReactNode;
@@ -37,22 +39,39 @@ export class ErrorBoundary extends Component<Props, State> {
 
   override render() {
     if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
       return (
-        this.props.fallback ?? (
-          <div className="error-boundary">
-            <p className="error-boundary__message">
-              Noe gikk galt. Prøv å laste siden på nytt.
-            </p>
-            <button
-              className="error-boundary__retry"
-              onClick={() =>
-                this.setState((s) => ({ hasError: false, error: null, resetKey: s.resetKey + 1 }))
-              }
-            >
-              Prøv igjen
-            </button>
+        <>
+          <NavBar />
+          <div className="status-page">
+            <div className="status-card">
+              <h2 className="status-card__title">Noe gikk galt</h2>
+              <p className="status-card__body">
+                En uventet feil oppstod. Du kan prøve igjen, eller gå tilbake til forsiden.
+              </p>
+              <div className="status-card__actions">
+                <button
+                  className="status-card__btn"
+                  onClick={() =>
+                    this.setState((s) => ({
+                      hasError: false,
+                      error: null,
+                      resetKey: s.resetKey + 1,
+                    }))
+                  }
+                >
+                  Prøv igjen
+                </button>
+                <Link to="/" className="status-card__link">
+                  ← Gå til forsiden
+                </Link>
+              </div>
+            </div>
           </div>
-        )
+        </>
       );
     }
 

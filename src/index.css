@@ -428,7 +428,7 @@ code {
 
 .gpx-upload {
   max-width: 560px;
-  width: 100%;
+  width: calc(100% - 32px);
   margin: 28px auto 0;
   display: flex;
   flex-direction: column;
@@ -661,6 +661,10 @@ code {
   align-items: center;
   gap: 8px;
   margin-bottom: 8px;
+  padding: 0 32px;
+  @media (max-width: 1024px) {
+    padding: 0 16px;
+  }
 }
 
 .gpx-route-meta__reset {
@@ -685,6 +689,10 @@ code {
   align-items: center;
   gap: 12px;
   margin-bottom: 16px;
+  padding: 0 32px;
+  @media (max-width: 1024px) {
+    padding: 0 16px;
+  }
 }
 
 .gpx-waypoint-count__label {
@@ -705,6 +713,17 @@ code {
   color: var(--text-h);
   min-width: 20px;
   text-align: right;
+}
+
+.gpx-discipline {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 32px;
+  margin-bottom: 16px;
+  @media (max-width: 1024px) {
+    padding: 0 16px;
+  }
 }
 
 .ritt-page__subtitle {
@@ -3669,39 +3688,113 @@ details[open] .gear-suggestion__summary::before {
   min-width: 140px;
 }
 
-/* ─── Error boundary ─────────────────────────────────────────────────── */
+/* ─── Status pages (error, not-found, no-data) ────────────────────── */
 
-.error-boundary {
-  padding: 24px 32px;
+.status-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 48px 24px 80px;
+  min-height: calc(100vh - var(--nav-height));
+  background: var(--bg);
+
+  @media (max-width: 1024px) {
+    padding: 28px 16px 60px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 24px 12px 60px;
+  }
+}
+
+.status-card {
+  width: 100%;
+  max-width: 540px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 36px 40px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  align-items: flex-start;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 600px) {
+    padding: 24px 20px;
+  }
+
+  @media (max-width: 400px) {
     padding: 20px 16px;
   }
 }
 
-.error-boundary__message {
-  font-size: 14px;
-  color: #ef4444;
+.status-card__title {
+  font-family: var(--heading);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-h);
+  margin: 0;
 }
 
-.error-boundary__retry {
+.status-card__body {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.status-card__notice {
+  font-size: 13px;
+  color: var(--text-muted);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) / 2);
+  padding: 10px 14px;
+  margin: 4px 0;
+}
+
+.status-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+  align-items: center;
+}
+
+.status-card__btn {
   font: inherit;
   font-size: 13px;
   color: var(--accent);
   background: transparent;
   border: 1px solid var(--accent-border);
   border-radius: var(--radius);
-  padding: 5px 12px;
+  padding: 6px 14px;
   cursor: pointer;
   transition: background 0.12s;
+  text-decoration: none;
+  display: inline-block;
 
   &:hover {
     background: var(--accent-bg);
   }
+}
+
+.status-card__link {
+  font-size: 13px;
+  color: var(--accent);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* ─── Error boundary inline (weather section) ───────────────────────── */
+
+.error-boundary__message {
+  font-size: 14px;
+  color: #ef4444;
 }
 
 /* ─── Site footer ────────────────────────────────────────────────────── */

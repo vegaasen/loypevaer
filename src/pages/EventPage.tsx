@@ -135,10 +135,66 @@ export function EventPage() {
 
   if (!rittData) {
     return (
-      <div className="ritt-page ritt-page--not-found">
-        <p>Fant ikke arrangement med id «{id}».</p>
-        <Link to="../">Tilbake til oversikt</Link>
+      <div className="status-page">
+        <div className="status-card">
+          <h1 className="status-card__title">Arrangement ikke funnet</h1>
+          <p className="status-card__body">
+            Fant ikke arrangement med id <em>{id}</em>. Det kan ha blitt fjernet eller endret.
+          </p>
+          <div className="status-card__actions">
+            <Link to="/" className="status-card__btn">
+              ← Alle arrangement
+            </Link>
+          </div>
+        </div>
       </div>
+    );
+  }
+
+  if (rittData.waypoints.length === 0) {
+    const isCancelled = rittData.dateStatus === "cancelled";
+    return (
+      <>
+        <PageMeta
+          title={pageTitle}
+          description={pageDescription ?? `${rittData.name} – Løypevær`}
+          canonicalUrl={pageUrl}
+        />
+        <div className="status-page">
+          <div className="status-card">
+            <h1 className="status-card__title">{rittData.name}</h1>
+            <p className="status-card__body">
+              {rittData.distanceLabel ?? `${rittData.distance} km`}
+              {rittData.region ? ` · ${rittData.region}` : ""}
+              {" · "}
+              {formatNorwegianDate(rittData.officialDate)}
+            </p>
+            {isCancelled && (
+              <p className="status-card__notice">
+                Dette arrangementet er avlyst.
+              </p>
+            )}
+            {rittData.url && (
+              <a
+                href={rittData.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="status-card__link"
+              >
+                Offisiell nettside ↗
+              </a>
+            )}
+            <p className="status-card__notice">
+              Rutedata er ikke tilgjengelig ennå – kart, høydeprofil og værvarsler vises når løypa er lagt inn.
+            </p>
+            <div className="status-card__actions">
+              <Link to="/" className="status-card__btn">
+                ← Alle arrangement
+              </Link>
+            </div>
+          </div>
+        </div>
+      </>
     );
   }
 
@@ -203,11 +259,15 @@ export function EventPage() {
             location: {
               "@type": "Place",
               name: rittData.region,
-              geo: {
-                "@type": "GeoCoordinates",
-                latitude: rittData.waypoints[0].lat,
-                longitude: rittData.waypoints[0].lon,
-              },
+              ...(rittData.waypoints.length > 0
+                ? {
+                    geo: {
+                      "@type": "GeoCoordinates",
+                      latitude: rittData.waypoints[0].lat,
+                      longitude: rittData.waypoints[0].lon,
+                    },
+                  }
+                : {}),
             },
             ...(rittData.url ? { sameAs: rittData.url } : {}),
           })}
