@@ -790,10 +790,23 @@ code {
   color: var(--text);
   max-width: 540px;
   line-height: 1.6;
-  margin: 0 auto 36px;
+  margin: 0 auto 12px;
 
   @media (max-width: 1024px) {
     font-size: 17px;
+  }
+}
+
+.home-page__hero-example {
+  font-size: 1rem;
+  color: var(--text);
+  opacity: 0.7;
+  margin: 0 auto 1.5rem;
+  max-width: 540px;
+  line-height: 1.5;
+
+  @media (max-width: 600px) {
+    font-size: 0.9rem;
   }
 }
 
@@ -1265,8 +1278,21 @@ code {
 
 .home-page__filter-pills {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 2px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (min-width: 600px) {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
 }
 
 .home-page__search {
@@ -1313,11 +1339,19 @@ code {
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
   transition: border-color 0.15s, background 0.15s, color 0.15s;
 
   &:hover {
     border-color: var(--accent-border);
     color: var(--accent);
+  }
+
+  @media (max-width: 600px) {
+    min-height: 44px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -1526,7 +1560,8 @@ code {
   filter: saturate(0.5);
 }
 
-/* Hide the meta row and footer inside compact past cards */
+/* Hide the date row, meta row and footer inside compact past cards */
+.ritt-card--past-compact .ritt-card__date-row,
 .ritt-card--past-compact .ritt-card__meta,
 .ritt-card--past-compact .ritt-card__footer {
   display: none;
@@ -1594,11 +1629,19 @@ code {
   overflow: hidden;
 }
 
+.ritt-card__date-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .ritt-card__meta {
   display: flex;
-  gap: 8px;
-  font-size: 13px;
-  color: var(--text);
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
 }
 
 .ritt-card__distance {
@@ -1776,25 +1819,10 @@ code {
   margin-top: 2px;
 }
 
-.ritt-card__footer-main {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-}
-
 .ritt-card__footer-tentative {
   display: flex;
   justify-content: flex-end;
 }
-.ritt-card__footer-right {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  min-width: 0;
-  text-align: right;
-}
-
 .ritt-card__date {
   font-size: 13px;
   color: var(--text);
@@ -1864,6 +1892,14 @@ code {
   &:hover {
     opacity: 1;
     background: var(--accent-bg);
+  }
+
+  @media (max-width: 600px) {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
