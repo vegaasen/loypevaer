@@ -78,6 +78,19 @@ export function HomePage() {
 
   const feature1Ref = useRef<HTMLDivElement>(null);
   const feature2Ref = useRef<HTMLDivElement>(null);
+  const activePillRef = useRef<HTMLButtonElement | null>(null);
+  const isMountedRef = useRef(false);
+
+  useEffect(() => {
+    if (!isMountedRef.current) {
+      isMountedRef.current = true;
+      return;
+    }
+    const el = activePillRef.current;
+    if (el && typeof el.scrollIntoView === "function") {
+      el.scrollIntoView({ behavior: "smooth", inline: "nearest", block: "nearest" });
+    }
+  }, [discipline]);
 
   useEffect(() => {
     const refs = [feature1Ref.current, feature2Ref.current].filter(
@@ -146,7 +159,7 @@ export function HomePage() {
 
       {/* ── Hero ──────────────────────────────────────────────────────── */}
       <section className="home-page__hero">
-        <div className="home-page__hero-eyebrow">Sykkel · Langrenn · Triathlon · Ultraløp</div>
+        <div className="home-page__hero-eyebrow">Sykkel · Langrenn · Triathlon · Løping</div>
         <h1>
           <span className="hero-weather-word" aria-label="Sjekk været">
             <span aria-hidden="true">Vind.</span>
@@ -157,8 +170,10 @@ export function HomePage() {
           <br />Kom forberedt til start.
         </h1>
         <p className="home-page__hero-sub">
-          Temperaturen på toppen, vinden i motbakkene, nedbøren ved mål —
-          timebasert vær langs hele løypa, tilpasset din starttid.
+          Timebasert vær langs hele løypa — punkt for punkt, tilpasset din starttid.
+        </p>
+        <p className="home-page__hero-example">
+          Sjekk temperatur på toppen, vinden i motbakkene og nedbøren ved mål.
         </p>
         <a href="#alle-arrangement" className="home-page__hero-cta">
           Finn ditt arrangement →
@@ -236,6 +251,7 @@ export function HomePage() {
         <div role="group" aria-label="Filtrer etter disiplin" className="home-page__filter-pills">
           {(["alle", "landevei", "terreng", "langrenn", "triathlon", "ultraløp", "løping"] as Discipline[]).map((d) => (
             <button
+              ref={discipline === d ? activePillRef : null}
               key={d}
               className={`home-page__filter-pill${discipline === d ? " home-page__filter-pill--active" : ""}`}
               onClick={() => setDiscipline(d)}
@@ -286,7 +302,7 @@ export function HomePage() {
         </section>
       ) : (
         <p className="home-page__mine-hint">
-          Trykk 📍 på et arrangement for å lagre det her — så finner du det raskt igjen.
+          Trykk «Lagre» på et arrangement for å finne det raskt igjen her.
         </p>
       )}
 
@@ -387,6 +403,7 @@ export function HomePage() {
                               distanceLabel={r.distanceLabel}
                               region={r.region}
                               discipline={r.discipline}
+                              countdown={formatCountdown(r.officialDate)}
                               planned={isPlanned(r.id)}
                               isPast={false}
                               dateStatus={r.dateStatus}
