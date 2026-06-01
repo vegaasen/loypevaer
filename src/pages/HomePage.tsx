@@ -41,10 +41,6 @@ export function HomePage() {
         .sort((a, b) => a.localeCompare(b, "nb")),
     []
   );
-  // setTidshorisont, setRegion, regions wired to UI in a subsequent task
-  void setTidshorisont;
-  void setRegion;
-  void regions;
 
   const debouncedSearch = useDebouncedValue(search);
   const searchQuery = debouncedSearch.trim().toLowerCase();
@@ -272,7 +268,7 @@ export function HomePage() {
 
       </div>
 
-      {/* ── Filter + search ───────────────────────────────────────────── */}
+      {/* ── Filter ──────────────────────────────────────────────────── */}
       <div id="alle-arrangement" className="home-page__filter">
         <div role="group" aria-label="Filtrer etter disiplin" className="home-page__filter-pills">
           {(["alle", "landevei", "terreng", "langrenn", "triathlon", "ultraløp", "løping"] as Discipline[]).map((d) => (
@@ -287,14 +283,65 @@ export function HomePage() {
             </button>
           ))}
         </div>
-        <input
-          type="search"
-          className="home-page__search"
-          placeholder="Filtrer arrangement…"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          aria-label="Filtrer arrangement"
-        />
+
+        <div className="home-page__filter-controls">
+          <select
+            className="home-page__filter-select"
+            value={tidshorisont}
+            onChange={(e) => setTidshorisont(e.target.value as Tidshorisont)}
+            aria-label="Filtrer etter tidshorisont"
+          >
+            <option value="kommende">Kommende</option>
+            <option value="alle">Alle</option>
+            <option value="arkiv">Arkiv</option>
+          </select>
+
+          <select
+            className="home-page__filter-select"
+            value={region}
+            onChange={(e) => setRegion(e.target.value)}
+            aria-label="Filtrer etter region"
+          >
+            <option value="">Alle regioner</option>
+            {regions.map((r) => (
+              <option key={r} value={r}>{r}</option>
+            ))}
+          </select>
+
+          <input
+            type="search"
+            className="home-page__search"
+            placeholder="Søk arrangement…"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            aria-label="Søk etter arrangement"
+          />
+        </div>
+
+        {(discipline !== "alle" || tidshorisont !== "kommende" || region !== "" || search !== "") && (
+          <div className="home-page__filter-chips" aria-label="Aktive filtre">
+            {discipline !== "alle" && (
+              <button className="home-page__filter-chip" onClick={() => setDiscipline("alle")}>
+                {FILTER_DISCIPLINE_LABEL[discipline]} ×
+              </button>
+            )}
+            {tidshorisont !== "kommende" && (
+              <button className="home-page__filter-chip" onClick={() => setTidshorisont("kommende")}>
+                {tidshorisont === "alle" ? "Alle datoer" : "Arkiv"} ×
+              </button>
+            )}
+            {region !== "" && (
+              <button className="home-page__filter-chip" onClick={() => setRegion("")}>
+                {region} ×
+              </button>
+            )}
+            {search !== "" && (
+              <button className="home-page__filter-chip" onClick={() => setSearch("")}>
+                "{search}" ×
+              </button>
+            )}
+          </div>
+        )}
       </div>
 
       {/* ── Mine ritt ─────────────────────────────────────────────────── */}
