@@ -25,11 +25,26 @@ export function HomePage() {
   const { discipline, setDiscipline } = useFilterContext();
   const [search, setSearch] = useState("");
 
+  type Tidshorisont = "kommende" | "alle" | "arkiv";
+  const [tidshorisont, setTidshorisont] = useState<Tidshorisont>("kommende");
+  const [region, setRegion] = useState("");
+
   const totalSykkel = useMemo(() => ritt.filter((r) => r.discipline === "landevei" || r.discipline === "terreng").length, []);
   const totalLangrenn = useMemo(() => ritt.filter((r) => r.discipline === "langrenn").length, []);
   const totalLoping = useMemo(() => ritt.filter((r) => r.discipline === "ultraløp").length, []);
   const totalTriathlon = useMemo(() => ritt.filter((r) => r.discipline === "triathlon").length, []);
   const totalKortereLop = useMemo(() => ritt.filter((r) => r.discipline === "løping").length, []);
+
+  const regions = useMemo(
+    () =>
+      [...new Set(ritt.filter((r) => r.discipline !== "løping").map((r) => r.region))]
+        .sort((a, b) => a.localeCompare(b, "nb")),
+    []
+  );
+  // setTidshorisont, setRegion, regions wired to UI in a subsequent task
+  void setTidshorisont;
+  void setRegion;
+  void regions;
 
   const debouncedSearch = useDebouncedValue(search);
   const searchQuery = debouncedSearch.trim().toLowerCase();
@@ -39,8 +54,19 @@ export function HomePage() {
       ritt
         .filter((r) => r.discipline !== "løping")
         .filter((r) => discipline === "alle" || r.discipline === discipline)
-        .filter((r) => !searchQuery || r.name.toLowerCase().includes(searchQuery) || r.region.toLowerCase().includes(searchQuery)),
-    [discipline, searchQuery]
+        .filter((r) => region === "" || r.region === region)
+        .filter((r) => {
+          if (tidshorisont === "kommende") return daysUntil(r.officialDate) >= 0;
+          if (tidshorisont === "arkiv") return daysUntil(r.officialDate) < 0;
+          return true;
+        })
+        .filter(
+          (r) =>
+            !searchQuery ||
+            r.name.toLowerCase().includes(searchQuery) ||
+            r.region.toLowerCase().includes(searchQuery)
+        ),
+    [discipline, region, tidshorisont, searchQuery]
   );
 
   const grouped = useMemo(() => groupByYearMonth(filtered), [filtered]);
