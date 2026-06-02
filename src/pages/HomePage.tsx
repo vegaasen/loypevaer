@@ -268,6 +268,33 @@ export function HomePage() {
 
       </div>
 
+      {/* ── Featured (neste per disiplin) ────────────────────────────── */}
+      {featuredEvents.length > 0 && (
+        <section className="home-page__featured-section">
+          <h2 className="home-page__featured-heading">Kommende arrangement</h2>
+          <div className="home-page__featured-grid">
+            {featuredEvents.map((r) => (
+              <FeaturedEventCard
+                key={r.id}
+                id={r.id}
+                name={r.name}
+                officialDate={r.officialDate}
+                distance={r.distance}
+                distanceLabel={r.distanceLabel}
+                region={r.region}
+                discipline={r.discipline}
+                countdown={formatCountdown(r.officialDate)}
+                planned={isPlanned(r.id)}
+                dateStatus={r.dateStatus}
+                onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
+                compact
+              />
+            ))}
+          </div>
+        </section>
+      )}
+      <hr className="home-page__section-divider" />
+
       {/* ── Filter ──────────────────────────────────────────────────── */}
       <div id="alle-arrangement" className="home-page__filter">
         <div role="group" aria-label="Filtrer etter disiplin" className="home-page__filter-pills">
@@ -377,32 +404,6 @@ export function HomePage() {
         <p className="home-page__mine-hint">
           Trykk «Lagre» på et arrangement for å finne det raskt igjen her.
         </p>
-      )}
-
-      {/* ── Featured (neste per disiplin) ────────────────────────────── */}
-      {featuredEvents.length > 0 && discipline === "alle" && (
-        <section className="home-page__featured-section">
-          <h2 className="home-page__featured-heading">Kommende arrangement</h2>
-          <div className="home-page__featured-grid">
-            {featuredEvents.map((r) => (
-              <FeaturedEventCard
-                key={r.id}
-                id={r.id}
-                name={r.name}
-                officialDate={r.officialDate}
-                distance={r.distance}
-                distanceLabel={r.distanceLabel}
-                region={r.region}
-                discipline={r.discipline}
-                countdown={formatCountdown(r.officialDate)}
-                planned={isPlanned(r.id)}
-                dateStatus={r.dateStatus}
-                onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
-                compact
-              />
-            ))}
-          </div>
-        </section>
       )}
 
       {/* ── All ritt grid / Løping promo ──────────────────────────────── */}

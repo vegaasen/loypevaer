@@ -1984,12 +1984,22 @@ code {
 .home-page__featured-section {
   padding: 0 32px;
   margin-top: 32px;
-  margin-bottom: 32px;
+  margin-bottom: 0;
 
   @media (max-width: 1024px) {
     padding: 0 16px;
     margin-top: 24px;
-    margin-bottom: 24px;
+    margin-bottom: 0;
+  }
+}
+
+.home-page__section-divider {
+  border: none;
+  border-top: 1px solid var(--accent-border);
+  margin: 32px 32px 0;
+
+  @media (max-width: 1024px) {
+    margin: 24px 16px 0;
   }
 }
 
