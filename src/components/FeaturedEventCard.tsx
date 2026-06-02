@@ -16,6 +16,7 @@ type Props = {
   countdown?: string;
   isPast?: boolean;
   dateStatus?: "pending" | "cancelled";
+  compact?: boolean;
 };
 
 export const FeaturedEventCard = memo(function FeaturedEventCard({
@@ -30,6 +31,7 @@ export const FeaturedEventCard = memo(function FeaturedEventCard({
   countdown,
   isPast = false,
   dateStatus,
+  compact = false,
 }: Props) {
   const isCancelled = dateStatus === "cancelled";
   const isLongLabel = !!distanceLabel && (distanceLabel.includes("/") || distanceLabel.length > 15);
@@ -38,7 +40,14 @@ export const FeaturedEventCard = memo(function FeaturedEventCard({
     <Link
       to={`/arrangement/${id}`}
       state={{ from: "/" }}
-      className={`featured-card${isPast ? " featured-card--past" : ""}${isCancelled ? " featured-card--cancelled" : ""}`}
+      className={[
+        "featured-card",
+        isPast ? "featured-card--past" : "",
+        isCancelled ? "featured-card--cancelled" : "",
+        compact ? "featured-card--compact" : "",
+      ]
+        .filter(Boolean)
+        .join(" ")}
     >
       <div className="featured-card__header">
         <span className={`featured-card__discipline featured-card__discipline--${discipline}`}>

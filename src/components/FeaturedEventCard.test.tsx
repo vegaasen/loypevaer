@@ -71,4 +71,14 @@ describe("FeaturedEventCard", () => {
     renderCard({ dateStatus: "cancelled" });
     expect(screen.getByRole("link")).toHaveClass("featured-card--cancelled");
   });
+
+  it("applies featured-card--compact class when compact=true", () => {
+    renderCard({ compact: true });
+    expect(screen.getByRole("link")).toHaveClass("featured-card--compact");
+  });
+
+  it("does not apply featured-card--compact class by default", () => {
+    renderCard();
+    expect(screen.getByRole("link")).not.toHaveClass("featured-card--compact");
+  });
 });
