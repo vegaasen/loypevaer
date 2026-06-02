@@ -398,6 +398,7 @@ export function HomePage() {
                 planned={isPlanned(r.id)}
                 dateStatus={r.dateStatus}
                 onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
+                compact
               />
             ))}
           </div>
