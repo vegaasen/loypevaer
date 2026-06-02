@@ -1983,13 +1983,13 @@ code {
 
 .home-page__featured-section {
   padding: 0 32px;
-  margin-top: 48px;
-  margin-bottom: 48px;
+  margin-top: 32px;
+  margin-bottom: 32px;
 
   @media (max-width: 1024px) {
     padding: 0 16px;
-    margin-top: 32px;
-    margin-bottom: 32px;
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
 }
 
@@ -2001,53 +2001,28 @@ code {
 }
 
 .home-page__featured-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
 
-  & > :first-child {
-    grid-column: span 2;
+  /* Scrollbar styling */
+  &::-webkit-scrollbar {
+    height: 4px;
   }
-}
-
-@media (max-width: 1024px) and (min-width: 641px) {
-  .home-page__featured-grid {
-    grid-template-columns: repeat(2, 1fr);
-
-    & > :first-child {
-      grid-column: 1 / -1;
-    }
+  &::-webkit-scrollbar-track {
+    background: transparent;
   }
-}
-
-@media (max-width: 640px) {
-  .home-page__featured-grid {
-    grid-template-columns: 1fr;
-
-    & > :first-child {
-      grid-column: span 1;
-    }
+  &::-webkit-scrollbar-thumb {
+    background: var(--accent-border);
+    border-radius: 999px;
   }
-}
 
-/* Single card: span full width */
-.home-page__featured-grid:has(> :only-child) > :first-child {
-  grid-column: 1 / -1;
-}
-
-/* Two cards: equal columns */
-.home-page__featured-grid:has(> :nth-child(2)):not(:has(> :nth-child(3))) {
-  grid-template-columns: repeat(2, 1fr);
-
-  & > :first-child {
-    grid-column: span 1;
-  }
-}
-
-@media (max-width: 640px) {
-  .home-page__featured-grid:has(> :nth-child(2)):not(:has(> :nth-child(3))) {
-    grid-template-columns: 1fr;
-  }
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-border) transparent;
 }
 
 /* ─── Featured event card (bento grid) ──────────────────────────────── */
@@ -2244,6 +2219,45 @@ code {
 
 .featured-card__bookmark--active {
   opacity: 1;
+}
+
+/* ─── Compact card (carousel variant) ──────────────────────────── */
+
+.featured-card--compact {
+  min-height: unset;
+  width: 200px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  padding: 14px 16px;
+  gap: 8px;
+}
+
+.featured-card--compact .featured-card__name {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.featured-card--compact .featured-card__region {
+  font-size: 12px;
+}
+
+.featured-card--compact .featured-card__distance {
+  font-size: 14px;
+}
+
+.featured-card--compact .featured-card__countdown {
+  font-size: 11px;
+}
+
+@media (max-width: 640px) {
+  .featured-card--compact {
+    width: 170px;
+  }
 }
 
 /* Border color per discipline */

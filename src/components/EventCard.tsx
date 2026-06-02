@@ -74,24 +74,22 @@ export const EventCard = memo(function EventCard({
           </button>
         )}
       </div>
+      <div className="ritt-card__date-row">
+        <span className="ritt-card__date">{formattedDate}</span>
+        {countdown && !isCancelled && (
+          <span className="ritt-card__countdown">{countdown}</span>
+        )}
+      </div>
       <div className="ritt-card__meta">
+        <span className={`ritt-card__discipline ritt-card__discipline--${discipline}`}>
+          {DISCIPLINE_LABEL[discipline]}
+        </span>
         <span className="ritt-card__region">{region}</span>
         <span className="ritt-card__distance">{distanceLabel ?? `${distance} km`}</span>
       </div>
       <div
         className={`ritt-card__footer${dateStatus === "pending" ? " ritt-card__footer--pending" : ""}${isCancelled ? " ritt-card__footer--cancelled" : ""}`}
       >
-        <div className="ritt-card__footer-main">
-          <span className={`ritt-card__discipline ritt-card__discipline--${discipline}`}>
-            {DISCIPLINE_LABEL[discipline]}
-          </span>
-          <div className="ritt-card__footer-right">
-            <span className="ritt-card__date">{formattedDate}</span>
-            {countdown && !isCancelled && (
-              <span className="ritt-card__countdown">{countdown}</span>
-            )}
-          </div>
-        </div>
         {dateStatus === "pending" && (
           <div className="ritt-card__footer-tentative">
             <span className="ritt-card__pending" title="Datoen er ikke offisielt bekreftet ennå">Tentativ dato</span>

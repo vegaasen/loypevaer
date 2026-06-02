@@ -70,6 +70,13 @@ export function NavBar() {
         {/* Desktop nav controls */}
         <div className="site-nav__selector">
           <Link
+            to="/"
+            className={`site-nav__gpx-link site-nav__alle-link${location.pathname === "/" ? " site-nav__gpx-link--active" : ""}`}
+          >
+            Alle arrangement
+          </Link>
+          <span className="site-nav__divider" aria-hidden="true" />
+          <Link
             to="/lop"
             className={`site-nav__gpx-link${isLopPage ? " site-nav__gpx-link--active" : ""}`}
           >
@@ -87,7 +94,7 @@ export function NavBar() {
             aria-label="Velg arrangement"
           >
             <option value="" disabled>
-              Velg arrangement…
+              Hopp til arrangement…
             </option>
             {DISCIPLINE_ORDER.filter((d) => (grouped.get(d)?.length ?? 0) > 0).map((d) => (
               <optgroup key={d} label={DISCIPLINE_LABEL_WITH_EMOJI[d]}>
@@ -116,6 +123,13 @@ export function NavBar() {
       {menuOpen && (
         <div className="site-nav__mobile-menu" role="menu">
           <Link
+            to="/"
+            className={`site-nav__mobile-link${location.pathname === "/" ? " site-nav__mobile-link--active" : ""}`}
+            role="menuitem"
+          >
+            Alle arrangement
+          </Link>
+          <Link
             to="/lop"
             className={`site-nav__mobile-link${isLopPage ? " site-nav__mobile-link--active" : ""}`}
             role="menuitem"
@@ -137,7 +151,7 @@ export function NavBar() {
             aria-label="Velg arrangement"
           >
             <option value="" disabled>
-              Velg arrangement…
+              Hopp til arrangement…
             </option>
             {DISCIPLINE_ORDER.filter((d) => (grouped.get(d)?.length ?? 0) > 0).map((d) => (
               <optgroup key={d} label={DISCIPLINE_LABEL_WITH_EMOJI[d]}>
