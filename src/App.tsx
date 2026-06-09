@@ -11,6 +11,8 @@ import { usePageTracking } from "./hooks/usePageTracking";
 import { restoreConsentFromStorage } from "./lib/analytics";
 import { ScrollToTopButton } from "./components/ScrollToTopButton";
 import { ScrollToTop } from "./components/ScrollToTop";
+import { InstallBanner } from "./components/InstallBanner";
+import { useWeatherAlerts } from "./hooks/useWeatherAlerts";
 import "./App.css";
 
 // Restore previously stored consent so returning visitors don't lose their choice
@@ -33,10 +35,12 @@ const queryClient = new QueryClient({
 
 function RouterContent() {
   usePageTracking();
+  useWeatherAlerts();
   return (
     <>
       <ScrollToTop />
       <NavBar />
+      <InstallBanner />
       <Suspense fallback={<div className="page-loading" aria-label="Laster…" />}>
         <Routes>
           <Route index element={<HomePage />} />
