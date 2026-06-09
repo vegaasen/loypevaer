@@ -11,6 +11,8 @@ import {
   WIND_SIGNIFICANT,
   WIND_STRONG,
 } from "../lib/weatherThresholds";
+import { buildPackingList } from "../lib/packingList";
+import { PackingList } from "./PackingList";
 
 type Suggestion = {
   key: string;
@@ -30,6 +32,7 @@ function buildSuggestions(
 
   const temps = loaded.map((r) => resolveWeatherValues(r.data!).temp);
   const minTemp = Math.min(...temps);
+  const maxTemp = Math.max(...temps);
 
   const precipValues = loaded.map((r) => resolveWeatherValues(r.data!).precipitation);
   const maxPrecip = Math.max(...precipValues);
@@ -46,6 +49,38 @@ function buildSuggestions(
   });
 
   const maxWindSpeed = Math.max(...windSpeeds);
+
+  // --- Range advisory ---
+  const tempRange = maxTemp - minTemp;
+  if (tempRange > 6) {
+    suggestions.push({
+      key: "temp-range",
+      icon: "🌡",
+      text: `Temperaturen varierer fra ${Math.round(minTemp)}°C til ${Math.round(maxTemp)}°C langs løypa — kle deg for starten og planlegg å lettkle deg underveis`,
+      severity: "warn",
+    });
+  }
+
+  // --- Wind direction change advisory ---
+  const windLabels = loaded.map((r, i) => {
+    const { windDirection, windSpeed } = resolveWeatherValues(r.data!);
+    if (windDirection === undefined || windSpeed <= WIND_SIGNIFICANT) return null;
+    const bearing = routeBearingForWaypoint(waypoints, i);
+    if (bearing === null) return null;
+    return windRelativeLabel(windDirection, bearing);
+  });
+  const hasHeadwind = windLabels.some((l) => l === "Motvind");
+  const hasTailwind = windLabels.some((l) => l === "Medvind");
+  if (hasHeadwind && hasTailwind) {
+    const headwindIdx = windLabels.findIndex((l) => l === "Motvind");
+    const headwindLabel = waypoints[headwindIdx]?.label ?? "en del av løypa";
+    suggestions.push({
+      key: "wind-direction-change",
+      icon: "💨",
+      text: `Vindretningen endrer seg langs løypa — motvind ved ${headwindLabel}, medvind mot slutten`,
+      severity: "info",
+    });
+  }
 
   // --- Temperature rules ---
   if (minTemp < TEMP_FREEZE) {
@@ -128,9 +163,10 @@ function buildSuggestions(
 type Props = {
   results: WaypointWeather[];
   waypoints: Waypoint[];
+  discipline?: string;
 };
 
-export function GearSuggestion({ results, waypoints }: Props) {
+export function GearSuggestion({ results, waypoints, discipline = "landevei" }: Props) {
   const hasAnyData = results.some((r) => r.data != null);
   const isLoading = results.some((r) => r.isLoading);
 
@@ -138,6 +174,8 @@ export function GearSuggestion({ results, waypoints }: Props) {
 
   const suggestions = buildSuggestions(results, waypoints);
   if (suggestions.length === 0) return null;
+
+  const packingItems = buildPackingList(results, discipline);
 
   return (
     <details className="gear-suggestion__details">
@@ -158,6 +196,7 @@ export function GearSuggestion({ results, waypoints }: Props) {
               </li>
             ))}
           </ul>
+          <PackingList items={packingItems} />
         </div>
       </div>
     </details>
