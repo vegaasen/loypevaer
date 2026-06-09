@@ -20,7 +20,7 @@ export function InstallBanner() {
     return (
       <div className="install-banner install-banner--ios" role="banner">
         <span className="install-banner__text">
-          Trykk Del ⬆ → <strong>Legg til på hjemskjermen</strong> for raskere tilgang
+          📲 Trykk Del ⬆ → <strong>Legg til på hjemskjermen</strong> for raskere tilgang til værvarsler
         </span>
         <button
           className="install-banner__dismiss"
@@ -37,8 +37,8 @@ export function InstallBanner() {
     <div className="install-banner" role="banner">
       <div className="install-banner__content">
         <span className="install-banner__text">
-          <strong>Legg til Løypevær på hjemskjermen</strong>
-          <span className="install-banner__sub"> — raskere tilgang og støtte for værvarsler</span>
+          📲 <strong>Løypevær på hjemskjermen</strong>
+          <span className="install-banner__sub"> — ett trykk til rute og værvarsler</span>
         </span>
         <div className="install-banner__actions">
           <button className="install-banner__cta" onClick={() => void promptInstall()}>
