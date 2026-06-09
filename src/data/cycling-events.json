@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T06:38:37.626Z",
+  "generatedAt": "2026-06-08T06:34:10.197Z",
   "source": "eqtiming.com / Norges Cykleforbund (organizationId=13)",
   "events": [
     {
@@ -1691,7 +1691,7 @@
       "distance": 90,
       "distanceLabel": "90 km",
       "sportLevel": "Trim",
-      "region": "Buskerud",
+      "region": "Øvre Eiker",
       "url": "http://eikerrittet.no/",
       "waypoints": [
         {
@@ -2183,56 +2183,13 @@
       "distance": 6,
       "distanceLabel": "6 km",
       "sportLevel": "Reg",
-      "region": "Hole",
+      "region": "Buskerud",
       "url": "",
       "waypoints": [
         {
           "label": "Start/Mål – Hole",
           "lat": 60.0416318,
           "lon": 10.302044
-        }
-      ]
-    },
-    {
-      "id": "tromsorittene-2026-pamelding-alle-ritt",
-      "name": "Tromsørittene 2026 påmelding alle ritt",
-      "discipline": "landevei",
-      "officialDate": "2026-06-04",
-      "distance": 70,
-      "distanceLabel": "70 km",
-      "sportLevel": "Reg",
-      "region": "Troms",
-      "url": "http://www.tcyk.no",
-      "waypoints": [
-        {
-          "label": "Start – Tromsø sentrum",
-          "lat": 69.652,
-          "lon": 18.956,
-          "altitude": 10
-        },
-        {
-          "label": "25% – Kvaløysletta",
-          "lat": 69.722,
-          "lon": 18.817,
-          "altitude": 30
-        },
-        {
-          "label": "50% – Kvaløya vest",
-          "lat": 69.791,
-          "lon": 18.622,
-          "altitude": 50
-        },
-        {
-          "label": "75% – Tromsøya nord",
-          "lat": 69.71,
-          "lon": 19,
-          "altitude": 20
-        },
-        {
-          "label": "Mål – Tromsø sentrum",
-          "lat": 69.652,
-          "lon": 18.956,
-          "altitude": 10
         }
       ]
     },
@@ -2363,9 +2320,9 @@
       "name": "Vossagravel 7. juni",
       "discipline": "gravel",
       "officialDate": "2026-06-07",
-      "distance": 72,
-      "distanceLabel": "72 km",
-      "sportLevel": "Tur",
+      "distance": 54,
+      "distanceLabel": "54 km",
+      "sportLevel": "Reg",
       "region": "Vestland",
       "url": "",
       "waypoints": [

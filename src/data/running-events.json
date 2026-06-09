@@ -1,245 +1,7 @@
 {
-  "generatedAt": "2026-06-01T06:20:50.595Z",
+  "generatedAt": "2026-06-08T06:13:41.476Z",
   "source": "racedays.run",
   "events": [
-    {
-      "id": "voss-lopskarusell-2026-3-lop",
-      "name": "Voss Løpskarusell 2026 - 3. løp",
-      "discipline": "løping",
-      "officialDate": "2026-06-01",
-      "distance": 5,
-      "distanceLabel": "5 km",
-      "region": "Vestland",
-      "url": "https://www.racedays.run/event/voss-lopskarusell-2026-3-lop",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Voss",
-          "lat": 60.6837067,
-          "lon": 6.4079051
-        }
-      ]
-    },
-    {
-      "id": "torshov-trail-run-2026",
-      "name": "Torshov Trail Run 2026",
-      "discipline": "løping",
-      "officialDate": "2026-06-04",
-      "distance": 11,
-      "distanceLabel": "11 km",
-      "region": "Oslo",
-      "url": "https://www.racedays.run/event/torshov-trail-run-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Oslo",
-          "lat": 59.9133301,
-          "lon": 10.7389701
-        }
-      ]
-    },
-    {
-      "id": "bergen-fjellmaraton-2026",
-      "name": "Bergen Fjellmaraton 2026",
-      "discipline": "løping",
-      "officialDate": "2026-06-04",
-      "distance": 21.1,
-      "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Vestland",
-      "url": "https://www.racedays.run/event/bergen-fjellmaraton-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Bergen",
-          "lat": 60.3943055,
-          "lon": 5.3259192
-        }
-      ]
-    },
-    {
-      "id": "sognefjord-trail-run-2026",
-      "name": "Sognefjord Trail Run 2026",
-      "discipline": "løping",
-      "officialDate": "2026-06-06",
-      "distance": 27,
-      "distanceLabel": "27 km",
-      "region": "Vestland",
-      "url": "https://www.racedays.run/event/sognefjord-trail-run-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Sogndal",
-          "lat": 61.329791,
-          "lon": 6.7203648
-        }
-      ]
-    },
-    {
-      "id": "fjellmaraton-2026",
-      "name": "Fjellmaraton 2026",
-      "discipline": "løping",
-      "officialDate": "2026-06-06",
-      "distance": 21.1,
-      "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Innlandet",
-      "url": "https://www.racedays.run/event/fjellmaraton-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Øystre Slidre",
-          "lat": 61.2510155,
-          "lon": 9.1164967
-        }
-      ]
-    },
-    {
-      "id": "spitsbergen-marathon-2026",
-      "name": "Spitsbergen Marathon 2026",
-      "discipline": "løping",
-      "officialDate": "2026-06-06",
-      "distance": 21.1,
-      "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Norge",
-      "url": "https://www.racedays.run/event/spitsbergen-marathon-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Svalbard",
-          "lat": 78.7198519,
-          "lon": 20.3493328
-        }
-      ]
-    },
-    {
-      "id": "hagebylopet-2026",
-      "name": "Hagebyløpet 2026",
-      "discipline": "løping",
-      "officialDate": "2026-06-06",
-      "distance": 5,
-      "distanceLabel": "5 km",
-      "region": "Oslo",
-      "url": "https://www.racedays.run/event/hagebylopet-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Oslo",
-          "lat": 59.9133301,
-          "lon": 10.7389701
-        }
-      ]
-    },
-    {
-      "id": "hovlandsnuten-opp-2026",
-      "name": "Hovlandsnuten Opp 2026",
-      "discipline": "løping",
-      "officialDate": "2026-06-06",
-      "distance": 6.8,
-      "distanceLabel": "6.8 km",
-      "region": "Rogaland",
-      "url": "https://www.racedays.run/event/hovlandsnuten-opp-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Sauda",
-          "lat": 59.704566,
-          "lon": 6.4620938
-        }
-      ]
-    },
-    {
-      "id": "namsoslopet-2026",
-      "name": "Namsosløpet 2026",
-      "discipline": "løping",
-      "officialDate": "2026-06-06",
-      "distance": 21.1,
-      "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Trøndelag",
-      "url": "https://www.racedays.run/event/namsoslopet-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Namsos",
-          "lat": 64.4666372,
-          "lon": 11.3345047
-        }
-      ]
-    },
-    {
-      "id": "sommerlopet-2026",
-      "name": "Sommerløpet 2026",
-      "discipline": "løping",
-      "officialDate": "2026-06-06",
-      "distance": 21.1,
-      "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Agder",
-      "url": "https://www.racedays.run/event/sommerlopet-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Kristiansand",
-          "lat": 58.0856276,
-          "lon": 7.931858
-        }
-      ]
-    },
-    {
-      "id": "sommernattslopet-trondheim-2026",
-      "name": "Sommernattsløpet Trondheim 2026",
-      "discipline": "løping",
-      "officialDate": "2026-06-06",
-      "distance": 10,
-      "distanceLabel": "10 km",
-      "region": "Trøndelag",
-      "url": "https://www.racedays.run/event/sommernattslopet-trondheim-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Trondheim",
-          "lat": 63.4304475,
-          "lon": 10.3952118
-        }
-      ]
-    },
-    {
-      "id": "the-arctic-run-2026",
-      "name": "The Arctic Run 2026",
-      "discipline": "løping",
-      "officialDate": "2026-06-06",
-      "distance": 21.1,
-      "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Nordland",
-      "url": "https://www.racedays.run/event/the-arctic-run-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Hadsel",
-          "lat": 68.503291,
-          "lon": 14.8278077
-        }
-      ]
-    },
-    {
-      "id": "rekordmila-2026",
-      "name": "Rekordmila 2026",
-      "discipline": "løping",
-      "officialDate": "2026-06-07",
-      "distance": 10,
-      "distanceLabel": "10 km",
-      "region": "Trøndelag",
-      "url": "https://www.racedays.run/event/rekordmila-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Skaun",
-          "lat": 63.2507702,
-          "lon": 10.0527608
-        }
-      ]
-    },
-    {
-      "id": "lierlopet",
-      "name": "Lierløpet",
-      "discipline": "løping",
-      "officialDate": "2026-06-07",
-      "distance": 21.1,
-      "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Buskerud",
-      "url": "https://www.racedays.run/event/lierlopet-2026-06-07",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Lier",
-          "lat": 59.8453135,
-          "lon": 10.2115525
-        }
-      ]
-    },
     {
       "id": "bekkestua-senter-haslummila-2026",
       "name": "Bekkestua Senter Haslummila 2026",
@@ -366,7 +128,7 @@
       "officialDate": "2026-06-20",
       "distance": 21.1,
       "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Krødsherad",
+      "region": "Buskerud",
       "url": "https://www.racedays.run/event/norefjell-trail-2026",
       "waypoints": [
         {
@@ -564,7 +326,7 @@
       ]
     },
     {
-      "id": "lierlopet-2026-06-28",
+      "id": "lierlopet",
       "name": "Lierløpet",
       "discipline": "løping",
       "officialDate": "2026-06-28",
@@ -689,7 +451,7 @@
       "officialDate": "2026-07-24",
       "distance": 21.1,
       "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Buskerud",
+      "region": "Flesberg",
       "url": "https://www.racedays.run/event/blefjells-beste-2026",
       "waypoints": [
         {
@@ -925,9 +687,9 @@
       "name": "Høgevarde Trail Run 2026",
       "discipline": "løping",
       "officialDate": "2026-08-08",
-      "distance": 25,
-      "distanceLabel": "25 km",
-      "region": "Buskerud",
+      "distance": 23,
+      "distanceLabel": "23 km",
+      "region": "Flå",
       "url": "https://www.racedays.run/event/hogevarde-trail-run-2026",
       "waypoints": [
         {
@@ -1233,7 +995,7 @@
       "officialDate": "2026-08-15",
       "distance": 30,
       "distanceLabel": "30 km",
-      "region": "Hol",
+      "region": "Buskerud",
       "url": "https://www.racedays.run/event/geilo-trail-run-2026",
       "waypoints": [
         {
@@ -1794,7 +1556,7 @@
       "officialDate": "2026-08-29",
       "distance": 12.5,
       "distanceLabel": "12.5 km",
-      "region": "Buskerud",
+      "region": "Flå",
       "url": "https://www.racedays.run/event/turufjell-trail-2026",
       "waypoints": [
         {
@@ -2757,6 +2519,23 @@
       ]
     },
     {
+      "id": "gaia-backyard-hafjell-2026",
+      "name": "Gaia Backyard Hafjell 2026",
+      "discipline": "løping",
+      "officialDate": "2026-09-26",
+      "distance": 6.7,
+      "distanceLabel": "6.7 km",
+      "region": "Innlandet",
+      "url": "https://www.racedays.run/event/gaia-backyard-hafjell-2026",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Øyer",
+          "lat": 61.3273517,
+          "lon": 10.5040017
+        }
+      ]
+    },
+    {
       "id": "rosa-sloyfe-lopet-trondheim-2026",
       "name": "Rosa Sløyfe-løpet Trondheim 2026",
       "discipline": "løping",
@@ -2872,6 +2651,23 @@
           "label": "Start/Mål – Sandnes",
           "lat": 58.9831321,
           "lon": 6.394641
+        }
+      ]
+    },
+    {
+      "id": "levanger-maraton-2026",
+      "name": "Levanger Maraton 2026",
+      "discipline": "løping",
+      "officialDate": "2026-10-03",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Trøndelag",
+      "url": "https://www.racedays.run/event/levanger-maraton-2026",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Levanger",
+          "lat": 63.6964518,
+          "lon": 11.2238804
         }
       ]
     },
@@ -3069,7 +2865,7 @@
       "officialDate": "2026-10-17",
       "distance": 10,
       "distanceLabel": "10 km",
-      "region": "Buskerud",
+      "region": "Hole",
       "url": "https://www.racedays.run/event/hytteplanmila-2026",
       "waypoints": [
         {
@@ -3460,7 +3256,7 @@
       "officialDate": "2027-05-01",
       "distance": 5,
       "distanceLabel": "5 km",
-      "region": "Buskerud",
+      "region": "Hole",
       "url": "https://www.racedays.run/event/sundvolden-challenge-2027",
       "waypoints": [
         {
@@ -3556,6 +3352,23 @@
       ]
     },
     {
+      "id": "somnamile-2027",
+      "name": "Sømnamile 2027",
+      "discipline": "løping",
+      "officialDate": "2027-05-22",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "region": "Nordland",
+      "url": "https://www.racedays.run/event/somnamile-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Sømna",
+          "lat": 65.3597065,
+          "lon": 12.2236796
+        }
+      ]
+    },
+    {
       "id": "stomperudlopet-2027",
       "name": "Stomperudløpet 2027",
       "discipline": "løping",
@@ -3569,6 +3382,57 @@
           "label": "Start/Mål – Lillestrøm",
           "lat": 59.9155396,
           "lon": 11.2170354
+        }
+      ]
+    },
+    {
+      "id": "jessheim-halvmaraton-2027",
+      "name": "Jessheim Halvmaraton 2027",
+      "discipline": "løping",
+      "officialDate": "2027-05-30",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Akershus",
+      "url": "https://www.racedays.run/event/jessheim-halvmaraton-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Ullensaker",
+          "lat": 60.1541072,
+          "lon": 11.1984296
+        }
+      ]
+    },
+    {
+      "id": "fjellmaraton-2027",
+      "name": "Fjellmaraton 2027",
+      "discipline": "løping",
+      "officialDate": "2027-06-05",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Innlandet",
+      "url": "https://www.racedays.run/event/fjellmaraton-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Øystre Slidre",
+          "lat": 61.2510155,
+          "lon": 9.1164967
+        }
+      ]
+    },
+    {
+      "id": "sommerlopet-2027",
+      "name": "Sommerløpet 2027",
+      "discipline": "løping",
+      "officialDate": "2027-06-05",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Agder",
+      "url": "https://www.racedays.run/event/sommerlopet-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Kristiansand",
+          "lat": 58.0856276,
+          "lon": 7.931858
         }
       ]
     },
