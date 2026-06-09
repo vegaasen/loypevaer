@@ -16,7 +16,9 @@ import { SITE_URL, disciplineToSport, disciplineKeywords, disciplineVerb } from 
 import { useMyEvents } from "../hooks/useMyEvents";
 import { useWeather } from "../hooks/useWeather";
 import { calcWaypointTimes } from "../lib/timing";
-import { isForecastRange } from "../lib/weather";
+import { isForecastRange, getWeatherCache } from "../lib/weather";
+import { buildClimateNarrative } from "../lib/climateNarrative";
+import { AlertsOptIn } from "../components/AlertsOptIn";
 import { ShareButton } from "../components/ShareButton";
 import { RaceDayCountdown } from "../components/RaceDayCountdown";
 import { buildOgDescription, getOgImagePath } from "../lib/og";
@@ -44,8 +46,23 @@ export function EventPage() {
   const pageTitle = rittData
     ? `Vær for ${rittData.name} ${rittYear ?? ""} – rittvær, temperatur og vind | Løypevær`
     : "Fant ikke arrangement – Løypevær";
+  const [climateNarrative, setClimateNarrative] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!rittData) return;
+    void getWeatherCache().then((cache) => {
+      setClimateNarrative(buildClimateNarrative(rittData, cache));
+    });
+  }, [rittData?.id]); // eslint-disable-line react-hooks/exhaustive-deps
+
   const pageDescription = rittData
-    ? `Skal du ${disciplineVerb(rittData.discipline)} ${rittData.name} ${rittYear ?? ""}? Sjekk timebasert værmelding og historiske klimasnitt for alle veipunkter langs løypa – temperatur, vind og nedbør for ${rittData.distanceLabel ?? `${rittData.distance} km`} og ${rittData.elevationGain} hm i ${rittData.region}.`
+    ? [
+        `Skal du ${disciplineVerb(rittData.discipline)} ${rittData.name} ${rittYear ?? ""}?`,
+        climateNarrative,
+        `Sjekk timebasert værmelding og historiske klimasnitt for alle veipunkter langs løypa – temperatur, vind og nedbør for ${rittData.distanceLabel ?? `${rittData.distance} km`}${rittData.elevationGain ? ` og ${rittData.elevationGain} hm` : ""} i ${rittData.region}.`,
+      ]
+        .filter(Boolean)
+        .join(" ")
     : undefined;
 
   useEffect(() => {
@@ -324,6 +341,7 @@ export function EventPage() {
           </button>
           <ShareButton url={shareUrl} />
         </div>
+        {planned && <AlertsOptIn eventId={rittData.id} />}
       </header>
 
       {/* ── Date & time pickers ── */}
@@ -416,6 +434,7 @@ export function EventPage() {
           <GearSuggestion
             results={weatherResults}
             waypoints={rittData.waypoints}
+            discipline={rittData.discipline}
           />
         )}
         {!forecastOnly && (
