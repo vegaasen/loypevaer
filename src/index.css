@@ -4118,8 +4118,12 @@ details[open] .gear-suggestion__summary::before {
   font-size: 0.85rem;
 
   @media (max-width: 600px) {
-    bottom: 0.75rem;
-    padding: 0.7rem 1rem;
+    bottom: 4.5rem;
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+    transform: none;
+    padding: 0.75rem 1rem;
   }
 }
 
