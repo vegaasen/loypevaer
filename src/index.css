@@ -4103,7 +4103,7 @@ details[open] .gear-suggestion__summary::before {
   bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 200;
+  z-index: 1000;
   width: min(calc(100vw - 2rem), 480px);
   background: var(--surface, #fff);
   border: 1px solid var(--accent-border);
@@ -4118,7 +4118,7 @@ details[open] .gear-suggestion__summary::before {
   font-size: 0.85rem;
 
   @media (max-width: 600px) {
-    bottom: 4.5rem;
+    bottom: 1rem;
     left: 1rem;
     right: 1rem;
     width: auto;
