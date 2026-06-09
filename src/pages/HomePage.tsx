@@ -189,14 +189,12 @@ export function HomePage() {
             <span aria-hidden="true">Regn.</span>
             <span aria-hidden="true">Snø.</span>
           </span>
-          <br />Kom forberedt til start.
+          Sjekk været. Kom forberedt til start.
         </h1>
         <p className="home-page__hero-sub">
           Timebasert vær langs hele løypa — punkt for punkt, tilpasset din starttid.
         </p>
-        <p className="home-page__hero-example">
-          Sjekk temperatur på toppen, vinden i motbakkene og nedbøren ved mål.
-        </p>
+
         <a href="#alle-arrangement" className="home-page__hero-cta">
           Finn ditt arrangement →
         </a>
