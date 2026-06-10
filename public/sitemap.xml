@@ -2,25 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.løypevær.no</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.løypevær.no/hva-er-rittvaer</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.løypevær.no/lop</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.løypevær.no/gpx</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -181,90 +181,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.løypevær.no/arrangement/voss-lopskarusell-2026-3-lop</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.løypevær.no/arrangement/torshov-trail-run-2026</loc>
-    <lastmod>2026-06-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.løypevær.no/arrangement/bergen-fjellmaraton-2026</loc>
-    <lastmod>2026-06-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.løypevær.no/arrangement/sognefjord-trail-run-2026</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.løypevær.no/arrangement/fjellmaraton-2026</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.løypevær.no/arrangement/spitsbergen-marathon-2026</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.løypevær.no/arrangement/hagebylopet-2026</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.løypevær.no/arrangement/hovlandsnuten-opp-2026</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.løypevær.no/arrangement/namsoslopet-2026</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.løypevær.no/arrangement/sommerlopet-2026</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.løypevær.no/arrangement/sommernattslopet-trondheim-2026</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.løypevær.no/arrangement/the-arctic-run-2026</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.løypevær.no/arrangement/rekordmila-2026</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.løypevær.no/arrangement/lierlopet</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.løypevær.no/arrangement/bekkestua-senter-haslummila-2026</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -379,7 +295,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.løypevær.no/arrangement/lierlopet-2026-06-28</loc>
+    <loc>https://www.løypevær.no/arrangement/lierlopet</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -1153,6 +1069,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.løypevær.no/arrangement/gaia-backyard-hafjell-2026</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.løypevær.no/arrangement/rosa-sloyfe-lopet-trondheim-2026</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -1191,6 +1113,12 @@
   <url>
     <loc>https://www.løypevær.no/arrangement/runfest-2026</loc>
     <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.løypevær.no/arrangement/levanger-maraton-2026</loc>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1435,8 +1363,32 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.løypevær.no/arrangement/somnamile-2027</loc>
+    <lastmod>2027-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.løypevær.no/arrangement/stomperudlopet-2027</loc>
     <lastmod>2027-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.løypevær.no/arrangement/jessheim-halvmaraton-2027</loc>
+    <lastmod>2027-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.løypevær.no/arrangement/fjellmaraton-2027</loc>
+    <lastmod>2027-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.løypevær.no/arrangement/sommerlopet-2027</loc>
+    <lastmod>2027-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1791,12 +1743,6 @@
   <url>
     <loc>https://www.løypevær.no/arrangement/tour-of-norway-for-kids-sundvollen</loc>
     <lastmod>2026-05-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.løypevær.no/arrangement/tromsorittene-2026-pamelding-alle-ritt</loc>
-    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

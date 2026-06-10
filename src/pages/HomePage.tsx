@@ -26,7 +26,7 @@ export function HomePage() {
   const [search, setSearch] = useState("");
 
   type Tidshorisont = "kommende" | "alle" | "arkiv";
-  const [tidshorisont, setTidshorisont] = useState<Tidshorisont>("kommende");
+  const [tidshorisont, setTidshorisont] = useState<Tidshorisont>("alle");
   const [region, setRegion] = useState("");
 
   const totalSykkel = useMemo(() => ritt.filter((r) => r.discipline === "landevei" || r.discipline === "terreng").length, []);
@@ -316,8 +316,8 @@ export function HomePage() {
             onChange={(e) => setTidshorisont(e.target.value as Tidshorisont)}
             aria-label="Filtrer etter tidshorisont"
           >
-            <option value="kommende">Kommende</option>
             <option value="alle">Alle</option>
+            <option value="kommende">Kommende</option>
             <option value="arkiv">Arkiv</option>
           </select>
 
@@ -343,16 +343,16 @@ export function HomePage() {
           />
         </div>
 
-        {(discipline !== "alle" || tidshorisont !== "kommende" || region !== "" || search !== "") && (
+        {(discipline !== "alle" || tidshorisont !== "alle" || region !== "" || search !== "") && (
           <div className="home-page__filter-chips" aria-label="Aktive filtre">
             {discipline !== "alle" && (
               <button className="home-page__filter-chip" onClick={() => setDiscipline("alle")}>
                 {FILTER_DISCIPLINE_LABEL[discipline]} ×
               </button>
             )}
-            {tidshorisont !== "kommende" && (
-              <button className="home-page__filter-chip" onClick={() => setTidshorisont("kommende")}>
-                {tidshorisont === "alle" ? "Alle datoer" : "Arkiv"} ×
+            {tidshorisont !== "alle" && (
+              <button className="home-page__filter-chip" onClick={() => setTidshorisont("alle")}>
+                {tidshorisont === "kommende" ? "Kommende" : "Arkiv"} ×
               </button>
             )}
             {region !== "" && (
