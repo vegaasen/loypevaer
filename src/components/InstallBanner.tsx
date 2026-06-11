@@ -19,16 +19,22 @@ export function InstallBanner() {
   if (showIosBanner) {
     return (
       <div className="install-banner install-banner--ios" role="banner">
-        <span className="install-banner__text">
-          📲 Trykk Del ⬆ → <strong>Legg til på hjemskjermen</strong> for raskere tilgang til værvarsler
-        </span>
-        <button
-          className="install-banner__dismiss"
-          aria-label="Lukk"
-          onClick={dismiss}
-        >
-          ✕
-        </button>
+        <div className="install-banner__content">
+          <span className="install-banner__text">
+            📲 Trykk <strong>Del</strong>{" "}
+            <span className="install-banner__share-icon">⬆</span>,{" "}
+            velg <strong>Legg til på hjemskjermen</strong>
+          </span>
+          <div className="install-banner__actions">
+            <button
+              className="install-banner__dismiss"
+              aria-label="Lukk"
+              onClick={dismiss}
+            >
+              ✕
+            </button>
+          </div>
+        </div>
       </div>
     );
   }

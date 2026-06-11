@@ -4178,8 +4178,14 @@ details[open] .gear-suggestion__summary::before {
   }
 }
 
-.install-banner--ios .install-banner__text {
-  flex: 1;
+.install-banner__share-icon {
+  display: inline-block;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  padding: 0 3px;
+  font-size: 0.75em;
+  line-height: 1.4;
+  vertical-align: middle;
 }
 
 /* ── Alerts opt-in ───────────────────────────────────────────────────── */
