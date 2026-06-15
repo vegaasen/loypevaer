@@ -2412,5 +2412,37 @@
       "lon": 6.5176,
       "altitude": 56
     }
+  ],
+  "vatternrunden (full)": [
+    {
+      "label": "Start – Vätternrundan 315 km",
+      "lat": 58.535,
+      "lon": 15.04,
+      "altitude": 104
+    },
+    {
+      "label": "25%",
+      "lat": 57.944,
+      "lon": 14.409,
+      "altitude": 177
+    },
+    {
+      "label": "50%",
+      "lat": 58.061,
+      "lon": 14.193,
+      "altitude": 118
+    },
+    {
+      "label": "75%",
+      "lat": 58.848,
+      "lon": 14.908,
+      "altitude": 96
+    },
+    {
+      "label": "Mål – Vätternrundan 315 km",
+      "lat": 58.535,
+      "lon": 15.034,
+      "altitude": 97
+    }
   ]
 }

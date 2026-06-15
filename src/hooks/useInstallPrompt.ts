@@ -7,10 +7,14 @@ interface BeforeInstallPromptEvent extends Event {
 }
 
 const DISMISSED_KEY = "pwa-install-dismissed";
+const IOS_DISMISSED_KEY = "pwa-ios-install-dismissed";
 
 export function useInstallPrompt() {
   const deferred = useRef<BeforeInstallPromptEvent | null>(null);
   const [canInstall, setCanInstall] = useState(false);
+  const [iosDismissed, setIosDismissed] = useState(
+    () => !!localStorage.getItem(IOS_DISMISSED_KEY)
+  );
 
   useEffect(() => {
     if (localStorage.getItem(DISMISSED_KEY)) return;
@@ -34,9 +38,11 @@ export function useInstallPrompt() {
 
   const dismiss = useCallback(() => {
     localStorage.setItem(DISMISSED_KEY, "1");
+    localStorage.setItem(IOS_DISMISSED_KEY, "1");
     deferred.current = null;
     setCanInstall(false);
+    setIosDismissed(true);
   }, []);
 
-  return { canInstall, promptInstall, dismiss };
+  return { canInstall, iosDismissed, promptInstall, dismiss };
 }

@@ -83,4 +83,24 @@ describe("useInstallPrompt", () => {
     expect(localStorage.getItem("pwa-install-dismissed")).toBe("1");
     expect(result.current.canInstall).toBe(false);
   });
+
+  it("iosDismissed is false initially", () => {
+    const { result } = renderHook(() => useInstallPrompt());
+    expect(result.current.iosDismissed).toBe(false);
+  });
+
+  it("iosDismissed becomes true after dismiss()", () => {
+    const { result } = renderHook(() => useInstallPrompt());
+    act(() => {
+      result.current.dismiss();
+    });
+    expect(result.current.iosDismissed).toBe(true);
+    expect(localStorage.getItem("pwa-ios-install-dismissed")).toBe("1");
+  });
+
+  it("iosDismissed is true when pwa-ios-install-dismissed is pre-set in localStorage", () => {
+    localStorage.setItem("pwa-ios-install-dismissed", "1");
+    const { result } = renderHook(() => useInstallPrompt());
+    expect(result.current.iosDismissed).toBe(true);
+  });
 });

@@ -10,9 +10,9 @@ function isInStandaloneMode(): boolean {
 }
 
 export function InstallBanner() {
-  const { canInstall, promptInstall, dismiss } = useInstallPrompt();
+  const { canInstall, iosDismissed, promptInstall, dismiss } = useInstallPrompt();
 
-  const showIosBanner = isIos() && !isInStandaloneMode() && !canInstall;
+  const showIosBanner = isIos() && !isInStandaloneMode() && !canInstall && !iosDismissed;
 
   if (!canInstall && !showIosBanner) return null;
 
@@ -21,9 +21,8 @@ export function InstallBanner() {
       <div className="install-banner install-banner--ios" role="banner">
         <div className="install-banner__content">
           <span className="install-banner__text">
-            📲 Trykk <strong>Del</strong>{" "}
-            <span className="install-banner__share-icon">⬆</span>,{" "}
-            velg <strong>Legg til på hjemskjermen</strong>
+            <span className="install-banner__share-icon">⬆</span>{" "}
+            Trykk <strong>Del</strong>, velg <strong>Legg til</strong>
           </span>
           <div className="install-banner__actions">
             <button
