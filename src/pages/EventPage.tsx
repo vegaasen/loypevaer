@@ -198,7 +198,7 @@ export function EventPage() {
                 rel="noopener noreferrer"
                 className="status-card__link"
               >
-                Offisiell nettside ↗
+                Nettside ↗
               </a>
             )}
             <p className="status-card__notice">
@@ -328,7 +328,7 @@ export function EventPage() {
               className="ritt-page__meta-link"
               onClick={() => trackExternalLinkClick(rittData.url!, rittData.name)}
             >
-              Offisiell nettside ↗
+              Nettside ↗
             </a>
           )}
           <button
