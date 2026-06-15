@@ -1,5 +1,5 @@
 import { useWeather, type WeatherResult } from "../hooks/useWeather";
-import { isForecastRange, getWeatherCache, getHistoricalYears } from "../lib/weather";
+import { isForecastRange, isYrRange, getWeatherCache, getHistoricalYears } from "../lib/weather";
 import { WeatherCard } from "./WeatherCard";
 import type { Waypoint } from "../lib/weather";
 import { calcWaypointTimes, formatArrivalTime } from "../lib/timing";
@@ -42,6 +42,8 @@ export function WeatherStrip({ waypoints, date, startTime, finishTime, externalR
   const mode =
     date == null
       ? null
+      : isYrRange(date)
+      ? "yr-forecast"
       : isForecastRange(date)
       ? "forecast"
       : "climate-average";
@@ -71,8 +73,10 @@ export function WeatherStrip({ waypoints, date, startTime, finishTime, externalR
     <div className="weather-strip">
       {date && (
         <div className="weather-strip__banner">
-          {mode === "forecast"
-            ? "Viser værvarsel fra Open-Meteo (opptil 16 dager)"
+          {mode === "yr-forecast"
+            ? "Viser værvarsel fra Yr / MET Norway (opptil 9 dager)"
+            : mode === "forecast"
+            ? "Viser værvarsel fra Open-Meteo (dager 10–16)"
             : "Viser klimagjennomsnitt (historiske data 2015–2024)"}
           {timingActive && " · Vær ved forventet ankomsttid"}
         </div>

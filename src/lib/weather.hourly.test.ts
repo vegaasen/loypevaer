@@ -7,10 +7,10 @@ import { mockHourly24Response } from "../test/handlers";
 
 const waypoint: Waypoint = { label: "Test", lat: 61.0, lon: 10.0, altitude: 200 };
 
-// Use a date 3 days from now so isForecastRange returns true
+// Use a date 11 days from now: within Open-Meteo forecast range (10–16) but outside Yr range (0–9).
 function forecastDate(): string {
   const d = new Date();
-  d.setDate(d.getDate() + 3);
+  d.setDate(d.getDate() + 11);
   return d.toISOString().split("T")[0];
 }
 

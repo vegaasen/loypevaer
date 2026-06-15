@@ -3759,7 +3759,7 @@ details[open] .gear-suggestion__summary::before {
 .time-picker__controls {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
 }
 
@@ -3785,6 +3785,8 @@ details[open] .gear-suggestion__summary::before {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 6px 10px;
+  height: 38px;
+  box-sizing: border-box;
   transition: border-color 0.15s, box-shadow 0.15s;
 
   &:focus {
@@ -3803,8 +3805,11 @@ details[open] .gear-suggestion__summary::before {
   border: 1px solid var(--accent-border);
   border-radius: var(--radius);
   padding: 5px 10px;
+  height: 38px;
+  box-sizing: border-box;
   cursor: pointer;
   transition: background 0.12s;
+  align-self: flex-end;
 
   &:hover {
     background: var(--accent-bg);

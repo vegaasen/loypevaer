@@ -2,14 +2,28 @@
 import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
+import { execSync } from 'child_process'
+
+function getGitSha(): string {
+  try {
+    return execSync('git rev-parse --short HEAD').toString().trim()
+  } catch {
+    return 'dev'
+  }
+}
 
 // Base path is /loypevaer/ only when deploying to GitHub Pages.
 // AWS (CloudFront + custom domain) and local dev both use /.
 const base = process.env.DEPLOY_TARGET === 'github-pages' ? '/loypevaer/' : '/'
 
+const appVersion = getGitSha()
+
 // https://vite.dev/config/
 export default defineConfig({
   base,
+  define: {
+    'import.meta.env.VITE_APP_VERSION': JSON.stringify(appVersion),
+  },
   plugins: [
     react(),
     VitePWA({
@@ -68,6 +82,20 @@ export default defineConfig({
             handler: 'StaleWhileRevalidate',
             options: {
               cacheName: 'open-meteo-archive',
+              expiration: {
+                maxEntries: 200,
+                maxAgeSeconds: 60 * 60 * 48, // 48 hours
+              },
+              cacheableResponse: {
+                statuses: [0, 200],
+              },
+            },
+          },
+          {
+            urlPattern: /^https:\/\/api\.met\.no\/.*/i,
+            handler: 'StaleWhileRevalidate',
+            options: {
+              cacheName: 'yr-api',
               expiration: {
                 maxEntries: 200,
                 maxAgeSeconds: 60 * 60 * 48, // 48 hours

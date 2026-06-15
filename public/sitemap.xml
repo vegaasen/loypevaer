@@ -139,12 +139,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.løypevær.no/arrangement/sunnfjord-triatlon</loc>
-    <lastmod>2026-06-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.løypevær.no/arrangement/stavanger-triathlon</loc>
     <lastmod>2026-06-21</lastmod>
     <changefreq>monthly</changefreq>
@@ -177,48 +171,6 @@
   <url>
     <loc>https://www.løypevær.no/arrangement/trondheim-triatlon</loc>
     <lastmod>2026-08-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.løypevær.no/arrangement/bekkestua-senter-haslummila-2026</loc>
-    <lastmod>2026-06-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.løypevær.no/arrangement/nosen-hundreds-ultramarathon-2026</loc>
-    <lastmod>2026-06-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.løypevær.no/arrangement/beisfjord-backyard-ultra-2026</loc>
-    <lastmod>2026-06-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.løypevær.no/arrangement/birkebeinerlopet-2026</loc>
-    <lastmod>2026-06-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.løypevær.no/arrangement/runwayk-2026</loc>
-    <lastmod>2026-06-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.løypevær.no/arrangement/skudeneshavnlopet-2026</loc>
-    <lastmod>2026-06-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.løypevær.no/arrangement/sommernattslopet-bergen-2026</loc>
-    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -327,6 +279,12 @@
   <url>
     <loc>https://www.løypevær.no/arrangement/dynafit-hardangerjokulen-ultra-2026</loc>
     <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.løypevær.no/arrangement/sibmila-2026</loc>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -973,6 +931,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.løypevær.no/arrangement/torvikbukt-6-topper-2026</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.løypevær.no/arrangement/valdreslopet-2026</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -1159,6 +1123,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.løypevær.no/arrangement/furumomila-2026</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.løypevær.no/arrangement/ivar-formos-minnelop-2026</loc>
     <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -1173,6 +1143,12 @@
   <url>
     <loc>https://www.løypevær.no/arrangement/kystlopet-2026</loc>
     <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.løypevær.no/arrangement/fredrikstadmarka-rundt-2026</loc>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1393,8 +1369,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.løypevær.no/arrangement/rekordmila-2027</loc>
+    <lastmod>2027-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.løypevær.no/arrangement/eidemila-2027</loc>
     <lastmod>2027-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.løypevær.no/arrangement/haslummila-2027</loc>
+    <lastmod>2027-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

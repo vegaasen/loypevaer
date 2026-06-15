@@ -37,3 +37,66 @@ const WMO_CODES: Record<number, WeatherDescription> = {
 export function describeWeatherCode(code: number): WeatherDescription {
   return WMO_CODES[code] ?? { label: `Kode ${code}`, emoji: "🌡️" };
 }
+
+/**
+ * Maps MET Norway Locationforecast symbol codes (without _day/_night suffix)
+ * to the nearest WMO numeric code.
+ * Reference: https://api.met.no/weatherapi/weathericon/2.0/legends
+ */
+const YR_SYMBOL_TO_WMO: Record<string, number> = {
+  clearsky: 0,
+  fair: 1,
+  partlycloudy: 2,
+  cloudy: 3,
+  fog: 45,
+  lightrain: 61,
+  rain: 63,
+  heavyrain: 65,
+  lightrainshowers: 80,
+  rainshowers: 81,
+  heavyrainshowers: 82,
+  lightsleet: 77,
+  sleet: 77,
+  heavysleet: 77,
+  lightsleetshowers: 77,
+  sleetshowers: 77,
+  heavysleetshowers: 77,
+  lightsnow: 71,
+  snow: 73,
+  heavysnow: 75,
+  lightsnowshowers: 85,
+  snowshowers: 85,
+  heavysnowshowers: 86,
+  thunder: 95,
+  rainandthunder: 95,
+  lightrainandthunder: 95,
+  heavyrainandthunder: 95,
+  sleetandthunder: 95,
+  lightsleetandthunder: 95,
+  heavysleetandthunder: 95,
+  snowandthunder: 95,
+  lightsnowandthunder: 95,
+  heavysnowandthunder: 95,
+  lightrainshowersandthunder: 96,
+  rainshowersandthunder: 96,
+  heavyrainshowersandthunder: 99,
+  lightsleetshowersandthunder: 96,
+  sleetshowersandthunder: 96,
+  heavysleetshowersandthunder: 99,
+  lightsnowshowersandthunder: 96,
+  snowshowersandthunder: 96,
+  heavysnowshowersandthunder: 99,
+};
+
+/**
+ * Converts a MET Norway symbol code (e.g. "clearsky_day", "heavyrain") to the
+ * nearest WMO numeric code. Strips any trailing _day / _night / _polartwilight
+ * suffix before looking up the table. Returns 0 (clear sky) as a safe fallback.
+ */
+export function yrSymbolToWmo(symbolCode: string): number {
+  const base = symbolCode
+    .replace(/_day$/, "")
+    .replace(/_night$/, "")
+    .replace(/_polartwilight$/, "");
+  return YR_SYMBOL_TO_WMO[base] ?? 0;
+}

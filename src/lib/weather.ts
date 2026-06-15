@@ -1,5 +1,6 @@
 import { getTodayMidnight } from "./dates";
 import type { ClimateStoryInput } from "./climateStory";
+import { yrSymbolToWmo } from "./wmo";
 
 type WeatherCacheData = {
   climateAverages: Record<string, WeatherData>;
@@ -159,6 +160,46 @@ interface OpenMeteoHourlyResponse {
 const FORECAST_URL = "https://api.open-meteo.com/v1/forecast";
 const ARCHIVE_URL = "https://archive-api.open-meteo.com/v1/archive";
 
+const YR_FORECAST_URL = "https://api.met.no/weatherapi/locationforecast/2.0/compact";
+// User-Agent is required by MET.no Terms of Service.
+// VITE_APP_VERSION is injected at build time via vite.config.ts define.
+const YR_USER_AGENT =
+  (typeof import.meta !== "undefined" && (import.meta.env as Record<string, string | undefined>).VITE_APP_VERSION
+    ? `loypevaer/${(import.meta.env as Record<string, string | undefined>).VITE_APP_VERSION} vegardaasen.github.io/loypevaer`
+    : "loypevaer/dev vegardaasen.github.io/loypevaer");
+
+/** Yr compact timeseries entry (relevant fields only) */
+interface YrTimeseriesItem {
+  time: string; // ISO UTC e.g. "2025-07-01T06:00:00Z"
+  data: {
+    instant: {
+      details: {
+        air_temperature: number;
+        wind_speed: number; // m/s — multiply ×3.6 for km/h
+        wind_from_direction: number;
+      };
+    };
+    next_1_hours?: {
+      summary: { symbol_code: string };
+      details: { precipitation_amount: number; probability_of_precipitation?: number };
+    };
+    next_6_hours?: {
+      summary: { symbol_code: string };
+      details: {
+        air_temperature_max: number;
+        air_temperature_min: number;
+        precipitation_amount: number;
+      };
+    };
+  };
+}
+
+interface YrResponse {
+  properties: {
+    timeseries: YrTimeseriesItem[];
+  };
+}
+
 const DAILY_PARAMS =
   "temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum,wind_speed_10m_max,wind_direction_10m_dominant,weather_code,uv_index_max";
 
@@ -197,6 +238,234 @@ export function isForecastRange(date: string): boolean {
   const target = new Date(date);
   const diffDays = (target.getTime() - today.getTime()) / (1000 * 60 * 60 * 24);
   return diffDays >= 0 && diffDays <= 16;
+}
+
+/** Returns true if selectedDate is within 0–9 days from today (Yr forecast horizon) */
+export function isYrRange(date: string): boolean {
+  const today = getTodayMidnight();
+  const target = new Date(date);
+  const diffDays = (target.getTime() - today.getTime()) / (1000 * 60 * 60 * 24);
+  return diffDays >= 0 && diffDays <= 9;
+}
+
+/**
+ * Converts a UTC ISO timestamp to a local date string "YYYY-MM-DD" in Europe/Oslo.
+ */
+function toOsloDate(utcIso: string): string {
+  const parts = new Intl.DateTimeFormat("nb-NO", {
+    timeZone: "Europe/Oslo",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(new Date(utcIso));
+  const year  = parts.find((p) => p.type === "year")?.value  ?? "";
+  const month = parts.find((p) => p.type === "month")?.value ?? "";
+  const day   = parts.find((p) => p.type === "day")?.value   ?? "";
+  return `${year}-${month}-${day}`;
+}
+
+/**
+ * Returns the Europe/Oslo hour (0–23) for a UTC ISO timestamp.
+ */
+function toOsloHour(utcIso: string): number {
+  return parseInt(
+    new Intl.DateTimeFormat("nb-NO", {
+      timeZone: "Europe/Oslo",
+      hour: "numeric",
+      hour12: false,
+    }).format(new Date(utcIso)),
+    10
+  );
+}
+
+/**
+ * Fetches the Yr compact forecast for a waypoint and returns timeseries
+ * entries filtered to the target calendar day (Europe/Oslo).
+ */
+async function fetchYrTimeseries(waypoint: Waypoint, date: string): Promise<YrTimeseriesItem[]> {
+  const params = new URLSearchParams({
+    lat: String(waypoint.lat),
+    lon: String(waypoint.lon),
+    ...(waypoint.altitude !== undefined ? { altitude: String(Math.round(waypoint.altitude)) } : {}),
+  });
+  const res = await fetch(`${YR_FORECAST_URL}?${params}`, {
+    headers: { "User-Agent": YR_USER_AGENT },
+  });
+  if (!res.ok) throw new Error(`Yr API error: ${res.status}`);
+  const json = await res.json() as YrResponse;
+  const entries = json.properties.timeseries.filter(
+    (item) => toOsloDate(item.time) === date
+  );
+  if (entries.length === 0) {
+    throw new Error(`No Yr timeseries data for ${date}`);
+  }
+  return entries;
+}
+
+/**
+ * Fetches daily aggregated weather from MET Norway Yr for a date within 0–9 days.
+ * Aggregation rules:
+ * - tempMax/tempMin: max/min of next_6_hours blocks for the day
+ * - precipitation: sum of next_1_hours amounts (fallback: next_6_hours when absent)
+ * - windSpeed: max instant wind_speed ×3.6 (m/s → km/h)
+ * - weatherCode: yrSymbolToWmo of noon's next_6_hours symbol (fallback: first available)
+ */
+async function fetchYrWeather(waypoint: Waypoint, date: string): Promise<WeatherData> {
+  const entries = await fetchYrTimeseries(waypoint, date);
+
+  let tempMax = -Infinity;
+  let tempMin = Infinity;
+  let maxWind = 0;
+  let precipitation = 0;
+  let precipProbMax: number | undefined;
+  let noonSymbol = "";
+  let firstSymbol = "";
+
+  for (const item of entries) {
+    const instant = item.data.instant.details;
+    const windKmh = instant.wind_speed * 3.6;
+    if (windKmh > maxWind) maxWind = windKmh;
+
+    const next6 = item.data.next_6_hours;
+    if (next6) {
+      if (next6.details.air_temperature_max > tempMax) tempMax = next6.details.air_temperature_max;
+      if (next6.details.air_temperature_min < tempMin) tempMin = next6.details.air_temperature_min;
+      if (!firstSymbol) firstSymbol = next6.summary.symbol_code;
+      // Pick noon block (Oslo 12:00 = UTC 11:00 in winter, 10:00 in summer)
+      if (toOsloHour(item.time) === 12 && !noonSymbol) noonSymbol = next6.summary.symbol_code;
+    }
+
+    const next1 = item.data.next_1_hours;
+    if (next1) {
+      precipitation += next1.details.precipitation_amount;
+      if (next1.details.probability_of_precipitation !== undefined) {
+        precipProbMax = Math.max(precipProbMax ?? 0, next1.details.probability_of_precipitation);
+      }
+    } else if (next6 && !item.data.next_1_hours) {
+      // Only accumulate next_6_hours precipitation if no next_1_hours available for this slot
+      precipitation += next6.details.precipitation_amount / 6;
+    }
+  }
+
+  // Fallback: if all entries lack next_6_hours temp, use instant temps
+  if (tempMax === -Infinity) {
+    for (const item of entries) {
+      const t = item.data.instant.details.air_temperature;
+      if (t > tempMax) tempMax = t;
+      if (t < tempMin) tempMin = t;
+    }
+  }
+
+  const symbolCode = noonSymbol || firstSymbol;
+  const weatherCode = symbolCode ? yrSymbolToWmo(symbolCode) : 0;
+
+  return {
+    source: "forecast",
+    tempMax: Math.round(tempMax * 10) / 10,
+    tempMin: Math.round(tempMin * 10) / 10,
+    precipitation: Math.round(precipitation * 10) / 10,
+    windSpeed: Math.round(maxWind * 10) / 10,
+    weatherCode,
+    precipitationProbability: precipProbMax,
+  };
+}
+
+/**
+ * Fetches hourly weather from Yr for a specific datetime ("YYYY-MM-DDTHH:00").
+ */
+async function fetchYrWeatherHourly(waypoint: Waypoint, datetime: string): Promise<WeatherData> {
+  const { date, hour } = parseDatetime(datetime);
+  const entries = await fetchYrTimeseries(waypoint, date);
+
+  // Find the entry whose Oslo hour matches the requested hour
+  const target = entries.find((item) => toOsloHour(item.time) === hour);
+
+  if (!target) {
+    throw new Error(`No Yr timeseries entry for ${datetime}`);
+  }
+
+  const instant = target.data.instant.details;
+  const windKmh = instant.wind_speed * 3.6;
+  const next1 = target.data.next_1_hours;
+  const next6 = target.data.next_6_hours;
+  const symbolCode = next1?.summary.symbol_code ?? next6?.summary.symbol_code ?? "";
+  const hourlyPrecip = next1?.details.precipitation_amount ?? (next6 ? next6.details.precipitation_amount / 6 : 0);
+
+  // Daily aggregates from all entries in the day
+  let tempMax = -Infinity;
+  let tempMin = Infinity;
+  let maxWind = 0;
+  let dailyPrecip = 0;
+  for (const item of entries) {
+    const w = item.data.instant.details.wind_speed * 3.6;
+    if (w > maxWind) maxWind = w;
+    const n6 = item.data.next_6_hours;
+    if (n6) {
+      if (n6.details.air_temperature_max > tempMax) tempMax = n6.details.air_temperature_max;
+      if (n6.details.air_temperature_min < tempMin) tempMin = n6.details.air_temperature_min;
+    }
+    const n1 = item.data.next_1_hours;
+    dailyPrecip += n1 ? n1.details.precipitation_amount : (n6 ? n6.details.precipitation_amount / 6 : 0);
+  }
+  if (tempMax === -Infinity) {
+    for (const item of entries) {
+      const t = item.data.instant.details.air_temperature;
+      if (t > tempMax) tempMax = t;
+      if (t < tempMin) tempMin = t;
+    }
+  }
+
+  return {
+    source: "forecast",
+    tempMax: Math.round(tempMax * 10) / 10,
+    tempMin: Math.round(tempMin * 10) / 10,
+    precipitation: Math.round(dailyPrecip * 10) / 10,
+    windSpeed: Math.round(maxWind * 10) / 10,
+    windDirection: instant.wind_from_direction,
+    weatherCode: symbolCode ? yrSymbolToWmo(symbolCode) : 0,
+    hourlyTemp: instant.air_temperature,
+    hourlyPrecipitation: Math.round(hourlyPrecip * 10) / 10,
+    hourlyWindSpeed: Math.round(windKmh * 10) / 10,
+    hourlyWindDirection: instant.wind_from_direction,
+    precipitationProbability: next1?.details.probability_of_precipitation,
+  };
+}
+
+/**
+ * Fetches all 24 hourly slots for a given waypoint and date from Yr.
+ */
+async function fetchYrHourlyBreakdown(waypoint: Waypoint, date: string): Promise<HourlyEntry[]> {
+  const entries = await fetchYrTimeseries(waypoint, date);
+
+  return Array.from({ length: 24 }, (_, hour) => {
+    const item = entries.find((e) => toOsloHour(e.time) === hour);
+
+    if (!item) {
+      return {
+        hour,
+        temp: 0,
+        precipitation: 0,
+        windSpeed: 0,
+        weatherCode: 0,
+      };
+    }
+
+    const instant = item.data.instant.details;
+    const next1 = item.data.next_1_hours;
+    const next6 = item.data.next_6_hours;
+    const symbolCode = next1?.summary.symbol_code ?? next6?.summary.symbol_code ?? "";
+    const precip = next1?.details.precipitation_amount ?? (next6 ? next6.details.precipitation_amount / 6 : 0);
+
+    return {
+      hour,
+      temp: instant.air_temperature,
+      precipitation: Math.round(precip * 10) / 10,
+      precipitationProbability: next1?.details.probability_of_precipitation,
+      windSpeed: Math.round(instant.wind_speed * 3.6 * 10) / 10,
+      windDirection: instant.wind_from_direction,
+      weatherCode: symbolCode ? yrSymbolToWmo(symbolCode) : 0,
+    };
+  });
 }
 
 async function fetchForecastWeather(
@@ -355,6 +624,9 @@ export async function fetchWeather(
   waypoint: Waypoint,
   date: string
 ): Promise<WeatherData> {
+  if (isYrRange(date)) {
+    return fetchYrWeather(waypoint, date);
+  }
   if (isForecastRange(date)) {
     return fetchForecastWeather(waypoint, date);
   }
@@ -541,12 +813,16 @@ export type HourlyEntry = {
 
 /**
  * Fetches all 24 hourly slots for a given waypoint and date.
- * Uses the forecast API when within 16 days, archive average across 10 years otherwise.
+ * Uses Yr when within 9 days, Open-Meteo forecast for days 10–16,
+ * archive average across 10 years otherwise.
  */
 export async function fetchHourlyBreakdown(
   waypoint: Waypoint,
   date: string
 ): Promise<HourlyEntry[]> {
+  if (isYrRange(date)) {
+    return fetchYrHourlyBreakdown(waypoint, date);
+  }
   if (isForecastRange(date)) {
     return fetchForecastHourlyBreakdown(waypoint, date);
   }
@@ -656,13 +932,18 @@ async function fetchClimateAverageHourlyBreakdown(
 
 /**
  * Fetches weather for a specific datetime (hourly mode).
- * When datetime is provided, uses hourly data; otherwise falls back to daily.
+ * Uses Yr within 0–9 days, Open-Meteo forecast for days 10–16,
+ * climate archive average for older dates.
  */
 export async function fetchWeatherForDatetime(
   waypoint: Waypoint,
   datetime: string
 ): Promise<WeatherData> {
-  if (isForecastRange(datetime.split("T")[0])) {
+  const date = datetime.split("T")[0];
+  if (isYrRange(date)) {
+    return fetchYrWeatherHourly(waypoint, datetime);
+  }
+  if (isForecastRange(date)) {
     return fetchForecastWeatherHourly(waypoint, datetime);
   }
   return fetchClimateAverageHourly(waypoint, datetime);

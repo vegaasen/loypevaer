@@ -1,5 +1,55 @@
 import { http, HttpResponse } from "msw";
 
+/**
+ * Builds a Yr compact timeseries for a given UTC date string "YYYY-MM-DD".
+ * Produces 24 hourly entries (00:00–23:00 UTC) with next_1_hours and
+ * every 6th entry also including next_6_hours.
+ */
+function buildYrTimeseries(utcDate: string) {
+  return Array.from({ length: 24 }, (_, h) => {
+    const time = `${utcDate}T${String(h).padStart(2, "0")}:00:00Z`;
+    const entry: {
+      time: string;
+      data: {
+        instant: { details: { air_temperature: number; wind_speed: number; wind_from_direction: number } };
+        next_1_hours?: { summary: { symbol_code: string }; details: { precipitation_amount: number; probability_of_precipitation: number } };
+        next_6_hours?: { summary: { symbol_code: string }; details: { air_temperature_max: number; air_temperature_min: number; precipitation_amount: number } };
+      };
+    } = {
+      time,
+      data: {
+        instant: {
+          details: {
+            air_temperature: 15 + h * 0.2,
+            wind_speed: 5, // m/s → 18 km/h
+            wind_from_direction: 270,
+          },
+        },
+        next_1_hours: {
+          summary: { symbol_code: "partlycloudy_day" },
+          details: { precipitation_amount: 0.1, probability_of_precipitation: 20 },
+        },
+      },
+    };
+    if (h % 6 === 0) {
+      entry.data.next_6_hours = {
+        summary: { symbol_code: h === 12 ? "rain" : "partlycloudy_day" },
+        details: { air_temperature_max: 20, air_temperature_min: 12, precipitation_amount: 0.6 },
+      };
+    }
+    return entry;
+  });
+}
+
+/** Yr compact response for tomorrow (UTC date passed as argument) */
+export function mockYrCompactResponse(utcDate: string) {
+  return {
+    properties: {
+      timeseries: buildYrTimeseries(utcDate),
+    },
+  };
+}
+
 /** A minimal Open-Meteo daily forecast response */
 const mockDailyResponse = {
   daily: {
@@ -64,6 +114,34 @@ const mockWeatherCache = {
 
 export const handlers = [
   http.get("/weather-cache.json", () => HttpResponse.json(mockWeatherCache)),
+
+  http.get("https://api.met.no/weatherapi/locationforecast/2.0/compact", ({ request }) => {
+    const url = new URL(request.url);
+    // Use the lat/lon to derive a stable UTC date for the fixture — tests control the date externally.
+    // We serve a full response covering today+1 in UTC so tests using +1/+3 day offsets can filter properly.
+    const lat = url.searchParams.get("lat") ?? "0";
+    const lon = url.searchParams.get("lon") ?? "0";
+    // Suppress unused-variable lint — lat/lon are validated by API contract but not used to vary the fixture.
+    void lat; void lon;
+    // Build timeseries spanning today and today+1 in UTC to cover any reasonable test date offset.
+    const today = new Date();
+    const todayUtc = today.toISOString().split("T")[0];
+    const tomorrow = new Date(today);
+    tomorrow.setUTCDate(tomorrow.getUTCDate() + 1);
+    const tomorrowUtc = tomorrow.toISOString().split("T")[0];
+    const in3 = new Date(today);
+    in3.setUTCDate(in3.getUTCDate() + 3);
+    const in3Utc = in3.toISOString().split("T")[0];
+    return HttpResponse.json({
+      properties: {
+        timeseries: [
+          ...buildYrTimeseries(todayUtc),
+          ...buildYrTimeseries(tomorrowUtc),
+          ...buildYrTimeseries(in3Utc),
+        ],
+      },
+    });
+  }),
 
   http.get("https://api.open-meteo.com/v1/forecast", ({ request }) => {
     const url = new URL(request.url);
