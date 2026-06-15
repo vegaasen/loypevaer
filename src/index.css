@@ -2690,10 +2690,6 @@ code {
 }
 
 .ritt-page__actions-date {
-  display: block;
-  margin-top: 8px;
-  font-size: 13px;
-  color: var(--text-muted);
 }
 
 .ritt-page__meta {
