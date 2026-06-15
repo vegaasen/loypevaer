@@ -101,7 +101,7 @@ export default defineConfig({
                 maxAgeSeconds: 60 * 60 * 48, // 48 hours
               },
               cacheableResponse: {
-                statuses: [0, 200],
+                statuses: [200],
               },
             },
           },

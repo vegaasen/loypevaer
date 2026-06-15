@@ -161,12 +161,6 @@ const FORECAST_URL = "https://api.open-meteo.com/v1/forecast";
 const ARCHIVE_URL = "https://archive-api.open-meteo.com/v1/archive";
 
 const YR_FORECAST_URL = "https://api.met.no/weatherapi/locationforecast/2.0/compact";
-// User-Agent is required by MET.no Terms of Service.
-// VITE_APP_VERSION is injected at build time via vite.config.ts define.
-const YR_USER_AGENT =
-  (typeof import.meta !== "undefined" && (import.meta.env as Record<string, string | undefined>).VITE_APP_VERSION
-    ? `loypevaer/${(import.meta.env as Record<string, string | undefined>).VITE_APP_VERSION} vegardaasen.github.io/loypevaer`
-    : "loypevaer/dev vegardaasen.github.io/loypevaer");
 
 /** Yr compact timeseries entry (relevant fields only) */
 interface YrTimeseriesItem {
@@ -288,9 +282,7 @@ async function fetchYrTimeseries(waypoint: Waypoint, date: string): Promise<YrTi
     lon: String(waypoint.lon),
     ...(waypoint.altitude !== undefined ? { altitude: String(Math.round(waypoint.altitude)) } : {}),
   });
-  const res = await fetch(`${YR_FORECAST_URL}?${params}`, {
-    headers: { "User-Agent": YR_USER_AGENT },
-  });
+  const res = await fetch(`${YR_FORECAST_URL}?${params}`);
   if (!res.ok) throw new Error(`Yr API error: ${res.status}`);
   const json = await res.json() as YrResponse;
   const entries = json.properties.timeseries.filter(
