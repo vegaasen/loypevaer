@@ -134,6 +134,7 @@ type CyclingEvent = {
   region: string;
   url: string;
   waypoints: Waypoint[];
+  elevationGain?: number;
 };
 
 type NominatimResult = {
@@ -155,7 +156,13 @@ type ManualEvent = {
   name: string;
 };
 
-type WaypointMap = Record<string, Waypoint[]>;
+type WaypointEntry = Waypoint[] | { waypoints: Waypoint[]; elevationGain?: number };
+type WaypointMap = Record<string, WaypointEntry>;
+
+function resolveWaypointEntry(entry: WaypointEntry): { waypoints: Waypoint[]; elevationGain?: number } {
+  if (Array.isArray(entry)) return { waypoints: entry };
+  return entry;
+}
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -421,7 +428,10 @@ async function main() {
     console.log(`    → ${lat.toFixed(3)}, ${lon.toFixed(3)} (${region})`);
 
     // Merge waypoints: prefer hand-curated waypoints over geocoded pin
-    const waypoints: Waypoint[] = waypointMap[id] ?? [{ label: `Start/Mål – ${cityName}`, lat, lon }];
+    const waypointEntry = waypointMap[id];
+    const { waypoints, elevationGain } = waypointEntry
+      ? resolveWaypointEntry(waypointEntry)
+      : { waypoints: [{ label: `Start/Mål – ${cityName}`, lat, lon }], elevationGain: undefined };
 
     output.push({
       id,
@@ -434,6 +444,7 @@ async function main() {
       region,
       url: event.Homepage ?? "",
       waypoints,
+      ...(elevationGain !== undefined && { elevationGain }),
     });
   }
 

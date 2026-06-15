@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08T06:34:10.197Z",
+  "generatedAt": "2026-06-15T17:41:06.773Z",
   "source": "eqtiming.com / Norges Cykleforbund (organizationId=13)",
   "events": [
     {
@@ -215,8 +215,8 @@
       "name": "Midnattsolrittet 2026",
       "discipline": "landevei",
       "officialDate": "2026-06-20",
-      "distance": 46,
-      "distanceLabel": "46 km",
+      "distance": 91,
+      "distanceLabel": "91 km",
       "sportLevel": "Tur",
       "region": "Norge",
       "url": "",
@@ -380,7 +380,8 @@
           "lon": 7.1,
           "altitude": 10
         }
-      ]
+      ],
+      "elevationGain": 4300
     },
     {
       "id": "color-line-tour",
@@ -999,49 +1000,6 @@
           "lat": 60.71,
           "lon": 11.136,
           "altitude": 130
-        }
-      ]
-    },
-    {
-      "id": "l-etape-trondheim-by-tour-de-france",
-      "name": "L'etape Trondheim by Tour de France",
-      "discipline": "landevei",
-      "officialDate": "2026-06-13",
-      "distance": 130,
-      "distanceLabel": "130 km",
-      "sportLevel": "Tur",
-      "region": "Trøndelag",
-      "url": "https://trondheim.letapeseries.com/",
-      "waypoints": [
-        {
-          "label": "Start – Trondheim",
-          "lat": 63.4305,
-          "lon": 10.3951,
-          "altitude": 5
-        },
-        {
-          "label": "25% – Klæbu",
-          "lat": 63.3612,
-          "lon": 10.4863,
-          "altitude": 280
-        },
-        {
-          "label": "50% – Støren",
-          "lat": 63.0553,
-          "lon": 10.2985,
-          "altitude": 90
-        },
-        {
-          "label": "75% – Melhus",
-          "lat": 63.2783,
-          "lon": 10.2833,
-          "altitude": 60
-        },
-        {
-          "label": "Mål – Trondheim",
-          "lat": 63.4305,
-          "lon": 10.3951,
-          "altitude": 5
         }
       ]
     },
@@ -1691,7 +1649,7 @@
       "distance": 90,
       "distanceLabel": "90 km",
       "sportLevel": "Trim",
-      "region": "Øvre Eiker",
+      "region": "Buskerud",
       "url": "http://eikerrittet.no/",
       "waypoints": [
         {
@@ -2438,6 +2396,168 @@
           "label": "Start/Mål – Puttemyra",
           "lat": 60.22881605,
           "lon": 10.36213701
+        }
+      ]
+    },
+    {
+      "id": "if-froys-jokerfestival-fellesstart",
+      "name": "IF Frøys Jokerfestival fellesstart 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-08-23",
+      "distance": 50,
+      "distanceLabel": "50 km",
+      "sportLevel": "NCF",
+      "region": "Akershus",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Ås",
+          "lat": 59.6792809,
+          "lon": 10.7741636
+        }
+      ]
+    },
+    {
+      "id": "if-froys-jokerfestival-gateritt",
+      "name": "IF Frøys Jokerfestival gateritt 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-08-22",
+      "distance": 50,
+      "distanceLabel": "50 km",
+      "sportLevel": "NCF",
+      "region": "Akershus",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Ås",
+          "lat": 59.6792809,
+          "lon": 10.7741636
+        }
+      ]
+    },
+    {
+      "id": "arctic-forest-gravel-race",
+      "name": "Arctic Forest Gravel Race",
+      "discipline": "gravel",
+      "officialDate": "2026-09-05",
+      "distance": 69,
+      "distanceLabel": "69 km",
+      "sportLevel": "Reg",
+      "region": "Nordland",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Bodø",
+          "lat": 67.2844313,
+          "lon": 14.3817503
+        }
+      ]
+    },
+    {
+      "id": "smartdok-of300-km-solo",
+      "name": "SmartDok OF300 km Solo",
+      "discipline": "terreng",
+      "officialDate": "2026-07-30",
+      "distance": 300,
+      "distanceLabel": "300 km",
+      "sportLevel": "Tur",
+      "region": "Finnmark",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Alta",
+          "lat": 69.9666046,
+          "lon": 23.2733282
+        }
+      ]
+    },
+    {
+      "id": "smartdok-of300-km-team",
+      "name": "SmartDok OF300 km Team",
+      "discipline": "terreng",
+      "officialDate": "2026-07-30",
+      "distance": 300,
+      "distanceLabel": "300 km",
+      "sportLevel": "Tur",
+      "region": "Finnmark",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Alta",
+          "lat": 69.9666046,
+          "lon": 23.2733282
+        }
+      ]
+    },
+    {
+      "id": "norrona-of700-km-solo",
+      "name": "Norrøna OF700 km Solo",
+      "discipline": "terreng",
+      "officialDate": "2026-07-27",
+      "distance": 700,
+      "distanceLabel": "700 km",
+      "sportLevel": "Tur",
+      "region": "Finnmark",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Alta",
+          "lat": 69.9666046,
+          "lon": 23.2733282
+        }
+      ]
+    },
+    {
+      "id": "norrona-of700-km-team",
+      "name": "Norrøna OF700 km Team",
+      "discipline": "terreng",
+      "officialDate": "2026-07-27",
+      "distance": 700,
+      "distanceLabel": "700 km",
+      "sportLevel": "Tur",
+      "region": "Finnmark",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Alta",
+          "lat": 69.9666046,
+          "lon": 23.2733282
+        }
+      ]
+    },
+    {
+      "id": "snn1-of150-km-solo",
+      "name": "SNN1 OF150 km Solo",
+      "discipline": "terreng",
+      "officialDate": "2026-07-25",
+      "distance": 150,
+      "distanceLabel": "150 km",
+      "sportLevel": "Tur",
+      "region": "Finnmark",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Alta",
+          "lat": 69.9666046,
+          "lon": 23.2733282
+        }
+      ]
+    },
+    {
+      "id": "norrona-of700-km-solo-kopi",
+      "name": "Norrøna OF700 km Solo_kopi",
+      "discipline": "terreng",
+      "officialDate": "2028-08-31",
+      "distance": 700,
+      "distanceLabel": "700 km",
+      "sportLevel": "Tur",
+      "region": "Finnmark",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Alta",
+          "lat": 69.9666046,
+          "lon": 23.2733282
         }
       ]
     }

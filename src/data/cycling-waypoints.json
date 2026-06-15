@@ -63,38 +63,41 @@
       "altitude": 185
     }
   ],
-  "jotunheimen-rundt-sognefjellrittet-av-sogn-ck": [
-    {
-      "label": "Start – Lærdal",
-      "lat": 61.099,
-      "lon": 7.477,
-      "altitude": 50
-    },
-    {
-      "label": "25% – Fagernes",
-      "lat": 60.989,
-      "lon": 9.233,
-      "altitude": 300
-    },
-    {
-      "label": "50% – Beitostølen",
-      "lat": 61.257,
-      "lon": 8.907,
-      "altitude": 900
-    },
-    {
-      "label": "75% – Lom / Sognefjell",
-      "lat": 61.838,
-      "lon": 8.566,
-      "altitude": 1440
-    },
-    {
-      "label": "Mål – Sogndal",
-      "lat": 61.229,
-      "lon": 7.1,
-      "altitude": 10
-    }
-  ],
+  "jotunheimen-rundt-sognefjellrittet-av-sogn-ck": {
+    "elevationGain": 4300,
+    "waypoints": [
+      {
+        "label": "Start – Lærdal",
+        "lat": 61.099,
+        "lon": 7.477,
+        "altitude": 50
+      },
+      {
+        "label": "25% – Fagernes",
+        "lat": 60.989,
+        "lon": 9.233,
+        "altitude": 300
+      },
+      {
+        "label": "50% – Beitostølen",
+        "lat": 61.257,
+        "lon": 8.907,
+        "altitude": 900
+      },
+      {
+        "label": "75% – Lom / Sognefjell",
+        "lat": 61.838,
+        "lon": 8.566,
+        "altitude": 1440
+      },
+      {
+        "label": "Mål – Sogndal",
+        "lat": 61.229,
+        "lon": 7.1,
+        "altitude": 10
+      }
+    ]
+  },
   "nordsjorittet": [
     {
       "label": "Start – Egersund",

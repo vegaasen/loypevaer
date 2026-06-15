@@ -54,7 +54,13 @@ type Waypoint = {
   altitude?: number;
 };
 
-type WaypointMap = Record<string, Waypoint[]>;
+type WaypointEntry = Waypoint[] | { waypoints: Waypoint[]; elevationGain?: number };
+type WaypointMap = Record<string, WaypointEntry>;
+
+function resolveWaypointEntry(entry: WaypointEntry): { waypoints: Waypoint[]; elevationGain?: number } {
+  if (Array.isArray(entry)) return { waypoints: entry };
+  return entry;
+}
 
 type TrackPoint = {
   lat: number;
@@ -237,9 +243,10 @@ async function main() {
   const waypointMap = JSON.parse(readFileSync(waypointsPath, "utf-8")) as WaypointMap;
 
   // Check if event ID already exists in the waypoint map
-  const existing = waypointMap[eventId];
-  if (existing) {
-    console.log(`  Existing waypoints for "${eventId}": ${existing.length} points — will be overwritten`);
+  const existingEntry = waypointMap[eventId];
+  if (existingEntry) {
+    const { waypoints: existingWps } = resolveWaypointEntry(existingEntry);
+    console.log(`  Existing waypoints for "${eventId}": ${existingWps.length} points — will be overwritten`);
   }
 
   // Load GPX content from file or URL
@@ -297,8 +304,14 @@ async function main() {
     console.log(`    ${wp.label}: ${wp.lat}, ${wp.lon}${alt}`);
   });
 
-  // Write back to cycling-waypoints.json
-  waypointMap[eventId] = enriched;
+  // Write back to cycling-waypoints.json, preserving any existing elevationGain override
+  const existingForWrite = waypointMap[eventId];
+  const existingGain = existingForWrite
+    ? resolveWaypointEntry(existingForWrite).elevationGain
+    : undefined;
+  waypointMap[eventId] = existingGain !== undefined
+    ? { waypoints: enriched, elevationGain: existingGain }
+    : enriched;
   writeFileSync(waypointsPath, JSON.stringify(waypointMap, null, 2));
 
   console.log(`\n✓ Wrote enriched waypoints to src/data/cycling-waypoints.json (key: "${eventId}")`);

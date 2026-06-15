@@ -1555,12 +1555,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.løypevær.no/arrangement/l-etape-trondheim-by-tour-de-france</loc>
-    <lastmod>2026-06-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.løypevær.no/arrangement/ryfylkerittet</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -1797,6 +1791,60 @@
   <url>
     <loc>https://www.løypevær.no/arrangement/sykkelgledecup-ritt-6</loc>
     <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.løypevær.no/arrangement/if-froys-jokerfestival-fellesstart</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.løypevær.no/arrangement/if-froys-jokerfestival-gateritt</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.løypevær.no/arrangement/arctic-forest-gravel-race</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.løypevær.no/arrangement/smartdok-of300-km-solo</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.løypevær.no/arrangement/smartdok-of300-km-team</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.løypevær.no/arrangement/norrona-of700-km-solo</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.løypevær.no/arrangement/norrona-of700-km-team</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.løypevær.no/arrangement/snn1-of150-km-solo</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.løypevær.no/arrangement/norrona-of700-km-solo-kopi</loc>
+    <lastmod>2028-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
