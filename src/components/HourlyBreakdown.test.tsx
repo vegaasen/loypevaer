@@ -6,6 +6,7 @@ import type { HourlyEntry } from "../lib/weather";
 function makeEntries(count = 24): HourlyEntry[] {
   return Array.from({ length: count }, (_, hour) => ({
     hour,
+    hasData: true,
     temp: 10 + hour * 0.5,
     feelsLike: 9 + hour * 0.5,
     precipitation: 0.1,
@@ -59,7 +60,7 @@ describe("HourlyBreakdown", () => {
 
   it("does not crash when precipitationProbability is absent", () => {
     const entries: HourlyEntry[] = [
-      { hour: 0, temp: 12, precipitation: 0, windSpeed: 5, weatherCode: 1 },
+      { hour: 0, hasData: true, temp: 12, precipitation: 0, windSpeed: 5, weatherCode: 1 },
     ];
     render(<HourlyBreakdown entries={entries} />);
     expect(screen.getByText("00:00")).toBeInTheDocument();
@@ -71,5 +72,35 @@ describe("HourlyBreakdown", () => {
     expect(screen.getByText("Temp")).toBeInTheDocument();
     expect(screen.getByText("Nedbør")).toBeInTheDocument();
     expect(screen.getByText("Vind")).toBeInTheDocument();
+  });
+
+  it("does not show sparse-data note when all entries have hasData: true", () => {
+    render(<HourlyBreakdown entries={makeEntries(24)} />);
+    expect(screen.queryByText(/6-timers oppløsning/i)).not.toBeInTheDocument();
+  });
+});
+
+describe("HourlyBreakdown with sparse Yr data", () => {
+  it("only renders rows where hasData is true", () => {
+    const entries: HourlyEntry[] = [
+      { hour: 2,  hasData: true,  temp: 8.4, precipitation: 0, windSpeed: 9.7, weatherCode: 3 },
+      { hour: 3,  hasData: false, temp: 0,   precipitation: 0, windSpeed: 0,   weatherCode: 0 },
+      { hour: 4,  hasData: false, temp: 0,   precipitation: 0, windSpeed: 0,   weatherCode: 0 },
+      { hour: 8,  hasData: true,  temp: 11.5, precipitation: 0, windSpeed: 7.2, weatherCode: 3 },
+      { hour: 9,  hasData: false, temp: 0,   precipitation: 0, windSpeed: 0,   weatherCode: 0 },
+    ];
+    render(<HourlyBreakdown entries={entries} />);
+    // Only 2 data rows (02:00 and 08:00)
+    const rows = document.querySelectorAll(".hourly-breakdown__row");
+    expect(rows).toHaveLength(2);
+  });
+
+  it("shows sparse-data note when some entries have hasData: false", () => {
+    const entries: HourlyEntry[] = [
+      { hour: 2, hasData: true,  temp: 8.4, precipitation: 0, windSpeed: 9.7, weatherCode: 3 },
+      { hour: 3, hasData: false, temp: 0,   precipitation: 0, windSpeed: 0,   weatherCode: 0 },
+    ];
+    render(<HourlyBreakdown entries={entries} />);
+    expect(screen.getByText(/6-timers oppløsning/i)).toBeInTheDocument();
   });
 });

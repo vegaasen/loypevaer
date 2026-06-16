@@ -3475,6 +3475,14 @@ details[open] .history-table__summary::before {
   border-bottom: none;
 }
 
+.hourly-breakdown__sparse-note {
+  font-size: 11px;
+  color: var(--text);
+  opacity: 0.7;
+  margin: 0 0 6px 0;
+  font-style: italic;
+}
+
 .weather-strip__source-banner {
   font-size: 12px;
   color: var(--text);
@@ -4285,4 +4293,157 @@ details[open] .packing-list__summary::before {
 .packing-list__col--skip .packing-list__item {
   opacity: 0.5;
   text-decoration: line-through;
+}
+
+/* ── Article page layout (hva-er-rittvaer, endringslogg) ────────────── */
+
+.ritt-page__article {
+  padding: 28px 32px 60px;
+  max-width: 780px;
+
+  @media (max-width: 1024px) {
+    padding: 20px 16px 48px;
+  }
+}
+
+.ritt-page__lead {
+  font-size: 1.05rem;
+  color: var(--text);
+  line-height: 1.65;
+  margin: 8px 0 0;
+  max-width: 640px;
+
+  @media (max-width: 600px) {
+    font-size: 0.97rem;
+  }
+}
+
+.ritt-page__article h2 {
+  font-size: 1.15rem;
+  margin: 2rem 0 0.5rem;
+}
+
+.ritt-page__article p,
+.ritt-page__article ul,
+.ritt-page__article ol {
+  font-size: 0.97rem;
+  line-height: 1.7;
+  color: var(--text);
+  margin: 0.5rem 0 0;
+}
+
+.ritt-page__article ul,
+.ritt-page__article ol {
+  padding-left: 1.4rem;
+}
+
+.ritt-page__article li {
+  margin-bottom: 0.3rem;
+}
+
+.ritt-page__article a:not(.ritt-page__article-cta) {
+  color: var(--accent);
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
+}
+
+.ritt-page__article-cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 22px;
+  background: var(--accent, #3d6b35);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius, 8px);
+  text-decoration: none;
+  transition: opacity 0.15s;
+
+  &:hover {
+    opacity: 0.88;
+    text-decoration: none;
+  }
+}
+
+/* ── Endringslogg page ───────────────────────────────────────────────── */
+
+.endringslogg__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.endringslogg__entry {
+  border-left: 3px solid var(--accent, #3d6b35);
+  padding-left: 1rem;
+}
+
+.endringslogg__meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.endringslogg__badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 0.15rem 0.45rem;
+}
+
+.endringslogg__badge--feat {
+  background: #d4ede0;
+  color: #1a6635;
+}
+
+.endringslogg__badge--fix {
+  background: #fde8d0;
+  color: #a0450a;
+}
+
+.endringslogg__scope {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  background: var(--surface-alt, #f3f4f6);
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+}
+
+.endringslogg__date {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.endringslogg__sha {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+
+  &:hover {
+    color: var(--accent);
+  }
+}
+
+.endringslogg__subject {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.endringslogg__empty {
+  color: var(--text-muted);
+  font-style: italic;
 }

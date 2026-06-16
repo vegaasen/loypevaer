@@ -18,6 +18,9 @@ export function SiteFooter() {
         <Link to="/hva-er-rittvaer">Hva er rittvær?</Link>
       </span>
       <span>
+        <Link to="/endringslogg">Endringslogg</Link>
+      </span>
+      <span>
         <a
           href="https://github.com/vegaasen/loypevaer/issues/new?template=suggest-ritt.yml"
           target="_blank"

@@ -58,6 +58,14 @@ const urls: string[] = [
     <priority>0.6</priority>
   </url>`,
 
+  // Changelog page
+  `  <url>
+    <loc>${BASE_URL}/endringslogg</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>`,
+
   // One entry per arrangement — all data sources mirroring src/lib/arrangements.ts
   ...[
     ...(ritt as RittEntry[]),

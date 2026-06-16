@@ -112,6 +112,124 @@ describe("fetchHourlyBreakdown — Yr path (0-9 days)", () => {
     const withWind = entries.filter((e) => e.windSpeed > 0);
     withWind.forEach((e) => expect(e.windSpeed).toBeCloseTo(18, 0));
   });
+
+  it("marks sentinel rows (hours with no Yr data) as hasData: false", async () => {
+    // Override with a 6-hourly (sparse) mock → only Oslo 02, 08, 14, 20 have data
+    server.use(
+      http.get("https://api.met.no/weatherapi/locationforecast/2.0/compact", () => {
+        const today = new Date();
+        const d1 = new Date(today);
+        d1.setUTCDate(d1.getUTCDate() + 1);
+        const d1Utc = d1.toISOString().split("T")[0];
+        const sparse = [0, 6, 12, 18].map((h) => ({
+          time: `${d1Utc}T${String(h).padStart(2, "0")}:00:00Z`,
+          data: {
+            instant: { details: { air_temperature: 10, wind_speed: 5, wind_from_direction: 270 } },
+            next_6_hours: {
+              summary: { symbol_code: "partlycloudy_day" },
+              details: { air_temperature_max: 15, air_temperature_min: 8, precipitation_amount: 0.6 },
+            },
+          },
+        }));
+        return HttpResponse.json({ properties: { timeseries: sparse } });
+      })
+    );
+
+    const entries = await fetchHourlyBreakdown(waypoint, YR_DATE);
+    expect(entries).toHaveLength(24);
+
+    const realEntries = entries.filter((e) => e.hasData);
+    expect(realEntries).toHaveLength(4);
+
+    const sentinelEntries = entries.filter((e) => !e.hasData);
+    expect(sentinelEntries).toHaveLength(20);
+
+    expect(realEntries[0].temp).not.toBe(0);
+    expect(sentinelEntries[0].temp).toBe(0);
+    expect(sentinelEntries[0].windSpeed).toBe(0);
+  });
+
+  afterEach(() => {
+    server.resetHandlers();
+  });
+});
+
+/**
+ * Builds a sparse (6-hourly) Yr timeseries for a given UTC date, matching
+ * the resolution Yr uses for dates 3+ days out. Entries at UTC 00, 06, 12, 18
+ * → Oslo hours 02, 08, 14, 20 (UTC+2 summer).
+ */
+function buildSparseYrTimeseries(utcDate: string) {
+  return [0, 6, 12, 18].map((h) => ({
+    time: `${utcDate}T${String(h).padStart(2, "0")}:00:00Z`,
+    data: {
+      instant: {
+        details: {
+          air_temperature: 10 + h * 0.5,
+          wind_speed: 5,
+          wind_from_direction: 270,
+        },
+      },
+      next_6_hours: {
+        summary: { symbol_code: "partlycloudy_day" },
+        details: { air_temperature_max: 20, air_temperature_min: 8, precipitation_amount: 0.6 },
+      },
+    },
+  }));
+}
+
+describe("fetchWeatherForDatetime — Yr sparse (6-hourly) resolution, no exact hour match", () => {
+  // Yr returns only 4 entries/day (UTC 00,06,12,18 → Oslo 02,08,14,20) for dates 3+ days out.
+  // Requesting hour 01, 05, 09, 22 etc. must snap to the nearest available entry instead of throwing.
+  beforeEach(() => {
+    server.use(
+      http.get("https://api.met.no/weatherapi/locationforecast/2.0/compact", ({ request }) => {
+        const url = new URL(request.url);
+        void url;
+        // Build a sparse response: today+1 at hourly, today+3 at 6-hourly (simulating real Yr)
+        const today = new Date();
+        const d3 = new Date(today);
+        d3.setUTCDate(d3.getUTCDate() + 3);
+        const d3Utc = d3.toISOString().split("T")[0];
+        return HttpResponse.json({
+          properties: {
+            timeseries: buildSparseYrTimeseries(d3Utc),
+          },
+        });
+      })
+    );
+  });
+
+  afterEach(() => {
+    server.resetHandlers();
+  });
+
+  it("does not throw when requested hour has no exact Yr entry — snaps to nearest", async () => {
+    const sparse_date = dateOffset(3);
+    // hour 01 Oslo has no exact entry (available: 02, 08, 14, 20); should snap to 02
+    await expect(
+      fetchWeatherForDatetime(waypoint, `${sparse_date}T01:00`)
+    ).resolves.not.toThrow();
+  });
+
+  it("returns source: forecast when snapping to nearest Yr entry", async () => {
+    const sparse_date = dateOffset(3);
+    const data = await fetchWeatherForDatetime(waypoint, `${sparse_date}T01:00`);
+    expect(data.source).toBe("forecast");
+  });
+
+  it("returns a valid hourlyTemp when snapping to nearest Yr entry", async () => {
+    const sparse_date = dateOffset(3);
+    const data = await fetchWeatherForDatetime(waypoint, `${sparse_date}T05:00`);
+    expect(typeof data.hourlyTemp).toBe("number");
+  });
+
+  it("does not throw for hour 22 (nearest available is 20)", async () => {
+    const sparse_date = dateOffset(3);
+    await expect(
+      fetchWeatherForDatetime(waypoint, `${sparse_date}T22:00`)
+    ).resolves.not.toThrow();
+  });
 });
 
 describe("fetchHourlyBreakdown — Yr path returns Open-Meteo for day 12", () => {

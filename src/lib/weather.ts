@@ -369,12 +369,15 @@ async function fetchYrWeatherHourly(waypoint: Waypoint, datetime: string): Promi
   const { date, hour } = parseDatetime(datetime);
   const entries = await fetchYrTimeseries(waypoint, date);
 
-  // Find the entry whose Oslo hour matches the requested hour
-  const target = entries.find((item) => toOsloHour(item.time) === hour);
-
-  if (!target) {
-    throw new Error(`No Yr timeseries entry for ${datetime}`);
-  }
+  // Find the entry whose Oslo hour best matches the requested hour.
+  // Yr switches from 1-hourly to 6-hourly resolution beyond ~48 h, so an exact
+  // match is not always available. Snap to the nearest available entry instead
+  // of throwing, which would surface as "Kunne ikke hente vær" in the UI.
+  const target = entries.reduce((best, item) => {
+    const bestDiff = Math.abs(toOsloHour(best.time) - hour);
+    const itemDiff = Math.abs(toOsloHour(item.time) - hour);
+    return itemDiff < bestDiff ? item : best;
+  });
 
   const instant = target.data.instant.details;
   const windKmh = instant.wind_speed * 3.6;
@@ -435,6 +438,7 @@ async function fetchYrHourlyBreakdown(waypoint: Waypoint, date: string): Promise
     if (!item) {
       return {
         hour,
+        hasData: false,
         temp: 0,
         precipitation: 0,
         windSpeed: 0,
@@ -450,6 +454,7 @@ async function fetchYrHourlyBreakdown(waypoint: Waypoint, date: string): Promise
 
     return {
       hour,
+      hasData: true,
       temp: instant.air_temperature,
       precipitation: Math.round(precip * 10) / 10,
       precipitationProbability: next1?.details.probability_of_precipitation,
@@ -794,6 +799,8 @@ async function fetchClimateAverageHourly(
 
 export type HourlyEntry = {
   hour: number;
+  /** true = real measurement from the API; false = no data for this hour (Yr 6-hourly gap) */
+  hasData: boolean;
   temp: number;
   feelsLike?: number;
   precipitation: number;
@@ -842,6 +849,7 @@ async function fetchForecastHourlyBreakdown(
 
   return Array.from({ length: 24 }, (_, hour) => ({
     hour,
+    hasData: true,
     temp: h.temperature_2m[hour] ?? 0,
     feelsLike: h.apparent_temperature[hour] ?? undefined,
     precipitation: h.precipitation[hour] ?? 0,
@@ -912,6 +920,7 @@ async function fetchClimateAverageHourlyBreakdown(
 
     return {
       hour,
+      hasData: true,
       temp: avgAt((r, h) => r.hourly.temperature_2m[h], hour),
       feelsLike: avgAt((r, h) => r.hourly.apparent_temperature[h], hour) || undefined,
       precipitation: avgAt((r, h) => r.hourly.precipitation[h], hour),

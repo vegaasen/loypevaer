@@ -1,0 +1,452 @@
+[
+  {
+    "sha": "92030d5e5b3f5ca91c3698c9582a211645ceebbb",
+    "shortSha": "92030d5",
+    "date": "2026-06-09",
+    "type": "fix",
+    "scope": null,
+    "subject": "install banner overlays scroll-to-top button, proper mobile margins",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/92030d5e5b3f5ca91c3698c9582a211645ceebbb"
+  },
+  {
+    "sha": "7e6c4850f62b2e26bd994a4cf39836c9a288034b",
+    "shortSha": "7e6c485",
+    "date": "2026-06-09",
+    "type": "fix",
+    "scope": null,
+    "subject": "give install banner proper side margins on mobile",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/7e6c4850f62b2e26bd994a4cf39836c9a288034b"
+  },
+  {
+    "sha": "54f16f382ac9af3ed441af0d56fb3884e63d60c5",
+    "shortSha": "54f16f3",
+    "date": "2026-06-09",
+    "type": "fix",
+    "scope": null,
+    "subject": "float install banner as fixed bottom card, centered on all screen sizes",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/54f16f382ac9af3ed441af0d56fb3884e63d60c5"
+  },
+  {
+    "sha": "854d8463d82558d1d45ed8d56f224096a902e503",
+    "shortSha": "854d846",
+    "date": "2026-06-09",
+    "type": "fix",
+    "scope": null,
+    "subject": "make install banner subtle and desktop-friendly",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/854d8463d82558d1d45ed8d56f224096a902e503"
+  },
+  {
+    "sha": "557a0138388e424889d90a054fda3ca5c50dbb98",
+    "shortSha": "557a013",
+    "date": "2026-06-09",
+    "type": "feat",
+    "scope": null,
+    "subject": "add range-aware gear advice and packing list to GearSuggestion",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/557a0138388e424889d90a054fda3ca5c50dbb98"
+  },
+  {
+    "sha": "d732d3cb1f94ecce39d81dc5392fb38541bb685e",
+    "shortSha": "d732d3c",
+    "date": "2026-06-09",
+    "type": "feat",
+    "scope": null,
+    "subject": "add buildPackingList for range-aware gear advice",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/d732d3cb1f94ecce39d81dc5392fb38541bb685e"
+  },
+  {
+    "sha": "55e0c0c3c63ad003ee4838d2709d6cb9b04cf38b",
+    "shortSha": "55e0c0c",
+    "date": "2026-06-09",
+    "type": "feat",
+    "scope": null,
+    "subject": "add buildClimateNarrative for event SEO descriptions",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/55e0c0c3c63ad003ee4838d2709d6cb9b04cf38b"
+  },
+  {
+    "sha": "22ee78b44e8bbe7e403a75bfe18a3f8d3923c339",
+    "shortSha": "22ee78b",
+    "date": "2026-06-09",
+    "type": "feat",
+    "scope": null,
+    "subject": "add forecast change alerts with browser Notification API",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/22ee78b44e8bbe7e403a75bfe18a3f8d3923c339"
+  },
+  {
+    "sha": "0883bcc3e720da10d0e1f05e535143269916ed14",
+    "shortSha": "0883bcc",
+    "date": "2026-06-09",
+    "type": "feat",
+    "scope": null,
+    "subject": "add alertDiff pure utility for forecast change detection",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/0883bcc3e720da10d0e1f05e535143269916ed14"
+  },
+  {
+    "sha": "ac177a9690b3e4eedb9f6c8d4910345465b0b3e0",
+    "shortSha": "ac177a9",
+    "date": "2026-06-09",
+    "type": "feat",
+    "scope": null,
+    "subject": "add PWA install banner",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/ac177a9690b3e4eedb9f6c8d4910345465b0b3e0"
+  },
+  {
+    "sha": "b034ae2dba123cd0115f909035bd6776281894a9",
+    "shortSha": "b034ae2",
+    "date": "2026-06-09",
+    "type": "feat",
+    "scope": null,
+    "subject": "add useInstallPrompt hook",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/b034ae2dba123cd0115f909035bd6776281894a9"
+  },
+  {
+    "sha": "de7ef86279d8b500dd196f3a6389ba8be77dafd9",
+    "shortSha": "de7ef86",
+    "date": "2026-06-02",
+    "type": "feat",
+    "scope": "HomePage",
+    "subject": "use compact carousel cards for kommende arrangement",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/de7ef86279d8b500dd196f3a6389ba8be77dafd9"
+  },
+  {
+    "sha": "e3ddf47194fccca4dd310dce35a17beefd8bd75e",
+    "shortSha": "e3ddf47",
+    "date": "2026-06-02",
+    "type": "feat",
+    "scope": "css",
+    "subject": "replace kommende arrangement bento grid with horizontal scroll strip",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/e3ddf47194fccca4dd310dce35a17beefd8bd75e"
+  },
+  {
+    "sha": "628bbfdea64b213435852a273ad28e6d2580d109",
+    "shortSha": "628bbfd",
+    "date": "2026-06-02",
+    "type": "feat",
+    "scope": "FeaturedEventCard",
+    "subject": "add compact prop for carousel variant",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/628bbfdea64b213435852a273ad28e6d2580d109"
+  },
+  {
+    "sha": "dcd6bed8e0ddd22819ccd248210f7cf88d51ef22",
+    "shortSha": "dcd6bed",
+    "date": "2026-06-01",
+    "type": "feat",
+    "scope": null,
+    "subject": "add tidshorisont, region selects and filter chips to filter bar",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/dcd6bed8e0ddd22819ccd248210f7cf88d51ef22"
+  },
+  {
+    "sha": "93d24b56c4d9a4a90666d9734805651ef836d76a",
+    "shortSha": "93d24b5",
+    "date": "2026-06-01",
+    "type": "feat",
+    "scope": null,
+    "subject": "add tidshorisont and region filter state",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/93d24b56c4d9a4a90666d9734805651ef836d76a"
+  },
+  {
+    "sha": "705ea1c012da82c73f2d0773ea77eacab12d4589",
+    "shortSha": "705ea1c",
+    "date": "2026-06-01",
+    "type": "feat",
+    "scope": null,
+    "subject": "remove hero search box",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/705ea1c012da82c73f2d0773ea77eacab12d4589"
+  },
+  {
+    "sha": "b5b37a22d49a36d01fb06281286baef8612d0b7f",
+    "shortSha": "b5b37a2",
+    "date": "2026-05-28",
+    "type": "feat",
+    "scope": null,
+    "subject": "collapse elevation profile and gear suggestion by default",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/b5b37a22d49a36d01fb06281286baef8612d0b7f"
+  },
+  {
+    "sha": "7dba2905bad6fc6de948e395e2709157d17efaa2",
+    "shortSha": "7dba290",
+    "date": "2026-05-28",
+    "type": "fix",
+    "scope": null,
+    "subject": "prevent empty dag-vurdering div before difficulty data loads",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/7dba2905bad6fc6de948e395e2709157d17efaa2"
+  },
+  {
+    "sha": "9fcf7159dd7a2eb5bf0f00067c772a976a1c956c",
+    "shortSha": "9fcf715",
+    "date": "2026-05-28",
+    "type": "fix",
+    "scope": null,
+    "subject": "past events grid inherits auto-fill columns, removes fixed 4-col override",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/9fcf7159dd7a2eb5bf0f00067c772a976a1c956c"
+  },
+  {
+    "sha": "226574ef84f7f1ba91fe7e55a0947ad1a5534213",
+    "shortSha": "226574e",
+    "date": "2026-05-28",
+    "type": "feat",
+    "scope": null,
+    "subject": "past events above upcoming, 4-column grid on desktop",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/226574ef84f7f1ba91fe7e55a0947ad1a5534213"
+  },
+  {
+    "sha": "04e1f968163167a7930fc22618cf85cb767318d2",
+    "shortSha": "04e1f96",
+    "date": "2026-05-28",
+    "type": "feat",
+    "scope": null,
+    "subject": "hide bookmark on compact past cards, separate past from upcoming per month",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/04e1f968163167a7930fc22618cf85cb767318d2"
+  },
+  {
+    "sha": "46ed442030badf7b806d142f29b1f7901d3c136b",
+    "shortSha": "46ed442",
+    "date": "2026-05-28",
+    "type": "feat",
+    "scope": null,
+    "subject": "compact single-line rows for past events",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/46ed442030badf7b806d142f29b1f7901d3c136b"
+  },
+  {
+    "sha": "c59faa9d4b073bcdb35a6bb211c3d92b7bdab64c",
+    "shortSha": "c59faa9",
+    "date": "2026-05-28",
+    "type": "fix",
+    "scope": null,
+    "subject": "align ShareButton style with bookmark button",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/c59faa9d4b073bcdb35a6bb211c3d92b7bdab64c"
+  },
+  {
+    "sha": "db74ae43b429a3879825caff939b528f8cb8e425",
+    "shortSha": "db74ae4",
+    "date": "2026-05-28",
+    "type": "feat",
+    "scope": null,
+    "subject": "wire ShareButton, RaceDayCountdown, and dynamic og tags into EventPage",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/db74ae43b429a3879825caff939b528f8cb8e425"
+  },
+  {
+    "sha": "bdc489b22e0e81b40bbd802f5a742e16c6e32aa8",
+    "shortSha": "bdc489b",
+    "date": "2026-05-28",
+    "type": "fix",
+    "scope": null,
+    "subject": "use FORECAST_DAYS constant, robust Date mocking, ShareButton error state",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/bdc489b22e0e81b40bbd802f5a742e16c6e32aa8"
+  },
+  {
+    "sha": "f0da17e86fac854da1616278c26a0236e2a3ab3a",
+    "shortSha": "f0da17e",
+    "date": "2026-05-28",
+    "type": "feat",
+    "scope": null,
+    "subject": "add RaceDayCountdown component",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/f0da17e86fac854da1616278c26a0236e2a3ab3a"
+  },
+  {
+    "sha": "2a009fe850c14305b3c345a4c1ad1d6cd46090fc",
+    "shortSha": "2a009fe",
+    "date": "2026-05-28",
+    "type": "feat",
+    "scope": null,
+    "subject": "add ShareButton component with clipboard and Web Share API",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/2a009fe850c14305b3c345a4c1ad1d6cd46090fc"
+  },
+  {
+    "sha": "ca16eb9a476259d0f1215fb8a5c7054566654563",
+    "shortSha": "ca16eb9",
+    "date": "2026-05-28",
+    "type": "feat",
+    "scope": null,
+    "subject": "add optional ogImage prop to PageMeta",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/ca16eb9a476259d0f1215fb8a5c7054566654563"
+  },
+  {
+    "sha": "521a6cf085c28f39f8b5d02c0475cbc5960e6810",
+    "shortSha": "521a6cf",
+    "date": "2026-05-28",
+    "type": "feat",
+    "scope": null,
+    "subject": "add placeholder og:images for discipline share cards",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/521a6cf085c28f39f8b5d02c0475cbc5960e6810"
+  },
+  {
+    "sha": "4ebb0a3102ab1537132235e0944789f1b3bb5798",
+    "shortSha": "4ebb0a3",
+    "date": "2026-05-28",
+    "type": "feat",
+    "scope": null,
+    "subject": "add og utility functions for share feature",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/4ebb0a3102ab1537132235e0944789f1b3bb5798"
+  },
+  {
+    "sha": "bd127b789cc45dc94d4ae532f0405b8451bb3c37",
+    "shortSha": "bd127b7",
+    "date": "2026-05-27",
+    "type": "fix",
+    "scope": null,
+    "subject": "use dynamic rolling 10-year window in getHistoricalYears",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/bd127b789cc45dc94d4ae532f0405b8451bb3c37"
+  },
+  {
+    "sha": "2fb673941bfd0d19540837b6d65b4d076734113b",
+    "shortSha": "2fb6739",
+    "date": "2026-05-20",
+    "type": "fix",
+    "scope": null,
+    "subject": "add cancellation token and mask stale historical data when date is null",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/2fb673941bfd0d19540837b6d65b4d076734113b"
+  },
+  {
+    "sha": "27c1ce4ac4b88b9d53aeb6127740606e4930436e",
+    "shortSha": "27c1ce4",
+    "date": "2026-05-20",
+    "type": "feat",
+    "scope": null,
+    "subject": "wire historicalYears into WeatherStrip for climate storytelling",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/27c1ce4ac4b88b9d53aeb6127740606e4930436e"
+  },
+  {
+    "sha": "47db533527cd31601965d78a30e9124a19fbacd9",
+    "shortSha": "47db533",
+    "date": "2026-05-20",
+    "type": "feat",
+    "scope": null,
+    "subject": "add historicalYears prop and ClimateHistoryBadge to WeatherCard",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/47db533527cd31601965d78a30e9124a19fbacd9"
+  },
+  {
+    "sha": "7adaeb5f8dc5073e542690bdfeef33ac74adc216",
+    "shortSha": "7adaeb5",
+    "date": "2026-05-20",
+    "type": "fix",
+    "scope": null,
+    "subject": "use direct color values in climate badge styles (no undefined CSS var)",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/7adaeb5f8dc5073e542690bdfeef33ac74adc216"
+  },
+  {
+    "sha": "d707a4c0b3563e8c29c208407692023a76fa8dc8",
+    "shortSha": "d707a4c",
+    "date": "2026-05-20",
+    "type": "feat",
+    "scope": null,
+    "subject": "add ClimateHistoryBadge component and styles",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/d707a4c0b3563e8c29c208407692023a76fa8dc8"
+  },
+  {
+    "sha": "5f4d3dd0b5449c699520d54d374526bf7434dad8",
+    "shortSha": "5f4d3dd",
+    "date": "2026-05-20",
+    "type": "feat",
+    "scope": null,
+    "subject": "add getHistoricalYears helper to weather lib",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/5f4d3dd0b5449c699520d54d374526bf7434dad8"
+  },
+  {
+    "sha": "b50d5d3f55c1b8f6291f1735600d7e8fe95b393d",
+    "shortSha": "b50d5d3",
+    "date": "2026-05-20",
+    "type": "feat",
+    "scope": null,
+    "subject": "add climate story classification function",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/b50d5d3f55c1b8f6291f1735600d7e8fe95b393d"
+  },
+  {
+    "sha": "713ce0afc71a3e2253161be469858d4a8a893b3c",
+    "shortSha": "713ce0a",
+    "date": "2026-05-13",
+    "type": "feat",
+    "scope": "home",
+    "subject": "add Løping filter pill with promo block Adds a 'Løping' pill to the discipline filter on the home page. Clicking it replaces the event list with a promo card that promotes /lop, giving the section early visibility without cluttering the main event list (løping events remain excluded from the home listing).",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/713ce0afc71a3e2253161be469858d4a8a893b3c"
+  },
+  {
+    "sha": "c3315a02a97e01f8ca807e99bb07052e32541224",
+    "shortSha": "c3315a0",
+    "date": "2026-05-13",
+    "type": "feat",
+    "scope": "home",
+    "subject": "add Løping filter pill with promo block Adds a 'Løping' pill to the discipline filter on the home page. Clicking it replaces the event list with a promo card that promotes /lop, giving the section early visibility without cluttering the main event list (løping events remain excluded from the home listing).",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/c3315a02a97e01f8ca807e99bb07052e32541224"
+  },
+  {
+    "sha": "159a1b300057c7c48b0e3ef8659014c936fd8c5f",
+    "shortSha": "159a1b3",
+    "date": "2026-05-11",
+    "type": "feat",
+    "scope": null,
+    "subject": "add feedback snackbar styles using project CSS variables",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/159a1b300057c7c48b0e3ef8659014c936fd8c5f"
+  },
+  {
+    "sha": "72db803b2538026a14c152873f1e529b05b318da",
+    "shortSha": "72db803",
+    "date": "2026-05-11",
+    "type": "feat",
+    "scope": null,
+    "subject": "wire FeedbackSnackbar into app (router state + EventPage mount)",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/72db803b2538026a14c152873f1e529b05b318da"
+  },
+  {
+    "sha": "3afba9f45ae3e630d358947b81a65451d1808729",
+    "shortSha": "3afba9f",
+    "date": "2026-05-11",
+    "type": "fix",
+    "scope": null,
+    "subject": "use descriptive Norwegian aria-labels on snackbar buttons",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/3afba9f45ae3e630d358947b81a65451d1808729"
+  },
+  {
+    "sha": "a8be0bd022beb6337e139983ea6311eb4b76e6c9",
+    "shortSha": "a8be0bd",
+    "date": "2026-05-11",
+    "type": "feat",
+    "scope": null,
+    "subject": "add FeedbackSnackbar component",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/a8be0bd022beb6337e139983ea6311eb4b76e6c9"
+  },
+  {
+    "sha": "34934bb6c099fd9c7f091eacc47bed7659d6fe67",
+    "shortSha": "34934bb",
+    "date": "2026-05-11",
+    "type": "fix",
+    "scope": null,
+    "subject": "move recordShown side effect from useState initializer to useEffect",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/34934bb6c099fd9c7f091eacc47bed7659d6fe67"
+  },
+  {
+    "sha": "071f6e1cbf79a64665c72fb8793433833cc1ca07",
+    "shortSha": "071f6e1",
+    "date": "2026-05-11",
+    "type": "feat",
+    "scope": null,
+    "subject": "add useFeedbackPrompt hook with 30-day localStorage cooldown",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/071f6e1cbf79a64665c72fb8793433833cc1ca07"
+  },
+  {
+    "sha": "1b3604ce37a289c32fbe1f03aaf2f9cba25c09b1",
+    "shortSha": "1b3604c",
+    "date": "2026-05-11",
+    "type": "feat",
+    "scope": null,
+    "subject": "add ScrollToTopButton component with scroll listener",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/1b3604ce37a289c32fbe1f03aaf2f9cba25c09b1"
+  },
+  {
+    "sha": "f34512e9d9f8e8c4e825ec9a2a0695a2aad700ce",
+    "shortSha": "f34512e",
+    "date": "2026-05-11",
+    "type": "feat",
+    "scope": null,
+    "subject": "add trackFeedback GA4 event to analytics",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/f34512e9d9f8e8c4e825ec9a2a0695a2aad700ce"
+  },
+  {
+    "sha": "7cb83c7aa16bd5bbbb12d3b1c1ee2d24aba9713d",
+    "shortSha": "7cb83c7",
+    "date": "2026-04-23",
+    "type": "fix",
+    "scope": null,
+    "subject": "use direct boolean evaluation for run_import input condition",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/7cb83c7aa16bd5bbbb12d3b1c1ee2d24aba9713d"
+  }
+]

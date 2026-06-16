@@ -21,7 +21,7 @@ const langrenn = allArrangements.filter((r) => r.discipline === "langrenn").slic
 
 export function HvaErRittvaerPage() {
   return (
-    <div className="home-page">
+    <div className="ritt-page">
       <PageMeta
         title={pageTitle}
         description={description}
@@ -55,19 +55,20 @@ export function HvaErRittvaerPage() {
         </script>
       </Helmet>
 
-      <article className="rittvaer-article">
-        <header className="rittvaer-article__header">
-          <nav className="rittvaer-article__breadcrumb">
-            <Link to="/">Løypevær</Link> › Hva er rittvær?
-          </nav>
-          <h1>Hva er rittvær?</h1>
-          <p className="rittvaer-article__lead">
-            Rittvær er været du møter langs løypa under et sykkelritt, triathlon, ultraløp
-            eller langrenn — ikke bare ved starten, men ved hvert eneste punkt langs ruten.
-          </p>
-        </header>
+      <Link to="/" className="ritt-page__back-link">← Alle arrangement</Link>
 
-        <section className="rittvaer-article__section">
+      <header className="ritt-page__header">
+        <div className="ritt-page__title-row">
+          <h1>Hva er rittvær?</h1>
+        </div>
+        <p className="ritt-page__lead">
+          Rittvær er været du møter langs løypa under et sykkelritt, triathlon, ultraløp
+          eller langrenn — ikke bare ved starten, men ved hvert eneste punkt langs ruten.
+        </p>
+      </header>
+
+      <div className="ritt-page__article">
+        <section>
           <h2>Hvorfor er rittvær viktig?</h2>
           <p>
             I utholdenhetsidretten er vær en av de viktigste faktorene for prestasjon og
@@ -84,7 +85,7 @@ export function HvaErRittvaerPage() {
           </p>
         </section>
 
-        <section className="rittvaer-article__section">
+        <section>
           <h2>Rittvær for sykkelritt</h2>
           <p>
             Norske sykkelritt som Birkebeinerrittet, Styrkeprøven og Jotunheimen Rundt
@@ -93,7 +94,7 @@ export function HvaErRittvaerPage() {
             bakker og på topper, og sjansen for regn som kan gjøre veidekket glatt.
           </p>
           {sykkelritt.length > 0 && (
-            <ul className="rittvaer-article__event-list">
+            <ul>
               {sykkelritt.map((r) => (
                 <li key={r.id}>
                   <Link to={`/arrangement/${r.id}`}>
@@ -105,7 +106,7 @@ export function HvaErRittvaerPage() {
           )}
         </section>
 
-        <section className="rittvaer-article__section">
+        <section>
           <h2>Triathlonvær – vær for svømming, sykkel og løping</h2>
           <p>
             Triathlon er ekstra værkrevende fordi du starter i vannet og avslutter løpende.
@@ -114,7 +115,7 @@ export function HvaErRittvaerPage() {
             triathlonvær for hvert segment langs ruten.
           </p>
           {triathlon.length > 0 && (
-            <ul className="rittvaer-article__event-list">
+            <ul>
               {triathlon.map((r) => (
                 <li key={r.id}>
                   <Link to={`/arrangement/${r.id}`}>
@@ -131,7 +132,7 @@ export function HvaErRittvaerPage() {
           )}
         </section>
 
-        <section className="rittvaer-article__section">
+        <section>
           <h2>Løpsvær for ultraløp og maraton</h2>
           <p>
             Et ultraløp kan ta mange timer, og løpsvær endrer seg underveis. Varme øker
@@ -140,7 +141,7 @@ export function HvaErRittvaerPage() {
             drikkestrategi og tempo etter forholdene.
           </p>
           {ultra.length > 0 && (
-            <ul className="rittvaer-article__event-list">
+            <ul>
               {ultra.map((r) => (
                 <li key={r.id}>
                   <Link to={`/arrangement/${r.id}`}>
@@ -157,7 +158,7 @@ export function HvaErRittvaerPage() {
           )}
         </section>
 
-        <section className="rittvaer-article__section">
+        <section>
           <h2>Vær for langrenn og skiarrangement</h2>
           <p>
             Langrenn er avhengig av snøforhold, temperatur og vind. Skiføret varierer mye
@@ -165,7 +166,7 @@ export function HvaErRittvaerPage() {
             du kjenner rennværet — ikke bare for startstedet, men for hele løypa.
           </p>
           {langrenn.length > 0 && (
-            <ul className="rittvaer-article__event-list">
+            <ul>
               {langrenn.map((r) => (
                 <li key={r.id}>
                   <Link to={`/arrangement/${r.id}`}>
@@ -182,7 +183,7 @@ export function HvaErRittvaerPage() {
           )}
         </section>
 
-        <section className="rittvaer-article__section">
+        <section>
           <h2>Historisk rittvær vs. sanntidsvarsel</h2>
           <p>
             Løypevær kombinerer to datakilder for å gi deg best mulig rittvær:
@@ -200,17 +201,17 @@ export function HvaErRittvaerPage() {
           </ul>
         </section>
 
-        <section className="rittvaer-article__section rittvaer-article__section--cta">
+        <section>
           <h2>Sjekk rittvær for ditt arrangement</h2>
           <p>
             Løypevær dekker {allArrangements.length} norske utholdenhetsarrangement — fra
             Nordkapp til Sørlandet, sykkelritt, langrenn, triathlon og ultraløp.
           </p>
-          <Link to="/" className="home-page__cta-banner-btn">
+          <Link to="/" className="ritt-page__article-cta">
             Se alle arrangement →
           </Link>
         </section>
-      </article>
+      </div>
     </div>
   );
 }

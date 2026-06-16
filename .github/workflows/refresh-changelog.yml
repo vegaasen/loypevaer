@@ -1,0 +1,49 @@
+name: Refresh changelog
+
+on:
+  # Allow manual triggering from the Actions tab
+  workflow_dispatch:
+  # Trigger on every push to main (except doc-only changes)
+  # Note: pushes by github-actions[bot] via GITHUB_TOKEN do NOT re-trigger workflows,
+  # so the commit this job makes will never cause a loop.
+  push:
+    branches: [main]
+    paths-ignore:
+      - "**.md"
+      - ".github/ISSUE_TEMPLATE/**"
+
+concurrency:
+  group: refresh-changelog
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    name: Generate & commit changelog
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Generate changelog
+        run: bun run generate-changelog
+
+      - name: Commit updated changelog
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/changelog.json
+          if git diff --cached --quiet; then
+            echo "No changes to changelog, skipping commit."
+          else
+            git commit -m "chore: refresh changelog [$(date -u +%Y-%m-%d)]"
+            git push
+          fi

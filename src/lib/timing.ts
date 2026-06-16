@@ -32,10 +32,11 @@ export function calcWaypointTimes(
   const totalMinutes = finishMinutes - startMinutes;
 
   // Pre-compute the next calendar day for potential midnight-crossing waypoints.
-  const startDate = new Date(date + "T00:00:00");
-  const nextDate = new Date(startDate);
-  nextDate.setDate(nextDate.getDate() + 1);
-  const nextDateStr = nextDate.toISOString().split("T")[0];
+  // Use Date.UTC to avoid local-timezone offsets corrupting the date string when
+  // toISOString() (which is always UTC) is called on a Date built from local time.
+  const [y, m, d] = date.split("-").map(Number);
+  const nextDateUTC = new Date(Date.UTC(y, m - 1, d + 1));
+  const nextDateStr = nextDateUTC.toISOString().split("T")[0];
 
   return fractions.map((fraction) => {
     const offsetMinutes = Math.round(fraction * totalMinutes);

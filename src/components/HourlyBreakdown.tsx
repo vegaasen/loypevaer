@@ -11,8 +11,16 @@ function formatHour(hour: number): string {
 }
 
 export function HourlyBreakdown({ entries }: Props) {
+  const realEntries = entries.filter((e) => e.hasData);
+  const isSparse = realEntries.length < entries.length;
+
   return (
     <div className="hourly-breakdown">
+      {isSparse && (
+        <p className="hourly-breakdown__sparse-note">
+          Yr har kun 6-timers oppløsning for denne datoen — viser kun tilgjengelige tidspunkter.
+        </p>
+      )}
       <table className="hourly-breakdown__table">
         <thead>
           <tr>
@@ -24,7 +32,7 @@ export function HourlyBreakdown({ entries }: Props) {
           </tr>
         </thead>
         <tbody>
-          {entries.map((entry) => {
+          {realEntries.map((entry) => {
             const { emoji } = describeWeatherCode(entry.weatherCode);
             const windDir =
               entry.windDirection !== undefined

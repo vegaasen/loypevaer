@@ -22,6 +22,7 @@ const EventPage = lazy(() => import("./pages/EventPage").then((m) => ({ default:
 const GpxPage = lazy(() => import("./pages/GpxPage").then((m) => ({ default: m.GpxPage })));
 const LopPage = lazy(() => import("./pages/LopPage").then((m) => ({ default: m.LopPage })));
 const HvaErRittvaerPage = lazy(() => import("./pages/HvaErRittvaerPage").then((m) => ({ default: m.HvaErRittvaerPage })));
+const EndringsloggPage = lazy(() => import("./pages/EndringsloggPage").then((m) => ({ default: m.EndringsloggPage })));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage").then((m) => ({ default: m.NotFoundPage })));
 
 const queryClient = new QueryClient({
@@ -48,6 +49,7 @@ function RouterContent() {
           <Route path="/lop" element={<LopPage />} />
           <Route path="/gpx" element={<GpxPage />} />
           <Route path="/hva-er-rittvaer" element={<HvaErRittvaerPage />} />
+          <Route path="/endringslogg" element={<EndringsloggPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>

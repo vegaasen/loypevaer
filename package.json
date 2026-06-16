@@ -15,6 +15,7 @@
     "fetch-running": "bun scripts/fetch-running-events.ts",
     "fetch-cycling": "bun scripts/fetch-cycling-events.ts",
     "generate-sitemap": "bun scripts/generate-sitemap.ts",
+    "generate-changelog": "bun scripts/generate-changelog.ts",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage"
