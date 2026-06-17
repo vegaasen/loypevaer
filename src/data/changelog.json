@@ -1,5 +1,14 @@
 [
   {
+    "sha": "d78925e374a9dfa81fb316d314992648ad7358fd",
+    "shortSha": "d78925e",
+    "date": "2026-06-17",
+    "type": "feat",
+    "scope": "weather",
+    "subject": "interpolate Yr hourly values with ≈ indicator",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/d78925e374a9dfa81fb316d314992648ad7358fd"
+  },
+  {
     "sha": "92030d5e5b3f5ca91c3698c9582a211645ceebbb",
     "shortSha": "92030d5",
     "date": "2026-06-09",
@@ -439,14 +448,5 @@
     "scope": null,
     "subject": "add trackFeedback GA4 event to analytics",
     "githubUrl": "https://github.com/vegaasen/loypevaer/commit/f34512e9d9f8e8c4e825ec9a2a0695a2aad700ce"
-  },
-  {
-    "sha": "7cb83c7aa16bd5bbbb12d3b1c1ee2d24aba9713d",
-    "shortSha": "7cb83c7",
-    "date": "2026-04-23",
-    "type": "fix",
-    "scope": null,
-    "subject": "use direct boolean evaluation for run_import input condition",
-    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/7cb83c7aa16bd5bbbb12d3b1c1ee2d24aba9713d"
   }
 ]
