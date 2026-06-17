@@ -104,3 +104,34 @@ describe("HourlyBreakdown with sparse Yr data", () => {
     expect(screen.getByText(/6-timers oppløsning/i)).toBeInTheDocument();
   });
 });
+
+describe("HourlyBreakdown — highlightHour prop", () => {
+  it("applies arrival class to the matching hour row", () => {
+    const entries = makeEntries(24);
+    render(<HourlyBreakdown entries={entries} highlightHour={6} />);
+    const rows = document.querySelectorAll(".hourly-breakdown__row");
+    const arrivalRows = document.querySelectorAll(".hourly-breakdown__row--arrival");
+    expect(arrivalRows).toHaveLength(1);
+    // Row index 6 should have the class
+    expect(rows[6].classList.contains("hourly-breakdown__row--arrival")).toBe(true);
+  });
+
+  it("does not apply arrival class to other rows", () => {
+    const entries = makeEntries(24);
+    render(<HourlyBreakdown entries={entries} highlightHour={6} />);
+    const rows = document.querySelectorAll(".hourly-breakdown__row");
+    // All rows except hour 6 should not have the arrival class
+    rows.forEach((row, i) => {
+      if (i !== 6) {
+        expect(row.classList.contains("hourly-breakdown__row--arrival")).toBe(false);
+      }
+    });
+  });
+
+  it("does not apply arrival class to any row when highlightHour is not provided", () => {
+    const entries = makeEntries(24);
+    render(<HourlyBreakdown entries={entries} />);
+    const arrivalRows = document.querySelectorAll(".hourly-breakdown__row--arrival");
+    expect(arrivalRows).toHaveLength(0);
+  });
+});

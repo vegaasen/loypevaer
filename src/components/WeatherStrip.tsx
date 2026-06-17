@@ -90,6 +90,7 @@ export function WeatherStrip({ waypoints, date, startTime, finishTime, externalR
             isLoading={isLoading}
             isError={isError}
             arrivalTime={datetimes ? formatArrivalTime(datetimes[i]) : undefined}
+            datetime={datetimes ? datetimes[i] : undefined}
             routeBearing={routeBearingForWaypoint(waypoints, i) ?? undefined}
             onClick={onWaypointClick ? () => onWaypointClick(waypoint, i) : undefined}
             date={date}

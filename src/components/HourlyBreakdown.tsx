@@ -4,13 +4,15 @@ import { degreesToCompass } from "../lib/wind";
 
 type Props = {
   entries: HourlyEntry[];
+  /** Hour of day (0–23) to highlight as the arrival row. */
+  highlightHour?: number;
 };
 
 function formatHour(hour: number): string {
   return `${String(hour).padStart(2, "0")}:00`;
 }
 
-export function HourlyBreakdown({ entries }: Props) {
+export function HourlyBreakdown({ entries, highlightHour }: Props) {
   const realEntries = entries.filter((e) => e.hasData);
   const isSparse = realEntries.length < entries.length;
 
@@ -39,7 +41,10 @@ export function HourlyBreakdown({ entries }: Props) {
                 ? degreesToCompass(entry.windDirection)
                 : null;
             return (
-              <tr key={entry.hour} className="hourly-breakdown__row">
+              <tr
+                key={entry.hour}
+                className={`hourly-breakdown__row${entry.hour === highlightHour ? " hourly-breakdown__row--arrival" : ""}`}
+              >
                 <td className="hourly-breakdown__td hourly-breakdown__td--hour">
                   {formatHour(entry.hour)}
                 </td>

@@ -172,4 +172,47 @@ describe("WeatherCard", () => {
     );
     expect(screen.queryByText("Historisk")).not.toBeInTheDocument();
   });
+
+  it("shows ≈ prefix when hourlyIsApproximate is true", () => {
+    const data: WeatherData = { ...weatherData, hourlyTemp: 14, hourlyIsApproximate: true };
+    renderWithQuery(
+      <WeatherCard waypoint={waypoint} data={data} isLoading={false} isError={false} arrivalTime="06:00" />
+    );
+    expect(screen.getByText("≈06:00")).toBeInTheDocument();
+  });
+
+  it("shows ~ prefix when hourlyIsApproximate is false", () => {
+    const data: WeatherData = { ...weatherData, hourlyTemp: 14, hourlyIsApproximate: false };
+    renderWithQuery(
+      <WeatherCard waypoint={waypoint} data={data} isLoading={false} isError={false} arrivalTime="06:00" />
+    );
+    expect(screen.getByText("~06:00")).toBeInTheDocument();
+  });
+
+  it("shows tooltip on arrival time when hourlyIsApproximate is true", () => {
+    const data: WeatherData = { ...weatherData, hourlyTemp: 14, hourlyIsApproximate: true };
+    renderWithQuery(
+      <WeatherCard waypoint={waypoint} data={data} isLoading={false} isError={false} arrivalTime="06:00" />
+    );
+    const el = screen.getByText("≈06:00");
+    expect(el).toHaveAttribute("title");
+    expect(el.getAttribute("title")).toMatch(/Yr-data ikke tilgjengelig/);
+  });
+
+  it("uses datetime prop to derive arrivalHour for breakdown", () => {
+    // datetime prop "2026-06-20T06:00" → arrivalHour 6
+    // We just verify it renders without crashing; actual breakdown fetching is mocked
+    renderWithQuery(
+      <WeatherCard
+        waypoint={waypoint}
+        data={weatherData}
+        isLoading={false}
+        isError={false}
+        date="2026-06-20"
+        datetime="2026-06-20T06:00"
+        arrivalTime="06:00"
+      />
+    );
+    expect(screen.getByText("~06:00")).toBeInTheDocument();
+  });
 });

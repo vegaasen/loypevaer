@@ -232,6 +232,79 @@ describe("fetchWeatherForDatetime — Yr sparse (6-hourly) resolution, no exact 
   });
 });
 
+describe("fetchWeatherForDatetime — hourlyIsApproximate flag (three-tier lookup)", () => {
+  afterEach(() => {
+    server.resetHandlers();
+  });
+
+  it("hourlyIsApproximate is false when an exact Oslo-hour match exists (1-hourly Yr)", async () => {
+    // Default handler returns 1-hourly data — exact match should always be available
+    const data = await fetchWeatherForDatetime(waypoint, `${YR_DATE}T10:00`);
+    expect(data.hourlyIsApproximate).toBe(false);
+  });
+
+  it("hourlyIsApproximate is true and value is interpolated between surrounding 6-hourly entries", async () => {
+    // Sparse mock: UTC 00,06,12,18 → Oslo 02,08,14,20. Request hour 05 (between 02 and 08).
+    const sparse_date = dateOffset(3);
+    const d3 = new Date();
+    d3.setUTCDate(d3.getUTCDate() + 3);
+    const d3Utc = d3.toISOString().split("T")[0];
+
+    // UTC 00 → air_temperature: 10+0*0.5=10, UTC 06 → air_temperature: 10+6*0.5=13
+    // Oslo 02 (UTC 00) = 10°, Oslo 08 (UTC 06) = 13°
+    // Requesting Oslo hour 05: ratio = (5-2)/(8-2) = 0.5 → interpolated ≈ 11.5°
+    server.use(
+      http.get("https://api.met.no/weatherapi/locationforecast/2.0/compact", () =>
+        HttpResponse.json({
+          properties: {
+            timeseries: buildSparseYrTimeseries(d3Utc),
+          },
+        })
+      )
+    );
+
+    const data = await fetchWeatherForDatetime(waypoint, `${sparse_date}T05:00`);
+    expect(data.hourlyIsApproximate).toBe(true);
+    // Interpolated temp should be between the two surrounding values
+    expect(data.hourlyTemp).toBeGreaterThan(10);
+    expect(data.hourlyTemp).toBeLessThan(13);
+  });
+
+  it("hourlyIsApproximate is true when snapping (only one side available — boundary hour)", async () => {
+    // Use a single-entry timeseries so no surrounding pair can be formed
+    server.use(
+      http.get("https://api.met.no/weatherapi/locationforecast/2.0/compact", () => {
+        const today = new Date();
+        const d3 = new Date(today);
+        d3.setUTCDate(d3.getUTCDate() + 3);
+        const d3Utc = d3.toISOString().split("T")[0];
+        return HttpResponse.json({
+          properties: {
+            timeseries: [
+              {
+                time: `${d3Utc}T12:00:00Z`,
+                data: {
+                  instant: { details: { air_temperature: 10, wind_speed: 5, wind_from_direction: 270 } },
+                  next_6_hours: {
+                    summary: { symbol_code: "partlycloudy_day" },
+                    details: { air_temperature_max: 15, air_temperature_min: 8, precipitation_amount: 0.6 },
+                  },
+                },
+              },
+            ],
+          },
+        });
+      })
+    );
+
+    const sparse_date = dateOffset(3);
+    // Only one entry exists, so the three-tier falls through to nearest snap
+    const data = await fetchWeatherForDatetime(waypoint, `${sparse_date}T05:00`);
+    expect(data.hourlyIsApproximate).toBe(true);
+    expect(typeof data.hourlyTemp).toBe("number");
+  });
+});
+
 describe("fetchHourlyBreakdown — Yr path returns Open-Meteo for day 12", () => {
   beforeEach(() => {
     server.use(

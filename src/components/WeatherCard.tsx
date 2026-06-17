@@ -31,6 +31,8 @@ type Props = {
   date?: string | null;
   /** Historical year-entries for climate storytelling badge. */
   historicalYears?: ClimateStoryInput;
+  /** Full ISO arrival datetime for this waypoint ("YYYY-MM-DDTHH:00"). Used to fetch the correct calendar day in the hourly breakdown. */
+  datetime?: string | null;
 };
 
 /** Determines warning CSS modifier classes based on weather thresholds. */
@@ -207,12 +209,20 @@ export const WeatherCard = memo(function WeatherCard({
   onClick,
   date,
   historicalYears,
+  datetime,
 }: Props) {
   const { label } = waypoint;
   const [expanded, setExpanded] = useState(false);
 
+  // Parse the arrival hour from the full ISO datetime (preferred) or the display-only arrivalTime string
+  const arrivalHour: number | undefined = datetime
+    ? parseInt(datetime.split("T")[1]?.split(":")[0] ?? "", 10)
+    : arrivalTime
+    ? parseInt(arrivalTime.split(":")[0], 10)
+    : undefined;
+
   const { data: hourlyEntries, isLoading: hourlyLoading, isError: hourlyError } =
-    useHourlyBreakdown(waypoint, date, expanded);
+    useHourlyBreakdown(waypoint, date, expanded, datetime);
 
   const extraClasses =
     data && !isLoading && !isError
@@ -231,7 +241,16 @@ export const WeatherCard = memo(function WeatherCard({
       )}
 
       {arrivalTime && (
-        <div className="weather-card__arrival">~{arrivalTime}</div>
+        <div
+          className="weather-card__arrival"
+          title={
+            data?.hourlyIsApproximate
+              ? "Yr-data ikke tilgjengelig for nøyaktig tidspunkt — viser interpolert/nærmeste verdi"
+              : undefined
+          }
+        >
+          {data?.hourlyIsApproximate ? "≈" : "~"}{arrivalTime}
+        </div>
       )}
 
       {isLoading && (
@@ -280,7 +299,7 @@ export const WeatherCard = memo(function WeatherCard({
           {hourlyError && (
             <div className="weather-card__hourly-error">Kunne ikke hente timedata</div>
           )}
-          {hourlyEntries && <HourlyBreakdown entries={hourlyEntries} />}
+          {hourlyEntries && <HourlyBreakdown entries={hourlyEntries} highlightHour={arrivalHour} />}
         </div>
       )}
     </div>

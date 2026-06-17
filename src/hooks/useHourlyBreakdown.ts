@@ -11,16 +11,21 @@ export type HourlyBreakdownResult = {
 /**
  * Lazily fetches all 24 hourly weather entries for a waypoint on a given date.
  * The query is only executed when `enabled` is true (e.g. when the card is expanded).
+ *
+ * @param arrivalDatetime - Full ISO datetime ("YYYY-MM-DDTHH:00") for the waypoint's arrival.
+ *   When provided, the fetch uses this date instead of `date` (selectedDate fallback).
  */
 export function useHourlyBreakdown(
   waypoint: Waypoint,
   date: string | null | undefined,
-  enabled: boolean
+  enabled: boolean,
+  arrivalDatetime?: string | null
 ): HourlyBreakdownResult {
+  const fetchDate = arrivalDatetime?.split("T")[0] ?? date;
   const result = useQuery({
-    queryKey: ["hourly-breakdown", waypoint.lat, waypoint.lon, date],
-    queryFn: () => fetchHourlyBreakdown(waypoint, date!),
-    enabled: enabled && !!date,
+    queryKey: ["hourly-breakdown", waypoint.lat, waypoint.lon, fetchDate],
+    queryFn: () => fetchHourlyBreakdown(waypoint, fetchDate!),
+    enabled: enabled && !!fetchDate,
   });
 
   return {

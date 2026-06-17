@@ -92,6 +92,12 @@ export type WeatherData = {
    * Positive = warmer, negative = colder. Rounded to 1 decimal place.
    */
   tempTrend?: number;
+  /**
+   * True when the hourly values are interpolated or snapped to a nearby slot
+   * (i.e. Yr had no entry for the exact arrival hour). False / undefined means
+   * an exact match was found.
+   */
+  hourlyIsApproximate?: boolean;
 };
 
 export type WeatherResult = {
@@ -364,27 +370,90 @@ async function fetchYrWeather(waypoint: Waypoint, date: string): Promise<Weather
 
 /**
  * Fetches hourly weather from Yr for a specific datetime ("YYYY-MM-DDTHH:00").
+ *
+ * Resolution strategy (three-tier):
+ *  1. Exact Oslo-hour match → `hourlyIsApproximate = false`
+ *  2. Linear interpolation between the two surrounding entries → `hourlyIsApproximate = true`
+ *  3. Nearest snap fallback → `hourlyIsApproximate = true`
+ *
+ * Yr switches from 1-hourly to 6-hourly resolution beyond ~48 h, so an exact
+ * match is not always available.
  */
 async function fetchYrWeatherHourly(waypoint: Waypoint, datetime: string): Promise<WeatherData> {
   const { date, hour } = parseDatetime(datetime);
   const entries = await fetchYrTimeseries(waypoint, date);
 
-  // Find the entry whose Oslo hour best matches the requested hour.
-  // Yr switches from 1-hourly to 6-hourly resolution beyond ~48 h, so an exact
-  // match is not always available. Snap to the nearest available entry instead
-  // of throwing, which would surface as "Kunne ikke hente vær" in the UI.
-  const target = entries.reduce((best, item) => {
-    const bestDiff = Math.abs(toOsloHour(best.time) - hour);
-    const itemDiff = Math.abs(toOsloHour(item.time) - hour);
-    return itemDiff < bestDiff ? item : best;
-  });
+  // ── Tier 1: exact Oslo-hour match ────────────────────────────────────
+  const exact = entries.find((e) => toOsloHour(e.time) === hour);
+
+  let target: YrTimeseriesItem;
+  let hourlyIsApproximate: boolean;
+  let interpolatedTemp: number | undefined;
+  let interpolatedWindSpeed: number | undefined;
+  let interpolatedWindDir: number | undefined;
+  let interpolatedPrecip: number | undefined;
+
+  if (exact) {
+    target = exact;
+    hourlyIsApproximate = false;
+  } else {
+    // ── Tier 2: linear interpolation between surrounding entries ─────────
+    const before = entries.filter((e) => toOsloHour(e.time) < hour).at(-1);
+    const after = entries.find((e) => toOsloHour(e.time) > hour);
+
+    if (before && after) {
+      const t0 = toOsloHour(before.time);
+      const t1 = toOsloHour(after.time);
+      const ratio = (hour - t0) / (t1 - t0);
+
+      const lerp = (a: number, b: number): number => a + ratio * (b - a);
+
+      // Circular interpolation for wind direction (0–360 boundary)
+      const d0 = before.data.instant.details.wind_from_direction;
+      const d1 = after.data.instant.details.wind_from_direction;
+      let diff = d1 - d0;
+      if (diff > 180) diff -= 360;
+      if (diff < -180) diff += 360;
+      const rawDir = d0 + ratio * diff;
+      interpolatedWindDir = ((rawDir % 360) + 360) % 360;
+
+      const n1b = before.data.next_1_hours;
+      const n6b = before.data.next_6_hours;
+      const n1a = after.data.next_1_hours;
+      const n6a = after.data.next_6_hours;
+      const precipBefore = n1b?.details.precipitation_amount ?? (n6b ? n6b.details.precipitation_amount / 6 : 0);
+      const precipAfter = n1a?.details.precipitation_amount ?? (n6a ? n6a.details.precipitation_amount / 6 : 0);
+
+      interpolatedTemp = lerp(
+        before.data.instant.details.air_temperature,
+        after.data.instant.details.air_temperature
+      );
+      interpolatedWindSpeed = lerp(
+        before.data.instant.details.wind_speed * 3.6,
+        after.data.instant.details.wind_speed * 3.6
+      );
+      interpolatedPrecip = lerp(precipBefore, precipAfter);
+
+      // Use the "before" entry as the base for symbol code and other fields
+      target = before;
+      hourlyIsApproximate = true;
+    } else {
+      // ── Tier 3: nearest snap ───────────────────────────────────────────
+      target = entries.reduce((best, item) => {
+        const bestDiff = Math.abs(toOsloHour(best.time) - hour);
+        const itemDiff = Math.abs(toOsloHour(item.time) - hour);
+        return itemDiff < bestDiff ? item : best;
+      });
+      hourlyIsApproximate = true;
+    }
+  }
 
   const instant = target.data.instant.details;
   const windKmh = instant.wind_speed * 3.6;
   const next1 = target.data.next_1_hours;
   const next6 = target.data.next_6_hours;
   const symbolCode = next1?.summary.symbol_code ?? next6?.summary.symbol_code ?? "";
-  const hourlyPrecip = next1?.details.precipitation_amount ?? (next6 ? next6.details.precipitation_amount / 6 : 0);
+  const hourlyPrecip = interpolatedPrecip ?? (next1?.details.precipitation_amount ?? (next6 ? next6.details.precipitation_amount / 6 : 0));
 
   // Daily aggregates from all entries in the day
   let tempMax = -Infinity;
@@ -410,6 +479,10 @@ async function fetchYrWeatherHourly(waypoint: Waypoint, datetime: string): Promi
     }
   }
 
+  const hourlyTemp = interpolatedTemp ?? instant.air_temperature;
+  const hourlyWindSpeedVal = interpolatedWindSpeed ?? windKmh;
+  const hourlyWindDirVal = interpolatedWindDir ?? instant.wind_from_direction;
+
   return {
     source: "forecast",
     tempMax: Math.round(tempMax * 10) / 10,
@@ -418,11 +491,12 @@ async function fetchYrWeatherHourly(waypoint: Waypoint, datetime: string): Promi
     windSpeed: Math.round(maxWind * 10) / 10,
     windDirection: instant.wind_from_direction,
     weatherCode: symbolCode ? yrSymbolToWmo(symbolCode) : 0,
-    hourlyTemp: instant.air_temperature,
+    hourlyTemp: Math.round(hourlyTemp * 10) / 10,
     hourlyPrecipitation: Math.round(hourlyPrecip * 10) / 10,
-    hourlyWindSpeed: Math.round(windKmh * 10) / 10,
-    hourlyWindDirection: instant.wind_from_direction,
+    hourlyWindSpeed: Math.round(hourlyWindSpeedVal * 10) / 10,
+    hourlyWindDirection: Math.round(hourlyWindDirVal),
     precipitationProbability: next1?.details.probability_of_precipitation,
+    hourlyIsApproximate,
   };
 }
 

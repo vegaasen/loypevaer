@@ -3475,6 +3475,12 @@ details[open] .history-table__summary::before {
   border-bottom: none;
 }
 
+.hourly-breakdown__row--arrival {
+  border-left: 3px solid var(--accent);
+  font-weight: 600;
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+
 .hourly-breakdown__sparse-note {
   font-size: 11px;
   color: var(--text);
