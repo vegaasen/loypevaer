@@ -13,13 +13,14 @@ Guidelines for AI coding agents working in this repository.
 ```bash
 bun install                # install dependencies
 bun run dev                # start dev server (Vite)
-bun run build              # typecheck (tsc -b) + production build (also auto-runs generate-sitemap as prebuild)
+bun run build              # typecheck (tsc -b) + production build (prebuild: generate-sitemap; postbuild: copy-spa-routes)
 bun run lint               # ESLint with type-aware rules
 bun run fetch-weather      # refresh src/data/weather-cache.json from Open-Meteo
 bun run fetch-cycling      # refresh src/data/cycling-events.json from NCF/EQ Timing API
 bun run fetch-triathlon    # refresh src/data/triathlon-events.json
 bun run fetch-running      # refresh src/data/running-events.json
 bun run generate-sitemap   # generate sitemap (also runs automatically before every build)
+bun run generate-changelog # generate src/data/changelog.json from git history
 bun run test               # run Vitest tests
 bun run test:watch         # run Vitest in watch mode
 bun run test:coverage      # run tests with coverage report
@@ -50,6 +51,8 @@ src/data/cycling-waypoints.json # Manual waypoint enrichment for auto-fetched cy
 src/data/triathlon-events.json # Auto-generated; do NOT manually edit
 src/data/running-events.json # Auto-generated; do NOT manually edit
 src/data/weather-cache.json  # Auto-generated nightly; do NOT manually edit
+src/data/changelog.json      # Auto-generated on every push to main; do NOT manually edit
+src/data/changelog.types.ts  # TypeScript types for changelog.json — edit if the schema changes
 src/context/                 # React context providers and hooks
 src/lib/                     # Pure utility functions (no React)
 src/hooks/                   # React hooks (TanStack Query wrappers + localStorage)
@@ -116,6 +119,10 @@ Waypoint coordinates should be verified against GPX files or race maps — many 
 
 `src/data/running-events.json` is written by `scripts/fetch-running-events.ts` and committed by `.github/workflows/refresh-running.yml`. Do not hand-edit this file.
 
+`src/data/cycling-events.json` is refreshed by `scripts/fetch-cycling-events.ts` and committed by `.github/workflows/refresh-cycling.yml` every Monday at 05:00 UTC. Do not hand-edit this file.
+
+`src/data/changelog.json` is written by `scripts/generate-changelog.ts` and committed by `.github/workflows/refresh-changelog.yml` on every push to `main`. Do not hand-edit this file.
+
 ## CI / deploy
 
 | Workflow | Trigger | What it does |
@@ -126,6 +133,8 @@ Waypoint coordinates should be verified against GPX files or race maps — many 
 | `refresh-weather.yml` | nightly 03:00 UTC + manual | fetch weather cache + commit |
 | `refresh-triathlon.yml` | scheduled + manual | fetch triathlon events + commit |
 | `refresh-running.yml` | Monday 04:30 UTC + manual | fetch running events + commit |
+| `refresh-cycling.yml` | Monday 05:00 UTC + manual | fetch cycling events + commit |
+| `refresh-changelog.yml` | push to `main` + manual | generate changelog + commit |
 | `infra.yml` | manual | Terraform plan/apply/destroy for AWS infra |
 | `dependabot-automerge.yml` | Dependabot PRs | auto-merge Dependabot updates via squash |
 
