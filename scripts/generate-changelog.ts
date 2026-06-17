@@ -1,7 +1,7 @@
 /**
  * Build-time script: generates src/data/changelog.json from git log.
  *
- * Reads the last 50 commits prefixed with `feat:` or `fix:` (conventional commits),
+ * Reads the last 100 commits prefixed with `feat:` or `fix:` (conventional commits),
  * parses type, optional scope, and subject, and writes them as structured JSON.
  *
  * Usage:
@@ -17,7 +17,7 @@ import { resolve } from "path";
 import type { ChangelogEntry, Changelog } from "../src/data/changelog.types";
 
 const REPO = "vegaasen/loypevaer";
-const LIMIT = 50;
+const LIMIT = 100;
 const GITHUB_BASE = `https://github.com/${REPO}/commit`;
 
 export type { ChangelogEntry, Changelog };

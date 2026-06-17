@@ -448,5 +448,32 @@
     "scope": null,
     "subject": "add trackFeedback GA4 event to analytics",
     "githubUrl": "https://github.com/vegaasen/loypevaer/commit/f34512e9d9f8e8c4e825ec9a2a0695a2aad700ce"
+  },
+  {
+    "sha": "7cb83c7aa16bd5bbbb12d3b1c1ee2d24aba9713d",
+    "shortSha": "7cb83c7",
+    "date": "2026-04-23",
+    "type": "fix",
+    "scope": null,
+    "subject": "use direct boolean evaluation for run_import input condition",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/7cb83c7aa16bd5bbbb12d3b1c1ee2d24aba9713d"
+  },
+  {
+    "sha": "e303b97255d143b45dc1b42d7a4aa3ba1a55469c",
+    "shortSha": "e303b97",
+    "date": "2026-04-13",
+    "type": "feat",
+    "scope": null,
+    "subject": "rename to Startstreken and add five competitor-parity features - Rename app from Rittvær → Startstreken (index.html, package.json,   NavBar, App footer, page titles, README) to reflect upcoming expansion   beyond cycling-only scope - Wind direction: add wind_direction_10m to all API fetchers; new   src/lib/wind.ts with haversine bearing + Medvind/Motvind/Sidevind   classifier; WeatherStrip passes route bearing per waypoint to WeatherCard - Feels-like temperature: add apparent_temperature (daily max/min + hourly)   to all fetch functions; shown as \"Føles som X°\" in WeatherCard - Warning highlights: colored left-border on WeatherCard for rain (amber),   headwind (orange), cold <10°C (blue), freezing <0°C (purple) - Speed-based timing: calcFinishTimeFromSpeed helper in timing.ts;   TimePicker gains a km/h dropdown that auto-fills finish time with   estimated duration per option - Gear suggestions: new GearSuggestion component with rule-based   bekledningsråd (temperature bands, rain intensity, headwind) rendered   as severity-coded pill list below the weather strip",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/e303b97255d143b45dc1b42d7a4aa3ba1a55469c"
+  },
+  {
+    "sha": "f5cb3d7cef787b2a9ede5d71b25b6532aedc1e2a",
+    "shortSha": "f5cb3d7",
+    "date": "2026-03-25",
+    "type": "feat",
+    "scope": null,
+    "subject": "implement rittvær app with weather forecasts along Norwegian cycling routes Set up routing with react-router-dom and TanStack Query for data fetching. Curated 10 well-known ritt with 5 waypoints each in ritt.json. Implements dual weather strategy: Open-Meteo forecast (≤16 days) with automatic fallback to 10-year climate averages for future dates. Adds vite server.open for automatic browser launch on dev start.",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/f5cb3d7cef787b2a9ede5d71b25b6532aedc1e2a"
   }
 ]

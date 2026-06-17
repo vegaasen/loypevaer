@@ -57,14 +57,14 @@ describe("parseGitLog", () => {
     expect(result[1].type).toBe("fix");
   });
 
-  it("limits output to 50 entries", () => {
+  it("limits output to 100 entries", () => {
     const lines: string[] = [];
-    for (let i = 0; i < 60; i++) {
-      const sha = `${"a".repeat(39)}${String(i).padStart(1, "0")}`;
+    for (let i = 0; i < 110; i++) {
+      const sha = `${"a".repeat(37)}${String(i).padStart(3, "0")}`;
       lines.push(makeLine(sha, "2025-01-01", `feat: entry ${i}`));
     }
     const result = parseGitLog(lines.join("\n"));
-    expect(result).toHaveLength(50);
+    expect(result).toHaveLength(100);
   });
 
   it("extracts shortSha as first 7 characters", () => {

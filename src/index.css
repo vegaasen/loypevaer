@@ -1439,9 +1439,16 @@ code {
 
 .home-page__year-section {
   margin-top: 48px;
+  content-visibility: auto;
+  contain-intrinsic-size: 0 600px;
   @media (max-width: 1024px) {
     margin-top: 32px;
   }
+}
+
+.home-page__year-section--virtual {
+  content-visibility: visible;
+  contain-intrinsic-size: none;
 }
 
 .home-page__year-heading {
@@ -1490,9 +1497,16 @@ code {
 .home-page__month-section {
   margin-top: 32px;
   scroll-margin-top: 8px;
+  content-visibility: auto;
+  contain-intrinsic-size: 0 400px;
   @media (max-width: 1024px) {
     margin-top: 24px;
   }
+}
+
+.home-page__month-section--virtual {
+  content-visibility: visible;
+  contain-intrinsic-size: none;
 }
 
 .home-page__month-heading {
@@ -2620,6 +2634,26 @@ code {
   flex-direction: column;
   gap: 16px;
   align-items: flex-start;
+}
+
+.ritt-page__section-skeleton {
+  height: 200px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, var(--bg-card, #f0ede7) 25%, color-mix(in srgb, var(--bg-card, #f0ede7) 60%, transparent) 50%, var(--bg-card, #f0ede7) 75%);
+  background-size: 200% 100%;
+  animation: section-skeleton-shimmer 1.4s ease-in-out infinite;
+  margin: 8px 0;
+}
+
+@keyframes section-skeleton-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ritt-page__section-skeleton {
+    animation: none;
+  }
 }
 
 .ritt-page__back-link {

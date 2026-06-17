@@ -1,8 +1,34 @@
 /// <reference types="vitest" />
-import { defineConfig } from 'vitest/config'
+import { defineConfig, type Plugin } from 'vitest/config'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 import { execSync } from 'child_process'
+
+/**
+ * Injects <link rel="preload"> hints for Inter woff2 fonts into the built index.html.
+ * Font filenames are content-hashed, so we inject them in generateBundle rather than
+ * hardcoding them in index.html.
+ */
+function fontPreloadPlugin(base: string): Plugin {
+  const interFontRe = /^assets\/inter-latin(-ext)?-wght-normal-[^.]+\.woff2$/
+  return {
+    name: 'font-preload',
+    apply: 'build',
+    transformIndexHtml: {
+      order: 'post',
+      handler(html, ctx) {
+        const bundle = ctx.bundle
+        if (!bundle) return html
+        const preloadTags = Object.keys(bundle)
+          .filter(name => interFontRe.test(name))
+          .map(name => `  <link rel="preload" as="font" type="font/woff2" crossorigin href="${base}${name}">`)
+          .join('\n')
+        if (!preloadTags) return html
+        return html.replace('</head>', `${preloadTags}\n</head>`)
+      },
+    },
+  }
+}
 
 function getGitSha(): string {
   try {
@@ -26,6 +52,7 @@ export default defineConfig({
   },
   plugins: [
     react(),
+    fontPreloadPlugin(base),
     VitePWA({
       registerType: 'prompt',
       devOptions: {
@@ -62,6 +89,7 @@ export default defineConfig({
         ],
       },
       workbox: {
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}', 'weather-cache.json'],
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/api\.open-meteo\.com\/.*/i,
@@ -114,7 +142,8 @@ export default defineConfig({
   },
   build: {
     modulePreload: {
-      polyfill: true,
+      // Targeting evergreen browsers (Safari 17+, Firefox 115+, Chrome 108+) — legacy polyfill not needed
+      polyfill: false,
     },
     rollupOptions: {
       output: {

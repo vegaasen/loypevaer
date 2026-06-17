@@ -434,8 +434,13 @@ export function HomePage() {
                   const monthEvents = byMonth.get(month)!;
                   const upcoming = monthEvents.filter((r) => daysUntil(r.officialDate) >= 0);
                   const past = monthEvents.filter((r) => daysUntil(r.officialDate) < 0);
+                  const hasBoth = upcoming.length > 0 && past.length > 0;
                   return (
-                    <div key={month} id={`month-${year}-${month}`} className="home-page__month-section">
+                    <div
+                      key={month}
+                      id={`month-${year}-${month}`}
+                      className="home-page__month-section"
+                    >
                       <h3 className="home-page__month-heading">
                         <a href={`#month-${year}-${month}`} className="home-page__month-anchor">
                           {monthName(month)}
@@ -445,7 +450,7 @@ export function HomePage() {
                         )}
                       </h3>
                       {past.length > 0 && (
-                        <div className={`home-page__grid home-page__grid--past-list${upcoming.length > 0 ? " home-page__grid--past-list-separated" : ""}`}>
+                        <div className={`home-page__grid home-page__grid--past-list${hasBoth ? " home-page__grid--past-list-separated" : ""}`}>
                           {past.map((r) => (
                             <EventCard
                               key={r.id}
@@ -465,7 +470,7 @@ export function HomePage() {
                         </div>
                       )}
                       {upcoming.length > 0 && (
-                        <div className={`home-page__grid${past.length > 0 ? " home-page__grid--upcoming-separated" : ""}`}>
+                        <div className={`home-page__grid${hasBoth ? " home-page__grid--upcoming-separated" : ""}`}>
                           {upcoming.map((r) => (
                             <EventCard
                               key={r.id}

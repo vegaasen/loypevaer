@@ -1,13 +1,11 @@
 import { useParams, useSearchParams, Link } from "react-router-dom";
-import { useState, useEffect, useRef, useMemo } from "react";
+import { useState, useEffect, useRef, useMemo, lazy, Suspense } from "react";
 import { Helmet } from "react-helmet-async";
 import { DatePicker } from "../components/DatePicker";
 import { TimePicker } from "../components/TimePicker";
 import { WeatherStrip } from "../components/WeatherStrip";
-import { EventMap } from "../components/EventMap";
-import { HistoricalWeatherTable } from "../components/HistoricalWeatherTable";
 import { GearSuggestion } from "../components/GearSuggestion";
-import { ElevationProfile } from "../components/ElevationProfile";
+
 import { ErrorBoundary } from "../components/ErrorBoundary";
 import { PageMeta } from "../components/PageMeta";
 import { computeElevationGain, allArrangements } from "../lib/arrangements";
@@ -18,6 +16,7 @@ import { useWeather } from "../hooks/useWeather";
 import { calcWaypointTimes } from "../lib/timing";
 import { isForecastRange, getWeatherCache } from "../lib/weather";
 import { buildClimateNarrative } from "../lib/climateNarrative";
+
 import { AlertsOptIn } from "../components/AlertsOptIn";
 import { ShareButton } from "../components/ShareButton";
 import { RaceDayCountdown } from "../components/RaceDayCountdown";
@@ -25,6 +24,16 @@ import { buildOgDescription, getOgImagePath } from "../lib/og";
 import { formatNorwegianDate, parseDateLocal } from "../lib/dates";
 import { trackRaceSelected, trackExternalLinkClick, trackWaypointSelected } from "../lib/analytics";
 import { FeedbackSnackbar } from "../components/FeedbackSnackbar";
+
+const EventMap = lazy(() =>
+  import("../components/EventMap").then((m) => ({ default: m.EventMap }))
+);
+const HistoricalWeatherTable = lazy(() =>
+  import("../components/HistoricalWeatherTable").then((m) => ({ default: m.HistoricalWeatherTable }))
+);
+const ElevationProfile = lazy(() =>
+  import("../components/ElevationProfile").then((m) => ({ default: m.ElevationProfile }))
+);
 
 export function EventPage() {
   const { id } = useParams<{ id: string }>();
@@ -426,9 +435,17 @@ export function EventPage() {
 
       {/* ── Secondary sections — grouped collapsible accordion ── */}
       <div className="ritt-page__secondary-sections">
-        <EventMap waypoints={rittData.waypoints} name={rittData.name} discipline={rittData.discipline} />
+        <ErrorBoundary fallback={<p className="error-boundary__message">Kunne ikke laste kartet.</p>}>
+          <Suspense fallback={<div className="ritt-page__section-skeleton" aria-hidden />}>
+            <EventMap waypoints={rittData.waypoints} name={rittData.name} discipline={rittData.discipline} />
+          </Suspense>
+        </ErrorBoundary>
         {!forecastOnly && (
-          <ElevationProfile waypoints={rittData.waypoints} distanceKm={rittData.distance} />
+          <ErrorBoundary fallback={<p className="error-boundary__message">Kunne ikke laste høydeprofilen.</p>}>
+            <Suspense fallback={<div className="ritt-page__section-skeleton" aria-hidden />}>
+              <ElevationProfile waypoints={rittData.waypoints} distanceKm={rittData.distance} />
+            </Suspense>
+          </ErrorBoundary>
         )}
         {!forecastOnly && selectedDate && (
           <GearSuggestion
@@ -438,10 +455,14 @@ export function EventPage() {
           />
         )}
         {!forecastOnly && (
-          <HistoricalWeatherTable
-            waypoints={rittData.waypoints}
-            officialDate={rittData.officialDate}
-          />
+          <ErrorBoundary fallback={<p className="error-boundary__message">Kunne ikke laste historiske data.</p>}>
+            <Suspense fallback={<div className="ritt-page__section-skeleton" aria-hidden />}>
+              <HistoricalWeatherTable
+                waypoints={rittData.waypoints}
+                officialDate={rittData.officialDate}
+              />
+            </Suspense>
+          </ErrorBoundary>
         )}
       </div>
       <FeedbackSnackbar eventId={id ?? ""} />
