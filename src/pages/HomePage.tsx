@@ -88,6 +88,16 @@ export function HomePage() {
   );
 
 
+  function handleScrollToCurrentMonth() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = now.getMonth();
+    const target =
+      document.getElementById(`month-${year}-${month}`) ??
+      document.getElementById("alle-arrangement");
+    target?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
   function handleToggle(id: string, officialDate: string, e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
     e.stopPropagation();
@@ -195,9 +205,9 @@ export function HomePage() {
           Timebasert vær langs hele løypa — punkt for punkt, tilpasset din starttid.
         </p>
 
-        <a href="#alle-arrangement" className="home-page__hero-cta">
+        <button type="button" className="home-page__hero-cta" onClick={handleScrollToCurrentMonth}>
           Finn ditt arrangement →
-        </a>
+        </button>
         <div className="home-page__hero-stats">
           <span><strong>{ritt.length}</strong> arrangement totalt</span>
           {totalSykkel > 0 && <span><strong>{totalSykkel}</strong> sykkel</span>}
@@ -316,9 +326,9 @@ export function HomePage() {
             onChange={(e) => setTidshorisont(e.target.value as Tidshorisont)}
             aria-label="Filtrer etter tidshorisont"
           >
-            <option value="alle">Alle</option>
-            <option value="kommende">Kommende</option>
-            <option value="arkiv">Arkiv</option>
+            <option value="alle">Alle arrangement</option>
+            <option value="kommende">Kommende arr..</option>
+            <option value="arkiv">Arkiverte arran..</option>
           </select>
 
           <select
@@ -352,7 +362,7 @@ export function HomePage() {
             )}
             {tidshorisont !== "alle" && (
               <button className="home-page__filter-chip" onClick={() => setTidshorisont("alle")}>
-                {tidshorisont === "kommende" ? "Kommende" : "Arkiv"} ×
+                {tidshorisont === "kommende" ? "Kommende arr.." : "Arkiverte arran.."} ×
               </button>
             )}
             {region !== "" && (
