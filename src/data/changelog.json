@@ -1,5 +1,14 @@
 [
   {
+    "sha": "c0b4511da632f6c3a6e27d9b95acbf072e0ee0b8",
+    "shortSha": "c0b4511",
+    "date": "2026-06-19",
+    "type": "feat",
+    "scope": "home",
+    "subject": "replace tidshorisont select with pill buttons",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/c0b4511da632f6c3a6e27d9b95acbf072e0ee0b8"
+  },
+  {
     "sha": "4e50f23c1ab70c98fb7039ba443b0b4ac42d8caa",
     "shortSha": "4e50f23",
     "date": "2026-06-19",
