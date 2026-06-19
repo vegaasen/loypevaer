@@ -53,4 +53,12 @@ describe("HomePage", () => {
     renderPage();
     expect(screen.getByText(/Kom forberedt til start/)).toBeInTheDocument();
   });
+
+  it("renders tidshorisont pills as buttons, not a select", () => {
+    renderPage();
+    expect(screen.getByRole("button", { name: "Alle arrangement" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Kommende" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Arkiverte" })).toBeInTheDocument();
+    expect(screen.queryByRole("combobox", { name: "Filtrer etter tidshorisont" })).not.toBeInTheDocument();
+  });
 });

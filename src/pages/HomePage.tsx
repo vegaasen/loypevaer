@@ -17,6 +17,14 @@ import { monthName } from "../lib/month";
 
 type Discipline = "alle" | "landevei" | "terreng" | "langrenn" | "triathlon" | "ultraløp" | "løping";
 
+type Tidshorisont = "kommende" | "alle" | "arkiv";
+
+const TIDSHORISONT_LABEL: Record<Tidshorisont, string> = {
+  alle: "Alle arrangement",
+  kommende: "Kommende",
+  arkiv: "Arkiverte",
+};
+
 export function HomePage() {
   const description =
     `Sjekk rittvær og værvarsler for ${ritt.length} norske utholdenhetsarrangement — sykkelritt, langrenn, triathlon og ultraløp. Se temperatur, vind og nedbør punkt for punkt langs løypa, tilpasset din starttid.`;
@@ -25,7 +33,6 @@ export function HomePage() {
   const { discipline, setDiscipline } = useFilterContext();
   const [search, setSearch] = useState("");
 
-  type Tidshorisont = "kommende" | "alle" | "arkiv";
   const [tidshorisont, setTidshorisont] = useState<Tidshorisont>("alle");
   const [region, setRegion] = useState("");
 
@@ -319,18 +326,28 @@ export function HomePage() {
           ))}
         </div>
 
-        <div className="home-page__filter-controls">
-          <select
-            className="home-page__filter-select"
-            value={tidshorisont}
-            onChange={(e) => setTidshorisont(e.target.value as Tidshorisont)}
-            aria-label="Filtrer etter tidshorisont"
-          >
-            <option value="alle">Alle arrangement</option>
-            <option value="kommende">Kommende arr..</option>
-            <option value="arkiv">Arkiverte arran..</option>
-          </select>
+        {/* Tidshorisont pills */}
+        <div
+          role="group"
+          aria-label="Filtrer etter tidshorisont"
+          className="home-page__filter-pills home-page__filter-pills--secondary"
+        >
+          {(["alle", "kommende", "arkiv"] as Tidshorisont[]).map((t) => {
+            const label = TIDSHORISONT_LABEL[t];
+            return (
+              <button
+                key={t}
+                className={`home-page__filter-pill${tidshorisont === t ? " home-page__filter-pill--active" : ""}`}
+                onClick={() => setTidshorisont(t)}
+                aria-pressed={tidshorisont === t}
+              >
+                {label}
+              </button>
+            );
+          })}
+        </div>
 
+        <div className="home-page__filter-controls">
           <select
             className="home-page__filter-select"
             value={region}
@@ -346,23 +363,19 @@ export function HomePage() {
           <input
             type="search"
             className="home-page__search"
-            placeholder="Søk arrangement…"
+            placeholder="Filtrer arrangement…"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             aria-label="Søk etter arrangement"
           />
         </div>
 
-        {(discipline !== "alle" || tidshorisont !== "alle" || region !== "" || search !== "") && (
+        {/* tidshorisont and region chips omitted — pill rows are always visible and communicate selection state */}
+        {(discipline !== "alle" || region !== "" || search !== "") && (
           <div className="home-page__filter-chips" aria-label="Aktive filtre">
             {discipline !== "alle" && (
               <button className="home-page__filter-chip" onClick={() => setDiscipline("alle")}>
                 {FILTER_DISCIPLINE_LABEL[discipline]} ×
-              </button>
-            )}
-            {tidshorisont !== "alle" && (
-              <button className="home-page__filter-chip" onClick={() => setTidshorisont("alle")}>
-                {tidshorisont === "kommende" ? "Kommende arr.." : "Arkiverte arran.."} ×
               </button>
             )}
             {region !== "" && (
