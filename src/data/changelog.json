@@ -1,5 +1,14 @@
 [
   {
+    "sha": "4e50f23c1ab70c98fb7039ba443b0b4ac42d8caa",
+    "shortSha": "4e50f23",
+    "date": "2026-06-19",
+    "type": "feat",
+    "scope": "home",
+    "subject": "scroll CTA to current month instead of filter bar    Replace the Finn ditt arrangement → anchor link with a button that    scrolls the user directly to the current month's event section on click.    Falls back to #alle-arrangement if no events exist for the current month.",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/4e50f23c1ab70c98fb7039ba443b0b4ac42d8caa"
+  },
+  {
     "sha": "d78925e374a9dfa81fb316d314992648ad7358fd",
     "shortSha": "d78925e",
     "date": "2026-06-17",
