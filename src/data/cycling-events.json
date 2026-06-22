@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-15T17:41:06.773Z",
+  "generatedAt": "2026-06-22T06:49:54.287Z",
   "source": "eqtiming.com / Norges Cykleforbund (organizationId=13)",
   "events": [
     {
@@ -1215,49 +1215,6 @@
           "lat": 61.265,
           "lon": 10.414,
           "altitude": 200
-        }
-      ]
-    },
-    {
-      "id": "spenst-skjebergrittet",
-      "name": "Spenst Skjebergrittet 2026",
-      "discipline": "terreng",
-      "officialDate": "2026-06-20",
-      "distance": 65,
-      "distanceLabel": "65 km",
-      "sportLevel": "Tur",
-      "region": "Østfold",
-      "url": "https://www.skjebergrittet.no",
-      "waypoints": [
-        {
-          "label": "Start – Skjeberg",
-          "lat": 59.273,
-          "lon": 11.183,
-          "altitude": 65
-        },
-        {
-          "label": "25% – Tune singletrack",
-          "lat": 59.288,
-          "lon": 11.115,
-          "altitude": 80
-        },
-        {
-          "label": "50% – Hafslund skog",
-          "lat": 59.234,
-          "lon": 11.101,
-          "altitude": 50
-        },
-        {
-          "label": "75% – Retur",
-          "lat": 59.265,
-          "lon": 11.22,
-          "altitude": 75
-        },
-        {
-          "label": "Mål – Skjeberg",
-          "lat": 59.273,
-          "lon": 11.183,
-          "altitude": 65
         }
       ]
     },
@@ -2558,6 +2515,24 @@
           "label": "Start/Mål – Alta",
           "lat": 69.9666046,
           "lon": 23.2733282
+        }
+      ]
+    },
+    {
+      "id": "treningsritt-overhallarunde-landevei",
+      "name": "Treningsritt overhallarunde landevei 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-06-18",
+      "distance": 50,
+      "distanceLabel": "50 km",
+      "sportLevel": "Klubb",
+      "region": "Trøndelag",
+      "url": " ",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Namsos",
+          "lat": 64.4666372,
+          "lon": 11.3345047
         }
       ]
     }
