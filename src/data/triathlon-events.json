@@ -1,24 +1,7 @@
 {
-  "generatedAt": "2026-06-15T05:52:09.713Z",
+  "generatedAt": "2026-06-22T05:53:31.360Z",
   "source": "triatlonforbundet.no",
   "events": [
-    {
-      "id": "stavanger-triathlon",
-      "name": "Stavanger Triathlon ",
-      "discipline": "triathlon",
-      "officialDate": "2026-06-21",
-      "distance": 51,
-      "distanceLabel": "Standarddistanse (1.5km svøm / 40km sykkel / 10km løp)",
-      "region": "Rogaland",
-      "url": "https://www.triatlonforbundet.no/terminliste/terminliste-2026/stavanger-triathlon/",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Stavanger",
-          "lat": 58.9699675,
-          "lon": 5.7318101
-        }
-      ]
-    },
     {
       "id": "trollveggen-triatlon",
       "name": "Trollveggen Triatlon",
