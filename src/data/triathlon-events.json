@@ -1,41 +1,7 @@
 {
-  "generatedAt": "2026-06-22T05:53:31.360Z",
+  "generatedAt": "2026-06-29T05:38:37.008Z",
   "source": "triatlonforbundet.no",
   "events": [
-    {
-      "id": "trollveggen-triatlon",
-      "name": "Trollveggen Triatlon",
-      "discipline": "triathlon",
-      "officialDate": "2026-06-27",
-      "distance": 51,
-      "distanceLabel": "Standarddistanse (1.5km svøm / 40km sykkel / 10km løp)",
-      "region": "Møre og Romsdal",
-      "url": "https://www.triatlonforbundet.no/terminliste/terminliste-2026/trollveggen-triatlon/",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Trollveggen",
-          "lat": 62.4829997,
-          "lon": 7.7216888
-        }
-      ]
-    },
-    {
-      "id": "challenge-sandefjord",
-      "name": "Challenge Sandefjord ",
-      "discipline": "triathlon",
-      "officialDate": "2026-06-28",
-      "distance": 226,
-      "distanceLabel": "Langdistanse (3.8km svøm / 180km sykkel / 42km løp)",
-      "region": "Trøndelag",
-      "url": "https://www.triatlonforbundet.no/terminliste/terminliste-2026/challenge-sandefjord/",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Challenge",
-          "lat": 63.4358326,
-          "lon": 12.1142201
-        }
-      ]
-    },
     {
       "id": "bygland-triatlon",
       "name": "Bygland Triatlon",
