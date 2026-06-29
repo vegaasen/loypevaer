@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T06:49:54.287Z",
+  "generatedAt": "2026-06-29T06:34:57.376Z",
   "source": "eqtiming.com / Norges Cykleforbund (organizationId=13)",
   "events": [
     {
@@ -71,7 +71,7 @@
       "distance": 50,
       "distanceLabel": "50 km",
       "sportLevel": "Tur",
-      "region": "Buskerud",
+      "region": "Hol",
       "url": "https://www.fat-viking.com/en",
       "waypoints": [
         {
@@ -212,11 +212,11 @@
     },
     {
       "id": "midnattsolrittet",
-      "name": "Midnattsolrittet 2026",
+      "name": "Midnattsolrittet 2027",
       "discipline": "landevei",
-      "officialDate": "2026-06-20",
-      "distance": 91,
-      "distanceLabel": "91 km",
+      "officialDate": "2027-06-05",
+      "distance": 46,
+      "distanceLabel": "46 km",
       "sportLevel": "Tur",
       "region": "Norge",
       "url": "",
@@ -925,7 +925,7 @@
       "distance": 171.6,
       "distanceLabel": "171.6 km",
       "sportLevel": "UCI",
-      "region": "Buskerud",
+      "region": "Ringerike",
       "url": " ",
       "waypoints": [
         {
@@ -1600,9 +1600,9 @@
     },
     {
       "id": "eikerrittet",
-      "name": "Eikerrittet 2026",
+      "name": "Eikerrittet 2027",
       "discipline": "landevei",
-      "officialDate": "2026-05-02",
+      "officialDate": "2027-05-08",
       "distance": 90,
       "distanceLabel": "90 km",
       "sportLevel": "Trim",
@@ -1943,8 +1943,8 @@
       ]
     },
     {
-      "id": "arn-challenge",
-      "name": "ARN Challenge 2026",
+      "id": "arctic-race-of-norway-challenge",
+      "name": "Arctic Race of Norway Challenge 2026",
       "discipline": "landevei",
       "officialDate": "2026-08-15",
       "distance": 76,
@@ -1954,34 +1954,9 @@
       "url": "",
       "waypoints": [
         {
-          "label": "Start – Stokmarknes",
-          "lat": 68.567,
-          "lon": 14.913,
-          "altitude": 10
-        },
-        {
-          "label": "25% – Melbu/Hadsel",
-          "lat": 68.503,
-          "lon": 14.803,
-          "altitude": 30
-        },
-        {
-          "label": "50% – Sortland",
-          "lat": 68.697,
-          "lon": 15.413,
-          "altitude": 20
-        },
-        {
-          "label": "75% – Bø i Vesterålen",
-          "lat": 68.647,
-          "lon": 14.463,
-          "altitude": 30
-        },
-        {
-          "label": "Mål – Stokmarknes",
-          "lat": 68.567,
-          "lon": 14.913,
-          "altitude": 10
+          "label": "Start/Mål – Stokmarknes",
+          "lat": 68.5670003,
+          "lon": 14.9133484
         }
       ]
     },
@@ -2098,7 +2073,7 @@
       "distance": 6,
       "distanceLabel": "6 km",
       "sportLevel": "Reg",
-      "region": "Buskerud",
+      "region": "Hole",
       "url": "",
       "waypoints": [
         {
