@@ -1,75 +1,7 @@
 {
-  "generatedAt": "2026-06-22T06:25:56.229Z",
+  "generatedAt": "2026-06-29T06:12:16.006Z",
   "source": "racedays.run",
   "events": [
-    {
-      "id": "voss-lopskarusell-2026-4-lop",
-      "name": "Voss Løpskarusell 2026 - 4. løp",
-      "discipline": "løping",
-      "officialDate": "2026-06-22",
-      "distance": 5,
-      "distanceLabel": "5 km",
-      "region": "Vestland",
-      "url": "https://www.racedays.run/event/voss-lopskarusell-2026-4-lop",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Voss",
-          "lat": 60.6837067,
-          "lon": 6.4079051
-        }
-      ]
-    },
-    {
-      "id": "boysen-memorial-2026",
-      "name": "Boysen Memorial 2026",
-      "discipline": "løping",
-      "officialDate": "2026-06-24",
-      "distance": 5,
-      "distanceLabel": "5 km",
-      "region": "Oslo",
-      "url": "https://www.racedays.run/event/boysen-memorial-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Oslo",
-          "lat": 59.9133301,
-          "lon": 10.7389701
-        }
-      ]
-    },
-    {
-      "id": "arctic-backyard-kirkenes-2026",
-      "name": "Arctic Backyard Kirkenes 2026",
-      "discipline": "løping",
-      "officialDate": "2026-06-27",
-      "distance": 6.7,
-      "distanceLabel": "6.7 km",
-      "region": "Finnmark",
-      "url": "https://www.racedays.run/event/arctic-backyard-kirkenes-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – South Varanki",
-          "lat": 69.5375661,
-          "lon": 29.7261372
-        }
-      ]
-    },
-    {
-      "id": "lierlopet",
-      "name": "Lierløpet",
-      "discipline": "løping",
-      "officialDate": "2026-06-28",
-      "distance": 21.1,
-      "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Buskerud",
-      "url": "https://www.racedays.run/event/lierlopet-2026-06-28",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Lier",
-          "lat": 59.8453135,
-          "lon": 10.2115525
-        }
-      ]
-    },
     {
       "id": "lofoten-skyrace-2026",
       "name": "Lofoten Skyrace 2026",
@@ -581,7 +513,7 @@
       ]
     },
     {
-      "id": "lierlopet-2026-08-09",
+      "id": "lierlopet",
       "name": "Lierløpet",
       "discipline": "løping",
       "officialDate": "2026-08-09",
@@ -927,7 +859,7 @@
       "officialDate": "2026-08-22",
       "distance": 21,
       "distanceLabel": "Halvmaraton (~21.0 km)",
-      "region": "Ringerike",
+      "region": "Buskerud",
       "url": "https://www.racedays.run/event/vikerfjell-challenge-2026",
       "waypoints": [
         {
@@ -2032,7 +1964,7 @@
       "officialDate": "2026-09-19",
       "distance": 5,
       "distanceLabel": "5 km",
-      "region": "Ringerike",
+      "region": "Buskerud",
       "url": "https://www.racedays.run/event/soknalopet-2026",
       "waypoints": [
         {
@@ -2927,6 +2859,40 @@
       ]
     },
     {
+      "id": "svalandsgubben-2026",
+      "name": "Svalandsgubben 2026",
+      "discipline": "løping",
+      "officialDate": "2026-10-25",
+      "distance": 27,
+      "distanceLabel": "27 km",
+      "region": "Agder",
+      "url": "https://www.racedays.run/event/svalandsgubben-2026",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Birkenes",
+          "lat": 58.4394635,
+          "lon": 8.2377999
+        }
+      ]
+    },
+    {
+      "id": "hinnalopet-2026",
+      "name": "Hinnaløpet 2026",
+      "discipline": "løping",
+      "officialDate": "2026-10-31",
+      "distance": 9.3,
+      "distanceLabel": "9.3 km",
+      "region": "Rogaland",
+      "url": "https://www.racedays.run/event/hinnalopet-2026",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Stavanger",
+          "lat": 58.9699675,
+          "lon": 5.7318101
+        }
+      ]
+    },
+    {
       "id": "3-sjoerslopet-2026",
       "name": "3-Sjøersløpet 2026",
       "discipline": "løping",
@@ -3205,7 +3171,7 @@
       "officialDate": "2027-05-22",
       "distance": 5,
       "distanceLabel": "5 km",
-      "region": "Ringerike",
+      "region": "Buskerud",
       "url": "https://www.racedays.run/event/schjongs5ern-2027",
       "waypoints": [
         {
@@ -3348,6 +3314,23 @@
           "label": "Start/Mål – Bærum",
           "lat": 59.9289639,
           "lon": 10.4997108
+        }
+      ]
+    },
+    {
+      "id": "midnight-sun-marathon-2027",
+      "name": "Midnight Sun Marathon 2027",
+      "discipline": "løping",
+      "officialDate": "2027-06-19",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Troms",
+      "url": "https://www.racedays.run/event/midnight-sun-marathon-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Tromsø",
+          "lat": 69.6516345,
+          "lon": 18.9558585
         }
       ]
     },
