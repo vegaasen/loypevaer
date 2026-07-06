@@ -1,41 +1,7 @@
 {
-  "generatedAt": "2026-06-29T06:12:16.006Z",
+  "generatedAt": "2026-07-06T06:07:37.585Z",
   "source": "racedays.run",
   "events": [
-    {
-      "id": "lofoten-skyrace-2026",
-      "name": "Lofoten Skyrace 2026",
-      "discipline": "løping",
-      "officialDate": "2026-07-03",
-      "distance": 32,
-      "distanceLabel": "32 km",
-      "region": "Nordland",
-      "url": "https://www.racedays.run/event/lofoten-skyrace-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Vågan",
-          "lat": 68.2776871,
-          "lon": 14.6630573
-        }
-      ]
-    },
-    {
-      "id": "jolster-maraton-2026",
-      "name": "Jølster Maraton 2026",
-      "discipline": "løping",
-      "officialDate": "2026-07-04",
-      "distance": 21.1,
-      "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Vestland",
-      "url": "https://www.racedays.run/event/jolster-maraton-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Sunnfjord",
-          "lat": 61.4685824,
-          "lon": 6.0491718
-        }
-      ]
-    },
     {
       "id": "hestane-skyrace-2026",
       "name": "Hestane Skyrace 2026",
@@ -1210,29 +1176,12 @@
       ]
     },
     {
-      "id": "tinde-sparebank-molde-maraton-hostlopet-2026",
-      "name": "Tinde Sparebank Molde Maraton - Høstløpet 2026",
-      "discipline": "løping",
-      "officialDate": "2026-08-29",
-      "distance": 21.1,
-      "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Møre og Romsdal",
-      "url": "https://www.racedays.run/event/tinde-sparebank-molde-maraton-hostlopet-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Molde",
-          "lat": 62.6016257,
-          "lon": 8.1386208
-        }
-      ]
-    },
-    {
       "id": "turufjell-trail-2026",
       "name": "Turufjell Trail 2026",
       "discipline": "løping",
       "officialDate": "2026-08-29",
-      "distance": 12.5,
-      "distanceLabel": "12.5 km",
+      "distance": 13,
+      "distanceLabel": "13 km",
       "region": "Buskerud",
       "url": "https://www.racedays.run/event/turufjell-trail-2026",
       "waypoints": [
@@ -1499,6 +1448,23 @@
       ]
     },
     {
+      "id": "tinde-sparebank-molde-maraton-hostlopet-2026",
+      "name": "Tinde Sparebank Molde Maraton - Høstløpet 2026",
+      "discipline": "løping",
+      "officialDate": "2026-09-05",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Møre og Romsdal",
+      "url": "https://www.racedays.run/event/tinde-sparebank-molde-maraton-hostlopet-2026",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Molde",
+          "lat": 62.6016257,
+          "lon": 8.1386208
+        }
+      ]
+    },
+    {
       "id": "jentemila-2026",
       "name": "Jentemila 2026",
       "discipline": "løping",
@@ -1522,7 +1488,7 @@
       "officialDate": "2026-09-05",
       "distance": 21.1,
       "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Buskerud",
+      "region": "Drammen",
       "url": "https://www.racedays.run/event/drammen-halvmaraton-2026",
       "waypoints": [
         {
@@ -2049,7 +2015,7 @@
       "officialDate": "2026-09-19",
       "distance": 18,
       "distanceLabel": "18 km",
-      "region": "Buskerud",
+      "region": "Drammen",
       "url": "https://www.racedays.run/event/hauernlopet-2026",
       "waypoints": [
         {
@@ -2893,6 +2859,23 @@
       ]
     },
     {
+      "id": "runrudskogen-2026",
+      "name": "RunRudskogen 2026",
+      "discipline": "løping",
+      "officialDate": "2026-10-31",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "region": "Østfold",
+      "url": "https://www.racedays.run/event/runrudskogen-2026",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Rakkestad",
+          "lat": 59.360316,
+          "lon": 11.4211251
+        }
+      ]
+    },
+    {
       "id": "3-sjoerslopet-2026",
       "name": "3-Sjøersløpet 2026",
       "discipline": "løping",
@@ -3035,7 +3018,7 @@
       "officialDate": "2027-04-03",
       "distance": 10,
       "distanceLabel": "10 km",
-      "region": "Buskerud",
+      "region": "Drammen",
       "url": "https://www.racedays.run/event/drammen-10k-2027",
       "waypoints": [
         {
@@ -3369,6 +3352,23 @@
       ]
     },
     {
+      "id": "jolster-maraton-2027",
+      "name": "Jølster Maraton 2027",
+      "discipline": "løping",
+      "officialDate": "2027-07-03",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Vestland",
+      "url": "https://www.racedays.run/event/jolster-maraton-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Sunnfjord",
+          "lat": 61.4685824,
+          "lon": 6.0491718
+        }
+      ]
+    },
+    {
       "id": "foruslopet-2027",
       "name": "Forusløpet 2027",
       "discipline": "løping",
@@ -3392,7 +3392,7 @@
       "officialDate": "2027-09-04",
       "distance": 21.1,
       "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Buskerud",
+      "region": "Drammen",
       "url": "https://www.racedays.run/event/drammen-halvmaraton-2027",
       "waypoints": [
         {
