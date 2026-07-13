@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-06T06:33:16.659Z",
+  "generatedAt": "2026-07-13T08:14:05.107Z",
   "source": "eqtiming.com / Norges Cykleforbund (organizationId=13)",
   "events": [
     {
@@ -126,9 +126,9 @@
     },
     {
       "id": "tyrifjorden-rundt",
-      "name": "Tyrifjorden Rundt 2026",
+      "name": "Tyrifjorden Rundt 2027",
       "discipline": "landevei",
-      "officialDate": "2026-06-07",
+      "officialDate": "2027-06-06",
       "distance": 145,
       "distanceLabel": "145 km",
       "sportLevel": "Tur",
@@ -907,7 +907,7 @@
       "distance": 158,
       "distanceLabel": "158 km",
       "sportLevel": "UCI",
-      "region": "Buskerud",
+      "region": "Hole",
       "url": " ",
       "waypoints": [
         {
@@ -925,7 +925,7 @@
       "distance": 171.6,
       "distanceLabel": "171.6 km",
       "sportLevel": "UCI",
-      "region": "Ringerike",
+      "region": "Buskerud",
       "url": " ",
       "waypoints": [
         {
@@ -1053,7 +1053,7 @@
       "officialDate": "2026-07-12",
       "distance": 85,
       "distanceLabel": "85 km",
-      "sportLevel": "Trim",
+      "sportLevel": "Tur",
       "region": "Møre og Romsdal",
       "url": "atlanticgravel.com",
       "waypoints": [
@@ -2310,24 +2310,6 @@
           "label": "Start/Mål – Gokartbanen  Eggemoen",
           "lat": 60.20482924,
           "lon": 10.31022017
-        }
-      ]
-    },
-    {
-      "id": "sykkelgledecup-ritt-6",
-      "name": "Sykkelgledecup Ritt 6",
-      "discipline": "terreng",
-      "officialDate": "2026-09-21",
-      "distance": 60,
-      "distanceLabel": "60 km",
-      "sportLevel": "Reg",
-      "region": "Akershus",
-      "url": "",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Puttemyra",
-          "lat": 60.22881605,
-          "lon": 10.36213701
         }
       ]
     },
