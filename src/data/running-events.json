@@ -1,58 +1,7 @@
 {
-  "generatedAt": "2026-07-06T06:07:37.585Z",
+  "generatedAt": "2026-07-13T07:53:18.132Z",
   "source": "racedays.run",
   "events": [
-    {
-      "id": "hestane-skyrace-2026",
-      "name": "Hestane Skyrace 2026",
-      "discipline": "løping",
-      "officialDate": "2026-07-11",
-      "distance": 32,
-      "distanceLabel": "32 km",
-      "region": "Vestland",
-      "url": "https://www.racedays.run/event/hestane-skyrace-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Sunnfjord",
-          "lat": 61.4685824,
-          "lon": 6.0491718
-        }
-      ]
-    },
-    {
-      "id": "hisoy-marathon-2026",
-      "name": "Hisøy Marathon 2026",
-      "discipline": "løping",
-      "officialDate": "2026-07-11",
-      "distance": 21.3,
-      "distanceLabel": "Halvmaraton (~21.3 km)",
-      "region": "Agder",
-      "url": "https://www.racedays.run/event/hisoy-marathon-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Arendal",
-          "lat": 58.4267301,
-          "lon": 8.9469491
-        }
-      ]
-    },
-    {
-      "id": "dynafit-hardangerjokulen-ultra-2026",
-      "name": "Dynafit Hardangerjøkulen Ultra 2026",
-      "discipline": "løping",
-      "officialDate": "2026-07-11",
-      "distance": 34,
-      "distanceLabel": "34 km",
-      "region": "Vestland",
-      "url": "https://www.racedays.run/event/dynafit-hardangerjokulen-ultra-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Eidfjord",
-          "lat": 60.3456582,
-          "lon": 7.4012145
-        }
-      ]
-    },
     {
       "id": "sibmila-2026",
       "name": "SiBmila 2026",
@@ -94,7 +43,7 @@
       "officialDate": "2026-07-24",
       "distance": 21.1,
       "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Buskerud",
+      "region": "Flesberg",
       "url": "https://www.racedays.run/event/blefjells-beste-2026",
       "waypoints": [
         {
@@ -2457,7 +2406,7 @@
       "officialDate": "2026-10-10",
       "distance": 10,
       "distanceLabel": "10 km",
-      "region": "Buskerud",
+      "region": "Modum",
       "url": "https://www.racedays.run/event/furumomila-2026",
       "waypoints": [
         {
