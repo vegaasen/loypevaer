@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T08:14:05.107Z",
+  "generatedAt": "2026-07-20T07:55:53.430Z",
   "source": "eqtiming.com / Norges Cykleforbund (organizationId=13)",
   "events": [
     {
@@ -71,7 +71,7 @@
       "distance": 50,
       "distanceLabel": "50 km",
       "sportLevel": "Tur",
-      "region": "Buskerud",
+      "region": "Hol",
       "url": "https://www.fat-viking.com/en",
       "waypoints": [
         {
@@ -385,9 +385,9 @@
     },
     {
       "id": "color-line-tour",
-      "name": "Color Line Tour 2026",
+      "name": "Color Line Tour 2027",
       "discipline": "landevei",
-      "officialDate": "2026-05-30",
+      "officialDate": "2027-05-29",
       "distance": 210,
       "distanceLabel": "210 km",
       "sportLevel": "Tur",
@@ -1606,7 +1606,7 @@
       "distance": 90,
       "distanceLabel": "90 km",
       "sportLevel": "Trim",
-      "region": "Øvre Eiker",
+      "region": "Buskerud",
       "url": "http://eikerrittet.no/",
       "waypoints": [
         {
@@ -2310,6 +2310,24 @@
           "label": "Start/Mål – Gokartbanen  Eggemoen",
           "lat": 60.20482924,
           "lon": 10.31022017
+        }
+      ]
+    },
+    {
+      "id": "sykkelgledecup-ritt-6",
+      "name": "Sykkelgledecup Ritt 6",
+      "discipline": "terreng",
+      "officialDate": "2026-09-21",
+      "distance": 60,
+      "distanceLabel": "60 km",
+      "sportLevel": "Reg",
+      "region": "Akershus",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Puttemyra",
+          "lat": 60.22881605,
+          "lon": 10.36213701
         }
       ]
     },
