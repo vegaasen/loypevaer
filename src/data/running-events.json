@@ -1,41 +1,7 @@
 {
-  "generatedAt": "2026-07-13T07:53:18.132Z",
+  "generatedAt": "2026-07-20T07:46:25.484Z",
   "source": "racedays.run",
   "events": [
-    {
-      "id": "sibmila-2026",
-      "name": "SiBmila 2026",
-      "discipline": "løping",
-      "officialDate": "2026-07-14",
-      "distance": 10,
-      "distanceLabel": "10 km",
-      "region": "Finnmark",
-      "url": "https://www.racedays.run/event/sibmila-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Berlevåg",
-          "lat": 70.7990451,
-          "lon": 29.1505286
-        }
-      ]
-    },
-    {
-      "id": "yttersia-skyrace-senja-2026",
-      "name": "Yttersia Skyrace Senja 2026",
-      "discipline": "løping",
-      "officialDate": "2026-07-18",
-      "distance": 12,
-      "distanceLabel": "12 km",
-      "region": "Norge",
-      "url": "https://www.racedays.run/event/yttersia-skyrace-senja-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Senja",
-          "lat": 69.3039795,
-          "lon": 17.4590833
-        }
-      ]
-    },
     {
       "id": "blefjells-beste-2026",
       "name": "Blefjells Beste 2026",
@@ -751,8 +717,8 @@
       ]
     },
     {
-      "id": "syv-sostre-skyrace-2026",
-      "name": "Syv Søstre Skyrace  2026",
+      "id": "craft-syv-sostre-skyrace-2026",
+      "name": "Craft Syv Søstre Skyrace  2026",
       "discipline": "løping",
       "officialDate": "2026-08-22",
       "distance": 22,
@@ -1992,19 +1958,19 @@
       ]
     },
     {
-      "id": "rauma-backyard-ultra-2026",
-      "name": "Rauma Backyard Ultra 2026",
+      "id": "karl-xii-lopet-2026",
+      "name": "Karl XII løpet 2026",
       "discipline": "løping",
-      "officialDate": "2026-09-19",
-      "distance": 6.7,
-      "distanceLabel": "6.7 km",
-      "region": "Møre og Romsdal",
-      "url": "https://www.racedays.run/event/rauma-backyard-ultra-2026",
+      "officialDate": "2026-09-20",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "region": "Østfold",
+      "url": "https://www.racedays.run/event/karl-xii-lopet-2026",
       "waypoints": [
         {
-          "label": "Start/Mål – Rauma",
-          "lat": 62.4454746,
-          "lon": 7.6883586
+          "label": "Start/Mål – Halden",
+          "lat": 59.0680555,
+          "lon": 11.537191
         }
       ]
     },
@@ -2158,6 +2124,23 @@
           "label": "Start/Mål – Øyer",
           "lat": 61.3273517,
           "lon": 10.5040017
+        }
+      ]
+    },
+    {
+      "id": "rauma-backyard-ultra-2026",
+      "name": "Rauma Backyard Ultra 2026",
+      "discipline": "løping",
+      "officialDate": "2026-09-26",
+      "distance": 6.7,
+      "distanceLabel": "6.7 km",
+      "region": "Møre og Romsdal",
+      "url": "https://www.racedays.run/event/rauma-backyard-ultra-2026",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Rauma",
+          "lat": 62.4454746,
+          "lon": 7.6883586
         }
       ]
     },
@@ -2406,7 +2389,7 @@
       "officialDate": "2026-10-10",
       "distance": 10,
       "distanceLabel": "10 km",
-      "region": "Modum",
+      "region": "Buskerud",
       "url": "https://www.racedays.run/event/furumomila-2026",
       "waypoints": [
         {
@@ -2525,13 +2508,30 @@
       "officialDate": "2026-10-17",
       "distance": 10,
       "distanceLabel": "10 km",
-      "region": "Hole",
+      "region": "Buskerud",
       "url": "https://www.racedays.run/event/hytteplanmila-2026",
       "waypoints": [
         {
           "label": "Start/Mål – Hole",
           "lat": 60.0416318,
           "lon": 10.302044
+        }
+      ]
+    },
+    {
+      "id": "djupadalten-2026",
+      "name": "Djupadalten 2026",
+      "discipline": "løping",
+      "officialDate": "2026-10-17",
+      "distance": 9.3,
+      "distanceLabel": "9.3 km",
+      "region": "Rogaland",
+      "url": "https://www.racedays.run/event/djupadalten-2026",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Haugesund",
+          "lat": 59.4682479,
+          "lon": 5.0827612
         }
       ]
     },
@@ -3018,7 +3018,7 @@
       "officialDate": "2027-05-01",
       "distance": 5,
       "distanceLabel": "5 km",
-      "region": "Hole",
+      "region": "Buskerud",
       "url": "https://www.racedays.run/event/sundvolden-challenge-2027",
       "waypoints": [
         {
