@@ -1,24 +1,7 @@
 {
-  "generatedAt": "2026-07-13T06:51:45.101Z",
+  "generatedAt": "2026-07-20T06:44:01.994Z",
   "source": "triatlonforbundet.no",
   "events": [
-    {
-      "id": "bygland-triatlon",
-      "name": "Bygland Triatlon",
-      "discipline": "triathlon",
-      "officialDate": "2026-07-18",
-      "distance": 51,
-      "distanceLabel": "Standarddistanse (1.5km svøm / 40km sykkel / 10km løp)",
-      "region": "Agder",
-      "url": "https://www.triatlonforbundet.no/terminliste/terminliste-2026/bygland-triatlon-2/",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Bygland",
-          "lat": 58.8720193,
-          "lon": 7.7338501
-        }
-      ]
-    },
     {
       "id": "oslotri-norges-eldste-og-storste-triatlonarrangement",
       "name": "Oslotri - Norges eldste og største triatlonarrangement!",
