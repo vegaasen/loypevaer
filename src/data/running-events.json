@@ -1,75 +1,7 @@
 {
-  "generatedAt": "2026-07-20T07:46:25.484Z",
+  "generatedAt": "2026-07-27T08:07:36.348Z",
   "source": "racedays.run",
   "events": [
-    {
-      "id": "blefjells-beste-2026",
-      "name": "Blefjells Beste 2026",
-      "discipline": "løping",
-      "officialDate": "2026-07-24",
-      "distance": 21.1,
-      "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Flesberg",
-      "url": "https://www.racedays.run/event/blefjells-beste-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Flesberg",
-          "lat": 59.8572666,
-          "lon": 9.4450583
-        }
-      ]
-    },
-    {
-      "id": "kvitfjell-lauparfestival-2026",
-      "name": "Kvitfjell Lauparfestival 2026",
-      "discipline": "løping",
-      "officialDate": "2026-07-24",
-      "distance": 25,
-      "distanceLabel": "25 km",
-      "region": "Innlandet",
-      "url": "https://www.racedays.run/event/kvitfjell-lauparfestival-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Ringebu",
-          "lat": 61.5572191,
-          "lon": 10.3649275
-        }
-      ]
-    },
-    {
-      "id": "varanger-run-2026",
-      "name": "Varanger Run 2026",
-      "discipline": "løping",
-      "officialDate": "2026-07-25",
-      "distance": 10,
-      "distanceLabel": "10 km",
-      "region": "Finnmark",
-      "url": "https://www.racedays.run/event/varanger-run-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Vardø",
-          "lat": 70.3308158,
-          "lon": 30.9618205
-        }
-      ]
-    },
-    {
-      "id": "joa-maraton-2026",
-      "name": "Jøa maraton 2026",
-      "discipline": "løping",
-      "officialDate": "2026-07-25",
-      "distance": 21.1,
-      "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Trøndelag",
-      "url": "https://www.racedays.run/event/joa-maraton-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Namsos",
-          "lat": 64.4666372,
-          "lon": 11.3345047
-        }
-      ]
-    },
     {
       "id": "jotunheimen-trail-run-2026",
       "name": "Jotunheimen Trail Run 2026",
@@ -479,6 +411,23 @@
       ]
     },
     {
+      "id": "sankthanshaugen-5000-2026",
+      "name": "Sankthanshaugen 5000 2026",
+      "discipline": "løping",
+      "officialDate": "2026-08-14",
+      "distance": 5,
+      "distanceLabel": "5 km",
+      "region": "Oslo",
+      "url": "https://www.racedays.run/event/sankthanshaugen-5000-2026",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Oslo",
+          "lat": 59.9133301,
+          "lon": 10.7389701
+        }
+      ]
+    },
+    {
       "id": "blueslopet-2026",
       "name": "Bluesløpet 2026",
       "discipline": "løping",
@@ -509,23 +458,6 @@
           "label": "Start/Mål – Senja",
           "lat": 69.3039795,
           "lon": 17.4590833
-        }
-      ]
-    },
-    {
-      "id": "sankthanshaugen-5000-2026",
-      "name": "Sankthanshaugen 5000 2026",
-      "discipline": "løping",
-      "officialDate": "2026-08-15",
-      "distance": 5,
-      "distanceLabel": "5 km",
-      "region": "Oslo",
-      "url": "https://www.racedays.run/event/sankthanshaugen-5000-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Oslo",
-          "lat": 59.9133301,
-          "lon": 10.7389701
         }
       ]
     },
@@ -1403,7 +1335,7 @@
       "officialDate": "2026-09-05",
       "distance": 21.1,
       "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Drammen",
+      "region": "Buskerud",
       "url": "https://www.racedays.run/event/drammen-halvmaraton-2026",
       "waypoints": [
         {
@@ -1930,7 +1862,7 @@
       "officialDate": "2026-09-19",
       "distance": 18,
       "distanceLabel": "18 km",
-      "region": "Drammen",
+      "region": "Buskerud",
       "url": "https://www.racedays.run/event/hauernlopet-2026",
       "waypoints": [
         {
@@ -2893,6 +2825,23 @@
       ]
     },
     {
+      "id": "speira-karmoy-maraton-2026",
+      "name": "Speira Karmøy Maraton 2026",
+      "discipline": "løping",
+      "officialDate": "2026-11-22",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Rogaland",
+      "url": "https://www.racedays.run/event/speira-karmoy-maraton-2026",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Karmøy",
+          "lat": 59.2302888,
+          "lon": 5.1536117
+        }
+      ]
+    },
+    {
       "id": "nyttarslopet-tonsberg-2026",
       "name": "Nyttårsløpet Tønsberg 2026",
       "discipline": "løping",
@@ -2967,7 +2916,7 @@
       "officialDate": "2027-04-03",
       "distance": 10,
       "distanceLabel": "10 km",
-      "region": "Drammen",
+      "region": "Buskerud",
       "url": "https://www.racedays.run/event/drammen-10k-2027",
       "waypoints": [
         {
@@ -3341,7 +3290,7 @@
       "officialDate": "2027-09-04",
       "distance": 21.1,
       "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Drammen",
+      "region": "Buskerud",
       "url": "https://www.racedays.run/event/drammen-halvmaraton-2027",
       "waypoints": [
         {
