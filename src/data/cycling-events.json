@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T07:55:53.430Z",
+  "generatedAt": "2026-07-27T08:26:27.900Z",
   "source": "eqtiming.com / Norges Cykleforbund (organizationId=13)",
   "events": [
     {
@@ -2338,7 +2338,7 @@
       "officialDate": "2026-08-23",
       "distance": 50,
       "distanceLabel": "50 km",
-      "sportLevel": "NCF",
+      "sportLevel": "",
       "region": "Akershus",
       "url": "",
       "waypoints": [
@@ -2356,7 +2356,7 @@
       "officialDate": "2026-08-22",
       "distance": 50,
       "distanceLabel": "50 km",
-      "sportLevel": "NCF",
+      "sportLevel": "",
       "region": "Akershus",
       "url": "",
       "waypoints": [
@@ -2461,7 +2461,7 @@
       "id": "snn1-of150-km-solo",
       "name": "SNN1 OF150 km Solo",
       "discipline": "terreng",
-      "officialDate": "2026-07-25",
+      "officialDate": "2027-08-02",
       "distance": 150,
       "distanceLabel": "150 km",
       "sportLevel": "Tur",
