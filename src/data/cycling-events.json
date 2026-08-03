@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-27T08:26:27.900Z",
+  "generatedAt": "2026-08-03T08:25:03.158Z",
   "source": "eqtiming.com / Norges Cykleforbund (organizationId=13)",
   "events": [
     {
@@ -471,9 +471,9 @@
     },
     {
       "id": "nordmarka-rundt",
-      "name": "Nordmarka Rundt 2026",
+      "name": "Nordmarka Rundt 2027",
       "discipline": "landevei",
-      "officialDate": "2026-05-24",
+      "officialDate": "2027-05-23",
       "distance": 148,
       "distanceLabel": "148 km",
       "sportLevel": "Tur",
@@ -907,7 +907,7 @@
       "distance": 158,
       "distanceLabel": "158 km",
       "sportLevel": "UCI",
-      "region": "Hole",
+      "region": "Buskerud",
       "url": " ",
       "waypoints": [
         {
@@ -925,7 +925,7 @@
       "distance": 171.6,
       "distanceLabel": "171.6 km",
       "sportLevel": "UCI",
-      "region": "Buskerud",
+      "region": "Ringerike",
       "url": " ",
       "waypoints": [
         {
@@ -2389,7 +2389,7 @@
       "id": "smartdok-of300-km-solo",
       "name": "SmartDok OF300 km Solo",
       "discipline": "terreng",
-      "officialDate": "2026-07-30",
+      "officialDate": "2027-08-05",
       "distance": 300,
       "distanceLabel": "300 km",
       "sportLevel": "Tur",
@@ -2405,9 +2405,9 @@
     },
     {
       "id": "smartdok-of300-km-team",
-      "name": "SmartDok OF300 km Team",
+      "name": "SmartDok OF300 km team",
       "discipline": "terreng",
-      "officialDate": "2026-07-30",
+      "officialDate": "2027-08-05",
       "distance": 300,
       "distanceLabel": "300 km",
       "sportLevel": "Tur",
@@ -2425,7 +2425,7 @@
       "id": "norrona-of700-km-solo",
       "name": "Norrøna OF700 km Solo",
       "discipline": "terreng",
-      "officialDate": "2026-07-27",
+      "officialDate": "2027-08-02",
       "distance": 700,
       "distanceLabel": "700 km",
       "sportLevel": "Tur",
@@ -2443,7 +2443,7 @@
       "id": "norrona-of700-km-team",
       "name": "Norrøna OF700 km Team",
       "discipline": "terreng",
-      "officialDate": "2026-07-27",
+      "officialDate": "2027-08-02",
       "distance": 700,
       "distanceLabel": "700 km",
       "sportLevel": "Tur",
