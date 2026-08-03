@@ -1,126 +1,7 @@
 {
-  "generatedAt": "2026-07-27T08:07:36.348Z",
+  "generatedAt": "2026-08-03T08:02:27.512Z",
   "source": "racedays.run",
   "events": [
-    {
-      "id": "jotunheimen-trail-run-2026",
-      "name": "Jotunheimen Trail Run 2026",
-      "discipline": "løping",
-      "officialDate": "2026-07-31",
-      "distance": 21,
-      "distanceLabel": "Halvmaraton (~21.0 km)",
-      "region": "Innlandet",
-      "url": "https://www.racedays.run/event/jotunheimen-trail-run-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Vang",
-          "lat": 61.1922086,
-          "lon": 8.4695189
-        }
-      ]
-    },
-    {
-      "id": "altamila-2026",
-      "name": "Altamila 2026",
-      "discipline": "løping",
-      "officialDate": "2026-08-01",
-      "distance": 21.1,
-      "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Finnmark",
-      "url": "https://www.racedays.run/event/altamila-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Alta",
-          "lat": 69.9666046,
-          "lon": 23.2733282
-        }
-      ]
-    },
-    {
-      "id": "meraker-mountain-challenge-2026",
-      "name": "Meråker Mountain Challenge 2026",
-      "discipline": "løping",
-      "officialDate": "2026-08-01",
-      "distance": 21.1,
-      "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Trøndelag",
-      "url": "https://www.racedays.run/event/meraaker-mountain-challenge-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Meråker",
-          "lat": 63.3969215,
-          "lon": 11.8124874
-        }
-      ]
-    },
-    {
-      "id": "hundaskarven-rundt-2026",
-      "name": "Hundåskarven Rundt 2026",
-      "discipline": "løping",
-      "officialDate": "2026-08-01",
-      "distance": 10,
-      "distanceLabel": "10 km",
-      "region": "Trøndelag",
-      "url": "https://www.racedays.run/event/hundaaskarven-rundt-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Midtre Gauldal",
-          "lat": 62.8944758,
-          "lon": 10.5234572
-        }
-      ]
-    },
-    {
-      "id": "kongsvinger-maraton-2026",
-      "name": "Kongsvinger Maraton 2026",
-      "discipline": "løping",
-      "officialDate": "2026-08-01",
-      "distance": 21.1,
-      "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Innlandet",
-      "url": "https://www.racedays.run/event/kongsvinger-maraton-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Kongsvinger",
-          "lat": 60.1899109,
-          "lon": 12.2160367
-        }
-      ]
-    },
-    {
-      "id": "mokster-maraton-2026",
-      "name": "Møkster maraton 2026",
-      "discipline": "løping",
-      "officialDate": "2026-08-01",
-      "distance": 21.1,
-      "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Vestland",
-      "url": "https://www.racedays.run/event/mokster-maraton-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Austevoll",
-          "lat": 60.0603843,
-          "lon": 4.9432963
-        }
-      ]
-    },
-    {
-      "id": "skeikampen-rundt-2026",
-      "name": "Skeikampen Rundt 2026",
-      "discipline": "løping",
-      "officialDate": "2026-08-01",
-      "distance": 12.2,
-      "distanceLabel": "12.2 km",
-      "region": "Innlandet",
-      "url": "https://www.racedays.run/event/skeikampen-rundt-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Gausdal",
-          "lat": 61.2640681,
-          "lon": 9.8532187
-        }
-      ]
-    },
     {
       "id": "voss-lopskarusell-2026-5-lop",
       "name": "Voss Løpskarusell 2026 - 5. løp",
@@ -485,7 +366,7 @@
       "officialDate": "2026-08-15",
       "distance": 30,
       "distanceLabel": "30 km",
-      "region": "Buskerud",
+      "region": "Hol",
       "url": "https://www.racedays.run/event/geilo-trail-run-2026",
       "waypoints": [
         {
@@ -1155,6 +1036,23 @@
           "label": "Start/Mål – Vågan",
           "lat": 68.2776871,
           "lon": 14.6630573
+        }
+      ]
+    },
+    {
+      "id": "mjondalslopet-2026",
+      "name": "Mjøndalsløpet 2026",
+      "discipline": "løping",
+      "officialDate": "2026-08-29",
+      "distance": 7.5,
+      "distanceLabel": "7.5 km",
+      "region": "Buskerud",
+      "url": "https://www.racedays.run/event/mjondalslopet-2026",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Drammen",
+          "lat": 59.6964936,
+          "lon": 10.175642
         }
       ]
     },
