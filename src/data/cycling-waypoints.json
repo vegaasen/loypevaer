@@ -2,33 +2,33 @@
   "birkebeinerrittet": [
     {
       "label": "Start – Rena",
-      "lat": 61.133,
-      "lon": 11.377,
-      "altitude": 256
+      "lat": 61.132927,
+      "lon": 11.371898,
+      "altitude": 222
     },
     {
-      "label": "25% – Høsbjør",
-      "lat": 61.05,
-      "lon": 11.12,
-      "altitude": 620
+      "label": "Bringbusætra",
+      "lat": 61.105592,
+      "lon": 11.088106,
+      "altitude": 574
     },
     {
-      "label": "50% – Sjusjøen",
-      "lat": 61.248,
-      "lon": 10.578,
-      "altitude": 900
+      "label": "Øyungen",
+      "lat": 61.19255,
+      "lon": 10.93633,
+      "altitude": 764
     },
     {
-      "label": "75% – Nordseter",
-      "lat": 61.18,
-      "lon": 10.5,
-      "altitude": 710
+      "label": "Aksjøen",
+      "lat": 61.2181,
+      "lon": 10.766614,
+      "altitude": 841
     },
     {
       "label": "Mål – Lillehammer",
-      "lat": 61.115,
-      "lon": 10.466,
-      "altitude": 185
+      "lat": 61.12292,
+      "lon": 10.47356,
+      "altitude": 266
     }
   ],
   "styrkeproven-trondheim-lillehammer-eidsvoll-oslo": [
