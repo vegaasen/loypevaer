@@ -154,7 +154,9 @@ bun run test:coverage    # run tests with v8 coverage report
 bun run fetch-weather    # refresh src/data/weather-cache.json manually
 bun run fetch-triathlon  # refresh src/data/triathlon-events.json manually
 bun run fetch-running    # refresh src/data/running-events.json manually
+bun run fetch-cycling    # refresh src/data/cycling-events.json from NCF/EQ Timing API
 bun run generate-sitemap # regenerate public/sitemap.xml (also runs automatically before build)
+bun run generate-changelog # regenerate src/data/changelog.json from git history
 ```
 
 The weather cache (`src/data/weather-cache.json`) is refreshed nightly via GitHub Actions — you only need `fetch-weather` locally if you want fresh historical data before committing.
@@ -167,9 +169,13 @@ The weather cache (`src/data/weather-cache.json`) is refreshed nightly via GitHu
 src/
   data/
     arrangements.json            # Curated events with waypoints (sykkel, langrenn, ultraløp, løping)
+    cycling-events.json          # Auto-generated from NCF/EQ Timing API; do NOT manually edit
+    cycling-manual.json          # Hand-curated cycling events not in NCF API — edit this to add/modify
+    cycling-waypoints.json       # Waypoint enrichment for NCF-fetched cycling events; see enrich-cycling-waypoints.ts
     triathlon-events.json        # Auto-synced triathlon events
     running-events.json          # Auto-synced running/løping events
     weather-cache.json           # Nightly-refreshed historical weather cache (auto-generated)
+    changelog.json               # Auto-generated from git history; do NOT manually edit
   lib/
     weather.ts                   # Open-Meteo forecast + historical fetchers
     wmo.ts                       # WMO weather code → Norwegian label + emoji
@@ -183,12 +189,27 @@ src/
     grouping.ts                  # Group events by year/month for list views
     seo.ts                       # Canonical URL helpers, per-discipline SEO keywords
     stats.ts                     # Statistical utilities (avg, mode) for climate aggregation
+    analytics.ts                 # GA4 / gtag event-tracking helpers
+    alertDiff.ts                 # Detects meaningful weather changes between alert checks
+    climateNarrative.ts          # Generates plain-language climate summaries
+    climateStory.ts              # Narrative assembly for multi-waypoint climate stories
+    og.ts                        # Open Graph image URL builder
+    packingList.ts               # Rule engine for generating packing-list items from weather
+    runningCategory.ts           # Categorises running events by distance
+    weatherThresholds.ts         # Shared numeric thresholds for weather alerts and gear rules
+    month.ts                     # Month-name utilities
   hooks/
     useWeather.ts                # TanStack Query wrapper (useQueries per waypoint)
     useMyEvents.ts               # Bookmark persistence in localStorage
     usePageTitle.ts              # Sets <title> per route
     useDetailsOpen.ts            # Tracks open state of native <details> elements
     usePageTracking.ts           # Fires gtag page_view on route changes
+    useHourlyBreakdown.ts        # Fetches and caches hourly forecast for a waypoint
+    useWeatherAlerts.ts          # Manages weather alert preferences and diffs
+    useInstallPrompt.ts          # Wraps the PWA beforeinstallprompt event
+    useFeedbackPrompt.ts         # Logic for when to show the feedback snackbar
+    useCookieConsent.ts          # Reads/writes cookie-consent localStorage flag
+    useDebouncedValue.ts         # Generic debounce hook
   components/
     EventCard.tsx                # Race card on the home page
     EventMap.tsx                 # Leaflet map with waypoints + OSRM route polyline
@@ -204,12 +225,28 @@ src/
     SiteFooter.tsx               # Footer with attribution links
     ErrorBoundary.tsx            # App-level + per-strip error boundary
     ReloadPrompt.tsx             # PWA update prompt
+    HourlyBreakdown.tsx          # Expandable hour-by-hour forecast panel for a waypoint
+    FeaturedEventCard.tsx        # Promoted event card shown at top of the home page
+    PackingList.tsx              # Generated packing checklist from weather conditions
+    RaceDayCountdown.tsx         # Live countdown to the event's official date
+    CookieBanner.tsx             # GDPR cookie consent banner
+    AlertsOptIn.tsx              # Push-notification / weather-alert opt-in UI
+    InstallBanner.tsx            # PWA install prompt banner
+    FeedbackSnackbar.tsx         # Transient feedback/confirmation snackbar
+    ScrollToTopButton.tsx        # Floating scroll-to-top button
+    PageMeta.tsx                 # Per-route <head> metadata (title, description, og tags)
+    GpxHowTo.tsx                 # GPX page: usage instructions sub-component
+    GpxUploader.tsx              # GPX page: drag-and-drop / URL upload sub-component
+    ClimateHistoryBadge.tsx      # Badge showing the climate-average data range
+    RunningEventRow.tsx          # Row component for the running events list
+    ScrollToTop.tsx              # Scroll-reset on route change
   pages/
     HomePage.tsx                 # Event grid, sorted by official date
     EventPage.tsx                # Detail: meta + date picker + weather strip
     GpxPage.tsx                  # GPX upload / URL load → derive waypoints + weather
     LopPage.tsx                  # Running events list grouped by year/month
     HvaErRittvaerPage.tsx        # About / SEO landing page
+    EndringsloggPage.tsx         # Changelog / release notes page (/endringslogg)
     NotFoundPage.tsx             # 404 catch-all
   test/
     setup.ts                     # jest-dom matchers + MSW server lifecycle
@@ -220,7 +257,11 @@ scripts/
   fetch-weather-cache.ts         # Fetches historical data and writes weather-cache.json
   fetch-triathlon-events.ts      # Fetches triathlon events and writes triathlon-events.json
   fetch-running-events.ts        # Fetches running events and writes running-events.json
+  fetch-cycling-events.ts        # Fetches cycling events from NCF/EQ Timing and writes cycling-events.json
+  enrich-cycling-waypoints.ts    # Samples GPX waypoints and merges them into cycling-waypoints.json
+  generate-changelog.ts          # Generates src/data/changelog.json from git log
   generate-sitemap.ts            # Generates public/sitemap.xml (also runs as prebuild)
+  copy-spa-routes.ts             # Post-build: copies index.html to 404.html for SPA routing on static hosts
 ```
 
 ---
@@ -245,7 +286,6 @@ scripts/
 ### Open
 
 - [ ] **Comparison mode** — show official date vs custom date side by side
-- [ ] **Hourly breakdown** — expand a waypoint card to show hour-by-hour forecast
 - [ ] **Elevation-aware pacing** — `calcFinishTimeFromSpeed` currently uses linear distance; add elevation correction
 - [ ] **Offline / PWA** — cache last-fetched weather for use without connectivity
 - [ ] **Weather trend indicator** — warmer/colder arrow relative to day before
@@ -267,6 +307,7 @@ scripts/
 - [x] **Ultraløp** — Norwegian ultra runs added; waypoint model supports running disciplines
 - [x] **Løping** — Norwegian road races and trail runs added via auto-synced feed; dedicated `/løp` page
 - [x] **GPX upload** — derive waypoints automatically from a GPX file (drag-and-drop, URL load, waypoint count slider, export guides for Strava/Garmin/Komoot)
+- [x] **Hourly breakdown** — expand a waypoint card to show hour-by-hour forecast (HourlyBreakdown component + useHourlyBreakdown hook)
 - [x] **Official start time pre-fill** — start time pre-populated from known mass-start time per event
 - [x] **Tests** — Vitest unit tests for lib utilities (`stats`, `difficulty`, `wind`, `wmo`, `dates`) and component tests for `EventCard` + `WeatherCard`; MSW for Open-Meteo API mocking
 
@@ -277,6 +318,10 @@ scripts/
 Contributions are welcome! Here's how to get started:
 
 **Adding a ritt:** Edit `src/data/arrangements.json` — each entry needs an `id`, `name`, `discipline`, `distance`, `elevationGain`, `region`, `officialDate`, and a `waypoints` array with `lat`/`lon`/`altitude` per point. See existing entries for the full schema. Waypoint coordinates should be verified against GPX files or race maps.
+
+**Adding a cycling event (not in NCF API):** Edit `src/data/cycling-manual.json` — same schema as `arrangements.json` plus an optional `distanceLabel` for display purposes. Use this for events not available via the NCF/EQ Timing API.
+
+**Enriching NCF-fetched cycling waypoints:** Run `bun scripts/enrich-cycling-waypoints.ts <event-id> <path/to/route.gpx>` — this samples 5 evenly-spaced waypoints from the GPX, fetches terrain altitudes from Open-Meteo, and writes them into `src/data/cycling-waypoints.json`.
 
 **Reporting issues or suggesting events:** Open an issue at [github.com/vegaasen/loypevaer/issues](https://github.com/vegaasen/loypevaer/issues).
 
