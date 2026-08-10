@@ -1,24 +1,7 @@
 {
-  "generatedAt": "2026-08-03T06:58:26.173Z",
+  "generatedAt": "2026-08-10T05:24:51.200Z",
   "source": "triatlonforbundet.no",
   "events": [
-    {
-      "id": "oslotri-norges-eldste-og-storste-triatlonarrangement",
-      "name": "Oslotri - Norges eldste og største triatlonarrangement!",
-      "discipline": "triathlon",
-      "officialDate": "2026-08-08",
-      "distance": 51,
-      "distanceLabel": "Standarddistanse (1.5km svøm / 40km sykkel / 10km løp)",
-      "region": "Oslo",
-      "url": "https://www.triatlonforbundet.no/terminliste/terminliste-2026/oslo-triatlon/",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Norges",
-          "lat": 59.9087342,
-          "lon": 10.7444419
-        }
-      ]
-    },
     {
       "id": "trondheim-triatlon",
       "name": "Trondheim triatlon",
