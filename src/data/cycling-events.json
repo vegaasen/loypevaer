@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T08:25:03.158Z",
+  "generatedAt": "2026-08-10T06:09:27.167Z",
   "source": "eqtiming.com / Norges Cykleforbund (organizationId=13)",
   "events": [
     {
@@ -71,7 +71,7 @@
       "distance": 50,
       "distanceLabel": "50 km",
       "sportLevel": "Tur",
-      "region": "Hol",
+      "region": "Buskerud",
       "url": "https://www.fat-viking.com/en",
       "waypoints": [
         {
@@ -525,33 +525,33 @@
       "waypoints": [
         {
           "label": "Start – Rena",
-          "lat": 61.133,
-          "lon": 11.377,
-          "altitude": 256
+          "lat": 61.132927,
+          "lon": 11.371898,
+          "altitude": 222
         },
         {
-          "label": "25% – Høsbjør",
-          "lat": 61.05,
-          "lon": 11.12,
-          "altitude": 620
+          "label": "Bringbusætra",
+          "lat": 61.105592,
+          "lon": 11.088106,
+          "altitude": 574
         },
         {
-          "label": "50% – Sjusjøen",
-          "lat": 61.248,
-          "lon": 10.578,
-          "altitude": 900
+          "label": "Øyungen",
+          "lat": 61.19255,
+          "lon": 10.93633,
+          "altitude": 764
         },
         {
-          "label": "75% – Nordseter",
-          "lat": 61.18,
-          "lon": 10.5,
-          "altitude": 710
+          "label": "Aksjøen",
+          "lat": 61.2181,
+          "lon": 10.766614,
+          "altitude": 841
         },
         {
           "label": "Mål – Lillehammer",
-          "lat": 61.115,
-          "lon": 10.466,
-          "altitude": 185
+          "lat": 61.12292,
+          "lon": 10.47356,
+          "altitude": 266
         }
       ]
     },
@@ -925,7 +925,7 @@
       "distance": 171.6,
       "distanceLabel": "171.6 km",
       "sportLevel": "UCI",
-      "region": "Ringerike",
+      "region": "Buskerud",
       "url": " ",
       "waypoints": [
         {
@@ -969,7 +969,7 @@
       "distanceLabel": "45 km",
       "sportLevel": "Tur",
       "region": "Innlandet",
-      "url": " ",
+      "url": "",
       "waypoints": [
         {
           "label": "Start – Stange",
@@ -1313,7 +1313,7 @@
       "distanceLabel": "100 km",
       "sportLevel": "NC",
       "region": "Innlandet",
-      "url": " ",
+      "url": "",
       "waypoints": [
         {
           "label": "Start/Mål – Romedal",
@@ -2368,24 +2368,6 @@
       ]
     },
     {
-      "id": "arctic-forest-gravel-race",
-      "name": "Arctic Forest Gravel Race",
-      "discipline": "gravel",
-      "officialDate": "2026-09-05",
-      "distance": 69,
-      "distanceLabel": "69 km",
-      "sportLevel": "Reg",
-      "region": "Nordland",
-      "url": "",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Bodø",
-          "lat": 67.2844313,
-          "lon": 14.3817503
-        }
-      ]
-    },
-    {
       "id": "smartdok-of300-km-solo",
       "name": "SmartDok OF300 km Solo",
       "discipline": "terreng",
@@ -2508,6 +2490,42 @@
           "label": "Start/Mål – Namsos",
           "lat": 64.4666372,
           "lon": 11.3345047
+        }
+      ]
+    },
+    {
+      "id": "mosjoen-gravel",
+      "name": "Mosjøen GRAVEL 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-08-16",
+      "distance": 59,
+      "distanceLabel": "59 km",
+      "sportLevel": "Tur",
+      "region": "Nordland",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Mosjøen",
+          "lat": 65.8375342,
+          "lon": 13.1892098
+        }
+      ]
+    },
+    {
+      "id": "klubbmesterskap-landevei-lukket-arendalcc",
+      "name": "Klubbmesterskap Landevei (Lukket) ArendalCC 2026",
+      "discipline": "landevei",
+      "officialDate": "2026-09-05",
+      "distance": 64,
+      "distanceLabel": "64 km",
+      "sportLevel": "Klubb",
+      "region": "Agder",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – strengereid",
+          "lat": 58.53040805,
+          "lon": 8.89137276
         }
       ]
     }
