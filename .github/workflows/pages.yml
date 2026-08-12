@@ -6,6 +6,15 @@ on:
     paths-ignore:
       - "**.md"
       - ".github/ISSUE_TEMPLATE/**"
+  workflow_run:
+    workflows:
+      - "Refresh running events"
+      - "Refresh cycling events"
+      - "Refresh triathlon events"
+      - "Refresh weather cache"
+      - "Refresh changelog"
+    types: [completed]
+    branches: [main]
 
 permissions:
   contents: read
@@ -19,6 +28,7 @@ concurrency:
 jobs:
   deploy:
     name: Deploy
+    if: ${{ github.event_name == 'push' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages

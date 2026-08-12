@@ -7,10 +7,20 @@ on:
       - "**.md"
       - ".github/ISSUE_TEMPLATE/**"
       - "infra/**"
+  workflow_run:
+    workflows:
+      - "Refresh running events"
+      - "Refresh cycling events"
+      - "Refresh triathlon events"
+      - "Refresh weather cache"
+      - "Refresh changelog"
+    types: [completed]
+    branches: [main]
 
 jobs:
   build:
     name: Build
+    if: ${{ github.event_name == 'push' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
