@@ -542,7 +542,7 @@ async function fetchYrHourlyBreakdown(waypoint: Waypoint, date: string): Promise
 async function fetchForecastWeather(
   waypoint: Waypoint,
   date: string
-): Promise<WeatherData> {
+): Promise<WeatherData | null> {
   // Fetch 2 days (prevDay + selectedDay) to compute the temperature trend.
   const startDate = prevCalendarDay(date);
 
@@ -563,8 +563,16 @@ async function fetchForecastWeather(
   // Index 0 = previous day, index 1 = selected day
   const d = json.daily;
   const i = 1;
+
+  // Open-Meteo accepts dates up to ~16 days but the model typically only covers
+  // ~14 days. When data is unavailable the API returns null for all fields.
+  // Return null so the caller can fall back to climate averages.
+  if (d.temperature_2m_max[i] === null || d.temperature_2m_max[i] === undefined) {
+    return null;
+  }
+
   const prevTempMax = d.temperature_2m_max[0] ?? null;
-  const todayTempMax = d.temperature_2m_max[i] ?? 0;
+  const todayTempMax = d.temperature_2m_max[i];
   const tempTrend =
     prevTempMax !== null
       ? Math.round((todayTempMax - prevTempMax) * 10) / 10
@@ -699,7 +707,12 @@ export async function fetchWeather(
     return fetchYrWeather(waypoint, date);
   }
   if (isForecastRange(date)) {
-    return fetchForecastWeather(waypoint, date);
+    const forecast = await fetchForecastWeather(waypoint, date);
+    // Open-Meteo accepts dates up to 16 days but the model may only cover ~14.
+    // When the API returns null for the target date, fall back to climate average.
+    if (forecast !== null) {
+      return forecast;
+    }
   }
   return fetchClimateAverage(waypoint, date);
 }

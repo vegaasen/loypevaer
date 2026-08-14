@@ -50,7 +50,7 @@ export function mockYrCompactResponse(utcDate: string) {
   };
 }
 
-/** A minimal Open-Meteo daily forecast response */
+/** A minimal Open-Meteo daily forecast response (1 day) */
 const mockDailyResponse = {
   daily: {
     temperature_2m_max: [18],
@@ -63,6 +63,22 @@ const mockDailyResponse = {
     weather_code: [2],
     precipitation_probability_max: [30],
     uv_index_max: [5],
+  },
+};
+
+/** A minimal Open-Meteo daily forecast response (2 days, for prevDay+date requests) */
+const mockDailyResponse2 = {
+  daily: {
+    temperature_2m_max: [17, 18],
+    temperature_2m_min: [9, 10],
+    apparent_temperature_max: [15, 16],
+    apparent_temperature_min: [7, 8],
+    precipitation_sum: [0.3, 0.5],
+    wind_speed_10m_max: [11, 12],
+    wind_direction_10m_dominant: [270, 270],
+    weather_code: [2, 2],
+    precipitation_probability_max: [25, 30],
+    uv_index_max: [4, 5],
   },
 };
 
@@ -154,6 +170,13 @@ export const handlers = [
         return HttpResponse.json(mockHourly24Response);
       }
       return HttpResponse.json(mockHourlyResponse);
+    }
+    // Daily forecast: two-day requests (prevDay + date) use 2-item arrays so
+    // index 1 is always populated and the null-fallback logic isn't triggered.
+    const start = url.searchParams.get("start_date");
+    const end = url.searchParams.get("end_date");
+    if (start !== end) {
+      return HttpResponse.json(mockDailyResponse2);
     }
     return HttpResponse.json(mockDailyResponse);
   }),
