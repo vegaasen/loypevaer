@@ -1,17 +1,23 @@
 import { describe, it, expect, vi, afterEach } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { RaceDayCountdown } from "./RaceDayCountdown";
+import type { WeatherData } from "../lib/weather";
 
-function renderCountdown(selectedDate: string, tempMax = 12, windSpeed = 4) {
+function renderCountdown(
+  selectedDate: string,
+  tempMax = 12,
+  windSpeed = 4,
+  source: WeatherData["source"] = "forecast"
+) {
   const weather = selectedDate
-    ? {
-        source: "forecast" as const,
+    ? ({
+        source,
         tempMax,
         tempMin: tempMax - 4,
         precipitation: 0,
         windSpeed,
         weatherCode: 1,
-      }
+      } as WeatherData)
     : null;
   return render(<RaceDayCountdown selectedDate={selectedDate} startWaypointWeather={weather} />);
 }
@@ -56,11 +62,12 @@ describe("RaceDayCountdown", () => {
     expect(screen.getByText(/Prognose klar/i)).toBeDefined();
   });
 
-  it("shows climate note when event is beyond 16 days", () => {
+  it("shows climate note when event is beyond forecast range", () => {
     mockToday("2025-05-01");
-    renderCountdown("2025-06-14");
+    renderCountdown("2025-06-14", 12, 4, "climate-average");
     expect(screen.getByText(/dager til start/i)).toBeDefined();
     expect(screen.getByText(/Prognose tilgjengelig/i)).toBeDefined();
+    expect(screen.getByText(/Klimasnitt start/i)).toBeDefined();
   });
 
   it("shows start waypoint temp and wind when forecast is available", () => {

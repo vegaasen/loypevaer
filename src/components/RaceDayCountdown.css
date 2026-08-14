@@ -22,3 +22,8 @@
   color: var(--accent);
   font-weight: 500;
 }
+
+.race-day-countdown__status--climate {
+  color: var(--text-muted, #555);
+  font-style: italic;
+}

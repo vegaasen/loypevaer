@@ -2,7 +2,8 @@ import "./RaceDayCountdown.css";
 import { useMemo, useState } from "react";
 import type { WeatherData } from "../lib/weather";
 
-const FORECAST_DAYS = 16;
+/** Reliable live-forecast horizon in days (Yr: 0-9, Open-Meteo: 10-~14) */
+const FORECAST_DAYS = 14;
 
 type Props = {
   selectedDate: string;
@@ -34,26 +35,44 @@ export function RaceDayCountdown({ selectedDate, startWaypointWeather }: Props) 
   }
 
   const daysLabel = diffDays === 1 ? "1 dag til start" : `${diffDays} dager til start`;
-  const forecastAvailable = diffDays <= FORECAST_DAYS;
+
+  // Use actual data source to determine what to show — not a hardcoded day count.
+  const isLiveForecast = startWaypointWeather?.source === "forecast";
+  const isClimateAverage = startWaypointWeather?.source === "climate-average";
 
   let statusText: string;
+  let statusText2: string | null = null;
   let statusClass = "race-day-countdown__status";
 
-  if (forecastAvailable) {
-    const summary = startWaypointWeather
-      ? buildStartSummary(startWaypointWeather)
-      : "";
+  if (isLiveForecast) {
+    const summary = startWaypointWeather ? buildStartSummary(startWaypointWeather) : "";
     statusText = `Prognose klar!${summary ? `  –  Start: ${summary}` : ""}`;
     statusClass += " race-day-countdown__status--ready";
+  } else if (isClimateAverage && startWaypointWeather) {
+    const daysUntilForecast = diffDays - FORECAST_DAYS;
+    statusText =
+      daysUntilForecast > 0
+        ? `Prognose tilgjengelig om ca. ${daysUntilForecast} dager`
+        : "Prognose kommer snart";
+    const summary = buildStartSummary(startWaypointWeather);
+    statusText2 = `Klimasnitt start: ${summary}`;
   } else {
     const daysUntilForecast = diffDays - FORECAST_DAYS;
-    statusText = `Prognose tilgjengelig om ca. ${daysUntilForecast} dager`;
+    statusText =
+      daysUntilForecast > 0
+        ? `Prognose tilgjengelig om ca. ${daysUntilForecast} dager`
+        : "Prognose kommer snart";
   }
 
   return (
     <div className="race-day-countdown">
       <span className="race-day-countdown__days">{daysLabel}</span>
       <span className={statusClass}>{statusText}</span>
+      {statusText2 && (
+        <span className="race-day-countdown__status race-day-countdown__status--climate">
+          {statusText2}
+        </span>
+      )}
     </div>
   );
 }
