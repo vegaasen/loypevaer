@@ -1,262 +1,7 @@
 {
-  "generatedAt": "2026-08-10T06:00:44.893Z",
+  "generatedAt": "2026-08-17T05:13:31.340Z",
   "source": "racedays.run",
   "events": [
-    {
-      "id": "orkland-energimila-2026",
-      "name": "Orkland Energimila 2026",
-      "discipline": "løping",
-      "officialDate": "2026-08-12",
-      "distance": 10,
-      "distanceLabel": "10 km",
-      "region": "Trøndelag",
-      "url": "https://www.racedays.run/event/orkland-energimila-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Orkland",
-          "lat": 63.2812718,
-          "lon": 9.663568
-        }
-      ]
-    },
-    {
-      "id": "stranda-fjord-trail-race-2026",
-      "name": "Stranda Fjord Trail Race 2026",
-      "discipline": "løping",
-      "officialDate": "2026-08-12",
-      "distance": 25,
-      "distanceLabel": "25 km",
-      "region": "Møre og Romsdal",
-      "url": "https://www.racedays.run/event/stranda-fjord-trail-race-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Stranda",
-          "lat": 62.1678462,
-          "lon": 6.9302137
-        }
-      ]
-    },
-    {
-      "id": "sankthanshaugen-5000m-2026",
-      "name": "Sankthanshaugen 5000m 2026",
-      "discipline": "løping",
-      "officialDate": "2026-08-14",
-      "distance": 5,
-      "distanceLabel": "5 km",
-      "region": "Oslo",
-      "url": "https://www.racedays.run/event/sankthanshaugen-5000-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Oslo",
-          "lat": 59.9133301,
-          "lon": 10.7389701
-        }
-      ]
-    },
-    {
-      "id": "blueslopet-2026",
-      "name": "Bluesløpet 2026",
-      "discipline": "løping",
-      "officialDate": "2026-08-15",
-      "distance": 10,
-      "distanceLabel": "10 km",
-      "region": "Telemark",
-      "url": "https://www.racedays.run/event/blueslopet-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Notodden",
-          "lat": 59.6871024,
-          "lon": 9.1508082
-        }
-      ]
-    },
-    {
-      "id": "senja-skyrace-2026",
-      "name": "Senja Skyrace 2026",
-      "discipline": "løping",
-      "officialDate": "2026-08-15",
-      "distance": 24.4,
-      "distanceLabel": "24.4 km",
-      "region": "Norge",
-      "url": "https://www.racedays.run/event/senja-skyrace-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Senja",
-          "lat": 69.3039795,
-          "lon": 17.4590833
-        }
-      ]
-    },
-    {
-      "id": "christian-frederik-lopet-2026",
-      "name": "Christian Frederik-løpet 2026",
-      "discipline": "løping",
-      "officialDate": "2026-08-15",
-      "distance": 10,
-      "distanceLabel": "10 km",
-      "region": "Østfold",
-      "url": "https://www.racedays.run/event/christian-frederik-lopet-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Moss",
-          "lat": 59.4146675,
-          "lon": 10.6596578
-        }
-      ]
-    },
-    {
-      "id": "geilo-trail-run-2026",
-      "name": "Geilo Trail Run 2026",
-      "discipline": "løping",
-      "officialDate": "2026-08-15",
-      "distance": 30,
-      "distanceLabel": "30 km",
-      "region": "Hol",
-      "url": "https://www.racedays.run/event/geilo-trail-run-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Hol",
-          "lat": 60.6036849,
-          "lon": 8.0223605
-        }
-      ]
-    },
-    {
-      "id": "hoyjord-rundt-og-rundt-2026",
-      "name": "Høyjord Rundt og Rundt 2026",
-      "discipline": "løping",
-      "officialDate": "2026-08-15",
-      "distance": 22,
-      "distanceLabel": "Halvmaraton (~22.0 km)",
-      "region": "Vestfold",
-      "url": "https://www.racedays.run/event/hoyjord-rundt-og-rundt-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Sandefjord",
-          "lat": 59.0799004,
-          "lon": 10.2804322
-        }
-      ]
-    },
-    {
-      "id": "langhuslopet-2026",
-      "name": "Langhusløpet 2026",
-      "discipline": "løping",
-      "officialDate": "2026-08-15",
-      "distance": 10,
-      "distanceLabel": "10 km",
-      "region": "Akershus",
-      "url": "https://www.racedays.run/event/langhuslopet-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Nordre Follo",
-          "lat": 59.7289761,
-          "lon": 10.8928692
-        }
-      ]
-    },
-    {
-      "id": "randaberg-backyard-ultra-2026",
-      "name": "Randaberg Backyard Ultra 2026",
-      "discipline": "løping",
-      "officialDate": "2026-08-15",
-      "distance": 6.7,
-      "distanceLabel": "6.7 km",
-      "region": "Rogaland",
-      "url": "https://www.racedays.run/event/randaberg-backyard-ultra-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Randaberg",
-          "lat": 58.9994464,
-          "lon": 5.6165674
-        }
-      ]
-    },
-    {
-      "id": "romerikes-raeste-2026",
-      "name": "Romerikes Råeste 2026",
-      "discipline": "løping",
-      "officialDate": "2026-08-15",
-      "distance": 10,
-      "distanceLabel": "10 km",
-      "region": "Akershus",
-      "url": "https://www.racedays.run/event/romerikes-raaeste-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Nannestad",
-          "lat": 60.2267034,
-          "lon": 10.9409407
-        }
-      ]
-    },
-    {
-      "id": "s-mi-maraton-2026",
-      "name": "Sámi Maraton 2026",
-      "discipline": "løping",
-      "officialDate": "2026-08-15",
-      "distance": 21.1,
-      "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Finnmark",
-      "url": "https://www.racedays.run/event/sami-maraton-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Tana",
-          "lat": 70.2823342,
-          "lon": 27.8913272
-        }
-      ]
-    },
-    {
-      "id": "trysil-lopet-2026",
-      "name": "Trysil-løpet 2026",
-      "discipline": "løping",
-      "officialDate": "2026-08-15",
-      "distance": 10,
-      "distanceLabel": "10 km",
-      "region": "Innlandet",
-      "url": "https://www.racedays.run/event/trysil-lopet-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Trysil",
-          "lat": 61.3561476,
-          "lon": 12.3670225
-        }
-      ]
-    },
-    {
-      "id": "valle-skyrace-2026",
-      "name": "Valle Skyrace 2026",
-      "discipline": "løping",
-      "officialDate": "2026-08-15",
-      "distance": 26,
-      "distanceLabel": "26 km",
-      "region": "Agder",
-      "url": "https://www.racedays.run/event/valle-skyrace-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Valle",
-          "lat": 59.1690717,
-          "lon": 7.4247694
-        }
-      ]
-    },
-    {
-      "id": "botnantrampen-2026",
-      "name": "Botnantrampen 2026",
-      "discipline": "løping",
-      "officialDate": "2026-08-16",
-      "distance": 13.4,
-      "distanceLabel": "13.4 km",
-      "region": "Trøndelag",
-      "url": "https://www.racedays.run/event/botnantrampen-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Namsos",
-          "lat": 64.4666372,
-          "lon": 11.3345047
-        }
-      ]
-    },
     {
       "id": "sprek-elvelopet-2026",
       "name": "Sprek Elveløpet 2026",
@@ -298,7 +43,7 @@
       "officialDate": "2026-08-22",
       "distance": 21,
       "distanceLabel": "Halvmaraton (~21.0 km)",
-      "region": "Ringerike",
+      "region": "Buskerud",
       "url": "https://www.racedays.run/event/vikerfjell-challenge-2026",
       "waypoints": [
         {
@@ -1420,7 +1165,7 @@
       "officialDate": "2026-09-19",
       "distance": 5,
       "distanceLabel": "5 km",
-      "region": "Ringerike",
+      "region": "Buskerud",
       "url": "https://www.racedays.run/event/soknalopet-2026",
       "waypoints": [
         {
@@ -2026,6 +1771,23 @@
       ]
     },
     {
+      "id": "musdal-opp-2026",
+      "name": "Musdal Opp 2026",
+      "discipline": "løping",
+      "officialDate": "2026-10-10",
+      "distance": 8.7,
+      "distanceLabel": "8.7 km",
+      "region": "Innlandet",
+      "url": "https://www.racedays.run/event/musdal-opp-2026",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Øyer",
+          "lat": 61.3273517,
+          "lon": 10.5040017
+        }
+      ]
+    },
+    {
       "id": "nm-terrenglop-lang-loype-2026",
       "name": "NM terrengløp, lang løype 2026",
       "discipline": "løping",
@@ -2294,23 +2056,6 @@
           "label": "Start/Mål – Bærum",
           "lat": 59.9289639,
           "lon": 10.4997108
-        }
-      ]
-    },
-    {
-      "id": "musdal-opp-2026",
-      "name": "Musdal Opp 2026",
-      "discipline": "løping",
-      "officialDate": "2026-10-24",
-      "distance": 8.7,
-      "distanceLabel": "8.7 km",
-      "region": "Innlandet",
-      "url": "https://www.racedays.run/event/musdal-opp-2026",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Øyer",
-          "lat": 61.3273517,
-          "lon": 10.5040017
         }
       ]
     },
@@ -2695,7 +2440,7 @@
       "officialDate": "2027-05-22",
       "distance": 5,
       "distanceLabel": "5 km",
-      "region": "Ringerike",
+      "region": "Buskerud",
       "url": "https://www.racedays.run/event/schjongs5ern-2027",
       "waypoints": [
         {
@@ -2923,6 +2668,74 @@
           "label": "Start/Mål – Sunnfjord",
           "lat": 61.4685824,
           "lon": 6.0491718
+        }
+      ]
+    },
+    {
+      "id": "stranda-fjord-trail-race-2027",
+      "name": "Stranda Fjord Trail Race 2027",
+      "discipline": "løping",
+      "officialDate": "2027-08-11",
+      "distance": 25,
+      "distanceLabel": "25 km",
+      "region": "Møre og Romsdal",
+      "url": "https://www.racedays.run/event/stranda-fjord-trail-race-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Stranda",
+          "lat": 62.1678462,
+          "lon": 6.9302137
+        }
+      ]
+    },
+    {
+      "id": "blueslopet-2027",
+      "name": "Bluesløpet 2027",
+      "discipline": "løping",
+      "officialDate": "2027-08-14",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "region": "Telemark",
+      "url": "https://www.racedays.run/event/blueslopet-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Notodden",
+          "lat": 59.6871024,
+          "lon": 9.1508082
+        }
+      ]
+    },
+    {
+      "id": "romerikes-raeste-2027",
+      "name": "Romerikes Råeste 2027",
+      "discipline": "løping",
+      "officialDate": "2027-08-14",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "region": "Akershus",
+      "url": "https://www.racedays.run/event/romerikes-raaeste-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Nannestad",
+          "lat": 60.2267034,
+          "lon": 10.9409407
+        }
+      ]
+    },
+    {
+      "id": "s-mi-maraton-2027",
+      "name": "Sámi Maraton 2027",
+      "discipline": "løping",
+      "officialDate": "2027-08-21",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Finnmark",
+      "url": "https://www.racedays.run/event/sami-maraton-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Tana",
+          "lat": 70.2823342,
+          "lon": 27.8913272
         }
       ]
     },
