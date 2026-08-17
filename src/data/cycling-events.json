@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T06:09:27.167Z",
+  "generatedAt": "2026-08-17T05:31:19.101Z",
   "source": "eqtiming.com / Norges Cykleforbund (organizationId=13)",
   "events": [
     {
@@ -71,7 +71,7 @@
       "distance": 50,
       "distanceLabel": "50 km",
       "sportLevel": "Tur",
-      "region": "Buskerud",
+      "region": "Hol",
       "url": "https://www.fat-viking.com/en",
       "waypoints": [
         {
@@ -907,7 +907,7 @@
       "distance": 158,
       "distanceLabel": "158 km",
       "sportLevel": "UCI",
-      "region": "Buskerud",
+      "region": "Hole",
       "url": " ",
       "waypoints": [
         {
@@ -2338,7 +2338,7 @@
       "officialDate": "2026-08-23",
       "distance": 50,
       "distanceLabel": "50 km",
-      "sportLevel": "",
+      "sportLevel": "NCF",
       "region": "Akershus",
       "url": "",
       "waypoints": [
@@ -2356,7 +2356,7 @@
       "officialDate": "2026-08-22",
       "distance": 50,
       "distanceLabel": "50 km",
-      "sportLevel": "",
+      "sportLevel": "NCF",
       "region": "Akershus",
       "url": "",
       "waypoints": [
@@ -2371,7 +2371,7 @@
       "id": "smartdok-of300-km-solo",
       "name": "SmartDok OF300 km Solo",
       "discipline": "terreng",
-      "officialDate": "2027-08-05",
+      "officialDate": "2027-07-29",
       "distance": 300,
       "distanceLabel": "300 km",
       "sportLevel": "Tur",
@@ -2389,7 +2389,7 @@
       "id": "smartdok-of300-km-team",
       "name": "SmartDok OF300 km team",
       "discipline": "terreng",
-      "officialDate": "2027-08-05",
+      "officialDate": "2027-07-29",
       "distance": 300,
       "distanceLabel": "300 km",
       "sportLevel": "Tur",
@@ -2407,7 +2407,7 @@
       "id": "norrona-of700-km-solo",
       "name": "Norrøna OF700 km Solo",
       "discipline": "terreng",
-      "officialDate": "2027-08-02",
+      "officialDate": "2027-07-26",
       "distance": 700,
       "distanceLabel": "700 km",
       "sportLevel": "Tur",
@@ -2425,7 +2425,7 @@
       "id": "norrona-of700-km-team",
       "name": "Norrøna OF700 km Team",
       "discipline": "terreng",
-      "officialDate": "2027-08-02",
+      "officialDate": "2027-07-26",
       "distance": 700,
       "distanceLabel": "700 km",
       "sportLevel": "Tur",
@@ -2443,7 +2443,7 @@
       "id": "snn1-of150-km-solo",
       "name": "SNN1 OF150 km Solo",
       "discipline": "terreng",
-      "officialDate": "2027-08-02",
+      "officialDate": "2027-07-24",
       "distance": 150,
       "distanceLabel": "150 km",
       "sportLevel": "Tur",
@@ -2458,8 +2458,8 @@
       ]
     },
     {
-      "id": "norrona-of700-km-solo-kopi",
-      "name": "Norrøna OF700 km Solo_kopi",
+      "id": "norrona-of700-km-sol0",
+      "name": "Norrøna OF700 km Sol0",
       "discipline": "terreng",
       "officialDate": "2028-08-31",
       "distance": 700,
@@ -2512,8 +2512,8 @@
       ]
     },
     {
-      "id": "klubbmesterskap-landevei-lukket-arendalcc",
-      "name": "Klubbmesterskap Landevei (Lukket) ArendalCC 2026",
+      "id": "acc-km-2026-landevei-lukket",
+      "name": "ACC KM-2026 Landevei (Lukket)",
       "discipline": "landevei",
       "officialDate": "2026-09-05",
       "distance": 64,
