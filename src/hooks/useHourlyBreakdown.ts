@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
+import type { HourlyEntry, Waypoint } from "../lib/weather";
 import { fetchHourlyBreakdown } from "../lib/weather";
-import type { Waypoint, HourlyEntry } from "../lib/weather";
 
 export type HourlyBreakdownResult = {
   data: HourlyEntry[] | undefined;
@@ -19,7 +19,7 @@ export function useHourlyBreakdown(
   waypoint: Waypoint,
   date: string | null | undefined,
   enabled: boolean,
-  arrivalDatetime?: string | null
+  arrivalDatetime?: string | null,
 ): HourlyBreakdownResult {
   const fetchDate = arrivalDatetime?.split("T")[0] ?? date;
   const result = useQuery({

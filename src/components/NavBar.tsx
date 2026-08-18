@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
-import { allArrangements as ritt, type Discipline, type RittEntry } from "../lib/arrangements";
-import { DISCIPLINE_LABEL_WITH_EMOJI } from "../lib/disciplines";
+import { type Discipline, type RittEntry, allArrangements as ritt } from "../lib/arrangements";
 import { parseDateLocal } from "../lib/dates";
+import { DISCIPLINE_LABEL_WITH_EMOJI } from "../lib/disciplines";
 
 type Race = RittEntry;
 
@@ -11,13 +11,13 @@ const DISCIPLINE_ORDER: Discipline[] = ["terreng", "landevei", "langrenn", "tria
 
 function groupByDiscipline(races: Race[]): Map<Discipline, Race[]> {
   const sorted = [...races].sort(
-    (a, b) => parseDateLocal(a.officialDate).getTime() - parseDateLocal(b.officialDate).getTime()
+    (a, b) => parseDateLocal(a.officialDate).getTime() - parseDateLocal(b.officialDate).getTime(),
   );
   const grouped = new Map<Discipline, Race[]>();
   for (const discipline of DISCIPLINE_ORDER) grouped.set(discipline, []);
   for (const race of sorted) {
     if (grouped.has(race.discipline)) {
-      grouped.get(race.discipline)!.push(race);
+      grouped.get(race.discipline)?.push(race);
     }
   }
   return grouped;
@@ -83,7 +83,10 @@ export function NavBar() {
             Kortere løp
           </Link>
           <span className="site-nav__divider" aria-hidden="true" />
-          <Link to="/gpx" className={`site-nav__gpx-link${isGpxPage ? " site-nav__gpx-link--active" : ""}`}>
+          <Link
+            to="/gpx"
+            className={`site-nav__gpx-link${isGpxPage ? " site-nav__gpx-link--active" : ""}`}
+          >
             Din egen løype
           </Link>
           <span className="site-nav__divider" aria-hidden="true" />
@@ -98,7 +101,7 @@ export function NavBar() {
             </option>
             {DISCIPLINE_ORDER.filter((d) => (grouped.get(d)?.length ?? 0) > 0).map((d) => (
               <optgroup key={d} label={DISCIPLINE_LABEL_WITH_EMOJI[d]}>
-                {grouped.get(d)!.map((r) => (
+                {grouped.get(d)?.map((r) => (
                   <option key={r.id} value={r.id}>
                     {r.name} — {r.distance} km
                   </option>
@@ -112,7 +115,9 @@ export function NavBar() {
           className={`site-nav__hamburger${menuOpen ? " site-nav__hamburger--open" : ""}`}
           aria-label={menuOpen ? "Lukk meny" : "Åpne meny"}
           aria-expanded={menuOpen}
-          onClick={() => setMenuOpenAt((prev) => (prev === location.pathname ? null : location.pathname))}
+          onClick={() =>
+            setMenuOpenAt((prev) => (prev === location.pathname ? null : location.pathname))
+          }
         >
           <span />
           <span />
@@ -155,7 +160,7 @@ export function NavBar() {
             </option>
             {DISCIPLINE_ORDER.filter((d) => (grouped.get(d)?.length ?? 0) > 0).map((d) => (
               <optgroup key={d} label={DISCIPLINE_LABEL_WITH_EMOJI[d]}>
-                {grouped.get(d)!.map((r) => (
+                {grouped.get(d)?.map((r) => (
                   <option key={r.id} value={r.id}>
                     {r.name} — {r.distance} km
                   </option>

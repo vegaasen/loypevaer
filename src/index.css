@@ -8,15 +8,14 @@
   --bg: #f7f5ef;
   --border: #c8c9bc;
   --code-bg: #edecea;
-  --accent: #3d6b35;           /* moss green */
-  --accent-warm: #c0542a;      /* autumn orange */
-  --accent-teal: #c4d2ce;      /* fjord teal */
-  --accent-yellow: #e8c84a;    /* birch yellow */
+  --accent: #3d6b35; /* moss green */
+  --accent-warm: #c0542a; /* autumn orange */
+  --accent-teal: #c4d2ce; /* fjord teal */
+  --accent-yellow: #e8c84a; /* birch yellow */
   --accent-bg: rgba(61, 107, 53, 0.1);
   --accent-border: rgba(61, 107, 53, 0.4);
   --social-bg: rgba(237, 236, 234, 0.5);
-  --shadow:
-    rgba(26, 51, 0, 0.1) 0 10px 15px -3px, rgba(26, 51, 0, 0.05) 0 4px 6px -2px;
+  --shadow: rgba(26, 51, 0, 0.1) 0 10px 15px -3px, rgba(26, 51, 0, 0.05) 0 4px 6px -2px;
   --shadow-sm: rgba(26, 51, 0, 0.07) 0 2px 8px;
   --shadow-warm: 0 8px 32px rgba(232, 200, 74, 0.18), 0 2px 8px rgba(26, 51, 0, 0.08);
   --nav-height: 64px;
@@ -36,11 +35,11 @@
   --space-xl: 48px;
   --warning: #c0542a;
 
-  --sans: 'Inter Variable', system-ui, 'Segoe UI', sans-serif;
-  --heading: 'Playfair Display', Georgia, serif;
-  --mono: 'Roboto Mono Variable', ui-monospace, Consolas, monospace;
+  --sans: "Inter Variable", system-ui, "Segoe UI", sans-serif;
+  --heading: "Playfair Display", Georgia, serif;
+  --mono: "Roboto Mono Variable", ui-monospace, Consolas, monospace;
 
-  font: 18px/150% var(--sans);
+  font: 18px / 150% var(--sans);
   letter-spacing: 0.12px;
   color-scheme: light dark;
   color: var(--text);
@@ -70,8 +69,7 @@
     --accent-bg: rgba(127, 200, 112, 0.12);
     --accent-border: rgba(127, 200, 112, 0.35);
     --social-bg: rgba(25, 34, 16, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.5) 0 10px 15px -3px, rgba(0, 0, 0, 0.3) 0 4px 6px -2px;
+    --shadow: rgba(0, 0, 0, 0.5) 0 10px 15px -3px, rgba(0, 0, 0, 0.3) 0 4px 6px -2px;
     --shadow-sm: rgba(0, 0, 0, 0.35) 0 2px 8px;
     --shadow-warm: 0 8px 32px rgba(212, 168, 48, 0.12), 0 2px 8px rgba(0, 0, 0, 0.3);
     --text-muted: #6a7a5e;
@@ -106,7 +104,9 @@ h3 {
   color: var(--text-h);
 }
 
-h1 { font-weight: 800; }
+h1 {
+  font-weight: 800;
+}
 
 h1 {
   font-size: 88px;
@@ -249,7 +249,9 @@ code {
   cursor: pointer;
   max-width: 280px;
   width: 100%;
-  transition: border-color 0.15s, box-shadow 0.15s;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
 
   &:hover {
     border-color: var(--accent-border);
@@ -280,7 +282,9 @@ code {
   text-decoration: none;
   white-space: nowrap;
   flex-shrink: 0;
-  transition: background 0.15s, color 0.15s;
+  transition:
+    background 0.15s,
+    color 0.15s;
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -312,8 +316,8 @@ code {
 }
 
 .site-nav__gpx-link--active {
-  color: var(--accent) !important;
-  border-bottom-color: var(--accent) !important;
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
 .site-nav__divider {
@@ -348,7 +352,9 @@ code {
     height: 2px;
     background: var(--text-h);
     border-radius: 2px;
-    transition: transform 0.2s, opacity 0.2s;
+    transition:
+      transform 0.2s,
+      opacity 0.2s;
     transform-origin: center;
   }
 
@@ -402,7 +408,9 @@ code {
   text-decoration: none;
   padding: 10px 12px;
   border-radius: calc(var(--radius) - 4px);
-  transition: background 0.12s, color 0.12s;
+  transition:
+    background 0.12s,
+    color 0.12s;
 
   &:hover {
     background: var(--accent-bg);
@@ -411,7 +419,7 @@ code {
 }
 
 .site-nav__mobile-link--active {
-  color: var(--accent) !important;
+  color: var(--accent);
   background: var(--accent-bg);
 }
 
@@ -422,8 +430,8 @@ code {
 }
 
 .site-nav__mobile-select {
-  max-width: 100% !important;
-  font-size: 15px !important;
+  max-width: 100%;
+  font-size: 15px;
 }
 
 .gpx-upload {
@@ -448,7 +456,9 @@ code {
   padding: 48px 24px;
   text-align: center;
   cursor: pointer;
-  transition: border-color 0.15s, background 0.15s;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -521,7 +531,9 @@ code {
   border-radius: calc(var(--radius) - 2px);
   cursor: pointer;
   white-space: nowrap;
-  transition: background 0.15s, color 0.15s;
+  transition:
+    background 0.15s,
+    color 0.15s;
 
   &:hover:not(:disabled) {
     background: transparent;
@@ -616,7 +628,9 @@ code {
   font-weight: 500;
   color: var(--text-muted);
   padding: 10px 8px;
-  transition: background 0.15s, color 0.15s;
+  transition:
+    background 0.15s,
+    color 0.15s;
 
   &:hover {
     background: color-mix(in srgb, var(--accent) 8%, transparent);
@@ -676,7 +690,9 @@ code {
   border: 1.5px solid var(--border);
   border-radius: calc(var(--radius) - 2px);
   cursor: pointer;
-  transition: border-color 0.15s, color 0.15s;
+  transition:
+    border-color 0.15s,
+    color 0.15s;
 
   &:hover {
     border-color: var(--accent);
@@ -761,7 +777,8 @@ code {
   align-items: center;
   gap: 8px;
 
-  &::before, &::after {
+  &::before,
+  &::after {
     content: "";
     display: inline-block;
     width: 28px;
@@ -774,7 +791,8 @@ code {
     font-size: 11px;
     letter-spacing: 0.07em;
 
-    &::before, &::after {
+    &::before,
+    &::after {
       display: none;
     }
   }
@@ -823,7 +841,10 @@ code {
   border-radius: var(--radius);
   padding: 14px 32px;
   text-decoration: none;
-  transition: background 0.15s, color 0.15s, transform 0.12s;
+  transition:
+    background 0.15s,
+    color 0.15s,
+    transform 0.12s;
 
   &:hover {
     background: transparent;
@@ -852,11 +873,26 @@ code {
 /* ─── Hero cycling weather word ─────────────────────────────────────── */
 
 @keyframes heroWord {
-  0%        { opacity: 0; transform: translateY(60%); }
-  6%        { opacity: 1; transform: translateY(0); }
-  22%       { opacity: 1; transform: translateY(0); }
-  28%       { opacity: 0; transform: translateY(-60%); }
-  100%      { opacity: 0; transform: translateY(-60%); }
+  0% {
+    opacity: 0;
+    transform: translateY(60%);
+  }
+  6% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  22% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  28% {
+    opacity: 0;
+    transform: translateY(-60%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-60%);
+  }
 }
 
 .hero-weather-word {
@@ -876,10 +912,18 @@ code {
   animation: heroWord 14s ease-in-out infinite;
 }
 
-.hero-weather-word > span:nth-child(1) { animation-delay: 0s; }
-.hero-weather-word > span:nth-child(2) { animation-delay: 3.5s; }
-.hero-weather-word > span:nth-child(3) { animation-delay: 7s; }
-.hero-weather-word > span:nth-child(4) { animation-delay: 10.5s; }
+.hero-weather-word > span:nth-child(1) {
+  animation-delay: 0s;
+}
+.hero-weather-word > span:nth-child(2) {
+  animation-delay: 3.5s;
+}
+.hero-weather-word > span:nth-child(3) {
+  animation-delay: 7s;
+}
+.hero-weather-word > span:nth-child(4) {
+  animation-delay: 10.5s;
+}
 
 @media (prefers-reduced-motion: reduce) {
   .hero-weather-word > span {
@@ -903,7 +947,9 @@ code {
 .home-page__feature.js-animate {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.55s ease, transform 0.55s ease;
+  transition:
+    opacity 0.55s ease,
+    transform 0.55s ease;
   will-change: opacity, transform;
 }
 
@@ -940,7 +986,9 @@ code {
 .home-page__feature--reverse {
   @media (min-width: 901px) {
     direction: rtl;
-    & > * { direction: ltr; }
+    & > * {
+      direction: ltr;
+    }
   }
 }
 
@@ -1206,7 +1254,10 @@ code {
   border-radius: var(--radius);
   padding: 14px 28px;
   text-decoration: none;
-  transition: background 0.15s, color 0.15s, transform 0.12s;
+  transition:
+    background 0.15s,
+    color 0.15s,
+    transform 0.12s;
 
   &:hover {
     background: transparent;
@@ -1229,8 +1280,7 @@ code {
   text-align: left;
   border-bottom: 1px solid var(--border);
   border-top: 1px solid var(--border);
-  background:
-    radial-gradient(ellipse 60% 120% at 0% 0%, var(--accent-bg) 0%, transparent 70%);
+  background: radial-gradient(ellipse 60% 120% at 0% 0%, var(--accent-bg) 0%, transparent 70%);
 
   @media (max-width: 1024px) {
     padding: 20px 16px 20px;
@@ -1311,7 +1361,9 @@ code {
   color: var(--text);
   font-size: 14px;
   min-width: 200px;
-  transition: border-color 0.15s, box-shadow 0.15s;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
 
   &::placeholder {
     color: var(--text);
@@ -1348,7 +1400,10 @@ code {
   cursor: pointer;
   white-space: nowrap;
   flex-shrink: 0;
-  transition: border-color 0.15s, background 0.15s, color 0.15s;
+  transition:
+    border-color 0.15s,
+    background 0.15s,
+    color 0.15s;
 
   &:hover {
     border-color: var(--accent-border);
@@ -1391,7 +1446,9 @@ code {
   font-size: 14px;
   font-family: inherit;
   cursor: pointer;
-  transition: border-color 0.15s, box-shadow 0.15s;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
   appearance: none;
   -webkit-appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='currentColor' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
@@ -1609,7 +1666,10 @@ code {
   border-radius: var(--radius);
   text-decoration: none;
   color: inherit;
-  transition: border-color 0.15s, box-shadow 0.15s, transform 0.12s;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s,
+    transform 0.12s;
 
   &:hover {
     border-color: var(--accent-border);
@@ -1625,7 +1685,9 @@ code {
 .ritt-card--past {
   opacity: 0.45;
   filter: saturate(0.35);
-  transition: opacity 0.15s, filter 0.15s;
+  transition:
+    opacity 0.15s,
+    filter 0.15s;
 }
 
 .ritt-card--past:hover {
@@ -1692,7 +1754,9 @@ code {
 .ritt-card--cancelled {
   opacity: 0.7;
   filter: saturate(0.5) sepia(0.45) hue-rotate(5deg);
-  transition: opacity 0.15s, filter 0.15s;
+  transition:
+    opacity 0.15s,
+    filter 0.15s;
 }
 
 .ritt-card--cancelled:hover {
@@ -1976,7 +2040,9 @@ code {
   cursor: pointer;
   border-radius: 4px;
   opacity: 0.5;
-  transition: opacity 0.15s, background 0.12s;
+  transition:
+    opacity 0.15s,
+    background 0.12s;
   flex-shrink: 0;
 
   &:hover {
@@ -2072,7 +2138,9 @@ code {
   box-shadow: var(--shadow-sm);
   text-decoration: none;
   color: inherit;
-  transition: transform 0.15s, box-shadow 0.15s;
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
 
   &:hover {
     transform: translateY(-3px);
@@ -2343,7 +2411,9 @@ code {
   border-bottom: 1px solid var(--border);
   text-decoration: none;
   color: inherit;
-  transition: background 0.12s, border-color 0.12s;
+  transition:
+    background 0.12s,
+    border-color 0.12s;
 
   &:last-child {
     border-bottom: none;
@@ -2373,7 +2443,9 @@ code {
 .running-row--past {
   opacity: 0.45;
   filter: saturate(0.35);
-  transition: opacity 0.15s, filter 0.15s;
+  transition:
+    opacity 0.15s,
+    filter 0.15s;
 
   &:hover {
     opacity: 0.75;
@@ -2648,15 +2720,24 @@ code {
 .ritt-page__section-skeleton {
   height: 200px;
   border-radius: 8px;
-  background: linear-gradient(90deg, var(--bg-card, #f0ede7) 25%, color-mix(in srgb, var(--bg-card, #f0ede7) 60%, transparent) 50%, var(--bg-card, #f0ede7) 75%);
+  background: linear-gradient(
+    90deg,
+    var(--bg-card, #f0ede7) 25%,
+    color-mix(in srgb, var(--bg-card, #f0ede7) 60%, transparent) 50%,
+    var(--bg-card, #f0ede7) 75%
+  );
   background-size: 200% 100%;
   animation: section-skeleton-shimmer 1.4s ease-in-out infinite;
   margin: 8px 0;
 }
 
 @keyframes section-skeleton-shimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2732,6 +2813,7 @@ code {
   color: var(--text-muted);
 }
 
+/* biome-ignore lint/suspicious/noEmptyBlock: placeholder rule kept for future use */
 .ritt-page__actions-date {
 }
 
@@ -2758,7 +2840,9 @@ code {
 .ritt-page__meta-link {
   color: var(--accent);
   text-decoration: none;
-  &:hover { text-decoration: underline; }
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .ritt-page__pending-badge {
@@ -2788,7 +2872,10 @@ code {
   border-radius: var(--radius);
   padding: 4px 10px;
   cursor: pointer;
-  transition: border-color 0.15s, background 0.12s, color 0.12s;
+  transition:
+    border-color 0.15s,
+    background 0.12s,
+    color 0.12s;
 
   &:hover {
     border-color: var(--accent-border);
@@ -2917,7 +3004,9 @@ code {
   background: var(--code-bg);
   transition: background 0.12s;
 
-  &::-webkit-details-marker { display: none; }
+  &::-webkit-details-marker {
+    display: none;
+  }
 
   &::before {
     content: "▶";
@@ -2976,8 +3065,8 @@ details[open] .ritt-map__summary::before {
 
 /* Leaflet marker override */
 .ritt-map__marker {
-  background: transparent !important;
-  border: none !important;
+  background: transparent;
+  border: none;
 }
 
 .ritt-map__marker-dot {
@@ -2985,7 +3074,7 @@ details[open] .ritt-map__summary::before {
   height: 14px;
   border-radius: 50%;
   border: 2px solid #fff;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 /* ─── Historical weather table ───────────────────────────────────────── */
@@ -3010,7 +3099,9 @@ details[open] .ritt-map__summary::before {
   background: var(--code-bg);
   transition: background 0.12s;
 
-  &::-webkit-details-marker { display: none; }
+  &::-webkit-details-marker {
+    display: none;
+  }
 
   &::before {
     content: "▶";
@@ -3051,7 +3142,9 @@ details[open] .history-table__summary::before {
   text-align: right;
   white-space: nowrap;
 
-  &:first-child { text-align: left; }
+  &:first-child {
+    text-align: left;
+  }
 }
 
 .history-table td {
@@ -3059,7 +3152,9 @@ details[open] .history-table__summary::before {
   border-bottom: 1px solid var(--border);
   color: var(--text-h);
 
-  &:first-child { text-align: left; }
+  &:first-child {
+    text-align: left;
+  }
 }
 
 .history-table tbody tr:last-child td {
@@ -3077,11 +3172,11 @@ details[open] .history-table__summary::before {
 
 .history-table__icon {
   font-size: 18px;
-  text-align: center !important;
+  text-align: center;
 }
 
 .history-table__status {
-  text-align: center !important;
+  text-align: center;
   color: var(--text);
   font-style: italic;
 }
@@ -3197,16 +3292,8 @@ details[open] .history-table__summary::before {
 
   @media (max-width: 768px) {
     scroll-snap-type: x mandatory;
-    -webkit-mask-image: linear-gradient(
-      to right,
-      black calc(100% - 48px),
-      transparent 100%
-    );
-    mask-image: linear-gradient(
-      to right,
-      black calc(100% - 48px),
-      transparent 100%
-    );
+    -webkit-mask-image: linear-gradient(to right, black calc(100% - 48px), transparent 100%);
+    mask-image: linear-gradient(to right, black calc(100% - 48px), transparent 100%);
     /* Extend padding so last card isn't fully hidden by the fade */
     padding-right: 48px;
   }
@@ -3327,16 +3414,40 @@ details[open] .history-table__summary::before {
   display: inline-block;
 }
 
-.weather-card__uv--moderate  { background: #fef9c3; color: #854d0e; }
-.weather-card__uv--high      { background: #fed7aa; color: #9a3412; }
-.weather-card__uv--very-high { background: #fecaca; color: #7f1d1d; }
-.weather-card__uv--extreme   { background: #e9d5ff; color: #4c1d95; }
+.weather-card__uv--moderate {
+  background: #fef9c3;
+  color: #854d0e;
+}
+.weather-card__uv--high {
+  background: #fed7aa;
+  color: #9a3412;
+}
+.weather-card__uv--very-high {
+  background: #fecaca;
+  color: #7f1d1d;
+}
+.weather-card__uv--extreme {
+  background: #e9d5ff;
+  color: #4c1d95;
+}
 
 @media (prefers-color-scheme: dark) {
-  .weather-card__uv--moderate  { background: #422006; color: #fef08a; }
-  .weather-card__uv--high      { background: #431407; color: #fdba74; }
-  .weather-card__uv--very-high { background: #450a0a; color: #fca5a5; }
-  .weather-card__uv--extreme   { background: #2e1065; color: #d8b4fe; }
+  .weather-card__uv--moderate {
+    background: #422006;
+    color: #fef08a;
+  }
+  .weather-card__uv--high {
+    background: #431407;
+    color: #fdba74;
+  }
+  .weather-card__uv--very-high {
+    background: #450a0a;
+    color: #fca5a5;
+  }
+  .weather-card__uv--extreme {
+    background: #2e1065;
+    color: #d8b4fe;
+  }
 }
 
 /* ─── Road risk badge ────────────────────────────────────────────────── */
@@ -3349,14 +3460,32 @@ details[open] .history-table__summary::before {
   display: inline-block;
 }
 
-.weather-card__road-risk--ice   { background: #e0f2fe; color: #0c4a6e; }
-.weather-card__road-risk--slush { background: #fef3c7; color: #78350f; }
-.weather-card__road-risk--wet   { background: #f0f9ff; color: #164e63; }
+.weather-card__road-risk--ice {
+  background: #e0f2fe;
+  color: #0c4a6e;
+}
+.weather-card__road-risk--slush {
+  background: #fef3c7;
+  color: #78350f;
+}
+.weather-card__road-risk--wet {
+  background: #f0f9ff;
+  color: #164e63;
+}
 
 @media (prefers-color-scheme: dark) {
-  .weather-card__road-risk--ice   { background: #082f49; color: #bae6fd; }
-  .weather-card__road-risk--slush { background: #451a03; color: #fcd34d; }
-  .weather-card__road-risk--wet   { background: #083344; color: #a5f3fc; }
+  .weather-card__road-risk--ice {
+    background: #082f49;
+    color: #bae6fd;
+  }
+  .weather-card__road-risk--slush {
+    background: #451a03;
+    color: #fcd34d;
+  }
+  .weather-card__road-risk--wet {
+    background: #083344;
+    color: #a5f3fc;
+  }
 }
 
 .weather-card__loading,
@@ -3374,8 +3503,12 @@ details[open] .history-table__summary::before {
 
 /* Loading skeleton */
 @keyframes skeleton-shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 .weather-card__skeleton {
@@ -3389,12 +3522,7 @@ details[open] .history-table__summary::before {
   width: 36px;
   height: 36px;
   border-radius: 6px;
-  background: linear-gradient(
-    90deg,
-    var(--border) 25%,
-    var(--code-bg) 50%,
-    var(--border) 75%
-  );
+  background: linear-gradient(90deg, var(--border) 25%, var(--code-bg) 50%, var(--border) 75%);
   background-size: 200% 100%;
   animation: skeleton-shimmer 1.4s ease-in-out infinite;
 }
@@ -3402,19 +3530,22 @@ details[open] .history-table__summary::before {
 .weather-card__skeleton-line {
   height: 12px;
   border-radius: 4px;
-  background: linear-gradient(
-    90deg,
-    var(--border) 25%,
-    var(--code-bg) 50%,
-    var(--border) 75%
-  );
+  background: linear-gradient(90deg, var(--border) 25%, var(--code-bg) 50%, var(--border) 75%);
   background-size: 200% 100%;
   animation: skeleton-shimmer 1.4s ease-in-out infinite;
 }
 
-.weather-card__skeleton-line--wide   { width: 80%; }
-.weather-card__skeleton-line--medium { width: 60%; animation-delay: 0.1s; }
-.weather-card__skeleton-line--narrow { width: 45%; animation-delay: 0.2s; }
+.weather-card__skeleton-line--wide {
+  width: 80%;
+}
+.weather-card__skeleton-line--medium {
+  width: 60%;
+  animation-delay: 0.1s;
+}
+.weather-card__skeleton-line--narrow {
+  width: 45%;
+  animation-delay: 0.2s;
+}
 
 /* ─── Hourly breakdown toggle + panel ────────────────────────────────── */
 
@@ -3572,7 +3703,9 @@ details[open] .history-table__summary::before {
   background: var(--code-bg);
   transition: background 0.12s;
 
-  &::-webkit-details-marker { display: none; }
+  &::-webkit-details-marker {
+    display: none;
+  }
 
   &::before {
     content: "▶";
@@ -3690,7 +3823,9 @@ details[open] .elevation-profile__summary::before {
   background: var(--code-bg);
   transition: background 0.12s;
 
-  &::-webkit-details-marker { display: none; }
+  &::-webkit-details-marker {
+    display: none;
+  }
 
   &::before {
     content: "▶";
@@ -3805,7 +3940,9 @@ details[open] .gear-suggestion__summary::before {
   text-decoration: underline;
   text-underline-offset: 2px;
   opacity: 0.85;
-  &:hover { opacity: 1; }
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .date-picker__controls,
@@ -3840,7 +3977,9 @@ details[open] .gear-suggestion__summary::before {
   padding: 6px 10px;
   height: 38px;
   box-sizing: border-box;
-  transition: border-color 0.15s, box-shadow 0.15s;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
 
   &:focus {
     outline: none;
@@ -4004,7 +4143,9 @@ details[open] .gear-suggestion__summary::before {
 .site-footer a {
   color: var(--accent);
   text-decoration: none;
-  &:hover { text-decoration: underline; }
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 /* ─── PWA reload prompt ──────────────────────────────────────────────── */
@@ -4037,15 +4178,21 @@ details[open] .gear-suggestion__summary::before {
   font-size: 0.875rem;
   cursor: pointer;
   transition: background 0.15s;
-  &:hover { background: var(--accent); color: #fff; }
+  &:hover {
+    background: var(--accent);
+    color: #fff;
+  }
 }
 
 .reload-prompt__dismiss {
-  padding: 0.2rem 0.5rem !important;
-  background: transparent !important;
-  border-color: var(--border) !important;
-  color: var(--text) !important;
-  &:hover { background: var(--border) !important; color: var(--text-h) !important; }
+  padding: 0.2rem 0.5rem;
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text);
+  &:hover {
+    background: var(--border);
+    color: var(--text-h);
+  }
 }
 
 /* ── Feedback Snackbar ──────────────────────────────────────── */
@@ -4321,9 +4468,15 @@ details[open] .packing-list__summary::before {
   opacity: 0.7;
 }
 
-.packing-list__col--wear .packing-list__col-heading { color: #c0392b; }
-.packing-list__col--carry .packing-list__col-heading { color: #e67e22; }
-.packing-list__col--skip .packing-list__col-heading { color: #7f8c8d; }
+.packing-list__col--wear .packing-list__col-heading {
+  color: #c0392b;
+}
+.packing-list__col--carry .packing-list__col-heading {
+  color: #e67e22;
+}
+.packing-list__col--skip .packing-list__col-heading {
+  color: #7f8c8d;
+}
 
 .packing-list__col-list {
   list-style: none;
@@ -4393,7 +4546,9 @@ details[open] .packing-list__summary::before {
 .ritt-page__article a:not(.ritt-page__article-cta) {
   color: var(--accent);
   text-decoration: none;
-  &:hover { text-decoration: underline; }
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .ritt-page__article-cta {

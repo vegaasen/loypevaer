@@ -1,8 +1,8 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
-import { render, screen, act } from "@testing-library/react";
+import { act, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { FeedbackSnackbar } from "./FeedbackSnackbar";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 import * as analytics from "../lib/analytics";
+import { FeedbackSnackbar } from "./FeedbackSnackbar";
 
 vi.mock("../hooks/useFeedbackPrompt", () => ({
   useFeedbackPrompt: vi.fn(),
@@ -13,6 +13,7 @@ vi.mock("../lib/analytics", () => ({
 }));
 
 import { useFeedbackPrompt } from "../hooks/useFeedbackPrompt";
+
 const mockUseFeedbackPrompt = vi.mocked(useFeedbackPrompt);
 
 beforeEach(() => {
@@ -35,9 +36,7 @@ describe("FeedbackSnackbar", () => {
   it("renders question and buttons when visible=true", () => {
     makeMock(true);
     render(<FeedbackSnackbar eventId="test" />);
-    expect(
-      screen.getByText(/Er værmeldingen nyttig/i),
-    ).toBeInTheDocument();
+    expect(screen.getByText(/Er værmeldingen nyttig/i)).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Nyttig" })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Ikke nyttig" })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Lukk" })).toBeInTheDocument();

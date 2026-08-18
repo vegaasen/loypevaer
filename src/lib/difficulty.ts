@@ -1,6 +1,6 @@
 import type { WaypointWeather } from "../hooks/useWeather";
 import type { Waypoint } from "./weather";
-import { windRelativeLabel, routeBearingForWaypoint } from "./wind";
+import { routeBearingForWaypoint, windRelativeLabel } from "./wind";
 
 type DifficultyLevel = "lett" | "moderat" | "krevende" | "hardt";
 
@@ -30,17 +30,14 @@ export function physicalScore(distanceKm: number, elevationGain: number): number
  * Returns an additive weather adjustment to the physical score based on
  * temperature, precipitation and wind conditions across all waypoints.
  */
-export function weatherAdjustment(
-  results: WaypointWeather[],
-  waypoints: Waypoint[]
-): number {
+export function weatherAdjustment(results: WaypointWeather[], waypoints: Waypoint[]): number {
   const loaded = results.filter((r) => r.data != null);
   if (loaded.length === 0) return 0;
 
   let adj = 0;
 
   // Temperature
-  const temps = loaded.map((r) => r.data!.hourlyTemp ?? r.data!.tempMin);
+  const temps = loaded.map((r) => r.data?.hourlyTemp ?? r.data?.tempMin ?? 0);
   const minTemp = Math.min(...temps);
   if (minTemp < 0) adj += 2;
   else if (minTemp < 5) adj += 1;
@@ -48,21 +45,19 @@ export function weatherAdjustment(
 
   // Precipitation
   const precips = loaded.map(
-    (r) => r.data!.hourlyPrecipitation ?? r.data!.precipitation
+    (r) => r.data?.hourlyPrecipitation ?? r.data?.precipitation ?? 0,
   );
   const maxPrecip = Math.max(...precips);
   if (maxPrecip > 2) adj += 2;
   else if (maxPrecip > 0.5) adj += 1;
 
   // Wind
-  const windSpeeds = loaded.map(
-    (r) => r.data!.hourlyWindSpeed ?? r.data!.windSpeed
-  );
+  const windSpeeds = loaded.map((r) => r.data?.hourlyWindSpeed ?? r.data?.windSpeed ?? 0);
   const maxWind = Math.max(...windSpeeds);
   const hasHeadwind = loaded.some((r, i) => {
-    const windDir = r.data!.hourlyWindDirection ?? r.data!.windDirection;
-    const windSpeed = r.data!.hourlyWindSpeed ?? r.data!.windSpeed;
-    if (windDir === undefined || windSpeed <= 10) return false;
+    const windDir = r.data?.hourlyWindDirection ?? r.data?.windDirection;
+    const windSpeed = r.data?.hourlyWindSpeed ?? r.data?.windSpeed;
+    if (windDir === undefined || windSpeed === undefined || windSpeed <= 10) return false;
     const bearing = routeBearingForWaypoint(waypoints, i);
     return bearing !== null && windRelativeLabel(windDir, bearing) === "Motvind";
   });

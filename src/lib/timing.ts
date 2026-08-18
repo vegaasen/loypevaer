@@ -17,7 +17,7 @@ export function calcWaypointTimes(
   date: string,
   start: string,
   finish: string,
-  fractions: number[]
+  fractions: number[],
 ): string[] {
   const [startH, startM] = start.split(":").map(Number);
   const [finishH, finishM] = finish.split(":").map(Number);
@@ -95,7 +95,7 @@ export function formatPace(paceMinPerKm: number): string {
 export function calcFinishTimeFromSpeed(
   startTime: string,
   distanceKm: number,
-  speedKmh: number
+  speedKmh: number,
 ): string {
   const [startH, startM] = startTime.split(":").map(Number);
   const startMinutes = startH * 60 + startM;

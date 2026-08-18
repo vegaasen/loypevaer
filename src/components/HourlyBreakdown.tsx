@@ -1,6 +1,6 @@
 import type { HourlyEntry } from "../lib/weather";
-import { describeWeatherCode } from "../lib/wmo";
 import { degreesToCompass } from "../lib/wind";
+import { describeWeatherCode } from "../lib/wmo";
 
 type Props = {
   entries: HourlyEntry[];
@@ -37,9 +37,7 @@ export function HourlyBreakdown({ entries, highlightHour }: Props) {
           {realEntries.map((entry) => {
             const { emoji } = describeWeatherCode(entry.weatherCode);
             const windDir =
-              entry.windDirection !== undefined
-                ? degreesToCompass(entry.windDirection)
-                : null;
+              entry.windDirection !== undefined ? degreesToCompass(entry.windDirection) : null;
             return (
               <tr
                 key={entry.hour}
@@ -48,30 +46,25 @@ export function HourlyBreakdown({ entries, highlightHour }: Props) {
                 <td className="hourly-breakdown__td hourly-breakdown__td--hour">
                   {formatHour(entry.hour)}
                 </td>
-                <td className="hourly-breakdown__td hourly-breakdown__td--icon">
-                  {emoji}
-                </td>
+                <td className="hourly-breakdown__td hourly-breakdown__td--icon">{emoji}</td>
                 <td className="hourly-breakdown__td hourly-breakdown__td--temp">
                   {entry.temp}°
                   {entry.feelsLike != null && (
-                    <span className="hourly-breakdown__feels-like">
-                      {" "}({entry.feelsLike}°)
-                    </span>
+                    <span className="hourly-breakdown__feels-like"> ({entry.feelsLike}°)</span>
                   )}
                 </td>
                 <td className="hourly-breakdown__td hourly-breakdown__td--precip">
                   {entry.precipitation} mm
                   {entry.precipitationProbability != null && (
                     <span className="hourly-breakdown__prob">
-                      {" "}· {entry.precipitationProbability}%
+                      {" "}
+                      · {entry.precipitationProbability}%
                     </span>
                   )}
                 </td>
                 <td className="hourly-breakdown__td hourly-breakdown__td--wind">
                   {entry.windSpeed} km/t
-                  {windDir && (
-                    <span className="hourly-breakdown__wind-dir"> · {windDir}</span>
-                  )}
+                  {windDir && <span className="hourly-breakdown__wind-dir"> · {windDir}</span>}
                 </td>
               </tr>
             );

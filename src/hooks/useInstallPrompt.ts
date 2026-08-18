@@ -1,5 +1,5 @@
 // src/hooks/useInstallPrompt.ts
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 // BeforeInstallPromptEvent is not in the standard TypeScript lib
 interface BeforeInstallPromptEvent extends Event {
@@ -12,9 +12,7 @@ const IOS_DISMISSED_KEY = "pwa-ios-install-dismissed";
 export function useInstallPrompt() {
   const deferred = useRef<BeforeInstallPromptEvent | null>(null);
   const [canInstall, setCanInstall] = useState(false);
-  const [iosDismissed, setIosDismissed] = useState(
-    () => !!localStorage.getItem(IOS_DISMISSED_KEY)
-  );
+  const [iosDismissed, setIosDismissed] = useState(() => !!localStorage.getItem(IOS_DISMISSED_KEY));
 
   useEffect(() => {
     if (localStorage.getItem(DISMISSED_KEY)) return;

@@ -22,10 +22,7 @@ export function restoreConsentFromStorage(): void {
   }
 }
 
-function safeGtagEvent(
-  eventName: string,
-  params: Record<string, string | number>,
-) {
+function safeGtagEvent(eventName: string, params: Record<string, string | number>) {
   if (typeof gtag === "undefined") return;
   gtag("event", eventName, params);
 }
@@ -33,11 +30,7 @@ function safeGtagEvent(
 /**
  * Fired when a user navigates to a race/arrangement detail page.
  */
-export function trackRaceSelected(
-  id: string,
-  name: string,
-  discipline: string,
-) {
+export function trackRaceSelected(id: string, name: string, discipline: string) {
   safeGtagEvent("select_race", {
     race_id: id,
     race_name: name,

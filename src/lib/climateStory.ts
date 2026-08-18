@@ -1,4 +1,4 @@
-import { PRECIP_LIGHT, WIND_STRONG, TEMP_VERY_COLD } from "./weatherThresholds";
+import { PRECIP_LIGHT, TEMP_VERY_COLD, WIND_STRONG } from "./weatherThresholds";
 
 export type ClimateStoryEntry = {
   precipitation: number;
@@ -23,11 +23,11 @@ export function getClimateStoryLabel(years: ClimateStoryInput): string {
   const cold = coldCount / n >= MAJORITY;
 
   if (rain && wind && cold) return "Krevende forhold";
-  if (rain && wind)         return "Vått og blåsende";
-  if (rain && cold)         return "Kaldt og vått";
-  if (wind && cold)         return "Kaldt og blåsende";
-  if (rain)                 return "Typisk regnvær";
-  if (wind)                 return "Kjent for kraftig vind";
-  if (cold)                 return "Historisk kaldt";
+  if (rain && wind) return "Vått og blåsende";
+  if (rain && cold) return "Kaldt og vått";
+  if (wind && cold) return "Kaldt og blåsende";
+  if (rain) return "Typisk regnvær";
+  if (wind) return "Kjent for kraftig vind";
+  if (cold) return "Historisk kaldt";
   return "Variert vær";
 }

@@ -12,9 +12,7 @@ export function bearingBetween(from: Waypoint, to: Waypoint): number {
   const dLon = toRad(to.lon - from.lon);
 
   const x = Math.sin(dLon) * Math.cos(lat2);
-  const y =
-    Math.cos(lat1) * Math.sin(lat2) -
-    Math.sin(lat1) * Math.cos(lat2) * Math.cos(dLon);
+  const y = Math.cos(lat1) * Math.sin(lat2) - Math.sin(lat1) * Math.cos(lat2) * Math.cos(dLon);
 
   const bearing = (Math.atan2(x, y) * 180) / Math.PI;
   return (bearing + 360) % 360;
@@ -27,10 +25,7 @@ export function bearingBetween(from: Waypoint, to: Waypoint): number {
  *
  * Returns null if fewer than 2 waypoints are provided.
  */
-export function routeBearingForWaypoint(
-  waypoints: Waypoint[],
-  index: number
-): number | null {
+export function routeBearingForWaypoint(waypoints: Waypoint[], index: number): number | null {
   if (waypoints.length < 2) return null;
   if (index < waypoints.length - 1) {
     return bearingBetween(waypoints[index], waypoints[index + 1]);
@@ -52,7 +47,7 @@ export function routeBearingForWaypoint(
  */
 export function windRelativeLabel(
   windDeg: number,
-  routeBearing: number
+  routeBearing: number,
 ): "Medvind" | "Motvind" | "Sidevind" {
   const windTo = (windDeg + 180) % 360;
   let diff = Math.abs(windTo - routeBearing) % 360;

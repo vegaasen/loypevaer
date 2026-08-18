@@ -1,8 +1,8 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
-import { type Discipline } from "../lib/arrangements";
-import { DISCIPLINE_LABEL } from "../lib/disciplines";
+import type { Discipline } from "../lib/arrangements";
 import { formatNorwegianDate } from "../lib/dates";
+import { DISCIPLINE_LABEL } from "../lib/disciplines";
 
 type Props = {
   id: string;
@@ -76,9 +76,7 @@ export const EventCard = memo(function EventCard({
       </div>
       <div className="ritt-card__date-row">
         <span className="ritt-card__date">{formattedDate}</span>
-        {countdown && !isCancelled && (
-          <span className="ritt-card__countdown">{countdown}</span>
-        )}
+        {countdown && !isCancelled && <span className="ritt-card__countdown">{countdown}</span>}
       </div>
       <div className="ritt-card__meta">
         <span className={`ritt-card__discipline ritt-card__discipline--${discipline}`}>
@@ -92,12 +90,16 @@ export const EventCard = memo(function EventCard({
       >
         {dateStatus === "pending" && (
           <div className="ritt-card__footer-tentative">
-            <span className="ritt-card__pending" title="Datoen er ikke offisielt bekreftet ennå">Tentativ dato</span>
+            <span className="ritt-card__pending" title="Datoen er ikke offisielt bekreftet ennå">
+              Tentativ dato
+            </span>
           </div>
         )}
         {isCancelled && (
           <div className="ritt-card__footer-cancelled">
-            <span className="ritt-card__cancelled-badge" title="Dette arrangementet er avlyst">Avlyst</span>
+            <span className="ritt-card__cancelled-badge" title="Dette arrangementet er avlyst">
+              Avlyst
+            </span>
           </div>
         )}
       </div>

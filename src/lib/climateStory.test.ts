@@ -1,8 +1,13 @@
-import { describe, it, expect } from "vitest";
-import { getClimateStoryLabel } from "./climateStory";
+import { describe, expect, it } from "vitest";
 import type { ClimateStoryInput } from "./climateStory";
+import { getClimateStoryLabel } from "./climateStory";
 
-function makeYears(count: number, precip: number, windSpeed: number, tempMax: number): ClimateStoryInput {
+function makeYears(
+  count: number,
+  precip: number,
+  windSpeed: number,
+  tempMax: number,
+): ClimateStoryInput {
   return Array.from({ length: count }, () => ({ precipitation: precip, windSpeed, tempMax }));
 }
 

@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { calcFinishTimeFromSpeed, formatPace, paceToKmh } from "../lib/timing";
 import type { Discipline } from "../lib/arrangements";
+import { calcFinishTimeFromSpeed, formatPace, paceToKmh } from "../lib/timing";
 
 const SPEED_OPTIONS = [15, 18, 20, 22, 25, 28, 30, 32, 35, 38, 40] as const;
 // Pace options in decimal min/km — displayed as mm:ss
-const PACE_OPTIONS = [3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 9.0, 10.0, 12.0] as const;
+const PACE_OPTIONS = [
+  3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 9.0, 10.0, 12.0,
+] as const;
 
 type Props = {
   startTime: string;
@@ -87,7 +89,7 @@ export function TimePicker({
               {isPace
                 ? PACE_OPTIONS.map((p) => {
                     const estHours = distanceKm
-                      ? Math.round((distanceKm * p) / 60 * 10) / 10
+                      ? Math.round(((distanceKm * p) / 60) * 10) / 10
                       : null;
                     return (
                       <option key={p} value={p}>
@@ -99,9 +101,7 @@ export function TimePicker({
                 : SPEED_OPTIONS.map((s) => (
                     <option key={s} value={s}>
                       {s} km/t
-                      {distanceKm
-                        ? ` ≈ ${Math.round((distanceKm / s) * 10) / 10} t`
-                        : ""}
+                      {distanceKm ? ` ≈ ${Math.round((distanceKm / s) * 10) / 10} t` : ""}
                     </option>
                   ))}
             </select>
@@ -122,19 +122,13 @@ export function TimePicker({
         </div>
 
         {hasValues && (
-          <button
-            type="button"
-            onClick={onClear}
-            className="time-picker__clear"
-          >
+          <button type="button" onClick={onClear} className="time-picker__clear">
             Fjern tider
           </button>
         )}
       </div>
       {timingActive && (
-        <div className="time-picker__hint">
-          Viser vær ved forventet ankomsttid på hvert punkt
-        </div>
+        <div className="time-picker__hint">Viser vær ved forventet ankomsttid på hvert punkt</div>
       )}
     </div>
   );

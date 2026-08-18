@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { describe, expect, it } from "vitest";
 import { buildOgDescription, getOgImagePath } from "./og";
 import type { WeatherData } from "./weather";
 

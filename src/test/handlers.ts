@@ -1,4 +1,4 @@
-import { http, HttpResponse } from "msw";
+import { HttpResponse, http } from "msw";
 
 /**
  * Builds a Yr compact timeseries for a given UTC date string "YYYY-MM-DD".
@@ -11,9 +11,21 @@ function buildYrTimeseries(utcDate: string) {
     const entry: {
       time: string;
       data: {
-        instant: { details: { air_temperature: number; wind_speed: number; wind_from_direction: number } };
-        next_1_hours?: { summary: { symbol_code: string }; details: { precipitation_amount: number; probability_of_precipitation: number } };
-        next_6_hours?: { summary: { symbol_code: string }; details: { air_temperature_max: number; air_temperature_min: number; precipitation_amount: number } };
+        instant: {
+          details: { air_temperature: number; wind_speed: number; wind_from_direction: number };
+        };
+        next_1_hours?: {
+          summary: { symbol_code: string };
+          details: { precipitation_amount: number; probability_of_precipitation: number };
+        };
+        next_6_hours?: {
+          summary: { symbol_code: string };
+          details: {
+            air_temperature_max: number;
+            air_temperature_min: number;
+            precipitation_amount: number;
+          };
+        };
       };
     } = {
       time,
@@ -138,7 +150,8 @@ export const handlers = [
     const lat = url.searchParams.get("lat") ?? "0";
     const lon = url.searchParams.get("lon") ?? "0";
     // Suppress unused-variable lint — lat/lon are validated by API contract but not used to vary the fixture.
-    void lat; void lon;
+    void lat;
+    void lon;
     // Build timeseries spanning today and today+1 in UTC to cover any reasonable test date offset.
     const today = new Date();
     const todayUtc = today.toISOString().split("T")[0];
@@ -189,4 +202,3 @@ export const handlers = [
     return HttpResponse.json(mockDailyResponse);
   }),
 ];
-

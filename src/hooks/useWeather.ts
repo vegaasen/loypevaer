@@ -1,6 +1,6 @@
 import { useQueries } from "@tanstack/react-query";
-import { fetchWeather, fetchWeatherForDatetime } from "../lib/weather";
 import type { Waypoint, WeatherData } from "../lib/weather";
+import { fetchWeather, fetchWeatherForDatetime } from "../lib/weather";
 
 export type WaypointWeather = {
   waypoint: Waypoint;
@@ -22,7 +22,7 @@ export type WeatherResult = WaypointWeather;
 export function useWeather(
   waypoints: Waypoint[],
   date: string | null,
-  datetimes?: string[] | null
+  datetimes?: string[] | null,
 ): WaypointWeather[] {
   const hourlyMode = datetimes != null && datetimes.length === waypoints.length;
 
@@ -33,10 +33,7 @@ export function useWeather(
         queryKey: datetime
           ? ["weather-hourly", wp.lat, wp.lon, datetime]
           : ["weather", wp.lat, wp.lon, date],
-        queryFn: () =>
-          datetime
-            ? fetchWeatherForDatetime(wp, datetime)
-            : fetchWeather(wp, date!),
+        queryFn: () => (datetime ? fetchWeatherForDatetime(wp, datetime) : fetchWeather(wp, date!)),
         enabled: datetime ? true : !!date,
       };
     }),
@@ -49,4 +46,3 @@ export function useWeather(
     isError: results[i].isError,
   }));
 }
-

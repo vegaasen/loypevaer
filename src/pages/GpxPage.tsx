@@ -1,25 +1,25 @@
-import { useState, useCallback } from "react";
+import { useCallback, useState } from "react";
 import { Link } from "react-router-dom";
-import { WeatherStrip } from "../components/WeatherStrip";
-import { EventMap } from "../components/EventMap";
-import { ElevationProfile } from "../components/ElevationProfile";
-import { TimePicker } from "../components/TimePicker";
 import { DatePicker } from "../components/DatePicker";
+import { ElevationProfile } from "../components/ElevationProfile";
 import { ErrorBoundary } from "../components/ErrorBoundary";
+import { EventMap } from "../components/EventMap";
 import { GpxUploader } from "../components/GpxUploader";
 import { PageMeta } from "../components/PageMeta";
+import { TimePicker } from "../components/TimePicker";
+import { WeatherStrip } from "../components/WeatherStrip";
+import { trackGpxLoaded } from "../lib/analytics";
+import type { Discipline } from "../lib/arrangements";
+import { computeElevationGain } from "../lib/arrangements";
+import { DISCIPLINE_LABEL } from "../lib/disciplines";
 import {
-  parseGpx,
   downsampleGpx,
-  gpxTotalDistanceKm,
   fetchGpxFromUrl,
   type GpxTrackPoint,
+  gpxTotalDistanceKm,
+  parseGpx,
 } from "../lib/gpx";
-import { computeElevationGain } from "../lib/arrangements";
-import type { Discipline } from "../lib/arrangements";
-import { DISCIPLINE_LABEL } from "../lib/disciplines";
 import type { Waypoint } from "../lib/weather";
-import { trackGpxLoaded } from "../lib/analytics";
 
 const TODAY = new Date().toISOString().slice(0, 10);
 const DEFAULT_WAYPOINT_COUNT = 8;
@@ -60,25 +60,33 @@ export function GpxPage() {
     setError(null);
   }
 
-  const handleFile = useCallback((file: File) => {
-    if (!file.name.toLowerCase().endsWith(".gpx")) {
-      setError("Kun .gpx-filer støttes.");
-      return;
-    }
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      try {
-        const text = e.target?.result as string;
-        const points = parseGpx(text);
-        const name = file.name.replace(/\.gpx$/i, "");
-        applyPoints(points, name, waypointCount);
-        trackGpxLoaded("file", gpxTotalDistanceKm(points), Math.min(waypointCount, points.length));
-      } catch (err) {
-        setError(err instanceof Error ? err.message : "Ukjent feil ved parsing av GPX.");
+  const handleFile = useCallback(
+    (file: File) => {
+      if (!file.name.toLowerCase().endsWith(".gpx")) {
+        setError("Kun .gpx-filer støttes.");
+        return;
       }
-    };
-    reader.readAsText(file);
-  }, [waypointCount]);
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const text = e.target?.result as string;
+          const points = parseGpx(text);
+          const name = file.name.replace(/\.gpx$/i, "");
+          applyPoints(points, name, waypointCount);
+          trackGpxLoaded(
+            "file",
+            gpxTotalDistanceKm(points),
+            Math.min(waypointCount, points.length),
+          );
+        } catch (err) {
+          setError(err instanceof Error ? err.message : "Ukjent feil ved parsing av GPX.");
+        }
+      };
+      reader.readAsText(file);
+    },
+    // biome-ignore lint/correctness/useExhaustiveDependencies: applyPoints should be wrapped in useCallback — pre-existing issue
+    [waypointCount, applyPoints],
+  );
 
   async function handleUrlLoad() {
     if (!urlInput.trim()) return;
@@ -86,7 +94,11 @@ export function GpxPage() {
     setError(null);
     try {
       const points = await fetchGpxFromUrl(urlInput.trim());
-      const name = urlInput.split("/").pop()?.replace(/\.gpx$/i, "") ?? "GPX-løype";
+      const name =
+        urlInput
+          .split("/")
+          .pop()
+          ?.replace(/\.gpx$/i, "") ?? "GPX-løype";
       applyPoints(points, name, waypointCount);
       trackGpxLoaded("url", gpxTotalDistanceKm(points), Math.min(waypointCount, points.length));
     } catch (err) {
@@ -121,12 +133,15 @@ export function GpxPage() {
         canonicalUrl="https://www.løypevær.no/gpx"
       />
 
-      <Link to="/" className="ritt-page__back-link">← Alle arrangement</Link>
+      <Link to="/" className="ritt-page__back-link">
+        ← Alle arrangement
+      </Link>
 
       <header className="ritt-page__header">
         <h1>Værvarsеl for din løype</h1>
         <p className="ritt-page__subtitle">
-          Last opp GPX-filen din og få timebasert vær for hvert punkt langs ruten — tilpasset din starttid.
+          Last opp GPX-filen din og få timebasert vær for hvert punkt langs ruten — tilpasset din
+          starttid.
         </p>
       </header>
 
@@ -136,7 +151,9 @@ export function GpxPage() {
           error={error}
           urlInput={urlInput}
           onUrlChange={setUrlInput}
-          onUrlLoad={() => { void handleUrlLoad(); }}
+          onUrlLoad={() => {
+            void handleUrlLoad();
+          }}
           onFile={handleFile}
         />
       )}
@@ -151,9 +168,7 @@ export function GpxPage() {
                 ↑ {route.elevationGain} m
               </span>
             )}
-            <span className="ritt-page__meta-item">
-              {route.waypoints.length} målepunkter
-            </span>
+            <span className="ritt-page__meta-item">{route.waypoints.length} målepunkter</span>
             <button className="gpx-route-meta__reset" onClick={handleReset}>
               Last inn ny GPX
             </button>
@@ -186,9 +201,13 @@ export function GpxPage() {
               value={discipline}
               onChange={(e) => setDiscipline(e.target.value as Discipline)}
             >
-              {(Object.entries(DISCIPLINE_LABEL) as [Discipline, string][]).map(([value, label]) => (
-                <option key={value} value={value}>{label}</option>
-              ))}
+              {(Object.entries(DISCIPLINE_LABEL) as [Discipline, string][]).map(
+                ([value, label]) => (
+                  <option key={value} value={value}>
+                    {label}
+                  </option>
+                ),
+              )}
             </select>
           </div>
 
@@ -201,16 +220,16 @@ export function GpxPage() {
           </section>
 
           <section className="ritt-page__date-section">
-            <DatePicker
-              value={selectedDate}
-              onChange={setSelectedDate}
-            />
+            <DatePicker value={selectedDate} onChange={setSelectedDate} />
             <TimePicker
               startTime={startTime}
               finishTime={finishTime}
               onStartChange={setStartTime}
               onFinishChange={setFinishTime}
-              onClear={() => { setStartTime(""); setFinishTime(""); }}
+              onClear={() => {
+                setStartTime("");
+                setFinishTime("");
+              }}
               distanceKm={route.distanceKm}
               discipline={discipline}
             />

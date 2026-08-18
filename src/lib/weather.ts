@@ -1,5 +1,5 @@
-import { getTodayMidnight } from "./dates";
 import type { ClimateStoryInput } from "./climateStory";
+import { getTodayMidnight } from "./dates";
 import { yrSymbolToWmo } from "./wmo";
 
 type WeatherCacheData = {
@@ -11,8 +11,8 @@ let _cachePromise: Promise<WeatherCacheData> | null = null;
 
 export function getWeatherCache(): Promise<WeatherCacheData> {
   if (!_cachePromise) {
-    _cachePromise = fetch(import.meta.env.BASE_URL + "weather-cache.json").then(
-      (r) => r.json() as Promise<WeatherCacheData>
+    _cachePromise = fetch(`${import.meta.env.BASE_URL}weather-cache.json`).then(
+      (r) => r.json() as Promise<WeatherCacheData>,
     );
   }
   return _cachePromise;
@@ -31,7 +31,7 @@ export function getHistoricalYears(
   cache: WeatherCacheData,
   lat: number,
   lon: number,
-  date: string
+  date: string,
 ): ClimateStoryInput {
   const [, , mm, dd] = date.split("-");
   const years: ClimateStoryInput = [];
@@ -203,7 +203,8 @@ interface YrResponse {
 const DAILY_PARAMS =
   "temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum,wind_speed_10m_max,wind_direction_10m_dominant,weather_code,uv_index_max";
 
-const HOURLY_PARAMS = "temperature_2m,apparent_temperature,precipitation,wind_speed_10m,wind_direction_10m,weather_code";
+const HOURLY_PARAMS =
+  "temperature_2m,apparent_temperature,precipitation,wind_speed_10m,wind_direction_10m,weather_code";
 
 /** Parses "YYYY-MM-DDTHH:00" into { date: "YYYY-MM-DD", hour: number } */
 function parseDatetime(datetime: string): { date: string; hour: number } {
@@ -214,7 +215,7 @@ function parseDatetime(datetime: string): { date: string; hour: number } {
 
 /** Returns the previous calendar day as "YYYY-MM-DD" */
 function prevCalendarDay(date: string): string {
-  const d = new Date(date + "T00:00:00");
+  const d = new Date(`${date}T00:00:00`);
   d.setDate(d.getDate() - 1);
   return d.toISOString().split("T")[0];
 }
@@ -258,9 +259,9 @@ function toOsloDate(utcIso: string): string {
     month: "2-digit",
     day: "2-digit",
   }).formatToParts(new Date(utcIso));
-  const year  = parts.find((p) => p.type === "year")?.value  ?? "";
+  const year = parts.find((p) => p.type === "year")?.value ?? "";
   const month = parts.find((p) => p.type === "month")?.value ?? "";
-  const day   = parts.find((p) => p.type === "day")?.value   ?? "";
+  const day = parts.find((p) => p.type === "day")?.value ?? "";
   return `${year}-${month}-${day}`;
 }
 
@@ -274,7 +275,7 @@ function toOsloHour(utcIso: string): number {
       hour: "numeric",
       hour12: false,
     }).format(new Date(utcIso)),
-    10
+    10,
   );
 }
 
@@ -290,10 +291,8 @@ async function fetchYrTimeseries(waypoint: Waypoint, date: string): Promise<YrTi
   });
   const res = await fetch(`${YR_FORECAST_URL}?${params}`);
   if (!res.ok) throw new Error(`Yr API error: ${res.status}`);
-  const json = await res.json() as YrResponse;
-  const entries = json.properties.timeseries.filter(
-    (item) => toOsloDate(item.time) === date
-  );
+  const json = (await res.json()) as YrResponse;
+  const entries = json.properties.timeseries.filter((item) => toOsloDate(item.time) === date);
   if (entries.length === 0) {
     throw new Error(`No Yr timeseries data for ${date}`);
   }
@@ -421,16 +420,18 @@ async function fetchYrWeatherHourly(waypoint: Waypoint, datetime: string): Promi
       const n6b = before.data.next_6_hours;
       const n1a = after.data.next_1_hours;
       const n6a = after.data.next_6_hours;
-      const precipBefore = n1b?.details.precipitation_amount ?? (n6b ? n6b.details.precipitation_amount / 6 : 0);
-      const precipAfter = n1a?.details.precipitation_amount ?? (n6a ? n6a.details.precipitation_amount / 6 : 0);
+      const precipBefore =
+        n1b?.details.precipitation_amount ?? (n6b ? n6b.details.precipitation_amount / 6 : 0);
+      const precipAfter =
+        n1a?.details.precipitation_amount ?? (n6a ? n6a.details.precipitation_amount / 6 : 0);
 
       interpolatedTemp = lerp(
         before.data.instant.details.air_temperature,
-        after.data.instant.details.air_temperature
+        after.data.instant.details.air_temperature,
       );
       interpolatedWindSpeed = lerp(
         before.data.instant.details.wind_speed * 3.6,
-        after.data.instant.details.wind_speed * 3.6
+        after.data.instant.details.wind_speed * 3.6,
       );
       interpolatedPrecip = lerp(precipBefore, precipAfter);
 
@@ -453,7 +454,10 @@ async function fetchYrWeatherHourly(waypoint: Waypoint, datetime: string): Promi
   const next1 = target.data.next_1_hours;
   const next6 = target.data.next_6_hours;
   const symbolCode = next1?.summary.symbol_code ?? next6?.summary.symbol_code ?? "";
-  const hourlyPrecip = interpolatedPrecip ?? (next1?.details.precipitation_amount ?? (next6 ? next6.details.precipitation_amount / 6 : 0));
+  const hourlyPrecip =
+    interpolatedPrecip ??
+    next1?.details.precipitation_amount ??
+    (next6 ? next6.details.precipitation_amount / 6 : 0);
 
   // Daily aggregates from all entries in the day
   let tempMax = -Infinity;
@@ -469,7 +473,11 @@ async function fetchYrWeatherHourly(waypoint: Waypoint, datetime: string): Promi
       if (n6.details.air_temperature_min < tempMin) tempMin = n6.details.air_temperature_min;
     }
     const n1 = item.data.next_1_hours;
-    dailyPrecip += n1 ? n1.details.precipitation_amount : (n6 ? n6.details.precipitation_amount / 6 : 0);
+    dailyPrecip += n1
+      ? n1.details.precipitation_amount
+      : n6
+        ? n6.details.precipitation_amount / 6
+        : 0;
   }
   if (tempMax === -Infinity) {
     for (const item of entries) {
@@ -524,7 +532,8 @@ async function fetchYrHourlyBreakdown(waypoint: Waypoint, date: string): Promise
     const next1 = item.data.next_1_hours;
     const next6 = item.data.next_6_hours;
     const symbolCode = next1?.summary.symbol_code ?? next6?.summary.symbol_code ?? "";
-    const precip = next1?.details.precipitation_amount ?? (next6 ? next6.details.precipitation_amount / 6 : 0);
+    const precip =
+      next1?.details.precipitation_amount ?? (next6 ? next6.details.precipitation_amount / 6 : 0);
 
     return {
       hour,
@@ -539,10 +548,7 @@ async function fetchYrHourlyBreakdown(waypoint: Waypoint, date: string): Promise
   });
 }
 
-async function fetchForecastWeather(
-  waypoint: Waypoint,
-  date: string
-): Promise<WeatherData | null> {
+async function fetchForecastWeather(waypoint: Waypoint, date: string): Promise<WeatherData | null> {
   // Fetch 2 days (prevDay + selectedDay) to compute the temperature trend.
   const startDate = prevCalendarDay(date);
 
@@ -558,7 +564,7 @@ async function fetchForecastWeather(
 
   const res = await fetch(`${FORECAST_URL}?${params}`);
   if (!res.ok) throw new Error(`Open-Meteo forecast error: ${res.status}`);
-  const json = await res.json() as OpenMeteoDailyResponse;
+  const json = (await res.json()) as OpenMeteoDailyResponse;
 
   // Index 0 = previous day, index 1 = selected day
   const d = json.daily;
@@ -574,9 +580,7 @@ async function fetchForecastWeather(
   const prevTempMax = d.temperature_2m_max[0] ?? null;
   const todayTempMax = d.temperature_2m_max[i];
   const tempTrend =
-    prevTempMax !== null
-      ? Math.round((todayTempMax - prevTempMax) * 10) / 10
-      : undefined;
+    prevTempMax !== null ? Math.round((todayTempMax - prevTempMax) * 10) / 10 : undefined;
 
   return {
     source: "forecast",
@@ -601,10 +605,7 @@ async function fetchForecastWeather(
  * Checks the pre-built weather cache first (src/data/weather-cache.json).
  * Falls back to live API calls only if the cache entry is missing.
  */
-async function fetchClimateAverage(
-  waypoint: Waypoint,
-  date: string
-): Promise<WeatherData> {
+async function fetchClimateAverage(waypoint: Waypoint, date: string): Promise<WeatherData> {
   const [, month, day] = date.split("-");
   const cacheKey = `${waypoint.lat},${waypoint.lon},${month},${day}`;
   const weatherCache = await getWeatherCache();
@@ -613,13 +614,13 @@ async function fetchClimateAverage(
   // Compute tempTrend by looking up the previous day in the cache
   const { prevMM, prevDD } = prevCalendarMonthDay(month, day);
   const prevCacheKey = `${waypoint.lat},${waypoint.lon},${prevMM},${prevDD}`;
-  const prevCached = (weatherCache.climateAverages as Record<string, { tempMax: number } | undefined>)[prevCacheKey];
+  const prevCached = (
+    weatherCache.climateAverages as Record<string, { tempMax: number } | undefined>
+  )[prevCacheKey];
 
   if (cached) {
     const tempTrend =
-      prevCached != null
-        ? Math.round((cached.tempMax - prevCached.tempMax) * 10) / 10
-        : undefined;
+      prevCached != null ? Math.round((cached.tempMax - prevCached.tempMax) * 10) / 10 : undefined;
     return { ...cached, tempTrend };
   }
 
@@ -653,9 +654,7 @@ async function fetchClimateAverage(
   if (valid.length === 0) throw new Error("No climate archive data available");
 
   const avg = (accessor: (r: OpenMeteoDailyResponse) => number | null | undefined) => {
-    const vals = valid
-      .map(accessor)
-      .filter((v): v is number => v !== null && v !== undefined);
+    const vals = valid.map(accessor).filter((v): v is number => v !== null && v !== undefined);
     return vals.length > 0 ? vals.reduce((a, b) => a + b, 0) / vals.length : null;
   };
 
@@ -670,16 +669,14 @@ async function fetchClimateAverage(
             codes.reduce<Record<number, number>>((acc, c) => {
               acc[c] = (acc[c] ?? 0) + 1;
               return acc;
-            }, {})
-          ).sort((a, b) => b[1] - a[1])[0][0]
+            }, {}),
+          ).sort((a, b) => b[1] - a[1])[0][0],
         )
       : 0;
 
   const tempMax = Math.round((avg((r) => r.daily.temperature_2m_max[0]) ?? 0) * 10) / 10;
   const tempTrend =
-    prevCached != null
-      ? Math.round((tempMax - prevCached.tempMax) * 10) / 10
-      : undefined;
+    prevCached != null ? Math.round((tempMax - prevCached.tempMax) * 10) / 10 : undefined;
 
   const roundAvg = (v: number | null): number | undefined =>
     v !== null ? Math.round(v * 10) / 10 : undefined;
@@ -699,10 +696,7 @@ async function fetchClimateAverage(
   };
 }
 
-export async function fetchWeather(
-  waypoint: Waypoint,
-  date: string
-): Promise<WeatherData> {
+export async function fetchWeather(waypoint: Waypoint, date: string): Promise<WeatherData> {
   if (isYrRange(date)) {
     return fetchYrWeather(waypoint, date);
   }
@@ -723,7 +717,7 @@ export async function fetchWeather(
  */
 async function fetchForecastWeatherHourly(
   waypoint: Waypoint,
-  datetime: string
+  datetime: string,
 ): Promise<WeatherData> {
   const { date, hour } = parseDatetime(datetime);
 
@@ -735,7 +729,8 @@ async function fetchForecastWeatherHourly(
     longitude: String(waypoint.lon),
     ...(waypoint.altitude !== undefined ? { elevation: String(waypoint.altitude) } : {}),
     hourly: `${HOURLY_PARAMS},precipitation_probability`,
-    daily: "temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,uv_index_max",
+    daily:
+      "temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,uv_index_max",
     start_date: startDate,
     end_date: date,
     timezone: "Europe/Oslo",
@@ -743,7 +738,7 @@ async function fetchForecastWeatherHourly(
 
   const res = await fetch(`${FORECAST_URL}?${params}`);
   if (!res.ok) throw new Error(`Open-Meteo forecast error: ${res.status}`);
-  const json = await res.json() as OpenMeteoHourlyResponse;
+  const json = (await res.json()) as OpenMeteoHourlyResponse;
 
   // Daily arrays: index 0 = prevDay, index 1 = selectedDay
   // Hourly arrays: 48 entries (24h prevDay + 24h selectedDay); selectedDay hours start at 24
@@ -755,9 +750,7 @@ async function fetchForecastWeatherHourly(
   const prevTempMax = json.daily.temperature_2m_max[0] ?? null;
   const todayTempMax = json.daily.temperature_2m_max[dailyIdx] ?? 0;
   const tempTrend =
-    prevTempMax !== null
-      ? Math.round((todayTempMax - prevTempMax) * 10) / 10
-      : undefined;
+    prevTempMax !== null ? Math.round((todayTempMax - prevTempMax) * 10) / 10 : undefined;
 
   return {
     source: "forecast",
@@ -785,7 +778,7 @@ async function fetchForecastWeatherHourly(
  */
 async function fetchClimateAverageHourly(
   waypoint: Waypoint,
-  datetime: string
+  datetime: string,
 ): Promise<WeatherData> {
   const { date, hour } = parseDatetime(datetime);
   const [, month, day] = date.split("-");
@@ -794,7 +787,9 @@ async function fetchClimateAverageHourly(
   const { prevMM, prevDD } = prevCalendarMonthDay(month, day);
   const prevCacheKey = `${waypoint.lat},${waypoint.lon},${prevMM},${prevDD}`;
   const weatherCache = await getWeatherCache();
-  const prevCached = (weatherCache.climateAverages as Record<string, { tempMax: number } | undefined>)[prevCacheKey];
+  const prevCached = (
+    weatherCache.climateAverages as Record<string, { tempMax: number } | undefined>
+  )[prevCacheKey];
 
   const endYear = new Date().getFullYear() - 1;
   const startYear = endYear - 9;
@@ -807,7 +802,8 @@ async function fetchClimateAverageHourly(
       longitude: String(waypoint.lon),
       ...(waypoint.altitude !== undefined ? { elevation: String(waypoint.altitude) } : {}),
       hourly: HOURLY_PARAMS,
-      daily: "temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,uv_index_max",
+      daily:
+        "temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,uv_index_max",
       start_date: d,
       end_date: d,
       timezone: "Europe/Oslo",
@@ -823,10 +819,10 @@ async function fetchClimateAverageHourly(
 
   if (valid.length === 0) throw new Error("No climate archive data available");
 
-  const avgHourly = (accessor: (r: OpenMeteoHourlyResponse) => number | null | undefined): number | null => {
-    const vals = valid
-      .map(accessor)
-      .filter((v): v is number => v !== null && v !== undefined);
+  const avgHourly = (
+    accessor: (r: OpenMeteoHourlyResponse) => number | null | undefined,
+  ): number | null => {
+    const vals = valid.map(accessor).filter((v): v is number => v !== null && v !== undefined);
     return vals.length > 0 ? vals.reduce((a, b) => a + b, 0) / vals.length : null;
   };
 
@@ -842,8 +838,8 @@ async function fetchClimateAverageHourly(
             codes.reduce<Record<number, number>>((acc, c) => {
               acc[c] = (acc[c] ?? 0) + 1;
               return acc;
-            }, {})
-          ).sort((a, b) => b[1] - a[1])[0][0]
+            }, {}),
+          ).sort((a, b) => b[1] - a[1])[0][0],
         )
       : 0;
 
@@ -860,9 +856,7 @@ async function fetchClimateAverageHourly(
   const uvRaw = roundAvgHOpt(avgHourly((r) => r.daily.uv_index_max?.[0]));
 
   const tempTrend =
-    prevCached != null
-      ? Math.round((tempMax - prevCached.tempMax) * 10) / 10
-      : undefined;
+    prevCached != null ? Math.round((tempMax - prevCached.tempMax) * 10) / 10 : undefined;
 
   return {
     source: "climate-average",
@@ -904,7 +898,7 @@ export type HourlyEntry = {
  */
 export async function fetchHourlyBreakdown(
   waypoint: Waypoint,
-  date: string
+  date: string,
 ): Promise<HourlyEntry[]> {
   if (isYrRange(date)) {
     return fetchYrHourlyBreakdown(waypoint, date);
@@ -917,7 +911,7 @@ export async function fetchHourlyBreakdown(
 
 async function fetchForecastHourlyBreakdown(
   waypoint: Waypoint,
-  date: string
+  date: string,
 ): Promise<HourlyEntry[]> {
   const params = new URLSearchParams({
     latitude: String(waypoint.lat),
@@ -931,7 +925,7 @@ async function fetchForecastHourlyBreakdown(
 
   const res = await fetch(`${FORECAST_URL}?${params}`);
   if (!res.ok) throw new Error(`Open-Meteo forecast error: ${res.status}`);
-  const json = await res.json() as OpenMeteoHourlyResponse;
+  const json = (await res.json()) as OpenMeteoHourlyResponse;
   const h = json.hourly;
 
   return Array.from({ length: 24 }, (_, hour) => ({
@@ -949,7 +943,7 @@ async function fetchForecastHourlyBreakdown(
 
 async function fetchClimateAverageHourlyBreakdown(
   waypoint: Waypoint,
-  date: string
+  date: string,
 ): Promise<HourlyEntry[]> {
   const [, month, day] = date.split("-");
   const endYear = new Date().getFullYear() - 1;
@@ -979,8 +973,9 @@ async function fetchClimateAverageHourlyBreakdown(
   if (valid.length === 0) throw new Error("No climate archive data available");
 
   const avgAt = (
-    accessor: (r: OpenMeteoHourlyResponse, h: number) => number | null | undefined
-  , hour: number): number => {
+    accessor: (r: OpenMeteoHourlyResponse, h: number) => number | null | undefined,
+    hour: number,
+  ): number => {
     const vals = valid
       .map((r) => accessor(r, hour))
       .filter((v): v is number => v !== null && v !== undefined);
@@ -1000,8 +995,8 @@ async function fetchClimateAverageHourlyBreakdown(
               codes.reduce<Record<number, number>>((acc, c) => {
                 acc[c] = (acc[c] ?? 0) + 1;
                 return acc;
-              }, {})
-            ).sort((a, b) => b[1] - a[1])[0][0]
+              }, {}),
+            ).sort((a, b) => b[1] - a[1])[0][0],
           )
         : 0;
 
@@ -1025,7 +1020,7 @@ async function fetchClimateAverageHourlyBreakdown(
  */
 export async function fetchWeatherForDatetime(
   waypoint: Waypoint,
-  datetime: string
+  datetime: string,
 ): Promise<WeatherData> {
   const date = datetime.split("T")[0];
   if (isYrRange(date)) {

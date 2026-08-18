@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { describe, expect, it } from "vitest";
 import { parseCommitLine, parseGitLog } from "./generate-changelog";
 
 describe("parseCommitLine", () => {
@@ -9,7 +9,11 @@ describe("parseCommitLine", () => {
 
   it("parses a fix commit without scope", () => {
     const result = parseCommitLine("fix: correct altitude for Jotunheimen");
-    expect(result).toEqual({ type: "fix", scope: null, subject: "correct altitude for Jotunheimen" });
+    expect(result).toEqual({
+      type: "fix",
+      scope: null,
+      subject: "correct altitude for Jotunheimen",
+    });
   });
 
   it("parses a feat commit with scope", () => {
@@ -19,7 +23,11 @@ describe("parseCommitLine", () => {
 
   it("parses a fix commit with scope", () => {
     const result = parseCommitLine("fix(triathlon): update start time for Norseman");
-    expect(result).toEqual({ type: "fix", scope: "triathlon", subject: "update start time for Norseman" });
+    expect(result).toEqual({
+      type: "fix",
+      scope: "triathlon",
+      subject: "update start time for Norseman",
+    });
   });
 
   it("returns null for chore commits", () => {

@@ -1,21 +1,32 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useDebouncedValue } from "../hooks/useDebouncedValue";
-import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { EventCard } from "../components/EventCard";
+import { FeaturedEventCard } from "../components/FeaturedEventCard";
 import { PageMeta } from "../components/PageMeta";
 import { useFilterContext } from "../context/useFilterContext";
+import { useDebouncedValue } from "../hooks/useDebouncedValue";
 import { useMyEvents } from "../hooks/useMyEvents";
-import { allArrangements as ritt, getNextPerDiscipline, type RittEntry } from "../lib/arrangements";
-import { FeaturedEventCard } from "../components/FeaturedEventCard";
-import { FILTER_DISCIPLINE_LABEL } from "../lib/disciplines";
-import { SITE_URL } from "../lib/seo";
-import { allArrangements as allForJsonLd } from "../lib/arrangements";
+import {
+  allArrangements as allForJsonLd,
+  getNextPerDiscipline,
+  type RittEntry,
+  allArrangements as ritt,
+} from "../lib/arrangements";
 import { daysUntil, formatCountdown, parseDateLocal } from "../lib/dates";
+import { FILTER_DISCIPLINE_LABEL } from "../lib/disciplines";
 import { groupByYearMonth } from "../lib/grouping";
 import { monthName } from "../lib/month";
+import { SITE_URL } from "../lib/seo";
 
-type Discipline = "alle" | "landevei" | "terreng" | "langrenn" | "triathlon" | "ultraløp" | "løping";
+type Discipline =
+  | "alle"
+  | "landevei"
+  | "terreng"
+  | "langrenn"
+  | "triathlon"
+  | "ultraløp"
+  | "løping";
 
 type Tidshorisont = "kommende" | "alle" | "arkiv";
 
@@ -26,8 +37,7 @@ const TIDSHORISONT_LABEL: Record<Tidshorisont, string> = {
 };
 
 export function HomePage() {
-  const description =
-    `Sjekk løypevær og værvarsler for ${ritt.length} norske utholdenhetsarrangement — sykkelritt, langrenn, triathlon og ultraløp. Se temperatur, vind og nedbør punkt for punkt langs løypa, tilpasset din starttid.`;
+  const description = `Sjekk løypevær og værvarsler for ${ritt.length} norske utholdenhetsarrangement — sykkelritt, langrenn, triathlon og ultraløp. Se temperatur, vind og nedbør punkt for punkt langs løypa, tilpasset din starttid.`;
 
   const { plannedIds, isPlanned, getPlanned, add, remove } = useMyEvents();
   const { discipline, setDiscipline } = useFilterContext();
@@ -36,7 +46,10 @@ export function HomePage() {
   const [tidshorisont, setTidshorisont] = useState<Tidshorisont>("alle");
   const [region, setRegion] = useState("");
 
-  const totalSykkel = useMemo(() => ritt.filter((r) => r.discipline === "landevei" || r.discipline === "terreng").length, []);
+  const totalSykkel = useMemo(
+    () => ritt.filter((r) => r.discipline === "landevei" || r.discipline === "terreng").length,
+    [],
+  );
   const totalLangrenn = useMemo(() => ritt.filter((r) => r.discipline === "langrenn").length, []);
   const totalLoping = useMemo(() => ritt.filter((r) => r.discipline === "ultraløp").length, []);
   const totalTriathlon = useMemo(() => ritt.filter((r) => r.discipline === "triathlon").length, []);
@@ -44,9 +57,10 @@ export function HomePage() {
 
   const regions = useMemo(
     () =>
-      [...new Set(ritt.filter((r) => r.discipline !== "løping").map((r) => r.region))]
-        .sort((a, b) => a.localeCompare(b, "nb")),
-    []
+      [...new Set(ritt.filter((r) => r.discipline !== "løping").map((r) => r.region))].sort(
+        (a, b) => a.localeCompare(b, "nb"),
+      ),
+    [],
   );
 
   const debouncedSearch = useDebouncedValue(search);
@@ -67,9 +81,9 @@ export function HomePage() {
           (r) =>
             !searchQuery ||
             r.name.toLowerCase().includes(searchQuery) ||
-            r.region.toLowerCase().includes(searchQuery)
+            r.region.toLowerCase().includes(searchQuery),
         ),
-    [discipline, region, tidshorisont, searchQuery]
+    [discipline, region, tidshorisont, searchQuery],
   );
 
   const grouped = useMemo(() => groupByYearMonth(filtered), [filtered]);
@@ -77,7 +91,7 @@ export function HomePage() {
 
   const featuredEvents = useMemo(
     () => getNextPerDiscipline(ritt.filter((r) => r.discipline !== "løping")),
-    []
+    [],
   );
 
   const plannedRaces = useMemo(
@@ -91,9 +105,8 @@ export function HomePage() {
           return parseDateLocal(da).getTime() - parseDateLocal(db).getTime();
         }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [plannedIds]
+    [plannedIds, getPlanned],
   );
-
 
   function handleScrollToCurrentMonth() {
     const now = new Date();
@@ -129,14 +142,16 @@ export function HomePage() {
     if (el && typeof el.scrollIntoView === "function") {
       el.scrollIntoView({ behavior: "smooth", inline: "nearest", block: "nearest" });
     }
-  }, [discipline]);
+  }, []);
 
   useEffect(() => {
     const refs = [feature1Ref.current, feature2Ref.current].filter(
-      (el): el is HTMLDivElement => el !== null
+      (el): el is HTMLDivElement => el !== null,
     );
 
-    refs.forEach((el) => el.classList.add("js-animate"));
+    refs.forEach((el) => {
+      el.classList.add("js-animate");
+    });
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -147,10 +162,12 @@ export function HomePage() {
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
 
-    refs.forEach((el) => observer.observe(el));
+    refs.forEach((el) => {
+      observer.observe(el);
+    });
 
     return () => observer.disconnect();
   }, []);
@@ -163,7 +180,10 @@ export function HomePage() {
         canonicalUrl={SITE_URL}
       />
       <Helmet>
-        <meta name="keywords" content="løypevær, rittvær, sykkelvær, løpsvær, triathlonvær, langrennvær, terrengvær, arrangementvær" />
+        <meta
+          name="keywords"
+          content="løypevær, rittvær, sykkelvær, løpsvær, triathlonvær, langrennvær, terrengvær, arrangementvær"
+        />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -216,30 +236,60 @@ export function HomePage() {
           Finn ditt arrangement →
         </button>
         <div className="home-page__hero-stats">
-          <span><strong>{ritt.length}</strong> arrangement totalt</span>
-          {totalSykkel > 0 && <span><strong>{totalSykkel}</strong> sykkel</span>}
-          {totalLangrenn > 0 && <span><strong>{totalLangrenn}</strong> langrenn</span>}
-          {totalLoping > 0 && <span><strong>{totalLoping}</strong> ultraløp</span>}
-          {totalTriathlon > 0 && <span><strong>{totalTriathlon}</strong> triathlon</span>}
-          {totalKortereLop > 0 && <span><strong>{totalKortereLop}</strong> kortere løp</span>}
+          <span>
+            <strong>{ritt.length}</strong> arrangement totalt
+          </span>
+          {totalSykkel > 0 && (
+            <span>
+              <strong>{totalSykkel}</strong> sykkel
+            </span>
+          )}
+          {totalLangrenn > 0 && (
+            <span>
+              <strong>{totalLangrenn}</strong> langrenn
+            </span>
+          )}
+          {totalLoping > 0 && (
+            <span>
+              <strong>{totalLoping}</strong> ultraløp
+            </span>
+          )}
+          {totalTriathlon > 0 && (
+            <span>
+              <strong>{totalTriathlon}</strong> triathlon
+            </span>
+          )}
+          {totalKortereLop > 0 && (
+            <span>
+              <strong>{totalKortereLop}</strong> kortere løp
+            </span>
+          )}
         </div>
       </section>
 
       {/* ── Feature sections ──────────────────────────────────────────── */}
       <div className="home-page__features">
-
         <div className="home-page__feature" ref={feature1Ref}>
           <div className="home-page__feature-text">
             <div className="home-page__feature-eyebrow">Punkt for punkt</div>
             <h2>Vær for hele løypa — ikke bare starten</h2>
             <p>
-              Vi henter værvarsler for alle nøkkelpunktene langs ruten — start,
-              topp, nedstigning og mål. Du ser temperatur, vind og nedbør akkurat der det
-              teller, ikke bare ved startstreken.
+              Vi henter værvarsler for alle nøkkelpunktene langs ruten — start, topp, nedstigning og
+              mål. Du ser temperatur, vind og nedbør akkurat der det teller, ikke bare ved
+              startstreken.
             </p>
           </div>
           <div className="home-page__feature-visual">
-            <svg className="home-page__feature-visual-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <svg
+              className="home-page__feature-visual-icon"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21" />
               <line x1="9" y1="3" x2="9" y2="18" />
               <line x1="15" y1="6" x2="15" y2="21" />
@@ -248,7 +298,9 @@ export function HomePage() {
             <ul className="home-page__feature-visual-items">
               <li className="home-page__feature-visual-item">Start — 200 moh. &nbsp;☁️ 12°C</li>
               <li className="home-page__feature-visual-item">Toppunkt — 890 moh. &nbsp;🌨️ 4°C</li>
-              <li className="home-page__feature-visual-item">Mellompassering — 560 moh. &nbsp;🌦️ 8°C</li>
+              <li className="home-page__feature-visual-item">
+                Mellompassering — 560 moh. &nbsp;🌦️ 8°C
+              </li>
               <li className="home-page__feature-visual-item">Mål — 180 moh. &nbsp;⛅ 14°C</li>
             </ul>
           </div>
@@ -259,14 +311,22 @@ export function HomePage() {
             <div className="home-page__feature-eyebrow">Alltid relevant data</div>
             <h2>Langt frem i tid? Vi bruker 15 års historikk.</h2>
             <p>
-              Innenfor 16 dager henter vi live-varsler direkte fra Open-Meteo for hvert
-              punkt langs ruten. For arrangement lenger frem i tid bruker vi historiske
-              klimasnitt fra de siste 15 årene — samme dato, samme sted.
-              Du vet alltid hva slags vær du kan forvente.
+              Innenfor 16 dager henter vi live-varsler direkte fra Open-Meteo for hvert punkt langs
+              ruten. For arrangement lenger frem i tid bruker vi historiske klimasnitt fra de siste
+              15 årene — samme dato, samme sted. Du vet alltid hva slags vær du kan forvente.
             </p>
           </div>
           <div className="home-page__feature-visual">
-            <svg className="home-page__feature-visual-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <svg
+              className="home-page__feature-visual-icon"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <line x1="18" y1="20" x2="18" y2="10" />
               <line x1="12" y1="20" x2="12" y2="4" />
               <line x1="6" y1="20" x2="6" y2="14" />
@@ -274,13 +334,16 @@ export function HomePage() {
             <div className="home-page__feature-visual-title">Datakilder</div>
             <ul className="home-page__feature-visual-items">
               <li className="home-page__feature-visual-item">Timebasert varsel (0–16 dager)</li>
-              <li className="home-page__feature-visual-item">Klimasnitt (historisk gjennomsnitt)</li>
-              <li className="home-page__feature-visual-item">Smarte bekledningsråd basert på data</li>
+              <li className="home-page__feature-visual-item">
+                Klimasnitt (historisk gjennomsnitt)
+              </li>
+              <li className="home-page__feature-visual-item">
+                Smarte bekledningsråd basert på data
+              </li>
               <li className="home-page__feature-visual-item">Føreforhold (is, slaps, vått)</li>
             </ul>
           </div>
         </div>
-
       </div>
 
       {/* ── Featured (neste per disiplin) ────────────────────────────── */}
@@ -313,7 +376,17 @@ export function HomePage() {
       {/* ── Filter ──────────────────────────────────────────────────── */}
       <div id="alle-arrangement" className="home-page__filter">
         <div role="group" aria-label="Filtrer etter disiplin" className="home-page__filter-pills">
-          {(["alle", "landevei", "terreng", "langrenn", "triathlon", "ultraløp", "løping"] as Discipline[]).map((d) => (
+          {(
+            [
+              "alle",
+              "landevei",
+              "terreng",
+              "langrenn",
+              "triathlon",
+              "ultraløp",
+              "løping",
+            ] as Discipline[]
+          ).map((d) => (
             <button
               ref={discipline === d ? activePillRef : null}
               key={d}
@@ -356,7 +429,9 @@ export function HomePage() {
           >
             <option value="">Alle regioner</option>
             {regions.map((r) => (
-              <option key={r} value={r}>{r}</option>
+              <option key={r} value={r}>
+                {r}
+              </option>
             ))}
           </select>
 
@@ -434,8 +509,8 @@ export function HomePage() {
             <div className="home-page__feature-eyebrow">Løping</div>
             <h2>Kortere løp har sin egen side</h2>
             <p>
-              Sentrumsløpet, Birkebeinerløpet og mange andre kortere løp finner du på løpesiden.
-              Der viser vi sanntidsvarsler for løpsdagen — temperatur, vind og nedbør der det teller.
+              Sentrumsløpet, Birkebeinerløpet og mange andre kortere løp finner du på løpesiden. Der
+              viser vi sanntidsvarsler for løpsdagen — temperatur, vind og nedbør der det teller.
             </p>
             <Link to="/lop" className="home-page__lop-teaser-btn">
               Se alle løp →
@@ -444,9 +519,7 @@ export function HomePage() {
         </section>
       ) : (
         <main className="home-page__sections">
-          {filtered.length === 0 && (
-            <p className="home-page__empty">Ingen arrangement funnet.</p>
-          )}
+          {filtered.length === 0 && <p className="home-page__empty">Ingen arrangement funnet.</p>}
           {years.map((year) => {
             const byMonth = grouped.get(year)!;
             const months = [...byMonth.keys()].sort((a, b) => a - b);
@@ -473,7 +546,9 @@ export function HomePage() {
                         )}
                       </h3>
                       {past.length > 0 && (
-                        <div className={`home-page__grid home-page__grid--past-list${hasBoth ? " home-page__grid--past-list-separated" : ""}`}>
+                        <div
+                          className={`home-page__grid home-page__grid--past-list${hasBoth ? " home-page__grid--past-list-separated" : ""}`}
+                        >
                           {past.map((r) => (
                             <EventCard
                               key={r.id}
@@ -493,7 +568,9 @@ export function HomePage() {
                         </div>
                       )}
                       {upcoming.length > 0 && (
-                        <div className={`home-page__grid${hasBoth ? " home-page__grid--upcoming-separated" : ""}`}>
+                        <div
+                          className={`home-page__grid${hasBoth ? " home-page__grid--upcoming-separated" : ""}`}
+                        >
                           {upcoming.map((r) => (
                             <EventCard
                               key={r.id}
@@ -528,16 +605,14 @@ export function HomePage() {
           <div className="home-page__feature-eyebrow">Løping</div>
           <h2>Kortere løp fortjener like godt værvarsel.</h2>
           <p>
-            Vi holder oversikt over kortere løp som Sentrumsløpet og Birkebeinerløpet.
-            Her viser vi sanntidsvarsler for løpsdagen — temperatur, vind og nedbør der det teller.
+            Vi holder oversikt over kortere løp som Sentrumsløpet og Birkebeinerløpet. Her viser vi
+            sanntidsvarsler for løpsdagen — temperatur, vind og nedbør der det teller.
           </p>
         </div>
         <Link to="/lop" className="home-page__lop-teaser-btn">
           Kortere løp →
         </Link>
       </section>
-
-
     </div>
   );
 }

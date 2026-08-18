@@ -1,8 +1,8 @@
-import { describe, it, expect, beforeEach, afterEach } from "vitest";
+import { HttpResponse, http } from "msw";
+import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { server } from "../test/server";
-import { http, HttpResponse } from "msw";
-import { fetchWeather, fetchWeatherForDatetime, fetchHourlyBreakdown } from "./weather";
 import type { Waypoint } from "./weather";
+import { fetchHourlyBreakdown, fetchWeather, fetchWeatherForDatetime } from "./weather";
 
 const waypoint: Waypoint = { label: "Test", lat: 61.0, lon: 10.0, altitude: 200 };
 
@@ -13,9 +13,9 @@ function dateOffset(days: number): string {
   return d.toISOString().split("T")[0];
 }
 
-const YR_DATE = dateOffset(1);   // tomorrow — within 0-9 day Yr range
-const OM_DATE = dateOffset(12);  // 12 days out — Open-Meteo range
-const PAST_DATE = "2020-06-15";  // past — climate average
+const YR_DATE = dateOffset(1); // tomorrow — within 0-9 day Yr range
+const OM_DATE = dateOffset(12); // 12 days out — Open-Meteo range
+const PAST_DATE = "2020-06-15"; // past — climate average
 
 describe("fetchWeather — Yr path (0-9 days)", () => {
   it("returns source: forecast", async () => {
@@ -57,7 +57,7 @@ describe("fetchWeather — Open-Meteo path used for day 12 (not Yr)", () => {
       http.get("https://api.met.no/weatherapi/locationforecast/2.0/compact", () => {
         yrCalled = true;
         return new HttpResponse(null, { status: 500 });
-      })
+      }),
     );
     const data = await fetchWeather(waypoint, OM_DATE);
     expect(yrCalled).toBe(false);
@@ -127,12 +127,16 @@ describe("fetchHourlyBreakdown — Yr path (0-9 days)", () => {
             instant: { details: { air_temperature: 10, wind_speed: 5, wind_from_direction: 270 } },
             next_6_hours: {
               summary: { symbol_code: "partlycloudy_day" },
-              details: { air_temperature_max: 15, air_temperature_min: 8, precipitation_amount: 0.6 },
+              details: {
+                air_temperature_max: 15,
+                air_temperature_min: 8,
+                precipitation_amount: 0.6,
+              },
             },
           },
         }));
         return HttpResponse.json({ properties: { timeseries: sparse } });
-      })
+      }),
     );
 
     const entries = await fetchHourlyBreakdown(waypoint, YR_DATE);
@@ -196,7 +200,7 @@ describe("fetchWeatherForDatetime — Yr sparse (6-hourly) resolution, no exact 
             timeseries: buildSparseYrTimeseries(d3Utc),
           },
         });
-      })
+      }),
     );
   });
 
@@ -207,9 +211,7 @@ describe("fetchWeatherForDatetime — Yr sparse (6-hourly) resolution, no exact 
   it("does not throw when requested hour has no exact Yr entry — snaps to nearest", async () => {
     const sparse_date = dateOffset(3);
     // hour 01 Oslo has no exact entry (available: 02, 08, 14, 20); should snap to 02
-    await expect(
-      fetchWeatherForDatetime(waypoint, `${sparse_date}T01:00`)
-    ).resolves.not.toThrow();
+    await expect(fetchWeatherForDatetime(waypoint, `${sparse_date}T01:00`)).resolves.not.toThrow();
   });
 
   it("returns source: forecast when snapping to nearest Yr entry", async () => {
@@ -226,9 +228,7 @@ describe("fetchWeatherForDatetime — Yr sparse (6-hourly) resolution, no exact 
 
   it("does not throw for hour 22 (nearest available is 20)", async () => {
     const sparse_date = dateOffset(3);
-    await expect(
-      fetchWeatherForDatetime(waypoint, `${sparse_date}T22:00`)
-    ).resolves.not.toThrow();
+    await expect(fetchWeatherForDatetime(waypoint, `${sparse_date}T22:00`)).resolves.not.toThrow();
   });
 });
 
@@ -259,8 +259,8 @@ describe("fetchWeatherForDatetime — hourlyIsApproximate flag (three-tier looku
           properties: {
             timeseries: buildSparseYrTimeseries(d3Utc),
           },
-        })
-      )
+        }),
+      ),
     );
 
     const data = await fetchWeatherForDatetime(waypoint, `${sparse_date}T05:00`);
@@ -284,17 +284,23 @@ describe("fetchWeatherForDatetime — hourlyIsApproximate flag (three-tier looku
               {
                 time: `${d3Utc}T12:00:00Z`,
                 data: {
-                  instant: { details: { air_temperature: 10, wind_speed: 5, wind_from_direction: 270 } },
+                  instant: {
+                    details: { air_temperature: 10, wind_speed: 5, wind_from_direction: 270 },
+                  },
                   next_6_hours: {
                     summary: { symbol_code: "partlycloudy_day" },
-                    details: { air_temperature_max: 15, air_temperature_min: 8, precipitation_amount: 0.6 },
+                    details: {
+                      air_temperature_max: 15,
+                      air_temperature_min: 8,
+                      precipitation_amount: 0.6,
+                    },
                   },
                 },
               },
             ],
           },
         });
-      })
+      }),
     );
 
     const sparse_date = dateOffset(3);
@@ -310,7 +316,7 @@ describe("fetchHourlyBreakdown — Yr path returns Open-Meteo for day 12", () =>
     server.use(
       http.get("https://api.met.no/weatherapi/locationforecast/2.0/compact", () => {
         return new HttpResponse(null, { status: 500 });
-      })
+      }),
     );
   });
 

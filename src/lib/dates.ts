@@ -2,7 +2,7 @@
  * Parse a YYYY-MM-DD date string as local midnight (avoids UTC timezone shifts).
  */
 export function parseDateLocal(dateStr: string): Date {
-  return new Date(dateStr + "T00:00:00");
+  return new Date(`${dateStr}T00:00:00`);
 }
 
 /**

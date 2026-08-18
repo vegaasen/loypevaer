@@ -34,8 +34,8 @@
  * with historical data for the new waypoints.
  */
 
-import { writeFileSync, readFileSync } from "node:fs";
-import { resolve, dirname } from "node:path";
+import { readFileSync, writeFileSync } from "node:fs";
+import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -57,7 +57,10 @@ type Waypoint = {
 type WaypointEntry = Waypoint[] | { waypoints: Waypoint[]; elevationGain?: number };
 type WaypointMap = Record<string, WaypointEntry>;
 
-function resolveWaypointEntry(entry: WaypointEntry): { waypoints: Waypoint[]; elevationGain?: number } {
+function resolveWaypointEntry(entry: WaypointEntry): {
+  waypoints: Waypoint[];
+  elevationGain?: number;
+} {
   if (Array.isArray(entry)) return { waypoints: entry };
   return entry;
 }
@@ -79,7 +82,7 @@ type TrackPoint = {
 function toGpxUrl(raw: string): string {
   const url = new URL(raw);
   if (!url.pathname.endsWith(".gpx")) {
-    url.pathname = url.pathname.replace(/\/$/, "") + ".gpx";
+    url.pathname = `${url.pathname.replace(/\/$/, "")}.gpx`;
   }
   return url.toString();
 }
@@ -138,20 +141,22 @@ function parseGpxTrackPoints(gpxContent: string): TrackPoint[] {
   // Match <trkpt lat="..." lon="..."> and <rtept lat="..." lon="...">
   const trkptRegex = /<(?:trkpt|rtept|wpt)\s+[^>]*lat="([^"]+)"[^>]*lon="([^"]+)"/g;
   let match: RegExpExecArray | null;
+  // biome-ignore lint/suspicious/noAssignInExpressions: regex exec loop idiom
   while ((match = trkptRegex.exec(gpxContent)) !== null) {
     const lat = parseFloat(match[1]);
     const lon = parseFloat(match[2]);
-    if (!isNaN(lat) && !isNaN(lon)) {
+    if (!Number.isNaN(lat) && !Number.isNaN(lon)) {
       points.push({ lat, lon });
     }
   }
   // Also try lon before lat variant
   if (points.length === 0) {
     const reversed = /<(?:trkpt|rtept|wpt)\s+[^>]*lon="([^"]+)"[^>]*lat="([^"]+)"/g;
+    // biome-ignore lint/suspicious/noAssignInExpressions: regex exec loop idiom
     while ((match = reversed.exec(gpxContent)) !== null) {
       const lon = parseFloat(match[1]);
       const lat = parseFloat(match[2]);
-      if (!isNaN(lat) && !isNaN(lon)) {
+      if (!Number.isNaN(lat) && !Number.isNaN(lon)) {
         points.push({ lat, lon });
       }
     }
@@ -225,13 +230,13 @@ async function main() {
   const args = process.argv.slice(2);
   if (args.length < 2) {
     console.error(
-      "Usage: bun scripts/enrich-cycling-waypoints.ts <event-id> <path/to/route.gpx|url>"
+      "Usage: bun scripts/enrich-cycling-waypoints.ts <event-id> <path/to/route.gpx|url>",
     );
     console.error(
-      "Example: bun scripts/enrich-cycling-waypoints.ts birkebeinerrittet ~/Downloads/birken.gpx"
+      "Example: bun scripts/enrich-cycling-waypoints.ts birkebeinerrittet ~/Downloads/birken.gpx",
     );
     console.error(
-      "Example: bun scripts/enrich-cycling-waypoints.ts haugesund-sauda https://ridewithgps.com/routes/26544294"
+      "Example: bun scripts/enrich-cycling-waypoints.ts haugesund-sauda https://ridewithgps.com/routes/26544294",
     );
     process.exit(1);
   }
@@ -246,7 +251,9 @@ async function main() {
   const existingEntry = waypointMap[eventId];
   if (existingEntry) {
     const { waypoints: existingWps } = resolveWaypointEntry(existingEntry);
-    console.log(`  Existing waypoints for "${eventId}": ${existingWps.length} points — will be overwritten`);
+    console.log(
+      `  Existing waypoints for "${eventId}": ${existingWps.length} points — will be overwritten`,
+    );
   }
 
   // Load GPX content from file or URL
@@ -265,7 +272,7 @@ async function main() {
   const allPoints = parseGpxTrackPoints(gpxContent);
   if (allPoints.length === 0) {
     console.error(
-      "No track points found in GPX file. Ensure the file contains <trkpt> or <rtept> elements."
+      "No track points found in GPX file. Ensure the file contains <trkpt> or <rtept> elements.",
     );
     process.exit(1);
   }
@@ -309,16 +316,17 @@ async function main() {
   const existingGain = existingForWrite
     ? resolveWaypointEntry(existingForWrite).elevationGain
     : undefined;
-  waypointMap[eventId] = existingGain !== undefined
-    ? { waypoints: enriched, elevationGain: existingGain }
-    : enriched;
+  waypointMap[eventId] =
+    existingGain !== undefined ? { waypoints: enriched, elevationGain: existingGain } : enriched;
   writeFileSync(waypointsPath, JSON.stringify(waypointMap, null, 2));
 
-  console.log(`\n✓ Wrote enriched waypoints to src/data/cycling-waypoints.json (key: "${eventId}")`);
+  console.log(
+    `\n✓ Wrote enriched waypoints to src/data/cycling-waypoints.json (key: "${eventId}")`,
+  );
   console.log(
     `  Next steps:\n` +
-    `    1. Run "bun run fetch-cycling" to merge waypoints into cycling-events.json\n` +
-    `    2. Run "bun run fetch-weather" to update the historical weather cache`
+      `    1. Run "bun run fetch-cycling" to merge waypoints into cycling-events.json\n` +
+      `    2. Run "bun run fetch-weather" to update the historical weather cache`,
   );
 }
 

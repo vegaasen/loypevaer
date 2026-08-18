@@ -1,6 +1,6 @@
-import { describe, it, expect } from "vitest";
 import { render } from "@testing-library/react";
 import { HelmetProvider } from "react-helmet-async";
+import { describe, expect, it } from "vitest";
 import { PageMeta } from "./PageMeta";
 
 function renderMeta(props: Partial<Parameters<typeof PageMeta>[0]> = {}) {
@@ -12,7 +12,7 @@ function renderMeta(props: Partial<Parameters<typeof PageMeta>[0]> = {}) {
   return render(
     <HelmetProvider>
       <PageMeta {...defaults} {...props} />
-    </HelmetProvider>
+    </HelmetProvider>,
   );
 }
 

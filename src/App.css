@@ -30,8 +30,12 @@
 }
 
 @keyframes cookie-slide-up {
-  from { transform: translateY(100%); }
-  to   { transform: translateY(0); }
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 .cookie-banner__text {
@@ -66,7 +70,9 @@
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.02em;
-  transition: opacity 0.15s, transform 0.1s;
+  transition:
+    opacity 0.15s,
+    transform 0.1s;
 
   &:hover {
     opacity: 0.85;
@@ -104,8 +110,12 @@
 }
 
 @keyframes page-loading-sweep {
-  0%   { background-position: -100% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 /* ── Scroll-to-top button ────────────────────────────────────────── */
@@ -131,7 +141,9 @@
 
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.15s, transform 0.15s;
+  transition:
+    opacity 0.15s,
+    transform 0.15s;
 
   &:hover {
     opacity: 0.88;

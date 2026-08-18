@@ -1,7 +1,7 @@
-import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import { MemoryRouter } from "react-router-dom";
+import { describe, expect, it } from "vitest";
 import { FilterProvider } from "../context/FilterContext";
 import { HomePage } from "./HomePage";
 
@@ -13,7 +13,7 @@ function renderPage() {
           <HomePage />
         </FilterProvider>
       </MemoryRouter>
-    </HelmetProvider>
+    </HelmetProvider>,
   );
 }
 
@@ -40,9 +40,7 @@ describe("HomePage", () => {
   it("cycling word child spans contain the four weather words", () => {
     renderPage();
     const wrapper = document.querySelector(".hero-weather-word");
-    const labels = Array.from(wrapper?.querySelectorAll("span") ?? []).map(
-      (s) => s.textContent
-    );
+    const labels = Array.from(wrapper?.querySelectorAll("span") ?? []).map((s) => s.textContent);
     expect(labels).toContain("Vind.");
     expect(labels).toContain("Sol.");
     expect(labels).toContain("Regn.");
@@ -59,6 +57,8 @@ describe("HomePage", () => {
     expect(screen.getByRole("button", { name: "Alle arrangement" })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Kommende" })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Arkiverte" })).toBeInTheDocument();
-    expect(screen.queryByRole("combobox", { name: "Filtrer etter tidshorisont" })).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole("combobox", { name: "Filtrer etter tidshorisont" }),
+    ).not.toBeInTheDocument();
   });
 });

@@ -1,7 +1,7 @@
-import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import { HourlyBreakdown } from "./HourlyBreakdown";
+import { describe, expect, it } from "vitest";
 import type { HourlyEntry } from "../lib/weather";
+import { HourlyBreakdown } from "./HourlyBreakdown";
 
 function makeEntries(count = 24): HourlyEntry[] {
   return Array.from({ length: count }, (_, hour) => ({
@@ -83,11 +83,11 @@ describe("HourlyBreakdown", () => {
 describe("HourlyBreakdown with sparse Yr data", () => {
   it("only renders rows where hasData is true", () => {
     const entries: HourlyEntry[] = [
-      { hour: 2,  hasData: true,  temp: 8.4, precipitation: 0, windSpeed: 9.7, weatherCode: 3 },
-      { hour: 3,  hasData: false, temp: 0,   precipitation: 0, windSpeed: 0,   weatherCode: 0 },
-      { hour: 4,  hasData: false, temp: 0,   precipitation: 0, windSpeed: 0,   weatherCode: 0 },
-      { hour: 8,  hasData: true,  temp: 11.5, precipitation: 0, windSpeed: 7.2, weatherCode: 3 },
-      { hour: 9,  hasData: false, temp: 0,   precipitation: 0, windSpeed: 0,   weatherCode: 0 },
+      { hour: 2, hasData: true, temp: 8.4, precipitation: 0, windSpeed: 9.7, weatherCode: 3 },
+      { hour: 3, hasData: false, temp: 0, precipitation: 0, windSpeed: 0, weatherCode: 0 },
+      { hour: 4, hasData: false, temp: 0, precipitation: 0, windSpeed: 0, weatherCode: 0 },
+      { hour: 8, hasData: true, temp: 11.5, precipitation: 0, windSpeed: 7.2, weatherCode: 3 },
+      { hour: 9, hasData: false, temp: 0, precipitation: 0, windSpeed: 0, weatherCode: 0 },
     ];
     render(<HourlyBreakdown entries={entries} />);
     // Only 2 data rows (02:00 and 08:00)
@@ -97,8 +97,8 @@ describe("HourlyBreakdown with sparse Yr data", () => {
 
   it("shows sparse-data note when some entries have hasData: false", () => {
     const entries: HourlyEntry[] = [
-      { hour: 2, hasData: true,  temp: 8.4, precipitation: 0, windSpeed: 9.7, weatherCode: 3 },
-      { hour: 3, hasData: false, temp: 0,   precipitation: 0, windSpeed: 0,   weatherCode: 0 },
+      { hour: 2, hasData: true, temp: 8.4, precipitation: 0, windSpeed: 9.7, weatherCode: 3 },
+      { hour: 3, hasData: false, temp: 0, precipitation: 0, windSpeed: 0, weatherCode: 0 },
     ];
     render(<HourlyBreakdown entries={entries} />);
     expect(screen.getByText(/6-timers oppløsning/i)).toBeInTheDocument();

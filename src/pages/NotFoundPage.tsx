@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { PageMeta } from "../components/PageMeta";
 import { SITE_URL } from "../lib/seo";
 

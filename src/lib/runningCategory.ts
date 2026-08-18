@@ -1,4 +1,10 @@
-export type RunningCategory = "10k" | "10-20km" | "halvmaraton" | "halvmaraton-pluss" | "maraton" | "ultra";
+export type RunningCategory =
+  | "10k"
+  | "10-20km"
+  | "halvmaraton"
+  | "halvmaraton-pluss"
+  | "maraton"
+  | "ultra";
 
 export const RUNNING_CATEGORY_LABEL: Record<RunningCategory, string> = {
   "10k": "10K",

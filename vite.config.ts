@@ -1,8 +1,9 @@
 /// <reference types="vitest" />
-import { defineConfig, type Plugin } from 'vitest/config'
-import react from '@vitejs/plugin-react'
-import { VitePWA } from 'vite-plugin-pwa'
-import { execSync } from 'child_process'
+
+import { execSync } from "node:child_process";
+import react from "@vitejs/plugin-react";
+import { VitePWA } from "vite-plugin-pwa";
+import { defineConfig, type Plugin } from "vitest/config";
 
 /**
  * Injects <link rel="preload"> hints for Inter woff2 fonts into the built index.html.
@@ -10,92 +11,95 @@ import { execSync } from 'child_process'
  * hardcoding them in index.html.
  */
 function fontPreloadPlugin(base: string): Plugin {
-  const interFontRe = /^assets\/inter-latin(-ext)?-wght-normal-[^.]+\.woff2$/
+  const interFontRe = /^assets\/inter-latin(-ext)?-wght-normal-[^.]+\.woff2$/;
   return {
-    name: 'font-preload',
-    apply: 'build',
+    name: "font-preload",
+    apply: "build",
     transformIndexHtml: {
-      order: 'post',
+      order: "post",
       handler(html, ctx) {
-        const bundle = ctx.bundle
-        if (!bundle) return html
+        const bundle = ctx.bundle;
+        if (!bundle) return html;
         const preloadTags = Object.keys(bundle)
-          .filter(name => interFontRe.test(name))
-          .map(name => `  <link rel="preload" as="font" type="font/woff2" crossorigin href="${base}${name}">`)
-          .join('\n')
-        if (!preloadTags) return html
-        return html.replace('</head>', `${preloadTags}\n</head>`)
+          .filter((name) => interFontRe.test(name))
+          .map(
+            (name) =>
+              `  <link rel="preload" as="font" type="font/woff2" crossorigin href="${base}${name}">`,
+          )
+          .join("\n");
+        if (!preloadTags) return html;
+        return html.replace("</head>", `${preloadTags}\n</head>`);
       },
     },
-  }
+  };
 }
 
 function getGitSha(): string {
   try {
-    return execSync('git rev-parse --short HEAD').toString().trim()
+    return execSync("git rev-parse --short HEAD").toString().trim();
   } catch {
-    return 'dev'
+    return "dev";
   }
 }
 
 // Base path is /loypevaer/ only when deploying to GitHub Pages.
 // AWS (CloudFront + custom domain) and local dev both use /.
-const base = process.env.DEPLOY_TARGET === 'github-pages' ? '/loypevaer/' : '/'
+const base = process.env.DEPLOY_TARGET === "github-pages" ? "/loypevaer/" : "/";
 
-const appVersion = getGitSha()
+const appVersion = getGitSha();
 
 // https://vite.dev/config/
 export default defineConfig({
   base,
   define: {
-    'import.meta.env.VITE_APP_VERSION': JSON.stringify(appVersion),
+    "import.meta.env.VITE_APP_VERSION": JSON.stringify(appVersion),
   },
   plugins: [
     react(),
     fontPreloadPlugin(base),
     VitePWA({
-      registerType: 'prompt',
+      registerType: "prompt",
       devOptions: {
         enabled: true,
       },
       manifest: {
-        name: 'Løypevær',
-        short_name: 'Løypevær',
-        description: 'Sjekk været langs ruten for norske sykkelritt, langrenn, triathlon og løp.',
-        theme_color: '#1a3300',
-        background_color: '#f7f5ef',
-        display: 'standalone',
+        name: "Løypevær",
+        short_name: "Løypevær",
+        description: "Sjekk været langs ruten for norske sykkelritt, langrenn, triathlon og løp.",
+        theme_color: "#1a3300",
+        background_color: "#f7f5ef",
+        display: "standalone",
         start_url: base,
         scope: base,
         icons: [
           {
-            src: 'web-app-manifest-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
-            purpose: 'maskable',
+            src: "web-app-manifest-192x192.png",
+            sizes: "192x192",
+            type: "image/png",
+            purpose: "maskable",
           },
           {
-            src: 'web-app-manifest-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'maskable',
+            src: "web-app-manifest-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "maskable",
           },
           {
-            src: 'favicon.svg',
-            sizes: 'any',
-            type: 'image/svg+xml',
-            purpose: 'any',
+            src: "favicon.svg",
+            sizes: "any",
+            type: "image/svg+xml",
+            purpose: "any",
           },
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}', 'weather-cache.json'],
+        globPatterns: ["**/*.{js,css,html,ico,png,svg,woff2}", "weather-cache.json"],
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/api\.open-meteo\.com\/.*/i,
-            handler: 'StaleWhileRevalidate',
+            handler: "StaleWhileRevalidate",
             options: {
-              cacheName: 'open-meteo-api',
+              cacheName: "open-meteo-api",
               expiration: {
                 maxEntries: 200,
                 maxAgeSeconds: 60 * 60 * 48, // 48 hours
@@ -107,9 +111,9 @@ export default defineConfig({
           },
           {
             urlPattern: /^https:\/\/archive-api\.open-meteo\.com\/.*/i,
-            handler: 'StaleWhileRevalidate',
+            handler: "StaleWhileRevalidate",
             options: {
-              cacheName: 'open-meteo-archive',
+              cacheName: "open-meteo-archive",
               expiration: {
                 maxEntries: 200,
                 maxAgeSeconds: 60 * 60 * 48, // 48 hours
@@ -121,9 +125,9 @@ export default defineConfig({
           },
           {
             urlPattern: /^https:\/\/api\.met\.no\/.*/i,
-            handler: 'StaleWhileRevalidate',
+            handler: "StaleWhileRevalidate",
             options: {
-              cacheName: 'yr-api',
+              cacheName: "yr-api",
               expiration: {
                 maxEntries: 200,
                 maxAgeSeconds: 60 * 60 * 48, // 48 hours
@@ -154,17 +158,18 @@ export default defineConfig({
             id.includes("node_modules/react/") ||
             id.includes("node_modules/react-dom/") ||
             id.includes("node_modules/react-router")
-          ) return "vendor-react";
+          )
+            return "vendor-react";
         },
       },
     },
   },
   test: {
-    environment: 'jsdom',
+    environment: "jsdom",
     environmentOptions: {
       jsdom: {
-        url: 'http://localhost',
+        url: "http://localhost",
       },
     },
   },
-})
+});

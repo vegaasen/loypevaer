@@ -26,6 +26,7 @@
     <!-- Default: analytics denied until user accepts -->
     <script>
       window.dataLayer = window.dataLayer || [];
+      // biome-ignore lint/complexity/noArguments: Google Analytics gtag snippet requires arguments
       function gtag(){dataLayer.push(arguments);}
       gtag('consent', 'default', {
         analytics_storage: 'denied',

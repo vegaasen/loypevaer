@@ -6,7 +6,6 @@
 /** Canonical base URL (unicode form, for meta tags / OG). No trailing slash. */
 export const SITE_URL = "https://www.løypevær.no";
 
-
 /**
  * Norwegian SEO keywords per discipline — used in meta titles and descriptions
  * to target searches like "løypevær", "sykkelvær", "triathlonvær" etc.
