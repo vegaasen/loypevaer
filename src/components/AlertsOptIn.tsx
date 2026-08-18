@@ -19,7 +19,7 @@ type Props = {
 export function AlertsOptIn({ eventId }: Props) {
   const [enabled, setEnabled] = useState(() => readOptedIn()[eventId] ?? false);
   const [permissionState, setPermissionState] = useState<NotificationPermission>(
-    "Notification" in window ? Notification.permission : "denied"
+    "Notification" in window ? Notification.permission : "denied",
   );
 
   if (!("Notification" in window)) return null;
@@ -60,9 +60,7 @@ export function AlertsOptIn({ eventId }: Props) {
         />
         <span>Få varsel hvis værmeldingen endrer seg</span>
       </label>
-      <p className="alerts-opt-in__note">
-        Varsel sendes neste gang du åpner appen.
-      </p>
+      <p className="alerts-opt-in__note">Varsel sendes neste gang du åpner appen.</p>
     </div>
   );
 }

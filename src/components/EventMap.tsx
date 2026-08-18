@@ -1,8 +1,8 @@
-import { useEffect, useRef } from "react";
 import { useQuery } from "@tanstack/react-query";
-import type { Waypoint } from "../lib/weather";
-import type { Discipline } from "../lib/arrangements";
+import { useEffect, useRef } from "react";
 import { useDetailsOpen } from "../hooks/useDetailsOpen";
+import type { Discipline } from "../lib/arrangements";
+import type { Waypoint } from "../lib/weather";
 
 type Props = {
   waypoints: Waypoint[];
@@ -36,14 +36,17 @@ function osrmProfile(discipline: Discipline): string {
   }
 }
 
-async function fetchOsrmRoute(waypoints: Waypoint[], discipline: Discipline): Promise<[number, number][]> {
+async function fetchOsrmRoute(
+  waypoints: Waypoint[],
+  discipline: Discipline,
+): Promise<[number, number][]> {
   // OSRM expects lon,lat pairs
   const coords = waypoints.map((w) => `${w.lon},${w.lat}`).join(";");
   const profile = osrmProfile(discipline);
   const url = `https://router.project-osrm.org/route/v1/${profile}/${coords}?overview=full&geometries=geojson`;
   const res = await fetch(url);
   if (!res.ok) throw new Error(`OSRM error: ${res.status}`);
-  const json = await res.json() as { routes?: OsrmRoute[] };
+  const json = (await res.json()) as { routes?: OsrmRoute[] };
   const route = json.routes?.[0];
   if (!route) throw new Error("No route returned");
   // GeoJSON coords are [lon, lat] — flip to [lat, lon] for Leaflet
@@ -134,7 +137,13 @@ export function EventMap({ waypoints, name, discipline }: Props) {
       }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isOpen, polylineCoords]);
+  }, [
+    isOpen,
+    polylineCoords,
+    waypoints.map,
+    waypoints.length, // Waypoint markers
+    waypoints.forEach,
+  ]);
 
   if (waypoints.length < 2) {
     return (
@@ -149,9 +158,7 @@ export function EventMap({ waypoints, name, discipline }: Props) {
       <summary className="ritt-map__summary">
         Kart over ruten — {name}
         <span className="beta-badge">BETA</span>
-        {routeError && (
-          <span className="ritt-map__fallback-note"> (rett-linje)</span>
-        )}
+        {routeError && <span className="ritt-map__fallback-note"> (rett-linje)</span>}
       </summary>
       <p className="ritt-map__beta-note">
         Kartet er automatisk generert og kan avvike fra faktisk løype.

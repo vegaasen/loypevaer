@@ -1,5 +1,5 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
-import { parseDateLocal, daysUntil, formatCountdown } from "./dates";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { daysUntil, formatCountdown, parseDateLocal } from "./dates";
 
 describe("parseDateLocal", () => {
   it("parses a YYYY-MM-DD string as local midnight", () => {

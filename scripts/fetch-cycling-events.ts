@@ -24,8 +24,8 @@
  * is ~300–800 records, well within what a single request handles.
  */
 
-import { writeFileSync, readFileSync } from "node:fs";
-import { resolve, dirname } from "node:path";
+import { readFileSync, writeFileSync } from "node:fs";
+import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -159,7 +159,10 @@ type ManualEvent = {
 type WaypointEntry = Waypoint[] | { waypoints: Waypoint[]; elevationGain?: number };
 type WaypointMap = Record<string, WaypointEntry>;
 
-function resolveWaypointEntry(entry: WaypointEntry): { waypoints: Waypoint[]; elevationGain?: number } {
+function resolveWaypointEntry(entry: WaypointEntry): {
+  waypoints: Waypoint[];
+  elevationGain?: number;
+} {
   if (Array.isArray(entry)) return { waypoints: entry };
   return entry;
 }
@@ -217,14 +220,11 @@ async function geocode(query: string): Promise<NominatimResult | null> {
     addressdetails: "1",
   });
   try {
-    const res = await fetch(
-      `https://nominatim.openstreetmap.org/search?${params.toString()}`,
-      {
-        headers: {
-          "User-Agent": "loypevaer-cycling-sync/1.0 (github.com/vegaasen/loypevaer)",
-        },
-      }
-    );
+    const res = await fetch(`https://nominatim.openstreetmap.org/search?${params.toString()}`, {
+      headers: {
+        "User-Agent": "loypevaer-cycling-sync/1.0 (github.com/vegaasen/loypevaer)",
+      },
+    });
     if (!res.ok) return null;
     const results = (await res.json()) as NominatimResult[];
     return results[0] ?? null;
@@ -243,8 +243,7 @@ function regionFromNominatim(result: NominatimResult): string {
 async function fetchEventsForYear(year: number): Promise<EqEvent[]> {
   const start = toDdMmYyyy(new Date(year, 0, 1));
   const end = toDdMmYyyy(new Date(year, 11, 31));
-  const url =
-    `${EQ_API_BASE}?organizationId=${NCF_ORG_ID}&dateFrom=${start}&dateTo=${end}`;
+  const url = `${EQ_API_BASE}?organizationId=${NCF_ORG_ID}&dateFrom=${start}&dateTo=${end}`;
 
   const res = await fetch(url, {
     headers: {
@@ -305,18 +304,20 @@ async function main() {
     return INCLUDED_SPORTS.has(e.Sport.Name);
   });
 
-  console.log(
-    `  ${allRaw.length} total → ${filtered.length} after sport/validation filter`
-  );
+  console.log(`  ${allRaw.length} total → ${filtered.length} after sport/validation filter`);
 
   // Filter: minimum distance 45 km; exclude unknown distance (km === 0)
   const distanceFiltered = filtered.filter((e) => {
-    const distances = Object.values(e.Race).map((r) => r.Distance).filter((d) => d > 0);
+    const distances = Object.values(e.Race)
+      .map((r) => r.Distance)
+      .filter((d) => d > 0);
     const km = distances.length > 0 ? Math.max(...distances) / 1000 : 0;
     return km >= 45;
   });
 
-  console.log(`  ${distanceFiltered.length} events after distance filter (≥45 km, unknown excluded)`);
+  console.log(
+    `  ${distanceFiltered.length} events after distance filter (≥45 km, unknown excluded)`,
+  );
 
   // Dedup against cycling-manual.json (by base ID)
   const deduped = distanceFiltered.filter((e) => {
@@ -385,15 +386,16 @@ async function main() {
 
     // Apply hardcoded override if available (corrects known bad EQ Timing data)
     const kmOverride = DISTANCE_OVERRIDES[id];
-    const km = kmOverride !== undefined
-      ? kmOverride
-      : metres > 0 ? Math.round(metres / 100) / 10 : 0;
+    const km =
+      kmOverride !== undefined ? kmOverride : metres > 0 ? Math.round(metres / 100) / 10 : 0;
     if (kmOverride !== undefined) {
-      console.log(`    ⚠ Distance override applied for "${id}": ${Math.round(metres / 100) / 10} km → ${kmOverride} km`);
+      console.log(
+        `    ⚠ Distance override applied for "${id}": ${Math.round(metres / 100) / 10} km → ${kmOverride} km`,
+      );
     }
 
     console.log(
-      `  Processing: ${event.Name} → id: ${id} (${officialDate}, ${event.Sport.Name}, ${cityName})`
+      `  Processing: ${event.Name} → id: ${id} (${officialDate}, ${event.Sport.Name}, ${cityName})`,
     );
 
     // Use EQ Timing coordinates if available, otherwise geocode
@@ -459,8 +461,8 @@ async function main() {
         events: output,
       },
       null,
-      2
-    )
+      2,
+    ),
   );
 
   console.log(`\nWrote ${output.length} events to src/data/cycling-events.json`);
@@ -468,7 +470,7 @@ async function main() {
   // Warn if result count looks suspiciously round (potential silent truncation)
   if (output.length > 0 && output.length % 100 === 0) {
     console.warn(
-      `  ⚠ Event count (${output.length}) is a round number — verify the API didn't silently truncate results.`
+      `  ⚠ Event count (${output.length}) is a round number — verify the API didn't silently truncate results.`,
     );
   }
 }
@@ -477,4 +479,3 @@ main().catch((err) => {
   console.error("Fatal error:", err);
   process.exit(1);
 });
-

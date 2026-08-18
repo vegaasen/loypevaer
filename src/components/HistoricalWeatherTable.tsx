@@ -1,10 +1,10 @@
-import { useState, useEffect, useMemo } from "react";
 import { useQueries } from "@tanstack/react-query";
-import { fetchWeather, getWeatherCache } from "../lib/weather";
-import { describeWeatherCode } from "../lib/wmo";
+import { useEffect, useMemo, useState } from "react";
+import { useDetailsOpen } from "../hooks/useDetailsOpen";
 import { avg, mode } from "../lib/stats";
 import type { Waypoint, WeatherData } from "../lib/weather";
-import { useDetailsOpen } from "../hooks/useDetailsOpen";
+import { fetchWeather, getWeatherCache } from "../lib/weather";
+import { describeWeatherCode } from "../lib/wmo";
 
 type Props = {
   waypoints: Waypoint[];
@@ -17,7 +17,9 @@ const HISTORY_YEARS = Array.from({ length: 10 }, (_, i) => END_YEAR - 9 + i); //
 
 export function HistoricalWeatherTable({ waypoints, officialDate }: Props) {
   const { detailsRef, isOpen } = useDetailsOpen();
-  const [historicalByYear, setHistoricalByYear] = useState<Record<string, WeatherData> | null>(null);
+  const [historicalByYear, setHistoricalByYear] = useState<Record<string, WeatherData> | null>(
+    null,
+  );
 
   // Load the weather cache eagerly on mount so it is ready before the
   // details panel is opened. This prevents all 50 queries from firing live
@@ -50,9 +52,9 @@ export function HistoricalWeatherTable({ waypoints, officialDate }: Props) {
             enabled: isOpen && !cachedData,
             initialData: cachedData,
           };
-        })
+        }),
       ),
-    [waypoints, mm, dd, isOpen, historicalByYear]
+    [waypoints, mm, dd, isOpen, historicalByYear],
   );
 
   const results = useQueries({ queries: queryDefs });
@@ -100,19 +102,34 @@ export function HistoricalWeatherTable({ waypoints, officialDate }: Props) {
               <tr key={row.year} className={row.isLoading ? "history-table__row--loading" : ""}>
                 <td className="history-table__year">{row.year}</td>
                 {row.isLoading ? (
-                  <td colSpan={5} className="history-table__status">Laster…</td>
+                  <td colSpan={5} className="history-table__status">
+                    Laster…
+                  </td>
                 ) : row.isError ? (
-                  <td colSpan={5} className="history-table__status history-table__status--error">Ikke tilgjengelig</td>
+                  <td colSpan={5} className="history-table__status history-table__status--error">
+                    Ikke tilgjengelig
+                  </td>
                 ) : (
                   <>
                     <td>{row.tempMax != null ? `${Math.round(row.tempMax * 10) / 10}°` : "–"}</td>
                     <td>{row.tempMin != null ? `${Math.round(row.tempMin * 10) / 10}°` : "–"}</td>
-                    <td>{row.precipitation != null ? `${Math.round(row.precipitation * 10) / 10}` : "–"}</td>
-                    <td>{row.windSpeed != null ? `${Math.round(row.windSpeed * 10) / 10}` : "–"}</td>
+                    <td>
+                      {row.precipitation != null
+                        ? `${Math.round(row.precipitation * 10) / 10}`
+                        : "–"}
+                    </td>
+                    <td>
+                      {row.windSpeed != null ? `${Math.round(row.windSpeed * 10) / 10}` : "–"}
+                    </td>
                     <td className="history-table__icon">
                       {row.weatherCode != null ? describeWeatherCode(row.weatherCode).emoji : "–"}
                       {row.isPartialError && (
-                        <span className="history-table__partial-error" title="Data mangler for noen målepunkter">⚠</span>
+                        <span
+                          className="history-table__partial-error"
+                          title="Data mangler for noen målepunkter"
+                        >
+                          ⚠
+                        </span>
                       )}
                     </td>
                   </>

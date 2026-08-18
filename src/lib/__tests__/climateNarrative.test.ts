@@ -1,7 +1,7 @@
 // src/lib/__tests__/climateNarrative.test.ts
 import { describe, expect, it } from "vitest";
-import { buildClimateNarrative } from "../climateNarrative";
 import type { RittEntry } from "../arrangements";
+import { buildClimateNarrative } from "../climateNarrative";
 
 const baseEvent: RittEntry = {
   id: "test-ritt",
@@ -77,10 +77,7 @@ describe("buildClimateNarrative", () => {
   });
 
   it("returns null when event has no waypoints", () => {
-    const result = buildClimateNarrative(
-      { ...baseEvent, waypoints: [] },
-      cacheWithData
-    );
+    const result = buildClimateNarrative({ ...baseEvent, waypoints: [] }, cacheWithData);
     expect(result).toBeNull();
   });
 });

@@ -1,7 +1,7 @@
-import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
+import { describe, expect, it, vi } from "vitest";
 import { FeaturedEventCard } from "./FeaturedEventCard";
 
 function renderCard(props: Partial<Parameters<typeof FeaturedEventCard>[0]> = {}) {
@@ -16,7 +16,7 @@ function renderCard(props: Partial<Parameters<typeof FeaturedEventCard>[0]> = {}
   return render(
     <MemoryRouter>
       <FeaturedEventCard {...defaults} {...props} />
-    </MemoryRouter>
+    </MemoryRouter>,
   );
 }
 

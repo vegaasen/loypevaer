@@ -38,8 +38,7 @@ export function ElevationProfile({ waypoints, distanceKm }: Props) {
     }
 
     const toX = (fraction: number) => PAD.left + fraction * PLOT_W;
-    const toY = (alt: number) =>
-      PAD.top + PLOT_H - ((alt - visMin) / (visMax - visMin)) * PLOT_H;
+    const toY = (alt: number) => PAD.top + PLOT_H - ((alt - visMin) / (visMax - visMin)) * PLOT_H;
 
     const points = withAlt.map((w, i) => ({
       x: toX(FRACTIONS[i] ?? i / (withAlt.length - 1)),
@@ -67,70 +66,65 @@ export function ElevationProfile({ waypoints, distanceKm }: Props) {
 
   return (
     <details className="elevation-profile__details">
-      <summary className="elevation-profile__summary">
-        Høydeprofil
-      </summary>
+      <summary className="elevation-profile__summary">Høydeprofil</summary>
       <div className="elevation-profile__body">
-    <div className="elevation-profile">
-      <svg
-        viewBox={`0 0 ${VW} ${VH}`}
-        className="elevation-profile__svg"
-        role="img"
-        aria-label={`Høydeprofil: ${rawMin}–${rawMax} m o.h.`}
-        preserveAspectRatio="none"
-      >
-        {/* Filled area */}
-        <path d={areaPath} className="elevation-profile__area" />
+        <div className="elevation-profile">
+          <svg
+            viewBox={`0 0 ${VW} ${VH}`}
+            className="elevation-profile__svg"
+            role="img"
+            aria-label={`Høydeprofil: ${rawMin}–${rawMax} m o.h.`}
+            preserveAspectRatio="none"
+          >
+            {/* Filled area */}
+            <path d={areaPath} className="elevation-profile__area" />
 
-        {/* Profile line */}
-        <polyline
-          points={lineCoords}
-          className="elevation-profile__line"
-          fill="none"
-        />
+            {/* Profile line */}
+            <polyline points={lineCoords} className="elevation-profile__line" fill="none" />
 
-        {/* Waypoint dots with native SVG tooltips */}
-        {points.map((p, i) => (
-          <g key={i} className="elevation-profile__point">
-            <title>{`${p.label}: ${p.alt} m o.h.`}</title>
-            {/* Larger invisible hit area for tooltip */}
-            <circle cx={p.x} cy={p.y} r={10} opacity={0} />
-            <circle cx={p.x} cy={p.y} r={3} className="elevation-profile__dot" />
-            {/* km label below the chart */}
+            {/* Waypoint dots with native SVG tooltips */}
+            {points.map((p, i) => (
+              // biome-ignore lint/suspicious/noArrayIndexKey: elevation points have no stable id
+              <g key={i} className="elevation-profile__point">
+                <title>{`${p.label}: ${p.alt} m o.h.`}</title>
+                {/* Larger invisible hit area for tooltip */}
+                <circle cx={p.x} cy={p.y} r={10} opacity={0} />
+                <circle cx={p.x} cy={p.y} r={3} className="elevation-profile__dot" />
+                {/* km label below the chart */}
+                <text
+                  x={p.x}
+                  y={BASELINE + 14}
+                  className="elevation-profile__km-label"
+                  textAnchor={i === 0 ? "start" : i === points.length - 1 ? "end" : "middle"}
+                >
+                  {p.km} km
+                </text>
+              </g>
+            ))}
+
+            {/* Min altitude label (bottom-left) */}
             <text
-              x={p.x}
-              y={BASELINE + 14}
-              className="elevation-profile__km-label"
-              textAnchor={i === 0 ? "start" : i === points.length - 1 ? "end" : "middle"}
+              x={PAD.left - 4}
+              y={BASELINE}
+              className="elevation-profile__alt-label"
+              textAnchor="end"
+              dominantBaseline="auto"
             >
-              {p.km} km
+              {Math.round(visMin)} m
             </text>
-          </g>
-        ))}
 
-        {/* Min altitude label (bottom-left) */}
-        <text
-          x={PAD.left - 4}
-          y={BASELINE}
-          className="elevation-profile__alt-label"
-          textAnchor="end"
-          dominantBaseline="auto"
-        >
-          {Math.round(visMin)} m
-        </text>
-
-        {/* Max altitude label (top-left) */}
-        <text
-          x={PAD.left - 4}
-          y={PAD.top}
-          className="elevation-profile__alt-label"
-          textAnchor="end"
-          dominantBaseline="hanging"
-        >
-          {Math.round(visMax)} m
-        </text>
-      </svg>
-    </div>
+            {/* Max altitude label (top-left) */}
+            <text
+              x={PAD.left - 4}
+              y={PAD.top}
+              className="elevation-profile__alt-label"
+              textAnchor="end"
+              dominantBaseline="hanging"
+            >
+              {Math.round(visMax)} m
+            </text>
+          </svg>
+        </div>
       </div>
     </details>
   );

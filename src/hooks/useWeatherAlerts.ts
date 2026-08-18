@@ -1,9 +1,10 @@
 // src/hooks/useWeatherAlerts.ts
-import { useEffect } from "react";
+
 import { useQueryClient } from "@tanstack/react-query";
-import { allArrangements } from "../lib/arrangements";
-import { isForecastRange, getWeatherCache } from "../lib/weather";
+import { useEffect } from "react";
 import { hasSignificantChange, type WeatherSnapshot } from "../lib/alertDiff";
+import { allArrangements } from "../lib/arrangements";
+import { getWeatherCache, isForecastRange } from "../lib/weather";
 
 const SNAPSHOTS_KEY = "weather-alert-snapshots";
 const OPTED_IN_KEY = "weather-alert-events";
@@ -41,7 +42,7 @@ export function useWeatherAlerts() {
     const snapshots = readJson<Snapshots>(SNAPSHOTS_KEY, {});
 
     const eligible = Object.entries(store).filter(
-      ([id, entry]) => optedIn[id] && entry.date && isForecastRange(entry.date)
+      ([id, entry]) => optedIn[id] && entry.date && isForecastRange(entry.date),
     );
 
     if (eligible.length === 0) return;
@@ -90,7 +91,7 @@ export function useWeatherAlerts() {
 
       localStorage.setItem(SNAPSHOTS_KEY, JSON.stringify(snapshots));
     })();
-  // Run once on mount
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    // Run once on mount
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [queryClient.getQueryData]);
 }

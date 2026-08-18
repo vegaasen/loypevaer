@@ -19,4 +19,3 @@ if (typeof IntersectionObserver === "undefined") {
     value: IntersectionObserverMock,
   });
 }
-

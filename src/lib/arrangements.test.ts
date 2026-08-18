@@ -1,8 +1,10 @@
-import { describe, it, expect } from "vitest";
-import { getNextPerDiscipline } from "./arrangements";
+import { describe, expect, it } from "vitest";
 import type { RittEntry } from "./arrangements";
+import { getNextPerDiscipline } from "./arrangements";
 
-function makeEvent(overrides: Partial<RittEntry> & Pick<RittEntry, "id" | "discipline" | "officialDate">): RittEntry {
+function makeEvent(
+  overrides: Partial<RittEntry> & Pick<RittEntry, "id" | "discipline" | "officialDate">,
+): RittEntry {
   return {
     name: overrides.id,
     distance: 100,
@@ -36,7 +38,12 @@ describe("getNextPerDiscipline", () => {
 
   it("excludes cancelled events", () => {
     const events = [
-      makeEvent({ id: "cancelled", discipline: "landevei", officialDate: "2026-06-01", dateStatus: "cancelled" }),
+      makeEvent({
+        id: "cancelled",
+        discipline: "landevei",
+        officialDate: "2026-06-01",
+        dateStatus: "cancelled",
+      }),
       makeEvent({ id: "ok", discipline: "landevei", officialDate: "2026-07-01" }),
     ];
     const result = getNextPerDiscipline(events, NOW);
@@ -62,7 +69,7 @@ describe("getNextPerDiscipline", () => {
           id: `e${i}`,
           discipline: disciplines[i % disciplines.length],
           officialDate: `2026-06-${String(i + 1).padStart(2, "0")}`,
-        })
+        }),
       );
     }
     const result = getNextPerDiscipline(events, NOW);
@@ -70,17 +77,13 @@ describe("getNextPerDiscipline", () => {
   });
 
   it("returns empty array when no upcoming events exist", () => {
-    const events = [
-      makeEvent({ id: "old", discipline: "landevei", officialDate: "2025-01-01" }),
-    ];
+    const events = [makeEvent({ id: "old", discipline: "landevei", officialDate: "2025-01-01" })];
     const result = getNextPerDiscipline(events, NOW);
     expect(result).toEqual([]);
   });
 
   it("includes today's events", () => {
-    const events = [
-      makeEvent({ id: "today", discipline: "landevei", officialDate: "2026-05-11" }),
-    ];
+    const events = [makeEvent({ id: "today", discipline: "landevei", officialDate: "2026-05-11" })];
     const result = getNextPerDiscipline(events, NOW);
     expect(result.map((e) => e.id)).toEqual(["today"]);
   });

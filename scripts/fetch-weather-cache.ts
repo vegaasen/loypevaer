@@ -11,8 +11,8 @@
  * rate-limit issues with the archive API.
  */
 
-import { writeFileSync, readFileSync } from "node:fs";
-import { resolve, dirname } from "node:path";
+import { readFileSync, writeFileSync } from "node:fs";
+import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -80,7 +80,7 @@ function sleep(ms: number): Promise<void> {
 async function runWithConcurrency<T>(
   tasks: (() => Promise<T>)[],
   limit: number,
-  delayMs: number = 0
+  delayMs: number = 0,
 ): Promise<T[]> {
   const results = new Array<T>(tasks.length);
   let idx = 0;
@@ -124,7 +124,7 @@ type RawDailyResult = {
 async function fetchArchiveDay(
   wp: Waypoint,
   date: string,
-  retries = 3
+  retries = 3,
 ): Promise<RawDailyResult | null> {
   const params = new URLSearchParams({
     latitude: String(wp.lat),
@@ -150,7 +150,7 @@ async function fetchArchiveDay(
         console.warn(`  Archive API ${res.status} for ${date} @ ${wp.label}`);
         return null;
       }
-      const json = await res.json() as { daily: Record<string, (number | null)[]> };
+      const json = (await res.json()) as { daily: Record<string, (number | null)[]> };
       const d = json.daily;
       return {
         tempMax: d.temperature_2m_max?.[0] ?? null,
@@ -214,7 +214,9 @@ async function main() {
   const triathlonData = JSON.parse(readFileSync(triathlonPath, "utf-8")) as { events: Ritt[] };
   const runningData = JSON.parse(readFileSync(runningPath, "utf-8")) as { events: Ritt[] };
   const cyclingData = JSON.parse(readFileSync(cyclingPath, "utf-8")) as { events: Ritt[] };
-  const cyclingManualData = JSON.parse(readFileSync(cyclingManualPath, "utf-8")) as { events: Ritt[] };
+  const cyclingManualData = JSON.parse(readFileSync(cyclingManualPath, "utf-8")) as {
+    events: Ritt[];
+  };
   const ritts: Ritt[] = [
     ...arrangements,
     ...triathlonData.events,
@@ -244,7 +246,7 @@ async function main() {
 
   console.log(
     `Fetching ${jobs.length} archive data points ` +
-      `(${CONCURRENCY} concurrent, ~${Math.ceil(jobs.length / CONCURRENCY)} rounds)…`
+      `(${CONCURRENCY} concurrent, ~${Math.ceil(jobs.length / CONCURRENCY)} rounds)…`,
   );
 
   const cache: WeatherCache = {
@@ -335,12 +337,8 @@ async function main() {
     }
   }
 
-  console.log(
-    `  ${Object.keys(cache.climateAverages).length} climate averages computed`
-  );
-  console.log(
-    `  ${Object.keys(cache.historicalByYear).length} historical-by-year entries`
-  );
+  console.log(`  ${Object.keys(cache.climateAverages).length} climate averages computed`);
+  console.log(`  ${Object.keys(cache.historicalByYear).length} historical-by-year entries`);
 
   writeFileSync(outputPath, JSON.stringify(cache, null, 2));
   console.log(`\nCache written to public/weather-cache.json`);

@@ -7,13 +7,13 @@
  * Run automatically as part of `bun run build` via the prebuild script.
  */
 
-import { writeFileSync } from "fs";
-import { resolve } from "path";
+import { writeFileSync } from "node:fs";
+import { resolve } from "node:path";
 import ritt from "../src/data/arrangements.json" with { type: "json" };
-import triathlonData from "../src/data/triathlon-events.json" with { type: "json" };
-import runningData from "../src/data/running-events.json" with { type: "json" };
 import cyclingData from "../src/data/cycling-events.json" with { type: "json" };
 import cyclingManualData from "../src/data/cycling-manual.json" with { type: "json" };
+import runningData from "../src/data/running-events.json" with { type: "json" };
+import triathlonData from "../src/data/triathlon-events.json" with { type: "json" };
 
 // Unicode IDN form — must match the verified Google Search Console property.
 const BASE_URL = "https://www.løypevær.no";
@@ -34,9 +34,9 @@ const urls: string[] = [
     <priority>1.0</priority>
   </url>`,
 
-  // SEO landing page — targets "rittvær" searches
+  // SEO landing page — targets "løypevær" searches
   `  <url>
-    <loc>${BASE_URL}/hva-er-rittvaer</loc>
+    <loc>${BASE_URL}/hva-er-loypevaer</loc>
     <lastmod>${today}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -69,17 +69,17 @@ const urls: string[] = [
   // One entry per arrangement — all data sources mirroring src/lib/arrangements.ts
   ...[
     ...(ritt as RittEntry[]),
-    ...((triathlonData as { events: RittEntry[] }).events),
-    ...((runningData as { events: RittEntry[] }).events),
-    ...((cyclingData as { events: RittEntry[] }).events),
-    ...((cyclingManualData as { events: RittEntry[] }).events),
+    ...(triathlonData as { events: RittEntry[] }).events,
+    ...(runningData as { events: RittEntry[] }).events,
+    ...(cyclingData as { events: RittEntry[] }).events,
+    ...(cyclingManualData as { events: RittEntry[] }).events,
   ].map(
     (r) => `  <url>
     <loc>${BASE_URL}/arrangement/${r.id}</loc>
     <lastmod>${r.officialDate}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>`
+  </url>`,
   ),
 ];
 

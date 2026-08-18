@@ -1,6 +1,7 @@
 // @vitest-environment jsdom
-import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
-import { renderHook, act } from "@testing-library/react";
+
+import { act, renderHook } from "@testing-library/react";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { useFeedbackPrompt } from "./useFeedbackPrompt";
 
 const STORAGE_KEY = "loypevaer:feedback-last-shown";
@@ -19,9 +20,15 @@ const localStorageMock = (() => {
   let store: Record<string, string> = {};
   return {
     getItem: (key: string) => store[key] ?? null,
-    setItem: (key: string, value: string) => { store[key] = value; },
-    removeItem: (key: string) => { delete store[key]; },
-    clear: () => { store = {}; },
+    setItem: (key: string, value: string) => {
+      store[key] = value;
+    },
+    removeItem: (key: string) => {
+      delete store[key];
+    },
+    clear: () => {
+      store = {};
+    },
   };
 })();
 vi.stubGlobal("localStorage", localStorageMock);
@@ -145,7 +152,9 @@ describe("useFeedbackPrompt", () => {
 
     const { result } = renderHook(() => useFeedbackPrompt());
     expect(result.current.visible).toBe(true);
-    act(() => { result.current.dismiss(); });
+    act(() => {
+      result.current.dismiss();
+    });
     expect(result.current.visible).toBe(false);
   });
 });

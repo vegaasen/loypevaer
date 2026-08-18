@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { PageMeta } from "../components/PageMeta";
-import { SITE_URL } from "../lib/seo";
 import changelogData from "../data/changelog.json";
 import type { ChangelogEntry } from "../data/changelog.types";
+import { SITE_URL } from "../lib/seo";
 
 const pageUrl = `${SITE_URL}/endringslogg`;
 const pageTitle = "Endringslogg – hva er nytt i Løypevær?";
@@ -21,15 +21,16 @@ export function EndringsloggPage() {
         ogType="article"
       />
 
-      <Link to="/" className="ritt-page__back-link">← Alle arrangement</Link>
+      <Link to="/" className="ritt-page__back-link">
+        ← Alle arrangement
+      </Link>
 
       <header className="ritt-page__header">
         <div className="ritt-page__title-row">
           <h1>Endringslogg</h1>
         </div>
         <p className="ritt-page__lead">
-          Nye funksjoner og rettelser i Løypevær — generert automatisk fra
-          kodehistorikken.
+          Nye funksjoner og rettelser i Løypevær — generert automatisk fra kodehistorikken.
         </p>
       </header>
 
@@ -41,18 +42,11 @@ export function EndringsloggPage() {
             {changelog.map((entry) => (
               <li key={entry.sha} className="endringslogg__entry">
                 <div className="endringslogg__meta">
-                  <span
-                    className={`endringslogg__badge endringslogg__badge--${entry.type}`}
-                  >
+                  <span className={`endringslogg__badge endringslogg__badge--${entry.type}`}>
                     {entry.type}
                   </span>
-                  {entry.scope && (
-                    <span className="endringslogg__scope">{entry.scope}</span>
-                  )}
-                  <time
-                    className="endringslogg__date"
-                    dateTime={entry.date}
-                  >
+                  {entry.scope && <span className="endringslogg__scope">{entry.scope}</span>}
+                  <time className="endringslogg__date" dateTime={entry.date}>
                     {entry.date}
                   </time>
                   <a

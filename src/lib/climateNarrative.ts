@@ -1,7 +1,7 @@
 // src/lib/climateNarrative.ts
 import type { RittEntry } from "./arrangements";
+import { type ClimateStoryInput, getClimateStoryLabel } from "./climateStory";
 import type { WeatherData } from "./weather";
-import { getClimateStoryLabel, type ClimateStoryInput } from "./climateStory";
 
 type WeatherCacheShape = {
   climateAverages: Record<string, WeatherData>;
@@ -14,10 +14,7 @@ type WeatherCacheShape = {
  *
  * Returns null if the cache has no data for the first waypoint.
  */
-export function buildClimateNarrative(
-  event: RittEntry,
-  cache: WeatherCacheShape
-): string | null {
+export function buildClimateNarrative(event: RittEntry, cache: WeatherCacheShape): string | null {
   if (event.waypoints.length === 0) return null;
 
   const first = event.waypoints[0];
@@ -51,8 +48,18 @@ export function buildClimateNarrative(
   // Build sentence 1: temperature at start waypoint
   const monthNum = parseInt(mm, 10);
   const monthNames = [
-    "januar", "februar", "mars", "april", "mai", "juni",
-    "juli", "august", "september", "oktober", "november", "desember",
+    "januar",
+    "februar",
+    "mars",
+    "april",
+    "mai",
+    "juni",
+    "juli",
+    "august",
+    "september",
+    "oktober",
+    "november",
+    "desember",
   ];
   const monthName = monthNames[monthNum - 1] ?? "";
 

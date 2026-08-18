@@ -16,22 +16,24 @@ export function parseGpx(xml: string): GpxTrackPoint[] {
 
   const parseError = doc.querySelector("parsererror");
   if (parseError) {
-    throw new Error("Ugyldig GPX-fil: " + (parseError.textContent ?? "ukjent feil"));
+    throw new Error(`Ugyldig GPX-fil: ${parseError.textContent ?? "ukjent feil"}`);
   }
 
   const trkpts = doc.querySelectorAll("trkpt");
   if (trkpts.length === 0) {
-    throw new Error("Ingen sporpunkter funnet i GPX-filen. Kontroller at filen inneholder <trkpt>-elementer.");
+    throw new Error(
+      "Ingen sporpunkter funnet i GPX-filen. Kontroller at filen inneholder <trkpt>-elementer.",
+    );
   }
 
   const points: GpxTrackPoint[] = [];
   trkpts.forEach((pt) => {
     const lat = parseFloat(pt.getAttribute("lat") ?? "");
     const lon = parseFloat(pt.getAttribute("lon") ?? "");
-    if (isNaN(lat) || isNaN(lon)) return;
+    if (Number.isNaN(lat) || Number.isNaN(lon)) return;
     const eleEl = pt.querySelector("ele");
     const ele = eleEl ? parseFloat(eleEl.textContent ?? "") : null;
-    points.push({ lat, lon, ele: ele !== null && !isNaN(ele) ? ele : null });
+    points.push({ lat, lon, ele: ele !== null && !Number.isNaN(ele) ? ele : null });
   });
 
   if (points.length === 0) {
@@ -50,10 +52,7 @@ function haversineKm(a: GpxTrackPoint, b: GpxTrackPoint): number {
   const sinDLon = Math.sin(dLon / 2);
   const h =
     sinDLat * sinDLat +
-    Math.cos((a.lat * Math.PI) / 180) *
-      Math.cos((b.lat * Math.PI) / 180) *
-      sinDLon *
-      sinDLon;
+    Math.cos((a.lat * Math.PI) / 180) * Math.cos((b.lat * Math.PI) / 180) * sinDLon * sinDLon;
   return 2 * R * Math.asin(Math.sqrt(h));
 }
 
@@ -135,7 +134,7 @@ export async function fetchGpxFromUrl(url: string): Promise<GpxTrackPoint[]> {
     text = await res.text();
   } catch {
     throw new Error(
-      "Kunne ikke laste GPX fra URL. Kontroller at adressen er riktig og at tjenesten tillater nedlasting (CORS)."
+      "Kunne ikke laste GPX fra URL. Kontroller at adressen er riktig og at tjenesten tillater nedlasting (CORS).",
     );
   }
   return parseGpx(text);

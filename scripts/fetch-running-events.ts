@@ -11,7 +11,7 @@
  */
 
 import { writeFileSync } from "node:fs";
-import { resolve, dirname } from "node:path";
+import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -129,14 +129,11 @@ async function geocode(query: string): Promise<NominatimResult | null> {
   });
 
   try {
-    const res = await fetch(
-      `https://nominatim.openstreetmap.org/search?${params.toString()}`,
-      {
-        headers: {
-          "User-Agent": "loypevaer-running-sync/1.0 (github.com/vegaasen/loypevaer)",
-        },
-      }
-    );
+    const res = await fetch(`https://nominatim.openstreetmap.org/search?${params.toString()}`, {
+      headers: {
+        "User-Agent": "loypevaer-running-sync/1.0 (github.com/vegaasen/loypevaer)",
+      },
+    });
     if (!res.ok) return null;
     const results = (await res.json()) as NominatimResult[];
     return results[0] ?? null;
@@ -190,14 +187,16 @@ async function main() {
 
   const data = (await res.json()) as RacedaysResponse;
   const allEvents = data.data;
-  console.log(`  ${allEvents.length} events fetched (total in dataset: ${data.totalNumberOfItems})`);
+  console.log(
+    `  ${allEvents.length} events fetched (total in dataset: ${data.totalNumberOfItems})`,
+  );
 
   // Filter: future events only, must have at least one race in our range
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
   const filtered = allEvents.filter((e) => {
-    if (new Date(e.date + "T00:00:00") < today) return false;
+    if (new Date(`${e.date}T00:00:00`) < today) return false;
     return pickLongestRace(e.races) !== null;
   });
 
@@ -263,8 +262,8 @@ async function main() {
         events: output,
       },
       null,
-      2
-    )
+      2,
+    ),
   );
 
   console.log(`\nWrote ${output.length} events to src/data/running-events.json`);

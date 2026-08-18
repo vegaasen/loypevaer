@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef, useEffect } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const STORAGE_KEY = "loypevaer:mine-ritt";
 
@@ -44,7 +44,7 @@ export function useMyEvents() {
     (id: string, entry: PlannedEntry) => {
       save({ ...storeRef.current, [id]: entry });
     },
-    [save]
+    [save],
   );
 
   const remove = useCallback(
@@ -53,15 +53,12 @@ export function useMyEvents() {
       delete next[id];
       save(next);
     },
-    [save]
+    [save],
   );
 
   const isPlanned = useCallback((id: string) => id in store, [store]);
 
-  const getPlanned = useCallback(
-    (id: string): PlannedEntry | undefined => store[id],
-    [store]
-  );
+  const getPlanned = useCallback((id: string): PlannedEntry | undefined => store[id], [store]);
 
   return {
     plannedIds: Object.keys(store),

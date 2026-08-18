@@ -14,30 +14,25 @@ type DiffResult = {
   summary: string;
 };
 
-const TEMP_THRESHOLD = 4;       // °C
-const PRECIP_THRESHOLD = 25;    // percentage points
-const WIND_THRESHOLD = 5;       // m/s
+const TEMP_THRESHOLD = 4; // °C
+const PRECIP_THRESHOLD = 25; // percentage points
+const WIND_THRESHOLD = 5; // m/s
 
-export function hasSignificantChange(
-  prev: WeatherSnapshot,
-  next: WeatherSnapshot
-): DiffResult {
+export function hasSignificantChange(prev: WeatherSnapshot, next: WeatherSnapshot): DiffResult {
   const parts: string[] = [];
 
   const tempDiff = Math.abs(next.tempMax - prev.tempMax);
   if (tempDiff > TEMP_THRESHOLD) {
     const dir = next.tempMax < prev.tempMax ? "falt" : "steget";
     parts.push(
-      `temperatur: har ${dir} ${Math.round(tempDiff)}°C — nå ${Math.round(next.tempMax)}°C`
+      `temperatur: har ${dir} ${Math.round(tempDiff)}°C — nå ${Math.round(next.tempMax)}°C`,
     );
   }
 
   const precipDiff = Math.abs(next.precipProbability - prev.precipProbability);
   if (precipDiff > PRECIP_THRESHOLD) {
     const dir = next.precipProbability > prev.precipProbability ? "økt" : "sunket";
-    parts.push(
-      `nedbør: sannsynlighet har ${dir} til ${Math.round(next.precipProbability)}%`
-    );
+    parts.push(`nedbør: sannsynlighet har ${dir} til ${Math.round(next.precipProbability)}%`);
   }
 
   const windDiff = Math.abs(next.windSpeed - prev.windSpeed);
@@ -50,5 +45,5 @@ export function hasSignificantChange(
     return { changed: false, summary: "" };
   }
 
-  return { changed: true, summary: parts.join(". ") + "." };
+  return { changed: true, summary: `${parts.join(". ")}.` };
 }

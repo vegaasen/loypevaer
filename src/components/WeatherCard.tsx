@@ -1,20 +1,19 @@
 import { memo, useState } from "react";
-import type { WeatherData } from "../lib/weather";
+import { useHourlyBreakdown } from "../hooks/useHourlyBreakdown";
+import type { ClimateStoryInput } from "../lib/climateStory";
+import type { Waypoint, WeatherData } from "../lib/weather";
 import { resolveWeatherValues } from "../lib/weather";
-import { describeWeatherCode } from "../lib/wmo";
-import type { Waypoint } from "../lib/weather";
-import { windRelativeLabel, degreesToCompass } from "../lib/wind";
 import {
-  TEMP_FREEZE,
-  TEMP_COLD,
-  PRECIP_LIGHT,
   PRECIP_HEAVY,
+  PRECIP_LIGHT,
+  TEMP_COLD,
+  TEMP_FREEZE,
   WIND_SIGNIFICANT,
 } from "../lib/weatherThresholds";
-import { useHourlyBreakdown } from "../hooks/useHourlyBreakdown";
-import { HourlyBreakdown } from "./HourlyBreakdown";
+import { degreesToCompass, windRelativeLabel } from "../lib/wind";
+import { describeWeatherCode } from "../lib/wmo";
 import { ClimateHistoryBadge } from "./ClimateHistoryBadge";
-import type { ClimateStoryInput } from "../lib/climateStory";
+import { HourlyBreakdown } from "./HourlyBreakdown";
 
 type Props = {
   waypoint: Waypoint;
@@ -38,7 +37,12 @@ type Props = {
 /** Determines warning CSS modifier classes based on weather thresholds. */
 function warningClasses(data: WeatherData, routeBearing?: number): string[] {
   const classes: string[] = [];
-  const { temp, precipitation: precip, windSpeed, windDirection: windDir } = resolveWeatherValues(data);
+  const {
+    temp,
+    precipitation: precip,
+    windSpeed,
+    windDirection: windDir,
+  } = resolveWeatherValues(data);
 
   if (temp < TEMP_FREEZE) {
     classes.push("weather-card--warn-freeze");
@@ -64,9 +68,9 @@ function warningClasses(data: WeatherData, routeBearing?: number): string[] {
 /** UV index → Norwegian level label + CSS modifier */
 function uvLevel(uv: number): { label: string; mod: string } {
   if (uv >= 11) return { label: "Ekstremt", mod: "extreme" };
-  if (uv >= 8)  return { label: "Veldig høy", mod: "very-high" };
-  if (uv >= 6)  return { label: "Høy", mod: "high" };
-  if (uv >= 3)  return { label: "Moderat", mod: "moderate" };
+  if (uv >= 8) return { label: "Veldig høy", mod: "very-high" };
+  if (uv >= 6) return { label: "Høy", mod: "high" };
+  if (uv >= 3) return { label: "Moderat", mod: "moderate" };
   return { label: "Lav", mod: "low" };
 }
 
@@ -74,26 +78,20 @@ function uvLevel(uv: number): { label: string; mod: string } {
 function roadRisk(data: WeatherData): "ice" | "slush" | "wet" | null {
   const { temp, precipitation: precip } = resolveWeatherValues(data);
   if (precip <= 0) return null;
-  if (temp < TEMP_FREEZE)                         return "ice";
-  if (temp < 3 && precip > PRECIP_LIGHT)          return "slush";
-  if (temp >= 3 && precip > PRECIP_HEAVY)         return "wet";
+  if (temp < TEMP_FREEZE) return "ice";
+  if (temp < 3 && precip > PRECIP_LIGHT) return "slush";
+  if (temp >= 3 && precip > PRECIP_HEAVY) return "wet";
   return null;
 }
 
 const ROAD_RISK_LABELS: Record<"ice" | "slush" | "wet", { icon: string; label: string }> = {
-  ice:   { icon: "❄️", label: "Isfare" },
+  ice: { icon: "❄️", label: "Isfare" },
   slush: { icon: "⚠️", label: "Glatt vei" },
-  wet:   { icon: "💧", label: "Fuktig vei" },
+  wet: { icon: "💧", label: "Fuktig vei" },
 };
 
 /** Renders the loaded weather data content inside a WeatherCard. */
-function WeatherCardContent({
-  data,
-  routeBearing,
-}: {
-  data: WeatherData;
-  routeBearing?: number;
-}) {
+function WeatherCardContent({ data, routeBearing }: { data: WeatherData; routeBearing?: number }) {
   const { label: wLabel, emoji } = describeWeatherCode(data.weatherCode);
 
   // Effective wind direction and speed for display
@@ -110,16 +108,12 @@ function WeatherCardContent({
 
   // Feels-like temperature for display
   const feelsLike =
-    data.hourlyFeelsLike ??
-    (data.feelsLikeMax != null ? data.feelsLikeMax : undefined);
+    data.hourlyFeelsLike ?? (data.feelsLikeMax != null ? data.feelsLikeMax : undefined);
 
   const showHourly = data.hourlyTemp != null;
 
   // Temperature trend — only show when difference is ≥ 0.5°
-  const trend =
-    data.tempTrend != null && Math.abs(data.tempTrend) >= 0.5
-      ? data.tempTrend
-      : null;
+  const trend = data.tempTrend != null && Math.abs(data.tempTrend) >= 0.5 ? data.tempTrend : null;
 
   // UV index — only show when UV is notable (≥ 3)
   const showUv = data.uvIndex != null && data.uvIndex >= 3;
@@ -129,9 +123,7 @@ function WeatherCardContent({
 
   return (
     <>
-      {data.source === "climate-average" && (
-        <span className="weather-card__badge">Klimasnitt</span>
-      )}
+      {data.source === "climate-average" && <span className="weather-card__badge">Klimasnitt</span>}
       <div className="weather-card__icon">{emoji}</div>
       <div className="weather-card__description">{wLabel}</div>
       <div className="weather-card__temps">
@@ -149,15 +141,13 @@ function WeatherCardContent({
             className={`weather-card__trend weather-card__trend--${trend > 0 ? "up" : "down"}`}
             title={`${trend > 0 ? "Varmere" : "Kaldere"} enn i går (${trend > 0 ? "+" : ""}${trend}°)`}
           >
-            {trend > 0 ? "↑" : "↓"}{trend > 0 ? "+" : ""}{trend}°
+            {trend > 0 ? "↑" : "↓"}
+            {trend > 0 ? "+" : ""}
+            {trend}°
           </span>
         )}
       </div>
-      {feelsLike != null && (
-        <div className="weather-card__feels-like">
-          Føles som {feelsLike}°
-        </div>
-      )}
+      {feelsLike != null && <div className="weather-card__feels-like">Føles som {feelsLike}°</div>}
       <div className="weather-card__detail">
         <span title="Nedbør">
           🌧 {data.hourlyPrecipitation ?? data.precipitation} mm
@@ -183,9 +173,7 @@ function WeatherCardContent({
               ↑
             </span>
           )}
-          {windDirLabel && (
-            <span className="weather-card__wind-dir"> · {windDirLabel}</span>
-          )}
+          {windDirLabel && <span className="weather-card__wind-dir"> · {windDirLabel}</span>}
         </span>
       </div>
       {showUv && (
@@ -218,20 +206,21 @@ export const WeatherCard = memo(function WeatherCard({
   const arrivalHour: number | undefined = datetime
     ? parseInt(datetime.split("T")[1]?.split(":")[0] ?? "", 10)
     : arrivalTime
-    ? parseInt(arrivalTime.split(":")[0], 10)
-    : undefined;
+      ? parseInt(arrivalTime.split(":")[0], 10)
+      : undefined;
 
-  const { data: hourlyEntries, isLoading: hourlyLoading, isError: hourlyError } =
-    useHourlyBreakdown(waypoint, date, expanded, datetime);
+  const {
+    data: hourlyEntries,
+    isLoading: hourlyLoading,
+    isError: hourlyError,
+  } = useHourlyBreakdown(waypoint, date, expanded, datetime);
 
   const extraClasses =
-    data && !isLoading && !isError
-      ? warningClasses(data, routeBearing).join(" ")
-      : "";
+    data && !isLoading && !isError ? warningClasses(data, routeBearing).join(" ") : "";
 
   return (
     <div
-      className={`weather-card${extraClasses ? " " + extraClasses : ""}`}
+      className={`weather-card${extraClasses ? ` ${extraClasses}` : ""}`}
       onClick={onClick}
       style={onClick ? { cursor: "pointer" } : undefined}
     >
@@ -249,7 +238,8 @@ export const WeatherCard = memo(function WeatherCard({
               : undefined
           }
         >
-          {data?.hourlyIsApproximate ? "≈" : "~"}{arrivalTime}
+          {data?.hourlyIsApproximate ? "≈" : "~"}
+          {arrivalTime}
         </div>
       )}
 
@@ -262,13 +252,9 @@ export const WeatherCard = memo(function WeatherCard({
         </div>
       )}
 
-      {isError && (
-        <div className="weather-card__error">Kunne ikke hente vær</div>
-      )}
+      {isError && <div className="weather-card__error">Kunne ikke hente vær</div>}
 
-      {data && (
-        <WeatherCardContent data={data} routeBearing={routeBearing} />
-      )}
+      {data && <WeatherCardContent data={data} routeBearing={routeBearing} />}
 
       {historicalYears && historicalYears.length > 0 && (
         <>
@@ -284,7 +270,10 @@ export const WeatherCard = memo(function WeatherCard({
       {data && date && (
         <button
           className="weather-card__hourly-toggle"
-          onClick={(e) => { e.stopPropagation(); setExpanded((v) => !v); }}
+          onClick={(e) => {
+            e.stopPropagation();
+            setExpanded((v) => !v);
+          }}
           aria-expanded={expanded}
         >
           {expanded ? "▴ Skjul time for time" : "▾ Time for time"}
@@ -293,9 +282,7 @@ export const WeatherCard = memo(function WeatherCard({
 
       {expanded && data && date && (
         <div className="weather-card__hourly-panel">
-          {hourlyLoading && (
-            <div className="weather-card__hourly-loading">Laster...</div>
-          )}
+          {hourlyLoading && <div className="weather-card__hourly-loading">Laster...</div>}
           {hourlyError && (
             <div className="weather-card__hourly-error">Kunne ikke hente timedata</div>
           )}

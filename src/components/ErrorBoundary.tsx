@@ -75,10 +75,6 @@ export class ErrorBoundary extends Component<Props, State> {
       );
     }
 
-    return (
-      <ChildrenContainer key={this.state.resetKey}>
-        {this.props.children}
-      </ChildrenContainer>
-    );
+    return <ChildrenContainer key={this.state.resetKey}>{this.props.children}</ChildrenContainer>;
   }
 }

@@ -10,14 +10,7 @@ type Props = {
   onFile: (file: File) => void;
 };
 
-export function GpxUploader({
-  loading,
-  error,
-  urlInput,
-  onUrlChange,
-  onUrlLoad,
-  onFile,
-}: Props) {
+export function GpxUploader({ loading, error, urlInput, onUrlChange, onUrlLoad, onFile }: Props) {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   function handleFileInput(e: React.ChangeEvent<HTMLInputElement>) {
@@ -96,15 +89,27 @@ export function GpxUploader({
 
       <p className="gpx-upload__hint">
         Eksporter GPX fra{" "}
-        <a href="https://www.strava.com" target="_blank" rel="noopener noreferrer">Strava</a>,{" "}
-        <a href="https://connect.garmin.com" target="_blank" rel="noopener noreferrer">Garmin Connect</a>,{" "}
-        <a href="https://www.komoot.com" target="_blank" rel="noopener noreferrer">Komoot</a>{" "}
+        <a href="https://www.strava.com" target="_blank" rel="noopener noreferrer">
+          Strava
+        </a>
+        ,{" "}
+        <a href="https://connect.garmin.com" target="_blank" rel="noopener noreferrer">
+          Garmin Connect
+        </a>
+        ,{" "}
+        <a href="https://www.komoot.com" target="_blank" rel="noopener noreferrer">
+          Komoot
+        </a>{" "}
         eller lignende
       </p>
 
       <GpxHowTo />
 
-      {error && <p className="gpx-upload__error" role="alert">{error}</p>}
+      {error && (
+        <p className="gpx-upload__error" role="alert">
+          {error}
+        </p>
+      )}
     </section>
   );
 }

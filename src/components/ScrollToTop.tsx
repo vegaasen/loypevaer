@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 const SCROLL_KEY_PREFIX = "scroll_pos_";
 
 export function ScrollToTop() {
-  const { pathname, key } = useLocation();
+  const { key } = useLocation();
 
   useEffect(() => {
     const saved = sessionStorage.getItem(SCROLL_KEY_PREFIX + key);
@@ -17,7 +17,7 @@ export function ScrollToTop() {
     return () => {
       sessionStorage.setItem(SCROLL_KEY_PREFIX + key, String(window.scrollY));
     };
-  }, [pathname, key]);
+  }, [key]);
 
   return null;
 }

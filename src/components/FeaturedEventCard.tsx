@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
-import { type Discipline } from "../lib/arrangements";
+import type { Discipline } from "../lib/arrangements";
 import { DISCIPLINE_LABEL } from "../lib/disciplines";
 
 type Props = {
@@ -53,9 +53,7 @@ export const FeaturedEventCard = memo(function FeaturedEventCard({
         <span className={`featured-card__discipline featured-card__discipline--${discipline}`}>
           {DISCIPLINE_LABEL[discipline]}
         </span>
-        {countdown && !isCancelled && (
-          <span className="featured-card__countdown">{countdown}</span>
-        )}
+        {countdown && !isCancelled && <span className="featured-card__countdown">{countdown}</span>}
       </div>
 
       <div className="featured-card__body">
@@ -64,7 +62,9 @@ export const FeaturedEventCard = memo(function FeaturedEventCard({
       </div>
 
       <div className="featured-card__footer">
-        <span className={`featured-card__distance${isLongLabel ? " featured-card__distance--compact" : ""}`}>
+        <span
+          className={`featured-card__distance${isLongLabel ? " featured-card__distance--compact" : ""}`}
+        >
           {distanceLabel ?? `${distance} km`}
         </span>
         {onTogglePlanned && (

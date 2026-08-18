@@ -1,9 +1,9 @@
-import type { Waypoint } from "./weather";
 import arrangements from "../data/arrangements.json";
-import triathlonData from "../data/triathlon-events.json";
-import runningData from "../data/running-events.json";
 import cyclingData from "../data/cycling-events.json";
 import cyclingManualData from "../data/cycling-manual.json";
+import runningData from "../data/running-events.json";
+import triathlonData from "../data/triathlon-events.json";
+import type { Waypoint } from "./weather";
 
 /** All arrangements merged: manually curated + auto-synced triathlon + running + cycling events. */
 export const allArrangements: RittEntry[] = [
@@ -14,7 +14,15 @@ export const allArrangements: RittEntry[] = [
   ...(cyclingManualData.events as RittEntry[]),
 ];
 
-export type Discipline = "landevei" | "gravel" | "terreng" | "langrenn" | "triathlon" | "ultraløp" | "løping" | "cx";
+export type Discipline =
+  | "landevei"
+  | "gravel"
+  | "terreng"
+  | "langrenn"
+  | "triathlon"
+  | "ultraløp"
+  | "løping"
+  | "cx";
 
 export interface RittEntry {
   id: string;
@@ -42,11 +50,11 @@ export function getNextRitt(races: RittEntry[]): RittEntry | undefined {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
   return [...races]
-    .filter((r) => new Date(r.officialDate + "T00:00:00") >= today)
+    .filter((r) => new Date(`${r.officialDate}T00:00:00`) >= today)
     .sort(
       (a, b) =>
-        new Date(a.officialDate + "T00:00:00").getTime() -
-        new Date(b.officialDate + "T00:00:00").getTime()
+        new Date(`${a.officialDate}T00:00:00`).getTime() -
+        new Date(`${b.officialDate}T00:00:00`).getTime(),
     )[0];
 }
 
@@ -64,13 +72,13 @@ export function getNextPerDiscipline(events: RittEntry[], now: Date = new Date()
     .filter(
       (e) =>
         e.dateStatus !== "cancelled" &&
-        new Date(e.officialDate + "T00:00:00") >= today &&
-        !excludedDisciplines.includes(e.discipline)
+        new Date(`${e.officialDate}T00:00:00`) >= today &&
+        !excludedDisciplines.includes(e.discipline),
     )
     .sort(
       (a, b) =>
-        new Date(a.officialDate + "T00:00:00").getTime() -
-        new Date(b.officialDate + "T00:00:00").getTime()
+        new Date(`${a.officialDate}T00:00:00`).getTime() -
+        new Date(`${b.officialDate}T00:00:00`).getTime(),
     );
 
   const seen = new Map<Discipline, RittEntry>();
@@ -83,8 +91,8 @@ export function getNextPerDiscipline(events: RittEntry[], now: Date = new Date()
   return [...seen.values()]
     .sort(
       (a, b) =>
-        new Date(a.officialDate + "T00:00:00").getTime() -
-        new Date(b.officialDate + "T00:00:00").getTime()
+        new Date(`${a.officialDate}T00:00:00`).getTime() -
+        new Date(`${b.officialDate}T00:00:00`).getTime(),
     )
     .slice(0, 7);
 }

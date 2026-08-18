@@ -26,9 +26,7 @@ export function FeedbackSnackbar({ eventId }: Props) {
 
   return (
     <div className="feedback-snackbar" role="status" aria-live="polite">
-      <p className="feedback-snackbar__question">
-        Er værmeldingen nyttig for planleggingen din?
-      </p>
+      <p className="feedback-snackbar__question">Er værmeldingen nyttig for planleggingen din?</p>
       <div className="feedback-snackbar__actions">
         <button
           className="feedback-snackbar__btn"
@@ -44,11 +42,7 @@ export function FeedbackSnackbar({ eventId }: Props) {
         >
           👎
         </button>
-        <button
-          className="feedback-snackbar__dismiss"
-          onClick={dismiss}
-          aria-label="Lukk"
-        >
+        <button className="feedback-snackbar__dismiss" onClick={dismiss} aria-label="Lukk">
           ×
         </button>
       </div>

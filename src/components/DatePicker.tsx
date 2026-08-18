@@ -14,15 +14,15 @@ export function DatePicker({ value, onChange, officialDate }: Props) {
         Velg dato
       </label>
       <div className="date-picker__controls">
-          <input
-            id="ritt-date"
-            type="date"
-            value={value}
-            min="2000-01-01"
-            max="2099-12-31"
-            onChange={(e) => onChange(e.target.value)}
-            className="date-picker__input"
-          />
+        <input
+          id="ritt-date"
+          type="date"
+          value={value}
+          min="2000-01-01"
+          max="2099-12-31"
+          onChange={(e) => onChange(e.target.value)}
+          className="date-picker__input"
+        />
         {officialDate !== undefined && !isOfficialDate && (
           <button
             type="button"

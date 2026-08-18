@@ -1,17 +1,17 @@
 import type { WaypointWeather } from "../hooks/useWeather";
-import { windRelativeLabel, routeBearingForWaypoint } from "../lib/wind";
+import { buildPackingList } from "../lib/packingList";
 import type { Waypoint } from "../lib/weather";
 import { resolveWeatherValues } from "../lib/weather";
 import {
+  PRECIP_HEAVY,
+  PRECIP_LIGHT,
+  TEMP_COLD,
   TEMP_FREEZE,
   TEMP_VERY_COLD,
-  TEMP_COLD,
-  PRECIP_LIGHT,
-  PRECIP_HEAVY,
   WIND_SIGNIFICANT,
   WIND_STRONG,
 } from "../lib/weatherThresholds";
-import { buildPackingList } from "../lib/packingList";
+import { routeBearingForWaypoint, windRelativeLabel } from "../lib/wind";
 import { PackingList } from "./PackingList";
 
 type Suggestion = {
@@ -21,10 +21,7 @@ type Suggestion = {
   severity: "info" | "warn" | "danger";
 };
 
-function buildSuggestions(
-  results: WaypointWeather[],
-  waypoints: Waypoint[]
-): Suggestion[] {
+function buildSuggestions(results: WaypointWeather[], waypoints: Waypoint[]): Suggestion[] {
   const loaded = results.filter((r) => r.data != null);
   if (loaded.length === 0) return [];
 
@@ -72,7 +69,7 @@ function buildSuggestions(
   const hasHeadwind = windLabels.some((l) => l === "Motvind");
   const hasTailwind = windLabels.some((l) => l === "Medvind");
   if (hasHeadwind && hasTailwind) {
-    const headwindIdx = windLabels.findIndex((l) => l === "Motvind");
+    const headwindIdx = windLabels.indexOf("Motvind");
     const headwindLabel = waypoints[headwindIdx]?.label ?? "en del av løypa";
     suggestions.push({
       key: "wind-direction-change",
@@ -179,9 +176,7 @@ export function GearSuggestion({ results, waypoints, discipline = "landevei" }: 
 
   return (
     <details className="gear-suggestion__details">
-      <summary className="gear-suggestion__summary">
-        Utstyrstips
-      </summary>
+      <summary className="gear-suggestion__summary">Utstyrstips</summary>
       <div className="gear-suggestion__body">
         <div className="gear-suggestion">
           <div className="gear-suggestion__heading">Bekledningsråd</div>

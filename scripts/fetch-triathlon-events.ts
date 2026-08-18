@@ -11,7 +11,7 @@
  */
 
 import { writeFileSync } from "node:fs";
-import { resolve, dirname } from "node:path";
+import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -266,9 +266,7 @@ async function main() {
       distanceLabel: label,
       region,
       url: eventUrl,
-      waypoints: [
-        { label: `Start/Mål – ${venue}`, lat, lon },
-      ],
+      waypoints: [{ label: `Start/Mål – ${venue}`, lat, lon }],
     });
   }
 
@@ -282,8 +280,8 @@ async function main() {
         events: output,
       },
       null,
-      2
-    )
+      2,
+    ),
   );
 
   console.log(`\nWrote ${output.length} events to src/data/triathlon-events.json`);

@@ -1,9 +1,9 @@
-import { describe, it, expect, beforeEach, afterEach } from "vitest";
-import { server } from "../test/server";
-import { http, HttpResponse } from "msw";
-import { fetchHourlyBreakdown } from "./weather";
-import type { Waypoint } from "./weather";
+import { HttpResponse, http } from "msw";
+import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { mockHourly24Response } from "../test/handlers";
+import { server } from "../test/server";
+import type { Waypoint } from "./weather";
+import { fetchHourlyBreakdown } from "./weather";
 
 const waypoint: Waypoint = { label: "Test", lat: 61.0, lon: 10.0, altitude: 200 };
 
@@ -46,8 +46,8 @@ describe("fetchHourlyBreakdown — climate-average path", () => {
     // Override archive handler to return our 24-slot hourly fixture
     server.use(
       http.get("https://archive-api.open-meteo.com/v1/archive", () =>
-        HttpResponse.json(mockHourly24Response)
-      )
+        HttpResponse.json(mockHourly24Response),
+      ),
     );
   });
 
@@ -72,13 +72,13 @@ describe("fetchHourlyBreakdown — climate-average path", () => {
 
   it("throws when archive returns no valid data", async () => {
     server.use(
-      http.get("https://archive-api.open-meteo.com/v1/archive", () =>
-        new HttpResponse(null, { status: 500 })
-      )
+      http.get(
+        "https://archive-api.open-meteo.com/v1/archive",
+        () => new HttpResponse(null, { status: 500 }),
+      ),
     );
     await expect(fetchHourlyBreakdown(waypoint, CLIMATE_DATE)).rejects.toThrow(
-      "No climate archive data available"
+      "No climate archive data available",
     );
   });
 });
-

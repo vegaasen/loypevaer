@@ -1,15 +1,15 @@
 import { useMemo, useState } from "react";
-import { useDebouncedValue } from "../hooks/useDebouncedValue";
-import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { RunningEventRow } from "../components/RunningEventRow";
+import { Link } from "react-router-dom";
 import { PageMeta } from "../components/PageMeta";
+import { RunningEventRow } from "../components/RunningEventRow";
+import { useDebouncedValue } from "../hooks/useDebouncedValue";
 import { useMyEvents } from "../hooks/useMyEvents";
 import { allArrangements } from "../lib/arrangements";
-import { SITE_URL } from "../lib/seo";
 import { daysUntil, formatCountdown } from "../lib/dates";
 import { groupByYearMonth } from "../lib/grouping";
 import { monthName } from "../lib/month";
+import { SITE_URL } from "../lib/seo";
 
 const lopingRaces = allArrangements.filter((r) => r.discipline === "løping");
 
@@ -47,18 +47,20 @@ export function LopPage() {
       lopingRaces.filter(
         (r) =>
           matchesDistance(r.distance, distanceFilter) &&
-          (!searchQuery || r.name.toLowerCase().includes(searchQuery) || r.region.toLowerCase().includes(searchQuery)),
+          (!searchQuery ||
+            r.name.toLowerCase().includes(searchQuery) ||
+            r.region.toLowerCase().includes(searchQuery)),
       ),
     [searchQuery, distanceFilter],
   );
 
   const grouped = useMemo(() => groupByYearMonth(filtered), [filtered]);
   const currentYear = new Date().getFullYear();
-  const years = useMemo(
-    () => [...grouped.keys()].sort((a, b) => b - a),
-    [grouped],
+  const years = useMemo(() => [...grouped.keys()].sort((a, b) => b - a), [grouped]);
+  const currentAndPastYears = useMemo(
+    () => years.filter((y) => y <= currentYear),
+    [years, currentYear],
   );
-  const currentAndPastYears = useMemo(() => years.filter((y) => y <= currentYear), [years, currentYear]);
   const futureYears = useMemo(() => years.filter((y) => y > currentYear), [years, currentYear]);
 
   const pageTitle = "Løpsvær – Vær for norske løp | Løypevær";
@@ -77,13 +79,12 @@ export function LopPage() {
 
   return (
     <div className="home-page">
-      <PageMeta
-        title={pageTitle}
-        description={description}
-        canonicalUrl={pageUrl}
-      />
+      <PageMeta title={pageTitle} description={description} canonicalUrl={pageUrl} />
       <Helmet>
-        <meta name="keywords" content="løpsvær, maratonvær, halvmaratonvær, 10 km vær, løp vær Norge, vær løpsdag, norske løp vær" />
+        <meta
+          name="keywords"
+          content="løpsvær, maratonvær, halvmaratonvær, 10 km vær, løp vær Norge, vær løpsdag, norske løp vær"
+        />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -103,19 +104,34 @@ export function LopPage() {
 
       <section className="home-page__hero">
         <div className="home-page__hero-eyebrow">Løping</div>
-        <h1>Sjekk været.<br />Løp forberedt.</h1>
+        <h1>
+          Sjekk været.
+          <br />
+          Løp forberedt.
+        </h1>
         <p className="home-page__hero-sub">
-          Sjekk temperatur, vind og nedbør langs hele ruten din — sanntidsvarsler for løp
-          innenfor 16 dager. Tilpasset din starttid.
+          Sjekk temperatur, vind og nedbør langs hele ruten din — sanntidsvarsler for løp innenfor
+          16 dager. Tilpasset din starttid.
         </p>
         <div className="home-page__hero-stats">
-          <span><strong>{lopingRaces.length}</strong> løp</span>
+          <span>
+            <strong>{lopingRaces.length}</strong> løp
+          </span>
         </div>
       </section>
 
       <div className="home-page__filter">
         <div role="group" aria-label="Filtrer etter distanse" className="home-page__filter-pills">
-          {(["alle", "10k", "10-20km", "halvmaraton", "halvmaraton-pluss", "maraton"] as DistanceFilter[]).map((d) => (
+          {(
+            [
+              "alle",
+              "10k",
+              "10-20km",
+              "halvmaraton",
+              "halvmaraton-pluss",
+              "maraton",
+            ] as DistanceFilter[]
+          ).map((d) => (
             <button
               key={d}
               className={`home-page__filter-pill${distanceFilter === d ? " home-page__filter-pill--active" : ""}`}
@@ -137,9 +153,7 @@ export function LopPage() {
       </div>
 
       <main className="home-page__sections">
-        {years.length === 0 && (
-          <p className="home-page__empty">Ingen løp funnet.</p>
-        )}
+        {years.length === 0 && <p className="home-page__empty">Ingen løp funnet.</p>}
         {currentAndPastYears.map((year) => {
           const byMonth = grouped.get(year)!;
           const months = [...byMonth.keys()].sort((a, b) => a - b);
@@ -152,28 +166,28 @@ export function LopPage() {
                     <a href={`#month-${year}-${month}`} className="home-page__month-anchor">
                       {monthName(month)}
                     </a>
-                    {byMonth.get(month)!.length > 1 && (
-                      <span className="month-count-badge">{byMonth.get(month)!.length}</span>
+                    {(byMonth.get(month)?.length ?? 0) > 1 && (
+                      <span className="month-count-badge">{byMonth.get(month)?.length}</span>
                     )}
                   </h3>
                   <div className="lop-list">
-                     {byMonth.get(month)!.map((r) => (
-                       <RunningEventRow
-                         key={r.id}
-                         id={r.id}
-                         name={r.name}
-                         officialDate={r.officialDate}
-                         distance={r.distance}
-                         distanceLabel={r.distanceLabel}
-                         region={r.region}
-                         discipline={r.discipline}
-                         countdown={formatCountdown(r.officialDate)}
-                         planned={isPlanned(r.id)}
-                         isPast={daysUntil(r.officialDate) < 0}
-                         dateStatus={r.dateStatus}
-                         onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
-                       />
-                     ))}
+                    {byMonth.get(month)?.map((r) => (
+                      <RunningEventRow
+                        key={r.id}
+                        id={r.id}
+                        name={r.name}
+                        officialDate={r.officialDate}
+                        distance={r.distance}
+                        distanceLabel={r.distanceLabel}
+                        region={r.region}
+                        discipline={r.discipline}
+                        countdown={formatCountdown(r.officialDate)}
+                        planned={isPlanned(r.id)}
+                        isPast={daysUntil(r.officialDate) < 0}
+                        dateStatus={r.dateStatus}
+                        onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
+                      />
+                    ))}
                   </div>
                 </div>
               ))}
@@ -192,17 +206,21 @@ export function LopPage() {
                 <section key={year} className="home-page__year-section">
                   <h2 className="home-page__year-heading">{year}</h2>
                   {months.map((month) => (
-                    <div key={month} id={`month-${year}-${month}`} className="home-page__month-section">
+                    <div
+                      key={month}
+                      id={`month-${year}-${month}`}
+                      className="home-page__month-section"
+                    >
                       <h3 className="home-page__month-heading">
                         <a href={`#month-${year}-${month}`} className="home-page__month-anchor">
                           {monthName(month)}
                         </a>
-                        {byMonth.get(month)!.length > 1 && (
-                          <span className="month-count-badge">{byMonth.get(month)!.length}</span>
+                        {(byMonth.get(month)?.length ?? 0) > 1 && (
+                          <span className="month-count-badge">{byMonth.get(month)?.length}</span>
                         )}
                       </h3>
                       <div className="lop-list">
-                        {byMonth.get(month)!.map((r) => (
+                        {byMonth.get(month)?.map((r) => (
                           <RunningEventRow
                             key={r.id}
                             id={r.id}

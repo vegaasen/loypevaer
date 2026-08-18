@@ -6,7 +6,10 @@ function isIos(): boolean {
 }
 
 function isInStandaloneMode(): boolean {
-  return "standalone" in navigator && (navigator as unknown as Record<string, unknown>).standalone === true;
+  return (
+    "standalone" in navigator &&
+    (navigator as unknown as Record<string, unknown>).standalone === true
+  );
 }
 
 export function InstallBanner() {
@@ -21,15 +24,11 @@ export function InstallBanner() {
       <div className="install-banner install-banner--ios" role="banner">
         <div className="install-banner__content">
           <span className="install-banner__text">
-            <span className="install-banner__share-icon">⬆</span>{" "}
-            Trykk <strong>Del</strong>, velg <strong>Legg til</strong>
+            <span className="install-banner__share-icon">⬆</span> Trykk <strong>Del</strong>, velg{" "}
+            <strong>Legg til</strong>
           </span>
           <div className="install-banner__actions">
-            <button
-              className="install-banner__dismiss"
-              aria-label="Lukk"
-              onClick={dismiss}
-            >
+            <button className="install-banner__dismiss" aria-label="Lukk" onClick={dismiss}>
               ✕
             </button>
           </div>

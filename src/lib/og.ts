@@ -1,4 +1,4 @@
-import type { WeatherData, Waypoint } from "./weather";
+import type { Waypoint, WeatherData } from "./weather";
 
 type WeatherEntry = {
   waypoint: Waypoint;

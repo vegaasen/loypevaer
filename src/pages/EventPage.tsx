@@ -1,38 +1,38 @@
-import { useParams, useSearchParams, Link } from "react-router-dom";
-import { useState, useEffect, useRef, useMemo, lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { Link, useParams, useSearchParams } from "react-router-dom";
+import { AlertsOptIn } from "../components/AlertsOptIn";
 import { DatePicker } from "../components/DatePicker";
+import { ErrorBoundary } from "../components/ErrorBoundary";
+import { FeedbackSnackbar } from "../components/FeedbackSnackbar";
+import { GearSuggestion } from "../components/GearSuggestion";
+import { PageMeta } from "../components/PageMeta";
+import { RaceDayCountdown } from "../components/RaceDayCountdown";
+import { ShareButton } from "../components/ShareButton";
 import { TimePicker } from "../components/TimePicker";
 import { WeatherStrip } from "../components/WeatherStrip";
-import { GearSuggestion } from "../components/GearSuggestion";
-
-import { ErrorBoundary } from "../components/ErrorBoundary";
-import { PageMeta } from "../components/PageMeta";
-import { computeElevationGain, allArrangements } from "../lib/arrangements";
-import { physicalScore, weatherAdjustment, scoreToLabel } from "../lib/difficulty";
-import { SITE_URL, disciplineToSport, disciplineKeywords, disciplineVerb } from "../lib/seo";
 import { useMyEvents } from "../hooks/useMyEvents";
 import { useWeather } from "../hooks/useWeather";
-import { calcWaypointTimes } from "../lib/timing";
-import { isForecastRange, getWeatherCache } from "../lib/weather";
+import { trackExternalLinkClick, trackRaceSelected, trackWaypointSelected } from "../lib/analytics";
+import { allArrangements, computeElevationGain } from "../lib/arrangements";
 import { buildClimateNarrative } from "../lib/climateNarrative";
-
-import { AlertsOptIn } from "../components/AlertsOptIn";
-import { ShareButton } from "../components/ShareButton";
-import { RaceDayCountdown } from "../components/RaceDayCountdown";
-import { buildOgDescription, getOgImagePath } from "../lib/og";
 import { formatNorwegianDate, parseDateLocal } from "../lib/dates";
-import { trackRaceSelected, trackExternalLinkClick, trackWaypointSelected } from "../lib/analytics";
-import { FeedbackSnackbar } from "../components/FeedbackSnackbar";
+import { physicalScore, scoreToLabel, weatherAdjustment } from "../lib/difficulty";
+import { buildOgDescription, getOgImagePath } from "../lib/og";
+import { disciplineKeywords, disciplineToSport, disciplineVerb, SITE_URL } from "../lib/seo";
+import { calcWaypointTimes } from "../lib/timing";
+import { getWeatherCache, isForecastRange } from "../lib/weather";
 
 const EventMap = lazy(() =>
-  import("../components/EventMap").then((m) => ({ default: m.EventMap }))
+  import("../components/EventMap").then((m) => ({ default: m.EventMap })),
 );
 const HistoricalWeatherTable = lazy(() =>
-  import("../components/HistoricalWeatherTable").then((m) => ({ default: m.HistoricalWeatherTable }))
+  import("../components/HistoricalWeatherTable").then((m) => ({
+    default: m.HistoricalWeatherTable,
+  })),
 );
 const ElevationProfile = lazy(() =>
-  import("../components/ElevationProfile").then((m) => ({ default: m.ElevationProfile }))
+  import("../components/ElevationProfile").then((m) => ({ default: m.ElevationProfile })),
 );
 
 export function EventPage() {
@@ -43,17 +43,19 @@ export function EventPage() {
   // Keep a ref to always call the latest add/isPlanned without re-triggering the auto-save effect
   const addRef = useRef(add);
   const isPlannedRef = useRef(isPlanned);
-  useEffect(() => { addRef.current = add; }, [add]);
-  useEffect(() => { isPlannedRef.current = isPlanned; }, [isPlanned]);
+  useEffect(() => {
+    addRef.current = add;
+  }, [add]);
+  useEffect(() => {
+    isPlannedRef.current = isPlanned;
+  }, [isPlanned]);
 
   const rittData = allArrangements.find((r) => r.id === id);
 
   const pageUrl = rittData ? `${SITE_URL}/arrangement/${rittData.id}` : SITE_URL;
-  const rittYear = rittData
-    ? parseDateLocal(rittData.officialDate).getFullYear()
-    : null;
+  const rittYear = rittData ? parseDateLocal(rittData.officialDate).getFullYear() : null;
   const pageTitle = rittData
-    ? `Vær for ${rittData.name} ${rittYear ?? ""} – rittvær, temperatur og vind | Løypevær`
+    ? `Vær for ${rittData.name} ${rittYear ?? ""} – løypevær, temperatur og vind | Løypevær`
     : "Fant ikke arrangement – Løypevær";
   const [climateNarrative, setClimateNarrative] = useState<string | null>(null);
 
@@ -62,7 +64,7 @@ export function EventPage() {
     void getWeatherCache().then((cache) => {
       setClimateNarrative(buildClimateNarrative(rittData, cache));
     });
-  }, [rittData?.id]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [rittData?.id, rittData]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const pageDescription = rittData
     ? [
@@ -76,28 +78,24 @@ export function EventPage() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [id]);
+  }, []);
 
   useEffect(() => {
     if (!rittData) return;
     trackRaceSelected(rittData.id, rittData.name, rittData.discipline);
-  }, [rittData?.id]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [rittData?.id, rittData?.name, rittData?.discipline, rittData]);
 
   // Restore saved planned entry when there are no URL params
   const savedEntry = id ? getPlanned(id) : undefined;
 
-  const initialDate =
-    searchParams.get("date") ??
-    savedEntry?.date ??
-    rittData?.officialDate ??
-    "";
+  const initialDate = searchParams.get("date") ?? savedEntry?.date ?? rittData?.officialDate ?? "";
   const [selectedDate, setSelectedDate] = useState<string>(initialDate);
 
   const [startTime, setStartTime] = useState<string>(
-    searchParams.get("start") ?? savedEntry?.startTime ?? ""
+    searchParams.get("start") ?? savedEntry?.startTime ?? "",
   );
   const [finishTime, setFinishTime] = useState<string>(
-    searchParams.get("finish") ?? savedEntry?.finishTime ?? ""
+    searchParams.get("finish") ?? savedEntry?.finishTime ?? "",
   );
 
   // Keep URL in sync with date and timing params
@@ -116,15 +114,11 @@ export function EventPage() {
     }
   }, [selectedDate, startTime, finishTime, id]);
 
-  const timingActive =
-    selectedDate !== "" &&
-    startTime !== "" &&
-    finishTime !== "";
+  const timingActive = selectedDate !== "" && startTime !== "" && finishTime !== "";
 
   const waypointCount = rittData?.waypoints.length ?? 5;
-  const dynamicFractions = Array.from(
-    { length: waypointCount },
-    (_, i) => (waypointCount === 1 ? 0 : i / (waypointCount - 1))
+  const dynamicFractions = Array.from({ length: waypointCount }, (_, i) =>
+    waypointCount === 1 ? 0 : i / (waypointCount - 1),
   );
 
   const datetimes = timingActive
@@ -135,7 +129,7 @@ export function EventPage() {
   const weatherResults = useWeather(
     rittData ? rittData.waypoints : [],
     selectedDate || null,
-    datetimes
+    datetimes,
   );
 
   // Dynamic og values
@@ -195,11 +189,7 @@ export function EventPage() {
               {" · "}
               {formatNorwegianDate(rittData.officialDate)}
             </p>
-            {isCancelled && (
-              <p className="status-card__notice">
-                Dette arrangementet er avlyst.
-              </p>
-            )}
+            {isCancelled && <p className="status-card__notice">Dette arrangementet er avlyst.</p>}
             {rittData.url && (
               <a
                 href={rittData.url}
@@ -211,7 +201,8 @@ export function EventPage() {
               </a>
             )}
             <p className="status-card__notice">
-              Rutedata er ikke tilgjengelig ennå – kart, høydeprofil og værvarsler vises når løypa er lagt inn.
+              Rutedata er ikke tilgjengelig ennå – kart, høydeprofil og værvarsler vises når løypa
+              er lagt inn.
             </p>
             <div className="status-card__actions">
               <Link to="/" className="status-card__btn">
@@ -241,15 +232,11 @@ export function EventPage() {
 
   // Static difficulty (physical only — no weather)
   const physDifficulty =
-    elevationGain != null
-      ? scoreToLabel(physicalScore(rittData.distance, elevationGain))
-      : null;
+    elevationGain != null ? scoreToLabel(physicalScore(rittData.distance, elevationGain)) : null;
 
   // Weather-adjusted difficulty (only when weather is loaded)
   const hasWeatherData = weatherResults.some((r) => r.data != null);
-  const weatherAdj = hasWeatherData
-    ? weatherAdjustment(weatherResults, rittData.waypoints)
-    : 0;
+  const weatherAdj = hasWeatherData ? weatherAdjustment(weatherResults, rittData.waypoints) : 0;
   const adjDifficulty =
     physDifficulty && hasWeatherData
       ? scoreToLabel(physicalScore(rittData.distance, elevationGain!) + weatherAdj)
@@ -322,7 +309,10 @@ export function EventPage() {
           <span className="ritt-page__actions-date">
             {formattedOfficialDate}
             {rittData.dateStatus === "pending" && (
-              <span className="ritt-page__pending-badge" title="Datoen er ikke offisielt bekreftet ennå">
+              <span
+                className="ritt-page__pending-badge"
+                title="Datoen er ikke offisielt bekreftet ennå"
+              >
                 Tentativ
               </span>
             )}
@@ -400,9 +390,7 @@ export function EventPage() {
                 startTime={startTime || null}
                 finishTime={finishTime || null}
                 externalResults={weatherResults}
-                onWaypointClick={(wp, i) =>
-                  trackWaypointSelected(rittData.id, wp.label, i)
-                }
+                onWaypointClick={(wp, i) => trackWaypointSelected(rittData.id, wp.label, i)}
               />
             </>
           )}
@@ -411,11 +399,15 @@ export function EventPage() {
               {adjDifficulty.level !== physDifficulty.level ? (
                 <>
                   <span className="dag-vurdering__label">Dag-vurdering:</span>
-                  <span className={`dag-vurdering__badge dag-vurdering__badge--${physDifficulty.level}`}>
+                  <span
+                    className={`dag-vurdering__badge dag-vurdering__badge--${physDifficulty.level}`}
+                  >
                     {physDifficulty.label}
                   </span>
                   <span className="dag-vurdering__arrow">→</span>
-                  <span className={`dag-vurdering__badge dag-vurdering__badge--${adjDifficulty.level}`}>
+                  <span
+                    className={`dag-vurdering__badge dag-vurdering__badge--${adjDifficulty.level}`}
+                  >
                     {adjDifficulty.label}
                   </span>
                   <span className="dag-vurdering__note">pga. vær</span>
@@ -423,7 +415,9 @@ export function EventPage() {
               ) : (
                 <>
                   <span className="dag-vurdering__label">Dag-vurdering:</span>
-                  <span className={`dag-vurdering__badge dag-vurdering__badge--${adjDifficulty.level}`}>
+                  <span
+                    className={`dag-vurdering__badge dag-vurdering__badge--${adjDifficulty.level}`}
+                  >
                     {adjDifficulty.label}
                   </span>
                 </>
@@ -435,13 +429,21 @@ export function EventPage() {
 
       {/* ── Secondary sections — grouped collapsible accordion ── */}
       <div className="ritt-page__secondary-sections">
-        <ErrorBoundary fallback={<p className="error-boundary__message">Kunne ikke laste kartet.</p>}>
+        <ErrorBoundary
+          fallback={<p className="error-boundary__message">Kunne ikke laste kartet.</p>}
+        >
           <Suspense fallback={<div className="ritt-page__section-skeleton" aria-hidden />}>
-            <EventMap waypoints={rittData.waypoints} name={rittData.name} discipline={rittData.discipline} />
+            <EventMap
+              waypoints={rittData.waypoints}
+              name={rittData.name}
+              discipline={rittData.discipline}
+            />
           </Suspense>
         </ErrorBoundary>
         {!forecastOnly && (
-          <ErrorBoundary fallback={<p className="error-boundary__message">Kunne ikke laste høydeprofilen.</p>}>
+          <ErrorBoundary
+            fallback={<p className="error-boundary__message">Kunne ikke laste høydeprofilen.</p>}
+          >
             <Suspense fallback={<div className="ritt-page__section-skeleton" aria-hidden />}>
               <ElevationProfile waypoints={rittData.waypoints} distanceKm={rittData.distance} />
             </Suspense>
@@ -455,7 +457,9 @@ export function EventPage() {
           />
         )}
         {!forecastOnly && (
-          <ErrorBoundary fallback={<p className="error-boundary__message">Kunne ikke laste historiske data.</p>}>
+          <ErrorBoundary
+            fallback={<p className="error-boundary__message">Kunne ikke laste historiske data.</p>}
+          >
             <Suspense fallback={<div className="ritt-page__section-skeleton" aria-hidden />}>
               <HistoricalWeatherTable
                 waypoints={rittData.waypoints}

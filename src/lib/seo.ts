@@ -6,17 +6,16 @@
 /** Canonical base URL (unicode form, for meta tags / OG). No trailing slash. */
 export const SITE_URL = "https://www.løypevær.no";
 
-
 /**
  * Norwegian SEO keywords per discipline — used in meta titles and descriptions
- * to target searches like "rittvær", "triathlon vær", "løpsvær" etc.
+ * to target searches like "løypevær", "sykkelvær", "triathlonvær" etc.
  */
 export function disciplineKeywords(discipline: string): string {
   switch (discipline) {
     case "landevei":
-      return "rittvær, sykkelritt vær, landevei værmelding";
+      return "sykkelvær, rittvær, landevei værmelding";
     case "terreng":
-      return "rittvær terreng, MTB vær, terrengsykkel værmelding";
+      return "terrengvær, sykkelvær, MTB vær, terrengsykkelværmelding";
     case "langrenn":
       return "langrenn vær, skivær, rennvær, skiføre";
     case "triathlon":
@@ -26,7 +25,7 @@ export function disciplineKeywords(discipline: string): string {
     case "løping":
       return "løpsvær, løp vær, maratonvær, halvmaratonvær";
     default:
-      return "rittvær, utholdenhetsarrangement vær";
+      return "løypevær, arrangementvær, utholdenhetsarrangement vær";
   }
 }
 

@@ -1,11 +1,11 @@
-import { useWeather, type WeatherResult } from "../hooks/useWeather";
-import { isForecastRange, isYrRange, getWeatherCache, getHistoricalYears } from "../lib/weather";
-import { WeatherCard } from "./WeatherCard";
-import type { Waypoint } from "../lib/weather";
-import { calcWaypointTimes, formatArrivalTime } from "../lib/timing";
-import { routeBearingForWaypoint } from "../lib/wind";
 import { useEffect, useState } from "react";
+import { useWeather, type WeatherResult } from "../hooks/useWeather";
 import type { ClimateStoryInput } from "../lib/climateStory";
+import { calcWaypointTimes, formatArrivalTime } from "../lib/timing";
+import type { Waypoint } from "../lib/weather";
+import { getHistoricalYears, getWeatherCache, isForecastRange, isYrRange } from "../lib/weather";
+import { routeBearingForWaypoint } from "../lib/wind";
+import { WeatherCard } from "./WeatherCard";
 
 type Props = {
   waypoints: Waypoint[];
@@ -18,7 +18,14 @@ type Props = {
   onWaypointClick?: (waypoint: Waypoint, index: number) => void;
 };
 
-export function WeatherStrip({ waypoints, date, startTime, finishTime, externalResults, onWaypointClick }: Props) {
+export function WeatherStrip({
+  waypoints,
+  date,
+  startTime,
+  finishTime,
+  externalResults,
+  onWaypointClick,
+}: Props) {
   const timingActive =
     date != null &&
     startTime != null &&
@@ -27,10 +34,7 @@ export function WeatherStrip({ waypoints, date, startTime, finishTime, externalR
     finishTime !== "";
 
   const n = waypoints.length;
-  const dynamicFractions = Array.from(
-    { length: n },
-    (_, i) => (n === 1 ? 0 : i / (n - 1))
-  );
+  const dynamicFractions = Array.from({ length: n }, (_, i) => (n === 1 ? 0 : i / (n - 1)));
 
   const datetimes = timingActive
     ? calcWaypointTimes(date, startTime, finishTime, dynamicFractions)
@@ -43,12 +47,14 @@ export function WeatherStrip({ waypoints, date, startTime, finishTime, externalR
     date == null
       ? null
       : isYrRange(date)
-      ? "yr-forecast"
-      : isForecastRange(date)
-      ? "forecast"
-      : "climate-average";
+        ? "yr-forecast"
+        : isForecastRange(date)
+          ? "forecast"
+          : "climate-average";
 
-  const [historicalYearsPerWaypoint, setHistoricalYearsPerWaypoint] = useState<ClimateStoryInput[]>([]);
+  const [historicalYearsPerWaypoint, setHistoricalYearsPerWaypoint] = useState<ClimateStoryInput[]>(
+    [],
+  );
 
   useEffect(() => {
     if (!date) return;
@@ -56,9 +62,7 @@ export function WeatherStrip({ waypoints, date, startTime, finishTime, externalR
     getWeatherCache()
       .then((cache) => {
         if (cancelled) return;
-        const all = waypoints.map((wp) =>
-          getHistoricalYears(cache, wp.lat, wp.lon, date)
-        );
+        const all = waypoints.map((wp) => getHistoricalYears(cache, wp.lat, wp.lon, date));
         setHistoricalYearsPerWaypoint(all);
       })
       .catch(() => {
@@ -76,8 +80,8 @@ export function WeatherStrip({ waypoints, date, startTime, finishTime, externalR
           {mode === "yr-forecast"
             ? "Viser værvarsel fra Yr / MET Norway (opptil 9 dager)"
             : mode === "forecast"
-            ? "Viser værvarsel fra Open-Meteo (dager 10–16)"
-            : "Viser klimagjennomsnitt (historiske data 2015–2024)"}
+              ? "Viser værvarsel fra Open-Meteo (dager 10–16)"
+              : "Viser klimagjennomsnitt (historiske data 2015–2024)"}
           {timingActive && " · Vær ved forventet ankomsttid"}
         </div>
       )}

@@ -1,7 +1,7 @@
-import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import { MemoryRouter } from "react-router-dom";
+import { describe, expect, it, vi } from "vitest";
 
 // Mock changelog.json so tests are deterministic
 vi.mock("../data/changelog.json", () => ({
@@ -13,7 +13,8 @@ vi.mock("../data/changelog.json", () => ({
       type: "feat",
       scope: "birkebeiner",
       subject: "add waypoints for Birkebeinerrittet",
-      githubUrl: "https://github.com/vegaasen/loypevaer/commit/abc1234def5678abc1234def5678abc1234def56",
+      githubUrl:
+        "https://github.com/vegaasen/loypevaer/commit/abc1234def5678abc1234def5678abc1234def56",
     },
     {
       sha: "bbb0002bbb0002bbb0002bbb0002bbb0002bbb02",
@@ -22,7 +23,8 @@ vi.mock("../data/changelog.json", () => ({
       type: "fix",
       scope: null,
       subject: "correct altitude for Jotunheimen",
-      githubUrl: "https://github.com/vegaasen/loypevaer/commit/bbb0002bbb0002bbb0002bbb0002bbb0002bbb02",
+      githubUrl:
+        "https://github.com/vegaasen/loypevaer/commit/bbb0002bbb0002bbb0002bbb0002bbb0002bbb02",
     },
     {
       sha: "ccc0003ccc0003ccc0003ccc0003ccc0003ccc03",
@@ -31,7 +33,8 @@ vi.mock("../data/changelog.json", () => ({
       type: "feat",
       scope: null,
       subject: "add triathlon discipline filter",
-      githubUrl: "https://github.com/vegaasen/loypevaer/commit/ccc0003ccc0003ccc0003ccc0003ccc0003ccc03",
+      githubUrl:
+        "https://github.com/vegaasen/loypevaer/commit/ccc0003ccc0003ccc0003ccc0003ccc0003ccc03",
     },
   ],
 }));
@@ -44,7 +47,7 @@ function renderPage() {
       <MemoryRouter>
         <EndringsloggPage />
       </MemoryRouter>
-    </HelmetProvider>
+    </HelmetProvider>,
   );
 }
 
@@ -86,7 +89,7 @@ describe("EndringsloggPage", () => {
     const link = screen.getByRole("link", { name: /abc1234/i });
     expect(link).toHaveAttribute(
       "href",
-      "https://github.com/vegaasen/loypevaer/commit/abc1234def5678abc1234def5678abc1234def56"
+      "https://github.com/vegaasen/loypevaer/commit/abc1234def5678abc1234def5678abc1234def56",
     );
   });
 
@@ -113,7 +116,7 @@ describe("EndringsloggPage — empty state", () => {
         <MemoryRouter>
           <Page />
         </MemoryRouter>
-      </HelmetProvider>
+      </HelmetProvider>,
     );
     expect(screen.getByText(/Ingen endringer registrert/)).toBeInTheDocument();
   });

@@ -1,5 +1,5 @@
-import { describe, it, expect } from "vitest";
-import { calcWaypointTimes, formatArrivalTime, calcFinishTimeFromSpeed } from "./timing";
+import { describe, expect, it } from "vitest";
+import { calcFinishTimeFromSpeed, calcWaypointTimes, formatArrivalTime } from "./timing";
 
 describe("calcWaypointTimes", () => {
   it("returns the start time for fraction 0", () => {

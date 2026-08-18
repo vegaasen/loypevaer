@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 // src/hooks/__tests__/useInstallPrompt.test.ts
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { renderHook, act } from "@testing-library/react";
+import { act, renderHook } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { useInstallPrompt } from "../useInstallPrompt";
 
@@ -10,9 +10,15 @@ const localStorageMock = (() => {
   let store: Record<string, string> = {};
   return {
     getItem: (key: string) => store[key] ?? null,
-    setItem: (key: string, value: string) => { store[key] = value; },
-    removeItem: (key: string) => { delete store[key]; },
-    clear: () => { store = {}; },
+    setItem: (key: string, value: string) => {
+      store[key] = value;
+    },
+    removeItem: (key: string) => {
+      delete store[key];
+    },
+    clear: () => {
+      store = {};
+    },
   };
 })();
 vi.stubGlobal("localStorage", localStorageMock);

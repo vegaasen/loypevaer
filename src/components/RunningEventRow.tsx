@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
-import { type Discipline } from "../lib/arrangements";
+import type { Discipline } from "../lib/arrangements";
 import { formatNorwegianDate } from "../lib/dates";
 import { getRunningCategory, RUNNING_CATEGORY_LABEL } from "../lib/runningCategory";
 
@@ -55,14 +55,20 @@ export const RunningEventRow = memo(function RunningEventRow({
     >
       <div className="running-row__name">
         <span>{name}</span>
-        <span className={`running-row__category running-row__category--${category} running-row__category--mobile`}>
+        <span
+          className={`running-row__category running-row__category--${category} running-row__category--mobile`}
+        >
           {categoryLabel}
         </span>
         {isCancelled && (
-          <span className="running-row__cancelled-badge" title="Avlyst">Avlyst</span>
+          <span className="running-row__cancelled-badge" title="Avlyst">
+            Avlyst
+          </span>
         )}
         {dateStatus === "pending" && !isCancelled && (
-          <span className="running-row__pending-badge" title="Tentativ dato">Tentativ</span>
+          <span className="running-row__pending-badge" title="Tentativ dato">
+            Tentativ
+          </span>
         )}
       </div>
 
@@ -73,9 +79,7 @@ export const RunningEventRow = memo(function RunningEventRow({
 
       <div className="running-row__right">
         <span className="running-row__date">{formattedDate}</span>
-        {countdown && !isCancelled && (
-          <span className="running-row__countdown">{countdown}</span>
-        )}
+        {countdown && !isCancelled && <span className="running-row__countdown">{countdown}</span>}
         {onTogglePlanned && (
           <button
             className={`running-row__bookmark${planned ? " running-row__bookmark--active" : ""}`}
@@ -90,9 +94,7 @@ export const RunningEventRow = memo(function RunningEventRow({
 
       <div className="running-row__bottom">
         <span className="running-row__date">{formattedDate}</span>
-        {countdown && !isCancelled && (
-          <span className="running-row__countdown">{countdown}</span>
-        )}
+        {countdown && !isCancelled && <span className="running-row__countdown">{countdown}</span>}
       </div>
     </Link>
   );

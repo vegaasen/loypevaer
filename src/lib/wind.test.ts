@@ -1,6 +1,11 @@
-import { describe, it, expect } from "vitest";
-import { bearingBetween, routeBearingForWaypoint, windRelativeLabel, degreesToCompass } from "./wind";
+import { describe, expect, it } from "vitest";
 import type { Waypoint } from "./weather";
+import {
+  bearingBetween,
+  degreesToCompass,
+  routeBearingForWaypoint,
+  windRelativeLabel,
+} from "./wind";
 
 function wp(lat: number, lon: number): Waypoint {
   return { label: "test", lat, lon };

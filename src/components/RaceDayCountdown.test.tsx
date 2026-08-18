@@ -1,13 +1,13 @@
-import { describe, it, expect, vi, afterEach } from "vitest";
 import { render, screen } from "@testing-library/react";
-import { RaceDayCountdown } from "./RaceDayCountdown";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import type { WeatherData } from "../lib/weather";
+import { RaceDayCountdown } from "./RaceDayCountdown";
 
 function renderCountdown(
   selectedDate: string,
   tempMax = 12,
   windSpeed = 4,
-  source: WeatherData["source"] = "forecast"
+  source: WeatherData["source"] = "forecast",
 ) {
   const weather = selectedDate
     ? ({

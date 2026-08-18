@@ -31,7 +31,14 @@ export function ShareButton({ url, label = "Del" }: Props) {
   return (
     <>
       <button className="share-button" onClick={() => void handleShare()} aria-label={label}>
-        <svg className="share-button__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+        <svg
+          className="share-button__icon"
+          viewBox="0 0 16 16"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          aria-hidden="true"
+        >
           <path d="M11 2.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM5 5.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM11 8.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM8.5 6.5l-3 2M8.5 9.5l-3-2" />
         </svg>
         {label}

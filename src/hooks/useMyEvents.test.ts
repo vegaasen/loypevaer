@@ -1,5 +1,5 @@
-import { describe, it, expect } from "vitest";
-import { renderHook, act } from "@testing-library/react";
+import { act, renderHook } from "@testing-library/react";
+import { describe, expect, it } from "vitest";
 import { useMyEvents } from "./useMyEvents";
 
 const entry = { date: "2025-06-15", startTime: "09:00", finishTime: "12:00" };

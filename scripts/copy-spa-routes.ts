@@ -9,14 +9,14 @@
  * Run automatically as postbuild via package.json.
  */
 
-import { copyFileSync, mkdirSync, existsSync } from "fs";
-import { resolve } from "path";
+import { copyFileSync, existsSync, mkdirSync } from "node:fs";
+import { resolve } from "node:path";
 
 import arrangements from "../src/data/arrangements.json" with { type: "json" };
 import cyclingData from "../src/data/cycling-events.json" with { type: "json" };
 import cyclingManual from "../src/data/cycling-manual.json" with { type: "json" };
-import triathlonData from "../src/data/triathlon-events.json" with { type: "json" };
 import runningData from "../src/data/running-events.json" with { type: "json" };
+import triathlonData from "../src/data/triathlon-events.json" with { type: "json" };
 
 type HasId = { id: string };
 
@@ -29,7 +29,7 @@ if (!existsSync(SRC)) {
 }
 
 // Static routes (excluding "/" which is already dist/index.html)
-const staticRoutes = ["hva-er-rittvaer", "lop", "gpx"];
+const staticRoutes = ["hva-er-loypevaer", "lop", "gpx"];
 
 // All event IDs from every data source
 const allEvents: HasId[] = [
