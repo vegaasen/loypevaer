@@ -44,9 +44,7 @@ export function weatherAdjustment(results: WaypointWeather[], waypoints: Waypoin
   else if (minTemp < 10) adj += 0.5;
 
   // Precipitation
-  const precips = loaded.map(
-    (r) => r.data?.hourlyPrecipitation ?? r.data?.precipitation ?? 0,
-  );
+  const precips = loaded.map((r) => r.data?.hourlyPrecipitation ?? r.data?.precipitation ?? 0);
   const maxPrecip = Math.max(...precips);
   if (maxPrecip > 2) adj += 2;
   else if (maxPrecip > 0.5) adj += 1;
