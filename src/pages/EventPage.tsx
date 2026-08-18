@@ -53,7 +53,7 @@ export function EventPage() {
     ? parseDateLocal(rittData.officialDate).getFullYear()
     : null;
   const pageTitle = rittData
-    ? `Vær for ${rittData.name} ${rittYear ?? ""} – rittvær, temperatur og vind | Løypevær`
+    ? `Vær for ${rittData.name} ${rittYear ?? ""} – løypevær, temperatur og vind | Løypevær`
     : "Fant ikke arrangement – Løypevær";
   const [climateNarrative, setClimateNarrative] = useState<string | null>(null);
 

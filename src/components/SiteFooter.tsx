@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export function SiteFooter() {
   return (
     <footer className="site-footer">
-      <span>Løypevær — rittvær og løypevær for norske utholdenhetsarrangement</span>
+      <span>Løypevær — vær for norske utholdenhetsarrangement</span>
       <span>
         Data:{" "}
         <a href="https://open-meteo.com" target="_blank" rel="noopener noreferrer">
@@ -15,7 +15,7 @@ export function SiteFooter() {
         </a>
       </span>
       <span>
-        <Link to="/hva-er-rittvaer">Hva er rittvær?</Link>
+        <Link to="/hva-er-loypevaer">Hva er løypevær?</Link>
       </span>
       <span>
         <Link to="/endringslogg">Endringslogg</Link>

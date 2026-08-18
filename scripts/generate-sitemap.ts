@@ -34,9 +34,9 @@ const urls: string[] = [
     <priority>1.0</priority>
   </url>`,
 
-  // SEO landing page — targets "rittvær" searches
+  // SEO landing page — targets "løypevær" searches
   `  <url>
-    <loc>${BASE_URL}/hva-er-rittvaer</loc>
+    <loc>${BASE_URL}/hva-er-loypevaer</loc>
     <lastmod>${today}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>

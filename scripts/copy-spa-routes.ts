@@ -29,7 +29,7 @@ if (!existsSync(SRC)) {
 }
 
 // Static routes (excluding "/" which is already dist/index.html)
-const staticRoutes = ["hva-er-rittvaer", "lop", "gpx"];
+const staticRoutes = ["hva-er-loypevaer", "lop", "gpx"];
 
 // All event IDs from every data source
 const allEvents: HasId[] = [

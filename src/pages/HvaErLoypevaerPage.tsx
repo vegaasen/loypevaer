@@ -4,10 +4,10 @@ import { allArrangements } from "../lib/arrangements";
 import { SITE_URL } from "../lib/seo";
 import { PageMeta } from "../components/PageMeta";
 
-const pageUrl = `${SITE_URL}/hva-er-rittvaer`;
-const pageTitle = "Hva er rittvær? – Vær for sykkelritt, triathlon og ultraløp | Løypevær";
+const pageUrl = `${SITE_URL}/hva-er-loypevaer`;
+const pageTitle = "Hva er løypevær? – Vær for sykkelritt, triathlon og ultraløp | Løypevær";
 const description =
-  "Rittvær er værmeldingen du trenger før et sykkelritt, triathlon eller ultraløp. Les om hvorfor vær betyr alt i utholdenhetsidretten og sjekk rittvær for ditt arrangement.";
+  "Løypevær er værmeldingen du trenger før et sykkelritt, triathlon eller ultraløp. Les om hvorfor vær betyr alt i utholdenhetsidretten og sjekk løypevær for ditt arrangement.";
 
 const sykkelritt = allArrangements.filter(
   (r) => r.discipline === "landevei" || r.discipline === "terreng",
@@ -19,7 +19,7 @@ const ultra = allArrangements.filter((r) => r.discipline === "ultraløp").slice(
 
 const langrenn = allArrangements.filter((r) => r.discipline === "langrenn").slice(0, 6);
 
-export function HvaErRittvaerPage() {
+export function HvaErLoypevaerPage() {
   return (
     <div className="ritt-page">
       <PageMeta
@@ -31,13 +31,13 @@ export function HvaErRittvaerPage() {
       <Helmet>
         <meta
           name="keywords"
-          content="rittvær, hva er rittvær, sykkelritt vær, triathlon vær, ultraløp vær, langrenn vær, vær ritt, løpsvær, vær for idrettsarrangement"
+          content="løypevær, rittvær, sykkelvær, løpsvær, triathlonvær, langrennvær, terrengvær, arrangementvær"
         />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: "Hva er rittvær?",
+            headline: "Hva er løypevær?",
             description,
             url: pageUrl,
             inLanguage: "nb-NO",
@@ -59,26 +59,26 @@ export function HvaErRittvaerPage() {
 
       <header className="ritt-page__header">
         <div className="ritt-page__title-row">
-          <h1>Hva er rittvær?</h1>
+          <h1>Hva er løypevær?</h1>
         </div>
         <p className="ritt-page__lead">
-          Rittvær er været du møter langs løypa under et sykkelritt, triathlon, ultraløp
+          Løypevær er været du møter langs løypa under et sykkelritt, triathlon, ultraløp
           eller langrenn — ikke bare ved starten, men ved hvert eneste punkt langs ruten.
         </p>
       </header>
 
       <div className="ritt-page__article">
         <section>
-          <h2>Hvorfor er rittvær viktig?</h2>
+          <h2>Hvorfor er løypevær viktig?</h2>
           <p>
             I utholdenhetsidretten er vær en av de viktigste faktorene for prestasjon og
             sikkerhet. Et sykkelritt på 90 km kan ta deg fra varmt og vindstille i dalen til
             kaldt og blåsende på fjellovergangen — alt i løpet av noen timer. Uten riktig
-            rittvær-informasjon risikerer du å starte med for lett bekledning, bruke for lite
+            løypevær-informasjon risikerer du å starte med for lett bekledning, bruke for lite
             energi i motbakkene eller bli tatt på sengen av regn eller snø.
           </p>
           <p>
-            Rittvær skiller seg fra vanlig stedsvær fordi du beveger deg gjennom ulike
+            Løypevær skiller seg fra vanlig stedsvær fordi du beveger deg gjennom ulike
             høydenivåer og klimasoner i løpet av arrangementet. Løypevær beregner
             timebaserte værvarsler for hvert nøkkelpunkt langs ruten — tilpasset din
             starttid.
@@ -86,11 +86,11 @@ export function HvaErRittvaerPage() {
         </section>
 
         <section>
-          <h2>Rittvær for sykkelritt</h2>
+          <h2>Sykkelvær for sykkelritt</h2>
           <p>
             Norske sykkelritt som Birkebeinerrittet, Styrkeprøven og Jotunheimen Rundt
-            strekker seg over hundrevis av kilometer og store høydeforskjeller. Rittvær
-            for sykkel handler om å kjenne vindretning (med- eller motvind), temperatur i
+            strekker seg over hundrevis av kilometer og store høydeforskjeller. Sykkelvær
+            handler om å kjenne vindretning (med- eller motvind), temperatur i
             bakker og på topper, og sjansen for regn som kan gjøre veidekket glatt.
           </p>
           {sykkelritt.length > 0 && (
@@ -98,7 +98,7 @@ export function HvaErRittvaerPage() {
               {sykkelritt.map((r) => (
                 <li key={r.id}>
                   <Link to={`/arrangement/${r.id}`}>
-                    Sjekk rittvær for {r.name} ({r.region})
+                    Sjekk løypevær for {r.name} ({r.region})
                   </Link>
                 </li>
               ))}
@@ -163,7 +163,7 @@ export function HvaErRittvaerPage() {
           <p>
             Langrenn er avhengig av snøforhold, temperatur og vind. Skiføret varierer mye
             fra start til mål i kuperte løyper. Riktig skismøring og bekledning krever at
-            du kjenner rennværet — ikke bare for startstedet, men for hele løypa.
+            du kjenner langrennværet — ikke bare for startstedet, men for hele løypa.
           </p>
           {langrenn.length > 0 && (
             <ul>
@@ -184,9 +184,9 @@ export function HvaErRittvaerPage() {
         </section>
 
         <section>
-          <h2>Historisk rittvær vs. sanntidsvarsel</h2>
+          <h2>Historisk løypevær vs. sanntidsvarsel</h2>
           <p>
-            Løypevær kombinerer to datakilder for å gi deg best mulig rittvær:
+            Løypevær kombinerer to datakilder for å gi deg best mulig løypevær:
           </p>
           <ul>
             <li>
@@ -196,13 +196,13 @@ export function HvaErRittvaerPage() {
             <li>
               <strong>Historisk klimasnitt:</strong> For arrangement langt frem i tid bruker
               vi 15 års historiske data for samme dato og sted. Du ser hva du statistisk
-              sett kan forvente av rittvær.
+              sett kan forvente av løypevær.
             </li>
           </ul>
         </section>
 
         <section>
-          <h2>Sjekk rittvær for ditt arrangement</h2>
+          <h2>Sjekk løypevær for ditt arrangement</h2>
           <p>
             Løypevær dekker {allArrangements.length} norske utholdenhetsarrangement — fra
             Nordkapp til Sørlandet, sykkelritt, langrenn, triathlon og ultraløp.

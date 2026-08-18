@@ -4344,7 +4344,7 @@ details[open] .packing-list__summary::before {
   text-decoration: line-through;
 }
 
-/* ── Article page layout (hva-er-rittvaer, endringslogg) ────────────── */
+/* ── Article page layout (hva-er-loypevaer, endringslogg) ────────────── */
 
 .ritt-page__article {
   padding: 28px 32px 60px;

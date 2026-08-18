@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { HomePage } from "./pages/HomePage";
 import { NavBar } from "./components/NavBar";
@@ -21,7 +21,7 @@ restoreConsentFromStorage();
 const EventPage = lazy(() => import("./pages/EventPage").then((m) => ({ default: m.EventPage })));
 const GpxPage = lazy(() => import("./pages/GpxPage").then((m) => ({ default: m.GpxPage })));
 const LopPage = lazy(() => import("./pages/LopPage").then((m) => ({ default: m.LopPage })));
-const HvaErRittvaerPage = lazy(() => import("./pages/HvaErRittvaerPage").then((m) => ({ default: m.HvaErRittvaerPage })));
+const HvaErLoypevaerPage = lazy(() => import("./pages/HvaErLoypevaerPage").then((m) => ({ default: m.HvaErLoypevaerPage })));
 const EndringsloggPage = lazy(() => import("./pages/EndringsloggPage").then((m) => ({ default: m.EndringsloggPage })));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage").then((m) => ({ default: m.NotFoundPage })));
 
@@ -48,7 +48,8 @@ function RouterContent() {
           <Route path="/arrangement/:id" element={<EventPage />} />
           <Route path="/lop" element={<LopPage />} />
           <Route path="/gpx" element={<GpxPage />} />
-          <Route path="/hva-er-rittvaer" element={<HvaErRittvaerPage />} />
+          <Route path="/hva-er-loypevaer" element={<HvaErLoypevaerPage />} />
+          <Route path="/hva-er-rittvaer" element={<Navigate to="/hva-er-loypevaer" replace />} />
           <Route path="/endringslogg" element={<EndringsloggPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

@@ -27,7 +27,7 @@ const TIDSHORISONT_LABEL: Record<Tidshorisont, string> = {
 
 export function HomePage() {
   const description =
-    `Sjekk rittvær og værvarsler for ${ritt.length} norske utholdenhetsarrangement — sykkelritt, langrenn, triathlon og ultraløp. Se temperatur, vind og nedbør punkt for punkt langs løypa, tilpasset din starttid.`;
+    `Sjekk løypevær og værvarsler for ${ritt.length} norske utholdenhetsarrangement — sykkelritt, langrenn, triathlon og ultraløp. Se temperatur, vind og nedbør punkt for punkt langs løypa, tilpasset din starttid.`;
 
   const { plannedIds, isPlanned, getPlanned, add, remove } = useMyEvents();
   const { discipline, setDiscipline } = useFilterContext();
@@ -158,12 +158,12 @@ export function HomePage() {
   return (
     <div className="home-page">
       <PageMeta
-        title="Løypevær – Rittvær og vær for norske utholdenhetsarrangement"
+        title="Løypevær – Vær for norske utholdenhetsarrangement"
         description={description}
         canonicalUrl={SITE_URL}
       />
       <Helmet>
-        <meta name="keywords" content="rittvær, sykkelritt vær, langrenn vær, triathlon vær, ultraløp vær, løpsvær, værmelding ritt, etappevær" />
+        <meta name="keywords" content="løypevær, rittvær, sykkelvær, løpsvær, triathlonvær, langrennvær, terrengvær, arrangementvær" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -183,7 +183,7 @@ export function HomePage() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ItemList",
-            name: "Norske utholdenhetsarrangement – rittvær og værmeldinger",
+            name: "Norske utholdenhetsarrangement – løypevær og værmeldinger",
             url: SITE_URL,
             numberOfItems: allForJsonLd.length,
             itemListElement: allForJsonLd.map((r, i) => ({
