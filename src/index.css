@@ -2337,6 +2337,12 @@ code {
   color: var(--text-muted);
 }
 
+.featured-card__meta {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
 .featured-card__footer {
   display: flex;
   justify-content: space-between;
@@ -2402,12 +2408,8 @@ code {
   overflow: hidden;
 }
 
-.featured-card--compact .featured-card__region {
+.featured-card--compact .featured-card__meta {
   font-size: 12px;
-}
-
-.featured-card--compact .featured-card__distance {
-  font-size: 14px;
 }
 
 .featured-card--compact .featured-card__countdown {
