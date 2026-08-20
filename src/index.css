@@ -164,10 +164,10 @@ code {
 /* ─── Global Nav ────────────────────────────────────────────────────── */
 
 .site-nav-wrapper {
-  padding: 12px 20px 0;
+  padding: 12px 20px;
   box-sizing: border-box;
   @media (max-width: 600px) {
-    padding: 8px 12px 0;
+    padding: 8px 12px;
   }
 }
 
@@ -1650,6 +1650,7 @@ code {
 .home-page__month-heading {
   font-size: 15px;
   font-family: var(--mono);
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   margin-bottom: 1.25rem;
