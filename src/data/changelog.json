@@ -1,5 +1,23 @@
 [
   {
+    "sha": "c032090c745e73d4856a09e2e1d7a97a7a3b5fe0",
+    "shortSha": "c032090",
+    "date": "2026-08-20",
+    "type": "fix",
+    "scope": null,
+    "subject": "suppress workbox dev-mode glob warnings and clean up EventMap fallback",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/c032090c745e73d4856a09e2e1d7a97a7a3b5fe0"
+  },
+  {
+    "sha": "e6013f58f6fcab9bd3c86d4c3891f80f11709817",
+    "shortSha": "e6013f5",
+    "date": "2026-08-20",
+    "type": "fix",
+    "scope": null,
+    "subject": "remove scroll-on-load behaviour",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/e6013f58f6fcab9bd3c86d4c3891f80f11709817"
+  },
+  {
     "sha": "4f1f7477c8ff9450ed3047001a228778a21fa3e6",
     "shortSha": "4f1f747",
     "date": "2026-08-20",
