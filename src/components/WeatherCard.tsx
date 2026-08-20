@@ -95,10 +95,12 @@ function WeatherCardContent({
   data,
   routeBearing,
   hasDate,
+  timingActive,
 }: {
   data: WeatherData;
   routeBearing?: number;
   hasDate: boolean;
+  timingActive: boolean;
 }) {
   const { label: wLabel, emoji } = describeWeatherCode(data.weatherCode);
 
@@ -132,7 +134,10 @@ function WeatherCardContent({
   // Wind: hide entirely when no date is selected. Show "(snitt)" label when it
   // is a daytime average (no timing set) rather than an exact arrival-hour value.
   const showWind = hasDate;
-  const windIsAvg = data.windSpeedIsAverage === true && data.hourlyWindSpeed == null;
+  // Suppress "snitt" when timing is active (hourlyWindSpeed set) OR when an
+  // arrival time was computed (timingActive) — the latter covers the edge case
+  // where the data is still loading/stale but timing is clearly engaged.
+  const windIsAvg = data.windSpeedIsAverage === true && data.hourlyWindSpeed == null && !timingActive;
 
   return (
     <>
@@ -275,7 +280,7 @@ export const WeatherCard = memo(function WeatherCard({
 
       {isError && <div className="weather-card__error">Kunne ikke hente vær</div>}
 
-      {data && <WeatherCardContent data={data} routeBearing={routeBearing} hasDate={!!date} />}
+      {data && <WeatherCardContent data={data} routeBearing={routeBearing} hasDate={!!date} timingActive={!!arrivalTime} />}
 
       {historicalYears && historicalYears.length > 0 && (
         <>

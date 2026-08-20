@@ -342,4 +342,19 @@ describe("WeatherCard", () => {
     );
     expect(screen.queryByText(/· snitt/)).not.toBeInTheDocument();
   });
+
+  it("does not show '· snitt' label when arrivalTime is set (timing active)", () => {
+    const data: WeatherData = { ...weatherData, windSpeedIsAverage: true };
+    renderWithQuery(
+      <WeatherCard
+        waypoint={waypoint}
+        data={data}
+        isLoading={false}
+        isError={false}
+        date="2025-06-15"
+        arrivalTime="09:00"
+      />,
+    );
+    expect(screen.queryByText(/· snitt/)).not.toBeInTheDocument();
+  });
 });
