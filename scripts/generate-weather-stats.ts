@@ -91,8 +91,8 @@ function weatherCodeFactor(code: number): number {
   if (code <= 55) return 0.6;
   if (code <= 65) return 0.4;
   if (code <= 77) return 0.35;
-  if (code <= 82) return 0.45;
-  if (code <= 86) return 0.3;
+  if (code <= 82) return 0.3;
+  if (code <= 86) return 0.25;
   return 0.1; // thunderstorm 95–99
 }
 
