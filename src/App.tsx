@@ -6,7 +6,6 @@ import { ErrorBoundary } from "./components/ErrorBoundary";
 import { InstallBanner } from "./components/InstallBanner";
 import { NavBar } from "./components/NavBar";
 import { ReloadPrompt } from "./components/ReloadPrompt";
-import { ScrollToTop } from "./components/ScrollToTop";
 import { ScrollToTopButton } from "./components/ScrollToTopButton";
 import { SiteFooter } from "./components/SiteFooter";
 import { usePageTracking } from "./hooks/usePageTracking";
@@ -48,7 +47,6 @@ function RouterContent() {
   useWeatherAlerts();
   return (
     <>
-      <ScrollToTop />
       <NavBar />
       <InstallBanner />
       <Suspense fallback={<div className="page-loading" aria-label="Laster…" />}>
