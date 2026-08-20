@@ -1,6 +1,6 @@
 import type { Discipline } from "../lib/arrangements";
 import { DISCIPLINE_LABEL_WITH_EMOJI } from "../lib/disciplines";
-import type { EventWeatherStats } from "../data/weather-stats.types";
+import type { BestWorstYear, EventWeatherStats } from "../data/weather-stats.types";
 import { WeatherRankingList } from "./WeatherRankingList";
 import { BestWorstYearCard } from "./BestWorstYearCard";
 import { TrendBadge } from "./TrendBadge";
@@ -10,28 +10,34 @@ interface Props {
   events: EventWeatherStats[];
 }
 
+type WithBestYear = EventWeatherStats & { bestYear: BestWorstYear };
+type WithWorstYear = EventWeatherStats & { worstYear: BestWorstYear };
+
 /** Picks the event with the best single historical year (highest bestYear.comfortScore). */
-function pickBestEvent(events: EventWeatherStats[]): EventWeatherStats | null {
-  const withData = events.filter((e) => e.bestYear !== null);
+function pickBestEvent(events: EventWeatherStats[]): WithBestYear | null {
+  const withData = events.filter((e): e is WithBestYear => e.bestYear !== null);
   if (withData.length === 0) return null;
   return withData.reduce((a, b) =>
-    b.bestYear!.comfortScore > a.bestYear!.comfortScore ? b : a
+    b.bestYear.comfortScore > a.bestYear.comfortScore ? b : a
   );
 }
 
 /** Picks the event with the worst single historical year (lowest worstYear.comfortScore). */
-function pickWorstEvent(events: EventWeatherStats[]): EventWeatherStats | null {
-  const withData = events.filter((e) => e.worstYear !== null);
+function pickWorstEvent(events: EventWeatherStats[]): WithWorstYear | null {
+  const withData = events.filter((e): e is WithWorstYear => e.worstYear !== null);
   if (withData.length === 0) return null;
   return withData.reduce((a, b) =>
-    b.worstYear!.comfortScore < a.worstYear!.comfortScore ? b : a
+    b.worstYear.comfortScore < a.worstYear.comfortScore ? b : a
   );
 }
 
 /** Events with a meaningful temp trend (|slope| ≥ 0.05). */
-function eventsWithTrend(events: EventWeatherStats[]): EventWeatherStats[] {
+function eventsWithTrend(events: EventWeatherStats[]): Array<EventWeatherStats & { tempTrend: number }> {
   return events
-    .filter((e) => e.tempTrend !== null && Math.abs(e.tempTrend) >= 0.05)
+    .filter((e): e is EventWeatherStats & { tempTrend: number } =>
+      e.tempTrend !== null && Math.abs(e.tempTrend) >= 0.05
+    )
+    .sort((a, b) => Math.abs(b.tempTrend) - Math.abs(a.tempTrend))
     .slice(0, 3);
 }
 
@@ -85,14 +91,14 @@ export function DisciplineStatsSection({ discipline, events }: Props) {
 
           {(bestEvent ?? worstEvent) && (
             <div className="stats-section__callouts">
-              {bestEvent?.bestYear && (
+              {bestEvent && (
                 <BestWorstYearCard
                   label={`Beste år — ${bestEvent.name}`}
                   year={bestEvent.bestYear}
                   variant="best"
                 />
               )}
-              {worstEvent?.worstYear && (
+              {worstEvent && (
                 <BestWorstYearCard
                   label={`Verste år — ${worstEvent.name}`}
                   year={worstEvent.worstYear}
@@ -109,7 +115,7 @@ export function DisciplineStatsSection({ discipline, events }: Props) {
                 {trending.map((e) => (
                   <li key={e.id} className="stats-section__trend-item">
                     <span className="stats-section__trend-name">{e.name}</span>
-                    <TrendBadge slope={e.tempTrend!} />
+                    <TrendBadge slope={e.tempTrend} />
                   </li>
                 ))}
               </ul>

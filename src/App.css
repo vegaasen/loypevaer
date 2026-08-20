@@ -318,8 +318,8 @@
 }
 
 .year-card--worst {
-  background: rgba(192, 84, 42, 0.08);
-  border-color: rgba(192, 84, 42, 0.3);
+  background: color-mix(in srgb, var(--accent-warm) 8%, transparent);
+  border-color: color-mix(in srgb, var(--accent-warm) 30%, transparent);
 }
 
 .year-card__header {
@@ -365,13 +365,13 @@
 }
 
 .trend-badge--up {
-  background: rgba(192, 84, 42, 0.12);
-  color: #c0542a;
+  background: color-mix(in srgb, var(--accent-warm) 12%, transparent);
+  color: var(--accent-warm);
 }
 
 .trend-badge--down {
-  background: rgba(61, 107, 200, 0.1);
-  color: #3d6bc8;
+  background: color-mix(in srgb, var(--color-trend-cool) 10%, transparent);
+  color: var(--color-trend-cool);
 }
 
 .trend-badge--flat {
