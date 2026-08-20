@@ -3,6 +3,13 @@ import type { Discipline } from "../lib/arrangements";
 import { calcFinishTimeFromSpeed, formatPace, paceToKmh } from "../lib/timing";
 
 const SPEED_OPTIONS = [15, 18, 20, 22, 25, 28, 30, 32, 35, 38, 40] as const;
+
+function formatDuration(decimalHours: number): string {
+  const hrs = Math.floor(decimalHours);
+  const mins = Math.round((decimalHours - hrs) * 60);
+  if (mins === 0) return `${hrs}t`;
+  return `${hrs}t ${mins}m`;
+}
 // Pace options in decimal min/km — displayed as mm:ss
 const PACE_OPTIONS = [
   3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 9.0, 10.0, 12.0,
@@ -94,14 +101,14 @@ export function TimePicker({
                     return (
                       <option key={p} value={p}>
                         {formatPace(p)} min/km
-                        {estHours != null ? ` ≈ ${estHours} t` : ""}
+                        {estHours != null ? ` ≈ ${formatDuration(estHours)}` : ""}
                       </option>
                     );
                   })
                 : SPEED_OPTIONS.map((s) => (
                     <option key={s} value={s}>
                       {s} km/t
-                      {distanceKm ? ` ≈ ${Math.round((distanceKm / s) * 10) / 10} t` : ""}
+                      {distanceKm ? ` ≈ ${formatDuration(distanceKm / s)}` : ""}
                     </option>
                   ))}
             </select>

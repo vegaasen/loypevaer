@@ -173,12 +173,14 @@ function WeatherCardContent({
             <span className="weather-card__precip-prob"> · {data.precipitationProbability}%</span>
           )}
         </span>
-        {risk && (
+      </div>
+      {risk && (
+        <div className="weather-card__detail">
           <span className={`weather-card__road-risk weather-card__road-risk--${risk}`}>
             {ROAD_RISK_LABELS[risk].icon} {ROAD_RISK_LABELS[risk].label}
           </span>
-        )}
-      </div>
+        </div>
+      )}
       {showWind && (
         <div className="weather-card__detail">
           <span title={windIsAvg ? "Gjennomsnittlig vind 06:00–18:00" : "Vind"}>

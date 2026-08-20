@@ -286,28 +286,19 @@ export function EventPage() {
           })}
         </script>
       </Helmet>
-      <Link to={forecastOnly ? "/lop" : "/"} className="ritt-page__back-link">
-        ← {forecastOnly ? "Alle løp" : "Alle arrangement"}
-      </Link>
       <header className="ritt-page__header">
         <div className="ritt-page__title-row">
           <h1>{rittData.name}</h1>
-          {!forecastOnly && physDifficulty && (
-            <span
-              className={`ritt-page__difficulty-badge ritt-page__difficulty-badge--${physDifficulty.level}`}
-            >
-              {physDifficulty.label}
-            </span>
-          )}
+
         </div>
         <div className="ritt-page__stats-row">
           <span>{rittData.distanceLabel ?? `${rittData.distance} km`}</span>
           {elevationGain != null && (
-            <span className="ritt-page__stats-elevation">↑ {elevationGain} m</span>
+            <span className="ritt-page__stats-elevation">· ↑ {elevationGain} m</span>
           )}
-          <span>{rittData.region}</span>
+          <span>· {rittData.region}</span>
           <span className="ritt-page__actions-date">
-            {formattedOfficialDate}
+            · {formattedOfficialDate}
             {rittData.dateStatus === "pending" && (
               <span
                 className="ritt-page__pending-badge"
@@ -317,8 +308,6 @@ export function EventPage() {
               </span>
             )}
           </span>
-        </div>
-        <div className="ritt-page__actions-row">
           {rittData.url && (
             <a
               href={rittData.url}
@@ -327,9 +316,11 @@ export function EventPage() {
               className="ritt-page__meta-link"
               onClick={() => trackExternalLinkClick(rittData.url!, rittData.name)}
             >
-              Nettside ↗
+              · Nettside ↗
             </a>
           )}
+        </div>
+        <div className="ritt-page__actions-row">
           <button
             className={`ritt-page__bookmark-btn${planned ? " ritt-page__bookmark-btn--active" : ""}`}
             onClick={handleBookmarkToggle}
@@ -429,17 +420,6 @@ export function EventPage() {
 
       {/* ── Secondary sections — grouped collapsible accordion ── */}
       <div className="ritt-page__secondary-sections">
-        <ErrorBoundary
-          fallback={<p className="error-boundary__message">Kunne ikke laste kartet.</p>}
-        >
-          <Suspense fallback={<div className="ritt-page__section-skeleton" aria-hidden />}>
-            <EventMap
-              waypoints={rittData.waypoints}
-              name={rittData.name}
-              discipline={rittData.discipline}
-            />
-          </Suspense>
-        </ErrorBoundary>
         {!forecastOnly && (
           <ErrorBoundary
             fallback={<p className="error-boundary__message">Kunne ikke laste høydeprofilen.</p>}
@@ -468,6 +448,17 @@ export function EventPage() {
             </Suspense>
           </ErrorBoundary>
         )}
+        <ErrorBoundary
+          fallback={<p className="error-boundary__message">Kunne ikke laste kartet.</p>}
+        >
+          <Suspense fallback={<div className="ritt-page__section-skeleton" aria-hidden />}>
+            <EventMap
+              waypoints={rittData.waypoints}
+              name={rittData.name}
+              discipline={rittData.discipline}
+            />
+          </Suspense>
+        </ErrorBoundary>
       </div>
       <FeedbackSnackbar eventId={id ?? ""} />
     </div>

@@ -88,7 +88,7 @@ export function NavBar() {
             to="/gpx"
             className={`site-nav__gpx-link${isGpxPage ? " site-nav__gpx-link--active" : ""}`}
           >
-            Din egen løype
+            Egendefinert løype (GPX)
           </Link>
           <span className="site-nav__divider" aria-hidden="true" />
           <Link
@@ -154,7 +154,7 @@ export function NavBar() {
             className={`site-nav__mobile-link${isGpxPage ? " site-nav__mobile-link--active" : ""}`}
             role="menuitem"
           >
-            Din egen løype
+            Egendefinert løype (GPX)
           </Link>
           <Link
             to="/statistikk"
