@@ -1,11 +1,10 @@
 import { describe, it, expect } from "vitest";
 
-// We test the pure functions by importing them. The script must export them.
 import {
   computeComfortScore,
   computeTrend,
   statisticalMode,
-} from "../../scripts/generate-weather-stats";
+} from "../../src/lib/weatherStats";
 
 describe("computeComfortScore", () => {
   it("gives max score for ideal cycling conditions", () => {
