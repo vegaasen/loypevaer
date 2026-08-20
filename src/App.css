@@ -168,3 +168,250 @@
     transform: translateX(-50%) translateY(0);
   }
 }
+
+/* ── Statistikk page ─────────────────────────────────────────────── */
+
+.stats-page__updated {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+.stats-page__sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.stats-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.stats-section__title {
+  font-family: var(--heading);
+  font-size: 1.25rem;
+  color: var(--text-h);
+  margin: 0 0 1.25rem;
+}
+
+.stats-section__empty {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+.stats-section__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+/* ── WeatherRankingList ───────────────────────────────────────────── */
+
+.weather-ranking {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.weather-ranking__label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin: 0 0 0.75rem;
+}
+
+.weather-ranking__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.weather-ranking__item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+.weather-ranking__rank {
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+  min-width: 1.6rem;
+  font-size: 0.75rem;
+}
+
+.weather-ranking__name {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    color: var(--text-h);
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:hover { text-decoration: underline; }
+  }
+}
+
+.weather-ranking__region {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.weather-ranking__value {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: var(--text-h);
+  white-space: nowrap;
+  font-size: 0.82rem;
+}
+
+.weather-ranking__years {
+  font-weight: 400;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  margin-left: 0.2rem;
+}
+
+.weather-ranking__item--no-data {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.weather-ranking__no-data {
+  color: var(--text-muted);
+}
+
+/* ── BestWorstYearCard ────────────────────────────────────────────── */
+
+.stats-section__callouts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.year-card {
+  border-radius: 10px;
+  padding: 1rem;
+  border: 1px solid var(--border);
+}
+
+.year-card--best {
+  background: rgba(61, 107, 53, 0.08);
+  border-color: var(--accent-border);
+}
+
+.year-card--worst {
+  background: rgba(192, 84, 42, 0.08);
+  border-color: rgba(192, 84, 42, 0.3);
+}
+
+.year-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.year-card__label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70%;
+}
+
+.year-card__year {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.year-card__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text);
+}
+
+/* ── TrendBadge ──────────────────────────────────────────────────── */
+
+.trend-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.15rem 0.45rem;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.trend-badge--up {
+  background: rgba(192, 84, 42, 0.12);
+  color: #c0542a;
+}
+
+.trend-badge--down {
+  background: rgba(61, 107, 200, 0.1);
+  color: #3d6bc8;
+}
+
+.trend-badge--flat {
+  background: var(--bg-subtle);
+  color: var(--text-muted);
+}
+
+.stats-section__trends {
+  margin-top: 1.25rem;
+}
+
+.stats-section__trends-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.6rem;
+}
+
+.stats-section__trends-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.stats-section__trend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+}
+
+.stats-section__trend-name {
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 240px;
+}
