@@ -42,7 +42,7 @@ const urls: string[] = [
     <priority>0.9</priority>
   </url>`,
 
-  // Løping / kortere løp page
+  // Løping / løp page
   `  <url>
     <loc>${BASE_URL}/lop</loc>
     <lastmod>${today}</lastmod>

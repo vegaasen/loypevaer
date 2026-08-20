@@ -86,8 +86,12 @@ export function HomePage() {
     [discipline, region, tidshorisont, searchQuery],
   );
 
+  const now = useMemo(() => new Date(), []);
+  const currentYear = now.getFullYear();
+  const currentMonth = now.getMonth();
+
   const grouped = useMemo(() => groupByYearMonth(filtered), [filtered]);
-  const years = useMemo(() => [...grouped.keys()].sort((a, b) => b - a), [grouped]);
+  const years = useMemo(() => [...grouped.keys()].sort((a, b) => a - b), [grouped]);
 
   const featuredEvents = useMemo(
     () => getNextPerDiscipline(ritt.filter((r) => r.discipline !== "løping")),
@@ -109,13 +113,18 @@ export function HomePage() {
   );
 
   function handleScrollToCurrentMonth() {
-    const now = new Date();
-    const year = now.getFullYear();
-    const month = now.getMonth();
     const target =
-      document.getElementById(`month-${year}-${month}`) ??
+      document.getElementById(`month-${currentYear}-${currentMonth}`) ??
       document.getElementById("alle-arrangement");
-    target?.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (target) {
+      // Open any ancestor <details> that might be collapsed
+      let el: HTMLElement | null = target;
+      while (el) {
+        if (el instanceof HTMLDetailsElement) el.open = true;
+        el = el.parentElement;
+      }
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   }
 
   function handleToggle(id: string, officialDate: string, e: React.MouseEvent<HTMLButtonElement>) {
@@ -261,7 +270,7 @@ export function HomePage() {
           )}
           {totalKortereLop > 0 && (
             <span>
-              <strong>{totalKortereLop}</strong> kortere løp
+              <strong>{totalKortereLop}</strong> løp
             </span>
           )}
         </div>
@@ -507,9 +516,9 @@ export function HomePage() {
         <section className="home-page__lop-promo" aria-label="Løping har egen side">
           <div className="home-page__lop-promo-content">
             <div className="home-page__feature-eyebrow">Løping</div>
-            <h2>Kortere løp har sin egen side</h2>
+            <h2>Løp har sin egen side</h2>
             <p>
-              Sentrumsløpet, Birkebeinerløpet og mange andre kortere løp finner du på løpesiden. Der
+              Sentrumsløpet, Birkebeinerløpet og mange andre løp finner du på løpesiden. Der
               viser vi sanntidsvarsler for løpsdagen — temperatur, vind og nedbør der det teller.
             </p>
             <Link to="/lop" className="home-page__lop-teaser-btn">
@@ -523,28 +532,23 @@ export function HomePage() {
           {years.map((year) => {
             const byMonth = grouped.get(year)!;
             const months = [...byMonth.keys()].sort((a, b) => a - b);
-            return (
-              <section key={year} className="home-page__year-section">
-                <h2 className="home-page__year-heading">{year}</h2>
+            const isPastYear = year < currentYear;
+            const yearContent = (
+              <>
                 {months.map((month) => {
                   const monthEvents = byMonth.get(month)!;
                   const upcoming = monthEvents.filter((r) => daysUntil(r.officialDate) >= 0);
                   const past = monthEvents.filter((r) => daysUntil(r.officialDate) < 0);
                   const hasBoth = upcoming.length > 0 && past.length > 0;
-                  return (
+                  const isCurrentMonth = year === currentYear && month === currentMonth;
+                  const isCollapsedMonth =
+                    past.length === monthEvents.length && !isCurrentMonth;
+                  const monthInner = (
                     <div
                       key={month}
                       id={`month-${year}-${month}`}
                       className="home-page__month-section"
                     >
-                      <h3 className="home-page__month-heading">
-                        <a href={`#month-${year}-${month}`} className="home-page__month-anchor">
-                          {monthName(month)}
-                        </a>
-                        {monthEvents.length > 1 && (
-                          <span className="month-count-badge">{monthEvents.length}</span>
-                        )}
-                      </h3>
                       {past.length > 0 && (
                         <div
                           className={`home-page__grid home-page__grid--past-list${hasBoth ? " home-page__grid--past-list-separated" : ""}`}
@@ -592,7 +596,55 @@ export function HomePage() {
                       )}
                     </div>
                   );
+                  if (isCollapsedMonth) {
+                    return (
+                      <details key={month} className="home-page__month-details">
+                        <summary className="home-page__month-heading home-page__month-summary">
+                          <span className="home-page__month-summary-label">
+                            {monthName(month)}
+                            <span className="month-count-badge">
+                              {monthEvents.length}{" "}
+                              {monthEvents.length === 1 ? "arrangement" : "arrangement"}
+                            </span>
+                          </span>
+                        </summary>
+                        {monthInner}
+                      </details>
+                    );
+                  }
+                  return (
+                    <>
+                      <h3 className="home-page__month-heading">
+                        <a
+                          href={`#month-${year}-${month}`}
+                          className="home-page__month-anchor"
+                        >
+                          {monthName(month)}
+                        </a>
+                        {monthEvents.length > 1 && (
+                          <span className="month-count-badge">{monthEvents.length}</span>
+                        )}
+                      </h3>
+                      {monthInner}
+                    </>
+                  );
                 })}
+              </>
+            );
+            if (isPastYear) {
+              return (
+                <details key={year} className="home-page__year-details">
+                  <summary className="home-page__year-heading home-page__year-summary">
+                    {year}
+                  </summary>
+                  <section className="home-page__year-section">{yearContent}</section>
+                </details>
+              );
+            }
+            return (
+              <section key={year} className="home-page__year-section">
+                <h2 className="home-page__year-heading">{year}</h2>
+                {yearContent}
               </section>
             );
           })}
@@ -603,14 +655,14 @@ export function HomePage() {
       <section className="home-page__lop-teaser">
         <div className="home-page__lop-teaser-text">
           <div className="home-page__feature-eyebrow">Løping</div>
-          <h2>Kortere løp fortjener like godt værvarsel.</h2>
+          <h2>Løp fortjener like godt værvarsel.</h2>
           <p>
-            Vi holder oversikt over kortere løp som Sentrumsløpet og Birkebeinerløpet. Her viser vi
+            Vi holder oversikt over løp som Sentrumsløpet og Birkebeinerløpet. Her viser vi
             sanntidsvarsler for løpsdagen — temperatur, vind og nedbør der det teller.
           </p>
         </div>
         <Link to="/lop" className="home-page__lop-teaser-btn">
-          Kortere løp →
+          Løp →
         </Link>
       </section>
     </div>
