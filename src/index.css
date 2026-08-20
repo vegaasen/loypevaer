@@ -4210,7 +4210,9 @@ details[open] .gear-suggestion__summary::before {
 
 .site-footer {
   margin-top: auto;
-  padding: 40px 32px 28px;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 40px calc(50vw - 568px) 28px;
   background: color-mix(in srgb, var(--accent) 6%, var(--bg));
   border-top: 1px solid var(--border);
   font-size: 13px;
@@ -4218,6 +4220,10 @@ details[open] .gear-suggestion__summary::before {
   display: flex;
   flex-direction: column;
   gap: 0;
+
+  @media (max-width: 1232px) {
+    padding: 40px 32px 28px;
+  }
 
   @media (max-width: 1024px) {
     padding: 28px 16px 20px;
