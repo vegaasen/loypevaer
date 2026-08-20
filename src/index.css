@@ -1506,16 +1506,9 @@ code {
 
 .home-page__year-section {
   margin-top: 48px;
-  content-visibility: auto;
-  contain-intrinsic-size: 0 600px;
   @media (max-width: 1024px) {
     margin-top: 32px;
   }
-}
-
-.home-page__year-section--virtual {
-  content-visibility: visible;
-  contain-intrinsic-size: none;
 }
 
 .home-page__year-heading {
@@ -1635,16 +1628,9 @@ code {
 .home-page__month-section {
   margin-top: 32px;
   scroll-margin-top: 8px;
-  content-visibility: auto;
-  contain-intrinsic-size: 0 400px;
   @media (max-width: 1024px) {
     margin-top: 24px;
   }
-}
-
-.home-page__month-section--virtual {
-  content-visibility: visible;
-  contain-intrinsic-size: none;
 }
 
 .home-page__month-heading {
@@ -2351,6 +2337,12 @@ code {
   color: var(--text-muted);
 }
 
+.featured-card__meta {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
 .featured-card__footer {
   display: flex;
   justify-content: space-between;
@@ -2416,12 +2408,8 @@ code {
   overflow: hidden;
 }
 
-.featured-card--compact .featured-card__region {
+.featured-card--compact .featured-card__meta {
   font-size: 12px;
-}
-
-.featured-card--compact .featured-card__distance {
-  font-size: 14px;
 }
 
 .featured-card--compact .featured-card__countdown {

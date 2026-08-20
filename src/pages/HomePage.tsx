@@ -139,19 +139,6 @@ export function HomePage() {
 
   const feature1Ref = useRef<HTMLDivElement>(null);
   const feature2Ref = useRef<HTMLDivElement>(null);
-  const activePillRef = useRef<HTMLButtonElement | null>(null);
-  const isMountedRef = useRef(false);
-
-  useEffect(() => {
-    if (!isMountedRef.current) {
-      isMountedRef.current = true;
-      return;
-    }
-    const el = activePillRef.current;
-    if (el && typeof el.scrollIntoView === "function") {
-      el.scrollIntoView({ behavior: "smooth", inline: "nearest", block: "nearest" });
-    }
-  }, []);
 
   useEffect(() => {
     const refs = [feature1Ref.current, feature2Ref.current].filter(
@@ -397,7 +384,6 @@ export function HomePage() {
             ] as Discipline[]
           ).map((d) => (
             <button
-              ref={discipline === d ? activePillRef : null}
               key={d}
               className={`home-page__filter-pill${discipline === d ? " home-page__filter-pill--active" : ""}`}
               onClick={() => setDiscipline(d)}

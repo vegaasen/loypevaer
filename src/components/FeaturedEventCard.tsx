@@ -34,7 +34,9 @@ export const FeaturedEventCard = memo(function FeaturedEventCard({
   compact = false,
 }: Props) {
   const isCancelled = dateStatus === "cancelled";
-  const isLongLabel = !!distanceLabel && (distanceLabel.includes("/") || distanceLabel.length > 15);
+
+  const distanceDisplay =
+    compact && distanceLabel?.includes("/") ? "Std. dist." : (distanceLabel ?? `${distance} km`);
 
   return (
     <Link
@@ -58,16 +60,13 @@ export const FeaturedEventCard = memo(function FeaturedEventCard({
 
       <div className="featured-card__body">
         <span className="featured-card__name">{name}</span>
-        <span className="featured-card__region">{region}</span>
       </div>
 
       <div className="featured-card__footer">
-        <span
-          className={`featured-card__distance${isLongLabel ? " featured-card__distance--compact" : ""}`}
-        >
-          {distanceLabel ?? `${distance} km`}
+        <span className="featured-card__meta">
+          {region} · {distanceDisplay}
         </span>
-        {onTogglePlanned && (
+        {!compact && onTogglePlanned && (
           <button
             className={`featured-card__bookmark${planned ? " featured-card__bookmark--active" : ""}`}
             onClick={onTogglePlanned}
