@@ -37,14 +37,17 @@ jobs:
       - name: Fetch weather data
         run: bun run fetch-weather
 
+      - name: Generate weather stats
+        run: bun run generate-stats
+
       - name: Commit updated cache
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/data/weather-cache.json
+          git add public/weather-cache.json src/data/weather-stats.json
           if git diff --cached --quiet; then
-            echo "No changes to weather cache, skipping commit."
+            echo "No changes, skipping commit."
           else
-            git commit -m "chore: refresh weather cache [$(date -u +%Y-%m-%d)]"
+            git commit -m "chore: refresh weather cache + stats [$(date -u +%Y-%m-%d)]"
             git push
           fi

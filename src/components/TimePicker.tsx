@@ -3,6 +3,13 @@ import type { Discipline } from "../lib/arrangements";
 import { calcFinishTimeFromSpeed, formatPace, paceToKmh } from "../lib/timing";
 
 const SPEED_OPTIONS = [15, 18, 20, 22, 25, 28, 30, 32, 35, 38, 40] as const;
+
+function formatDuration(decimalHours: number): string {
+  const hrs = Math.floor(decimalHours);
+  const mins = Math.round((decimalHours - hrs) * 60);
+  if (mins === 0) return `${hrs}t`;
+  return `${hrs}t ${mins}m`;
+}
 // Pace options in decimal min/km — displayed as mm:ss
 const PACE_OPTIONS = [
   3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 9.0, 10.0, 12.0,
@@ -47,89 +54,95 @@ export function TimePicker({
   }
 
   return (
-    <div className="time-picker">
-      <div className="time-picker__controls">
-        <div className="time-picker__field">
-          <label htmlFor="ritt-start-time" className="time-picker__label">
-            Starttid
-            {officialStartTime && !startTime && (
-              <button
-                type="button"
-                className="time-picker__prefill"
-                onClick={() => onStartChange(officialStartTime)}
-              >
-                Bruk offisiell starttid ({officialStartTime})
-              </button>
-            )}
-          </label>
-          <input
-            id="ritt-start-time"
-            type="time"
-            value={startTime}
-            onChange={(e) => onStartChange(e.target.value)}
-            className="time-picker__input"
-          />
-        </div>
-
-        {distanceKm != null && (
-          <div className="time-picker__field">
-            <label htmlFor="ritt-speed" className="time-picker__label">
-              {isPace ? "Tempo (min/km)" : "Fart (km/t)"}
-            </label>
-            <select
-              id="ritt-speed"
-              className="time-picker__input time-picker__speed-select"
-              value={startTime ? selectedSpeed : ""}
-              onChange={handleSpeedChange}
-              disabled={!startTime}
+    <>
+      <div className="picker-field">
+        <label htmlFor="ritt-start-time" className="picker-field__label">
+          Starttid
+          {officialStartTime && !startTime && (
+            <button
+              type="button"
+              className="picker-field__reset-link"
+              onClick={() => onStartChange(officialStartTime)}
             >
-              <option value="" disabled>
-                {isPace ? "Velg tempo…" : "Velg fart…"}
-              </option>
-              {isPace
-                ? PACE_OPTIONS.map((p) => {
-                    const estHours = distanceKm
-                      ? Math.round(((distanceKm * p) / 60) * 10) / 10
-                      : null;
-                    return (
-                      <option key={p} value={p}>
-                        {formatPace(p)} min/km
-                        {estHours != null ? ` ≈ ${estHours} t` : ""}
-                      </option>
-                    );
-                  })
-                : SPEED_OPTIONS.map((s) => (
-                    <option key={s} value={s}>
-                      {s} km/t
-                      {distanceKm ? ` ≈ ${Math.round((distanceKm / s) * 10) / 10} t` : ""}
-                    </option>
-                  ))}
-            </select>
-          </div>
-        )}
-
-        <div className="time-picker__field">
-          <label htmlFor="ritt-finish-time" className="time-picker__label">
-            Forventet sluttid
-          </label>
-          <input
-            id="ritt-finish-time"
-            type="time"
-            value={finishTime}
-            onChange={(e) => onFinishChange(e.target.value)}
-            className="time-picker__input"
-          />
-        </div>
-
-        {hasValues && (
-          <button type="button" onClick={onClear} className="time-picker__clear">
-            Fjern tider
-          </button>
-        )}
+              ↩ {officialStartTime}
+            </button>
+          )}
+        </label>
+        <input
+          id="ritt-start-time"
+          type="time"
+          value={startTime}
+          onChange={(e) => onStartChange(e.target.value)}
+          className="picker-field__input"
+        />
       </div>
-      {timingActive && (
-        <div className="time-picker__hint">Viser vær ved forventet ankomsttid på hvert punkt</div>
+
+      {distanceKm != null && (
+        <div className="picker-field">
+          <label htmlFor="ritt-speed" className="picker-field__label">
+            {isPace ? "Tempo" : "Fart"}
+          </label>
+          <select
+            id="ritt-speed"
+            className="picker-field__input picker-field__select"
+            value={startTime ? selectedSpeed : ""}
+            onChange={handleSpeedChange}
+            disabled={!startTime}
+          >
+            <option value="" disabled>
+              {isPace ? "Velg…" : "Velg…"}
+            </option>
+            {isPace
+              ? PACE_OPTIONS.map((p) => {
+                  const estHours = distanceKm
+                    ? Math.round(((distanceKm * p) / 60) * 10) / 10
+                    : null;
+                  return (
+                    <option key={p} value={p}>
+                      {formatPace(p)} min/km
+                      {estHours != null ? ` ≈ ${formatDuration(estHours)}` : ""}
+                    </option>
+                  );
+                })
+              : SPEED_OPTIONS.map((s) => (
+                  <option key={s} value={s}>
+                    {s} km/t{distanceKm ? ` ≈ ${formatDuration(distanceKm / s)}` : ""}
+                  </option>
+                ))}
+          </select>
+        </div>
       )}
-    </div>
+
+      <div className="picker-field">
+        <label htmlFor="ritt-finish-time" className="picker-field__label">
+          Sluttid
+        </label>
+        <input
+          id="ritt-finish-time"
+          type="time"
+          value={finishTime}
+          onChange={(e) => onFinishChange(e.target.value)}
+          className="picker-field__input"
+        />
+      </div>
+
+      {hasValues && (
+        <button
+          type="button"
+          onClick={onClear}
+          className="picker-field__clear"
+          title="Fjern tider"
+          aria-label="Fjern tider"
+        >
+          ×
+        </button>
+      )}
+
+      {timingActive && (
+        <div className="ritt-page__timing-hint">
+          Viser vær ved forventet ankomsttid på hvert punkt
+        </div>
+      )}
+    </>
   );
 }

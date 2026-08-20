@@ -289,4 +289,72 @@ describe("WeatherCard", () => {
     );
     expect(screen.getByText("~06:00")).toBeInTheDocument();
   });
+
+  it("hides wind field when no date prop is provided", () => {
+    renderWithQuery(
+      <WeatherCard waypoint={waypoint} data={weatherData} isLoading={false} isError={false} />,
+    );
+    expect(screen.queryByText(/km\/t/)).not.toBeInTheDocument();
+  });
+
+  it("shows wind field when date prop is provided", () => {
+    renderWithQuery(
+      <WeatherCard
+        waypoint={waypoint}
+        data={weatherData}
+        isLoading={false}
+        isError={false}
+        date="2025-06-15"
+      />,
+    );
+    expect(screen.getByText(/km\/t/)).toBeInTheDocument();
+  });
+
+  it("shows '· snitt' label when windSpeedIsAverage is true and no hourly wind", () => {
+    const data: WeatherData = { ...weatherData, windSpeedIsAverage: true };
+    renderWithQuery(
+      <WeatherCard
+        waypoint={waypoint}
+        data={data}
+        isLoading={false}
+        isError={false}
+        date="2025-06-15"
+      />,
+    );
+    expect(screen.getByText(/· snitt/)).toBeInTheDocument();
+  });
+
+  it("does not show '· snitt' label when timing is active (hourlyWindSpeed set)", () => {
+    const data: WeatherData = {
+      ...weatherData,
+      windSpeedIsAverage: true,
+      hourlyWindSpeed: 8,
+      hourlyTemp: 14,
+    };
+    renderWithQuery(
+      <WeatherCard
+        waypoint={waypoint}
+        data={data}
+        isLoading={false}
+        isError={false}
+        date="2025-06-15"
+      />,
+    );
+    expect(screen.queryByText(/· snitt/)).not.toBeInTheDocument();
+  });
+
+  it("does not show '· snitt' label when arrivalTime is set (timing active)", () => {
+    const data: WeatherData = { ...weatherData, windSpeedIsAverage: true };
+    renderWithQuery(
+      <WeatherCard
+        waypoint={waypoint}
+        data={data}
+        isLoading={false}
+        isError={false}
+        date="2025-06-15"
+        arrivalTime="09:00"
+      />,
+    );
+    expect(screen.queryByText(/· snitt/)).not.toBeInTheDocument();
+  });
 });

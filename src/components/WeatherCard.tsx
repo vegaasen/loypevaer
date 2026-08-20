@@ -91,7 +91,17 @@ const ROAD_RISK_LABELS: Record<"ice" | "slush" | "wet", { icon: string; label: s
 };
 
 /** Renders the loaded weather data content inside a WeatherCard. */
-function WeatherCardContent({ data, routeBearing }: { data: WeatherData; routeBearing?: number }) {
+function WeatherCardContent({
+  data,
+  routeBearing,
+  hasDate,
+  timingActive,
+}: {
+  data: WeatherData;
+  routeBearing?: number;
+  hasDate: boolean;
+  timingActive: boolean;
+}) {
   const { label: wLabel, emoji } = describeWeatherCode(data.weatherCode);
 
   // Effective wind direction and speed for display
@@ -120,6 +130,15 @@ function WeatherCardContent({ data, routeBearing }: { data: WeatherData; routeBe
 
   // Road risk
   const risk = roadRisk(data);
+
+  // Wind: hide entirely when no date is selected. Show "(snitt)" label when it
+  // is a daytime average (no timing set) rather than an exact arrival-hour value.
+  const showWind = hasDate;
+  // Suppress "snitt" when timing is active (hourlyWindSpeed set) OR when an
+  // arrival time was computed (timingActive) — the latter covers the edge case
+  // where the data is still loading/stale but timing is clearly engaged.
+  const windIsAvg =
+    data.windSpeedIsAverage === true && data.hourlyWindSpeed == null && !timingActive;
 
   return (
     <>
@@ -155,27 +174,37 @@ function WeatherCardContent({ data, routeBearing }: { data: WeatherData; routeBe
             <span className="weather-card__precip-prob"> · {data.precipitationProbability}%</span>
           )}
         </span>
-        {risk && (
+      </div>
+      {risk && (
+        <div className="weather-card__detail">
           <span className={`weather-card__road-risk weather-card__road-risk--${risk}`}>
             {ROAD_RISK_LABELS[risk].icon} {ROAD_RISK_LABELS[risk].label}
           </span>
-        )}
-      </div>
-      <div className="weather-card__detail">
-        <span title="Vind">
-          💨 {windSpeed} km/t
-          {windDir !== undefined && (
-            <span
-              className="weather-card__wind-arrow"
-              style={{ transform: `rotate(${windDir}deg)` }}
-              aria-hidden="true"
-            >
-              ↑
-            </span>
-          )}
-          {windDirLabel && <span className="weather-card__wind-dir"> · {windDirLabel}</span>}
-        </span>
-      </div>
+        </div>
+      )}
+      {showWind && (
+        <div className="weather-card__detail">
+          <span title={windIsAvg ? "Gjennomsnittlig vind 06:00–18:00" : "Vind"}>
+            💨 {windSpeed} km/t
+            {windDir !== undefined && (
+              <span
+                className="weather-card__wind-arrow"
+                style={{ transform: `rotate(${windDir}deg)` }}
+                aria-hidden="true"
+              >
+                ↑
+              </span>
+            )}
+            {windDirLabel && <span className="weather-card__wind-dir"> · {windDirLabel}</span>}
+            {windIsAvg && (
+              <span className="weather-card__wind-avg" title="Gjennomsnitt 06:00–18:00">
+                {" "}
+                · snitt
+              </span>
+            )}
+          </span>
+        </div>
+      )}
       {showUv && (
         <div className="weather-card__detail">
           <span className={`weather-card__uv weather-card__uv--${uvLevel(data.uvIndex!).mod}`}>
@@ -254,7 +283,14 @@ export const WeatherCard = memo(function WeatherCard({
 
       {isError && <div className="weather-card__error">Kunne ikke hente vær</div>}
 
-      {data && <WeatherCardContent data={data} routeBearing={routeBearing} />}
+      {data && (
+        <WeatherCardContent
+          data={data}
+          routeBearing={routeBearing}
+          hasDate={!!date}
+          timingActive={!!arrivalTime}
+        />
+      )}
 
       {historicalYears && historicalYears.length > 0 && (
         <>

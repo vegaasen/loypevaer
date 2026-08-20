@@ -23,7 +23,7 @@ export function getTodayMidnight(): Date {
 export function formatNorwegianDate(dateStr: string): string {
   return parseDateLocal(dateStr).toLocaleDateString("nb-NO", {
     day: "numeric",
-    month: "long",
+    month: "short",
     year: "numeric",
   });
 }
