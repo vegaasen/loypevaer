@@ -93,7 +93,10 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: process.env.NODE_ENV === "development" ? [] : ["**/*.{js,css,html,ico,png,svg,woff2}", "weather-cache.json"],
+        globPatterns:
+          process.env.NODE_ENV === "development"
+            ? []
+            : ["**/*.{js,css,html,ico,png,svg,woff2}", "weather-cache.json"],
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/api\.open-meteo\.com\/.*/i,
