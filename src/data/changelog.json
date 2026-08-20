@@ -1,5 +1,95 @@
 [
   {
+    "sha": "4f1f7477c8ff9450ed3047001a228778a21fa3e6",
+    "shortSha": "4f1f747",
+    "date": "2026-08-20",
+    "type": "feat",
+    "scope": null,
+    "subject": "make footer full viewport width",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/4f1f7477c8ff9450ed3047001a228778a21fa3e6"
+  },
+  {
+    "sha": "74b0edc45b8803e92a398afa3219d9b52292a75c",
+    "shortSha": "74b0edc",
+    "date": "2026-08-20",
+    "type": "feat",
+    "scope": null,
+    "subject": "redesign footer with tinted bg, brand wordmark, and CTA button",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/74b0edc45b8803e92a398afa3219d9b52292a75c"
+  },
+  {
+    "sha": "dc27e64da85b15f8291c98b3047c7c1633b51e61",
+    "shortSha": "dc27e64",
+    "date": "2026-08-20",
+    "type": "fix",
+    "scope": "weather",
+    "subject": "suppress snitt label when timing is active (arrivalTime set)",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/dc27e64da85b15f8291c98b3047c7c1633b51e61"
+  },
+  {
+    "sha": "b99d60a10af2b8a92aa153d8fdeeb981d680872d",
+    "shortSha": "b99d60a",
+    "date": "2026-08-20",
+    "type": "fix",
+    "scope": null,
+    "subject": "balance nav wrapper padding for correct vertical alignment",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/b99d60a10af2b8a92aa153d8fdeeb981d680872d"
+  },
+  {
+    "sha": "d1fd7206671614943c4026a1591844cf7d40eaf0",
+    "shortSha": "d1fd720",
+    "date": "2026-08-20",
+    "type": "fix",
+    "scope": "weather",
+    "subject": "show daytime avg wind (06-18) instead of daily max; hide wind when no date",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/d1fd7206671614943c4026a1591844cf7d40eaf0"
+  },
+  {
+    "sha": "1f81133d24f6b5b50fd92972afac3bfaaadb5cae",
+    "shortSha": "1f81133",
+    "date": "2026-08-20",
+    "type": "feat",
+    "scope": null,
+    "subject": "add Statistikk page with per-discipline weather rankings",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/1f81133d24f6b5b50fd92972afac3bfaaadb5cae"
+  },
+  {
+    "sha": "7408dc14e55f86d5a48de2957c069a9b5071eab5",
+    "shortSha": "7408dc1",
+    "date": "2026-08-20",
+    "type": "fix",
+    "scope": null,
+    "subject": "use type predicates instead of non-null assertions; use CSS tokens for trend colours",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/7408dc14e55f86d5a48de2957c069a9b5071eab5"
+  },
+  {
+    "sha": "73db9934d937cb8306a7c1fce87d127822503c9b",
+    "shortSha": "73db993",
+    "date": "2026-08-20",
+    "type": "feat",
+    "scope": null,
+    "subject": "add best/worst year callouts and trend badges to statistikk page",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/73db9934d937cb8306a7c1fce87d127822503c9b"
+  },
+  {
+    "sha": "28f7fc352ef947e49770db24a10742e0fbd713cc",
+    "shortSha": "28f7fc3",
+    "date": "2026-08-20",
+    "type": "fix",
+    "scope": null,
+    "subject": "correct weatherCodeFactor ordering (rain showers now score lower than snow)",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/28f7fc352ef947e49770db24a10742e0fbd713cc"
+  },
+  {
+    "sha": "36d1870823febeb80b7494fd14f85b8402763638",
+    "shortSha": "36d1870",
+    "date": "2026-08-20",
+    "type": "feat",
+    "scope": null,
+    "subject": "improve comfort score formula; add best/worst year and temp trend to weather stats",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/36d1870823febeb80b7494fd14f85b8402763638"
+  },
+  {
     "sha": "c0b4511da632f6c3a6e27d9b95acbf072e0ee0b8",
     "shortSha": "c0b4511",
     "date": "2026-06-19",
