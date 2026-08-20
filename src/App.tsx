@@ -27,6 +27,9 @@ const HvaErLoypevaerPage = lazy(() =>
 const EndringsloggPage = lazy(() =>
   import("./pages/EndringsloggPage").then((m) => ({ default: m.EndringsloggPage })),
 );
+const StatistikkPage = lazy(() =>
+  import("./pages/StatistikkPage").then((m) => ({ default: m.StatistikkPage })),
+);
 const NotFoundPage = lazy(() =>
   import("./pages/NotFoundPage").then((m) => ({ default: m.NotFoundPage })),
 );
@@ -57,6 +60,7 @@ function RouterContent() {
           <Route path="/hva-er-loypevaer" element={<HvaErLoypevaerPage />} />
           <Route path="/hva-er-rittvaer" element={<Navigate to="/hva-er-loypevaer" replace />} />
           <Route path="/endringslogg" element={<EndringsloggPage />} />
+          <Route path="/statistikk" element={<StatistikkPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>

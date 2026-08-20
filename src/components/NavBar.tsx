@@ -38,6 +38,7 @@ export function NavBar() {
   const currentId = match ? match[1] : "";
   const isLopPage = location.pathname.startsWith("/lop");
   const isGpxPage = location.pathname.startsWith("/gpx");
+  const isStatistikkPage = location.pathname.startsWith("/statistikk");
 
   const menuOpen = menuOpenAt === location.pathname;
 
@@ -88,6 +89,13 @@ export function NavBar() {
             className={`site-nav__gpx-link${isGpxPage ? " site-nav__gpx-link--active" : ""}`}
           >
             Din egen løype
+          </Link>
+          <span className="site-nav__divider" aria-hidden="true" />
+          <Link
+            to="/statistikk"
+            className={`site-nav__gpx-link${isStatistikkPage ? " site-nav__gpx-link--active" : ""}`}
+          >
+            Statistikk
           </Link>
           <span className="site-nav__divider" aria-hidden="true" />
           <select
@@ -147,6 +155,13 @@ export function NavBar() {
             role="menuitem"
           >
             Din egen løype
+          </Link>
+          <Link
+            to="/statistikk"
+            className={`site-nav__mobile-link${isStatistikkPage ? " site-nav__mobile-link--active" : ""}`}
+            role="menuitem"
+          >
+            Statistikk
           </Link>
           <div className="site-nav__mobile-divider" />
           <select

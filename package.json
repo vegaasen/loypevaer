@@ -18,6 +18,7 @@
     "fetch-cycling": "bun scripts/fetch-cycling-events.ts",
     "generate-sitemap": "bun scripts/generate-sitemap.ts",
     "generate-changelog": "bun scripts/generate-changelog.ts",
+    "generate-stats": "bun scripts/generate-weather-stats.ts",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage"
