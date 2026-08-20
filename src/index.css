@@ -1587,7 +1587,7 @@ code {
   gap: 8px;
 }
 
-.home-page__month-summary-label::before {
+.home-page__month-summary-label::after {
   content: "▶";
   font-size: 0.6em;
   vertical-align: middle;
@@ -1596,7 +1596,7 @@ code {
   opacity: 0.4;
 }
 
-.home-page__month-details[open] > .home-page__month-summary .home-page__month-summary-label::before {
+.home-page__month-details[open] > .home-page__month-summary .home-page__month-summary-label::after {
   transform: rotate(90deg);
 }
 

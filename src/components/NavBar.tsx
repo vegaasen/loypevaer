@@ -81,7 +81,7 @@ export function NavBar() {
             to="/lop"
             className={`site-nav__gpx-link${isLopPage ? " site-nav__gpx-link--active" : ""}`}
           >
-            Kortere løp
+            Løp
           </Link>
           <span className="site-nav__divider" aria-hidden="true" />
           <Link
@@ -147,7 +147,7 @@ export function NavBar() {
             className={`site-nav__mobile-link${isLopPage ? " site-nav__mobile-link--active" : ""}`}
             role="menuitem"
           >
-            Kortere løp
+            Løp
           </Link>
           <Link
             to="/gpx"

@@ -43,7 +43,7 @@ export function HomePage() {
   const { discipline, setDiscipline } = useFilterContext();
   const [search, setSearch] = useState("");
 
-  const [tidshorisont, setTidshorisont] = useState<Tidshorisont>("alle");
+  const [tidshorisont, setTidshorisont] = useState<Tidshorisont>("kommende");
   const [region, setRegion] = useState("");
 
   const totalSykkel = useMemo(

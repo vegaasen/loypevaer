@@ -205,7 +205,7 @@
 
 .stats-section__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.25rem;
 }
 
@@ -343,6 +343,25 @@
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--text-h);
+}
+
+.year-card__comfort {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.year-card__score {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-h);
+  font-variant-numeric: tabular-nums;
+}
+
+.year-card__comfort-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
 }
 
 .year-card__stats {
