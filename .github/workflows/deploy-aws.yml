@@ -86,7 +86,13 @@ jobs:
 
       - name: Invalidate CloudFront cache
         run: |
-          aws cloudfront create-invalidation \
+          INVALIDATION_ID=$(aws cloudfront create-invalidation \
             --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
             --paths "/*" \
+            --region us-east-1 \
+            --query 'Invalidation.Id' --output text)
+          echo "Waiting for invalidation $INVALIDATION_ID to complete..."
+          aws cloudfront wait invalidation-completed \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
+            --id "$INVALIDATION_ID" \
             --region us-east-1
