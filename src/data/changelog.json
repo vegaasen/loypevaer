@@ -1,5 +1,14 @@
 [
   {
+    "sha": "da7864b67c95734f42fd2e109bb5c2943966ffee",
+    "shortSha": "da7864b",
+    "date": "2026-08-20",
+    "type": "fix",
+    "scope": null,
+    "subject": "wait for CloudFront invalidation to complete before finishing deploy",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/da7864b67c95734f42fd2e109bb5c2943966ffee"
+  },
+  {
     "sha": "c032090c745e73d4856a09e2e1d7a97a7a3b5fe0",
     "shortSha": "c032090",
     "date": "2026-08-20",
