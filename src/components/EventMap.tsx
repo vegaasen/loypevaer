@@ -146,11 +146,7 @@ export function EventMap({ waypoints, name, discipline }: Props) {
   ]);
 
   if (waypoints.length < 2) {
-    return (
-      <section>
-        <p>Kartet er ikke tilgjengelig – veipunkter mangler.</p>
-      </section>
-    );
+    return null;
   }
 
   return (
