@@ -98,6 +98,12 @@ export type WeatherData = {
    * an exact match was found.
    */
   hourlyIsApproximate?: boolean;
+  /**
+   * True when windSpeed is a daytime average (06:00–18:00) rather than a
+   * specific arrival-hour value. False / undefined means it is an exact hourly
+   * value (timing mode). UI should show a "(snitt)" label when this is true.
+   */
+  windSpeedIsAverage?: boolean;
 };
 
 export type WeatherResult = {
@@ -304,7 +310,7 @@ async function fetchYrTimeseries(waypoint: Waypoint, date: string): Promise<YrTi
  * Aggregation rules:
  * - tempMax/tempMin: max/min of next_6_hours blocks for the day
  * - precipitation: sum of next_1_hours amounts (fallback: next_6_hours when absent)
- * - windSpeed: max instant wind_speed ×3.6 (m/s → km/h)
+ * - windSpeed: daytime average (06:00–18:00) instant wind_speed ×3.6 (m/s → km/h)
  * - weatherCode: yrSymbolToWmo of noon's next_6_hours symbol (fallback: first available)
  */
 async function fetchYrWeather(waypoint: Waypoint, date: string): Promise<WeatherData> {
@@ -312,16 +318,23 @@ async function fetchYrWeather(waypoint: Waypoint, date: string): Promise<Weather
 
   let tempMax = -Infinity;
   let tempMin = Infinity;
-  let maxWind = 0;
   let precipitation = 0;
   let precipProbMax: number | undefined;
   let noonSymbol = "";
   let firstSymbol = "";
 
+  let daytimeWindSum = 0;
+  let daytimeWindCount = 0;
+
   for (const item of entries) {
     const instant = item.data.instant.details;
     const windKmh = instant.wind_speed * 3.6;
-    if (windKmh > maxWind) maxWind = windKmh;
+    // Daytime average wind: only include entries between 06:00 and 18:00 Oslo time
+    const osloHour = toOsloHour(item.time);
+    if (osloHour >= 6 && osloHour <= 18) {
+      daytimeWindSum += windKmh;
+      daytimeWindCount++;
+    }
 
     const next6 = item.data.next_6_hours;
     if (next6) {
@@ -356,12 +369,20 @@ async function fetchYrWeather(waypoint: Waypoint, date: string): Promise<Weather
   const symbolCode = noonSymbol || firstSymbol;
   const weatherCode = symbolCode ? yrSymbolToWmo(symbolCode) : 0;
 
+  // Daytime average wind (06:00–18:00). Fall back to all-entries avg if no
+  // daytime entries exist (e.g. Yr has only 00:00 entries for far-future days).
+  const daytimeAvgWind =
+    daytimeWindCount > 0
+      ? daytimeWindSum / daytimeWindCount
+      : entries.reduce((s, e) => s + e.data.instant.details.wind_speed * 3.6, 0) / entries.length;
+
   return {
     source: "forecast",
     tempMax: Math.round(tempMax * 10) / 10,
     tempMin: Math.round(tempMin * 10) / 10,
     precipitation: Math.round(precipitation * 10) / 10,
-    windSpeed: Math.round(maxWind * 10) / 10,
+    windSpeed: Math.round(daytimeAvgWind * 10) / 10,
+    windSpeedIsAverage: true,
     weatherCode,
     precipitationProbability: precipProbMax,
   };
@@ -550,6 +571,7 @@ async function fetchYrHourlyBreakdown(waypoint: Waypoint, date: string): Promise
 
 async function fetchForecastWeather(waypoint: Waypoint, date: string): Promise<WeatherData | null> {
   // Fetch 2 days (prevDay + selectedDay) to compute the temperature trend.
+  // Include hourly wind data so we can compute a daytime average (06:00–18:00).
   const startDate = prevCalendarDay(date);
 
   const params = new URLSearchParams({
@@ -557,6 +579,7 @@ async function fetchForecastWeather(waypoint: Waypoint, date: string): Promise<W
     longitude: String(waypoint.lon),
     ...(waypoint.altitude !== undefined ? { elevation: String(waypoint.altitude) } : {}),
     daily: `${DAILY_PARAMS},precipitation_probability_max`,
+    hourly: "wind_speed_10m,wind_direction_10m",
     start_date: startDate,
     end_date: date,
     timezone: "Europe/Oslo",
@@ -564,7 +587,9 @@ async function fetchForecastWeather(waypoint: Waypoint, date: string): Promise<W
 
   const res = await fetch(`${FORECAST_URL}?${params}`);
   if (!res.ok) throw new Error(`Open-Meteo forecast error: ${res.status}`);
-  const json = (await res.json()) as OpenMeteoDailyResponse;
+  const json = (await res.json()) as OpenMeteoDailyResponse & {
+    hourly: { wind_speed_10m: (number | null)[]; wind_direction_10m: (number | null)[] };
+  };
 
   // Index 0 = previous day, index 1 = selected day
   const d = json.daily;
@@ -582,6 +607,23 @@ async function fetchForecastWeather(waypoint: Waypoint, date: string): Promise<W
   const tempTrend =
     prevTempMax !== null ? Math.round((todayTempMax - prevTempMax) * 10) / 10 : undefined;
 
+  // Daytime average wind (06:00–18:00) for the selected day (index 1 → hours 24–47).
+  // The API returns 48 hourly values: hours 0–23 = prevDay, hours 24–47 = selectedDay.
+  const h = json.hourly;
+  const dayOffset = 24; // selected day starts at index 24
+  const daytimeWindVals = Array.from({ length: 13 }, (_, idx) => {
+    const hi = dayOffset + 6 + idx; // hours 6–18 of selected day
+    return h.wind_speed_10m[hi];
+  }).filter((v): v is number => v !== null && v !== undefined);
+
+  const windSpeed =
+    daytimeWindVals.length > 0
+      ? Math.round((daytimeWindVals.reduce((a, b) => a + b, 0) / daytimeWindVals.length) * 10) / 10
+      : Math.round((d.wind_speed_10m_max[i] ?? 0) * 10) / 10;
+
+  // Dominant wind direction is still taken from daily (good enough for display).
+  const windDirection = d.wind_direction_10m_dominant?.[i] ?? undefined;
+
   return {
     source: "forecast",
     tempMax: todayTempMax,
@@ -589,8 +631,9 @@ async function fetchForecastWeather(waypoint: Waypoint, date: string): Promise<W
     feelsLikeMax: d.apparent_temperature_max?.[i] ?? undefined,
     feelsLikeMin: d.apparent_temperature_min?.[i] ?? undefined,
     precipitation: d.precipitation_sum[i] ?? 0,
-    windSpeed: d.wind_speed_10m_max[i] ?? 0,
-    windDirection: d.wind_direction_10m_dominant?.[i] ?? undefined,
+    windSpeed,
+    windSpeedIsAverage: true,
+    windDirection,
     weatherCode: d.weather_code[i] ?? 0,
     precipitationProbability: d.precipitation_probability_max?.[i] ?? undefined,
     uvIndex: d.uv_index_max?.[i] ?? undefined,
@@ -638,22 +681,35 @@ async function fetchClimateAverage(waypoint: Waypoint, date: string): Promise<We
       longitude: String(waypoint.lon),
       ...(waypoint.altitude !== undefined ? { elevation: String(waypoint.altitude) } : {}),
       daily: DAILY_PARAMS,
+      hourly: "wind_speed_10m,wind_direction_10m",
       start_date: d,
       end_date: d,
       timezone: "Europe/Oslo",
     });
     return fetch(`${ARCHIVE_URL}?${params}`).then((r) => {
       if (!r.ok) return null;
-      return r.json() as Promise<OpenMeteoDailyResponse>;
+      return r.json() as Promise<OpenMeteoDailyResponse & {
+        hourly: { wind_speed_10m: (number | null)[]; wind_direction_10m: (number | null)[] };
+      }>;
     });
   });
 
   const results = await Promise.all(yearFetches);
-  const valid = results.filter((r): r is OpenMeteoDailyResponse => r !== null);
+  const valid = results.filter(
+    (
+      r,
+    ): r is OpenMeteoDailyResponse & {
+      hourly: { wind_speed_10m: (number | null)[]; wind_direction_10m: (number | null)[] };
+    } => r !== null,
+  );
 
   if (valid.length === 0) throw new Error("No climate archive data available");
 
-  const avg = (accessor: (r: OpenMeteoDailyResponse) => number | null | undefined) => {
+  type ValidEntry = OpenMeteoDailyResponse & {
+    hourly: { wind_speed_10m: (number | null)[]; wind_direction_10m: (number | null)[] };
+  };
+
+  const avg = (accessor: (r: ValidEntry) => number | null | undefined) => {
     const vals = valid.map(accessor).filter((v): v is number => v !== null && v !== undefined);
     return vals.length > 0 ? vals.reduce((a, b) => a + b, 0) / vals.length : null;
   };
@@ -681,6 +737,20 @@ async function fetchClimateAverage(waypoint: Waypoint, date: string): Promise<We
   const roundAvg = (v: number | null): number | undefined =>
     v !== null ? Math.round(v * 10) / 10 : undefined;
 
+  // Daytime average wind (06:00–18:00) across all archive years.
+  const daytimeWindPerYear = valid.map((r) => {
+    const vals = Array.from({ length: 13 }, (_, idx) => r.hourly.wind_speed_10m[6 + idx])
+      .filter((v): v is number => v !== null && v !== undefined);
+    return vals.length > 0 ? vals.reduce((a, b) => a + b, 0) / vals.length : null;
+  });
+  const validDaytimeWind = daytimeWindPerYear.filter((v): v is number => v !== null);
+  const windSpeed =
+    validDaytimeWind.length > 0
+      ? Math.round(
+          (validDaytimeWind.reduce((a, b) => a + b, 0) / validDaytimeWind.length) * 10,
+        ) / 10
+      : Math.round((avg((r) => r.daily.wind_speed_10m_max[0]) ?? 0) * 10) / 10;
+
   return {
     source: "climate-average",
     tempMax,
@@ -688,7 +758,8 @@ async function fetchClimateAverage(waypoint: Waypoint, date: string): Promise<We
     feelsLikeMax: roundAvg(avg((r) => r.daily.apparent_temperature_max?.[0])),
     feelsLikeMin: roundAvg(avg((r) => r.daily.apparent_temperature_min?.[0])),
     precipitation: Math.round((avg((r) => r.daily.precipitation_sum[0]) ?? 0) * 10) / 10,
-    windSpeed: Math.round((avg((r) => r.daily.wind_speed_10m_max[0]) ?? 0) * 10) / 10,
+    windSpeed,
+    windSpeedIsAverage: true,
     windDirection: Math.round(avg((r) => r.daily.wind_direction_10m_dominant?.[0]) ?? 0),
     weatherCode,
     uvIndex: roundAvg(avg((r) => r.daily.uv_index_max?.[0])) || undefined,
