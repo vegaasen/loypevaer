@@ -24,12 +24,25 @@ describe("FeaturedEventCard", () => {
   it("renders event name, region, and distance", () => {
     renderCard();
     expect(screen.getByText("Birkebeinerrittet")).toBeInTheDocument();
-    expect(screen.getByText((_, el) => el?.className === "featured-card__meta" && el.textContent?.includes("Innlandet") && el.textContent?.includes("94 km"))).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        (_, el) =>
+          el?.className === "featured-card__meta" &&
+          el.textContent?.includes("Innlandet") &&
+          el.textContent?.includes("94 km"),
+      ),
+    ).toBeInTheDocument();
   });
 
   it("uses distanceLabel when provided", () => {
     renderCard({ distanceLabel: "750m / 20km / 5km" });
-    expect(screen.getByText((_, el) => el?.className === "featured-card__meta" && el.textContent?.includes("750m / 20km / 5km") === true)).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        (_, el) =>
+          el?.className === "featured-card__meta" &&
+          el.textContent?.includes("750m / 20km / 5km") === true,
+      ),
+    ).toBeInTheDocument();
   });
 
   it("renders discipline label", () => {
