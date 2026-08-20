@@ -45,7 +45,7 @@ describe("EventCard", () => {
 
   it("renders formatted Norwegian date", () => {
     renderCard({ officialDate: "2025-08-23" });
-    expect(screen.getByText(/23\. august 2025/)).toBeInTheDocument();
+    expect(screen.getByText(/23\. aug\. 2025/)).toBeInTheDocument();
   });
 
   it("renders countdown when provided", () => {

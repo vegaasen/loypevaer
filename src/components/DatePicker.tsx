@@ -9,33 +9,28 @@ export function DatePicker({ value, onChange, officialDate }: Props) {
   const isOfficialDate = officialDate !== undefined && value === officialDate;
 
   return (
-    <div className="date-picker">
-      <label htmlFor="ritt-date" className="date-picker__label">
-        Velg dato
-      </label>
-      <div className="date-picker__controls">
-        <input
-          id="ritt-date"
-          type="date"
-          value={value}
-          min="2000-01-01"
-          max="2099-12-31"
-          onChange={(e) => onChange(e.target.value)}
-          className="date-picker__input"
-        />
+    <div className="picker-field">
+      <label htmlFor="ritt-date" className="picker-field__label">
+        Dato
         {officialDate !== undefined && !isOfficialDate && (
           <button
             type="button"
             onClick={() => onChange(officialDate)}
-            className="date-picker__reset"
+            className="picker-field__reset-link"
           >
-            Tilbake til offisiell dato
+            ↩ offisiell
           </button>
         )}
-      </div>
-      {isOfficialDate && (
-        <div className="date-picker__hint">Dette er den offisielle startdatoen</div>
-      )}
+      </label>
+      <input
+        id="ritt-date"
+        type="date"
+        value={value}
+        min="2000-01-01"
+        max="2099-12-31"
+        onChange={(e) => onChange(e.target.value)}
+        className="picker-field__input"
+      />
     </div>
   );
 }

@@ -401,7 +401,7 @@ export function EventPage() {
                   >
                     {adjDifficulty.label}
                   </span>
-                  <span className="dag-vurdering__note">pga. vær</span>
+                  <span className="dag-vurdering__note">(pga. vær)</span>
                 </>
               ) : (
                 <>

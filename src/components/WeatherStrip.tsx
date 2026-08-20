@@ -92,18 +92,21 @@ export function WeatherStrip({
           />
         ))}
       </div>
-      {date && (
-        <div className="weather-strip__banner">
-          <i>
-            {mode === "yr-forecast"
-              ? "Viser værvarsel fra Yr / MET Norway (opptil 9 dager)"
-              : mode === "forecast"
-                ? "Viser værvarsel fra Open-Meteo (dager 10–16)"
-                : "Viser klimagjennomsnitt (historiske data 2015–2024)"}
-            {timingActive && " · Vær ved forventet ankomsttid"}
-          </i>
-        </div>
-      )}
+      <div className="weather-strip__footer">
+        <span className="weather-strip__swipe-hint">← Sveip for å se alle punkter →</span>
+        {date && (
+          <span className="weather-strip__banner">
+            <i>
+              {mode === "yr-forecast"
+                ? "Viser værvarsel fra Yr / MET Norway (opptil 9 dager)"
+                : mode === "forecast"
+                  ? "Viser værvarsel fra Open-Meteo (dager 10–16)"
+                  : "Viser klimagjennomsnitt (historiske data 2015–2024)"}
+              {timingActive && " · Vær ved forventet ankomsttid"}
+            </i>
+          </span>
+        )}
+      </div>
     </div>
   );
 }
