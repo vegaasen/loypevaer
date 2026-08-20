@@ -4031,7 +4031,9 @@ details[open] .gear-suggestion__summary::before {
   padding: 0;
   cursor: pointer;
   opacity: 0.8;
-  &:hover { opacity: 1; }
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .picker-field__input {
@@ -4044,7 +4046,9 @@ details[open] .gear-suggestion__summary::before {
   padding: 5px 8px;
   height: 34px;
   box-sizing: border-box;
-  transition: border-color 0.15s, box-shadow 0.15s;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
 
   &:focus {
     outline: none;
@@ -4078,7 +4082,10 @@ details[open] .gear-suggestion__summary::before {
   align-self: flex-end;
   margin-bottom: 4px;
   opacity: 0.6;
-  &:hover { opacity: 1; color: var(--text); }
+  &:hover {
+    opacity: 1;
+    color: var(--text);
+  }
   @media (max-width: 600px) {
     grid-column: 1 / -1;
     align-self: start;
@@ -4264,18 +4271,23 @@ details[open] .gear-suggestion__summary::before {
     text-decoration: none;
     font-size: 14px;
     padding: 2px 10px;
-    &:first-child { padding-left: 0; }
+    &:first-child {
+      padding-left: 0;
+    }
     &:not(:last-child) {
       border-right: 1px solid var(--border);
     }
-    &:hover { color: var(--accent); }
+    &:hover {
+      color: var(--accent);
+    }
   }
 
   @media (max-width: 600px) {
     flex-direction: column;
     gap: 10px;
 
-    a, a:not(:last-child) {
+    a,
+    a:not(:last-child) {
       padding: 0;
       border-right: none;
     }
@@ -4290,7 +4302,9 @@ details[open] .gear-suggestion__summary::before {
   color: var(--accent);
   text-decoration: none;
   font-size: 13px;
-  transition: background 0.15s, border-color 0.15s;
+  transition:
+    background 0.15s,
+    border-color 0.15s;
 
   &:hover {
     background: var(--accent-bg);

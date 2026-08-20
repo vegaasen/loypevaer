@@ -46,7 +46,10 @@ export function WeatherRankingList({
             </span>
             <span className="weather-ranking__value">
               {formatValue(event[metric] as number)}
-              <span className="weather-ranking__years" title={`Basert på ${event.dataYears} år med data`}>
+              <span
+                className="weather-ranking__years"
+                title={`Basert på ${event.dataYears} år med data`}
+              >
                 ({event.dataYears} år)
               </span>
             </span>

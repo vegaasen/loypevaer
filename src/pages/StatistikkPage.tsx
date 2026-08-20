@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { PageMeta } from "../components/PageMeta";
 import { DisciplineStatsSection } from "../components/DisciplineStatsSection";
+import { PageMeta } from "../components/PageMeta";
 import weatherStatsData from "../data/weather-stats.json";
-import type { WeatherStatsData, EventWeatherStats } from "../data/weather-stats.types";
+import type { EventWeatherStats, WeatherStatsData } from "../data/weather-stats.types";
 import type { Discipline } from "../lib/arrangements";
 import { SITE_URL } from "../lib/seo";
 

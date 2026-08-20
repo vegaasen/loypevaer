@@ -102,12 +102,21 @@ function main() {
   };
 
   const arrangements = JSON.parse(readFileSync(paths.arrangements, "utf-8")) as Ritt[];
-  const triathlon = (JSON.parse(readFileSync(paths.triathlon, "utf-8")) as { events: Ritt[] }).events;
+  const triathlon = (JSON.parse(readFileSync(paths.triathlon, "utf-8")) as { events: Ritt[] })
+    .events;
   const running = (JSON.parse(readFileSync(paths.running, "utf-8")) as { events: Ritt[] }).events;
   const cycling = (JSON.parse(readFileSync(paths.cycling, "utf-8")) as { events: Ritt[] }).events;
-  const cyclingManual = (JSON.parse(readFileSync(paths.cyclingManual, "utf-8")) as { events: Ritt[] }).events;
+  const cyclingManual = (
+    JSON.parse(readFileSync(paths.cyclingManual, "utf-8")) as { events: Ritt[] }
+  ).events;
 
-  const allEvents: Ritt[] = [...arrangements, ...triathlon, ...running, ...cycling, ...cyclingManual];
+  const allEvents: Ritt[] = [
+    ...arrangements,
+    ...triathlon,
+    ...running,
+    ...cycling,
+    ...cyclingManual,
+  ];
 
   const cache = JSON.parse(readFileSync(paths.cache, "utf-8")) as WeatherCache;
   const historical = cache.historicalByYear;
@@ -135,7 +144,13 @@ function main() {
         if (!key.startsWith(prefix)) continue;
         const year = Number(key.split(",")[4]);
         if (!byYear.has(year)) {
-          byYear.set(year, { tempMax: [], feelsLikeMax: [], precipitation: [], windSpeed: [], weatherCode: [] });
+          byYear.set(year, {
+            tempMax: [],
+            feelsLikeMax: [],
+            precipitation: [],
+            windSpeed: [],
+            weatherCode: [],
+          });
         }
         const bucket = byYear.get(year)!;
         bucket.tempMax.push(entry.tempMax);
@@ -181,7 +196,9 @@ function main() {
     }
 
     const allTempMax = yearSummaries.map((y) => y.tempMax);
-    const allFeelsLikeMax = yearSummaries.map((y) => y.feelsLikeMax).filter((v): v is number => v !== null);
+    const allFeelsLikeMax = yearSummaries
+      .map((y) => y.feelsLikeMax)
+      .filter((v): v is number => v !== null);
     const allPrecip = yearSummaries.map((y) => y.precipitation);
     const allWind = yearSummaries.map((y) => y.windSpeed);
     const allCodes = yearSummaries.map((y) => y.weatherCode);
@@ -194,7 +211,10 @@ function main() {
 
     const feelsForScore = avgFeelsLikeMax ?? avgTempMax;
     const comfortScore =
-      feelsForScore !== null && avgPrecipitation !== null && avgWindSpeed !== null && avgWeatherCode !== null
+      feelsForScore !== null &&
+      avgPrecipitation !== null &&
+      avgWindSpeed !== null &&
+      avgWeatherCode !== null
         ? computeComfortScore(feelsForScore, avgPrecipitation, avgWindSpeed, avgWeatherCode)
         : null;
 

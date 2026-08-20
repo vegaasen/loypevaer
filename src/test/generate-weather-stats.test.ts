@@ -1,10 +1,6 @@
-import { describe, it, expect } from "vitest";
+import { describe, expect, it } from "vitest";
 
-import {
-  computeComfortScore,
-  computeTrend,
-  statisticalMode,
-} from "../../src/lib/weatherStats";
+import { computeComfortScore, computeTrend, statisticalMode } from "../../src/lib/weatherStats";
 
 describe("computeComfortScore", () => {
   it("gives max score for ideal cycling conditions", () => {

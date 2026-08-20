@@ -518,8 +518,8 @@ export function HomePage() {
             <div className="home-page__feature-eyebrow">Løping</div>
             <h2>Løp har sin egen side</h2>
             <p>
-              Sentrumsløpet, Birkebeinerløpet og mange andre løp finner du på løpesiden. Der
-              viser vi sanntidsvarsler for løpsdagen — temperatur, vind og nedbør der det teller.
+              Sentrumsløpet, Birkebeinerløpet og mange andre løp finner du på løpesiden. Der viser
+              vi sanntidsvarsler for løpsdagen — temperatur, vind og nedbør der det teller.
             </p>
             <Link to="/lop" className="home-page__lop-teaser-btn">
               Se alle løp →
@@ -541,8 +541,7 @@ export function HomePage() {
                   const past = monthEvents.filter((r) => daysUntil(r.officialDate) < 0);
                   const hasBoth = upcoming.length > 0 && past.length > 0;
                   const isCurrentMonth = year === currentYear && month === currentMonth;
-                  const isCollapsedMonth =
-                    past.length === monthEvents.length && !isCurrentMonth;
+                  const isCollapsedMonth = past.length === monthEvents.length && !isCurrentMonth;
                   const monthInner = (
                     <div
                       key={month}
@@ -615,10 +614,7 @@ export function HomePage() {
                   return (
                     <>
                       <h3 className="home-page__month-heading">
-                        <a
-                          href={`#month-${year}-${month}`}
-                          className="home-page__month-anchor"
-                        >
+                        <a href={`#month-${year}-${month}`} className="home-page__month-anchor">
                           {monthName(month)}
                         </a>
                         {monthEvents.length > 1 && (

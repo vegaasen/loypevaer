@@ -289,7 +289,6 @@ export function EventPage() {
       <header className="ritt-page__header">
         <div className="ritt-page__title-row">
           <h1>{rittData.name}</h1>
-
         </div>
         <div className="ritt-page__stats-row">
           <span>{rittData.distanceLabel ?? `${rittData.distance} km`}</span>

@@ -688,9 +688,11 @@ async function fetchClimateAverage(waypoint: Waypoint, date: string): Promise<We
     });
     return fetch(`${ARCHIVE_URL}?${params}`).then((r) => {
       if (!r.ok) return null;
-      return r.json() as Promise<OpenMeteoDailyResponse & {
-        hourly: { wind_speed_10m: (number | null)[]; wind_direction_10m: (number | null)[] };
-      }>;
+      return r.json() as Promise<
+        OpenMeteoDailyResponse & {
+          hourly: { wind_speed_10m: (number | null)[]; wind_direction_10m: (number | null)[] };
+        }
+      >;
     });
   });
 
@@ -739,16 +741,16 @@ async function fetchClimateAverage(waypoint: Waypoint, date: string): Promise<We
 
   // Daytime average wind (06:00–18:00) across all archive years.
   const daytimeWindPerYear = valid.map((r) => {
-    const vals = Array.from({ length: 13 }, (_, idx) => r.hourly.wind_speed_10m[6 + idx])
-      .filter((v): v is number => v !== null && v !== undefined);
+    const vals = Array.from({ length: 13 }, (_, idx) => r.hourly.wind_speed_10m[6 + idx]).filter(
+      (v): v is number => v !== null && v !== undefined,
+    );
     return vals.length > 0 ? vals.reduce((a, b) => a + b, 0) / vals.length : null;
   });
   const validDaytimeWind = daytimeWindPerYear.filter((v): v is number => v !== null);
   const windSpeed =
     validDaytimeWind.length > 0
-      ? Math.round(
-          (validDaytimeWind.reduce((a, b) => a + b, 0) / validDaytimeWind.length) * 10,
-        ) / 10
+      ? Math.round((validDaytimeWind.reduce((a, b) => a + b, 0) / validDaytimeWind.length) * 10) /
+        10
       : Math.round((avg((r) => r.daily.wind_speed_10m_max[0]) ?? 0) * 10) / 10;
 
   return {
