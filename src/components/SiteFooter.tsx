@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 export function SiteFooter() {
   return (
     <footer className="site-footer">
-      <div className="site-footer__links">
-        <Link to="/hva-er-loypevaer">Hva er løypevær?</Link>
-        <Link to="/endringslogg">Endringslogg</Link>
+      <div className="site-footer__main">
+        <span className="site-footer__brand">Løypevær</span>
+        <nav className="site-footer__links">
+          <Link to="/hva-er-loypevaer">Hva er løypevær?</Link>
+          <Link to="/endringslogg">Endringslogg</Link>
+        </nav>
         <a
+          className="site-footer__cta"
           href="https://github.com/vegaasen/loypevaer/issues/new?template=suggest-ritt.yml"
           target="_blank"
           rel="noopener noreferrer"
