@@ -1,4 +1,24 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+
+export const TAGLINES = [
+  "Sjekk været. Kom forberedt til start.",
+  "Vind i ryggen eller motbakke? Finn ut på forhånd.",
+  "Kjenn løypa. Kjenn været.",
+  "Ikke bli tatt på senga av et bygevær.",
+  "Planlegg som en proff. Start som en proff.",
+  "Regnjakke eller solkrem? Sjekk før du pakker.",
+  "Toppen kan være kald. Sjekk hele løypa.",
+  "Vær endrer alt. Vit hva som venter.",
+  "Fra start til mål — time for time.",
+  "Bedre forberedt enn unnskyldt.",
+  "Været langs løypa. Ikke bare ved start.",
+  "Du trener hardt. Ikke la været overraske deg.",
+  "Hvert checkpoint, hvert vindkast.",
+  "Sjekk fremover. Start trygt.",
+  "Kunnskap er utstyr.",
+];
+
+const tagline = TAGLINES[Math.floor(Math.random() * TAGLINES.length)];
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { EventCard } from "../components/EventCard";
@@ -222,7 +242,7 @@ export function HomePage() {
             <span aria-hidden="true">Regn.</span>
             <span aria-hidden="true">Snø.</span>
           </span>
-          Sjekk været. Kom forberedt til start.
+          {tagline}
         </h1>
         <p className="home-page__hero-sub">
           Timebasert vær langs hele løypa — punkt for punkt, tilpasset din starttid.

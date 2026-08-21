@@ -57,6 +57,22 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  .home-page__hero h1 {
+    background: linear-gradient(
+      90deg,
+      #8aaa7a 0%,
+      #6a9058 35%,
+      #9ab888 55%,
+      #6a9058 70%,
+      #8aaa7a 100%
+    );
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: hero-gradient-shift 14s ease-in-out infinite;
+  }
+
   :root {
     --text: #8fa882;
     --text-h: #d4e8c8;
@@ -802,6 +818,25 @@ code {
 .home-page__hero h1 {
   max-width: 820px;
   margin: 0 auto 20px;
+  background: linear-gradient(
+    90deg,
+    #253d1a 0%,
+    #3a5628 35%,
+    #567a40 55%,
+    #3a5628 70%,
+    #253d1a 100%
+  );
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: hero-gradient-shift 14s ease-in-out infinite;
+}
+
+@keyframes hero-gradient-shift {
+  0%   { background-position: 0% center; }
+  50%  { background-position: 100% center; }
+  100% { background-position: 0% center; }
 }
 
 .home-page__hero-sub {

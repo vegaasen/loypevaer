@@ -4,6 +4,7 @@ import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it } from "vitest";
 import { FilterProvider } from "../context/FilterContext";
 import { HomePage } from "./HomePage";
+import { TAGLINES } from "./HomePage";
 
 function renderPage() {
   return render(
@@ -47,9 +48,11 @@ describe("HomePage", () => {
     expect(labels).toContain("Snø.");
   });
 
-  it("second line of h1 is still present", () => {
+  it("second line of h1 is one of the known taglines", () => {
     renderPage();
-    expect(screen.getByText(/Kom forberedt til start/)).toBeInTheDocument();
+    const h1 = screen.getByRole("heading", { level: 1 });
+    const text = h1.textContent ?? "";
+    expect(TAGLINES.some((t) => text.includes(t))).toBe(true);
   });
 
   it("renders tidshorisont pills as buttons, not a select", () => {
