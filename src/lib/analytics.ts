@@ -89,3 +89,14 @@ export function trackFeedback(value: 1 | 5, eventId: string): void {
     event_id: eventId,
   });
 }
+
+/**
+ * Fired when a user submits a free-text suggestion via the feedback modal.
+ * text is truncated to 100 characters (GA4 parameter value limit).
+ */
+export function trackUserSuggestion(text: string, pagePath: string): void {
+  safeGtagEvent("user_suggestion", {
+    suggestion_text: text.slice(0, 100),
+    page_path: pagePath,
+  });
+}
