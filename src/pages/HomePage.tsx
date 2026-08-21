@@ -342,32 +342,6 @@ export function HomePage() {
         </div>
       </div>
 
-      {/* ── Featured (neste per disiplin) ────────────────────────────── */}
-      {featuredEvents.length > 0 && (
-        <section className="home-page__featured-section">
-          <h2 className="home-page__featured-heading">Kommende arrangement</h2>
-          <div className="home-page__featured-grid">
-            {featuredEvents.map((r) => (
-              <FeaturedEventCard
-                key={r.id}
-                id={r.id}
-                name={r.name}
-                officialDate={r.officialDate}
-                distance={r.distance}
-                distanceLabel={r.distanceLabel}
-                region={r.region}
-                discipline={r.discipline}
-                countdown={formatCountdown(r.officialDate)}
-                planned={isPlanned(r.id)}
-                dateStatus={r.dateStatus}
-                onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
-                compact
-              />
-            ))}
-          </div>
-        </section>
-      )}
-      <hr className="home-page__section-divider" />
 
       {/* ── Filter ──────────────────────────────────────────────────── */}
       <div id="alle-arrangement" className="home-page__filter">
@@ -631,6 +605,33 @@ export function HomePage() {
             );
           })}
         </main>
+      )}
+
+      {/* ── Featured (neste per disiplin) ────────────────────────────── */}
+      {featuredEvents.length > 0 && (
+        <section className="home-page__featured-section">
+          <div className="home-page__feature-eyebrow">Neste arrangement</div>
+          <h2 className="home-page__featured-heading">Kommende arrangement</h2>
+          <div className="home-page__featured-grid">
+            {featuredEvents.map((r) => (
+              <FeaturedEventCard
+                key={r.id}
+                id={r.id}
+                name={r.name}
+                officialDate={r.officialDate}
+                distance={r.distance}
+                distanceLabel={r.distanceLabel}
+                region={r.region}
+                discipline={r.discipline}
+                countdown={formatCountdown(r.officialDate)}
+                planned={isPlanned(r.id)}
+                dateStatus={r.dateStatus}
+                onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
+                compact
+              />
+            ))}
+          </div>
+        </section>
       )}
 
       {/* ── Løping teaser ─────────────────────────────────────────────── */}
