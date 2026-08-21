@@ -31,7 +31,7 @@ describe("FeedbackButton", () => {
   it("calls trackUserSuggestion with text and pathname on submit", async () => {
     render(<FeedbackButton />);
     await userEvent.click(screen.getByRole("button", { name: /Tilbakemelding/i }));
-    await userEvent.type(screen.getByRole("textbox"), "Bedre kart");
+    await userEvent.type(screen.getByRole("textbox", { name: /Tilbakemelding/i }), "Bedre kart");
     await userEvent.click(screen.getByRole("button", { name: /Send/i }));
     expect(analytics.trackUserSuggestion).toHaveBeenCalledWith(
       "Bedre kart",
@@ -42,9 +42,11 @@ describe("FeedbackButton", () => {
   it("shows confirmation message after submit", async () => {
     render(<FeedbackButton />);
     await userEvent.click(screen.getByRole("button", { name: /Tilbakemelding/i }));
-    await userEvent.type(screen.getByRole("textbox"), "Bedre kart");
+    await userEvent.type(screen.getByRole("textbox", { name: /Tilbakemelding/i }), "Bedre kart");
     await userEvent.click(screen.getByRole("button", { name: /Send/i }));
-    expect(screen.getByText(/Takk for tilbakemeldingen/i)).toBeInTheDocument();
+    const confirmation = screen.getByRole("status");
+    expect(confirmation).toHaveAttribute("aria-live", "polite");
+    expect(confirmation).toHaveTextContent(/Takk for tilbakemeldingen/i);
   });
 
   it("closes modal when Avbryt is clicked", async () => {
@@ -52,5 +54,6 @@ describe("FeedbackButton", () => {
     await userEvent.click(screen.getByRole("button", { name: /Tilbakemelding/i }));
     await userEvent.click(screen.getByRole("button", { name: /Avbryt/i }));
     expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+    expect(analytics.trackUserSuggestion).not.toHaveBeenCalled();
   });
 });

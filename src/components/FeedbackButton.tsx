@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { trackUserSuggestion } from "../lib/analytics";
 import { FeedbackModal } from "./FeedbackModal";
@@ -7,12 +7,19 @@ export function FeedbackButton() {
   const [isOpen, setIsOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const { pathname } = useLocation();
+  const timerRef = useRef<ReturnType<typeof setTimeout>>(null);
 
   function handleSubmit(text: string) {
     trackUserSuggestion(text, pathname);
+    setIsOpen(false);
     setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setSubmitted(false), 4000);
   }
+
+  useEffect(() => () => {
+    if (timerRef.current) clearTimeout(timerRef.current);
+  }, []);
 
   return (
     <>
