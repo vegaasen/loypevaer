@@ -1,5 +1,59 @@
 [
   {
+    "sha": "b829f9d6cbf71f230308d75dd46ce187c169ea33",
+    "shortSha": "b829f9d",
+    "date": "2026-08-21",
+    "type": "feat",
+    "scope": null,
+    "subject": "mount FeedbackButton globally in App",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/b829f9d6cbf71f230308d75dd46ce187c169ea33"
+  },
+  {
+    "sha": "a1171c6e0797f85f401f0ebc5bde6b3471fd10c3",
+    "shortSha": "a1171c6",
+    "date": "2026-08-21",
+    "type": "fix",
+    "scope": null,
+    "subject": "improve FeedbackButton state management and test quality",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/a1171c6e0797f85f401f0ebc5bde6b3471fd10c3"
+  },
+  {
+    "sha": "94bc4df956ebaeec501c12173c952503058d3336",
+    "shortSha": "94bc4df",
+    "date": "2026-08-21",
+    "type": "feat",
+    "scope": null,
+    "subject": "add FeedbackButton with modal and GA tracking",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/94bc4df956ebaeec501c12173c952503058d3336"
+  },
+  {
+    "sha": "f0ffe6be90c60cbbcf8ff4802549b8ac1abd287e",
+    "shortSha": "f0ffe6b",
+    "date": "2026-08-21",
+    "type": "fix",
+    "scope": null,
+    "subject": "improve FeedbackModal accessibility and test coverage",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/f0ffe6be90c60cbbcf8ff4802549b8ac1abd287e"
+  },
+  {
+    "sha": "3e8d1b8123f8835cfdf929fc9e98a3a2135d6ad8",
+    "shortSha": "3e8d1b8",
+    "date": "2026-08-21",
+    "type": "feat",
+    "scope": null,
+    "subject": "add FeedbackModal component",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/3e8d1b8123f8835cfdf929fc9e98a3a2135d6ad8"
+  },
+  {
+    "sha": "acbf9ba77631b89e2fc73ac50ef42f2e27864669",
+    "shortSha": "acbf9ba",
+    "date": "2026-08-21",
+    "type": "feat",
+    "scope": null,
+    "subject": "add trackUserSuggestion analytics event",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/acbf9ba77631b89e2fc73ac50ef42f2e27864669"
+  },
+  {
     "sha": "da7864b67c95734f42fd2e109bb5c2943966ffee",
     "shortSha": "da7864b",
     "date": "2026-08-20",
