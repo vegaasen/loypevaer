@@ -4872,7 +4872,9 @@ details[open] .packing-list__summary::before {
   font-weight: 600;
   cursor: pointer;
   box-shadow: var(--shadow);
-  transition: opacity 0.15s, transform 0.15s;
+  transition:
+    opacity 0.15s,
+    transform 0.15s;
   opacity: 0.75;
 }
 

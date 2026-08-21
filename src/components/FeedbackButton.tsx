@@ -17,17 +17,16 @@ export function FeedbackButton() {
     timerRef.current = setTimeout(() => setSubmitted(false), 4000);
   }
 
-  useEffect(() => () => {
-    if (timerRef.current) clearTimeout(timerRef.current);
-  }, []);
+  useEffect(
+    () => () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    },
+    [],
+  );
 
   return (
     <>
-      <button
-        className="feedback-fab"
-        onClick={() => setIsOpen(true)}
-        aria-label="Tilbakemelding"
-      >
+      <button className="feedback-fab" onClick={() => setIsOpen(true)} aria-label="Tilbakemelding">
         Tilbakemelding
       </button>
       {submitted && (
@@ -35,11 +34,7 @@ export function FeedbackButton() {
           Takk for tilbakemeldingen!
         </div>
       )}
-      <FeedbackModal
-        isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
-        onSubmit={handleSubmit}
-      />
+      <FeedbackModal isOpen={isOpen} onClose={() => setIsOpen(false)} onSubmit={handleSubmit} />
     </>
   );
 }

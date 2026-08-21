@@ -19,6 +19,7 @@ export const TAGLINES = [
 ];
 
 const tagline = TAGLINES[Math.floor(Math.random() * TAGLINES.length)];
+
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { EventCard } from "../components/EventCard";
@@ -361,7 +362,6 @@ export function HomePage() {
           </div>
         </div>
       </div>
-
 
       {/* ── Filter ──────────────────────────────────────────────────── */}
       <div id="alle-arrangement" className="home-page__filter">

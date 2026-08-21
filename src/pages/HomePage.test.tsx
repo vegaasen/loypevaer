@@ -3,8 +3,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it } from "vitest";
 import { FilterProvider } from "../context/FilterContext";
-import { HomePage } from "./HomePage";
-import { TAGLINES } from "./HomePage";
+import { HomePage, TAGLINES } from "./HomePage";
 
 function renderPage() {
   return render(

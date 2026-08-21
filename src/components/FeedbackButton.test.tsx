@@ -33,10 +33,7 @@ describe("FeedbackButton", () => {
     await userEvent.click(screen.getByRole("button", { name: /Tilbakemelding/i }));
     await userEvent.type(screen.getByRole("textbox", { name: /Tilbakemelding/i }), "Bedre kart");
     await userEvent.click(screen.getByRole("button", { name: /Send/i }));
-    expect(analytics.trackUserSuggestion).toHaveBeenCalledWith(
-      "Bedre kart",
-      "/arrangement/birken",
-    );
+    expect(analytics.trackUserSuggestion).toHaveBeenCalledWith("Bedre kart", "/arrangement/birken");
   });
 
   it("shows confirmation message after submit", async () => {

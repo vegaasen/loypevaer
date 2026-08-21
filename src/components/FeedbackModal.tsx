@@ -29,7 +29,9 @@ export function FeedbackModal({ isOpen, onClose, onSubmit }: Props) {
   return (
     <div
       className="feedback-modal-overlay"
-      onKeyDown={(e) => { if (e.key === "Escape") handleCancel(); }}
+      onKeyDown={(e) => {
+        if (e.key === "Escape") handleCancel();
+      }}
     >
       <div
         className="feedback-modal"
@@ -53,11 +55,7 @@ export function FeedbackModal({ isOpen, onClose, onSubmit }: Props) {
           {text.length} / {MAX_LENGTH}
         </p>
         <div className="feedback-modal__actions">
-          <button
-            className="feedback-modal__submit"
-            onClick={handleSubmit}
-            disabled={!text.trim()}
-          >
+          <button className="feedback-modal__submit" onClick={handleSubmit} disabled={!text.trim()}>
             Send
           </button>
           <button className="feedback-modal__cancel" onClick={handleCancel}>
