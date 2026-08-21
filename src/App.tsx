@@ -7,6 +7,7 @@ import { InstallBanner } from "./components/InstallBanner";
 import { NavBar } from "./components/NavBar";
 import { ReloadPrompt } from "./components/ReloadPrompt";
 import { ScrollToTopButton } from "./components/ScrollToTopButton";
+import { FeedbackButton } from "./components/FeedbackButton";
 import { SiteFooter } from "./components/SiteFooter";
 import { usePageTracking } from "./hooks/usePageTracking";
 import { useWeatherAlerts } from "./hooks/useWeatherAlerts";
@@ -64,6 +65,7 @@ function RouterContent() {
       </Suspense>
       <SiteFooter />
       <ScrollToTopButton />
+      <FeedbackButton />
     </>
   );
 }
