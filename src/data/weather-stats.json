@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T17:17:41.381Z",
+  "generatedAt": "2026-08-21T04:02:07.760Z",
   "events": [
     {
       "id": "birkebeinerrennet",
@@ -29,7 +29,7 @@
         "avgWindSpeed": 16,
         "weatherCode": 71
       },
-      "tempTrend": -0.39,
+      "tempTrend": -0.38,
       "dataYears": 10
     },
     {
@@ -38,7 +38,7 @@
       "discipline": "langrenn",
       "officialDate": "2026-03-13",
       "region": "Innlandet",
-      "avgTempMax": -0.3,
+      "avgTempMax": -0.4,
       "avgFeelsLikeMax": -4.3,
       "avgPrecipitation": 3.6,
       "avgWindSpeed": 13.4,
@@ -55,12 +55,12 @@
       "worstYear": {
         "year": 2019,
         "comfortScore": 2,
-        "avgTempMax": -2.5,
+        "avgTempMax": -2.6,
         "avgPrecipitation": 20.7,
         "avgWindSpeed": 15.9,
         "weatherCode": 75
       },
-      "tempTrend": -0.4,
+      "tempTrend": -0.39,
       "dataYears": 10
     },
     {
@@ -153,7 +153,7 @@
         "avgWindSpeed": 36.5,
         "weatherCode": 61
       },
-      "tempTrend": 0.57,
+      "tempTrend": 0.56,
       "dataYears": 10
     },
     {
@@ -162,29 +162,29 @@
       "discipline": "ultraløp",
       "officialDate": "2026-05-30",
       "region": "Nordland",
-      "avgTempMax": 10.5,
-      "avgFeelsLikeMax": 7.5,
+      "avgTempMax": 10.6,
+      "avgFeelsLikeMax": 7.7,
       "avgPrecipitation": 2.8,
-      "avgWindSpeed": 21.1,
+      "avgWindSpeed": 20.7,
       "avgWeatherCode": 3,
       "comfortScore": 29,
       "bestYear": {
         "year": 2022,
         "comfortScore": 64,
-        "avgTempMax": 17.9,
+        "avgTempMax": 18.1,
         "avgPrecipitation": 0,
-        "avgWindSpeed": 13.9,
+        "avgWindSpeed": 13.1,
         "weatherCode": 3
       },
       "worstYear": {
         "year": 2023,
         "comfortScore": 0,
         "avgTempMax": 6.8,
-        "avgPrecipitation": 10.3,
-        "avgWindSpeed": 28.8,
+        "avgPrecipitation": 10.4,
+        "avgWindSpeed": 27.3,
         "weatherCode": 61
       },
-      "tempTrend": 0.63,
+      "tempTrend": 0.64,
       "dataYears": 10
     },
     {
@@ -350,27 +350,27 @@
       "region": "Innlandet",
       "avgTempMax": 17.7,
       "avgFeelsLikeMax": 16,
-      "avgPrecipitation": 3.7,
-      "avgWindSpeed": 11.7,
+      "avgPrecipitation": 3.6,
+      "avgWindSpeed": 11.8,
       "avgWeatherCode": 3,
       "comfortScore": 58,
       "bestYear": {
         "year": 2021,
-        "comfortScore": 61,
-        "avgTempMax": 17,
+        "comfortScore": 60,
+        "avgTempMax": 17.1,
         "avgPrecipitation": 0,
-        "avgWindSpeed": 15.1,
+        "avgWindSpeed": 15.5,
         "weatherCode": 3
       },
       "worstYear": {
         "year": 2024,
         "comfortScore": 14,
-        "avgTempMax": 11.7,
-        "avgPrecipitation": 11.6,
-        "avgWindSpeed": 10.3,
+        "avgTempMax": 11.6,
+        "avgPrecipitation": 11,
+        "avgWindSpeed": 10.1,
         "weatherCode": 63
       },
-      "tempTrend": 0.24,
+      "tempTrend": 0.22,
       "dataYears": 10
     },
     {
@@ -525,7 +525,7 @@
         "avgWindSpeed": 11.6,
         "weatherCode": 63
       },
-      "tempTrend": 0,
+      "tempTrend": 0.01,
       "dataYears": 10
     },
     {
@@ -534,16 +534,30 @@
       "discipline": "løping",
       "officialDate": "2026-05-09",
       "region": "Innlandet",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 14,
+      "avgFeelsLikeMax": 10.9,
+      "avgPrecipitation": 2.6,
+      "avgWindSpeed": 14.7,
+      "avgWeatherCode": 3,
+      "comfortScore": 45,
+      "bestYear": {
+        "year": 2016,
+        "comfortScore": 69,
+        "avgTempMax": 22.1,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 7.7,
+        "weatherCode": 1
+      },
+      "worstYear": {
+        "year": 2019,
+        "comfortScore": 0,
+        "avgTempMax": 6.8,
+        "avgPrecipitation": 17,
+        "avgWindSpeed": 22.2,
+        "weatherCode": 73
+      },
+      "tempTrend": -0.06,
+      "dataYears": 10
     },
     {
       "id": "nidaros-lopefest-10k",
@@ -551,16 +565,30 @@
       "discipline": "løping",
       "officialDate": "2026-05-23",
       "region": "Trøndelag",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 15.5,
+      "avgFeelsLikeMax": 13.3,
+      "avgPrecipitation": 2.7,
+      "avgWindSpeed": 17.2,
+      "avgWeatherCode": 51,
+      "comfortScore": 33,
+      "bestYear": {
+        "year": 2018,
+        "comfortScore": 58,
+        "avgTempMax": 16.2,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 12.7,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2025,
+        "comfortScore": 9,
+        "avgTempMax": 9.5,
+        "avgPrecipitation": 5.1,
+        "avgWindSpeed": 23.8,
+        "weatherCode": 61
+      },
+      "tempTrend": 0.48,
+      "dataYears": 10
     },
     {
       "id": "trondheim-triatlon",
@@ -585,7 +613,7 @@
       "worstYear": {
         "year": 2025,
         "comfortScore": 4,
-        "avgTempMax": 11.2,
+        "avgTempMax": 11.3,
         "avgPrecipitation": 17.1,
         "avgWindSpeed": 29.2,
         "weatherCode": 63
@@ -776,7 +804,7 @@
         "avgWindSpeed": 24.1,
         "weatherCode": 63
       },
-      "tempTrend": -0.36,
+      "tempTrend": -0.37,
       "dataYears": 10
     },
     {
@@ -802,12 +830,12 @@
       "worstYear": {
         "year": 2024,
         "comfortScore": 13,
-        "avgTempMax": 13.9,
+        "avgTempMax": 14,
         "avgPrecipitation": 8.9,
         "avgWindSpeed": 16.5,
         "weatherCode": 61
       },
-      "tempTrend": -0.08,
+      "tempTrend": -0.09,
       "dataYears": 10
     },
     {
@@ -816,7 +844,7 @@
       "discipline": "løping",
       "officialDate": "2026-08-22",
       "region": "Oslo",
-      "avgTempMax": 18.1,
+      "avgTempMax": 18.2,
       "avgFeelsLikeMax": 16.5,
       "avgPrecipitation": 3,
       "avgWindSpeed": 19.1,
@@ -825,7 +853,7 @@
       "bestYear": {
         "year": 2023,
         "comfortScore": 66,
-        "avgTempMax": 20.5,
+        "avgTempMax": 20.6,
         "avgPrecipitation": 0,
         "avgWindSpeed": 11.4,
         "weatherCode": 2
@@ -847,7 +875,7 @@
       "discipline": "løping",
       "officialDate": "2026-08-22",
       "region": "Oslo",
-      "avgTempMax": 18.1,
+      "avgTempMax": 18.2,
       "avgFeelsLikeMax": 16.5,
       "avgPrecipitation": 3,
       "avgWindSpeed": 19.1,
@@ -856,7 +884,7 @@
       "bestYear": {
         "year": 2023,
         "comfortScore": 66,
-        "avgTempMax": 20.5,
+        "avgTempMax": 20.6,
         "avgPrecipitation": 0,
         "avgWindSpeed": 11.4,
         "weatherCode": 2
@@ -878,7 +906,7 @@
       "discipline": "løping",
       "officialDate": "2026-08-22",
       "region": "Innlandet",
-      "avgTempMax": 17,
+      "avgTempMax": 17.1,
       "avgFeelsLikeMax": 14.9,
       "avgPrecipitation": 2.9,
       "avgWindSpeed": 16.9,
@@ -895,7 +923,7 @@
       "worstYear": {
         "year": 2019,
         "comfortScore": 12,
-        "avgTempMax": 15.2,
+        "avgTempMax": 15.3,
         "avgPrecipitation": 8.3,
         "avgWindSpeed": 20.9,
         "weatherCode": 61
@@ -1002,12 +1030,12 @@
       "discipline": "løping",
       "officialDate": "2026-08-22",
       "region": "Troms",
-      "avgTempMax": 13.6,
-      "avgFeelsLikeMax": 12.4,
+      "avgTempMax": 14.1,
+      "avgFeelsLikeMax": 13,
       "avgPrecipitation": 4.9,
       "avgWindSpeed": 10.3,
       "avgWeatherCode": 51,
-      "comfortScore": 34,
+      "comfortScore": 35,
       "bestYear": {
         "year": 2016,
         "comfortScore": 72,
@@ -1018,13 +1046,13 @@
       },
       "worstYear": {
         "year": 2025,
-        "comfortScore": 10,
-        "avgTempMax": 7.9,
+        "comfortScore": 11,
+        "avgTempMax": 8.4,
         "avgPrecipitation": 15.3,
         "avgWindSpeed": 9,
         "weatherCode": 61
       },
-      "tempTrend": 0.06,
+      "tempTrend": 0.08,
       "dataYears": 10
     },
     {
@@ -1064,16 +1092,30 @@
       "discipline": "løping",
       "officialDate": "2026-08-22",
       "region": "Østfold",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 17.6,
+      "avgFeelsLikeMax": 16,
+      "avgPrecipitation": 5.4,
+      "avgWindSpeed": 20.7,
+      "avgWeatherCode": 3,
+      "comfortScore": 41,
+      "bestYear": {
+        "year": 2021,
+        "comfortScore": 68,
+        "avgTempMax": 19.1,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 8.7,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2024,
+        "comfortScore": 11,
+        "avgTempMax": 15.2,
+        "avgPrecipitation": 15.8,
+        "avgWindSpeed": 24,
+        "weatherCode": 63
+      },
+      "tempTrend": -0.13,
+      "dataYears": 10
     },
     {
       "id": "ostmarka-trail-challenge-flyktningeruta-2026",
@@ -1081,7 +1123,7 @@
       "discipline": "løping",
       "officialDate": "2026-08-22",
       "region": "Oslo",
-      "avgTempMax": 18.1,
+      "avgTempMax": 18.2,
       "avgFeelsLikeMax": 16.5,
       "avgPrecipitation": 3,
       "avgWindSpeed": 19.1,
@@ -1090,7 +1132,7 @@
       "bestYear": {
         "year": 2023,
         "comfortScore": 66,
-        "avgTempMax": 20.5,
+        "avgTempMax": 20.6,
         "avgPrecipitation": 0,
         "avgWindSpeed": 11.4,
         "weatherCode": 2
@@ -1174,16 +1216,30 @@
       "discipline": "løping",
       "officialDate": "2026-08-23",
       "region": "Møre og Romsdal",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 15.2,
+      "avgFeelsLikeMax": 13.9,
+      "avgPrecipitation": 5.1,
+      "avgWindSpeed": 11.4,
+      "avgWeatherCode": 3,
+      "comfortScore": 49,
+      "bestYear": {
+        "year": 2016,
+        "comfortScore": 66,
+        "avgTempMax": 17.5,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 13.2,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2025,
+        "comfortScore": 6,
+        "avgTempMax": 11,
+        "avgPrecipitation": 13.1,
+        "avgWindSpeed": 17.3,
+        "weatherCode": 61
+      },
+      "tempTrend": -0.13,
+      "dataYears": 10
     },
     {
       "id": "lorenskoglopet-2026",
@@ -1191,7 +1247,7 @@
       "discipline": "løping",
       "officialDate": "2026-08-23",
       "region": "Akershus",
-      "avgTempMax": 19,
+      "avgTempMax": 19.1,
       "avgFeelsLikeMax": 17.3,
       "avgPrecipitation": 3.1,
       "avgWindSpeed": 14.9,
@@ -1275,7 +1331,7 @@
         "avgWindSpeed": 16.4,
         "weatherCode": 63
       },
-      "tempTrend": 0.26,
+      "tempTrend": 0.25,
       "dataYears": 10
     },
     {
@@ -1355,7 +1411,7 @@
       "bestYear": {
         "year": 2021,
         "comfortScore": 67,
-        "avgTempMax": 14.1,
+        "avgTempMax": 14.2,
         "avgPrecipitation": 0,
         "avgWindSpeed": 7.1,
         "weatherCode": 3
@@ -1377,7 +1433,7 @@
       "discipline": "løping",
       "officialDate": "2026-08-29",
       "region": "Vestland",
-      "avgTempMax": 11.4,
+      "avgTempMax": 11.5,
       "avgFeelsLikeMax": 8.6,
       "avgPrecipitation": 4.9,
       "avgWindSpeed": 18.4,
@@ -1386,7 +1442,7 @@
       "bestYear": {
         "year": 2021,
         "comfortScore": 61,
-        "avgTempMax": 16.1,
+        "avgTempMax": 16.2,
         "avgPrecipitation": 0,
         "avgWindSpeed": 13.8,
         "weatherCode": 3
@@ -1399,7 +1455,7 @@
         "avgWindSpeed": 25.3,
         "weatherCode": 61
       },
-      "tempTrend": 0.38,
+      "tempTrend": 0.37,
       "dataYears": 10
     },
     {
@@ -1417,7 +1473,7 @@
       "bestYear": {
         "year": 2022,
         "comfortScore": 73,
-        "avgTempMax": 15.9,
+        "avgTempMax": 16,
         "avgPrecipitation": 0,
         "avgWindSpeed": 11.5,
         "weatherCode": 0
@@ -1532,16 +1588,30 @@
       "discipline": "løping",
       "officialDate": "2026-08-29",
       "region": "Buskerud",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 18.2,
+      "avgFeelsLikeMax": 17.3,
+      "avgPrecipitation": 4.9,
+      "avgWindSpeed": 12.7,
+      "avgWeatherCode": 3,
+      "comfortScore": 50,
+      "bestYear": {
+        "year": 2022,
+        "comfortScore": 66,
+        "avgTempMax": 19.1,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 12.2,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2025,
+        "comfortScore": 15,
+        "avgTempMax": 15.9,
+        "avgPrecipitation": 10.2,
+        "avgWindSpeed": 16.4,
+        "weatherCode": 61
+      },
+      "tempTrend": 0.08,
+      "dataYears": 10
     },
     {
       "id": "oppdal-fjellmaraton-2026",
@@ -1633,7 +1703,7 @@
         "avgWindSpeed": 16.4,
         "weatherCode": 63
       },
-      "tempTrend": 0.26,
+      "tempTrend": 0.25,
       "dataYears": 10
     },
     {
@@ -1642,7 +1712,7 @@
       "discipline": "løping",
       "officialDate": "2026-08-30",
       "region": "Akershus",
-      "avgTempMax": 18.2,
+      "avgTempMax": 18.3,
       "avgFeelsLikeMax": 16.5,
       "avgPrecipitation": 1.7,
       "avgWindSpeed": 13.3,
@@ -1788,7 +1858,7 @@
         "avgWindSpeed": 17,
         "weatherCode": 63
       },
-      "tempTrend": 0.22,
+      "tempTrend": 0.23,
       "dataYears": 10
     },
     {
@@ -1797,16 +1867,30 @@
       "discipline": "løping",
       "officialDate": "2026-09-05",
       "region": "Møre og Romsdal",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 14.6,
+      "avgFeelsLikeMax": 13.6,
+      "avgPrecipitation": 7.5,
+      "avgWindSpeed": 9,
+      "avgWeatherCode": 51,
+      "comfortScore": 32,
+      "bestYear": {
+        "year": 2022,
+        "comfortScore": 78,
+        "avgTempMax": 16.8,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 8.9,
+        "weatherCode": 1
+      },
+      "worstYear": {
+        "year": 2019,
+        "comfortScore": 8,
+        "avgTempMax": 7.2,
+        "avgPrecipitation": 37.2,
+        "avgWindSpeed": 10.8,
+        "weatherCode": 63
+      },
+      "tempTrend": 0.55,
+      "dataYears": 10
     },
     {
       "id": "jentemila-2026",
@@ -2155,7 +2239,7 @@
       "discipline": "løping",
       "officialDate": "2026-09-05",
       "region": "Vestfold",
-      "avgTempMax": 18.6,
+      "avgTempMax": 18.7,
       "avgFeelsLikeMax": 17.6,
       "avgPrecipitation": 1.3,
       "avgWindSpeed": 13.1,
@@ -2203,7 +2287,7 @@
       "worstYear": {
         "year": 2020,
         "comfortScore": 19,
-        "avgTempMax": 13.2,
+        "avgTempMax": 13.3,
         "avgPrecipitation": 5.9,
         "avgWindSpeed": 11.8,
         "weatherCode": 61
@@ -2217,16 +2301,30 @@
       "discipline": "løping",
       "officialDate": "2026-09-06",
       "region": "Telemark",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 18.3,
+      "avgFeelsLikeMax": 17.7,
+      "avgPrecipitation": 4.8,
+      "avgWindSpeed": 12.7,
+      "avgWeatherCode": 51,
+      "comfortScore": 35,
+      "bestYear": {
+        "year": 2023,
+        "comfortScore": 63,
+        "avgTempMax": 18.7,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 11.5,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2017,
+        "comfortScore": 14,
+        "avgTempMax": 17.1,
+        "avgPrecipitation": 21,
+        "avgWindSpeed": 15.9,
+        "weatherCode": 63
+      },
+      "tempTrend": 0.48,
+      "dataYears": 10
     },
     {
       "id": "emblemsfjellet-opp-2026",
@@ -2287,7 +2385,7 @@
         "avgWindSpeed": 20.3,
         "weatherCode": 61
       },
-      "tempTrend": 0.77,
+      "tempTrend": 0.78,
       "dataYears": 10
     },
     {
@@ -2389,16 +2487,30 @@
       "discipline": "løping",
       "officialDate": "2026-09-10",
       "region": "Oslo",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 17.6,
+      "avgFeelsLikeMax": 16.3,
+      "avgPrecipitation": 4.9,
+      "avgWindSpeed": 17.8,
+      "avgWeatherCode": 51,
+      "comfortScore": 32,
+      "bestYear": {
+        "year": 2020,
+        "comfortScore": 55,
+        "avgTempMax": 14.8,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 14.9,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2018,
+        "comfortScore": 11,
+        "avgTempMax": 17,
+        "avgPrecipitation": 11.3,
+        "avgWindSpeed": 22.8,
+        "weatherCode": 63
+      },
+      "tempTrend": 0.22,
+      "dataYears": 10
     },
     {
       "id": "dnb-oslo-marathon-2026",
@@ -2561,16 +2673,30 @@
       "discipline": "løping",
       "officialDate": "2026-09-12",
       "region": "Møre og Romsdal",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 14.3,
+      "avgFeelsLikeMax": 12.5,
+      "avgPrecipitation": 5,
+      "avgWindSpeed": 14.6,
+      "avgWeatherCode": 53,
+      "comfortScore": 30,
+      "bestYear": {
+        "year": 2016,
+        "comfortScore": 64,
+        "avgTempMax": 18.9,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 11.9,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2018,
+        "comfortScore": 5,
+        "avgTempMax": 11.6,
+        "avgPrecipitation": 14.7,
+        "avgWindSpeed": 20.2,
+        "weatherCode": 63
+      },
+      "tempTrend": -0.14,
+      "dataYears": 10
     },
     {
       "id": "valdreslopet-2026",
@@ -2578,7 +2704,7 @@
       "discipline": "løping",
       "officialDate": "2026-09-12",
       "region": "Innlandet",
-      "avgTempMax": 10.9,
+      "avgTempMax": 11,
       "avgFeelsLikeMax": 8.1,
       "avgPrecipitation": 3.9,
       "avgWindSpeed": 12.8,
@@ -2595,12 +2721,12 @@
       "worstYear": {
         "year": 2017,
         "comfortScore": 10,
-        "avgTempMax": 8.9,
+        "avgTempMax": 9,
         "avgPrecipitation": 15,
         "avgWindSpeed": 10.5,
         "weatherCode": 63
       },
-      "tempTrend": 0.08,
+      "tempTrend": 0.07,
       "dataYears": 10
     },
     {
@@ -2640,16 +2766,30 @@
       "discipline": "løping",
       "officialDate": "2026-09-19",
       "region": "Trøndelag",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 14.1,
+      "avgFeelsLikeMax": 12.3,
+      "avgPrecipitation": 4.6,
+      "avgWindSpeed": 15.8,
+      "avgWeatherCode": 3,
+      "comfortScore": 41,
+      "bestYear": {
+        "year": 2016,
+        "comfortScore": 79,
+        "avgTempMax": 15.6,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 3.9,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2022,
+        "comfortScore": 8,
+        "avgTempMax": 9.7,
+        "avgPrecipitation": 7.6,
+        "avgWindSpeed": 16.4,
+        "weatherCode": 61
+      },
+      "tempTrend": 0.31,
+      "dataYears": 10
     },
     {
       "id": "backyard-kristiansand-2026",
@@ -2674,7 +2814,7 @@
       "worstYear": {
         "year": 2023,
         "comfortScore": 12,
-        "avgTempMax": 14.9,
+        "avgTempMax": 15,
         "avgPrecipitation": 20,
         "avgWindSpeed": 26.3,
         "weatherCode": 63
@@ -2688,16 +2828,30 @@
       "discipline": "løping",
       "officialDate": "2026-09-19",
       "region": "Vestland",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 12.9,
+      "avgFeelsLikeMax": 10.7,
+      "avgPrecipitation": 5.6,
+      "avgWindSpeed": 17.8,
+      "avgWeatherCode": 51,
+      "comfortScore": 22,
+      "bestYear": {
+        "year": 2024,
+        "comfortScore": 72,
+        "avgTempMax": 17.4,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 7.6,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2023,
+        "comfortScore": 7,
+        "avgTempMax": 12.4,
+        "avgPrecipitation": 27,
+        "avgWindSpeed": 25.6,
+        "weatherCode": 63
+      },
+      "tempTrend": 0.17,
+      "dataYears": 10
     },
     {
       "id": "fyri-trail-by-salomon-2026",
@@ -2767,16 +2921,30 @@
       "discipline": "løping",
       "officialDate": "2026-09-19",
       "region": "Østfold",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 15.5,
+      "avgFeelsLikeMax": 13.1,
+      "avgPrecipitation": 2.3,
+      "avgWindSpeed": 32.5,
+      "avgWeatherCode": 3,
+      "comfortScore": 43,
+      "bestYear": {
+        "year": 2024,
+        "comfortScore": 68,
+        "avgTempMax": 14.9,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 11,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2023,
+        "comfortScore": 12,
+        "avgTempMax": 16.9,
+        "avgPrecipitation": 14.4,
+        "avgWindSpeed": 53.9,
+        "weatherCode": 63
+      },
+      "tempTrend": 0.01,
+      "dataYears": 10
     },
     {
       "id": "karl-xii-lopet-2026",
@@ -2784,16 +2952,30 @@
       "discipline": "løping",
       "officialDate": "2026-09-20",
       "region": "Østfold",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 15.4,
+      "avgFeelsLikeMax": 13.4,
+      "avgPrecipitation": 1.1,
+      "avgWindSpeed": 17.7,
+      "avgWeatherCode": 3,
+      "comfortScore": 51,
+      "bestYear": {
+        "year": 2024,
+        "comfortScore": 68,
+        "avgTempMax": 18.4,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 9,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2018,
+        "comfortScore": 18,
+        "avgTempMax": 15.1,
+        "avgPrecipitation": 2.5,
+        "avgWindSpeed": 35.6,
+        "weatherCode": 61
+      },
+      "tempTrend": 0.04,
+      "dataYears": 10
     },
     {
       "id": "gjesdalmila-2026",
@@ -2801,7 +2983,7 @@
       "discipline": "løping",
       "officialDate": "2026-09-20",
       "region": "Rogaland",
-      "avgTempMax": 12.2,
+      "avgTempMax": 12.3,
       "avgFeelsLikeMax": 10.3,
       "avgPrecipitation": 7.6,
       "avgWindSpeed": 15,
@@ -2818,7 +3000,7 @@
       "worstYear": {
         "year": 2018,
         "comfortScore": 2,
-        "avgTempMax": 9.1,
+        "avgTempMax": 9.2,
         "avgPrecipitation": 12.2,
         "avgWindSpeed": 25.3,
         "weatherCode": 61
@@ -2841,7 +3023,7 @@
       "bestYear": {
         "year": 2024,
         "comfortScore": 70,
-        "avgTempMax": 17,
+        "avgTempMax": 17.1,
         "avgPrecipitation": 0,
         "avgWindSpeed": 9,
         "weatherCode": 3
@@ -2854,7 +3036,7 @@
         "avgWindSpeed": 24.9,
         "weatherCode": 61
       },
-      "tempTrend": -0.1,
+      "tempTrend": -0.09,
       "dataYears": 10
     },
     {
@@ -2911,7 +3093,7 @@
       "worstYear": {
         "year": 2020,
         "comfortScore": 1,
-        "avgTempMax": 9.6,
+        "avgTempMax": 9.7,
         "avgPrecipitation": 32.3,
         "avgWindSpeed": 25.9,
         "weatherCode": 63
@@ -2987,16 +3169,30 @@
       "discipline": "løping",
       "officialDate": "2026-09-26",
       "region": "Akershus",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 13.4,
+      "avgFeelsLikeMax": 11.1,
+      "avgPrecipitation": 4.3,
+      "avgWindSpeed": 15.9,
+      "avgWeatherCode": 3,
+      "comfortScore": 39,
+      "bestYear": {
+        "year": 2021,
+        "comfortScore": 65,
+        "avgTempMax": 15.7,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 10.6,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2020,
+        "comfortScore": 1,
+        "avgTempMax": 8.6,
+        "avgPrecipitation": 32.4,
+        "avgWindSpeed": 28.2,
+        "weatherCode": 63
+      },
+      "tempTrend": -0.3,
+      "dataYears": 10
     },
     {
       "id": "bjoa-halvmaraton-2026",
@@ -3004,16 +3200,30 @@
       "discipline": "løping",
       "officialDate": "2026-09-26",
       "region": "Rogaland",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 14.1,
+      "avgFeelsLikeMax": 11.7,
+      "avgPrecipitation": 10,
+      "avgWindSpeed": 16.8,
+      "avgWeatherCode": 63,
+      "comfortScore": 11,
+      "bestYear": {
+        "year": 2025,
+        "comfortScore": 76,
+        "avgTempMax": 16.3,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 11,
+        "weatherCode": 0
+      },
+      "worstYear": {
+        "year": 2018,
+        "comfortScore": 6,
+        "avgTempMax": 11.8,
+        "avgPrecipitation": 59.1,
+        "avgWindSpeed": 20.3,
+        "weatherCode": 65
+      },
+      "tempTrend": 0.03,
+      "dataYears": 10
     },
     {
       "id": "gaia-backyard-hafjell-2026",
@@ -3021,16 +3231,30 @@
       "discipline": "løping",
       "officialDate": "2026-09-26",
       "region": "Innlandet",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 6.9,
+      "avgFeelsLikeMax": 3.8,
+      "avgPrecipitation": 5.2,
+      "avgWindSpeed": 13.3,
+      "avgWeatherCode": 3,
+      "comfortScore": 23,
+      "bestYear": {
+        "year": 2017,
+        "comfortScore": 50,
+        "avgTempMax": 9,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 9.1,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2020,
+        "comfortScore": 0,
+        "avgTempMax": 2.7,
+        "avgPrecipitation": 21.3,
+        "avgWindSpeed": 23.4,
+        "weatherCode": 75
+      },
+      "tempTrend": -0.06,
+      "dataYears": 10
     },
     {
       "id": "rauma-backyard-ultra-2026",
@@ -3038,16 +3262,30 @@
       "discipline": "løping",
       "officialDate": "2026-09-26",
       "region": "Møre og Romsdal",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 5.9,
+      "avgFeelsLikeMax": 2.5,
+      "avgPrecipitation": 4.6,
+      "avgWindSpeed": 13.9,
+      "avgWeatherCode": 3,
+      "comfortScore": 24,
+      "bestYear": {
+        "year": 2025,
+        "comfortScore": 52,
+        "avgTempMax": 6.1,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 7.2,
+        "weatherCode": 2
+      },
+      "worstYear": {
+        "year": 2018,
+        "comfortScore": 0,
+        "avgTempMax": 1,
+        "avgPrecipitation": 42.3,
+        "avgWindSpeed": 19.8,
+        "weatherCode": 75
+      },
+      "tempTrend": -0.28,
+      "dataYears": 10
     },
     {
       "id": "rosa-sloyfe-lopet-trondheim-2026",
@@ -3055,7 +3293,7 @@
       "discipline": "løping",
       "officialDate": "2026-09-26",
       "region": "Trøndelag",
-      "avgTempMax": 13,
+      "avgTempMax": 13.1,
       "avgFeelsLikeMax": 10.9,
       "avgPrecipitation": 4.9,
       "avgWindSpeed": 18.1,
@@ -3064,7 +3302,7 @@
       "bestYear": {
         "year": 2017,
         "comfortScore": 73,
-        "avgTempMax": 17.6,
+        "avgTempMax": 17.7,
         "avgPrecipitation": 0,
         "avgWindSpeed": 13.5,
         "weatherCode": 1
@@ -3201,7 +3439,7 @@
         "avgWindSpeed": 26.8,
         "weatherCode": 61
       },
-      "tempTrend": 0.37,
+      "tempTrend": 0.36,
       "dataYears": 10
     },
     {
@@ -3258,12 +3496,12 @@
       "worstYear": {
         "year": 2017,
         "comfortScore": 1,
-        "avgTempMax": 9.2,
+        "avgTempMax": 9.3,
         "avgPrecipitation": 21.2,
         "avgWindSpeed": 36.4,
         "weatherCode": 63
       },
-      "tempTrend": 0.22,
+      "tempTrend": 0.23,
       "dataYears": 10
     },
     {
@@ -3272,16 +3510,30 @@
       "discipline": "løping",
       "officialDate": "2026-10-03",
       "region": "Trøndelag",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 11.2,
+      "avgFeelsLikeMax": 8.6,
+      "avgPrecipitation": 2.9,
+      "avgWindSpeed": 17.6,
+      "avgWeatherCode": 53,
+      "comfortScore": 24,
+      "bestYear": {
+        "year": 2016,
+        "comfortScore": 57,
+        "avgTempMax": 8.6,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 5.2,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2018,
+        "comfortScore": 7,
+        "avgTempMax": 7.7,
+        "avgPrecipitation": 6.7,
+        "avgWindSpeed": 15.5,
+        "weatherCode": 71
+      },
+      "tempTrend": 0.26,
+      "dataYears": 10
     },
     {
       "id": "sorfjorden-halvmaraton-2026",
@@ -3342,7 +3594,7 @@
         "avgWindSpeed": 23.1,
         "weatherCode": 61
       },
-      "tempTrend": 0.29,
+      "tempTrend": 0.3,
       "dataYears": 10
     },
     {
@@ -3360,7 +3612,7 @@
       "bestYear": {
         "year": 2023,
         "comfortScore": 58,
-        "avgTempMax": 14.9,
+        "avgTempMax": 15,
         "avgPrecipitation": 0,
         "avgWindSpeed": 12.6,
         "weatherCode": 3
@@ -3382,7 +3634,7 @@
       "discipline": "løping",
       "officialDate": "2026-10-05",
       "region": "Agder",
-      "avgTempMax": 13.2,
+      "avgTempMax": 13.3,
       "avgFeelsLikeMax": 10,
       "avgPrecipitation": 5.4,
       "avgWindSpeed": 23.6,
@@ -3404,7 +3656,7 @@
         "avgWindSpeed": 38.7,
         "weatherCode": 63
       },
-      "tempTrend": 0.43,
+      "tempTrend": 0.44,
       "dataYears": 10
     },
     {
@@ -3435,7 +3687,7 @@
         "avgWindSpeed": 13.9,
         "weatherCode": 63
       },
-      "tempTrend": 0.39,
+      "tempTrend": 0.38,
       "dataYears": 10
     },
     {
@@ -3475,16 +3727,30 @@
       "discipline": "løping",
       "officialDate": "2026-10-10",
       "region": "Buskerud",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 11.1,
+      "avgFeelsLikeMax": 9.1,
+      "avgPrecipitation": 5.6,
+      "avgWindSpeed": 13.7,
+      "avgWeatherCode": 3,
+      "comfortScore": 33,
+      "bestYear": {
+        "year": 2018,
+        "comfortScore": 61,
+        "avgTempMax": 18.1,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 14.7,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2020,
+        "comfortScore": 6,
+        "avgTempMax": 8.8,
+        "avgPrecipitation": 33.7,
+        "avgWindSpeed": 16.1,
+        "weatherCode": 63
+      },
+      "tempTrend": 0.37,
+      "dataYears": 10
     },
     {
       "id": "ivar-formos-minnelop-2026",
@@ -3514,7 +3780,7 @@
         "avgWindSpeed": 13.9,
         "weatherCode": 63
       },
-      "tempTrend": 0.39,
+      "tempTrend": 0.38,
       "dataYears": 10
     },
     {
@@ -3585,16 +3851,30 @@
       "discipline": "løping",
       "officialDate": "2026-10-10",
       "region": "Innlandet",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 4.4,
+      "avgFeelsLikeMax": 1.3,
+      "avgPrecipitation": 3.8,
+      "avgWindSpeed": 14.1,
+      "avgWeatherCode": 51,
+      "comfortScore": 18,
+      "bestYear": {
+        "year": 2016,
+        "comfortScore": 46,
+        "avgTempMax": 3,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 7.6,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2024,
+        "comfortScore": 1,
+        "avgTempMax": 5.2,
+        "avgPrecipitation": 17.8,
+        "avgWindSpeed": 17.5,
+        "weatherCode": 75
+      },
+      "tempTrend": 0.19,
+      "dataYears": 10
     },
     {
       "id": "nm-terrenglop-lang-loype-2026",
@@ -3602,16 +3882,30 @@
       "discipline": "løping",
       "officialDate": "2026-10-10",
       "region": "Vestfold",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 12.1,
+      "avgFeelsLikeMax": 10,
+      "avgPrecipitation": 3.4,
+      "avgWindSpeed": 17.1,
+      "avgWeatherCode": 61,
+      "comfortScore": 17,
+      "bestYear": {
+        "year": 2018,
+        "comfortScore": 60,
+        "avgTempMax": 18.1,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 16.3,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2022,
+        "comfortScore": 13,
+        "avgTempMax": 12.4,
+        "avgPrecipitation": 4.1,
+        "avgWindSpeed": 25.1,
+        "weatherCode": 61
+      },
+      "tempTrend": 0.47,
+      "dataYears": 10
     },
     {
       "id": "fredrikstadmarka-rundt-2026",
@@ -3619,16 +3913,30 @@
       "discipline": "løping",
       "officialDate": "2026-10-11",
       "region": "Østfold",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 12.6,
+      "avgFeelsLikeMax": 9.9,
+      "avgPrecipitation": 1.6,
+      "avgWindSpeed": 24.1,
+      "avgWeatherCode": 3,
+      "comfortScore": 38,
+      "bestYear": {
+        "year": 2018,
+        "comfortScore": 60,
+        "avgTempMax": 16.8,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 17.8,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2017,
+        "comfortScore": 9,
+        "avgTempMax": 12.6,
+        "avgPrecipitation": 8.7,
+        "avgWindSpeed": 24.6,
+        "weatherCode": 61
+      },
+      "tempTrend": 0.33,
+      "dataYears": 10
     },
     {
       "id": "lobestaevne-fevik-2026",
@@ -3684,7 +3992,7 @@
       "worstYear": {
         "year": 2017,
         "comfortScore": 13,
-        "avgTempMax": 9.2,
+        "avgTempMax": 9.3,
         "avgPrecipitation": 9.2,
         "avgWindSpeed": 8.6,
         "weatherCode": 61
@@ -3729,16 +4037,30 @@
       "discipline": "løping",
       "officialDate": "2026-10-17",
       "region": "Rogaland",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 11.4,
+      "avgFeelsLikeMax": 8.5,
+      "avgPrecipitation": 5.8,
+      "avgWindSpeed": 23.7,
+      "avgWeatherCode": 51,
+      "comfortScore": 16,
+      "bestYear": {
+        "year": 2021,
+        "comfortScore": 34,
+        "avgTempMax": 9.1,
+        "avgPrecipitation": 0.2,
+        "avgWindSpeed": 10.5,
+        "weatherCode": 51
+      },
+      "worstYear": {
+        "year": 2022,
+        "comfortScore": 7,
+        "avgTempMax": 10.6,
+        "avgPrecipitation": 8.2,
+        "avgWindSpeed": 21.1,
+        "weatherCode": 63
+      },
+      "tempTrend": -0.17,
+      "dataYears": 10
     },
     {
       "id": "moalopet-2026",
@@ -3777,16 +4099,30 @@
       "discipline": "løping",
       "officialDate": "2026-10-18",
       "region": "Oslo",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 8.8,
+      "avgFeelsLikeMax": 6.3,
+      "avgPrecipitation": 1.4,
+      "avgWindSpeed": 11.1,
+      "avgWeatherCode": 3,
+      "comfortScore": 42,
+      "bestYear": {
+        "year": 2018,
+        "comfortScore": 52,
+        "avgTempMax": 11.7,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 11.2,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2016,
+        "comfortScore": 23,
+        "avgTempMax": 7,
+        "avgPrecipitation": 5.4,
+        "avgWindSpeed": 8.1,
+        "weatherCode": 51
+      },
+      "tempTrend": -0.15,
+      "dataYears": 10
     },
     {
       "id": "fitjardalten-2026",
@@ -3794,16 +4130,30 @@
       "discipline": "løping",
       "officialDate": "2026-10-18",
       "region": "Vestland",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 10.8,
+      "avgFeelsLikeMax": 7.8,
+      "avgPrecipitation": 1.3,
+      "avgWindSpeed": 20.4,
+      "avgWeatherCode": 51,
+      "comfortScore": 24,
+      "bestYear": {
+        "year": 2023,
+        "comfortScore": 54,
+        "avgTempMax": 10.3,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 8.7,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2024,
+        "comfortScore": 13,
+        "avgTempMax": 14.4,
+        "avgPrecipitation": 6.1,
+        "avgWindSpeed": 26.9,
+        "weatherCode": 63
+      },
+      "tempTrend": -0.11,
+      "dataYears": 10
     },
     {
       "id": "gjesdal-trailrun-2026",
@@ -3842,16 +4192,30 @@
       "discipline": "løping",
       "officialDate": "2026-10-18",
       "region": "Trøndelag",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 8.2,
+      "avgFeelsLikeMax": 5.4,
+      "avgPrecipitation": 4.1,
+      "avgWindSpeed": 18.1,
+      "avgWeatherCode": 3,
+      "comfortScore": 23,
+      "bestYear": {
+        "year": 2024,
+        "comfortScore": 55,
+        "avgTempMax": 11.4,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 10.2,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2017,
+        "comfortScore": 1,
+        "avgTempMax": 8.6,
+        "avgPrecipitation": 25.7,
+        "avgWindSpeed": 23,
+        "weatherCode": 63
+      },
+      "tempTrend": -0.07,
+      "dataYears": 10
     },
     {
       "id": "lierlopet-2026-10-18",
@@ -3921,7 +4285,7 @@
       "discipline": "løping",
       "officialDate": "2026-10-23",
       "region": "Oslo",
-      "avgTempMax": 8,
+      "avgTempMax": 8.1,
       "avgFeelsLikeMax": 5.1,
       "avgPrecipitation": 1.3,
       "avgWindSpeed": 16,
@@ -3943,7 +4307,7 @@
         "avgWindSpeed": 19,
         "weatherCode": 53
       },
-      "tempTrend": 0.31,
+      "tempTrend": 0.32,
       "dataYears": 10
     },
     {
@@ -4076,16 +4440,30 @@
       "discipline": "løping",
       "officialDate": "2026-10-25",
       "region": "Agder",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 9,
+      "avgFeelsLikeMax": 6.2,
+      "avgPrecipitation": 7.4,
+      "avgWindSpeed": 21,
+      "avgWeatherCode": 61,
+      "comfortScore": 6,
+      "bestYear": {
+        "year": 2024,
+        "comfortScore": 37,
+        "avgTempMax": 9.8,
+        "avgPrecipitation": 1.4,
+        "avgWindSpeed": 7.6,
+        "weatherCode": 53
+      },
+      "worstYear": {
+        "year": 2023,
+        "comfortScore": 3,
+        "avgTempMax": 2.7,
+        "avgPrecipitation": 7.2,
+        "avgWindSpeed": 29.3,
+        "weatherCode": 73
+      },
+      "tempTrend": -0.1,
+      "dataYears": 10
     },
     {
       "id": "hinnalopet-2026",
@@ -4093,16 +4471,30 @@
       "discipline": "løping",
       "officialDate": "2026-10-31",
       "region": "Rogaland",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 10.3,
+      "avgFeelsLikeMax": 7.1,
+      "avgPrecipitation": 3.3,
+      "avgWindSpeed": 23.9,
+      "avgWeatherCode": 61,
+      "comfortScore": 12,
+      "bestYear": {
+        "year": 2019,
+        "comfortScore": 36,
+        "avgTempMax": 8.4,
+        "avgPrecipitation": 0.1,
+        "avgWindSpeed": 8.8,
+        "weatherCode": 51
+      },
+      "worstYear": {
+        "year": 2018,
+        "comfortScore": 6,
+        "avgTempMax": 8.8,
+        "avgPrecipitation": 6.1,
+        "avgWindSpeed": 21.6,
+        "weatherCode": 61
+      },
+      "tempTrend": 0.11,
+      "dataYears": 10
     },
     {
       "id": "runrudskogen-2026",
@@ -4110,16 +4502,30 @@
       "discipline": "løping",
       "officialDate": "2026-10-31",
       "region": "Østfold",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 7.7,
+      "avgFeelsLikeMax": 4.8,
+      "avgPrecipitation": 3.3,
+      "avgWindSpeed": 17,
+      "avgWeatherCode": 3,
+      "comfortScore": 25,
+      "bestYear": {
+        "year": 2017,
+        "comfortScore": 41,
+        "avgTempMax": 6.8,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 11.3,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2018,
+        "comfortScore": 2,
+        "avgTempMax": 7.8,
+        "avgPrecipitation": 13.9,
+        "avgWindSpeed": 23.7,
+        "weatherCode": 63
+      },
+      "tempTrend": -0.08,
+      "dataYears": 10
     },
     {
       "id": "3-sjoerslopet-2026",
@@ -4180,7 +4586,7 @@
         "avgWindSpeed": 32.5,
         "weatherCode": 73
       },
-      "tempTrend": 0.5,
+      "tempTrend": 0.49,
       "dataYears": 10
     },
     {
@@ -4206,12 +4612,12 @@
       "worstYear": {
         "year": 2019,
         "comfortScore": 11,
-        "avgTempMax": -1.1,
+        "avgTempMax": -1.2,
         "avgPrecipitation": 2.6,
         "avgWindSpeed": 15.7,
         "weatherCode": 73
       },
-      "tempTrend": 0.58,
+      "tempTrend": 0.57,
       "dataYears": 10
     },
     {
@@ -4251,16 +4657,30 @@
       "discipline": "løping",
       "officialDate": "2026-11-22",
       "region": "Rogaland",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 7.6,
+      "avgFeelsLikeMax": 3.1,
+      "avgPrecipitation": 9,
+      "avgWindSpeed": 30.8,
+      "avgWeatherCode": 53,
+      "comfortScore": 2,
+      "bestYear": {
+        "year": 2018,
+        "comfortScore": 47,
+        "avgTempMax": 4.8,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 10.4,
+        "weatherCode": 1
+      },
+      "worstYear": {
+        "year": 2025,
+        "comfortScore": 0,
+        "avgTempMax": 7.6,
+        "avgPrecipitation": 12.6,
+        "avgWindSpeed": 27.5,
+        "weatherCode": 61
+      },
+      "tempTrend": -0.39,
+      "dataYears": 10
     },
     {
       "id": "nyttarslopet-tonsberg-2026",
@@ -4299,7 +4719,7 @@
       "discipline": "løping",
       "officialDate": "2026-12-31",
       "region": "Telemark",
-      "avgTempMax": 2.2,
+      "avgTempMax": 2.3,
       "avgFeelsLikeMax": -1.5,
       "avgPrecipitation": 4,
       "avgWindSpeed": 18.2,
@@ -4321,7 +4741,7 @@
         "avgWindSpeed": 28.3,
         "weatherCode": 75
       },
-      "tempTrend": -0.76,
+      "tempTrend": -0.75,
       "dataYears": 10
     },
     {
@@ -4485,16 +4905,30 @@
       "discipline": "løping",
       "officialDate": "2027-05-01",
       "region": "Hole",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 9.3,
+      "avgFeelsLikeMax": 6.2,
+      "avgPrecipitation": 2.9,
+      "avgWindSpeed": 10.2,
+      "avgWeatherCode": 51,
+      "comfortScore": 28,
+      "bestYear": {
+        "year": 2017,
+        "comfortScore": 55,
+        "avgTempMax": 10.2,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 9.7,
+        "weatherCode": 2
+      },
+      "worstYear": {
+        "year": 2018,
+        "comfortScore": 6,
+        "avgTempMax": 3.2,
+        "avgPrecipitation": 15.5,
+        "avgWindSpeed": 9.1,
+        "weatherCode": 75
+      },
+      "tempTrend": 0.8,
+      "dataYears": 10
     },
     {
       "id": "steinsland-bygdemaraton-2027",
@@ -4524,7 +4958,7 @@
         "avgWindSpeed": 27.5,
         "weatherCode": 73
       },
-      "tempTrend": 0.91,
+      "tempTrend": 0.92,
       "dataYears": 10
     },
     {
@@ -4564,16 +4998,30 @@
       "discipline": "løping",
       "officialDate": "2027-05-06",
       "region": "Vestfold",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 14.3,
+      "avgFeelsLikeMax": 11.2,
+      "avgPrecipitation": 0.5,
+      "avgWindSpeed": 15.7,
+      "avgWeatherCode": 3,
+      "comfortScore": 50,
+      "bestYear": {
+        "year": 2017,
+        "comfortScore": 64,
+        "avgTempMax": 19.3,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 12.6,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2019,
+        "comfortScore": 18,
+        "avgTempMax": 6.4,
+        "avgPrecipitation": 1.8,
+        "avgWindSpeed": 18.8,
+        "weatherCode": 53
+      },
+      "tempTrend": -0.33,
+      "dataYears": 10
     },
     {
       "id": "4625lopet",
@@ -4581,16 +5029,30 @@
       "discipline": "løping",
       "officialDate": "2027-05-22",
       "region": "Agder",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 15.3,
+      "avgFeelsLikeMax": 13.6,
+      "avgPrecipitation": 6,
+      "avgWindSpeed": 21.7,
+      "avgWeatherCode": 3,
+      "comfortScore": 34,
+      "bestYear": {
+        "year": 2018,
+        "comfortScore": 59,
+        "avgTempMax": 19,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 14.6,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2020,
+        "comfortScore": 6,
+        "avgTempMax": 13,
+        "avgPrecipitation": 22,
+        "avgWindSpeed": 30.7,
+        "weatherCode": 65
+      },
+      "tempTrend": 0.18,
+      "dataYears": 10
     },
     {
       "id": "schjongs5ern-2027",
@@ -4598,16 +5060,30 @@
       "discipline": "løping",
       "officialDate": "2027-05-22",
       "region": "Buskerud",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 14.2,
+      "avgFeelsLikeMax": 11.8,
+      "avgPrecipitation": 6,
+      "avgWindSpeed": 13.2,
+      "avgWeatherCode": 3,
+      "comfortScore": 39,
+      "bestYear": {
+        "year": 2018,
+        "comfortScore": 71,
+        "avgTempMax": 19.6,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 6.5,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2020,
+        "comfortScore": 5,
+        "avgTempMax": 10.4,
+        "avgPrecipitation": 9.5,
+        "avgWindSpeed": 18.7,
+        "weatherCode": 63
+      },
+      "tempTrend": 0,
+      "dataYears": 10
     },
     {
       "id": "somnamile-2027",
@@ -4615,16 +5091,30 @@
       "discipline": "løping",
       "officialDate": "2027-05-22",
       "region": "Nordland",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 14.9,
+      "avgFeelsLikeMax": 12.6,
+      "avgPrecipitation": 1,
+      "avgWindSpeed": 16.6,
+      "avgWeatherCode": 3,
+      "comfortScore": 51,
+      "bestYear": {
+        "year": 2024,
+        "comfortScore": 53,
+        "avgTempMax": 22.9,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 10,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2023,
+        "comfortScore": 24,
+        "avgTempMax": 20.1,
+        "avgPrecipitation": 2.1,
+        "avgWindSpeed": 16.2,
+        "weatherCode": 61
+      },
+      "tempTrend": 0.38,
+      "dataYears": 10
     },
     {
       "id": "stomperudlopet-2027",
@@ -4632,16 +5122,30 @@
       "discipline": "løping",
       "officialDate": "2027-05-29",
       "region": "Akershus",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 17.8,
+      "avgFeelsLikeMax": 15.8,
+      "avgPrecipitation": 1.7,
+      "avgWindSpeed": 14.1,
+      "avgWeatherCode": 3,
+      "comfortScore": 60,
+      "bestYear": {
+        "year": 2020,
+        "comfortScore": 67,
+        "avgTempMax": 19.3,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 9.8,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2022,
+        "comfortScore": 20,
+        "avgTempMax": 12.8,
+        "avgPrecipitation": 4.1,
+        "avgWindSpeed": 12.2,
+        "weatherCode": 61
+      },
+      "tempTrend": -0.3,
+      "dataYears": 10
     },
     {
       "id": "jessheim-halvmaraton-2027",
@@ -4649,16 +5153,30 @@
       "discipline": "løping",
       "officialDate": "2027-05-30",
       "region": "Akershus",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 19.8,
+      "avgFeelsLikeMax": 18.1,
+      "avgPrecipitation": 2.6,
+      "avgWindSpeed": 14.7,
+      "avgWeatherCode": 3,
+      "comfortScore": 52,
+      "bestYear": {
+        "year": 2020,
+        "comfortScore": 57,
+        "avgTempMax": 22.8,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 12.8,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2024,
+        "comfortScore": 20,
+        "avgTempMax": 18,
+        "avgPrecipitation": 8.2,
+        "avgWindSpeed": 10.5,
+        "weatherCode": 61
+      },
+      "tempTrend": 0.03,
+      "dataYears": 10
     },
     {
       "id": "fjellmaraton-2027",
@@ -4666,16 +5184,30 @@
       "discipline": "løping",
       "officialDate": "2027-06-05",
       "region": "Innlandet",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 11.5,
+      "avgFeelsLikeMax": 8.3,
+      "avgPrecipitation": 5.4,
+      "avgWindSpeed": 18.6,
+      "avgWeatherCode": 3,
+      "comfortScore": 25,
+      "bestYear": {
+        "year": 2016,
+        "comfortScore": 70,
+        "avgTempMax": 18,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 9,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2024,
+        "comfortScore": 0,
+        "avgTempMax": 6.3,
+        "avgPrecipitation": 28.6,
+        "avgWindSpeed": 29,
+        "weatherCode": 75
+      },
+      "tempTrend": -0.51,
+      "dataYears": 10
     },
     {
       "id": "sommerlopet-2027",
@@ -4683,16 +5215,30 @@
       "discipline": "løping",
       "officialDate": "2027-06-05",
       "region": "Agder",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 16.2,
+      "avgFeelsLikeMax": 14.8,
+      "avgPrecipitation": 8.4,
+      "avgWindSpeed": 21.7,
+      "avgWeatherCode": 3,
+      "comfortScore": 30,
+      "bestYear": {
+        "year": 2016,
+        "comfortScore": 65,
+        "avgTempMax": 20.1,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 11.9,
+        "weatherCode": 1
+      },
+      "worstYear": {
+        "year": 2020,
+        "comfortScore": 6,
+        "avgTempMax": 11.6,
+        "avgPrecipitation": 39.3,
+        "avgWindSpeed": 38.5,
+        "weatherCode": 63
+      },
+      "tempTrend": -0.23,
+      "dataYears": 10
     },
     {
       "id": "rekordmila-2027",
@@ -4700,16 +5246,30 @@
       "discipline": "løping",
       "officialDate": "2027-06-06",
       "region": "Trøndelag",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 16.9,
+      "avgFeelsLikeMax": 15.6,
+      "avgPrecipitation": 2.6,
+      "avgWindSpeed": 12.6,
+      "avgWeatherCode": 3,
+      "comfortScore": 59,
+      "bestYear": {
+        "year": 2016,
+        "comfortScore": 74,
+        "avgTempMax": 18.1,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 6.9,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2024,
+        "comfortScore": 14,
+        "avgTempMax": 14.2,
+        "avgPrecipitation": 9,
+        "avgWindSpeed": 16.5,
+        "weatherCode": 63
+      },
+      "tempTrend": -0.63,
+      "dataYears": 10
     },
     {
       "id": "eidemila-2027",
@@ -4717,16 +5277,30 @@
       "discipline": "løping",
       "officialDate": "2027-06-06",
       "region": "Troms",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 13.3,
+      "avgFeelsLikeMax": 10.9,
+      "avgPrecipitation": 3.1,
+      "avgWindSpeed": 14.2,
+      "avgWeatherCode": 53,
+      "comfortScore": 31,
+      "bestYear": {
+        "year": 2020,
+        "comfortScore": 63,
+        "avgTempMax": 15.4,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 12,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2018,
+        "comfortScore": 9,
+        "avgTempMax": 4.8,
+        "avgPrecipitation": 3.9,
+        "avgWindSpeed": 16.9,
+        "weatherCode": 73
+      },
+      "tempTrend": 0.83,
+      "dataYears": 10
     },
     {
       "id": "haslummila-2027",
@@ -4734,16 +5308,30 @@
       "discipline": "løping",
       "officialDate": "2027-06-12",
       "region": "Akershus",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 19.2,
+      "avgFeelsLikeMax": 17.5,
+      "avgPrecipitation": 2.7,
+      "avgWindSpeed": 14,
+      "avgWeatherCode": 3,
+      "comfortScore": 54,
+      "bestYear": {
+        "year": 2016,
+        "comfortScore": 73,
+        "avgTempMax": 17.8,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 8.6,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2019,
+        "comfortScore": 12,
+        "avgTempMax": 12.2,
+        "avgPrecipitation": 13.8,
+        "avgWindSpeed": 14.6,
+        "weatherCode": 61
+      },
+      "tempTrend": 0.07,
+      "dataYears": 10
     },
     {
       "id": "midnight-sun-marathon-2027",
@@ -4751,16 +5339,30 @@
       "discipline": "løping",
       "officialDate": "2027-06-19",
       "region": "Troms",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 13.4,
+      "avgFeelsLikeMax": 11.9,
+      "avgPrecipitation": 3.1,
+      "avgWindSpeed": 12.8,
+      "avgWeatherCode": 51,
+      "comfortScore": 34,
+      "bestYear": {
+        "year": 2020,
+        "comfortScore": 52,
+        "avgTempMax": 10.3,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 9.5,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2021,
+        "comfortScore": 11,
+        "avgTempMax": 10.7,
+        "avgPrecipitation": 5.6,
+        "avgWindSpeed": 20.7,
+        "weatherCode": 61
+      },
+      "tempTrend": 0.65,
+      "dataYears": 10
     },
     {
       "id": "kristinalopet-2027",
@@ -4768,16 +5370,30 @@
       "discipline": "løping",
       "officialDate": "2027-06-19",
       "region": "Vestfold",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 20.5,
+      "avgFeelsLikeMax": 19.1,
+      "avgPrecipitation": 2.1,
+      "avgWindSpeed": 15.2,
+      "avgWeatherCode": 51,
+      "comfortScore": 35,
+      "bestYear": {
+        "year": 2025,
+        "comfortScore": 59,
+        "avgTempMax": 20.6,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 16.4,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2021,
+        "comfortScore": 13,
+        "avgTempMax": 22.2,
+        "avgPrecipitation": 7.9,
+        "avgWindSpeed": 14.2,
+        "weatherCode": 63
+      },
+      "tempTrend": 0.22,
+      "dataYears": 10
     },
     {
       "id": "hoka-norefjell-trail-2027",
@@ -4785,16 +5401,30 @@
       "discipline": "løping",
       "officialDate": "2027-06-19",
       "region": "Krødsherad",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 16.4,
+      "avgFeelsLikeMax": 14.3,
+      "avgPrecipitation": 3.6,
+      "avgWindSpeed": 11.3,
+      "avgWeatherCode": 53,
+      "comfortScore": 39,
+      "bestYear": {
+        "year": 2025,
+        "comfortScore": 61,
+        "avgTempMax": 16,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 14.7,
+        "weatherCode": 2
+      },
+      "worstYear": {
+        "year": 2021,
+        "comfortScore": 16,
+        "avgTempMax": 12.4,
+        "avgPrecipitation": 16.7,
+        "avgWindSpeed": 9.4,
+        "weatherCode": 63
+      },
+      "tempTrend": 0.02,
+      "dataYears": 10
     },
     {
       "id": "nordmarka-skogsmaraton-2027",
@@ -4802,16 +5432,30 @@
       "discipline": "løping",
       "officialDate": "2027-06-19",
       "region": "Oslo",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 20.6,
+      "avgFeelsLikeMax": 18.8,
+      "avgPrecipitation": 3,
+      "avgWindSpeed": 16.3,
+      "avgWeatherCode": 3,
+      "comfortScore": 47,
+      "bestYear": {
+        "year": 2022,
+        "comfortScore": 61,
+        "avgTempMax": 18.3,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 16.5,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2021,
+        "comfortScore": 9,
+        "avgTempMax": 20.8,
+        "avgPrecipitation": 9.8,
+        "avgWindSpeed": 16.6,
+        "weatherCode": 61
+      },
+      "tempTrend": 0.17,
+      "dataYears": 10
     },
     {
       "id": "jolster-maraton-2027",
@@ -4819,16 +5463,30 @@
       "discipline": "løping",
       "officialDate": "2027-07-03",
       "region": "Vestland",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 14.7,
+      "avgFeelsLikeMax": 13.8,
+      "avgPrecipitation": 10.8,
+      "avgWindSpeed": 10.3,
+      "avgWeatherCode": 3,
+      "comfortScore": 37,
+      "bestYear": {
+        "year": 2018,
+        "comfortScore": 60,
+        "avgTempMax": 20.2,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 9.7,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2019,
+        "comfortScore": 9,
+        "avgTempMax": 8.4,
+        "avgPrecipitation": 19.6,
+        "avgWindSpeed": 10.1,
+        "weatherCode": 61
+      },
+      "tempTrend": 0.14,
+      "dataYears": 10
     },
     {
       "id": "stranda-fjord-trail-race-2027",
@@ -4836,16 +5494,30 @@
       "discipline": "løping",
       "officialDate": "2027-08-11",
       "region": "Møre og Romsdal",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 15.2,
+      "avgFeelsLikeMax": 13.8,
+      "avgPrecipitation": 10.6,
+      "avgWindSpeed": 9.9,
+      "avgWeatherCode": 63,
+      "comfortScore": 18,
+      "bestYear": {
+        "year": 2020,
+        "comfortScore": 64,
+        "avgTempMax": 20.7,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 6.7,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2024,
+        "comfortScore": 10,
+        "avgTempMax": 12.1,
+        "avgPrecipitation": 20.4,
+        "avgWindSpeed": 13.7,
+        "weatherCode": 63
+      },
+      "tempTrend": 0.22,
+      "dataYears": 10
     },
     {
       "id": "blueslopet-2027",
@@ -4853,16 +5525,30 @@
       "discipline": "løping",
       "officialDate": "2027-08-14",
       "region": "Telemark",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 20.5,
+      "avgFeelsLikeMax": 19.9,
+      "avgPrecipitation": 2.3,
+      "avgWindSpeed": 11.2,
+      "avgWeatherCode": 3,
+      "comfortScore": 53,
+      "bestYear": {
+        "year": 2017,
+        "comfortScore": 67,
+        "avgTempMax": 17.1,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 11.6,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2024,
+        "comfortScore": 15,
+        "avgTempMax": 18.2,
+        "avgPrecipitation": 14.4,
+        "avgWindSpeed": 10,
+        "weatherCode": 63
+      },
+      "tempTrend": 0.26,
+      "dataYears": 10
     },
     {
       "id": "romerikes-raeste-2027",
@@ -4870,16 +5556,30 @@
       "discipline": "løping",
       "officialDate": "2027-08-14",
       "region": "Akershus",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 19.7,
+      "avgFeelsLikeMax": 18.4,
+      "avgPrecipitation": 1.5,
+      "avgWindSpeed": 13.1,
+      "avgWeatherCode": 51,
+      "comfortScore": 40,
+      "bestYear": {
+        "year": 2017,
+        "comfortScore": 62,
+        "avgTempMax": 17,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 13.1,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2019,
+        "comfortScore": 23,
+        "avgTempMax": 16.1,
+        "avgPrecipitation": 6.2,
+        "avgWindSpeed": 11.6,
+        "weatherCode": 61
+      },
+      "tempTrend": 0.58,
+      "dataYears": 10
     },
     {
       "id": "s-mi-maraton-2027",
@@ -4887,16 +5587,30 @@
       "discipline": "løping",
       "officialDate": "2027-08-21",
       "region": "Finnmark",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 12.7,
+      "avgFeelsLikeMax": 10.6,
+      "avgPrecipitation": 2.6,
+      "avgWindSpeed": 16.3,
+      "avgWeatherCode": 51,
+      "comfortScore": 30,
+      "bestYear": {
+        "year": 2023,
+        "comfortScore": 57,
+        "avgTempMax": 10.4,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 7.2,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2022,
+        "comfortScore": 13,
+        "avgTempMax": 18.6,
+        "avgPrecipitation": 8,
+        "avgWindSpeed": 19.1,
+        "weatherCode": 61
+      },
+      "tempTrend": 0.21,
+      "dataYears": 10
     },
     {
       "id": "foruslopet-2027",
@@ -4966,7 +5680,7 @@
       "discipline": "løping",
       "officialDate": "2028-05-06",
       "region": "Agder",
-      "avgTempMax": 12.4,
+      "avgTempMax": 12.5,
       "avgFeelsLikeMax": 9.3,
       "avgPrecipitation": 1,
       "avgWindSpeed": 17.5,
@@ -5028,7 +5742,7 @@
       "discipline": "landevei",
       "officialDate": "2026-05-10",
       "region": "Akershus",
-      "avgTempMax": 14,
+      "avgTempMax": 14.1,
       "avgFeelsLikeMax": 11.6,
       "avgPrecipitation": 4.3,
       "avgWindSpeed": 17.9,
@@ -5112,7 +5826,7 @@
         "avgWindSpeed": 20.4,
         "weatherCode": 75
       },
-      "tempTrend": 0.58,
+      "tempTrend": 0.59,
       "dataYears": 10
     },
     {
@@ -5121,16 +5835,30 @@
       "discipline": "landevei",
       "officialDate": "2027-06-06",
       "region": "Norge",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 19.3,
+      "avgFeelsLikeMax": 18.2,
+      "avgPrecipitation": 4.6,
+      "avgWindSpeed": 13.7,
+      "avgWeatherCode": 3,
+      "comfortScore": 47,
+      "bestYear": {
+        "year": 2023,
+        "comfortScore": 62,
+        "avgTempMax": 23.3,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 11.2,
+        "weatherCode": 1
+      },
+      "worstYear": {
+        "year": 2020,
+        "comfortScore": 13,
+        "avgTempMax": 11.5,
+        "avgPrecipitation": 20.2,
+        "avgWindSpeed": 12.1,
+        "weatherCode": 61
+      },
+      "tempTrend": -0.41,
+      "dataYears": 10
     },
     {
       "id": "bergen-voss",
@@ -5155,12 +5883,12 @@
       "worstYear": {
         "year": 2024,
         "comfortScore": 6,
-        "avgTempMax": 9.8,
+        "avgTempMax": 9.9,
         "avgPrecipitation": 13.9,
         "avgWindSpeed": 15.2,
         "weatherCode": 71
       },
-      "tempTrend": -0.95,
+      "tempTrend": -0.94,
       "dataYears": 10
     },
     {
@@ -5169,16 +5897,30 @@
       "discipline": "landevei",
       "officialDate": "2027-06-05",
       "region": "Norge",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 12.7,
+      "avgFeelsLikeMax": 9.7,
+      "avgPrecipitation": 6.2,
+      "avgWindSpeed": 18.2,
+      "avgWeatherCode": 3,
+      "comfortScore": 27,
+      "bestYear": {
+        "year": 2021,
+        "comfortScore": 71,
+        "avgTempMax": 18,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 14.3,
+        "weatherCode": 1
+      },
+      "worstYear": {
+        "year": 2023,
+        "comfortScore": 0,
+        "avgTempMax": 6.1,
+        "avgPrecipitation": 11,
+        "avgWindSpeed": 24,
+        "weatherCode": 71
+      },
+      "tempTrend": 0.26,
+      "dataYears": 10
     },
     {
       "id": "tour-de-lyngen",
@@ -5239,7 +5981,7 @@
         "avgWindSpeed": 19.1,
         "weatherCode": 61
       },
-      "tempTrend": 0.45,
+      "tempTrend": 0.46,
       "dataYears": 10
     },
     {
@@ -5279,16 +6021,30 @@
       "discipline": "landevei",
       "officialDate": "2027-05-29",
       "region": "Agder",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 14.8,
+      "avgFeelsLikeMax": 12.6,
+      "avgPrecipitation": 1.7,
+      "avgWindSpeed": 16.2,
+      "avgWeatherCode": 3,
+      "comfortScore": 49,
+      "bestYear": {
+        "year": 2020,
+        "comfortScore": 67,
+        "avgTempMax": 16.1,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 11.2,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2024,
+        "comfortScore": 22,
+        "avgTempMax": 13.7,
+        "avgPrecipitation": 4.1,
+        "avgWindSpeed": 22.1,
+        "weatherCode": 51
+      },
+      "tempTrend": -0.35,
+      "dataYears": 10
     },
     {
       "id": "nordhordland-rundt",
@@ -5318,7 +6074,7 @@
         "avgWindSpeed": 24.4,
         "weatherCode": 63
       },
-      "tempTrend": 0.28,
+      "tempTrend": 0.29,
       "dataYears": 10
     },
     {
@@ -5327,16 +6083,30 @@
       "discipline": "landevei",
       "officialDate": "2027-05-23",
       "region": "Oslo",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 15.7,
+      "avgFeelsLikeMax": 13.7,
+      "avgPrecipitation": 6.7,
+      "avgWindSpeed": 16.8,
+      "avgWeatherCode": 51,
+      "comfortScore": 26,
+      "bestYear": {
+        "year": 2017,
+        "comfortScore": 70,
+        "avgTempMax": 17.2,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 9.9,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2020,
+        "comfortScore": 7,
+        "avgTempMax": 12.1,
+        "avgPrecipitation": 20.2,
+        "avgWindSpeed": 22.8,
+        "weatherCode": 63
+      },
+      "tempTrend": -0.08,
+      "dataYears": 10
     },
     {
       "id": "birkebeinerrittet",
@@ -5344,16 +6114,30 @@
       "discipline": "terreng",
       "officialDate": "2026-08-29",
       "region": "Innlandet",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 15.2,
+      "avgFeelsLikeMax": 13.7,
+      "avgPrecipitation": 5.1,
+      "avgWindSpeed": 14.1,
+      "avgWeatherCode": 53,
+      "comfortScore": 32,
+      "bestYear": {
+        "year": 2021,
+        "comfortScore": 70,
+        "avgTempMax": 20,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 12.4,
+        "weatherCode": 2
+      },
+      "worstYear": {
+        "year": 2024,
+        "comfortScore": 13,
+        "avgTempMax": 15.9,
+        "avgPrecipitation": 12,
+        "avgWindSpeed": 19.9,
+        "weatherCode": 63
+      },
+      "tempTrend": 0.17,
+      "dataYears": 10
     },
     {
       "id": "birkebeinerrittet-elite",
@@ -5445,7 +6229,7 @@
         "avgWindSpeed": 19.5,
         "weatherCode": 63
       },
-      "tempTrend": 0.14,
+      "tempTrend": 0.13,
       "dataYears": 10
     },
     {
@@ -5454,7 +6238,7 @@
       "discipline": "landevei",
       "officialDate": "2026-04-11",
       "region": "Norge",
-      "avgTempMax": 8.5,
+      "avgTempMax": 8.6,
       "avgFeelsLikeMax": 5.3,
       "avgPrecipitation": 4.9,
       "avgWindSpeed": 20.5,
@@ -5516,7 +6300,7 @@
       "discipline": "landevei",
       "officialDate": "2026-04-26",
       "region": "Østfold",
-      "avgTempMax": 11,
+      "avgTempMax": 11.1,
       "avgFeelsLikeMax": 7.6,
       "avgPrecipitation": 0.4,
       "avgWindSpeed": 15.3,
@@ -5538,7 +6322,7 @@
         "avgWindSpeed": 16.5,
         "weatherCode": 71
       },
-      "tempTrend": -0.11,
+      "tempTrend": -0.12,
       "dataYears": 10
     },
     {
@@ -5547,16 +6331,30 @@
       "discipline": "landevei",
       "officialDate": "2027-05-29",
       "region": "Innlandet",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 17.6,
+      "avgFeelsLikeMax": 15.9,
+      "avgPrecipitation": 2,
+      "avgWindSpeed": 11,
+      "avgWeatherCode": 3,
+      "comfortScore": 64,
+      "bestYear": {
+        "year": 2020,
+        "comfortScore": 65,
+        "avgTempMax": 20.2,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 9.2,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2019,
+        "comfortScore": 19,
+        "avgTempMax": 12.7,
+        "avgPrecipitation": 0.9,
+        "avgWindSpeed": 14.9,
+        "weatherCode": 71
+      },
+      "tempTrend": -0.32,
+      "dataYears": 10
     },
     {
       "id": "haugesund-sauda",
@@ -5674,7 +6472,7 @@
       "worstYear": {
         "year": 2020,
         "comfortScore": 11,
-        "avgTempMax": 6.6,
+        "avgTempMax": 6.7,
         "avgPrecipitation": 0.8,
         "avgWindSpeed": 19.2,
         "weatherCode": 71
@@ -5750,16 +6548,30 @@
       "discipline": "landevei",
       "officialDate": "2027-05-09",
       "region": "Oslo",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 14.1,
+      "avgFeelsLikeMax": 12.1,
+      "avgPrecipitation": 7,
+      "avgWindSpeed": 16.5,
+      "avgWeatherCode": 3,
+      "comfortScore": 33,
+      "bestYear": {
+        "year": 2018,
+        "comfortScore": 71,
+        "avgTempMax": 18.4,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 15.5,
+        "weatherCode": 0
+      },
+      "worstYear": {
+        "year": 2019,
+        "comfortScore": 4,
+        "avgTempMax": 9.1,
+        "avgPrecipitation": 30.3,
+        "avgWindSpeed": 22.4,
+        "weatherCode": 63
+      },
+      "tempTrend": -0.11,
+      "dataYears": 10
     },
     {
       "id": "dalane-rundt",
@@ -5830,28 +6642,28 @@
       "officialDate": "2026-06-27",
       "region": "Troms",
       "avgTempMax": 15.6,
-      "avgFeelsLikeMax": 14,
-      "avgPrecipitation": 4.9,
-      "avgWindSpeed": 13,
+      "avgFeelsLikeMax": 13.9,
+      "avgPrecipitation": 4.7,
+      "avgWindSpeed": 13.6,
       "avgWeatherCode": 3,
-      "comfortScore": 48,
+      "comfortScore": 47,
       "bestYear": {
         "year": 2025,
-        "comfortScore": 77,
+        "comfortScore": 79,
         "avgTempMax": 18,
         "avgPrecipitation": 0,
-        "avgWindSpeed": 11,
+        "avgWindSpeed": 10.3,
         "weatherCode": 1
       },
       "worstYear": {
         "year": 2019,
         "comfortScore": 1,
-        "avgTempMax": 9.4,
-        "avgPrecipitation": 15.3,
-        "avgWindSpeed": 23,
-        "weatherCode": 73
+        "avgTempMax": 9.2,
+        "avgPrecipitation": 14.3,
+        "avgWindSpeed": 24.1,
+        "weatherCode": 61
       },
-      "tempTrend": 0.79,
+      "tempTrend": 0.8,
       "dataYears": 10
     },
     {
@@ -5900,7 +6712,7 @@
       "bestYear": {
         "year": 2024,
         "comfortScore": 74,
-        "avgTempMax": 20,
+        "avgTempMax": 20.1,
         "avgPrecipitation": 0,
         "avgWindSpeed": 9.2,
         "weatherCode": 1
@@ -5931,7 +6743,7 @@
       "bestYear": {
         "year": 2020,
         "comfortScore": 66,
-        "avgTempMax": 11.6,
+        "avgTempMax": 11.7,
         "avgPrecipitation": 0,
         "avgWindSpeed": 9.5,
         "weatherCode": 0
@@ -5944,7 +6756,7 @@
         "avgWindSpeed": 23.4,
         "weatherCode": 71
       },
-      "tempTrend": 0.26,
+      "tempTrend": 0.25,
       "dataYears": 10
     },
     {
@@ -6077,7 +6889,7 @@
       "discipline": "terreng",
       "officialDate": "2026-06-06",
       "region": "Innlandet",
-      "avgTempMax": 19.2,
+      "avgTempMax": 19.3,
       "avgFeelsLikeMax": 17.5,
       "avgPrecipitation": 3.6,
       "avgWindSpeed": 16,
@@ -6086,7 +6898,7 @@
       "bestYear": {
         "year": 2018,
         "comfortScore": 73,
-        "avgTempMax": 18.8,
+        "avgTempMax": 18.9,
         "avgPrecipitation": 0,
         "avgWindSpeed": 12.6,
         "weatherCode": 1
@@ -6094,7 +6906,7 @@
       "worstYear": {
         "year": 2020,
         "comfortScore": 10,
-        "avgTempMax": 10.6,
+        "avgTempMax": 10.7,
         "avgPrecipitation": 23.5,
         "avgWindSpeed": 15.7,
         "weatherCode": 61
@@ -6108,7 +6920,7 @@
       "discipline": "landevei",
       "officialDate": "2026-05-31",
       "region": "Vestland",
-      "avgTempMax": 15.2,
+      "avgTempMax": 15.3,
       "avgFeelsLikeMax": 13.6,
       "avgPrecipitation": 2.4,
       "avgWindSpeed": 18.1,
@@ -6130,7 +6942,7 @@
         "avgWindSpeed": 16.7,
         "weatherCode": 61
       },
-      "tempTrend": -0.39,
+      "tempTrend": -0.38,
       "dataYears": 10
     },
     {
@@ -6139,16 +6951,30 @@
       "discipline": "landevei",
       "officialDate": "2027-05-08",
       "region": "Buskerud",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 15.4,
+      "avgFeelsLikeMax": 12.7,
+      "avgPrecipitation": 0.2,
+      "avgWindSpeed": 13.6,
+      "avgWeatherCode": 3,
+      "comfortScore": 57,
+      "bestYear": {
+        "year": 2016,
+        "comfortScore": 69,
+        "avgTempMax": 21.4,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 9.9,
+        "weatherCode": 1
+      },
+      "worstYear": {
+        "year": 2019,
+        "comfortScore": 30,
+        "avgTempMax": 10.2,
+        "avgPrecipitation": 0.3,
+        "avgWindSpeed": 13,
+        "weatherCode": 51
+      },
+      "tempTrend": 0.08,
+      "dataYears": 10
     },
     {
       "id": "styggmannen-gravel-og-terrengritt",
@@ -6218,29 +7044,29 @@
       "discipline": "terreng",
       "officialDate": "2027-02-21",
       "region": "Finnmark",
-      "avgTempMax": -7.1,
-      "avgFeelsLikeMax": -11.9,
+      "avgTempMax": -7.2,
+      "avgFeelsLikeMax": -11.8,
       "avgPrecipitation": 0.5,
-      "avgWindSpeed": 17.1,
+      "avgWindSpeed": 15.3,
       "avgWeatherCode": 71,
-      "comfortScore": 13,
+      "comfortScore": 14,
       "bestYear": {
         "year": 2022,
-        "comfortScore": 43,
-        "avgTempMax": -12.2,
+        "comfortScore": 44,
+        "avgTempMax": -12.5,
         "avgPrecipitation": 0,
-        "avgWindSpeed": 9.8,
+        "avgWindSpeed": 9,
         "weatherCode": 3
       },
       "worstYear": {
         "year": 2021,
         "comfortScore": 10,
-        "avgTempMax": -13.9,
-        "avgPrecipitation": 1.5,
-        "avgWindSpeed": 27.5,
+        "avgTempMax": -13.8,
+        "avgPrecipitation": 1.4,
+        "avgWindSpeed": 24.5,
         "weatherCode": 71
       },
-      "tempTrend": -0.16,
+      "tempTrend": -0.14,
       "dataYears": 10
     },
     {
@@ -6280,7 +7106,7 @@
       "discipline": "terreng",
       "officialDate": "2026-05-10",
       "region": "Rogaland",
-      "avgTempMax": 11.8,
+      "avgTempMax": 11.9,
       "avgFeelsLikeMax": 9.4,
       "avgPrecipitation": 11.1,
       "avgWindSpeed": 23.3,
@@ -6297,12 +7123,12 @@
       "worstYear": {
         "year": 2019,
         "comfortScore": 0,
-        "avgTempMax": 8.2,
+        "avgTempMax": 8.3,
         "avgPrecipitation": 10.7,
         "avgWindSpeed": 25.9,
         "weatherCode": 61
       },
-      "tempTrend": -0.14,
+      "tempTrend": -0.13,
       "dataYears": 10
     },
     {
@@ -6328,12 +7154,12 @@
       "worstYear": {
         "year": 2023,
         "comfortScore": 11,
-        "avgTempMax": 18,
+        "avgTempMax": 18.1,
         "avgPrecipitation": 18.4,
         "avgWindSpeed": 20.7,
         "weatherCode": 63
       },
-      "tempTrend": 0.09,
+      "tempTrend": 0.1,
       "dataYears": 10
     },
     {
@@ -6342,16 +7168,30 @@
       "discipline": "landevei",
       "officialDate": "2026-08-15",
       "region": "Rogaland",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 18,
+      "avgFeelsLikeMax": 17.2,
+      "avgPrecipitation": 8.8,
+      "avgWindSpeed": 21.4,
+      "avgWeatherCode": 61,
+      "comfortScore": 14,
+      "bestYear": {
+        "year": 2016,
+        "comfortScore": 58,
+        "avgTempMax": 17.3,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 18.6,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2024,
+        "comfortScore": 12,
+        "avgTempMax": 16.2,
+        "avgPrecipitation": 24.2,
+        "avgWindSpeed": 28.4,
+        "weatherCode": 63
+      },
+      "tempTrend": 0.09,
+      "dataYears": 10
     },
     {
       "id": "arctic-race-of-norway-challenge",
@@ -6359,16 +7199,30 @@
       "discipline": "landevei",
       "officialDate": "2026-08-15",
       "region": "Nordland",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 15.2,
+      "avgFeelsLikeMax": 13.9,
+      "avgPrecipitation": 6.6,
+      "avgWindSpeed": 18.6,
+      "avgWeatherCode": 3,
+      "comfortScore": 35,
+      "bestYear": {
+        "year": 2018,
+        "comfortScore": 70,
+        "avgTempMax": 16.7,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 9.6,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2020,
+        "comfortScore": 8,
+        "avgTempMax": 13.7,
+        "avgPrecipitation": 10.5,
+        "avgWindSpeed": 42.2,
+        "weatherCode": 61
+      },
+      "tempTrend": 0.42,
+      "dataYears": 10
     },
     {
       "id": "uno-x-noregskopp-voss-3-etappars-bomoen-fellesstart",
@@ -6376,16 +7230,30 @@
       "discipline": "landevei",
       "officialDate": "2026-08-09",
       "region": "Nordland",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 18.5,
+      "avgFeelsLikeMax": 18.1,
+      "avgPrecipitation": 10.3,
+      "avgWindSpeed": 9.9,
+      "avgWeatherCode": 53,
+      "comfortScore": 27,
+      "bestYear": {
+        "year": 2020,
+        "comfortScore": 58,
+        "avgTempMax": 23,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 7.6,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2016,
+        "comfortScore": 13,
+        "avgTempMax": 12.3,
+        "avgPrecipitation": 27.6,
+        "avgWindSpeed": 13.6,
+        "weatherCode": 63
+      },
+      "tempTrend": -0.08,
+      "dataYears": 10
     },
     {
       "id": "ullensaker-rundt",
@@ -6393,29 +7261,29 @@
       "discipline": "landevei",
       "officialDate": "2026-09-13",
       "region": "Akershus",
-      "avgTempMax": 15.6,
-      "avgFeelsLikeMax": 13.4,
-      "avgPrecipitation": 3.8,
-      "avgWindSpeed": 14.3,
+      "avgTempMax": 15.5,
+      "avgFeelsLikeMax": 13.2,
+      "avgPrecipitation": 3.6,
+      "avgWindSpeed": 15,
       "avgWeatherCode": 3,
-      "comfortScore": 48,
+      "comfortScore": 47,
       "bestYear": {
-        "year": 2024,
-        "comfortScore": 68,
-        "avgTempMax": 14.7,
+        "year": 2021,
+        "comfortScore": 62,
+        "avgTempMax": 16.5,
         "avgPrecipitation": 0,
-        "avgWindSpeed": 6.5,
+        "avgWindSpeed": 13.1,
         "weatherCode": 3
       },
       "worstYear": {
         "year": 2022,
         "comfortScore": 9,
-        "avgTempMax": 13.8,
-        "avgPrecipitation": 29.9,
-        "avgWindSpeed": 20.5,
+        "avgTempMax": 13.7,
+        "avgPrecipitation": 27,
+        "avgWindSpeed": 21.4,
         "weatherCode": 63
       },
-      "tempTrend": -0.3,
+      "tempTrend": -0.27,
       "dataYears": 10
     },
     {
@@ -6548,16 +7416,30 @@
       "discipline": "landevei",
       "officialDate": "2026-08-22",
       "region": "Innlandet",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 17.2,
+      "avgFeelsLikeMax": 15.1,
+      "avgPrecipitation": 2.9,
+      "avgWindSpeed": 16.9,
+      "avgWeatherCode": 3,
+      "comfortScore": 51,
+      "bestYear": {
+        "year": 2021,
+        "comfortScore": 70,
+        "avgTempMax": 18.3,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 9.7,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2019,
+        "comfortScore": 12,
+        "avgTempMax": 15.3,
+        "avgPrecipitation": 8.3,
+        "avgWindSpeed": 20.9,
+        "weatherCode": 61
+      },
+      "tempTrend": -0.12,
+      "dataYears": 10
     },
     {
       "id": "uno-x-cup-i-glamdal-fellesstart-sondag",
@@ -6565,16 +7447,30 @@
       "discipline": "landevei",
       "officialDate": "2026-08-23",
       "region": "Innlandet",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 19.4,
+      "avgFeelsLikeMax": 18.1,
+      "avgPrecipitation": 2.7,
+      "avgWindSpeed": 14.3,
+      "avgWeatherCode": 3,
+      "comfortScore": 52,
+      "bestYear": {
+        "year": 2022,
+        "comfortScore": 68,
+        "avgTempMax": 20.1,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 7.6,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2024,
+        "comfortScore": 12,
+        "avgTempMax": 15.5,
+        "avgPrecipitation": 17.5,
+        "avgWindSpeed": 26.4,
+        "weatherCode": 63
+      },
+      "tempTrend": -0.38,
+      "dataYears": 10
     },
     {
       "id": "vossagravel-7-juni",
@@ -6582,16 +7478,30 @@
       "discipline": "gravel",
       "officialDate": "2026-06-07",
       "region": "Vestland",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 11.3,
+      "avgFeelsLikeMax": 8.7,
+      "avgPrecipitation": 2.8,
+      "avgWindSpeed": 9.4,
+      "avgWeatherCode": 51,
+      "comfortScore": 33,
+      "bestYear": {
+        "year": 2018,
+        "comfortScore": 68,
+        "avgTempMax": 17.6,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 10.5,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2024,
+        "comfortScore": 14,
+        "avgTempMax": 5.8,
+        "avgPrecipitation": 4.4,
+        "avgWindSpeed": 8,
+        "weatherCode": 71
+      },
+      "tempTrend": -0.54,
+      "dataYears": 10
     },
     {
       "id": "sykkelgledecup-ritt-1",
@@ -6599,16 +7509,30 @@
       "discipline": "landevei",
       "officialDate": "2026-06-01",
       "region": "Norge",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 19.4,
+      "avgFeelsLikeMax": 18.2,
+      "avgPrecipitation": 1.2,
+      "avgWindSpeed": 12.4,
+      "avgWeatherCode": 3,
+      "comfortScore": 59,
+      "bestYear": {
+        "year": 2017,
+        "comfortScore": 60,
+        "avgTempMax": 16.2,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 13.4,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2025,
+        "comfortScore": 20,
+        "avgTempMax": 15.3,
+        "avgPrecipitation": 3.3,
+        "avgWindSpeed": 18.2,
+        "weatherCode": 61
+      },
+      "tempTrend": -0.54,
+      "dataYears": 10
     },
     {
       "id": "sykkelgledecup-ritt-2",
@@ -6616,16 +7540,30 @@
       "discipline": "terreng",
       "officialDate": "2026-06-22",
       "region": "Akershus",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 18.4,
+      "avgFeelsLikeMax": 16.5,
+      "avgPrecipitation": 1.7,
+      "avgWindSpeed": 14.8,
+      "avgWeatherCode": 3,
+      "comfortScore": 58,
+      "bestYear": {
+        "year": 2017,
+        "comfortScore": 66,
+        "avgTempMax": 15.2,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 9.9,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2021,
+        "comfortScore": 19,
+        "avgTempMax": 16.9,
+        "avgPrecipitation": 5.6,
+        "avgWindSpeed": 19.4,
+        "weatherCode": 61
+      },
+      "tempTrend": 0.41,
+      "dataYears": 10
     },
     {
       "id": "sykkelgledecup-ritt-3",
@@ -6633,16 +7571,30 @@
       "discipline": "landevei",
       "officialDate": "2026-08-17",
       "region": "Norge",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 19.8,
+      "avgFeelsLikeMax": 18.3,
+      "avgPrecipitation": 1.5,
+      "avgWindSpeed": 15.4,
+      "avgWeatherCode": 3,
+      "comfortScore": 54,
+      "bestYear": {
+        "year": 2016,
+        "comfortScore": 67,
+        "avgTempMax": 22.2,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 10.1,
+        "weatherCode": 2
+      },
+      "worstYear": {
+        "year": 2019,
+        "comfortScore": 12,
+        "avgTempMax": 15.4,
+        "avgPrecipitation": 10.9,
+        "avgWindSpeed": 22,
+        "weatherCode": 61
+      },
+      "tempTrend": 0.21,
+      "dataYears": 10
     },
     {
       "id": "sykkelgledecup-ritt-4",
@@ -6650,16 +7602,30 @@
       "discipline": "terreng",
       "officialDate": "2026-08-31",
       "region": "Akershus",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 17.7,
+      "avgFeelsLikeMax": 16,
+      "avgPrecipitation": 0.2,
+      "avgWindSpeed": 10.7,
+      "avgWeatherCode": 3,
+      "comfortScore": 69,
+      "bestYear": {
+        "year": 2020,
+        "comfortScore": 76,
+        "avgTempMax": 16.1,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 9,
+        "weatherCode": 2
+      },
+      "worstYear": {
+        "year": 2019,
+        "comfortScore": 38,
+        "avgTempMax": 18,
+        "avgPrecipitation": 1.5,
+        "avgWindSpeed": 17.5,
+        "weatherCode": 53
+      },
+      "tempTrend": 0,
+      "dataYears": 10
     },
     {
       "id": "sykkelgledecup-ritt-5",
@@ -6667,16 +7633,30 @@
       "discipline": "landevei",
       "officialDate": "2026-09-07",
       "region": "Norge",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 17.4,
+      "avgFeelsLikeMax": 16.4,
+      "avgPrecipitation": 2.5,
+      "avgWindSpeed": 11.5,
+      "avgWeatherCode": 3,
+      "comfortScore": 61,
+      "bestYear": {
+        "year": 2022,
+        "comfortScore": 72,
+        "avgTempMax": 17.2,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 8.4,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2019,
+        "comfortScore": 10,
+        "avgTempMax": 10.4,
+        "avgPrecipitation": 17.2,
+        "avgWindSpeed": 14.8,
+        "weatherCode": 61
+      },
+      "tempTrend": 0.63,
+      "dataYears": 10
     },
     {
       "id": "sykkelgledecup-ritt-6",
@@ -6684,16 +7664,30 @@
       "discipline": "terreng",
       "officialDate": "2026-09-21",
       "region": "Akershus",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 14.9,
+      "avgFeelsLikeMax": 13.7,
+      "avgPrecipitation": 3.8,
+      "avgWindSpeed": 12.3,
+      "avgWeatherCode": 3,
+      "comfortScore": 51,
+      "bestYear": {
+        "year": 2019,
+        "comfortScore": 67,
+        "avgTempMax": 19.2,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 6.9,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2018,
+        "comfortScore": 9,
+        "avgTempMax": 13.9,
+        "avgPrecipitation": 15.8,
+        "avgWindSpeed": 26.4,
+        "weatherCode": 63
+      },
+      "tempTrend": -0.05,
+      "dataYears": 10
     },
     {
       "id": "if-froys-jokerfestival-fellesstart",
@@ -6701,16 +7695,30 @@
       "discipline": "landevei",
       "officialDate": "2026-08-23",
       "region": "Akershus",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 19.5,
+      "avgFeelsLikeMax": 18.1,
+      "avgPrecipitation": 2,
+      "avgWindSpeed": 17.6,
+      "avgWeatherCode": 3,
+      "comfortScore": 49,
+      "bestYear": {
+        "year": 2017,
+        "comfortScore": 66,
+        "avgTempMax": 17.1,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 16.9,
+        "weatherCode": 2
+      },
+      "worstYear": {
+        "year": 2024,
+        "comfortScore": 11,
+        "avgTempMax": 16.2,
+        "avgPrecipitation": 14.8,
+        "avgWindSpeed": 38.3,
+        "weatherCode": 65
+      },
+      "tempTrend": -0.27,
+      "dataYears": 10
     },
     {
       "id": "if-froys-jokerfestival-gateritt",
@@ -6718,16 +7726,30 @@
       "discipline": "landevei",
       "officialDate": "2026-08-22",
       "region": "Akershus",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 18.1,
+      "avgFeelsLikeMax": 16.4,
+      "avgPrecipitation": 3.6,
+      "avgWindSpeed": 18.9,
+      "avgWeatherCode": 3,
+      "comfortScore": 47,
+      "bestYear": {
+        "year": 2021,
+        "comfortScore": 66,
+        "avgTempMax": 19.7,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 9.1,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2024,
+        "comfortScore": 11,
+        "avgTempMax": 15.2,
+        "avgPrecipitation": 13.1,
+        "avgWindSpeed": 26.3,
+        "weatherCode": 63
+      },
+      "tempTrend": -0.01,
+      "dataYears": 10
     },
     {
       "id": "smartdok-of300-km-solo",
@@ -6735,16 +7757,30 @@
       "discipline": "terreng",
       "officialDate": "2027-07-29",
       "region": "Finnmark",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 17.5,
+      "avgFeelsLikeMax": 16.3,
+      "avgPrecipitation": 2.4,
+      "avgWindSpeed": 12,
+      "avgWeatherCode": 51,
+      "comfortScore": 43,
+      "bestYear": {
+        "year": 2022,
+        "comfortScore": 64,
+        "avgTempMax": 17,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 12.7,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2017,
+        "comfortScore": 10,
+        "avgTempMax": 22.6,
+        "avgPrecipitation": 11.9,
+        "avgWindSpeed": 13,
+        "weatherCode": 63
+      },
+      "tempTrend": -0.7,
+      "dataYears": 10
     },
     {
       "id": "smartdok-of300-km-team",
@@ -6752,16 +7788,30 @@
       "discipline": "terreng",
       "officialDate": "2027-07-29",
       "region": "Finnmark",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 17.5,
+      "avgFeelsLikeMax": 16.3,
+      "avgPrecipitation": 2.4,
+      "avgWindSpeed": 12,
+      "avgWeatherCode": 51,
+      "comfortScore": 43,
+      "bestYear": {
+        "year": 2022,
+        "comfortScore": 64,
+        "avgTempMax": 17,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 12.7,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2017,
+        "comfortScore": 10,
+        "avgTempMax": 22.6,
+        "avgPrecipitation": 11.9,
+        "avgWindSpeed": 13,
+        "weatherCode": 63
+      },
+      "tempTrend": -0.7,
+      "dataYears": 10
     },
     {
       "id": "norrona-of700-km-solo",
@@ -6769,16 +7819,30 @@
       "discipline": "terreng",
       "officialDate": "2027-07-26",
       "region": "Finnmark",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 18.5,
+      "avgFeelsLikeMax": 18.1,
+      "avgPrecipitation": 1.3,
+      "avgWindSpeed": 11.8,
+      "avgWeatherCode": 51,
+      "comfortScore": 42,
+      "bestYear": {
+        "year": 2023,
+        "comfortScore": 68,
+        "avgTempMax": 18.3,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 10,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2024,
+        "comfortScore": 16,
+        "avgTempMax": 24.9,
+        "avgPrecipitation": 2.1,
+        "avgWindSpeed": 16.5,
+        "weatherCode": 61
+      },
+      "tempTrend": 0.58,
+      "dataYears": 10
     },
     {
       "id": "norrona-of700-km-team",
@@ -6786,16 +7850,30 @@
       "discipline": "terreng",
       "officialDate": "2027-07-26",
       "region": "Finnmark",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 18.5,
+      "avgFeelsLikeMax": 18.1,
+      "avgPrecipitation": 1.3,
+      "avgWindSpeed": 11.8,
+      "avgWeatherCode": 51,
+      "comfortScore": 42,
+      "bestYear": {
+        "year": 2023,
+        "comfortScore": 68,
+        "avgTempMax": 18.3,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 10,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2024,
+        "comfortScore": 16,
+        "avgTempMax": 24.9,
+        "avgPrecipitation": 2.1,
+        "avgWindSpeed": 16.5,
+        "weatherCode": 61
+      },
+      "tempTrend": 0.58,
+      "dataYears": 10
     },
     {
       "id": "snn1-of150-km-solo",
@@ -6803,16 +7881,30 @@
       "discipline": "terreng",
       "officialDate": "2027-07-24",
       "region": "Finnmark",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 18.7,
+      "avgFeelsLikeMax": 18.5,
+      "avgPrecipitation": 1.1,
+      "avgWindSpeed": 11.3,
+      "avgWeatherCode": 51,
+      "comfortScore": 42,
+      "bestYear": {
+        "year": 2023,
+        "comfortScore": 68,
+        "avgTempMax": 15.5,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 10,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2018,
+        "comfortScore": 32,
+        "avgTempMax": 23.4,
+        "avgPrecipitation": 2.7,
+        "avgWindSpeed": 9.7,
+        "weatherCode": 53
+      },
+      "tempTrend": -0.54,
+      "dataYears": 10
     },
     {
       "id": "norrona-of700-km-sol0",
@@ -6820,16 +7912,30 @@
       "discipline": "terreng",
       "officialDate": "2028-08-31",
       "region": "Finnmark",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 12.9,
+      "avgFeelsLikeMax": 11.1,
+      "avgPrecipitation": 1.7,
+      "avgWindSpeed": 10.7,
+      "avgWeatherCode": 51,
+      "comfortScore": 38,
+      "bestYear": {
+        "year": 2025,
+        "comfortScore": 67,
+        "avgTempMax": 13.8,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 6.2,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2016,
+        "comfortScore": 21,
+        "avgTempMax": 10.9,
+        "avgPrecipitation": 1.9,
+        "avgWindSpeed": 21.3,
+        "weatherCode": 53
+      },
+      "tempTrend": 0.29,
+      "dataYears": 10
     },
     {
       "id": "treningsritt-overhallarunde-landevei",
@@ -6837,16 +7943,30 @@
       "discipline": "landevei",
       "officialDate": "2026-06-18",
       "region": "Trøndelag",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 17.1,
+      "avgFeelsLikeMax": 15.9,
+      "avgPrecipitation": 6.6,
+      "avgWindSpeed": 16.8,
+      "avgWeatherCode": 55,
+      "comfortScore": 30,
+      "bestYear": {
+        "year": 2020,
+        "comfortScore": 64,
+        "avgTempMax": 20.1,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 15.3,
+        "weatherCode": 2
+      },
+      "worstYear": {
+        "year": 2017,
+        "comfortScore": 10,
+        "avgTempMax": 14.5,
+        "avgPrecipitation": 15.4,
+        "avgWindSpeed": 22.6,
+        "weatherCode": 63
+      },
+      "tempTrend": 0.59,
+      "dataYears": 10
     },
     {
       "id": "mosjoen-gravel",
@@ -6854,16 +7974,30 @@
       "discipline": "landevei",
       "officialDate": "2026-08-16",
       "region": "Nordland",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 16.4,
+      "avgFeelsLikeMax": 15.8,
+      "avgPrecipitation": 7.8,
+      "avgWindSpeed": 13.8,
+      "avgWeatherCode": 63,
+      "comfortScore": 20,
+      "bestYear": {
+        "year": 2021,
+        "comfortScore": 69,
+        "avgTempMax": 14.4,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 7.1,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2025,
+        "comfortScore": 7,
+        "avgTempMax": 13.3,
+        "avgPrecipitation": 10.9,
+        "avgWindSpeed": 23.4,
+        "weatherCode": 61
+      },
+      "tempTrend": -0.01,
+      "dataYears": 10
     },
     {
       "id": "acc-km-2026-landevei-lukket",
@@ -6871,16 +8005,30 @@
       "discipline": "landevei",
       "officialDate": "2026-09-05",
       "region": "Agder",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 18.7,
+      "avgFeelsLikeMax": 17.6,
+      "avgPrecipitation": 1.3,
+      "avgWindSpeed": 17.3,
+      "avgWeatherCode": 51,
+      "comfortScore": 37,
+      "bestYear": {
+        "year": 2016,
+        "comfortScore": 62,
+        "avgTempMax": 18.9,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 12.6,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2024,
+        "comfortScore": 15,
+        "avgTempMax": 23.5,
+        "avgPrecipitation": 2.4,
+        "avgWindSpeed": 20.9,
+        "weatherCode": 61
+      },
+      "tempTrend": 0.44,
+      "dataYears": 10
     },
     {
       "id": "sognefjellrittet",
@@ -6967,12 +8115,12 @@
       "worstYear": {
         "year": 2019,
         "comfortScore": 15,
-        "avgTempMax": 20.3,
+        "avgTempMax": 20.4,
         "avgPrecipitation": 4,
         "avgWindSpeed": 20.7,
         "weatherCode": 63
       },
-      "tempTrend": 0.05,
+      "tempTrend": 0.04,
       "dataYears": 10
     },
     {
@@ -6981,7 +8129,7 @@
       "discipline": "landevei",
       "officialDate": "2026-06-13",
       "region": "Östergötland",
-      "avgTempMax": 19.5,
+      "avgTempMax": 19.6,
       "avgFeelsLikeMax": 17.9,
       "avgPrecipitation": 1.4,
       "avgWindSpeed": 18.5,
@@ -6998,7 +8146,7 @@
       "worstYear": {
         "year": 2019,
         "comfortScore": 15,
-        "avgTempMax": 20.1,
+        "avgTempMax": 20.2,
         "avgPrecipitation": 4.5,
         "avgWindSpeed": 20.7,
         "weatherCode": 63
