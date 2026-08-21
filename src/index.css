@@ -834,9 +834,15 @@ code {
 }
 
 @keyframes hero-gradient-shift {
-  0%   { background-position: 0% center; }
-  50%  { background-position: 100% center; }
-  100% { background-position: 0% center; }
+  0% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
 }
 
 .home-page__hero-sub {
@@ -3020,7 +3026,7 @@ code {
   > .history-table__details {
     border: none;
     border-radius: 0;
-  border-top: 1px solid var(--accent-border);
+    border-top: 1px solid var(--accent-border);
     overflow: visible;
 
     &:first-child {
@@ -4849,4 +4855,141 @@ details[open] .packing-list__summary::before {
 .endringslogg__empty {
   color: var(--text-muted);
   font-style: italic;
+}
+
+/* ── Feedback FAB button ────────────────────────────────────── */
+.feedback-fab {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1rem;
+  z-index: 900;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: opacity 0.15s, transform 0.15s;
+  opacity: 0.75;
+}
+
+.feedback-fab:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.feedback-fab__confirmation {
+  position: fixed;
+  bottom: 4rem;
+  right: 1rem;
+  z-index: 900;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.5rem 0.875rem;
+  font-size: 0.85rem;
+  box-shadow: var(--shadow);
+  animation: snackbar-slide-up 0.2s ease-out both;
+}
+
+/* ── Feedback Modal ─────────────────────────────────────────── */
+.feedback-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.feedback-modal {
+  background: var(--bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.feedback-modal__heading {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--text-h);
+}
+
+.feedback-modal__textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.625rem 0.75rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+  resize: vertical;
+  background: var(--bg);
+  color: var(--text);
+  box-sizing: border-box;
+}
+
+.feedback-modal__textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.feedback-modal__char-count {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--text);
+  opacity: 0.5;
+  text-align: right;
+}
+
+.feedback-modal__actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.feedback-modal__submit {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.feedback-modal__submit:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.feedback-modal__submit:hover:not(:disabled) {
+  opacity: 0.88;
+}
+
+.feedback-modal__cancel {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: var(--text);
+  transition: background 0.15s;
+}
+
+.feedback-modal__cancel:hover {
+  background: var(--accent-bg);
 }

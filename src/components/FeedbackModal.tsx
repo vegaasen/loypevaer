@@ -48,7 +48,6 @@ export function FeedbackModal({ isOpen, onClose, onSubmit }: Props) {
           rows={4}
           placeholder="Skriv din tilbakemelding her…"
           aria-label="Tilbakemelding"
-          autoFocus
         />
         <p className="feedback-modal__char-count">
           {text.length} / {MAX_LENGTH}
