@@ -53,4 +53,18 @@ describe("FeedbackModal", () => {
     await userEvent.type(screen.getByRole("textbox"), "hei");
     expect(screen.getByText("3 / 280")).toBeInTheDocument();
   });
+
+  it("resets textarea after Send", async () => {
+    render(<FeedbackModal isOpen={true} onClose={vi.fn()} onSubmit={vi.fn()} />);
+    await userEvent.type(screen.getByRole("textbox"), "noe");
+    await userEvent.click(screen.getByRole("button", { name: /Send/i }));
+    expect(screen.getByRole("textbox")).toHaveValue("");
+  });
+
+  it("resets textarea after Avbryt", async () => {
+    render(<FeedbackModal isOpen={true} onClose={vi.fn()} onSubmit={vi.fn()} />);
+    await userEvent.type(screen.getByRole("textbox"), "noe");
+    await userEvent.click(screen.getByRole("button", { name: /Avbryt/i }));
+    expect(screen.getByRole("textbox")).toHaveValue("");
+  });
 });

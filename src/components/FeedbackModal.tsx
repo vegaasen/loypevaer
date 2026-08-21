@@ -29,11 +29,14 @@ export function FeedbackModal({ isOpen, onClose, onSubmit }: Props) {
   return (
     <div
       className="feedback-modal-overlay"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="feedback-modal-heading"
+      onKeyDown={(e) => { if (e.key === "Escape") handleCancel(); }}
     >
-      <div className="feedback-modal">
+      <div
+        className="feedback-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="feedback-modal-heading"
+      >
         <h2 id="feedback-modal-heading" className="feedback-modal__heading">
           Hva ønsker du å endre eller savner du?
         </h2>
@@ -45,6 +48,7 @@ export function FeedbackModal({ isOpen, onClose, onSubmit }: Props) {
           rows={4}
           placeholder="Skriv din tilbakemelding her…"
           aria-label="Tilbakemelding"
+          autoFocus
         />
         <p className="feedback-modal__char-count">
           {text.length} / {MAX_LENGTH}
