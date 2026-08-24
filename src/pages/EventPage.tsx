@@ -148,10 +148,18 @@ export function EventPage() {
     } else {
       url.searchParams.delete("date");
     }
-    url.searchParams.delete("start");
-    url.searchParams.delete("finish");
+    if (startTime) {
+      url.searchParams.set("start", startTime);
+    } else {
+      url.searchParams.delete("start");
+    }
+    if (finishTime) {
+      url.searchParams.set("finish", finishTime);
+    } else {
+      url.searchParams.delete("finish");
+    }
     return url.toString();
-  }, [selectedDate]);
+  }, [selectedDate, startTime, finishTime]);
 
   if (!rittData) {
     return (
@@ -328,7 +336,7 @@ export function EventPage() {
           >
             {planned ? "📌 Mine arrangement" : "📍 Legg til mine arrangement"}
           </button>
-          <ShareButton url={shareUrl} />
+          <ShareButton url={shareUrl} label={startTime && finishTime ? "Del (med tid)" : "Del"} />
         </div>
         {planned && <AlertsOptIn eventId={rittData.id} />}
       </header>
