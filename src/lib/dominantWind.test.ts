@@ -9,13 +9,13 @@ function makeResult(windDir: number, windSpeed: number): WaypointWeather {
   return {
     waypoint: wp(0, 0),
     data: {
-      temp: 15,
+      source: "forecast" as const,
+      tempMax: 15,
+      tempMin: 10,
       windSpeed,
       windDirection: windDir,
       precipitation: 0,
-      precipitationProbability: 0,
-      symbol: "clearsky_day",
-      isClimateBased: false,
+      weatherCode: 0,
     },
     isLoading: false,
     isError: false,
