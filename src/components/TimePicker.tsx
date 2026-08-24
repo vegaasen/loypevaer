@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Discipline } from "../lib/arrangements";
 import { calcFinishTimeFromSpeed, formatPace, paceToKmh } from "../lib/timing";
 
-const SPEED_OPTIONS = [15, 18, 20, 22, 25, 28, 30, 32, 35, 38, 40] as const;
+const SPEED_CHIPS = [15, 20, 25, 30, 35] as const;
+const PACE_CHIPS = [4.0, 5.0, 6.0, 7.0, 8.0] as const;
 
 function formatDuration(decimalHours: number): string {
   const hrs = Math.floor(decimalHours);
@@ -10,10 +11,6 @@ function formatDuration(decimalHours: number): string {
   if (mins === 0) return `${hrs}t`;
   return `${hrs}t ${mins}m`;
 }
-// Pace options in decimal min/km — displayed as mm:ss
-const PACE_OPTIONS = [
-  3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 9.0, 10.0, 12.0,
-] as const;
 
 type Props = {
   startTime: string;
@@ -41,24 +38,55 @@ export function TimePicker({
 }: Props) {
   const hasValues = startTime !== "" || finishTime !== "";
   const timingActive = startTime !== "" && finishTime !== "";
-  const [selectedSpeed, setSelectedSpeed] = useState("");
+  const [selectedSpeed, setSelectedSpeed] = useState<number | "">("");
+  const [pendingSpeed, setPendingSpeed] = useState<number | "">("");
   const isPace = discipline === "løping";
 
-  function handleSpeedChange(e: React.ChangeEvent<HTMLSelectElement>) {
-    const raw = Number(e.target.value);
-    if (!raw || !startTime || !distanceKm) return;
-    setSelectedSpeed(e.target.value);
+  function handleChipClick(raw: number) {
+    if (!distanceKm) return;
+    if (!startTime) {
+      setPendingSpeed(raw);
+      setSelectedSpeed("");
+      document.getElementById("ritt-start-time")?.focus();
+      return;
+    }
     const kmh = isPace ? paceToKmh(raw) : raw;
     const computed = calcFinishTimeFromSpeed(startTime, distanceKm, kmh);
+    setSelectedSpeed(raw);
+    setPendingSpeed("");
     onFinishChange(computed);
   }
+
+  const onFinishChangeRef = useRef(onFinishChange);
+  useEffect(() => {
+    onFinishChangeRef.current = onFinishChange;
+  });
+
+  useEffect(() => {
+    if (!pendingSpeed || !startTime || !distanceKm) return;
+    const kmh = isPace ? paceToKmh(pendingSpeed) : pendingSpeed;
+    const computed = calcFinishTimeFromSpeed(startTime, distanceKm, kmh);
+    setSelectedSpeed(pendingSpeed);
+    setPendingSpeed("");
+    onFinishChangeRef.current(computed);
+  }, [startTime, pendingSpeed, distanceKm, isPace]);
+
+  useEffect(() => {
+    if (startTime === "" && finishTime === "") {
+      setSelectedSpeed("");
+      setPendingSpeed("");
+    }
+  }, [startTime, finishTime]);
 
   return (
     <>
       <div className="picker-field">
         <label htmlFor="ritt-start-time" className="picker-field__label">
           Starttid
-          {officialStartTime && !startTime && (
+          {pendingSpeed && !startTime && (
+            <span className="picker-field__hint">← sett starttid</span>
+          )}
+          {officialStartTime && !startTime && !pendingSpeed && (
             <button
               type="button"
               className="picker-field__reset-link"
@@ -73,43 +101,42 @@ export function TimePicker({
           type="time"
           value={startTime}
           onChange={(e) => onStartChange(e.target.value)}
-          className="picker-field__input"
+          className={["picker-field__input", pendingSpeed ? "picker-field__input--highlight" : ""]
+            .filter(Boolean)
+            .join(" ")}
         />
       </div>
 
       {distanceKm != null && (
-        <div className="picker-field">
-          <label htmlFor="ritt-speed" className="picker-field__label">
-            {isPace ? "Tempo" : "Fart"}
-          </label>
-          <select
-            id="ritt-speed"
-            className="picker-field__input picker-field__select"
-            value={startTime ? selectedSpeed : ""}
-            onChange={handleSpeedChange}
-            disabled={!startTime}
-          >
-            <option value="" disabled>
-              {isPace ? "Velg…" : "Velg…"}
-            </option>
-            {isPace
-              ? PACE_OPTIONS.map((p) => {
-                  const estHours = distanceKm
-                    ? Math.round(((distanceKm * p) / 60) * 10) / 10
-                    : null;
-                  return (
-                    <option key={p} value={p}>
-                      {formatPace(p)} min/km
-                      {estHours != null ? ` ≈ ${formatDuration(estHours)}` : ""}
-                    </option>
-                  );
-                })
-              : SPEED_OPTIONS.map((s) => (
-                  <option key={s} value={s}>
-                    {s} km/t{distanceKm ? ` ≈ ${formatDuration(distanceKm / s)}` : ""}
-                  </option>
-                ))}
-          </select>
+        <div className="speed-chips">
+          <div className="speed-chips__label">{isPace ? "Tempo" : "Fart"}</div>
+          <div className="speed-chips__row">
+            {(isPace ? PACE_CHIPS : SPEED_CHIPS).map((val) => {
+              const estHours = isPace ? (distanceKm * val) / 60 : distanceKm / val;
+              const isSelected = selectedSpeed === val;
+              const isPending = pendingSpeed === val;
+              return (
+                <button
+                  key={val}
+                  type="button"
+                  className={[
+                    "speed-chip",
+                    isSelected ? "speed-chip--selected" : "",
+                    isPending ? "speed-chip--pending" : "",
+                  ]
+                    .filter(Boolean)
+                    .join(" ")}
+                  onClick={() => handleChipClick(val)}
+                  aria-pressed={isSelected}
+                >
+                  <span className="speed-chip__value">
+                    {isPace ? `${formatPace(val)} min/km` : `${val} km/t`}
+                  </span>
+                  <span className="speed-chip__duration">~{formatDuration(estHours)}</span>
+                </button>
+              );
+            })}
+          </div>
         </div>
       )}
 
