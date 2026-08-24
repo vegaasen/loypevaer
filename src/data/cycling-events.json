@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T05:31:19.101Z",
+  "generatedAt": "2026-08-24T05:34:13.064Z",
   "source": "eqtiming.com / Norges Cykleforbund (organizationId=13)",
   "events": [
     {
@@ -71,7 +71,7 @@
       "distance": 50,
       "distanceLabel": "50 km",
       "sportLevel": "Tur",
-      "region": "Hol",
+      "region": "Buskerud",
       "url": "https://www.fat-viking.com/en",
       "waypoints": [
         {
@@ -907,7 +907,7 @@
       "distance": 158,
       "distanceLabel": "158 km",
       "sportLevel": "UCI",
-      "region": "Hole",
+      "region": "Buskerud",
       "url": " ",
       "waypoints": [
         {
@@ -925,7 +925,7 @@
       "distance": 171.6,
       "distanceLabel": "171.6 km",
       "sportLevel": "UCI",
-      "region": "Buskerud",
+      "region": "Ringerike",
       "url": " ",
       "waypoints": [
         {
