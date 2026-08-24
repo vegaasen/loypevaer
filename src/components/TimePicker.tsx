@@ -174,7 +174,7 @@ export function TimePicker({
                     ? `${formatPace(60 / impliedKmh)} min/km`
                     : `~${impliedKmh.toFixed(0)} km/t`}
                 </span>
-                <span className="speed-chip__duration">egendefinert</span>
+                <span className="speed-chip__duration">tilpasset</span>
               </span>
             )}
           </div>
