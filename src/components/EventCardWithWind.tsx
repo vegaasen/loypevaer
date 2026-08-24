@@ -11,5 +11,6 @@ type Props = React.ComponentProps<typeof EventCard> & {
 export function EventCardWithWind({ waypoints, date, ...cardProps }: Props) {
   const results = useWeather(waypoints, date);
   const wind = dominantWind(results, waypoints);
-  return <EventCard {...cardProps} windSummary={wind} />;
+  const safeWind = wind === "Sidevind" ? null : wind;
+  return <EventCard {...cardProps} windSummary={safeWind} />;
 }

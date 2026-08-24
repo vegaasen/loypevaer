@@ -24,7 +24,7 @@ type Props = {
   /** "pending" = date not yet officially confirmed; "cancelled" = event has been cancelled */
   dateStatus?: "pending" | "cancelled";
   /** Dominant wind direction from WeatherStrip, if available */
-  windSummary?: "Medvind" | "Motvind" | "Sidevind" | null;
+  windSummary?: "Medvind" | "Motvind" | null;
 };
 
 export const EventCard = memo(function EventCard({

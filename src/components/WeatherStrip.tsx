@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useWeather, type WeatherResult } from "../hooks/useWeather";
 import type { ClimateStoryInput } from "../lib/climateStory";
-import { dominantWind } from "../lib/dominantWind";
 import { calcWaypointTimes, formatArrivalTime } from "../lib/timing";
 import type { Waypoint } from "../lib/weather";
 import { getHistoricalYears, getWeatherCache, isForecastRange, isYrRange } from "../lib/weather";
@@ -17,8 +16,6 @@ type Props = {
   externalResults?: WeatherResult[];
   /** Optional callback fired when a waypoint card is clicked. */
   onWaypointClick?: (waypoint: Waypoint, index: number) => void;
-  /** Optional callback fired when all waypoints are loaded, with the dominant wind direction. */
-  onWindSummary?: (summary: "Medvind" | "Motvind" | "Sidevind" | null) => void;
 };
 
 export function WeatherStrip({
@@ -28,7 +25,6 @@ export function WeatherStrip({
   finishTime,
   externalResults,
   onWaypointClick,
-  onWindSummary,
 }: Props) {
   const timingActive =
     date != null &&
@@ -46,13 +42,6 @@ export function WeatherStrip({
 
   const internalResults = useWeather(externalResults ? [] : waypoints, date, datetimes);
   const results = externalResults ?? internalResults;
-
-  useEffect(() => {
-    if (!onWindSummary) return;
-    const allLoaded = results.every((r) => !r.isLoading);
-    if (!allLoaded) return;
-    onWindSummary(dominantWind(results, waypoints));
-  }, [results, waypoints, onWindSummary]);
 
   const mode =
     date == null
