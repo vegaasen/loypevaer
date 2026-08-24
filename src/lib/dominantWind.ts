@@ -1,7 +1,7 @@
-import { routeBearingForWaypoint, windRelativeLabel } from "./wind";
-import { resolveWeatherValues } from "./weather";
-import type { Waypoint } from "./weather";
 import type { WaypointWeather } from "../hooks/useWeather";
+import type { Waypoint } from "./weather";
+import { resolveWeatherValues } from "./weather";
+import { routeBearingForWaypoint, windRelativeLabel } from "./wind";
 
 const WIND_SIGNIFICANT = 3; // m/s
 

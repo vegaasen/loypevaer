@@ -1,6 +1,6 @@
-import { describe, it, expect } from "vitest";
-import { dominantWind } from "./dominantWind";
+import { describe, expect, it } from "vitest";
 import type { WaypointWeather } from "../hooks/useWeather";
+import { dominantWind } from "./dominantWind";
 import type { Waypoint } from "./weather";
 
 const wp = (lat: number, lon: number): Waypoint => ({ label: "X", lat, lon });
@@ -31,8 +31,8 @@ describe("dominantWind", () => {
     // Route goes north (bearing ≈ 0°). Wind from north (0°) = wind blows south = headwind.
     const waypoints = [wp(60, 10), wp(61, 10), wp(62, 10)];
     const results: WaypointWeather[] = [
-      makeResult(0, 5),   // headwind
-      makeResult(0, 5),   // headwind
+      makeResult(0, 5), // headwind
+      makeResult(0, 5), // headwind
       makeResult(180, 5), // tailwind
     ];
     expect(dominantWind(results, waypoints)).toBe("Motvind");
@@ -44,7 +44,7 @@ describe("dominantWind", () => {
     const results: WaypointWeather[] = [
       makeResult(180, 5), // tailwind
       makeResult(180, 5), // tailwind
-      makeResult(0, 5),   // headwind
+      makeResult(0, 5), // headwind
     ];
     expect(dominantWind(results, waypoints)).toBe("Medvind");
   });

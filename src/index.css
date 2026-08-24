@@ -2132,6 +2132,23 @@ code {
   }
 }
 
+.ritt-card__wind-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-top: 4px;
+  font-weight: 600;
+}
+.ritt-card__wind-badge--headwind {
+  background: #fff3cd;
+  color: #856404;
+}
+.ritt-card__wind-badge--tailwind {
+  background: #d1fae5;
+  color: #065f46;
+}
+
 .ritt-card__bookmark {
   display: flex;
   align-items: center;

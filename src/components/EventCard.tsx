@@ -23,6 +23,8 @@ type Props = {
   isPast?: boolean;
   /** "pending" = date not yet officially confirmed; "cancelled" = event has been cancelled */
   dateStatus?: "pending" | "cancelled";
+  /** Dominant wind direction from WeatherStrip, if available */
+  windSummary?: "Medvind" | "Motvind" | "Sidevind" | null;
 };
 
 export const EventCard = memo(function EventCard({
@@ -39,6 +41,7 @@ export const EventCard = memo(function EventCard({
   countdown,
   isPast = false,
   dateStatus,
+  windSummary,
 }: Props) {
   const dateStr = displayDate ?? officialDate;
   const formattedDate = formatNorwegianDate(dateStr);
@@ -101,6 +104,22 @@ export const EventCard = memo(function EventCard({
               Avlyst
             </span>
           </div>
+        )}
+        {windSummary === "Motvind" && (
+          <span
+            className="ritt-card__wind-badge ritt-card__wind-badge--headwind"
+            aria-label="Dominerende motvind"
+          >
+            ↙ Motvind
+          </span>
+        )}
+        {windSummary === "Medvind" && (
+          <span
+            className="ritt-card__wind-badge ritt-card__wind-badge--tailwind"
+            aria-label="Dominerende medvind"
+          >
+            ↗ Medvind
+          </span>
         )}
       </div>
     </Link>
