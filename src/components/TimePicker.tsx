@@ -2,6 +2,16 @@ import { useEffect, useRef, useState } from "react";
 import type { Discipline } from "../lib/arrangements";
 import { calcFinishTimeFromSpeed, formatPace, paceToKmh } from "../lib/timing";
 
+/** Computes implied speed (km/h) from start/finish times and distance. Returns null if invalid. */
+function impliedSpeedKmh(startTime: string, finishTime: string, distanceKm: number): number | null {
+  const [sh, sm] = startTime.split(":").map(Number);
+  const [fh, fm] = finishTime.split(":").map(Number);
+  if ([sh, sm, fh, fm].some(Number.isNaN)) return null;
+  let durationH = fh + fm / 60 - (sh + sm / 60);
+  if (durationH <= 0) durationH += 24; // midnight crossing
+  return distanceKm / durationH;
+}
+
 const SPEED_CHIPS = [15, 20, 25, 30, 35] as const;
 const PACE_CHIPS = [4.0, 5.0, 6.0, 7.0, 8.0] as const;
 
@@ -56,6 +66,19 @@ export function TimePicker({
     setPendingSpeed("");
     onFinishChange(computed);
   }
+
+  function handleFinishChange(time: string) {
+    // User typed a custom finish time — deselect any chip
+    setSelectedSpeed("");
+    setPendingSpeed("");
+    onFinishChange(time);
+  }
+
+  // Implied speed when no chip is selected but timing is active
+  const impliedKmh =
+    selectedSpeed === "" && timingActive && distanceKm != null
+      ? impliedSpeedKmh(startTime, finishTime, distanceKm)
+      : null;
 
   const startTimeRef = useRef<HTMLInputElement>(null);
   const onFinishChangeRef = useRef(onFinishChange);
@@ -144,6 +167,16 @@ export function TimePicker({
                 </button>
               );
             })}
+            {impliedKmh != null && (
+              <span className="speed-chip speed-chip--custom" aria-label="Egendefinert tid">
+                <span className="speed-chip__value">
+                  {isPace
+                    ? `${formatPace(60 / impliedKmh)} min/km`
+                    : `~${impliedKmh.toFixed(0)} km/t`}
+                </span>
+                <span className="speed-chip__duration">egendefinert</span>
+              </span>
+            )}
           </div>
         </div>
       )}
@@ -156,7 +189,7 @@ export function TimePicker({
           id="ritt-finish-time"
           type="time"
           value={finishTime}
-          onChange={(e) => onFinishChange(e.target.value)}
+          onChange={(e) => handleFinishChange(e.target.value)}
           className="picker-field__input"
         />
       </div>

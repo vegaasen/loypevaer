@@ -4183,6 +4183,17 @@ details[open] .gear-suggestion__summary::before {
   }
 }
 
+.speed-chip--custom {
+  border-color: var(--border);
+  background: var(--bg-muted, var(--bg));
+  cursor: default;
+  opacity: 0.75;
+
+  .speed-chip__value {
+    color: var(--text-muted);
+  }
+}
+
 .picker-field__input--highlight {
   border-color: var(--accent);
   box-shadow: 0 0 0 3px var(--accent-bg);
