@@ -28,3 +28,4 @@ AWS_DEPLOY_NOTES.md
 *.sw?
 .junie/plans
 .junie/memory
+.superpowers/

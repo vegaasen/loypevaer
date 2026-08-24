@@ -4198,8 +4198,12 @@ details[open] .gear-suggestion__summary::before {
 }
 
 @keyframes pulse-hint {
-  from { opacity: 0.7; }
-  to   { opacity: 1;   }
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .picker-field__clear {

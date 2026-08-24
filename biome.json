@@ -14,7 +14,8 @@
       "!node_modules",
       "!public/sitemap.xml",
       "!public/weather-cache.json",
-      "!src/data/weather-cache.json"
+      "!src/data/weather-cache.json",
+      "!.superpowers"
     ]
   },
   "formatter": {
