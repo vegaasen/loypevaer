@@ -389,6 +389,7 @@ export function EventPage() {
                 finishTime={finishTime || null}
                 externalResults={weatherResults}
                 onWaypointClick={(wp, i) => trackWaypointSelected(rittData.id, wp.label, i)}
+                totalDistanceKm={rittData.distance}
               />
             </>
           )}

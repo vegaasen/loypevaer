@@ -3464,9 +3464,9 @@ details[open] .history-table__summary::before {
 }
 
 .weather-card__distance {
-  font-size: 11px;
-  color: var(--text);
+  font-size: 0.75em;
   opacity: 0.7;
+  font-weight: normal;
 }
 
 .weather-card__arrival {

@@ -248,6 +248,7 @@ export function GpxPage() {
                 date={selectedDate || null}
                 startTime={startTime || null}
                 finishTime={finishTime || null}
+                totalDistanceKm={route.distanceKm}
               />
             </ErrorBoundary>
           </section>

@@ -16,6 +16,8 @@ type Props = {
   externalResults?: WeatherResult[];
   /** Optional callback fired when a waypoint card is clicked. */
   onWaypointClick?: (waypoint: Waypoint, index: number) => void;
+  /** Total route distance in km. When provided, intermediate waypoints show an approximate distance label. */
+  totalDistanceKm?: number;
 };
 
 export function WeatherStrip({
@@ -25,6 +27,7 @@ export function WeatherStrip({
   finishTime,
   externalResults,
   onWaypointClick,
+  totalDistanceKm,
 }: Props) {
   const timingActive =
     date != null &&
@@ -89,6 +92,11 @@ export function WeatherStrip({
             onClick={onWaypointClick ? () => onWaypointClick(waypoint, i) : undefined}
             date={date}
             historicalYears={date ? historicalYearsPerWaypoint[i] : undefined}
+            approximateDistanceKm={
+              totalDistanceKm != null && n > 2 && i > 0 && i < n - 1
+                ? (i / (n - 1)) * totalDistanceKm
+                : undefined
+            }
           />
         ))}
       </div>

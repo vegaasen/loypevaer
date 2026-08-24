@@ -1,5 +1,5 @@
-import { render, screen, fireEvent } from "@testing-library/react";
-import { describe, it, expect, vi } from "vitest";
+import { fireEvent, render, screen } from "@testing-library/react";
+import { describe, expect, it, vi } from "vitest";
 import { TimePicker } from "./TimePicker";
 
 function setup(overrides: Partial<React.ComponentProps<typeof TimePicker>> = {}) {

@@ -32,6 +32,8 @@ type Props = {
   historicalYears?: ClimateStoryInput;
   /** Full ISO arrival datetime for this waypoint ("YYYY-MM-DDTHH:00"). Used to fetch the correct calendar day in the hourly breakdown. */
   datetime?: string | null;
+  /** Approximate distance along the route (km). Shown only for intermediate waypoints. */
+  approximateDistanceKm?: number;
 };
 
 /** Determines warning CSS modifier classes based on weather thresholds. */
@@ -227,6 +229,7 @@ export const WeatherCard = memo(function WeatherCard({
   date,
   historicalYears,
   datetime,
+  approximateDistanceKm,
 }: Props) {
   const { label } = waypoint;
   const [expanded, setExpanded] = useState(false);
@@ -253,7 +256,12 @@ export const WeatherCard = memo(function WeatherCard({
       onClick={onClick}
       style={onClick ? { cursor: "pointer" } : undefined}
     >
-      <div className="weather-card__label">{label}</div>
+      <div className="weather-card__label">
+        {approximateDistanceKm != null && (
+          <span className="weather-card__distance">~{Math.round(approximateDistanceKm)} km · </span>
+        )}
+        {label}
+      </div>
       {waypoint.altitude != null && (
         <div className="weather-card__altitude">{waypoint.altitude} m o.h.</div>
       )}
