@@ -1,5 +1,50 @@
 [
   {
+    "sha": "83f379fcfffe1ec2f29ebebb1604f70fb4d0accc",
+    "shortSha": "83f379f",
+    "date": "2026-08-24",
+    "type": "fix",
+    "scope": null,
+    "subject": "improve speed chip readability on mobile",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/83f379fcfffe1ec2f29ebebb1604f70fb4d0accc"
+  },
+  {
+    "sha": "d87d1bfb8a552a5935b1aada2d0900da08c85133",
+    "shortSha": "d87d1bf",
+    "date": "2026-08-24",
+    "type": "feat",
+    "scope": null,
+    "subject": "show implied speed pill when custom finish time is set",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/d87d1bfb8a552a5935b1aada2d0900da08c85133"
+  },
+  {
+    "sha": "9f785e1541cd7a4a7e05fbe0d101dcc8c8e9807b",
+    "shortSha": "9f785e1",
+    "date": "2026-08-24",
+    "type": "feat",
+    "scope": null,
+    "subject": "add speed chip CSS styles",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/9f785e1541cd7a4a7e05fbe0d101dcc8c8e9807b"
+  },
+  {
+    "sha": "9a8f7321ff86242466436843f8f62b5cbe23f05b",
+    "shortSha": "9a8f732",
+    "date": "2026-08-24",
+    "type": "fix",
+    "scope": null,
+    "subject": "use ref for start time focus, fix aria-pressed pending, guard stale distanceKm",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/9a8f7321ff86242466436843f8f62b5cbe23f05b"
+  },
+  {
+    "sha": "fd89975a408e472ce3badd378bd9aa8ad56d7c8d",
+    "shortSha": "fd89975",
+    "date": "2026-08-24",
+    "type": "feat",
+    "scope": null,
+    "subject": "replace speed dropdown with chip buttons in TimePicker",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/fd89975a408e472ce3badd378bd9aa8ad56d7c8d"
+  },
+  {
     "sha": "5c3570dd64a6d545492967a5a099cf766f0adbbb",
     "shortSha": "5c3570d",
     "date": "2026-08-24",
