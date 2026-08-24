@@ -1,5 +1,50 @@
 [
   {
+    "sha": "5c3570dd64a6d545492967a5a099cf766f0adbbb",
+    "shortSha": "5c3570d",
+    "date": "2026-08-24",
+    "type": "fix",
+    "scope": null,
+    "subject": "correct WeatherData shape in dominantWind tests",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/5c3570dd64a6d545492967a5a099cf766f0adbbb"
+  },
+  {
+    "sha": "36e18f597f38d93ce203ce20ec0644e66a7b5c6c",
+    "shortSha": "36e18f5",
+    "date": "2026-08-24",
+    "type": "feat",
+    "scope": null,
+    "subject": "include start/finish time in shared event URL",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/36e18f597f38d93ce203ce20ec0644e66a7b5c6c"
+  },
+  {
+    "sha": "14307c24c1f7289500c3b9aa5f8aef7c97a32d7e",
+    "shortSha": "14307c2",
+    "date": "2026-08-24",
+    "type": "feat",
+    "scope": null,
+    "subject": "wire wind badge to planned EventCards on homepage",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/14307c24c1f7289500c3b9aa5f8aef7c97a32d7e"
+  },
+  {
+    "sha": "589cb946fbe28d575ad338a94480408376971f1d",
+    "shortSha": "589cb94",
+    "date": "2026-08-24",
+    "type": "feat",
+    "scope": null,
+    "subject": "show dominant wind badge on EventCard",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/589cb946fbe28d575ad338a94480408376971f1d"
+  },
+  {
+    "sha": "5cc260fc11b89861cfdc40d48fbf5852ef8f083a",
+    "shortSha": "5cc260f",
+    "date": "2026-08-24",
+    "type": "feat",
+    "scope": null,
+    "subject": "add dominantWind pure function",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/5cc260fc11b89861cfdc40d48fbf5852ef8f083a"
+  },
+  {
     "sha": "b829f9d6cbf71f230308d75dd46ce187c169ea33",
     "shortSha": "b829f9d",
     "date": "2026-08-21",
