@@ -47,7 +47,7 @@ export function TimePicker({
     if (!startTime) {
       setPendingSpeed(raw);
       setSelectedSpeed("");
-      document.getElementById("ritt-start-time")?.focus();
+      startTimeRef.current?.focus();
       return;
     }
     const kmh = isPace ? paceToKmh(raw) : raw;
@@ -57,6 +57,7 @@ export function TimePicker({
     onFinishChange(computed);
   }
 
+  const startTimeRef = useRef<HTMLInputElement>(null);
   const onFinishChangeRef = useRef(onFinishChange);
   useEffect(() => {
     onFinishChangeRef.current = onFinishChange;
@@ -78,6 +79,12 @@ export function TimePicker({
     }
   }, [startTime, finishTime]);
 
+  // Clear pending speed if distanceKm changes (stale chip guard)
+  // biome-ignore lint/correctness/useExhaustiveDependencies: distanceKm is the trigger
+  useEffect(() => {
+    setPendingSpeed("");
+  }, [distanceKm]);
+
   return (
     <>
       <div className="picker-field">
@@ -97,6 +104,7 @@ export function TimePicker({
           )}
         </label>
         <input
+          ref={startTimeRef}
           id="ritt-start-time"
           type="time"
           value={startTime}
@@ -127,7 +135,7 @@ export function TimePicker({
                     .filter(Boolean)
                     .join(" ")}
                   onClick={() => handleChipClick(val)}
-                  aria-pressed={isSelected}
+                  aria-pressed={isSelected || isPending}
                 >
                   <span className="speed-chip__value">
                     {isPace ? `${formatPace(val)} min/km` : `${val} km/t`}
