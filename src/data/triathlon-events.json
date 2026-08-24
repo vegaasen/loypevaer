@@ -1,23 +1,5 @@
 {
-  "generatedAt": "2026-08-17T04:39:47.480Z",
+  "generatedAt": "2026-08-24T04:41:52.594Z",
   "source": "triatlonforbundet.no",
-  "events": [
-    {
-      "id": "trondheim-triatlon",
-      "name": "Trondheim triatlon",
-      "discipline": "triathlon",
-      "officialDate": "2026-08-22",
-      "distance": 51,
-      "distanceLabel": "Standarddistanse (1.5km svøm / 40km sykkel / 10km løp)",
-      "region": "Trøndelag",
-      "url": "https://www.triatlonforbundet.no/terminliste/terminliste-2026/trondheim-triatlon-2026/",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Trondheim",
-          "lat": 63.4304475,
-          "lon": 10.3952118
-        }
-      ]
-    }
-  ]
+  "events": []
 }
