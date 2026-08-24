@@ -23,6 +23,7 @@ const tagline = TAGLINES[Math.floor(Math.random() * TAGLINES.length)];
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { EventCard } from "../components/EventCard";
+import { EventCardWithWind } from "../components/EventCardWithWind";
 import { FeaturedEventCard } from "../components/FeaturedEventCard";
 import { PageMeta } from "../components/PageMeta";
 import { useFilterContext } from "../context/useFilterContext";
@@ -464,23 +465,26 @@ export function HomePage() {
             {plannedRaces.map((r) => {
               const entry = getPlanned(r.id);
               const date = entry?.date ?? r.officialDate;
-              return (
-                <EventCard
-                  key={r.id}
-                  id={r.id}
-                  name={r.name}
-                  officialDate={r.officialDate}
-                  distance={r.distance}
-                  distanceLabel={r.distanceLabel}
-                  region={r.region}
-                  discipline={r.discipline}
-                  displayDate={entry?.date}
-                  countdown={formatCountdown(date)}
-                  planned
-                  isPast={daysUntil(date) < 0}
-                  dateStatus={r.dateStatus}
-                  onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
-                />
+              const cardProps = {
+                id: r.id,
+                name: r.name,
+                officialDate: r.officialDate,
+                distance: r.distance,
+                distanceLabel: r.distanceLabel,
+                region: r.region,
+                discipline: r.discipline,
+                displayDate: entry?.date,
+                countdown: formatCountdown(date),
+                planned: true as const,
+                isPast: daysUntil(date) < 0,
+                dateStatus: r.dateStatus,
+                onTogglePlanned: (e: React.MouseEvent<HTMLButtonElement>) =>
+                  handleToggle(r.id, r.officialDate, e),
+              };
+              return r.waypoints && r.waypoints.length > 0 ? (
+                <EventCardWithWind key={r.id} {...cardProps} waypoints={r.waypoints} date={date} />
+              ) : (
+                <EventCard key={r.id} {...cardProps} />
               );
             })}
           </div>
