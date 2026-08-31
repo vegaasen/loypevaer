@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T05:34:13.064Z",
+  "generatedAt": "2026-08-31T11:19:03.233Z",
   "source": "eqtiming.com / Norges Cykleforbund (organizationId=13)",
   "events": [
     {
@@ -925,7 +925,7 @@
       "distance": 171.6,
       "distanceLabel": "171.6 km",
       "sportLevel": "UCI",
-      "region": "Ringerike",
+      "region": "Buskerud",
       "url": " ",
       "waypoints": [
         {
@@ -1184,7 +1184,7 @@
       "distanceLabel": "60.2 km",
       "sportLevel": "NC",
       "region": "Innlandet",
-      "url": "https://lillehammerck.no/lillehammer-petit-prix/",
+      "url": "https://lillehammerck.no/lillehammer-sykkelfestival-nc-lillehammer-petit-prix-2026/",
       "waypoints": [
         {
           "label": "Start – Tingberg/Øyer",
@@ -1606,7 +1606,7 @@
       "distance": 90,
       "distanceLabel": "90 km",
       "sportLevel": "Trim",
-      "region": "Buskerud",
+      "region": "Øvre Eiker",
       "url": "http://eikerrittet.no/",
       "waypoints": [
         {
