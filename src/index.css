@@ -1368,7 +1368,7 @@ code {
   gap: 0;
   padding: 20px 0 24px;
   @media (max-width: 1024px) {
-    padding: 16px 0 20px;
+    padding: 16px 20px;
   }
 }
 
@@ -1510,6 +1510,7 @@ code {
 
   @media (max-width: 600px) {
     width: 100%;
+    margin-bottom: 10px;
   }
 }
 
@@ -1719,6 +1720,10 @@ code {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 12px;
+
+  @media (max-width: 600px) {
+    gap: 16px;
+  }
 }
 
 .home-page__mine-section {
@@ -1729,11 +1734,14 @@ code {
 }
 
 .home-page__mine-hint {
-  padding: 12px 0 0;
+  margin: 12px 0 0;
   font-size: 13px;
   color: var(--text-muted);
   @media (max-width: 1024px) {
-    padding: 10px 0 0;
+    margin: 10px 0 0;
+  }
+  @media (max-width: 600px) {
+    margin-top: 16px;
   }
 }
 
@@ -1779,6 +1787,11 @@ code {
     border-color: var(--accent-border);
     box-shadow: var(--shadow-sm);
     transform: translateY(-2px);
+  }
+
+  @media (max-width: 600px) {
+    gap: 0;
+    margin: 0 20px;
   }
 }
 
