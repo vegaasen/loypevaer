@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T08:08:09.443Z",
+  "generatedAt": "2026-09-05T07:37:33.224Z",
   "events": [
     {
       "id": "birkebeinerrennet",
@@ -7,29 +7,29 @@
       "discipline": "langrenn",
       "officialDate": "2026-03-14",
       "region": "Innlandet",
-      "avgTempMax": 1.3,
-      "avgFeelsLikeMax": -2.8,
+      "avgTempMax": 1.5,
+      "avgFeelsLikeMax": -2.6,
       "avgPrecipitation": 0.2,
       "avgWindSpeed": 13.3,
       "avgWeatherCode": 3,
       "comfortScore": 37,
       "bestYear": {
         "year": 2019,
-        "comfortScore": 43,
-        "avgTempMax": -1.9,
+        "comfortScore": 44,
+        "avgTempMax": -1.2,
         "avgPrecipitation": 0,
-        "avgWindSpeed": 9.9,
+        "avgWindSpeed": 8.8,
         "weatherCode": 3
       },
       "worstYear": {
         "year": 2023,
         "comfortScore": 14,
-        "avgTempMax": -1.1,
-        "avgPrecipitation": 0.3,
-        "avgWindSpeed": 15.1,
+        "avgTempMax": -1.3,
+        "avgPrecipitation": 0.4,
+        "avgWindSpeed": 16,
         "weatherCode": 71
       },
-      "tempTrend": -0.28,
+      "tempTrend": -0.38,
       "dataYears": 10
     },
     {
@@ -38,18 +38,18 @@
       "discipline": "langrenn",
       "officialDate": "2026-03-13",
       "region": "Innlandet",
-      "avgTempMax": -0.6,
-      "avgFeelsLikeMax": -4.5,
-      "avgPrecipitation": 3.7,
-      "avgWindSpeed": 13.7,
+      "avgTempMax": -0.4,
+      "avgFeelsLikeMax": -4.3,
+      "avgPrecipitation": 3.6,
+      "avgWindSpeed": 13.4,
       "avgWeatherCode": 3,
       "comfortScore": 27,
       "bestYear": {
         "year": 2025,
-        "comfortScore": 49,
-        "avgTempMax": -2.4,
+        "comfortScore": 50,
+        "avgTempMax": -2,
         "avgPrecipitation": 0,
-        "avgWindSpeed": 9,
+        "avgWindSpeed": 8.5,
         "weatherCode": 1
       },
       "worstYear": {
@@ -60,7 +60,7 @@
         "avgWindSpeed": 15.9,
         "weatherCode": 75
       },
-      "tempTrend": -0.48,
+      "tempTrend": -0.39,
       "dataYears": 10
     },
     {
@@ -69,29 +69,29 @@
       "discipline": "langrenn",
       "officialDate": "2026-02-14",
       "region": "Oslo",
-      "avgTempMax": -1.8,
-      "avgFeelsLikeMax": -5.7,
-      "avgPrecipitation": 2.9,
-      "avgWindSpeed": 12.8,
+      "avgTempMax": -1.6,
+      "avgFeelsLikeMax": -5.4,
+      "avgPrecipitation": 2.8,
+      "avgWindSpeed": 12.5,
       "avgWeatherCode": 3,
-      "comfortScore": 30,
+      "comfortScore": 31,
       "bestYear": {
         "year": 2017,
         "comfortScore": 54,
-        "avgTempMax": 1.3,
+        "avgTempMax": 1.1,
         "avgPrecipitation": 0,
-        "avgWindSpeed": 5.7,
+        "avgWindSpeed": 5.6,
         "weatherCode": 1
       },
       "worstYear": {
         "year": 2022,
         "comfortScore": 0,
-        "avgTempMax": 1.9,
-        "avgPrecipitation": 26.5,
-        "avgWindSpeed": 22.7,
+        "avgTempMax": 2.2,
+        "avgPrecipitation": 25.5,
+        "avgWindSpeed": 23,
         "weatherCode": 75
       },
-      "tempTrend": -0.02,
+      "tempTrend": -0.05,
       "dataYears": 10
     },
     {
