@@ -1,7 +1,6 @@
 import type { WaypointWeather } from "../hooks/useWeather";
 import { gearGroup } from "../lib/disciplines";
 import { buildPackingList } from "../lib/packingList";
-import { getWaxTips } from "../lib/waxTips";
 import type { Waypoint } from "../lib/weather";
 import { resolveWeatherValues } from "../lib/weather";
 import {
@@ -15,7 +14,6 @@ import {
 } from "../lib/weatherThresholds";
 import { routeBearingForWaypoint, windRelativeLabel } from "../lib/wind";
 import { PackingList } from "./PackingList";
-import { WaxTips } from "./WaxTips";
 
 /** Runners generate more body heat than cyclists at the same air temp, so
  *  their cold-gear thresholds shift this many degrees colder. */
@@ -191,15 +189,6 @@ export function GearSuggestion({ results, waypoints, discipline = "landevei" }: 
 
   const packingItems = buildPackingList(results, discipline);
 
-  const loaded = results.filter((r) => r.data != null);
-  const waxTips =
-    gearGroup(discipline) === "ski"
-      ? getWaxTips(
-          Math.min(...loaded.map((r) => resolveWeatherValues(r.data!).temp)),
-          Math.max(...loaded.map((r) => resolveWeatherValues(r.data!).temp)),
-        )
-      : null;
-
   return (
     <details className="gear-suggestion__details">
       <summary className="gear-suggestion__summary">Utstyrstips</summary>
@@ -218,7 +207,6 @@ export function GearSuggestion({ results, waypoints, discipline = "landevei" }: 
             ))}
           </ul>
           <PackingList items={packingItems} />
-          {waxTips && <WaxTips tips={waxTips} />}
         </div>
       </div>
     </details>

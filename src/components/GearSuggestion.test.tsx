@@ -26,16 +26,4 @@ describe("GearSuggestion", () => {
     expect(screen.getAllByText(/skalljakke/i).length).toBeGreaterThan(0);
     expect(screen.queryByText(/regnjakke/i)).not.toBeInTheDocument();
   });
-
-  it("renders Smøretips for langrenn", () => {
-    const results = makeResults({ tempMin: -8, tempMax: -4 });
-    render(<GearSuggestion results={results} waypoints={waypoints} discipline="langrenn" />);
-    expect(screen.getByText("Smøretips (klassisk)")).toBeInTheDocument();
-  });
-
-  it("does not render Smøretips for cycling", () => {
-    const results = makeResults({ tempMin: -8, tempMax: -4 });
-    render(<GearSuggestion results={results} waypoints={waypoints} discipline="landevei" />);
-    expect(screen.queryByText("Smøretips (klassisk)")).not.toBeInTheDocument();
-  });
 });

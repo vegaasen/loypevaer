@@ -10,6 +10,7 @@ import { PageMeta } from "../components/PageMeta";
 import { RaceDayCountdown } from "../components/RaceDayCountdown";
 import { ShareButton } from "../components/ShareButton";
 import { TimePicker } from "../components/TimePicker";
+import { WaxTips } from "../components/WaxTips";
 import { WeatherStrip } from "../components/WeatherStrip";
 import { useMyEvents } from "../hooks/useMyEvents";
 import { useWeather } from "../hooks/useWeather";
@@ -465,6 +466,9 @@ export function EventPage() {
             waypoints={rittData.waypoints}
             discipline={rittData.discipline}
           />
+        )}
+        {!forecastOnly && selectedDate && (
+          <WaxTips results={weatherResults} discipline={rittData.discipline} />
         )}
         {!forecastOnly && (
           <ErrorBoundary
