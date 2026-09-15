@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T08:44:28.122Z",
+  "generatedAt": "2026-09-15T08:36:15.030Z",
   "events": [
     {
       "id": "birkebeinerrennet",
@@ -379,29 +379,29 @@
       "discipline": "triathlon",
       "officialDate": "2026-08-15",
       "region": "Vestland",
-      "avgTempMax": 16.9,
-      "avgFeelsLikeMax": 16.5,
-      "avgPrecipitation": 5.3,
-      "avgWindSpeed": 11.1,
-      "avgWeatherCode": 51,
-      "comfortScore": 37,
+      "avgTempMax": 16.4,
+      "avgFeelsLikeMax": 15.7,
+      "avgPrecipitation": 5.4,
+      "avgWindSpeed": 11.6,
+      "avgWeatherCode": 61,
+      "comfortScore": 25,
       "bestYear": {
         "year": 2016,
-        "comfortScore": 73,
-        "avgTempMax": 15.3,
+        "comfortScore": 71,
+        "avgTempMax": 14.7,
         "avgPrecipitation": 0,
-        "avgWindSpeed": 6.2,
+        "avgWindSpeed": 6.4,
         "weatherCode": 3
       },
       "worstYear": {
         "year": 2017,
-        "comfortScore": 11,
-        "avgTempMax": 14.5,
-        "avgPrecipitation": 9.6,
-        "avgWindSpeed": 17.4,
+        "comfortScore": 9,
+        "avgTempMax": 13.9,
+        "avgPrecipitation": 9.9,
+        "avgWindSpeed": 18.6,
         "weatherCode": 61
       },
-      "tempTrend": 0.14,
+      "tempTrend": 0.21,
       "dataYears": 10
     },
     {
@@ -4594,7 +4594,7 @@
       "name": "Fat Viking 2026",
       "discipline": "terreng",
       "officialDate": "2026-01-24",
-      "region": "Buskerud",
+      "region": "Hol",
       "avgTempMax": -0.8,
       "avgFeelsLikeMax": -4.7,
       "avgPrecipitation": 2.1,
