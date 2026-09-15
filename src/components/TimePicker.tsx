@@ -13,6 +13,7 @@ function impliedSpeedKmh(startTime: string, finishTime: string, distanceKm: numb
 }
 
 const SPEED_CHIPS = [15, 20, 25, 30, 35] as const;
+const LANGRENN_SPEED_CHIPS = [8, 10, 12, 15, 18] as const;
 const PACE_CHIPS = [4.0, 5.0, 6.0, 7.0, 8.0] as const;
 
 function formatDuration(decimalHours: number): string {
@@ -51,6 +52,7 @@ export function TimePicker({
   const [selectedSpeed, setSelectedSpeed] = useState<number | "">("");
   const [pendingSpeed, setPendingSpeed] = useState<number | "">("");
   const isPace = discipline === "løping";
+  const speedChips = discipline === "langrenn" ? LANGRENN_SPEED_CHIPS : SPEED_CHIPS;
 
   function handleChipClick(raw: number) {
     if (!distanceKm) return;
@@ -142,7 +144,7 @@ export function TimePicker({
         <div className="speed-chips">
           <div className="speed-chips__label">{isPace ? "Tempo" : "Fart"}</div>
           <div className="speed-chips__row">
-            {(isPace ? PACE_CHIPS : SPEED_CHIPS).map((val) => {
+            {(isPace ? PACE_CHIPS : speedChips).map((val) => {
               const estHours = isPace ? (distanceKm * val) / 60 : distanceKm / val;
               const isSelected = selectedSpeed === val;
               const isPending = pendingSpeed === val;
