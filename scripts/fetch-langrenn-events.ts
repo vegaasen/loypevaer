@@ -1,9 +1,11 @@
 /**
  * Sync script: fetches Norwegian cross-country skiing (langrenn) events from
  * the EQ Timing API (via live.eqtiming.com, organizationId=32 = Norges
- * Skiforbund), filters to Langrenn/Turrenn races, deduplicates against the
- * hand-curated langrenn entries in arrangements.json, geocodes each venue
- * via Nominatim, and writes the result to src/data/langrenn-events.json.
+ * Skiforbund), filters to Langrenn/Turrenn races within the on-snow season
+ * (Oct-May, to exclude summer rollerski races EQ Timing files under the same
+ * sport), deduplicates against the hand-curated langrenn entries in
+ * arrangements.json, geocodes each venue via Nominatim, and writes the
+ * result to src/data/langrenn-events.json.
  *
  * Usage:
  *   bun scripts/fetch-langrenn-events.ts
@@ -37,6 +39,14 @@ const NSF_ORG_ID = 32; // Norges Skiforbund
  * organizationId=32) are excluded — different disciplines.
  */
 const INCLUDED_SPORTS = new Set(["Langrenn", "Turrenn"]);
+
+/**
+ * Norwegian on-snow ski season runs roughly October–May. EQ Timing's
+ * "Langrenn" sport also contains summer rollerski races (e.g. "Blink
+ * Classic", "Rulleskirenn Narvik") that aren't on-snow events — excluding
+ * June-September filters those out without a name-based blocklist.
+ */
+const SKI_SEASON_MONTHS = new Set([10, 11, 12, 1, 2, 3, 4, 5]);
 
 /**
  * Hardcoded distance overrides for events where EQ Timing returns bad data.
@@ -261,10 +271,12 @@ async function main() {
     allRaw.push(...events);
   }
 
-  // Filter: validated + included sports
+  // Filter: validated + included sports + on-snow season
   const filtered = allRaw.filter((e) => {
     if (!e.Validated) return false;
-    return INCLUDED_SPORTS.has(e.Sport.Name);
+    if (!INCLUDED_SPORTS.has(e.Sport.Name)) return false;
+    const month = Number(e.Date.slice(5, 7));
+    return SKI_SEASON_MONTHS.has(month);
   });
 
   console.log(`  ${allRaw.length} total → ${filtered.length} after sport/validation filter`);

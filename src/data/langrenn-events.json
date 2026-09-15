@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T09:38:02.382Z",
+  "generatedAt": "2026-09-15T10:45:58.387Z",
   "source": "eqtiming.com / Norges Skiforbund (organizationId=32)",
   "events": [
     {
@@ -226,7 +226,7 @@
       "distance": 11,
       "distanceLabel": "11 km",
       "sportLevel": "",
-      "region": "Buskerud",
+      "region": "Gol",
       "url": "www.slarverennet.no",
       "waypoints": [
         {
@@ -627,8 +627,8 @@
       "waypoints": [
         {
           "label": "Start/Mål – Vegglifjell",
-          "lat": 60.0468569,
-          "lon": 8.9862576
+          "lat": 60.0464314,
+          "lon": 8.9842441
         }
       ]
     },
@@ -717,8 +717,8 @@
       "waypoints": [
         {
           "label": "Start/Mål – Golsfjellet",
-          "lat": 60.8569305,
-          "lon": 8.9128477
+          "lat": 60.8271603,
+          "lon": 8.9882065
         }
       ]
     },
@@ -784,7 +784,7 @@
       "distance": 25,
       "distanceLabel": "25 km",
       "sportLevel": "",
-      "region": "Sigdal",
+      "region": "Buskerud",
       "url": "",
       "waypoints": [
         {
@@ -1131,8 +1131,8 @@
       "waypoints": [
         {
           "label": "Start/Mål – Mosetertoppen skistadion",
-          "lat": 61.2531244,
-          "lon": 10.5103047
+          "lat": 61.252917,
+          "lon": 10.509584
         }
       ]
     },
@@ -1155,24 +1155,6 @@
       ]
     },
     {
-      "id": "maerraskallen",
-      "name": "Mærraskallen 2026",
-      "discipline": "langrenn",
-      "officialDate": "2026-08-27",
-      "distance": 15,
-      "distanceLabel": "15 km",
-      "sportLevel": "",
-      "region": "Akershus",
-      "url": "https://www.fossumif.no/",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Fossum idrettsanlegg",
-          "lat": 59.96023116,
-          "lon": 10.61365128
-        }
-      ]
-    },
-    {
       "id": "slarverennet-3-april",
       "name": "Slarverennet 3. april 2027",
       "discipline": "langrenn",
@@ -1180,7 +1162,7 @@
       "distance": 27,
       "distanceLabel": "27 km",
       "sportLevel": "",
-      "region": "Buskerud",
+      "region": "Gol",
       "url": "www.slarverennet.no",
       "waypoints": [
         {
@@ -1205,42 +1187,6 @@
           "label": "Start/Mål – Lavangen",
           "lat": 68.7169832,
           "lon": 17.8162748
-        }
-      ]
-    },
-    {
-      "id": "rulleskirenn-narvik",
-      "name": "Rulleskirenn Narvik",
-      "discipline": "langrenn",
-      "officialDate": "2026-08-16",
-      "distance": 10,
-      "distanceLabel": "10 km",
-      "sportLevel": "",
-      "region": "Nordland",
-      "url": " ",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Narvik",
-          "lat": 68.4383796,
-          "lon": 17.4271978
-        }
-      ]
-    },
-    {
-      "id": "blink-classic",
-      "name": "Blink Classic 2026",
-      "discipline": "langrenn",
-      "officialDate": "2026-08-06",
-      "distance": 25.3,
-      "distanceLabel": "25.3 km",
-      "sportLevel": "",
-      "region": "Rogaland",
-      "url": "",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Ålgård",
-          "lat": 58.7692076,
-          "lon": 5.8472399
         }
       ]
     }

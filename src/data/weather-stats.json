@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T10:01:11.476Z",
+  "generatedAt": "2026-09-15T10:46:20.557Z",
   "events": [
     {
       "id": "birkebeinerrennet",
@@ -7401,7 +7401,7 @@
       "name": "Slarverennet 21. mars 2026",
       "discipline": "langrenn",
       "officialDate": "2026-03-21",
-      "region": "Buskerud",
+      "region": "Gol",
       "avgTempMax": 1.7,
       "avgFeelsLikeMax": -2.5,
       "avgPrecipitation": 1,
@@ -8070,30 +8070,16 @@
       "discipline": "langrenn",
       "officialDate": "2026-02-21",
       "region": "Buskerud",
-      "avgTempMax": -1.6,
-      "avgFeelsLikeMax": -5.4,
-      "avgPrecipitation": 1.4,
-      "avgWindSpeed": 11.6,
-      "avgWeatherCode": 71,
-      "comfortScore": 15,
-      "bestYear": {
-        "year": 2018,
-        "comfortScore": 19,
-        "avgTempMax": -3.2,
-        "avgPrecipitation": 0.1,
-        "avgWindSpeed": 6.5,
-        "weatherCode": 71
-      },
-      "worstYear": {
-        "year": 2025,
-        "comfortScore": 11,
-        "avgTempMax": 0,
-        "avgPrecipitation": 6.6,
-        "avgWindSpeed": 7.9,
-        "weatherCode": 75
-      },
-      "tempTrend": 0.38,
-      "dataYears": 10
+      "avgTempMax": null,
+      "avgFeelsLikeMax": null,
+      "avgPrecipitation": null,
+      "avgWindSpeed": null,
+      "avgWeatherCode": null,
+      "comfortScore": null,
+      "bestYear": null,
+      "worstYear": null,
+      "tempTrend": null,
+      "dataYears": 0
     },
     {
       "id": "cuprenn-18-01-26-klassisk",
@@ -8225,30 +8211,16 @@
       "discipline": "langrenn",
       "officialDate": "2026-02-14",
       "region": "Buskerud",
-      "avgTempMax": -4.3,
-      "avgFeelsLikeMax": -8.3,
-      "avgPrecipitation": 1.6,
-      "avgWindSpeed": 10.8,
-      "avgWeatherCode": 3,
-      "comfortScore": 37,
-      "bestYear": {
-        "year": 2017,
-        "comfortScore": 51,
-        "avgTempMax": 1.1,
-        "avgPrecipitation": 0,
-        "avgWindSpeed": 7.7,
-        "weatherCode": 1
-      },
-      "worstYear": {
-        "year": 2022,
-        "comfortScore": 2,
-        "avgTempMax": -1.2,
-        "avgPrecipitation": 14.8,
-        "avgWindSpeed": 17.2,
-        "weatherCode": 75
-      },
-      "tempTrend": -0.05,
-      "dataYears": 10
+      "avgTempMax": null,
+      "avgFeelsLikeMax": null,
+      "avgPrecipitation": null,
+      "avgWindSpeed": null,
+      "avgWeatherCode": null,
+      "comfortScore": null,
+      "bestYear": null,
+      "worstYear": null,
+      "tempTrend": null,
+      "dataYears": 0
     },
     {
       "id": "cuprenn-25-01-26-fristil",
@@ -8348,7 +8320,7 @@
       "name": "Holmvassløpet  2026",
       "discipline": "langrenn",
       "officialDate": "2026-03-29",
-      "region": "Sigdal",
+      "region": "Buskerud",
       "avgTempMax": 1.6,
       "avgFeelsLikeMax": -2.7,
       "avgPrecipitation": 3.1,
@@ -8938,30 +8910,16 @@
       "discipline": "langrenn",
       "officialDate": "2026-04-11",
       "region": "Innlandet",
-      "avgTempMax": 2.9,
-      "avgFeelsLikeMax": -1,
-      "avgPrecipitation": 2.6,
-      "avgWindSpeed": 13,
-      "avgWeatherCode": 3,
-      "comfortScore": 31,
-      "bestYear": {
-        "year": 2019,
-        "comfortScore": 51,
-        "avgTempMax": 0,
-        "avgPrecipitation": 0,
-        "avgWindSpeed": 7.7,
-        "weatherCode": 1
-      },
-      "worstYear": {
-        "year": 2023,
-        "comfortScore": 3,
-        "avgTempMax": 2.6,
-        "avgPrecipitation": 16.3,
-        "avgWindSpeed": 14.3,
-        "weatherCode": 75
-      },
-      "tempTrend": 0.4,
-      "dataYears": 10
+      "avgTempMax": null,
+      "avgFeelsLikeMax": null,
+      "avgPrecipitation": null,
+      "avgWindSpeed": null,
+      "avgWeatherCode": null,
+      "comfortScore": null,
+      "bestYear": null,
+      "worstYear": null,
+      "tempTrend": null,
+      "dataYears": 0
     },
     {
       "id": "svalbard-skimaraton-17-april",
@@ -8995,42 +8953,11 @@
       "dataYears": 10
     },
     {
-      "id": "maerraskallen",
-      "name": "Mærraskallen 2026",
-      "discipline": "langrenn",
-      "officialDate": "2026-08-27",
-      "region": "Akershus",
-      "avgTempMax": 18.1,
-      "avgFeelsLikeMax": 16.7,
-      "avgPrecipitation": 2.8,
-      "avgWindSpeed": 13.9,
-      "avgWeatherCode": 3,
-      "comfortScore": 56,
-      "bestYear": {
-        "year": 2020,
-        "comfortScore": 73,
-        "avgTempMax": 17.4,
-        "avgPrecipitation": 0,
-        "avgWindSpeed": 8.1,
-        "weatherCode": 3
-      },
-      "worstYear": {
-        "year": 2023,
-        "comfortScore": 13,
-        "avgTempMax": 17.7,
-        "avgPrecipitation": 18,
-        "avgWindSpeed": 21,
-        "weatherCode": 63
-      },
-      "tempTrend": -0.36,
-      "dataYears": 10
-    },
-    {
       "id": "slarverennet-3-april",
       "name": "Slarverennet 3. april 2027",
       "discipline": "langrenn",
       "officialDate": "2027-04-03",
-      "region": "Buskerud",
+      "region": "Gol",
       "avgTempMax": 2.7,
       "avgFeelsLikeMax": -1.4,
       "avgPrecipitation": 0.7,
@@ -9085,68 +9012,6 @@
         "weatherCode": 75
       },
       "tempTrend": -0.11,
-      "dataYears": 10
-    },
-    {
-      "id": "rulleskirenn-narvik",
-      "name": "Rulleskirenn Narvik",
-      "discipline": "langrenn",
-      "officialDate": "2026-08-16",
-      "region": "Nordland",
-      "avgTempMax": 16.3,
-      "avgFeelsLikeMax": 15.8,
-      "avgPrecipitation": 8.2,
-      "avgWindSpeed": 12.7,
-      "avgWeatherCode": 61,
-      "comfortScore": 20,
-      "bestYear": {
-        "year": 2016,
-        "comfortScore": 68,
-        "avgTempMax": 12.7,
-        "avgPrecipitation": 0,
-        "avgWindSpeed": 5,
-        "weatherCode": 3
-      },
-      "worstYear": {
-        "year": 2020,
-        "comfortScore": 3,
-        "avgTempMax": 10.2,
-        "avgPrecipitation": 16.7,
-        "avgWindSpeed": 27.5,
-        "weatherCode": 63
-      },
-      "tempTrend": 0.12,
-      "dataYears": 10
-    },
-    {
-      "id": "blink-classic",
-      "name": "Blink Classic 2026",
-      "discipline": "langrenn",
-      "officialDate": "2026-08-06",
-      "region": "Rogaland",
-      "avgTempMax": 17.4,
-      "avgFeelsLikeMax": 15.6,
-      "avgPrecipitation": 7.8,
-      "avgWindSpeed": 19.2,
-      "avgWeatherCode": 51,
-      "comfortScore": 25,
-      "bestYear": {
-        "year": 2023,
-        "comfortScore": 47,
-        "avgTempMax": 17.5,
-        "avgPrecipitation": 0.3,
-        "avgWindSpeed": 9.7,
-        "weatherCode": 51
-      },
-      "worstYear": {
-        "year": 2025,
-        "comfortScore": 9,
-        "avgTempMax": 14.6,
-        "avgPrecipitation": 20.3,
-        "avgWindSpeed": 25.5,
-        "weatherCode": 63
-      },
-      "tempTrend": 0.26,
       "dataYears": 10
     }
   ]
