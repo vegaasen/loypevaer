@@ -15,6 +15,7 @@
     "fetch-triathlon": "bun scripts/fetch-triathlon-events.ts",
     "fetch-running": "bun scripts/fetch-running-events.ts",
     "fetch-cycling": "bun scripts/fetch-cycling-events.ts",
+    "fetch-langrenn": "bun scripts/fetch-langrenn-events.ts",
     "generate-sitemap": "bun scripts/generate-sitemap.ts",
     "generate-changelog": "bun scripts/generate-changelog.ts",
     "generate-stats": "bun scripts/generate-weather-stats.ts",

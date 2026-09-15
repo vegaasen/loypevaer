@@ -119,11 +119,12 @@ export function EventPage() {
 
   const timingActive = selectedDate !== "" && startTime !== "" && finishTime !== "";
 
-  // Running events are single-point loop courses (no route to spread waypoints
-  // along), so instead we show live weather at 20/40/60/80/100% of expected
-  // race duration, all at the same location.
+  // Running and cross-country skiing events are single-point loop courses (no
+  // route to spread waypoints along), so instead we show live weather at
+  // 20/40/60/80/100% of expected race duration, all at the same location.
   const isSingleLocationRunning =
-    rittData?.discipline === "løping" && rittData.waypoints.length === 1;
+    (rittData?.discipline === "løping" || rittData?.discipline === "langrenn") &&
+    rittData.waypoints.length === 1;
 
   // Shown even before a start/finish time is picked, faded, as a preview of
   // the per-point breakdown that appears once timing is set.

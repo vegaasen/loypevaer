@@ -1,0 +1,1248 @@
+{
+  "generatedAt": "2026-09-15T09:38:02.382Z",
+  "source": "eqtiming.com / Norges Skiforbund (organizationId=32)",
+  "events": [
+    {
+      "id": "helterennet",
+      "name": "Helterennet 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-02-28",
+      "distance": 43,
+      "distanceLabel": "43 km",
+      "sportLevel": "",
+      "region": "Telemark",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Rauland",
+          "lat": 59.6947381,
+          "lon": 8.0630086
+        }
+      ]
+    },
+    {
+      "id": "sjusjoen-skimarathon-2026-sjusjoen-langrennstadion",
+      "name": "Sjusjøen Skimarathon 2026 - Sjusjøen Langrennstadion",
+      "discipline": "langrenn",
+      "officialDate": "2026-02-07",
+      "distance": 40,
+      "distanceLabel": "40 km",
+      "sportLevel": "",
+      "region": "Norge",
+      "url": "https://sjusjoenskimarathon.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Sjusjøen Langrennstadion",
+          "lat": 61.1576691,
+          "lon": 10.6993408
+        }
+      ]
+    },
+    {
+      "id": "svalbard-skimaraton-18-april",
+      "name": "Svalbard skimaraton 18.april 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-04-18",
+      "distance": 42,
+      "distanceLabel": "42 km",
+      "sportLevel": "FIS",
+      "region": "Longyearbyen",
+      "url": "www.svalbardskimaraton.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Svalbard-Longyearbyen",
+          "lat": 78.217216,
+          "lon": 15.6172288
+        }
+      ]
+    },
+    {
+      "id": "budorrennet",
+      "name": "Budorrennet 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-01-03",
+      "distance": 20,
+      "distanceLabel": "20 km",
+      "sportLevel": "",
+      "region": "Innlandet",
+      "url": " ",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Budor skistadion ",
+          "lat": 60.9280935,
+          "lon": 11.2986251
+        }
+      ]
+    },
+    {
+      "id": "arctic-alta-skimaraton",
+      "name": "Arctic Alta Skimaraton 2027",
+      "discipline": "langrenn",
+      "officialDate": "2027-02-20",
+      "distance": 46,
+      "distanceLabel": "46 km",
+      "sportLevel": "",
+      "region": "Finnmark",
+      "url": "www.arcticalta.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Alta",
+          "lat": 69.9666046,
+          "lon": 23.2733282
+        }
+      ]
+    },
+    {
+      "id": "hovdentour",
+      "name": "HovdenTour 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-03-21",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "sportLevel": "LR",
+      "region": "Vestland",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Hovden",
+          "lat": 61.6862164,
+          "lon": 4.8584802
+        }
+      ]
+    },
+    {
+      "id": "trysil-skimaraton",
+      "name": "Trysil Skimaraton 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-02-14",
+      "distance": 42,
+      "distanceLabel": "42 km",
+      "sportLevel": "",
+      "region": "Innlandet",
+      "url": "www.trysilskimaraton.org/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Østby-Trysil",
+          "lat": 61.2546646,
+          "lon": 12.5297375
+        }
+      ]
+    },
+    {
+      "id": "blavegenlopet",
+      "name": "Blåvegenløpet 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-03-28",
+      "distance": 28,
+      "distanceLabel": "28 km",
+      "sportLevel": "",
+      "region": "Nordland",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Mo i Rana",
+          "lat": 66.3110969,
+          "lon": 14.1386991
+        }
+      ]
+    },
+    {
+      "id": "harstad-skifest",
+      "name": "Harstad Skifest 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-03-07",
+      "distance": 21,
+      "distanceLabel": "21 km",
+      "sportLevel": "",
+      "region": "Troms",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Harstad",
+          "lat": 68.799943,
+          "lon": 16.5440322
+        }
+      ]
+    },
+    {
+      "id": "ulvoyrennet-2026-avlyst",
+      "name": "Ulvøyrennet 2026 - Avlyst",
+      "discipline": "langrenn",
+      "officialDate": "2026-03-15",
+      "distance": 22,
+      "distanceLabel": "22 km",
+      "sportLevel": "",
+      "region": "Nordland",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Stokmarknes",
+          "lat": 68.5670003,
+          "lon": 14.9133484
+        }
+      ]
+    },
+    {
+      "id": "stenfjellrunden",
+      "name": "Stenfjellrunden 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-02-07",
+      "distance": 42.5,
+      "distanceLabel": "42.5 km",
+      "sportLevel": "",
+      "region": "Innlandet",
+      "url": "http://www.stenfjellrunden.no/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Gåsbu",
+          "lat": 60.9014009,
+          "lon": 11.208095
+        }
+      ]
+    },
+    {
+      "id": "furusjoen-rundt-rennet",
+      "name": "Furusjøen Rundt-rennet 2027",
+      "discipline": "langrenn",
+      "officialDate": "2027-02-20",
+      "distance": 20,
+      "distanceLabel": "20 km",
+      "sportLevel": "",
+      "region": "Trøndelag",
+      "url": "http://www.furusjoenrundt.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Kvamsfjellet",
+          "lat": 62.6942075,
+          "lon": 9.5196263
+        }
+      ]
+    },
+    {
+      "id": "slarverennet-21-mars",
+      "name": "Slarverennet 21. mars 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-03-21",
+      "distance": 11,
+      "distanceLabel": "11 km",
+      "sportLevel": "",
+      "region": "Buskerud",
+      "url": "www.slarverennet.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Gol",
+          "lat": 60.7513391,
+          "lon": 9.0123018
+        }
+      ]
+    },
+    {
+      "id": "lygna-skimaraton",
+      "name": "Lygna Skimaraton 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-02-22",
+      "distance": 42,
+      "distanceLabel": "42 km",
+      "sportLevel": "",
+      "region": "Innlandet",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Lygna Skisenter",
+          "lat": 60.4607762,
+          "lon": 10.635522
+        }
+      ]
+    },
+    {
+      "id": "storlirennet",
+      "name": "Storlirennet 2027",
+      "discipline": "langrenn",
+      "officialDate": "2027-04-10",
+      "distance": 36,
+      "distanceLabel": "36 km",
+      "sportLevel": "",
+      "region": "Trøndelag",
+      "url": "http://www.storlirennet.no/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Meråker",
+          "lat": 63.3969215,
+          "lon": 11.8124874
+        }
+      ]
+    },
+    {
+      "id": "grenaderlopet",
+      "name": "Grenaderløpet 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-02-07",
+      "distance": 90,
+      "distanceLabel": "90 km",
+      "sportLevel": "",
+      "region": "Buskerud",
+      "url": "http://www.grenaderen.com/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Ringkollen",
+          "lat": 60.1664355,
+          "lon": 10.3883068
+        }
+      ]
+    },
+    {
+      "id": "markatrimmen",
+      "name": "Markatrimmen 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-02-07",
+      "distance": 12,
+      "distanceLabel": "12 km",
+      "sportLevel": "",
+      "region": "Trøndelag",
+      "url": "http://www.skiklubben.no/kurs-aktiviteter/markatrimmen/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Trondheim",
+          "lat": 63.41755494,
+          "lon": 10.26138067
+        }
+      ]
+    },
+    {
+      "id": "kobberlopet",
+      "name": "Kobberløpet 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-04-18",
+      "distance": 23,
+      "distanceLabel": "23 km",
+      "sportLevel": "",
+      "region": "Nordland",
+      "url": "www.kobberlopet.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Sulitjelma",
+          "lat": 67.1329051,
+          "lon": 16.0773781
+        }
+      ]
+    },
+    {
+      "id": "flyktningerennet",
+      "name": "Flyktningerennet-2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-03-21",
+      "distance": 44,
+      "distanceLabel": "44 km",
+      "sportLevel": "",
+      "region": "Trøndelag",
+      "url": "https://flyktningerennet.no/flyktningerennet/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Lierne",
+          "lat": 64.46413933,
+          "lon": 13.58133153
+        }
+      ]
+    },
+    {
+      "id": "vindfjellopet",
+      "name": "Vindfjelløpet 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-02-08",
+      "distance": 41,
+      "distanceLabel": "41 km",
+      "sportLevel": "",
+      "region": "Vestfold",
+      "url": " http://www.vindfjellopet.no/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Svarstad",
+          "lat": 59.401584,
+          "lon": 9.9614111
+        }
+      ]
+    },
+    {
+      "id": "torefjellsrennet-2026-kvam-lsk",
+      "name": "Torefjellsrennet 2026 - Kvam LSK",
+      "discipline": "langrenn",
+      "officialDate": "2026-03-21",
+      "distance": 13,
+      "distanceLabel": "13 km",
+      "sportLevel": "",
+      "region": "Vestland",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Sjusete",
+          "lat": 60.391015,
+          "lon": 6.1281125
+        }
+      ]
+    },
+    {
+      "id": "trysil-knut-rennet",
+      "name": "Trysil-Knut rennet 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-01-24",
+      "distance": 40,
+      "distanceLabel": "40 km",
+      "sportLevel": "",
+      "region": "Innlandet",
+      "url": "http://soreosenil.no/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Søre Osen",
+          "lat": 61.1730965,
+          "lon": 11.9159428
+        }
+      ]
+    },
+    {
+      "id": "kvaloya-skimaraton",
+      "name": "Kvaløya Skimaraton 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-03-14",
+      "distance": 21,
+      "distanceLabel": "21 km",
+      "sportLevel": "",
+      "region": "Vestland",
+      "url": "http://www.kvaloyaskimaraton.no/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Kvaløya",
+          "lat": 60.1332488,
+          "lon": 5.0960951
+        }
+      ]
+    },
+    {
+      "id": "haukelirennet",
+      "name": "Haukelirennet 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-04-11",
+      "distance": 32,
+      "distanceLabel": "32 km",
+      "sportLevel": "",
+      "region": "Telemark",
+      "url": "http://www.visithaukeli.org/Aktoer/Haukelirennet",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Haukeli",
+          "lat": 59.7359557,
+          "lon": 7.5578159
+        }
+      ]
+    },
+    {
+      "id": "stomperudrennet",
+      "name": "Stomperudrennet 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-02-07",
+      "distance": 25,
+      "distanceLabel": "25 km",
+      "sportLevel": "",
+      "region": "Akershus",
+      "url": "www.sorumil.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Sørum skole",
+          "lat": 60.012318,
+          "lon": 11.235529
+        }
+      ]
+    },
+    {
+      "id": "marka-rundt",
+      "name": "Marka Rundt 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-02-15",
+      "distance": 20,
+      "distanceLabel": "20 km",
+      "sportLevel": "",
+      "region": "Trøndelag",
+      "url": "https://www.markarundt.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Trondheim",
+          "lat": 63.4304475,
+          "lon": 10.3952118
+        }
+      ]
+    },
+    {
+      "id": "musialonga-max-50-deltagere",
+      "name": "Musialonga (max. 50 deltagere) 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-01-31",
+      "distance": 70,
+      "distanceLabel": "70 km",
+      "sportLevel": "",
+      "region": "Oslo",
+      "url": "bygdoil.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Bygdøy",
+          "lat": 59.9069949,
+          "lon": 10.6797461
+        }
+      ]
+    },
+    {
+      "id": "kjoldilten",
+      "name": "Kjøldilten 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-01-25",
+      "distance": 20,
+      "distanceLabel": "20 km",
+      "sportLevel": "",
+      "region": "Innlandet",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Saksumdal",
+          "lat": 61.1134496,
+          "lon": 10.3061947
+        }
+      ]
+    },
+    {
+      "id": "brokke-skirace",
+      "name": "Brokke Skirace",
+      "discipline": "langrenn",
+      "officialDate": "2026-03-07",
+      "distance": 18,
+      "distanceLabel": "18 km",
+      "sportLevel": "",
+      "region": "Norge",
+      "url": "https://brokke-skirace.idrettenonline.no/next/p/99686/hjem",
+      "waypoints": [
+        {
+          "label": "Start/Mål – ",
+          "lat": 61.1529386,
+          "lon": 8.7876653
+        }
+      ]
+    },
+    {
+      "id": "kjolen-hematt",
+      "name": "KJØLEN HEMATT 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-02-21",
+      "distance": 25,
+      "distanceLabel": "25 km",
+      "sportLevel": "",
+      "region": "Innlandet",
+      "url": "https://www.facebook.com/p/Turl%C3%B8ypekomiteen-i-Gausdal-TLK-100071562524077/?locale=nb_NO",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Skeikampen, Gausdal",
+          "lat": 61.3507719,
+          "lon": 10.0884721
+        }
+      ]
+    },
+    {
+      "id": "cuprenn-04-01-26-klassisk",
+      "name": "Cuprenn 04.01.26 Klassisk",
+      "discipline": "langrenn",
+      "officialDate": "2026-01-04",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "sportLevel": "",
+      "region": "Vestland",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Humlestøylen",
+          "lat": 61.5739828,
+          "lon": 5.6665179
+        }
+      ]
+    },
+    {
+      "id": "skeikampenrennet",
+      "name": "Skeikampenrennet 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-01-17",
+      "distance": 15,
+      "distanceLabel": "15 km",
+      "sportLevel": "",
+      "region": "Innlandet",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Skeikampen",
+          "lat": 61.3507719,
+          "lon": 10.0884721
+        }
+      ]
+    },
+    {
+      "id": "valnesfjord-rundt",
+      "name": "Valnesfjord Rundt 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-03-15",
+      "distance": 30,
+      "distanceLabel": "30 km",
+      "sportLevel": "",
+      "region": "Nordland",
+      "url": "https://valnesfjordil.no/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Valnesfjord",
+          "lat": 67.3002071,
+          "lon": 15.1850258
+        }
+      ]
+    },
+    {
+      "id": "cuprenn-11-01-26-fristil",
+      "name": "Cuprenn 11.01.26 Fristil",
+      "discipline": "langrenn",
+      "officialDate": "2026-01-11",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "sportLevel": "",
+      "region": "Vestland",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Humlestøylen",
+          "lat": 61.5739828,
+          "lon": 5.6665179
+        }
+      ]
+    },
+    {
+      "id": "vegglifjell-rennet",
+      "name": "Vegglifjell-rennet 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-02-21",
+      "distance": 32,
+      "distanceLabel": "32 km",
+      "sportLevel": "",
+      "region": "Buskerud",
+      "url": "https://www.facebook.com/VegglifjellRennet/?notif_id=1673356192761370&notif_t=page_fan&ref=notif",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Vegglifjell",
+          "lat": 60.0468569,
+          "lon": 8.9862576
+        }
+      ]
+    },
+    {
+      "id": "cuprenn-18-01-26-klassisk",
+      "name": "Cuprenn 18.01.26 Klassisk",
+      "discipline": "langrenn",
+      "officialDate": "2026-01-18",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "sportLevel": "",
+      "region": "Vestland",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Humlestøylen",
+          "lat": 61.5739828,
+          "lon": 5.6665179
+        }
+      ]
+    },
+    {
+      "id": "sonerenn-tromso-skistadion",
+      "name": "Sonerenn Tromsø Skistadion",
+      "discipline": "langrenn",
+      "officialDate": "2026-01-31",
+      "distance": 10.1,
+      "distanceLabel": "10.1 km",
+      "sportLevel": "SR",
+      "region": "Norge",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Templarheimen idrettspark, Tromsø",
+          "lat": 69.6747109,
+          "lon": 18.9562132
+        }
+      ]
+    },
+    {
+      "id": "hestehovkarusellen-hodelyktrennet",
+      "name": "Hestehovkarusellen/Hodelyktrennet 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-01-20",
+      "distance": 12,
+      "distanceLabel": "12 km",
+      "sportLevel": "",
+      "region": "Akershus",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Nordåsen Skistadion",
+          "lat": 60.3019321,
+          "lon": 11.017808
+        }
+      ]
+    },
+    {
+      "id": "montebellonatta",
+      "name": "Montebellonatta 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-01-29",
+      "distance": 14,
+      "distanceLabel": "14 km",
+      "sportLevel": "",
+      "region": "Møre og Romsdal",
+      "url": " ",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Sande",
+          "lat": 62.2939875,
+          "lon": 5.3178611
+        }
+      ]
+    },
+    {
+      "id": "fakkelskituren",
+      "name": "Fakkelskituren 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-02-14",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "sportLevel": "",
+      "region": "Buskerud",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Golsfjellet",
+          "lat": 60.8569305,
+          "lon": 8.9128477
+        }
+      ]
+    },
+    {
+      "id": "cuprenn-25-01-26-fristil",
+      "name": "Cuprenn 25.01.26 Fristil",
+      "discipline": "langrenn",
+      "officialDate": "2026-01-25",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "sportLevel": "",
+      "region": "Vestland",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Humlestøylen",
+          "lat": 61.5739828,
+          "lon": 5.6665179
+        }
+      ]
+    },
+    {
+      "id": "cuprenn-01-02-26-klassisk",
+      "name": "Cuprenn 01.02.26 Klassisk",
+      "discipline": "langrenn",
+      "officialDate": "2026-02-01",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "sportLevel": "",
+      "region": "Vestland",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Humlestøylen",
+          "lat": 61.5739828,
+          "lon": 5.6665179
+        }
+      ]
+    },
+    {
+      "id": "thorleif-haug-skifestival",
+      "name": "Thorleif Haug Skifestival 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-02-07",
+      "distance": 25,
+      "distanceLabel": "25 km",
+      "sportLevel": "",
+      "region": "Buskerud",
+      "url": "www.hauern.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Martinsløkka Lier",
+          "lat": 59.8224173,
+          "lon": 10.1348197
+        }
+      ]
+    },
+    {
+      "id": "holmvasslopet",
+      "name": "Holmvassløpet  2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-03-29",
+      "distance": 25,
+      "distanceLabel": "25 km",
+      "sportLevel": "",
+      "region": "Sigdal",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Haglebu",
+          "lat": 60.34433234,
+          "lon": 9.18592215
+        }
+      ]
+    },
+    {
+      "id": "nesodden-pa-langs",
+      "name": "Nesodden på langs 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-02-14",
+      "distance": 18,
+      "distanceLabel": "18 km",
+      "sportLevel": "TR",
+      "region": "Akershus",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Nesodden",
+          "lat": 59.808313,
+          "lon": 10.6378345
+        }
+      ]
+    },
+    {
+      "id": "sjusjoen-skimarathon",
+      "name": "Sjusjøen Skimarathon 2027",
+      "discipline": "langrenn",
+      "officialDate": "2027-02-13",
+      "distance": 40,
+      "distanceLabel": "40 km",
+      "sportLevel": "",
+      "region": "Innlandet",
+      "url": "https://sjusjoenskimarathon.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Sjusjøen",
+          "lat": 61.1576691,
+          "lon": 10.6993408
+        }
+      ]
+    },
+    {
+      "id": "landaslopet",
+      "name": "Landåsløpet 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-02-22",
+      "distance": 25,
+      "distanceLabel": "25 km",
+      "sportLevel": "",
+      "region": "Norge",
+      "url": "https://www.facebook.com/groups/159477744544637/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Bergegarda Skistadion",
+          "lat": 60.77233456,
+          "lon": 10.32109635
+        }
+      ]
+    },
+    {
+      "id": "studenterfemmila",
+      "name": "Studenterfemmila 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-03-21",
+      "distance": 25,
+      "distanceLabel": "25 km",
+      "sportLevel": "",
+      "region": "Trøndelag",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Studenterhytta",
+          "lat": 63.4168003,
+          "lon": 10.2676781
+        }
+      ]
+    },
+    {
+      "id": "salangstrimmen",
+      "name": "Salangstrimmen 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-03-29",
+      "distance": 22,
+      "distanceLabel": "22 km",
+      "sportLevel": "",
+      "region": "Troms",
+      "url": "www.salangstrimmen.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Salangen",
+          "lat": 68.90482759,
+          "lon": 17.86685541
+        }
+      ]
+    },
+    {
+      "id": "reinhornrennet",
+      "name": "Reinhornrennet 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-03-29",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "sportLevel": "",
+      "region": "Nordland",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Reinhornheia",
+          "lat": 67.00359367,
+          "lon": 14.89972427
+        }
+      ]
+    },
+    {
+      "id": "moralopet",
+      "name": "Moraløpet 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-02-28",
+      "distance": 27,
+      "distanceLabel": "27 km",
+      "sportLevel": "",
+      "region": "Innlandet",
+      "url": "https://moralopet.no/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Rendalen",
+          "lat": 61.8065682,
+          "lon": 11.2021599
+        }
+      ]
+    },
+    {
+      "id": "vestfjellopet",
+      "name": "Vestfjelløpet 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-04-02",
+      "distance": 25,
+      "distanceLabel": "25 km",
+      "sportLevel": "",
+      "region": "Innlandet",
+      "url": "www.vestringen.com",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Gausdal Vestfjell",
+          "lat": 61.176153,
+          "lon": 9.9484838
+        }
+      ]
+    },
+    {
+      "id": "granasfjellrennet",
+      "name": "Granåsfjellrennet 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-02-21",
+      "distance": 39,
+      "distanceLabel": "39 km",
+      "sportLevel": "",
+      "region": "Trøndelag",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Singsås",
+          "lat": 62.95622,
+          "lon": 10.7293363
+        }
+      ]
+    },
+    {
+      "id": "hessdalsrennet",
+      "name": "Hessdalsrennet 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-03-29",
+      "distance": 24,
+      "distanceLabel": "24 km",
+      "sportLevel": "",
+      "region": "Trøndelag",
+      "url": "www.hessdalenil.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Hessdalen",
+          "lat": 62.7931322,
+          "lon": 11.18968634
+        }
+      ]
+    },
+    {
+      "id": "romjulsrennet-sjusjoen",
+      "name": "Romjulsrennet Sjusjøen 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-12-30",
+      "distance": 23,
+      "distanceLabel": "23 km",
+      "sportLevel": "",
+      "region": "Innlandet",
+      "url": "http://www.brottum-il.no/romjulsrennet/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Sjusjøen Langrennsarena",
+          "lat": 61.1576824,
+          "lon": 10.6986325
+        }
+      ]
+    },
+    {
+      "id": "bossekop-langlop",
+      "name": "Bossekop Langløp 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-03-22",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "sportLevel": "",
+      "region": "Finnmark",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – BUL-parken",
+          "lat": 69.9568609,
+          "lon": 23.2362196
+        }
+      ]
+    },
+    {
+      "id": "jomfruslettfjellet-rundt",
+      "name": "Jomfruslettfjellet Rundt 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-03-29",
+      "distance": 27,
+      "distanceLabel": "27 km",
+      "sportLevel": "",
+      "region": "Innlandet",
+      "url": "https://etnedalskilag.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Gamlestølen",
+          "lat": 61.030529,
+          "lon": 9.6943501
+        }
+      ]
+    },
+    {
+      "id": "jomfruslettfjellet-rundt-2026-trimklasse",
+      "name": "Jomfruslettfjellet Rundt 2026, Trimklasse",
+      "discipline": "langrenn",
+      "officialDate": "2026-03-29",
+      "distance": 27,
+      "distanceLabel": "27 km",
+      "sportLevel": "",
+      "region": "Norge",
+      "url": " ",
+      "waypoints": [
+        {
+          "label": "Start/Mål – ",
+          "lat": 61.1529386,
+          "lon": 8.7876653
+        }
+      ]
+    },
+    {
+      "id": "sirdalslami",
+      "name": "Sirdalslåmi 2027",
+      "discipline": "langrenn",
+      "officialDate": "2027-03-13",
+      "distance": 17,
+      "distanceLabel": "17 km",
+      "sportLevel": "",
+      "region": "Agder",
+      "url": "www.sirdalslåmi.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Sinnes skule",
+          "lat": 58.9134699,
+          "lon": 6.8843428
+        }
+      ]
+    },
+    {
+      "id": "jomfruslettfjellet-rundt-2026-trimklasse-test",
+      "name": "Jomfruslettfjellet Rundt 2026, Trimklasse TEST",
+      "discipline": "langrenn",
+      "officialDate": "2026-03-24",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "sportLevel": "",
+      "region": "Norge",
+      "url": " ",
+      "waypoints": [
+        {
+          "label": "Start/Mål – ",
+          "lat": 61.1529386,
+          "lon": 8.7876653
+        }
+      ]
+    },
+    {
+      "id": "hattrennet",
+      "name": "Hattrennet 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-04-11",
+      "distance": 32,
+      "distanceLabel": "32 km",
+      "sportLevel": "",
+      "region": "Nordland",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Hattfjelldal",
+          "lat": 65.4999558,
+          "lon": 14.170607
+        }
+      ]
+    },
+    {
+      "id": "skjaervikrennet",
+      "name": "Skjærvikrennet 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-04-18",
+      "distance": 14,
+      "distanceLabel": "14 km",
+      "sportLevel": "",
+      "region": "Vestland",
+      "url": "https://kskilag.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Kvaløya",
+          "lat": 60.1332488,
+          "lon": 5.0960951
+        }
+      ]
+    },
+    {
+      "id": "janteloppet",
+      "name": "Janteloppet 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-04-11",
+      "distance": 20,
+      "distanceLabel": "20 km",
+      "sportLevel": "",
+      "region": "Innlandet",
+      "url": "https://www.janteloppet.com",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Mosetertoppen skistadion",
+          "lat": 61.2531244,
+          "lon": 10.5103047
+        }
+      ]
+    },
+    {
+      "id": "svalbard-skimaraton-17-april",
+      "name": "Svalbard skimaraton 17.april 2027",
+      "discipline": "langrenn",
+      "officialDate": "2027-04-17",
+      "distance": 42,
+      "distanceLabel": "42 km",
+      "sportLevel": "",
+      "region": "Longyearbyen",
+      "url": "www.svalbardskimaraton.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Svalbard-Longyearbyen",
+          "lat": 78.217216,
+          "lon": 15.6172288
+        }
+      ]
+    },
+    {
+      "id": "maerraskallen",
+      "name": "Mærraskallen 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-08-27",
+      "distance": 15,
+      "distanceLabel": "15 km",
+      "sportLevel": "",
+      "region": "Akershus",
+      "url": "https://www.fossumif.no/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Fossum idrettsanlegg",
+          "lat": 59.96023116,
+          "lon": 10.61365128
+        }
+      ]
+    },
+    {
+      "id": "slarverennet-3-april",
+      "name": "Slarverennet 3. april 2027",
+      "discipline": "langrenn",
+      "officialDate": "2027-04-03",
+      "distance": 27,
+      "distanceLabel": "27 km",
+      "sportLevel": "",
+      "region": "Buskerud",
+      "url": "www.slarverennet.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Gol",
+          "lat": 60.7513391,
+          "lon": 9.0123018
+        }
+      ]
+    },
+    {
+      "id": "spanstind-rundt",
+      "name": "Spanstind Rundt 2027",
+      "discipline": "langrenn",
+      "officialDate": "2027-03-25",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "sportLevel": "",
+      "region": "Troms",
+      "url": "http://spanstindrundt.no/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Lavangen",
+          "lat": 68.7169832,
+          "lon": 17.8162748
+        }
+      ]
+    },
+    {
+      "id": "rulleskirenn-narvik",
+      "name": "Rulleskirenn Narvik",
+      "discipline": "langrenn",
+      "officialDate": "2026-08-16",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "sportLevel": "",
+      "region": "Nordland",
+      "url": " ",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Narvik",
+          "lat": 68.4383796,
+          "lon": 17.4271978
+        }
+      ]
+    },
+    {
+      "id": "blink-classic",
+      "name": "Blink Classic 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-08-06",
+      "distance": 25.3,
+      "distanceLabel": "25.3 km",
+      "sportLevel": "",
+      "region": "Rogaland",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Ålgård",
+          "lat": 58.7692076,
+          "lon": 5.8472399
+        }
+      ]
+    }
+  ]
+}

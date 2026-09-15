@@ -208,6 +208,7 @@ async function main() {
   const runningPath = resolve(__dirname, "../src/data/running-events.json");
   const cyclingPath = resolve(__dirname, "../src/data/cycling-events.json");
   const cyclingManualPath = resolve(__dirname, "../src/data/cycling-manual.json");
+  const langrennPath = resolve(__dirname, "../src/data/langrenn-events.json");
   const outputPath = resolve(__dirname, "../public/weather-cache.json");
 
   const arrangements: Ritt[] = JSON.parse(readFileSync(rittPath, "utf-8")) as Ritt[];
@@ -217,12 +218,14 @@ async function main() {
   const cyclingManualData = JSON.parse(readFileSync(cyclingManualPath, "utf-8")) as {
     events: Ritt[];
   };
+  const langrennData = JSON.parse(readFileSync(langrennPath, "utf-8")) as { events: Ritt[] };
   const ritts: Ritt[] = [
     ...arrangements,
     ...triathlonData.events,
     ...runningData.events,
     ...cyclingData.events,
     ...cyclingManualData.events,
+    ...langrennData.events,
   ];
 
   // Collect all unique (wp, MM, DD) combinations to avoid duplicate fetches

@@ -1,17 +1,19 @@
 import arrangements from "../data/arrangements.json";
 import cyclingData from "../data/cycling-events.json";
 import cyclingManualData from "../data/cycling-manual.json";
+import langrennData from "../data/langrenn-events.json";
 import runningData from "../data/running-events.json";
 import triathlonData from "../data/triathlon-events.json";
 import type { Waypoint } from "./weather";
 
-/** All arrangements merged: manually curated + auto-synced triathlon + running + cycling events. */
+/** All arrangements merged: manually curated + auto-synced triathlon + running + cycling + langrenn events. */
 export const allArrangements: RittEntry[] = [
   ...(arrangements as RittEntry[]),
   ...(triathlonData.events as RittEntry[]),
   ...(runningData.events as RittEntry[]),
   ...(cyclingData.events as RittEntry[]),
   ...(cyclingManualData.events as RittEntry[]),
+  ...(langrennData.events as RittEntry[]),
 ];
 
 export type Discipline =

@@ -97,6 +97,7 @@ function main() {
     running: resolve(__dirname, "../src/data/running-events.json"),
     cycling: resolve(__dirname, "../src/data/cycling-events.json"),
     cyclingManual: resolve(__dirname, "../src/data/cycling-manual.json"),
+    langrenn: resolve(__dirname, "../src/data/langrenn-events.json"),
     cache: resolve(__dirname, "../public/weather-cache.json"),
     output: resolve(__dirname, "../src/data/weather-stats.json"),
   };
@@ -109,6 +110,7 @@ function main() {
   const cyclingManual = (
     JSON.parse(readFileSync(paths.cyclingManual, "utf-8")) as { events: Ritt[] }
   ).events;
+  const langrenn = (JSON.parse(readFileSync(paths.langrenn, "utf-8")) as { events: Ritt[] }).events;
 
   const allEvents: Ritt[] = [
     ...arrangements,
@@ -116,6 +118,7 @@ function main() {
     ...running,
     ...cycling,
     ...cyclingManual,
+    ...langrenn,
   ];
 
   const cache = JSON.parse(readFileSync(paths.cache, "utf-8")) as WeatherCache;
