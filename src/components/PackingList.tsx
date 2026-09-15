@@ -29,13 +29,13 @@ export function PackingList({ items }: Props) {
   }
 
   return (
-    <details className="packing-list__details">
-      <summary className="packing-list__summary">Pakkeliste</summary>
+    <div className="packing-list">
+      <div className="gear-suggestion__heading">Pakkeliste</div>
       <div className="packing-list__grid">
         {renderCol("Ha på deg", wear, "packing-list__col--wear")}
         {renderCol("Ta med", carry, "packing-list__col--carry")}
         {renderCol("Trenger ikke", skip, "packing-list__col--skip")}
       </div>
-    </details>
+    </div>
   );
 }

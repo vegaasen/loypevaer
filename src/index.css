@@ -4852,30 +4852,8 @@ details[open] .gear-suggestion__summary::before {
 }
 
 /* ── Packing list ────────────────────────────────────────────────────── */
-.packing-list__details {
-  margin-top: 0.75rem;
-}
-
-.packing-list__summary {
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  list-style: none;
-  padding: 0.25rem 0;
-  color: var(--color-green-dark, #1a3300);
-}
-
-.packing-list__summary::-webkit-details-marker {
-  display: none;
-}
-
-.packing-list__summary::before {
-  content: "▶ ";
-  font-size: 0.7em;
-}
-
-details[open] .packing-list__summary::before {
-  content: "▼ ";
+.packing-list {
+  margin-top: 16px;
 }
 
 .packing-list__grid {
