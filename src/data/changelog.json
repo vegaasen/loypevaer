@@ -1,5 +1,59 @@
 [
   {
+    "sha": "9532bcac4ebff8bd9ffff5c553dc41b914e5b25d",
+    "shortSha": "9532bca",
+    "date": "2026-09-15",
+    "type": "feat",
+    "scope": null,
+    "subject": "add dedicated langrenn page and SEO improvements",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/9532bcac4ebff8bd9ffff5c553dc41b914e5b25d"
+  },
+  {
+    "sha": "067d3bf64c1d0b0b34051403f733b96ac6490507",
+    "shortSha": "067d3bf",
+    "date": "2026-09-15",
+    "type": "fix",
+    "scope": null,
+    "subject": "exclude summer rollerski races from langrenn fetch",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/067d3bf64c1d0b0b34051403f733b96ac6490507"
+  },
+  {
+    "sha": "4efcbd0676a0473cbf6d45fec1ae362cc344a5a8",
+    "shortSha": "4efcbd0",
+    "date": "2026-09-15",
+    "type": "fix",
+    "scope": null,
+    "subject": "use realistic speed presets for langrenn timing chips",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/4efcbd0676a0473cbf6d45fec1ae362cc344a5a8"
+  },
+  {
+    "sha": "49c5530b61620748636278fed8a18d29549545ac",
+    "shortSha": "49c5530",
+    "date": "2026-09-15",
+    "type": "fix",
+    "scope": null,
+    "subject": "make Pakkeliste a static heading, not collapsible",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/49c5530b61620748636278fed8a18d29549545ac"
+  },
+  {
+    "sha": "623151f0430dab04bb0b170f93a0a6ed233e93df",
+    "shortSha": "623151f",
+    "date": "2026-09-15",
+    "type": "feat",
+    "scope": null,
+    "subject": "discipline-aware utstyrstips + langrenn smøretips",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/623151f0430dab04bb0b170f93a0a6ed233e93df"
+  },
+  {
+    "sha": "34547b3758a448a2000882c82043627d20a89914",
+    "shortSha": "34547b3",
+    "date": "2026-09-15",
+    "type": "feat",
+    "scope": null,
+    "subject": "add automated langrenn event fetching and weather stats",
+    "githubUrl": "https://github.com/vegaasen/loypevaer/commit/34547b3758a448a2000882c82043627d20a89914"
+  },
+  {
     "sha": "675b229719472e8d91a09096363f47823ed296de",
     "shortSha": "675b229",
     "date": "2026-09-08",
