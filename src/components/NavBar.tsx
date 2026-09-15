@@ -37,8 +37,8 @@ export function NavBar() {
   const match = location.pathname.match(/^\/arrangement\/([^/]+)/);
   const currentId = match ? match[1] : "";
   const isLopPage = location.pathname.startsWith("/lop");
+  const isLangrennPage = location.pathname.startsWith("/langrenn");
   const isGpxPage = location.pathname.startsWith("/gpx");
-  const isStatistikkPage = location.pathname.startsWith("/statistikk");
 
   const menuOpen = menuOpenAt === location.pathname;
 
@@ -85,17 +85,17 @@ export function NavBar() {
           </Link>
           <span className="site-nav__divider" aria-hidden="true" />
           <Link
+            to="/langrenn"
+            className={`site-nav__gpx-link${isLangrennPage ? " site-nav__gpx-link--active" : ""}`}
+          >
+            Langrenn
+          </Link>
+          <span className="site-nav__divider" aria-hidden="true" />
+          <Link
             to="/gpx"
             className={`site-nav__gpx-link${isGpxPage ? " site-nav__gpx-link--active" : ""}`}
           >
             Egendefinert løype (GPX)
-          </Link>
-          <span className="site-nav__divider" aria-hidden="true" />
-          <Link
-            to="/statistikk"
-            className={`site-nav__gpx-link${isStatistikkPage ? " site-nav__gpx-link--active" : ""}`}
-          >
-            Statistikk
           </Link>
           <span className="site-nav__divider" aria-hidden="true" />
           <select
@@ -150,18 +150,18 @@ export function NavBar() {
             Løp
           </Link>
           <Link
+            to="/langrenn"
+            className={`site-nav__mobile-link${isLangrennPage ? " site-nav__mobile-link--active" : ""}`}
+            role="menuitem"
+          >
+            Langrenn
+          </Link>
+          <Link
             to="/gpx"
             className={`site-nav__mobile-link${isGpxPage ? " site-nav__mobile-link--active" : ""}`}
             role="menuitem"
           >
             Egendefinert løype (GPX)
-          </Link>
-          <Link
-            to="/statistikk"
-            className={`site-nav__mobile-link${isStatistikkPage ? " site-nav__mobile-link--active" : ""}`}
-            role="menuitem"
-          >
-            Statistikk
           </Link>
           <div className="site-nav__mobile-divider" />
           <select

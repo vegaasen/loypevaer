@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 
 const STORAGE_KEY = "loypevaer:feedback-last-shown";
 const COOLDOWN_DAYS = 30;
-const LIST_ROUTES = new Set(["/", "/lop"]);
+const LIST_ROUTES = new Set(["/", "/lop", "/langrenn"]);
 
 function isCooledDown(): boolean {
   try {

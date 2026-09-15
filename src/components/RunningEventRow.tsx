@@ -18,6 +18,10 @@ type Props = {
   countdown?: string;
   isPast?: boolean;
   dateStatus?: "pending" | "cancelled";
+  /** Route to record as the referrer (used by the feedback prompt). Defaults to "/lop". */
+  fromPath?: string;
+  /** Show the running-specific distance category badge (10K, Halvmaraton, …). Off by default for non-running disciplines. */
+  showCategory?: boolean;
 };
 
 export const RunningEventRow = memo(function RunningEventRow({
@@ -33,6 +37,8 @@ export const RunningEventRow = memo(function RunningEventRow({
   countdown,
   isPast = false,
   dateStatus,
+  fromPath = "/lop",
+  showCategory = true,
 }: Props) {
   const dateStr = displayDate ?? officialDate;
   const formattedDate = formatNorwegianDate(dateStr);
@@ -43,7 +49,7 @@ export const RunningEventRow = memo(function RunningEventRow({
   return (
     <Link
       to={`/arrangement/${id}`}
-      state={{ from: "/lop" }}
+      state={{ from: fromPath }}
       className={[
         "running-row",
         planned ? "running-row--planned" : "",
@@ -55,11 +61,13 @@ export const RunningEventRow = memo(function RunningEventRow({
     >
       <div className="running-row__name">
         <span>{name}</span>
-        <span
-          className={`running-row__category running-row__category--${category} running-row__category--mobile`}
-        >
-          {categoryLabel}
-        </span>
+        {showCategory && (
+          <span
+            className={`running-row__category running-row__category--${category} running-row__category--mobile`}
+          >
+            {categoryLabel}
+          </span>
+        )}
         {isCancelled && (
           <span className="running-row__cancelled-badge" title="Avlyst">
             Avlyst

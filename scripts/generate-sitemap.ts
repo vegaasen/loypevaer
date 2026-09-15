@@ -12,6 +12,7 @@ import { resolve } from "node:path";
 import ritt from "../src/data/arrangements.json" with { type: "json" };
 import cyclingData from "../src/data/cycling-events.json" with { type: "json" };
 import cyclingManualData from "../src/data/cycling-manual.json" with { type: "json" };
+import langrennData from "../src/data/langrenn-events.json" with { type: "json" };
 import runningData from "../src/data/running-events.json" with { type: "json" };
 import triathlonData from "../src/data/triathlon-events.json" with { type: "json" };
 
@@ -50,6 +51,14 @@ const urls: string[] = [
     <priority>0.8</priority>
   </url>`,
 
+  // Langrenn page
+  `  <url>
+    <loc>${BASE_URL}/langrenn</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>`,
+
   // GPX upload page
   `  <url>
     <loc>${BASE_URL}/gpx</loc>
@@ -73,6 +82,7 @@ const urls: string[] = [
     ...(runningData as { events: RittEntry[] }).events,
     ...(cyclingData as { events: RittEntry[] }).events,
     ...(cyclingManualData as { events: RittEntry[] }).events,
+    ...(langrennData as { events: RittEntry[] }).events,
   ].map(
     (r) => `  <url>
     <loc>${BASE_URL}/arrangement/${r.id}</loc>

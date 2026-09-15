@@ -7,6 +7,7 @@ export function SiteFooter() {
         <span className="site-footer__brand">Løypevær</span>
         <nav className="site-footer__links">
           <Link to="/hva-er-loypevaer">Hva er løypevær?</Link>
+          <Link to="/statistikk">Statistikk</Link>
           <Link to="/endringslogg">Endringslogg</Link>
         </nav>
         <a

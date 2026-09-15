@@ -21,6 +21,9 @@ restoreConsentFromStorage();
 const EventPage = lazy(() => import("./pages/EventPage").then((m) => ({ default: m.EventPage })));
 const GpxPage = lazy(() => import("./pages/GpxPage").then((m) => ({ default: m.GpxPage })));
 const LopPage = lazy(() => import("./pages/LopPage").then((m) => ({ default: m.LopPage })));
+const LangrennPage = lazy(() =>
+  import("./pages/LangrennPage").then((m) => ({ default: m.LangrennPage })),
+);
 const HvaErLoypevaerPage = lazy(() =>
   import("./pages/HvaErLoypevaerPage").then((m) => ({ default: m.HvaErLoypevaerPage })),
 );
@@ -55,6 +58,7 @@ function RouterContent() {
           <Route index element={<HomePage />} />
           <Route path="/arrangement/:id" element={<EventPage />} />
           <Route path="/lop" element={<LopPage />} />
+          <Route path="/langrenn" element={<LangrennPage />} />
           <Route path="/gpx" element={<GpxPage />} />
           <Route path="/hva-er-loypevaer" element={<HvaErLoypevaerPage />} />
           <Route path="/hva-er-rittvaer" element={<Navigate to="/hva-er-loypevaer" replace />} />

@@ -166,6 +166,11 @@ export function HvaErLoypevaerPage() {
             til mål i kuperte løyper. Riktig skismøring og bekledning krever at du kjenner
             langrennværet — ikke bare for startstedet, men for hele løypa.
           </p>
+          <p>
+            Løypevær henter arrangementskalenderen for skirenn direkte fra Norges Skiforbund, i
+            tillegg til håndplukkede klassikere som Birkebeinerrittet. Se{" "}
+            <Link to="/langrenn">alle skirenn og langrennvær</Link> for full oversikt.
+          </p>
           {langrenn.length > 0 && (
             <ul>
               {langrenn.map((r) => (
