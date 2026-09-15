@@ -64,4 +64,28 @@ describe("buildPackingList", () => {
     const rainJacket = list.find((i) => i.item === "Regnjakke");
     expect(rainJacket?.reason).toContain("sekk");
   });
+
+  it("uses a shell jacket instead of a rain jacket for langrenn", () => {
+    const results = [makeResult({ precipitation: 3 })];
+    const list = buildPackingList(results, "langrenn");
+    expect(list.find((i) => i.item === "Skalljakke")).toBeDefined();
+    expect(list.find((i) => i.item === "Regnjakke")).toBeUndefined();
+  });
+
+  it("adds a headband/hat item for cold langrenn conditions", () => {
+    const results = [makeResult({ tempMin: -5, tempMax: -2 })];
+    const list = buildPackingList(results, "langrenn");
+    const headwear = list.find((i) => i.item === "Pannebånd eller hue");
+    expect(headwear?.column).toBe("wear");
+  });
+
+  it("does not require gloves for running until it's colder than for cycling", () => {
+    const results = [makeResult({ tempMin: 8, tempMax: 9 })];
+    const running = buildPackingList(results, "løping");
+    const cycling = buildPackingList(results, "landevei");
+    const runningGloves = running.find((i) => i.item.includes("hansker"));
+    const cyclingGloves = cycling.find((i) => i.item.includes("hansker"));
+    expect(runningGloves?.column).toBe("skip");
+    expect(cyclingGloves?.column).toBe("carry");
+  });
 });

@@ -1,5 +1,6 @@
 // src/lib/packingList.ts
 import type { WaypointWeather } from "../hooks/useWeather";
+import { gearGroup } from "./disciplines";
 import { resolveWeatherValues } from "./weather";
 import {
   PRECIP_HEAVY,
@@ -9,6 +10,10 @@ import {
   TEMP_VERY_COLD,
   WIND_STRONG,
 } from "./weatherThresholds";
+
+/** Runners generate more body heat than cyclists at the same air temp, so
+ *  their cold-gear thresholds shift this many degrees colder. */
+const RUNNING_WARMTH_OFFSET = 3;
 
 export type PackingColumn = "wear" | "carry" | "skip";
 
@@ -35,6 +40,10 @@ export function buildPackingList(results: WaypointWeather[], discipline: string)
   if (loaded.length === 0) return [];
 
   const carry = carryLabel(discipline);
+  const group = gearGroup(discipline);
+  const offset = group === "run" ? RUNNING_WARMTH_OFFSET : 0;
+  const coldThreshold = TEMP_COLD - offset;
+  const veryColdThreshold = TEMP_VERY_COLD - offset;
   const items: PackingItem[] = [];
 
   const temps = loaded.map((r) => resolveWeatherValues(r.data!).temp);
@@ -50,27 +59,28 @@ export function buildPackingList(results: WaypointWeather[], discipline: string)
   );
   const maxWind = Math.max(...loaded.map((r) => resolveWeatherValues(r.data!).windSpeed));
 
-  // Rain jacket
+  // Rain/shell jacket
+  const shellItem = group === "ski" ? "Skalljakke" : "Regnjakke";
   if (allHeavyRain) {
-    items.push({ item: "Regnjakke", reason: "Kraftig nedbør langs hele løypa", column: "wear" });
+    items.push({ item: shellItem, reason: "Kraftig nedbør langs hele løypa", column: "wear" });
   } else if (anyHeavyRain || allWet) {
     items.push({
-      item: "Regnjakke",
+      item: shellItem,
       reason: `Nedbør på deler av løypa — ${carry.toLowerCase()}`,
       column: "carry",
     });
   } else if (anyWet) {
     items.push({
-      item: "Regnjakke",
+      item: shellItem,
       reason: `Lett nedbør mulig — ${carry.toLowerCase()}`,
       column: "carry",
     });
   } else {
-    items.push({ item: "Regnjakke", reason: "Tørt langs hele løypa", column: "skip" });
+    items.push({ item: shellItem, reason: "Tørt langs hele løypa", column: "skip" });
   }
 
   // Windproof
-  if (maxWind > WIND_STRONG || minTemp < TEMP_COLD) {
+  if (maxWind > WIND_STRONG || minTemp < coldThreshold) {
     items.push({
       item: "Vindjakke",
       reason: maxWind > WIND_STRONG ? "Sterk vind langs løypa" : "Kalde forhold",
@@ -91,13 +101,13 @@ export function buildPackingList(results: WaypointWeather[], discipline: string)
       reason: `Under 0°C ved start (${Math.round(minTemp)}°C)`,
       column: "wear",
     });
-  } else if (minTemp < TEMP_VERY_COLD) {
+  } else if (minTemp < veryColdThreshold) {
     items.push({
       item: "Langfingrede hansker",
-      reason: `Under 5°C (${Math.round(minTemp)}°C)`,
+      reason: `Under ${veryColdThreshold}°C (${Math.round(minTemp)}°C)`,
       column: "wear",
     });
-  } else if (minTemp < TEMP_COLD) {
+  } else if (minTemp < coldThreshold) {
     items.push({
       item: "Langfingrede hansker",
       reason: `Friskt ved start (${Math.round(minTemp)}°C)`,
@@ -112,10 +122,19 @@ export function buildPackingList(results: WaypointWeather[], discipline: string)
   }
 
   // Warm base layer — only add if cold
-  if (minTemp < TEMP_VERY_COLD) {
+  if (minTemp < veryColdThreshold) {
     items.push({
       item: "Ekstra varmende lag",
       reason: `Kaldt ved start (${Math.round(minTemp)}°C)`,
+      column: "wear",
+    });
+  }
+
+  // Ski-specific: ears are exposed under a helmet/headband, not gloves
+  if (group === "ski" && minTemp < coldThreshold) {
+    items.push({
+      item: "Pannebånd eller hue",
+      reason: `Beskytt ører mot kulde (${Math.round(minTemp)}°C)`,
       column: "wear",
     });
   }

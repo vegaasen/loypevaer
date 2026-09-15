@@ -1,5 +1,7 @@
 import type { WaypointWeather } from "../hooks/useWeather";
+import { gearGroup } from "../lib/disciplines";
 import { buildPackingList } from "../lib/packingList";
+import { getWaxTips } from "../lib/waxTips";
 import type { Waypoint } from "../lib/weather";
 import { resolveWeatherValues } from "../lib/weather";
 import {
@@ -13,6 +15,11 @@ import {
 } from "../lib/weatherThresholds";
 import { routeBearingForWaypoint, windRelativeLabel } from "../lib/wind";
 import { PackingList } from "./PackingList";
+import { WaxTips } from "./WaxTips";
+
+/** Runners generate more body heat than cyclists at the same air temp, so
+ *  their cold-gear thresholds shift this many degrees colder. */
+const RUNNING_WARMTH_OFFSET = 3;
 
 type Suggestion = {
   key: string;
@@ -21,9 +28,19 @@ type Suggestion = {
   severity: "info" | "warn" | "danger";
 };
 
-function buildSuggestions(results: WaypointWeather[], waypoints: Waypoint[]): Suggestion[] {
+function buildSuggestions(
+  results: WaypointWeather[],
+  waypoints: Waypoint[],
+  discipline: string,
+): Suggestion[] {
   const loaded = results.filter((r) => r.data != null);
   if (loaded.length === 0) return [];
+
+  const group = gearGroup(discipline);
+  const offset = group === "run" ? RUNNING_WARMTH_OFFSET : 0;
+  const veryColdThreshold = TEMP_VERY_COLD - offset;
+  const coldThreshold = TEMP_COLD - offset;
+  const shellLabel = group === "ski" ? "skalljakke" : "regnjakke";
 
   const suggestions: Suggestion[] = [];
 
@@ -87,18 +104,18 @@ function buildSuggestions(results: WaypointWeather[], waypoints: Waypoint[]): Su
       text: "Under 0 °C: vinterhansker, balaklava og varmende lag anbefalt",
       severity: "danger",
     });
-  } else if (minTemp < TEMP_VERY_COLD) {
+  } else if (minTemp < veryColdThreshold) {
     suggestions.push({
       key: "very-cold",
       icon: "🥶",
-      text: "Under 5 °C: votter, hette og ekstra lag",
+      text: `Under ${veryColdThreshold} °C: votter, hette og ekstra lag`,
       severity: "danger",
     });
-  } else if (minTemp < TEMP_COLD) {
+  } else if (minTemp < coldThreshold) {
     suggestions.push({
       key: "cold",
       icon: "🧊",
-      text: "Under 10 °C: armbeskyttelse og langfingrede hansker anbefalt",
+      text: `Under ${coldThreshold} °C: armbeskyttelse og langfingrede hansker anbefalt`,
       severity: "warn",
     });
   }
@@ -108,14 +125,14 @@ function buildSuggestions(results: WaypointWeather[], waypoints: Waypoint[]): Su
     suggestions.push({
       key: "heavy-rain",
       icon: "🌧",
-      text: "Mye nedbør: regnjakke og regnbukse anbefalt",
+      text: `Mye nedbør: ${shellLabel} og regnbukse anbefalt`,
       severity: "danger",
     });
   } else if (maxPrecip > PRECIP_LIGHT) {
     suggestions.push({
       key: "light-rain",
       icon: "🌦",
-      text: "Lett nedbør: regnjakke anbefalt",
+      text: `Lett nedbør: ${shellLabel} anbefalt`,
       severity: "warn",
     });
   }
@@ -169,10 +186,19 @@ export function GearSuggestion({ results, waypoints, discipline = "landevei" }: 
 
   if (isLoading || !hasAnyData) return null;
 
-  const suggestions = buildSuggestions(results, waypoints);
+  const suggestions = buildSuggestions(results, waypoints, discipline);
   if (suggestions.length === 0) return null;
 
   const packingItems = buildPackingList(results, discipline);
+
+  const loaded = results.filter((r) => r.data != null);
+  const waxTips =
+    gearGroup(discipline) === "ski"
+      ? getWaxTips(
+          Math.min(...loaded.map((r) => resolveWeatherValues(r.data!).temp)),
+          Math.max(...loaded.map((r) => resolveWeatherValues(r.data!).temp)),
+        )
+      : null;
 
   return (
     <details className="gear-suggestion__details">
@@ -192,6 +218,7 @@ export function GearSuggestion({ results, waypoints, discipline = "landevei" }: 
             ))}
           </ul>
           <PackingList items={packingItems} />
+          {waxTips && <WaxTips tips={waxTips} />}
         </div>
       </div>
     </details>
