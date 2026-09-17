@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-16T08:30:12.347Z",
+  "generatedAt": "2026-09-17T08:37:24.615Z",
   "events": [
     {
       "id": "birkebeinerrennet",
@@ -1278,18 +1278,18 @@
       "discipline": "løping",
       "officialDate": "2026-09-21",
       "region": "Vestland",
-      "avgTempMax": 7.5,
-      "avgFeelsLikeMax": 5.3,
-      "avgPrecipitation": 8.2,
-      "avgWindSpeed": 7.6,
+      "avgTempMax": 8.1,
+      "avgFeelsLikeMax": 5.9,
+      "avgPrecipitation": 8.8,
+      "avgWindSpeed": 8.1,
       "avgWeatherCode": 3,
-      "comfortScore": 26,
+      "comfortScore": 25,
       "bestYear": {
-        "year": 2024,
-        "comfortScore": 71,
-        "avgTempMax": 13.6,
+        "year": 2019,
+        "comfortScore": 63,
+        "avgTempMax": 11.4,
         "avgPrecipitation": 0,
-        "avgWindSpeed": 3.6,
+        "avgWindSpeed": 4.7,
         "weatherCode": 3
       },
       "worstYear": {
@@ -1300,8 +1300,8 @@
         "avgWindSpeed": 12.3,
         "weatherCode": 63
       },
-      "tempTrend": -0.08,
-      "dataYears": 10
+      "tempTrend": 0.2,
+      "dataYears": 4
     },
     {
       "id": "bratesten-2026",
@@ -1309,18 +1309,18 @@
       "discipline": "løping",
       "officialDate": "2026-09-24",
       "region": "Trøndelag",
-      "avgTempMax": 12,
-      "avgFeelsLikeMax": 9.6,
-      "avgPrecipitation": 5.1,
-      "avgWindSpeed": 18.5,
+      "avgTempMax": 10.9,
+      "avgFeelsLikeMax": 8.3,
+      "avgPrecipitation": 6.2,
+      "avgWindSpeed": 20,
       "avgWeatherCode": 51,
-      "comfortScore": 21,
+      "comfortScore": 15,
       "bestYear": {
-        "year": 2017,
-        "comfortScore": 70,
-        "avgTempMax": 18.3,
+        "year": 2019,
+        "comfortScore": 56,
+        "avgTempMax": 12.1,
         "avgPrecipitation": 0,
-        "avgWindSpeed": 15.6,
+        "avgWindSpeed": 13.8,
         "weatherCode": 2
       },
       "worstYear": {
@@ -1331,8 +1331,8 @@
         "avgWindSpeed": 29,
         "weatherCode": 61
       },
-      "tempTrend": -0.43,
-      "dataYears": 10
+      "tempTrend": 0.2,
+      "dataYears": 8
     },
     {
       "id": "gruemila-2026",
@@ -4874,29 +4874,29 @@
       "discipline": "landevei",
       "officialDate": "2026-05-10",
       "region": "Vestland",
-      "avgTempMax": 12.1,
-      "avgFeelsLikeMax": 9.9,
-      "avgPrecipitation": 9.4,
-      "avgWindSpeed": 15.8,
+      "avgTempMax": 11.9,
+      "avgFeelsLikeMax": 9.7,
+      "avgPrecipitation": 9.3,
+      "avgWindSpeed": 17,
       "avgWeatherCode": 51,
-      "comfortScore": 15,
+      "comfortScore": 14,
       "bestYear": {
         "year": 2025,
-        "comfortScore": 64,
-        "avgTempMax": 17,
+        "comfortScore": 63,
+        "avgTempMax": 16.7,
         "avgPrecipitation": 0,
-        "avgWindSpeed": 14.3,
+        "avgWindSpeed": 14.1,
         "weatherCode": 3
       },
       "worstYear": {
         "year": 2022,
         "comfortScore": 6,
-        "avgTempMax": 12.4,
-        "avgPrecipitation": 21,
-        "avgWindSpeed": 21.9,
+        "avgTempMax": 12.2,
+        "avgPrecipitation": 20.7,
+        "avgWindSpeed": 24.4,
         "weatherCode": 63
       },
-      "tempTrend": 0.28,
+      "tempTrend": 0.29,
       "dataYears": 10
     },
     {
