@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T08:37:24.615Z",
+  "generatedAt": "2026-09-18T08:15:15.581Z",
   "events": [
     {
       "id": "birkebeinerrennet",
@@ -1278,18 +1278,18 @@
       "discipline": "løping",
       "officialDate": "2026-09-21",
       "region": "Vestland",
-      "avgTempMax": 8.1,
-      "avgFeelsLikeMax": 5.9,
-      "avgPrecipitation": 8.8,
-      "avgWindSpeed": 8.1,
+      "avgTempMax": 7.5,
+      "avgFeelsLikeMax": 5.3,
+      "avgPrecipitation": 8.2,
+      "avgWindSpeed": 7.6,
       "avgWeatherCode": 3,
-      "comfortScore": 25,
+      "comfortScore": 26,
       "bestYear": {
-        "year": 2019,
-        "comfortScore": 63,
-        "avgTempMax": 11.4,
+        "year": 2024,
+        "comfortScore": 71,
+        "avgTempMax": 13.6,
         "avgPrecipitation": 0,
-        "avgWindSpeed": 4.7,
+        "avgWindSpeed": 3.6,
         "weatherCode": 3
       },
       "worstYear": {
@@ -1300,8 +1300,8 @@
         "avgWindSpeed": 12.3,
         "weatherCode": 63
       },
-      "tempTrend": 0.2,
-      "dataYears": 4
+      "tempTrend": -0.08,
+      "dataYears": 10
     },
     {
       "id": "bratesten-2026",
@@ -1309,18 +1309,18 @@
       "discipline": "løping",
       "officialDate": "2026-09-24",
       "region": "Trøndelag",
-      "avgTempMax": 10.9,
-      "avgFeelsLikeMax": 8.3,
-      "avgPrecipitation": 6.2,
-      "avgWindSpeed": 20,
+      "avgTempMax": 12,
+      "avgFeelsLikeMax": 9.6,
+      "avgPrecipitation": 5.1,
+      "avgWindSpeed": 18.5,
       "avgWeatherCode": 51,
-      "comfortScore": 15,
+      "comfortScore": 21,
       "bestYear": {
-        "year": 2019,
-        "comfortScore": 56,
-        "avgTempMax": 12.1,
+        "year": 2017,
+        "comfortScore": 70,
+        "avgTempMax": 18.3,
         "avgPrecipitation": 0,
-        "avgWindSpeed": 13.8,
+        "avgWindSpeed": 15.6,
         "weatherCode": 2
       },
       "worstYear": {
@@ -1331,8 +1331,8 @@
         "avgWindSpeed": 29,
         "weatherCode": 61
       },
-      "tempTrend": 0.2,
-      "dataYears": 8
+      "tempTrend": -0.43,
+      "dataYears": 10
     },
     {
       "id": "gruemila-2026",
@@ -4626,7 +4626,7 @@
       "discipline": "landevei",
       "officialDate": "2027-05-01",
       "region": "Oslo",
-      "avgTempMax": 11.8,
+      "avgTempMax": 11.9,
       "avgFeelsLikeMax": 9,
       "avgPrecipitation": 4.6,
       "avgWindSpeed": 15.3,
