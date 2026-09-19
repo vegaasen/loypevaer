@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T08:15:15.581Z",
+  "generatedAt": "2026-09-19T08:13:52.709Z",
   "events": [
     {
       "id": "birkebeinerrennet",
@@ -4626,7 +4626,7 @@
       "discipline": "landevei",
       "officialDate": "2027-05-01",
       "region": "Oslo",
-      "avgTempMax": 11.9,
+      "avgTempMax": 11.8,
       "avgFeelsLikeMax": 9,
       "avgPrecipitation": 4.6,
       "avgWindSpeed": 15.3,
@@ -6005,11 +6005,11 @@
         "weatherCode": 3
       },
       "worstYear": {
-        "year": 2024,
+        "year": 2023,
         "comfortScore": 12,
-        "avgTempMax": 16.2,
-        "avgPrecipitation": 24.2,
-        "avgWindSpeed": 28.4,
+        "avgTempMax": 17.9,
+        "avgPrecipitation": 21.8,
+        "avgWindSpeed": 20.5,
         "weatherCode": 63
       },
       "tempTrend": 0.09,
