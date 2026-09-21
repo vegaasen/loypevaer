@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T10:45:58.387Z",
+  "generatedAt": "2026-09-21T12:29:46.779Z",
   "source": "eqtiming.com / Norges Skiforbund (organizationId=32)",
   "events": [
     {
@@ -130,9 +130,9 @@
     },
     {
       "id": "blavegenlopet",
-      "name": "Blåvegenløpet 2026",
+      "name": "Blåvegenløpet 2027",
       "discipline": "langrenn",
-      "officialDate": "2026-03-28",
+      "officialDate": "2027-03-20",
       "distance": 28,
       "distanceLabel": "28 km",
       "sportLevel": "",
@@ -226,7 +226,7 @@
       "distance": 11,
       "distanceLabel": "11 km",
       "sportLevel": "",
-      "region": "Gol",
+      "region": "Buskerud",
       "url": "www.slarverennet.no",
       "waypoints": [
         {
@@ -622,7 +622,7 @@
       "distance": 32,
       "distanceLabel": "32 km",
       "sportLevel": "",
-      "region": "Buskerud",
+      "region": "Rollag",
       "url": "https://www.facebook.com/VegglifjellRennet/?notif_id=1673356192761370&notif_t=page_fan&ref=notif",
       "waypoints": [
         {
@@ -1162,7 +1162,7 @@
       "distance": 27,
       "distanceLabel": "27 km",
       "sportLevel": "",
-      "region": "Gol",
+      "region": "Buskerud",
       "url": "www.slarverennet.no",
       "waypoints": [
         {
