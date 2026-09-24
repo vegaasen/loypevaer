@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T08:48:55.716Z",
+  "generatedAt": "2026-09-24T08:42:21.006Z",
   "events": [
     {
       "id": "birkebeinerrennet",
@@ -3077,7 +3077,7 @@
       "officialDate": "2026-11-08",
       "region": "Akershus",
       "avgTempMax": 3.3,
-      "avgFeelsLikeMax": 0.5,
+      "avgFeelsLikeMax": 0.6,
       "avgPrecipitation": 1,
       "avgWindSpeed": 10,
       "avgWeatherCode": 3,
