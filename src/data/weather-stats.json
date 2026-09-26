@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T09:00:13.231Z",
+  "generatedAt": "2026-09-26T08:53:34.583Z",
   "events": [
     {
       "id": "birkebeinerrennet",
@@ -4753,9 +4753,9 @@
       "avgTempMax": 12.4,
       "avgFeelsLikeMax": 10.4,
       "avgPrecipitation": 1.8,
-      "avgWindSpeed": 12.1,
+      "avgWindSpeed": 12.2,
       "avgWeatherCode": 3,
-      "comfortScore": 50,
+      "comfortScore": 49,
       "bestYear": {
         "year": 2020,
         "comfortScore": 64,
@@ -8857,30 +8857,16 @@
       "discipline": "langrenn",
       "officialDate": "2027-04-17",
       "region": "Longyearbyen",
-      "avgTempMax": -4.6,
-      "avgFeelsLikeMax": -8.6,
-      "avgPrecipitation": 1.2,
-      "avgWindSpeed": 11.8,
-      "avgWeatherCode": 73,
-      "comfortScore": 15,
-      "bestYear": {
-        "year": 2025,
-        "comfortScore": 46,
-        "avgTempMax": -8.3,
-        "avgPrecipitation": 0,
-        "avgWindSpeed": 7.5,
-        "weatherCode": 3
-      },
-      "worstYear": {
-        "year": 2021,
-        "comfortScore": 10,
-        "avgTempMax": -3.2,
-        "avgPrecipitation": 1.8,
-        "avgWindSpeed": 21.7,
-        "weatherCode": 73
-      },
-      "tempTrend": 0.22,
-      "dataYears": 10
+      "avgTempMax": null,
+      "avgFeelsLikeMax": null,
+      "avgPrecipitation": null,
+      "avgWindSpeed": null,
+      "avgWeatherCode": null,
+      "comfortScore": null,
+      "bestYear": null,
+      "worstYear": null,
+      "tempTrend": null,
+      "dataYears": 0
     },
     {
       "id": "slarverennet-3-april",
@@ -8888,30 +8874,16 @@
       "discipline": "langrenn",
       "officialDate": "2027-04-03",
       "region": "Buskerud",
-      "avgTempMax": 2.7,
-      "avgFeelsLikeMax": -1.4,
-      "avgPrecipitation": 0.7,
-      "avgWindSpeed": 11,
-      "avgWeatherCode": 3,
-      "comfortScore": 39,
-      "bestYear": {
-        "year": 2023,
-        "comfortScore": 49,
-        "avgTempMax": 1.6,
-        "avgPrecipitation": 0,
-        "avgWindSpeed": 5.6,
-        "weatherCode": 3
-      },
-      "worstYear": {
-        "year": 2018,
-        "comfortScore": 11,
-        "avgTempMax": -3.7,
-        "avgPrecipitation": 4.3,
-        "avgWindSpeed": 12.5,
-        "weatherCode": 73
-      },
-      "tempTrend": 0.03,
-      "dataYears": 10
+      "avgTempMax": null,
+      "avgFeelsLikeMax": null,
+      "avgPrecipitation": null,
+      "avgWindSpeed": null,
+      "avgWeatherCode": null,
+      "comfortScore": null,
+      "bestYear": null,
+      "worstYear": null,
+      "tempTrend": null,
+      "dataYears": 0
     },
     {
       "id": "spanstind-rundt",
@@ -8919,30 +8891,16 @@
       "discipline": "langrenn",
       "officialDate": "2027-03-25",
       "region": "Troms",
-      "avgTempMax": -2.8,
-      "avgFeelsLikeMax": -6.7,
-      "avgPrecipitation": 7.3,
-      "avgWindSpeed": 12,
-      "avgWeatherCode": 73,
-      "comfortScore": 8,
-      "bestYear": {
-        "year": 2023,
-        "comfortScore": 46,
-        "avgTempMax": -8.8,
-        "avgPrecipitation": 0,
-        "avgWindSpeed": 7.6,
-        "weatherCode": 3
-      },
-      "worstYear": {
-        "year": 2025,
-        "comfortScore": 0,
-        "avgTempMax": -1.7,
-        "avgPrecipitation": 15.7,
-        "avgWindSpeed": 19.2,
-        "weatherCode": 75
-      },
-      "tempTrend": -0.11,
-      "dataYears": 10
+      "avgTempMax": null,
+      "avgFeelsLikeMax": null,
+      "avgPrecipitation": null,
+      "avgWindSpeed": null,
+      "avgWeatherCode": null,
+      "comfortScore": null,
+      "bestYear": null,
+      "worstYear": null,
+      "tempTrend": null,
+      "dataYears": 0
     }
   ]
 }
