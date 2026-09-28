@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T12:29:46.779Z",
+  "generatedAt": "2026-09-28T13:27:37.562Z",
   "source": "eqtiming.com / Norges Skiforbund (organizationId=32)",
   "events": [
     {
@@ -58,11 +58,11 @@
     },
     {
       "id": "budorrennet",
-      "name": "Budorrennet 2026",
+      "name": "Budorrennet 2027",
       "discipline": "langrenn",
-      "officialDate": "2026-01-03",
-      "distance": 20,
-      "distanceLabel": "20 km",
+      "officialDate": "2027-01-02",
+      "distance": 41,
+      "distanceLabel": "41 km",
       "sportLevel": "",
       "region": "Innlandet",
       "url": " ",
@@ -226,7 +226,7 @@
       "distance": 11,
       "distanceLabel": "11 km",
       "sportLevel": "",
-      "region": "Buskerud",
+      "region": "Gol",
       "url": "www.slarverennet.no",
       "waypoints": [
         {
@@ -447,8 +447,8 @@
       "waypoints": [
         {
           "label": "Start/Mål – Sørum skole",
-          "lat": 60.012318,
-          "lon": 11.235529
+          "lat": 60.011497,
+          "lon": 11.236423
         }
       ]
     },
@@ -508,9 +508,9 @@
     },
     {
       "id": "brokke-skirace",
-      "name": "Brokke Skirace",
+      "name": "Brokke Skirace 2027",
       "discipline": "langrenn",
-      "officialDate": "2026-03-07",
+      "officialDate": "2027-02-20",
       "distance": 18,
       "distanceLabel": "18 km",
       "sportLevel": "",
@@ -622,7 +622,7 @@
       "distance": 32,
       "distanceLabel": "32 km",
       "sportLevel": "",
-      "region": "Rollag",
+      "region": "Buskerud",
       "url": "https://www.facebook.com/VegglifjellRennet/?notif_id=1673356192761370&notif_t=page_fan&ref=notif",
       "waypoints": [
         {
@@ -717,8 +717,8 @@
       "waypoints": [
         {
           "label": "Start/Mål – Golsfjellet",
-          "lat": 60.8271603,
-          "lon": 8.9882065
+          "lat": 60.8569305,
+          "lon": 8.9128477
         }
       ]
     },
@@ -766,7 +766,7 @@
       "distance": 25,
       "distanceLabel": "25 km",
       "sportLevel": "",
-      "region": "Buskerud",
+      "region": "Lier",
       "url": "www.hauern.no",
       "waypoints": [
         {
@@ -1131,8 +1131,8 @@
       "waypoints": [
         {
           "label": "Start/Mål – Mosetertoppen skistadion",
-          "lat": 61.252917,
-          "lon": 10.509584
+          "lat": 61.2531244,
+          "lon": 10.5103047
         }
       ]
     },
@@ -1162,7 +1162,7 @@
       "distance": 27,
       "distanceLabel": "27 km",
       "sportLevel": "",
-      "region": "Buskerud",
+      "region": "Gol",
       "url": "www.slarverennet.no",
       "waypoints": [
         {
@@ -1187,6 +1187,24 @@
           "label": "Start/Mål – Lavangen",
           "lat": 68.7169832,
           "lon": 17.8162748
+        }
+      ]
+    },
+    {
+      "id": "reistadlopet-2027-sc",
+      "name": "Reistadløpet 2027 SC",
+      "discipline": "langrenn",
+      "officialDate": "2027-04-03",
+      "distance": 35,
+      "distanceLabel": "35 km",
+      "sportLevel": "FIS",
+      "region": "Norge",
+      "url": "www.reistadlopet.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Setermoen-Bardufoss",
+          "lat": 69.0551673,
+          "lon": 18.4741254
         }
       ]
     }
