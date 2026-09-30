@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T09:26:47.416Z",
+  "generatedAt": "2026-09-30T09:17:48.600Z",
   "climateAverages": {
     "61.131,11.374,03,14": {
       "source": "climate-average",
@@ -5000,26 +5000,6 @@
       "precipitation": 2.6,
       "windSpeed": 19.2,
       "weatherCode": 71
-    },
-    "68.7169832,17.8162748,03,25": {
-      "source": "climate-average",
-      "tempMax": -3.9,
-      "tempMin": -8.2,
-      "feelsLikeMax": -7.6,
-      "feelsLikeMin": -12.7,
-      "precipitation": 5.2,
-      "windSpeed": 11.1,
-      "weatherCode": 73
-    },
-    "69.0551673,18.4741254,04,03": {
-      "source": "climate-average",
-      "tempMax": 0.4,
-      "tempMin": -6.7,
-      "feelsLikeMax": -3.5,
-      "feelsLikeMin": -11.1,
-      "precipitation": 4.5,
-      "windSpeed": 12.8,
-      "weatherCode": 75
     }
   },
   "historicalByYear": {
@@ -15393,16 +15373,6 @@
       "windSpeed": 20.8,
       "weatherCode": 61
     },
-    "58.9994464,5.6165674,09,26,2024": {
-      "source": "climate-average",
-      "tempMax": 12.8,
-      "tempMin": 5.3,
-      "feelsLikeMax": 9.6,
-      "feelsLikeMin": 3.1,
-      "precipitation": 2.7,
-      "windSpeed": 19.9,
-      "weatherCode": 61
-    },
     "58.9994464,5.6165674,09,26,2023": {
       "source": "climate-average",
       "tempMax": 17.7,
@@ -15412,6 +15382,16 @@
       "precipitation": 2.8,
       "windSpeed": 24.8,
       "weatherCode": 53
+    },
+    "58.9994464,5.6165674,09,26,2024": {
+      "source": "climate-average",
+      "tempMax": 12.8,
+      "tempMin": 5.3,
+      "feelsLikeMax": 9.6,
+      "feelsLikeMin": 3.1,
+      "precipitation": 2.7,
+      "windSpeed": 19.9,
+      "weatherCode": 61
     },
     "58.9994464,5.6165674,09,26,2025": {
       "source": "climate-average",
@@ -16753,16 +16733,6 @@
       "windSpeed": 17.4,
       "weatherCode": 51
     },
-    "58.9831321,6.394641,10,01,2019": {
-      "source": "climate-average",
-      "tempMax": 3.1,
-      "tempMin": 0.4,
-      "feelsLikeMax": -1,
-      "feelsLikeMin": -4.3,
-      "precipitation": 3.2,
-      "windSpeed": 21.1,
-      "weatherCode": 73
-    },
     "58.9831321,6.394641,10,01,2020": {
       "source": "climate-average",
       "tempMax": 9.8,
@@ -16772,6 +16742,16 @@
       "precipitation": 1.5,
       "windSpeed": 36.4,
       "weatherCode": 53
+    },
+    "58.9831321,6.394641,10,01,2019": {
+      "source": "climate-average",
+      "tempMax": 3.1,
+      "tempMin": 0.4,
+      "feelsLikeMax": -1,
+      "feelsLikeMin": -4.3,
+      "precipitation": 3.2,
+      "windSpeed": 21.1,
+      "weatherCode": 73
     },
     "58.9831321,6.394641,10,01,2021": {
       "source": "climate-average",
@@ -27943,16 +27923,6 @@
       "windSpeed": 10,
       "weatherCode": 3
     },
-    "69.65,20.097,06,13,2018": {
-      "source": "climate-average",
-      "tempMax": 7.4,
-      "tempMin": 3.2,
-      "feelsLikeMax": 4.1,
-      "feelsLikeMin": 0.9,
-      "precipitation": 0.1,
-      "windSpeed": 7.9,
-      "weatherCode": 51
-    },
     "69.65,20.097,06,13,2019": {
       "source": "climate-average",
       "tempMax": 15.5,
@@ -27961,6 +27931,16 @@
       "feelsLikeMin": 5.3,
       "precipitation": 0.1,
       "windSpeed": 9.7,
+      "weatherCode": 51
+    },
+    "69.65,20.097,06,13,2018": {
+      "source": "climate-average",
+      "tempMax": 7.4,
+      "tempMin": 3.2,
+      "feelsLikeMax": 4.1,
+      "feelsLikeMin": 0.9,
+      "precipitation": 0.1,
+      "windSpeed": 7.9,
       "weatherCode": 51
     },
     "69.65,20.097,06,13,2020": {
@@ -37743,16 +37723,6 @@
       "windSpeed": 14.8,
       "weatherCode": 53
     },
-    "68.916,18.512,06,27,2019": {
-      "source": "climate-average",
-      "tempMax": 8.5,
-      "tempMin": 3.2,
-      "feelsLikeMax": 4.2,
-      "feelsLikeMin": -0.6,
-      "precipitation": 10.9,
-      "windSpeed": 25.4,
-      "weatherCode": 61
-    },
     "68.916,18.512,06,27,2018": {
       "source": "climate-average",
       "tempMax": 7.2,
@@ -37763,15 +37733,15 @@
       "windSpeed": 23.5,
       "weatherCode": 63
     },
-    "68.916,18.512,06,27,2021": {
+    "68.916,18.512,06,27,2019": {
       "source": "climate-average",
-      "tempMax": 12,
-      "tempMin": 7.7,
-      "feelsLikeMax": 8.2,
-      "feelsLikeMin": 5.2,
-      "precipitation": 0.3,
-      "windSpeed": 20.4,
-      "weatherCode": 51
+      "tempMax": 8.5,
+      "tempMin": 3.2,
+      "feelsLikeMax": 4.2,
+      "feelsLikeMin": -0.6,
+      "precipitation": 10.9,
+      "windSpeed": 25.4,
+      "weatherCode": 61
     },
     "68.916,18.512,06,27,2020": {
       "source": "climate-average",
@@ -37783,15 +37753,15 @@
       "windSpeed": 12,
       "weatherCode": 3
     },
-    "68.916,18.512,06,27,2023": {
+    "68.916,18.512,06,27,2021": {
       "source": "climate-average",
-      "tempMax": 22,
-      "tempMin": 13,
-      "feelsLikeMax": 21.9,
-      "feelsLikeMin": 11.8,
-      "precipitation": 0,
-      "windSpeed": 8.9,
-      "weatherCode": 2
+      "tempMax": 12,
+      "tempMin": 7.7,
+      "feelsLikeMax": 8.2,
+      "feelsLikeMin": 5.2,
+      "precipitation": 0.3,
+      "windSpeed": 20.4,
+      "weatherCode": 51
     },
     "68.916,18.512,06,27,2022": {
       "source": "climate-average",
@@ -37802,6 +37772,16 @@
       "precipitation": 2.1,
       "windSpeed": 10.5,
       "weatherCode": 61
+    },
+    "68.916,18.512,06,27,2023": {
+      "source": "climate-average",
+      "tempMax": 22,
+      "tempMin": 13,
+      "feelsLikeMax": 21.9,
+      "feelsLikeMin": 11.8,
+      "precipitation": 0,
+      "windSpeed": 8.9,
+      "weatherCode": 2
     },
     "68.916,18.512,06,27,2024": {
       "source": "climate-average",
@@ -39083,16 +39063,6 @@
       "windSpeed": 23.5,
       "weatherCode": 63
     },
-    "59.593,10.753,05,10,2022": {
-      "source": "climate-average",
-      "tempMax": 12.8,
-      "tempMin": 8.9,
-      "feelsLikeMax": 8.4,
-      "feelsLikeMin": 5.5,
-      "precipitation": 6,
-      "windSpeed": 30.6,
-      "weatherCode": 61
-    },
     "59.593,10.753,05,10,2023": {
       "source": "climate-average",
       "tempMax": 18.3,
@@ -39102,6 +39072,16 @@
       "precipitation": 0,
       "windSpeed": 14.9,
       "weatherCode": 3
+    },
+    "59.593,10.753,05,10,2022": {
+      "source": "climate-average",
+      "tempMax": 12.8,
+      "tempMin": 8.9,
+      "feelsLikeMax": 8.4,
+      "feelsLikeMin": 5.5,
+      "precipitation": 6,
+      "windSpeed": 30.6,
+      "weatherCode": 61
     },
     "59.593,10.753,05,10,2024": {
       "source": "climate-average",
@@ -39933,16 +39913,6 @@
       "windSpeed": 7.9,
       "weatherCode": 3
     },
-    "59.497,5.594,08,23,2017": {
-      "source": "climate-average",
-      "tempMax": 17.1,
-      "tempMin": 5.9,
-      "feelsLikeMax": 15.7,
-      "feelsLikeMin": 4.2,
-      "precipitation": 0,
-      "windSpeed": 14.1,
-      "weatherCode": 3
-    },
     "59.497,5.594,08,23,2018": {
       "source": "climate-average",
       "tempMax": 16.3,
@@ -39952,6 +39922,16 @@
       "precipitation": 1.2,
       "windSpeed": 7.7,
       "weatherCode": 51
+    },
+    "59.497,5.594,08,23,2017": {
+      "source": "climate-average",
+      "tempMax": 17.1,
+      "tempMin": 5.9,
+      "feelsLikeMax": 15.7,
+      "feelsLikeMin": 4.2,
+      "precipitation": 0,
+      "windSpeed": 14.1,
+      "weatherCode": 3
     },
     "59.497,5.594,08,23,2019": {
       "source": "climate-average",
@@ -46843,16 +46823,6 @@
       "windSpeed": 7.4,
       "weatherCode": 51
     },
-    "60.22881605,10.36213701,08,31,2018": {
-      "source": "climate-average",
-      "tempMax": 16.8,
-      "tempMin": 8.7,
-      "feelsLikeMax": 13.7,
-      "feelsLikeMin": 6.4,
-      "precipitation": 0,
-      "windSpeed": 12.5,
-      "weatherCode": 3
-    },
     "60.22881605,10.36213701,08,31,2019": {
       "source": "climate-average",
       "tempMax": 18,
@@ -46862,6 +46832,16 @@
       "precipitation": 1.5,
       "windSpeed": 17.5,
       "weatherCode": 53
+    },
+    "60.22881605,10.36213701,08,31,2018": {
+      "source": "climate-average",
+      "tempMax": 16.8,
+      "tempMin": 8.7,
+      "feelsLikeMax": 13.7,
+      "feelsLikeMin": 6.4,
+      "precipitation": 0,
+      "windSpeed": 12.5,
+      "weatherCode": 3
     },
     "60.22881605,10.36213701,08,31,2020": {
       "source": "climate-average",
@@ -47413,16 +47393,6 @@
       "windSpeed": 14.7,
       "weatherCode": 53
     },
-    "69.9666046,23.2733282,07,29,2025": {
-      "source": "climate-average",
-      "tempMax": 17.3,
-      "tempMin": 12.2,
-      "feelsLikeMax": 16.9,
-      "feelsLikeMin": 11.3,
-      "precipitation": 0.1,
-      "windSpeed": 7.6,
-      "weatherCode": 51
-    },
     "69.9666046,23.2733282,07,26,2016": {
       "source": "climate-average",
       "tempMax": 13.4,
@@ -47432,6 +47402,16 @@
       "precipitation": 2.6,
       "windSpeed": 11,
       "weatherCode": 53
+    },
+    "69.9666046,23.2733282,07,29,2025": {
+      "source": "climate-average",
+      "tempMax": 17.3,
+      "tempMin": 12.2,
+      "feelsLikeMax": 16.9,
+      "feelsLikeMin": 11.3,
+      "precipitation": 0.1,
+      "windSpeed": 7.6,
+      "weatherCode": 51
     },
     "69.9666046,23.2733282,07,26,2017": {
       "source": "climate-average",
@@ -53843,16 +53823,6 @@
       "windSpeed": 15,
       "weatherCode": 73
     },
-    "59.8224173,10.1348197,02,07,2019": {
-      "source": "climate-average",
-      "tempMax": -5,
-      "tempMin": -11.8,
-      "feelsLikeMax": -9.3,
-      "feelsLikeMin": -16.2,
-      "precipitation": 8.2,
-      "windSpeed": 10,
-      "weatherCode": 75
-    },
     "59.8224173,10.1348197,02,07,2018": {
       "source": "climate-average",
       "tempMax": -5.2,
@@ -53862,6 +53832,16 @@
       "precipitation": 0,
       "windSpeed": 5.7,
       "weatherCode": 3
+    },
+    "59.8224173,10.1348197,02,07,2019": {
+      "source": "climate-average",
+      "tempMax": -5,
+      "tempMin": -11.8,
+      "feelsLikeMax": -9.3,
+      "feelsLikeMin": -16.2,
+      "precipitation": 8.2,
+      "windSpeed": 10,
+      "weatherCode": 75
     },
     "59.8224173,10.1348197,02,07,2020": {
       "source": "climate-average",
@@ -55022,146 +55002,6 @@
       "precipitation": 0.3,
       "windSpeed": 16.4,
       "weatherCode": 71
-    },
-    "68.7169832,17.8162748,03,25,2022": {
-      "source": "climate-average",
-      "tempMax": -1.6,
-      "tempMin": -5.4,
-      "feelsLikeMax": -5.2,
-      "feelsLikeMin": -9.3,
-      "precipitation": 4,
-      "windSpeed": 8.7,
-      "weatherCode": 73
-    },
-    "68.7169832,17.8162748,03,25,2024": {
-      "source": "climate-average",
-      "tempMax": -3.7,
-      "tempMin": -9.1,
-      "feelsLikeMax": -7.6,
-      "feelsLikeMin": -13.7,
-      "precipitation": 1.2,
-      "windSpeed": 8.8,
-      "weatherCode": 73
-    },
-    "68.7169832,17.8162748,03,25,2023": {
-      "source": "climate-average",
-      "tempMax": -8.8,
-      "tempMin": -13.3,
-      "feelsLikeMax": -12.3,
-      "feelsLikeMin": -17.9,
-      "precipitation": 0,
-      "windSpeed": 7.6,
-      "weatherCode": 3
-    },
-    "69.0551673,18.4741254,04,03,2016": {
-      "source": "climate-average",
-      "tempMax": 1.9,
-      "tempMin": -7.1,
-      "feelsLikeMax": -1.8,
-      "feelsLikeMin": -12.1,
-      "precipitation": 0.5,
-      "windSpeed": 13.4,
-      "weatherCode": 71
-    },
-    "68.7169832,17.8162748,03,25,2025": {
-      "source": "climate-average",
-      "tempMax": -1.7,
-      "tempMin": -5.1,
-      "feelsLikeMax": -5.5,
-      "feelsLikeMin": -9.8,
-      "precipitation": 15.7,
-      "windSpeed": 19.2,
-      "weatherCode": 75
-    },
-    "69.0551673,18.4741254,04,03,2017": {
-      "source": "climate-average",
-      "tempMax": 3.5,
-      "tempMin": -3.3,
-      "feelsLikeMax": -0.3,
-      "feelsLikeMin": -7,
-      "precipitation": 13,
-      "windSpeed": 18.7,
-      "weatherCode": 75
-    },
-    "69.0551673,18.4741254,04,03,2018": {
-      "source": "climate-average",
-      "tempMax": -2.6,
-      "tempMin": -13.2,
-      "feelsLikeMax": -6,
-      "feelsLikeMin": -17.4,
-      "precipitation": 0,
-      "windSpeed": 6.1,
-      "weatherCode": 1
-    },
-    "69.0551673,18.4741254,04,03,2019": {
-      "source": "climate-average",
-      "tempMax": 3.3,
-      "tempMin": -0.6,
-      "feelsLikeMax": 0,
-      "feelsLikeMin": -4.6,
-      "precipitation": 3.1,
-      "windSpeed": 11.7,
-      "weatherCode": 73
-    },
-    "69.0551673,18.4741254,04,03,2020": {
-      "source": "climate-average",
-      "tempMax": -4.8,
-      "tempMin": -11.9,
-      "feelsLikeMax": -8.8,
-      "feelsLikeMin": -15.8,
-      "precipitation": 1.4,
-      "windSpeed": 6.9,
-      "weatherCode": 73
-    },
-    "69.0551673,18.4741254,04,03,2021": {
-      "source": "climate-average",
-      "tempMax": 2.6,
-      "tempMin": -1.7,
-      "feelsLikeMax": -1.2,
-      "feelsLikeMin": -5.8,
-      "precipitation": 7.8,
-      "windSpeed": 15.5,
-      "weatherCode": 75
-    },
-    "69.0551673,18.4741254,04,03,2022": {
-      "source": "climate-average",
-      "tempMax": -3.3,
-      "tempMin": -9.6,
-      "feelsLikeMax": -7.1,
-      "feelsLikeMin": -14.3,
-      "precipitation": 0.3,
-      "windSpeed": 9,
-      "weatherCode": 71
-    },
-    "69.0551673,18.4741254,04,03,2023": {
-      "source": "climate-average",
-      "tempMax": 1.5,
-      "tempMin": -7.5,
-      "feelsLikeMax": -3,
-      "feelsLikeMin": -12.1,
-      "precipitation": 4.1,
-      "windSpeed": 15.7,
-      "weatherCode": 75
-    },
-    "69.0551673,18.4741254,04,03,2024": {
-      "source": "climate-average",
-      "tempMax": -3.8,
-      "tempMin": -13.5,
-      "feelsLikeMax": -8.1,
-      "feelsLikeMin": -18.5,
-      "precipitation": 2.8,
-      "windSpeed": 10.6,
-      "weatherCode": 73
-    },
-    "69.0551673,18.4741254,04,03,2025": {
-      "source": "climate-average",
-      "tempMax": 5.8,
-      "tempMin": 1.1,
-      "feelsLikeMax": 1.5,
-      "feelsLikeMin": -3.3,
-      "precipitation": 12.1,
-      "windSpeed": 20,
-      "weatherCode": 75
     }
   }
 }
