@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T11:24:55.948Z",
+  "generatedAt": "2026-10-05T12:00:49.308Z",
   "source": "eqtiming.com / Norges Cykleforbund (organizationId=13)",
   "events": [
     {
@@ -71,7 +71,7 @@
       "distance": 50,
       "distanceLabel": "50 km",
       "sportLevel": "Tur",
-      "region": "Buskerud",
+      "region": "Hol",
       "url": "https://www.fat-viking.com/en",
       "waypoints": [
         {
@@ -2544,6 +2544,24 @@
           "label": "Start/Mål – Lillesand",
           "lat": 58.27322767,
           "lon": 8.3257567
+        }
+      ]
+    },
+    {
+      "id": "1814-rittet",
+      "name": "1814-Rittet 2027",
+      "discipline": "terreng",
+      "officialDate": "2027-08-07",
+      "distance": 62,
+      "distanceLabel": "62 km",
+      "sportLevel": "Reg",
+      "region": "Akershus",
+      "url": "https://www.eidsvollsk.no/1814-rittet/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Skistuavegen 1, 2074 Eidsvoll Verk",
+          "lat": 60.3146376,
+          "lon": 11.1441232
         }
       ]
     }
