@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-09-28T13:27:37.562Z",
+  "generatedAt": "2026-10-05T14:10:46.863Z",
   "source": "eqtiming.com / Norges Skiforbund (organizationId=32)",
   "events": [
     {
       "id": "helterennet",
-      "name": "Helterennet 2026",
+      "name": "Helterennet 2027",
       "discipline": "langrenn",
-      "officialDate": "2026-02-28",
-      "distance": 43,
-      "distanceLabel": "43 km",
+      "officialDate": "2027-03-06",
+      "distance": 26,
+      "distanceLabel": "26 km",
       "sportLevel": "",
       "region": "Telemark",
       "url": "",
@@ -94,9 +94,9 @@
     },
     {
       "id": "hovdentour",
-      "name": "HovdenTour 2026",
+      "name": "HovdenTour 2027",
       "discipline": "langrenn",
-      "officialDate": "2026-03-21",
+      "officialDate": "2027-03-13",
       "distance": 10,
       "distanceLabel": "10 km",
       "sportLevel": "LR",
@@ -274,13 +274,13 @@
     },
     {
       "id": "grenaderlopet",
-      "name": "Grenaderløpet 2026",
+      "name": "Grenaderløpet 2027",
       "discipline": "langrenn",
-      "officialDate": "2026-02-07",
+      "officialDate": "2027-02-13",
       "distance": 90,
       "distanceLabel": "90 km",
       "sportLevel": "",
-      "region": "Buskerud",
+      "region": "Ringerike",
       "url": "http://www.grenaderen.com/",
       "waypoints": [
         {
@@ -328,9 +328,9 @@
     },
     {
       "id": "flyktningerennet",
-      "name": "Flyktningerennet-2026",
+      "name": "Flyktningerennet-2027",
       "discipline": "langrenn",
-      "officialDate": "2026-03-21",
+      "officialDate": "2027-03-13",
       "distance": 44,
       "distanceLabel": "44 km",
       "sportLevel": "",
@@ -400,19 +400,19 @@
     },
     {
       "id": "kvaloya-skimaraton",
-      "name": "Kvaløya Skimaraton 2026",
+      "name": "Kvaløya Skimaraton 2027",
       "discipline": "langrenn",
-      "officialDate": "2026-03-14",
+      "officialDate": "2027-03-06",
       "distance": 21,
       "distanceLabel": "21 km",
       "sportLevel": "",
-      "region": "Vestland",
-      "url": "http://www.kvaloyaskimaraton.no/",
+      "region": "Buskerud",
+      "url": "",
       "waypoints": [
         {
-          "label": "Start/Mål – Kvaløya",
-          "lat": 60.1332488,
-          "lon": 5.0960951
+          "label": "Start/Mål – Storelva",
+          "lat": 60.1355883,
+          "lon": 10.2411549
         }
       ]
     },
@@ -447,8 +447,8 @@
       "waypoints": [
         {
           "label": "Start/Mål – Sørum skole",
-          "lat": 60.011497,
-          "lon": 11.236423
+          "lat": 60.012318,
+          "lon": 11.235529
         }
       ]
     },
@@ -712,13 +712,13 @@
       "distance": 10,
       "distanceLabel": "10 km",
       "sportLevel": "",
-      "region": "Buskerud",
+      "region": "Gol",
       "url": "",
       "waypoints": [
         {
           "label": "Start/Mål – Golsfjellet",
-          "lat": 60.8569305,
-          "lon": 8.9128477
+          "lat": 60.8271603,
+          "lon": 8.9882065
         }
       ]
     },
@@ -766,7 +766,7 @@
       "distance": 25,
       "distanceLabel": "25 km",
       "sportLevel": "",
-      "region": "Lier",
+      "region": "Buskerud",
       "url": "www.hauern.no",
       "waypoints": [
         {
@@ -784,7 +784,7 @@
       "distance": 25,
       "distanceLabel": "25 km",
       "sportLevel": "",
-      "region": "Buskerud",
+      "region": "Sigdal",
       "url": "",
       "waypoints": [
         {
@@ -1131,8 +1131,8 @@
       "waypoints": [
         {
           "label": "Start/Mål – Mosetertoppen skistadion",
-          "lat": 61.2531244,
-          "lon": 10.5103047
+          "lat": 61.252917,
+          "lon": 10.509584
         }
       ]
     },
