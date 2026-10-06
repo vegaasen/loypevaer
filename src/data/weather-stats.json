@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T10:13:02.137Z",
+  "generatedAt": "2026-10-06T10:00:28.079Z",
   "events": [
     {
       "id": "birkebeinerrennet",
@@ -4594,7 +4594,7 @@
       "name": "Fat Viking 2026",
       "discipline": "terreng",
       "officialDate": "2026-01-24",
-      "region": "Buskerud",
+      "region": "Hol",
       "avgTempMax": -0.8,
       "avgFeelsLikeMax": -4.7,
       "avgPrecipitation": 2.1,
@@ -6884,6 +6884,37 @@
       "dataYears": 10
     },
     {
+      "id": "1814-rittet",
+      "name": "1814-Rittet 2027",
+      "discipline": "terreng",
+      "officialDate": "2027-08-07",
+      "region": "Akershus",
+      "avgTempMax": 19.4,
+      "avgFeelsLikeMax": 18,
+      "avgPrecipitation": 6.1,
+      "avgWindSpeed": 16.7,
+      "avgWeatherCode": 51,
+      "comfortScore": 28,
+      "bestYear": {
+        "year": 2022,
+        "comfortScore": 67,
+        "avgTempMax": 17.6,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 12.2,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2023,
+        "comfortScore": 13,
+        "avgTempMax": 16.2,
+        "avgPrecipitation": 44.9,
+        "avgWindSpeed": 24.5,
+        "weatherCode": 63
+      },
+      "tempTrend": -0.09,
+      "dataYears": 10
+    },
+    {
       "id": "sognefjellrittet",
       "name": "Sognefjellrittet",
       "discipline": "landevei",
@@ -7026,33 +7057,33 @@
     },
     {
       "id": "helterennet",
-      "name": "Helterennet 2026",
+      "name": "Helterennet 2027",
       "discipline": "langrenn",
-      "officialDate": "2026-02-28",
+      "officialDate": "2027-03-06",
       "region": "Telemark",
-      "avgTempMax": -0.6,
-      "avgFeelsLikeMax": -4.8,
-      "avgPrecipitation": 2.3,
-      "avgWindSpeed": 13.4,
+      "avgTempMax": -2.2,
+      "avgFeelsLikeMax": -6.3,
+      "avgPrecipitation": 1.9,
+      "avgWindSpeed": 13,
       "avgWeatherCode": 3,
-      "comfortScore": 31,
+      "comfortScore": 33,
       "bestYear": {
-        "year": 2023,
-        "comfortScore": 51,
-        "avgTempMax": 5,
+        "year": 2020,
+        "comfortScore": 47,
+        "avgTempMax": -3.7,
         "avgPrecipitation": 0,
-        "avgWindSpeed": 8,
-        "weatherCode": 1
+        "avgWindSpeed": 6.8,
+        "weatherCode": 3
       },
       "worstYear": {
-        "year": 2017,
-        "comfortScore": 1,
-        "avgTempMax": 0,
-        "avgPrecipitation": 20.4,
-        "avgWindSpeed": 17.8,
-        "weatherCode": 75
+        "year": 2019,
+        "comfortScore": 5,
+        "avgTempMax": -3.3,
+        "avgPrecipitation": 8.8,
+        "avgWindSpeed": 13.1,
+        "weatherCode": 73
       },
-      "tempTrend": 1.02,
+      "tempTrend": 0.76,
       "dataYears": 10
     },
     {
@@ -7181,33 +7212,33 @@
     },
     {
       "id": "hovdentour",
-      "name": "HovdenTour 2026",
+      "name": "HovdenTour 2027",
       "discipline": "langrenn",
-      "officialDate": "2026-03-21",
+      "officialDate": "2027-03-13",
       "region": "Vestland",
-      "avgTempMax": 4.9,
-      "avgFeelsLikeMax": 0.8,
-      "avgPrecipitation": 10.6,
-      "avgWindSpeed": 26.6,
+      "avgTempMax": 4,
+      "avgFeelsLikeMax": -1,
+      "avgPrecipitation": 8.8,
+      "avgWindSpeed": 29,
       "avgWeatherCode": 73,
-      "comfortScore": 0,
+      "comfortScore": 1,
       "bestYear": {
-        "year": 2022,
-        "comfortScore": 50,
-        "avgTempMax": 9.6,
+        "year": 2018,
+        "comfortScore": 32,
+        "avgTempMax": 2.4,
         "avgPrecipitation": 0,
-        "avgWindSpeed": 11.6,
-        "weatherCode": 2
+        "avgWindSpeed": 17.7,
+        "weatherCode": 3
       },
       "worstYear": {
-        "year": 2019,
+        "year": 2024,
         "comfortScore": 0,
-        "avgTempMax": 7,
-        "avgPrecipitation": 27.2,
-        "avgWindSpeed": 37.5,
-        "weatherCode": 73
+        "avgTempMax": 5.9,
+        "avgPrecipitation": 26.7,
+        "avgWindSpeed": 33.4,
+        "weatherCode": 63
       },
-      "tempTrend": 0.37,
+      "tempTrend": 0.05,
       "dataYears": 10
     },
     {
@@ -7491,33 +7522,33 @@
     },
     {
       "id": "grenaderlopet",
-      "name": "Grenaderløpet 2026",
+      "name": "Grenaderløpet 2027",
       "discipline": "langrenn",
-      "officialDate": "2026-02-07",
-      "region": "Buskerud",
-      "avgTempMax": -4.2,
-      "avgFeelsLikeMax": -8.1,
-      "avgPrecipitation": 1.6,
-      "avgWindSpeed": 11.8,
+      "officialDate": "2027-02-13",
+      "region": "Ringerike",
+      "avgTempMax": -2.3,
+      "avgFeelsLikeMax": -6.3,
+      "avgPrecipitation": 0.9,
+      "avgWindSpeed": 12.4,
       "avgWeatherCode": 3,
-      "comfortScore": 35,
+      "comfortScore": 37,
       "bestYear": {
-        "year": 2018,
+        "year": 2021,
         "comfortScore": 48,
-        "avgTempMax": -7.4,
+        "avgTempMax": -11.2,
         "avgPrecipitation": 0,
-        "avgWindSpeed": 6,
-        "weatherCode": 3
+        "avgWindSpeed": 11.2,
+        "weatherCode": 0
       },
       "worstYear": {
-        "year": 2016,
-        "comfortScore": 1,
-        "avgTempMax": 1.3,
-        "avgPrecipitation": 9.7,
-        "avgWindSpeed": 18.8,
+        "year": 2024,
+        "comfortScore": 11,
+        "avgTempMax": -6.2,
+        "avgPrecipitation": 6.5,
+        "avgWindSpeed": 7.7,
         "weatherCode": 73
       },
-      "tempTrend": -0.04,
+      "tempTrend": 0.13,
       "dataYears": 10
     },
     {
@@ -7584,33 +7615,33 @@
     },
     {
       "id": "flyktningerennet",
-      "name": "Flyktningerennet-2026",
+      "name": "Flyktningerennet-2027",
       "discipline": "langrenn",
-      "officialDate": "2026-03-21",
+      "officialDate": "2027-03-13",
       "region": "Trøndelag",
-      "avgTempMax": 1.1,
-      "avgFeelsLikeMax": -3.2,
-      "avgPrecipitation": 2.6,
-      "avgWindSpeed": 20.8,
-      "avgWeatherCode": 71,
-      "comfortScore": 9,
+      "avgTempMax": -1.5,
+      "avgFeelsLikeMax": -5.6,
+      "avgPrecipitation": 2.1,
+      "avgWindSpeed": 13.2,
+      "avgWeatherCode": 73,
+      "comfortScore": 13,
       "bestYear": {
         "year": 2022,
-        "comfortScore": 48,
-        "avgTempMax": 3.7,
+        "comfortScore": 40,
+        "avgTempMax": 3.9,
         "avgPrecipitation": 0,
-        "avgWindSpeed": 11.2,
-        "weatherCode": 0
+        "avgWindSpeed": 11.5,
+        "weatherCode": 3
       },
       "worstYear": {
-        "year": 2018,
-        "comfortScore": 3,
-        "avgTempMax": 0.9,
-        "avgPrecipitation": 7.3,
-        "avgWindSpeed": 24,
+        "year": 2019,
+        "comfortScore": 5,
+        "avgTempMax": -3.9,
+        "avgPrecipitation": 5.8,
+        "avgWindSpeed": 22.2,
         "weatherCode": 73
       },
-      "tempTrend": 0.28,
+      "tempTrend": -0.33,
       "dataYears": 10
     },
     {
@@ -7708,33 +7739,33 @@
     },
     {
       "id": "kvaloya-skimaraton",
-      "name": "Kvaløya Skimaraton 2026",
+      "name": "Kvaløya Skimaraton 2027",
       "discipline": "langrenn",
-      "officialDate": "2026-03-14",
-      "region": "Vestland",
-      "avgTempMax": 6.4,
-      "avgFeelsLikeMax": 2.1,
-      "avgPrecipitation": 3.9,
-      "avgWindSpeed": 27.2,
+      "officialDate": "2027-03-06",
+      "region": "Buskerud",
+      "avgTempMax": 2.6,
+      "avgFeelsLikeMax": -1,
+      "avgPrecipitation": 1.2,
+      "avgWindSpeed": 10.9,
       "avgWeatherCode": 3,
-      "comfortScore": 17,
+      "comfortScore": 38,
       "bestYear": {
-        "year": 2022,
-        "comfortScore": 40,
-        "avgTempMax": 11.7,
+        "year": 2020,
+        "comfortScore": 49,
+        "avgTempMax": 0.3,
         "avgPrecipitation": 0,
-        "avgWindSpeed": 18.3,
+        "avgWindSpeed": 5.2,
         "weatherCode": 3
       },
       "worstYear": {
-        "year": 2017,
-        "comfortScore": 0,
-        "avgTempMax": 8.9,
-        "avgPrecipitation": 18.3,
-        "avgWindSpeed": 46.9,
-        "weatherCode": 63
+        "year": 2016,
+        "comfortScore": 10,
+        "avgTempMax": 1.6,
+        "avgPrecipitation": 6.2,
+        "avgWindSpeed": 10.8,
+        "weatherCode": 73
       },
-      "tempTrend": -0.08,
+      "tempTrend": 0.94,
       "dataYears": 10
     },
     {
@@ -8238,9 +8269,9 @@
       "name": "Fakkelskituren 2026",
       "discipline": "langrenn",
       "officialDate": "2026-02-14",
-      "region": "Buskerud",
-      "avgTempMax": -4.3,
-      "avgFeelsLikeMax": -8.3,
+      "region": "Gol",
+      "avgTempMax": -4.7,
+      "avgFeelsLikeMax": -8.7,
       "avgPrecipitation": 1.6,
       "avgWindSpeed": 10.8,
       "avgWeatherCode": 3,
@@ -8248,7 +8279,7 @@
       "bestYear": {
         "year": 2017,
         "comfortScore": 51,
-        "avgTempMax": 1.1,
+        "avgTempMax": 0.8,
         "avgPrecipitation": 0,
         "avgWindSpeed": 7.7,
         "weatherCode": 1
@@ -8256,12 +8287,12 @@
       "worstYear": {
         "year": 2022,
         "comfortScore": 2,
-        "avgTempMax": -1.2,
+        "avgTempMax": -1.6,
         "avgPrecipitation": 14.8,
         "avgWindSpeed": 17.2,
         "weatherCode": 75
       },
-      "tempTrend": -0.05,
+      "tempTrend": -0.07,
       "dataYears": 10
     },
     {
@@ -8331,7 +8362,7 @@
       "name": "Thorleif Haug Skifestival 2026",
       "discipline": "langrenn",
       "officialDate": "2026-02-07",
-      "region": "Lier",
+      "region": "Buskerud",
       "avgTempMax": -2,
       "avgFeelsLikeMax": -5.8,
       "avgPrecipitation": 1.8,
@@ -8362,7 +8393,7 @@
       "name": "Holmvassløpet  2026",
       "discipline": "langrenn",
       "officialDate": "2026-03-29",
-      "region": "Buskerud",
+      "region": "Sigdal",
       "avgTempMax": 1.6,
       "avgFeelsLikeMax": -2.7,
       "avgPrecipitation": 3.1,
@@ -8673,10 +8704,10 @@
       "discipline": "langrenn",
       "officialDate": "2026-03-29",
       "region": "Trøndelag",
-      "avgTempMax": 0.4,
-      "avgFeelsLikeMax": -4.1,
-      "avgPrecipitation": 2.6,
-      "avgWindSpeed": 19.2,
+      "avgTempMax": 0.5,
+      "avgFeelsLikeMax": -3.9,
+      "avgPrecipitation": 2.9,
+      "avgWindSpeed": 18.6,
       "avgWeatherCode": 71,
       "comfortScore": 9,
       "bestYear": {
@@ -8695,8 +8726,8 @@
         "avgWindSpeed": 25.9,
         "weatherCode": 75
       },
-      "tempTrend": 0.18,
-      "dataYears": 10
+      "tempTrend": 0.35,
+      "dataYears": 8
     },
     {
       "id": "romjulsrennet-sjusjoen",
