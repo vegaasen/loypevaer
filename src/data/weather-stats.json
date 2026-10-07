@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T10:00:28.079Z",
+  "generatedAt": "2026-10-07T10:03:52.526Z",
   "events": [
     {
       "id": "birkebeinerrennet",
@@ -8704,10 +8704,10 @@
       "discipline": "langrenn",
       "officialDate": "2026-03-29",
       "region": "Trøndelag",
-      "avgTempMax": 0.5,
-      "avgFeelsLikeMax": -3.9,
-      "avgPrecipitation": 2.9,
-      "avgWindSpeed": 18.6,
+      "avgTempMax": 0.4,
+      "avgFeelsLikeMax": -4.1,
+      "avgPrecipitation": 2.6,
+      "avgWindSpeed": 19.2,
       "avgWeatherCode": 71,
       "comfortScore": 9,
       "bestYear": {
@@ -8726,8 +8726,8 @@
         "avgWindSpeed": 25.9,
         "weatherCode": 75
       },
-      "tempTrend": 0.35,
-      "dataYears": 8
+      "tempTrend": 0.18,
+      "dataYears": 10
     },
     {
       "id": "romjulsrennet-sjusjoen",
