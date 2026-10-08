@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T10:03:52.526Z",
+  "generatedAt": "2026-10-08T10:21:46.229Z",
   "events": [
     {
       "id": "birkebeinerrennet",
@@ -3635,11 +3635,11 @@
       "officialDate": "2027-05-01",
       "region": "Vestland",
       "avgTempMax": 11,
-      "avgFeelsLikeMax": 7.2,
+      "avgFeelsLikeMax": 7.3,
       "avgPrecipitation": 3,
       "avgWindSpeed": 20.8,
       "avgWeatherCode": 51,
-      "comfortScore": 19,
+      "comfortScore": 20,
       "bestYear": {
         "year": 2017,
         "comfortScore": 50,
@@ -4626,7 +4626,7 @@
       "discipline": "landevei",
       "officialDate": "2027-05-01",
       "region": "Oslo",
-      "avgTempMax": 11.8,
+      "avgTempMax": 11.9,
       "avgFeelsLikeMax": 9,
       "avgPrecipitation": 4.6,
       "avgWindSpeed": 15.3,
@@ -4734,12 +4734,12 @@
         "weatherCode": 1
       },
       "worstYear": {
-        "year": 2023,
+        "year": 2022,
         "comfortScore": 0,
-        "avgTempMax": 6.1,
-        "avgPrecipitation": 11,
-        "avgWindSpeed": 24,
-        "weatherCode": 71
+        "avgTempMax": 6.3,
+        "avgPrecipitation": 19.7,
+        "avgWindSpeed": 28.4,
+        "weatherCode": 73
       },
       "tempTrend": 0.26,
       "dataYears": 10
@@ -4753,9 +4753,9 @@
       "avgTempMax": 12.4,
       "avgFeelsLikeMax": 10.4,
       "avgPrecipitation": 1.8,
-      "avgWindSpeed": 12.2,
+      "avgWindSpeed": 12.1,
       "avgWeatherCode": 3,
-      "comfortScore": 49,
+      "comfortScore": 50,
       "bestYear": {
         "year": 2020,
         "comfortScore": 64,
