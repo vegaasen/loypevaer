@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T10:40:42.074Z",
+  "generatedAt": "2026-10-10T10:00:06.780Z",
   "events": [
     {
       "id": "birkebeinerrennet",
@@ -4626,7 +4626,7 @@
       "discipline": "landevei",
       "officialDate": "2027-05-01",
       "region": "Oslo",
-      "avgTempMax": 11.8,
+      "avgTempMax": 11.9,
       "avgFeelsLikeMax": 9,
       "avgPrecipitation": 4.6,
       "avgWindSpeed": 15.3,
@@ -8673,12 +8673,12 @@
       "discipline": "langrenn",
       "officialDate": "2026-02-21",
       "region": "Trøndelag",
-      "avgTempMax": 1.9,
-      "avgFeelsLikeMax": -1.6,
+      "avgTempMax": 2.1,
+      "avgFeelsLikeMax": -1.3,
       "avgPrecipitation": 2.8,
-      "avgWindSpeed": 15.5,
+      "avgWindSpeed": 16.5,
       "avgWeatherCode": 73,
-      "comfortScore": 11,
+      "comfortScore": 10,
       "bestYear": {
         "year": 2021,
         "comfortScore": 19,
@@ -8695,8 +8695,8 @@
         "avgWindSpeed": 15,
         "weatherCode": 73
       },
-      "tempTrend": 0.3,
-      "dataYears": 8
+      "tempTrend": 0.32,
+      "dataYears": 9
     },
     {
       "id": "hessdalsrennet",
@@ -8925,16 +8925,30 @@
       "discipline": "langrenn",
       "officialDate": "2027-04-03",
       "region": "Norge",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 0.6,
+      "avgFeelsLikeMax": -3.6,
+      "avgPrecipitation": 5.4,
+      "avgWindSpeed": 14.2,
+      "avgWeatherCode": 75,
+      "comfortScore": 9,
+      "bestYear": {
+        "year": 2022,
+        "comfortScore": 18,
+        "avgTempMax": -3.3,
+        "avgPrecipitation": 0.3,
+        "avgWindSpeed": 9,
+        "weatherCode": 71
+      },
+      "worstYear": {
+        "year": 2025,
+        "comfortScore": 0,
+        "avgTempMax": 5.8,
+        "avgPrecipitation": 12.1,
+        "avgWindSpeed": 20,
+        "weatherCode": 75
+      },
+      "tempTrend": 0.59,
+      "dataYears": 5
     }
   ]
 }
