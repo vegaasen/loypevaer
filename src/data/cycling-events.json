@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T12:00:49.308Z",
+  "generatedAt": "2026-10-12T12:42:09.270Z",
   "source": "eqtiming.com / Norges Cykleforbund (organizationId=13)",
   "events": [
     {
@@ -925,7 +925,7 @@
       "distance": 171.6,
       "distanceLabel": "171.6 km",
       "sportLevel": "UCI",
-      "region": "Buskerud",
+      "region": "Ringerike",
       "url": " ",
       "waypoints": [
         {
@@ -1606,7 +1606,7 @@
       "distance": 90,
       "distanceLabel": "90 km",
       "sportLevel": "Trim",
-      "region": "Øvre Eiker",
+      "region": "Buskerud",
       "url": "http://eikerrittet.no/",
       "waypoints": [
         {
