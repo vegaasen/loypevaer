@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T10:42:28.125Z",
+  "generatedAt": "2026-10-14T09:04:36.266Z",
   "events": [
     {
       "id": "birkebeinerrennet",
@@ -7,7 +7,7 @@
       "discipline": "langrenn",
       "officialDate": "2026-03-14",
       "region": "Innlandet",
-      "avgTempMax": 1.5,
+      "avgTempMax": 1.6,
       "avgFeelsLikeMax": -2.6,
       "avgPrecipitation": 0.2,
       "avgWindSpeed": 13.3,
@@ -25,11 +25,11 @@
         "year": 2023,
         "comfortScore": 14,
         "avgTempMax": -1.3,
-        "avgPrecipitation": 0.4,
+        "avgPrecipitation": 0.1,
         "avgWindSpeed": 16,
         "weatherCode": 71
       },
-      "tempTrend": -0.38,
+      "tempTrend": -0.39,
       "dataYears": 10
     },
     {
@@ -38,7 +38,7 @@
       "discipline": "langrenn",
       "officialDate": "2026-03-13",
       "region": "Innlandet",
-      "avgTempMax": -0.4,
+      "avgTempMax": -0.3,
       "avgFeelsLikeMax": -4.3,
       "avgPrecipitation": 3.6,
       "avgWindSpeed": 13.4,
@@ -47,7 +47,7 @@
       "bestYear": {
         "year": 2025,
         "comfortScore": 50,
-        "avgTempMax": -2,
+        "avgTempMax": -1.9,
         "avgPrecipitation": 0,
         "avgWindSpeed": 8.5,
         "weatherCode": 1
@@ -55,8 +55,8 @@
       "worstYear": {
         "year": 2019,
         "comfortScore": 2,
-        "avgTempMax": -2.6,
-        "avgPrecipitation": 20.7,
+        "avgTempMax": -2.5,
+        "avgPrecipitation": 19.7,
         "avgWindSpeed": 15.9,
         "weatherCode": 75
       },
@@ -69,16 +69,16 @@
       "discipline": "langrenn",
       "officialDate": "2026-02-14",
       "region": "Oslo",
-      "avgTempMax": -1.6,
+      "avgTempMax": -1.5,
       "avgFeelsLikeMax": -5.4,
-      "avgPrecipitation": 2.8,
+      "avgPrecipitation": 2.9,
       "avgWindSpeed": 12.5,
       "avgWeatherCode": 3,
       "comfortScore": 31,
       "bestYear": {
         "year": 2017,
         "comfortScore": 54,
-        "avgTempMax": 1.1,
+        "avgTempMax": 1.2,
         "avgPrecipitation": 0,
         "avgWindSpeed": 5.6,
         "weatherCode": 1
@@ -87,11 +87,11 @@
         "year": 2022,
         "comfortScore": 0,
         "avgTempMax": 2.2,
-        "avgPrecipitation": 25.5,
+        "avgPrecipitation": 26.6,
         "avgWindSpeed": 23,
         "weatherCode": 75
       },
-      "tempTrend": -0.05,
+      "tempTrend": -0.06,
       "dataYears": 10
     },
     {
@@ -102,7 +102,7 @@
       "region": "Viken / Vestland",
       "avgTempMax": -0.2,
       "avgFeelsLikeMax": -4.2,
-      "avgPrecipitation": 2.9,
+      "avgPrecipitation": 3,
       "avgWindSpeed": 15.5,
       "avgWeatherCode": 71,
       "comfortScore": 11,
@@ -116,9 +116,9 @@
       },
       "worstYear": {
         "year": 2021,
-        "comfortScore": 3,
+        "comfortScore": 4,
         "avgTempMax": -3.3,
-        "avgPrecipitation": 7.8,
+        "avgPrecipitation": 6.6,
         "avgWindSpeed": 22.9,
         "weatherCode": 75
       },
@@ -133,10 +133,10 @@
       "region": "Nordland",
       "avgTempMax": 10.6,
       "avgFeelsLikeMax": 7.5,
-      "avgPrecipitation": 3.2,
+      "avgPrecipitation": 3.4,
       "avgWindSpeed": 21.6,
       "avgWeatherCode": 3,
-      "comfortScore": 28,
+      "comfortScore": 27,
       "bestYear": {
         "year": 2022,
         "comfortScore": 56,
@@ -147,9 +147,9 @@
       },
       "worstYear": {
         "year": 2025,
-        "comfortScore": 2,
+        "comfortScore": 1,
         "avgTempMax": 9.2,
-        "avgPrecipitation": 8.7,
+        "avgPrecipitation": 9.2,
         "avgWindSpeed": 36.5,
         "weatherCode": 61
       },
@@ -164,10 +164,10 @@
       "region": "Nordland",
       "avgTempMax": 10.6,
       "avgFeelsLikeMax": 7.7,
-      "avgPrecipitation": 2.8,
+      "avgPrecipitation": 2.6,
       "avgWindSpeed": 20.7,
       "avgWeatherCode": 3,
-      "comfortScore": 29,
+      "comfortScore": 30,
       "bestYear": {
         "year": 2022,
         "comfortScore": 64,
@@ -180,7 +180,7 @@
         "year": 2023,
         "comfortScore": 0,
         "avgTempMax": 6.8,
-        "avgPrecipitation": 10.4,
+        "avgPrecipitation": 11.3,
         "avgWindSpeed": 27.3,
         "weatherCode": 61
       },
@@ -195,7 +195,7 @@
       "region": "Innlandet",
       "avgTempMax": 16.3,
       "avgFeelsLikeMax": 14.4,
-      "avgPrecipitation": 4.3,
+      "avgPrecipitation": 4.1,
       "avgWindSpeed": 12.8,
       "avgWeatherCode": 3,
       "comfortScore": 51,
@@ -211,7 +211,7 @@
         "year": 2019,
         "comfortScore": 11,
         "avgTempMax": 11.1,
-        "avgPrecipitation": 21.4,
+        "avgPrecipitation": 21.2,
         "avgWindSpeed": 14,
         "weatherCode": 63
       },
@@ -226,10 +226,10 @@
       "region": "Oslo / Viken",
       "avgTempMax": 13.5,
       "avgFeelsLikeMax": 10.8,
-      "avgPrecipitation": 3.1,
+      "avgPrecipitation": 3.2,
       "avgWindSpeed": 15.5,
       "avgWeatherCode": 51,
-      "comfortScore": 30,
+      "comfortScore": 29,
       "bestYear": {
         "year": 2016,
         "comfortScore": 68,
@@ -257,10 +257,10 @@
       "region": "Innlandet",
       "avgTempMax": 12.8,
       "avgFeelsLikeMax": 10.9,
-      "avgPrecipitation": 7.8,
+      "avgPrecipitation": 8.1,
       "avgWindSpeed": 12.4,
       "avgWeatherCode": 61,
-      "comfortScore": 16,
+      "comfortScore": 15,
       "bestYear": {
         "year": 2020,
         "comfortScore": 69,
@@ -273,7 +273,7 @@
         "year": 2019,
         "comfortScore": 8,
         "avgTempMax": 8.2,
-        "avgPrecipitation": 11.2,
+        "avgPrecipitation": 10.6,
         "avgWindSpeed": 11.1,
         "weatherCode": 61
       },
@@ -288,10 +288,10 @@
       "region": "Numedal",
       "avgTempMax": 17.6,
       "avgFeelsLikeMax": 16.4,
-      "avgPrecipitation": 4.3,
+      "avgPrecipitation": 4.7,
       "avgWindSpeed": 10.9,
       "avgWeatherCode": 51,
-      "comfortScore": 40,
+      "comfortScore": 39,
       "bestYear": {
         "year": 2021,
         "comfortScore": 67,
@@ -304,11 +304,11 @@
         "year": 2023,
         "comfortScore": 10,
         "avgTempMax": 10.5,
-        "avgPrecipitation": 12.6,
+        "avgPrecipitation": 15.9,
         "avgWindSpeed": 12.4,
         "weatherCode": 63
       },
-      "tempTrend": -0.34,
+      "tempTrend": -0.35,
       "dataYears": 10
     },
     {
@@ -317,9 +317,9 @@
       "discipline": "løping",
       "officialDate": "2026-04-25",
       "region": "Oslo",
-      "avgTempMax": 10.8,
+      "avgTempMax": 10.9,
       "avgFeelsLikeMax": 7.1,
-      "avgPrecipitation": 4.1,
+      "avgPrecipitation": 3.9,
       "avgWindSpeed": 17.4,
       "avgWeatherCode": 3,
       "comfortScore": 28,
@@ -334,12 +334,12 @@
       "worstYear": {
         "year": 2023,
         "comfortScore": 0,
-        "avgTempMax": 3.6,
-        "avgPrecipitation": 28.7,
+        "avgTempMax": 3.7,
+        "avgPrecipitation": 26.1,
         "avgWindSpeed": 22.6,
-        "weatherCode": 75
+        "weatherCode": 63
       },
-      "tempTrend": -0.13,
+      "tempTrend": -0.12,
       "dataYears": 10
     },
     {
@@ -350,7 +350,7 @@
       "region": "Innlandet",
       "avgTempMax": 17.7,
       "avgFeelsLikeMax": 16,
-      "avgPrecipitation": 3.6,
+      "avgPrecipitation": 3.5,
       "avgWindSpeed": 11.8,
       "avgWeatherCode": 3,
       "comfortScore": 58,
@@ -366,7 +366,7 @@
         "year": 2024,
         "comfortScore": 14,
         "avgTempMax": 11.6,
-        "avgPrecipitation": 11,
+        "avgPrecipitation": 10.9,
         "avgWindSpeed": 10.1,
         "weatherCode": 63
       },
@@ -381,7 +381,7 @@
       "region": "Vestland",
       "avgTempMax": 16.9,
       "avgFeelsLikeMax": 16.5,
-      "avgPrecipitation": 5.3,
+      "avgPrecipitation": 5.7,
       "avgWindSpeed": 11.1,
       "avgWeatherCode": 51,
       "comfortScore": 37,
@@ -396,8 +396,8 @@
       "worstYear": {
         "year": 2017,
         "comfortScore": 11,
-        "avgTempMax": 14.5,
-        "avgPrecipitation": 9.6,
+        "avgTempMax": 14.6,
+        "avgPrecipitation": 10.5,
         "avgWindSpeed": 17.4,
         "weatherCode": 61
       },
@@ -412,7 +412,7 @@
       "region": "Vestland",
       "avgTempMax": 14.8,
       "avgFeelsLikeMax": 13.1,
-      "avgPrecipitation": 2,
+      "avgPrecipitation": 1.9,
       "avgWindSpeed": 11.6,
       "avgWeatherCode": 51,
       "comfortScore": 40,
@@ -427,8 +427,8 @@
       "worstYear": {
         "year": 2025,
         "comfortScore": 27,
-        "avgTempMax": 15.6,
-        "avgPrecipitation": 5.9,
+        "avgTempMax": 15.7,
+        "avgPrecipitation": 6.1,
         "avgWindSpeed": 7.1,
         "weatherCode": 61
       },
@@ -443,10 +443,10 @@
       "region": "Oslo",
       "avgTempMax": 20.8,
       "avgFeelsLikeMax": 20.4,
-      "avgPrecipitation": 3.4,
+      "avgPrecipitation": 2.9,
       "avgWindSpeed": 16.3,
       "avgWeatherCode": 3,
-      "comfortScore": 42,
+      "comfortScore": 43,
       "bestYear": {
         "year": 2017,
         "comfortScore": 59,
@@ -459,7 +459,7 @@
         "year": 2023,
         "comfortScore": 14,
         "avgTempMax": 17,
-        "avgPrecipitation": 13.6,
+        "avgPrecipitation": 10.8,
         "avgWindSpeed": 15.3,
         "weatherCode": 63
       },
@@ -490,7 +490,7 @@
         "year": 2019,
         "comfortScore": 9,
         "avgTempMax": 14.5,
-        "avgPrecipitation": 30.6,
+        "avgPrecipitation": 29.7,
         "avgWindSpeed": 28.6,
         "weatherCode": 63
       },
@@ -503,7 +503,7 @@
       "discipline": "terrengløp",
       "officialDate": "2026-05-30",
       "region": "Viken",
-      "avgTempMax": 19.2,
+      "avgTempMax": 19.3,
       "avgFeelsLikeMax": 17.6,
       "avgPrecipitation": 3.9,
       "avgWindSpeed": 13.8,
@@ -534,7 +534,7 @@
       "discipline": "løping",
       "officialDate": "2026-05-09",
       "region": "Innlandet",
-      "avgTempMax": 14,
+      "avgTempMax": 14.1,
       "avgFeelsLikeMax": 10.9,
       "avgPrecipitation": 2.6,
       "avgWindSpeed": 14.7,
@@ -551,8 +551,8 @@
       "worstYear": {
         "year": 2019,
         "comfortScore": 0,
-        "avgTempMax": 6.8,
-        "avgPrecipitation": 17,
+        "avgTempMax": 6.9,
+        "avgPrecipitation": 17.4,
         "avgWindSpeed": 22.2,
         "weatherCode": 73
       },
@@ -567,7 +567,7 @@
       "region": "Trøndelag",
       "avgTempMax": 15.5,
       "avgFeelsLikeMax": 13.3,
-      "avgPrecipitation": 2.7,
+      "avgPrecipitation": 2.8,
       "avgWindSpeed": 17.2,
       "avgWeatherCode": 51,
       "comfortScore": 33,
@@ -581,9 +581,9 @@
       },
       "worstYear": {
         "year": 2025,
-        "comfortScore": 9,
+        "comfortScore": 6,
         "avgTempMax": 9.5,
-        "avgPrecipitation": 5.1,
+        "avgPrecipitation": 7,
         "avgWindSpeed": 23.8,
         "weatherCode": 61
       },
@@ -614,11 +614,11 @@
         "year": 2020,
         "comfortScore": 11,
         "avgTempMax": 12.2,
-        "avgPrecipitation": 18,
+        "avgPrecipitation": 18.7,
         "avgWindSpeed": 16.4,
         "weatherCode": 63
       },
-      "tempTrend": 0.22,
+      "tempTrend": 0.23,
       "dataYears": 10
     },
     {
@@ -629,7 +629,7 @@
       "region": "Oslo",
       "avgTempMax": 17.6,
       "avgFeelsLikeMax": 16.3,
-      "avgPrecipitation": 4.9,
+      "avgPrecipitation": 4.8,
       "avgWindSpeed": 17.8,
       "avgWeatherCode": 51,
       "comfortScore": 32,
@@ -645,7 +645,7 @@
         "year": 2018,
         "comfortScore": 11,
         "avgTempMax": 17,
-        "avgPrecipitation": 11.3,
+        "avgPrecipitation": 10.9,
         "avgWindSpeed": 22.8,
         "weatherCode": 63
       },
@@ -658,12 +658,12 @@
       "discipline": "løping",
       "officialDate": "2026-09-12",
       "region": "Oslo",
-      "avgTempMax": 16.2,
+      "avgTempMax": 16.3,
       "avgFeelsLikeMax": 14.1,
-      "avgPrecipitation": 3,
+      "avgPrecipitation": 3.4,
       "avgWindSpeed": 20.6,
       "avgWeatherCode": 3,
-      "comfortScore": 44,
+      "comfortScore": 43,
       "bestYear": {
         "year": 2016,
         "comfortScore": 62,
@@ -676,7 +676,7 @@
         "year": 2025,
         "comfortScore": 11,
         "avgTempMax": 15,
-        "avgPrecipitation": 14.4,
+        "avgPrecipitation": 14.6,
         "avgWindSpeed": 21.6,
         "weatherCode": 63
       },
@@ -691,7 +691,7 @@
       "region": "Vestland",
       "avgTempMax": 14.2,
       "avgFeelsLikeMax": 12.6,
-      "avgPrecipitation": 16.2,
+      "avgPrecipitation": 16.5,
       "avgWindSpeed": 20.5,
       "avgWeatherCode": 63,
       "comfortScore": 10,
@@ -707,11 +707,11 @@
         "year": 2024,
         "comfortScore": 5,
         "avgTempMax": 10.4,
-        "avgPrecipitation": 23.1,
+        "avgPrecipitation": 22.6,
         "avgWindSpeed": 20.9,
         "weatherCode": 61
       },
-      "tempTrend": -0.26,
+      "tempTrend": -0.25,
       "dataYears": 10
     },
     {
@@ -722,7 +722,7 @@
       "region": "Troms",
       "avgTempMax": 10.7,
       "avgFeelsLikeMax": 8.6,
-      "avgPrecipitation": 4.7,
+      "avgPrecipitation": 4.6,
       "avgWindSpeed": 17.7,
       "avgWeatherCode": 53,
       "comfortScore": 21,
@@ -738,7 +738,7 @@
         "year": 2016,
         "comfortScore": 4,
         "avgTempMax": 9.1,
-        "avgPrecipitation": 13.6,
+        "avgPrecipitation": 12.6,
         "avgWindSpeed": 23.4,
         "weatherCode": 61
       },
@@ -753,10 +753,10 @@
       "region": "Agder",
       "avgTempMax": 16.8,
       "avgFeelsLikeMax": 14.5,
-      "avgPrecipitation": 7.2,
+      "avgPrecipitation": 6.8,
       "avgWindSpeed": 22.6,
       "avgWeatherCode": 3,
-      "comfortScore": 33,
+      "comfortScore": 34,
       "bestYear": {
         "year": 2016,
         "comfortScore": 65,
@@ -769,11 +769,11 @@
         "year": 2017,
         "comfortScore": 9,
         "avgTempMax": 14.6,
-        "avgPrecipitation": 29.2,
+        "avgPrecipitation": 20.9,
         "avgWindSpeed": 26.7,
         "weatherCode": 65
       },
-      "tempTrend": 0.1,
+      "tempTrend": 0.11,
       "dataYears": 10
     },
     {
@@ -784,10 +784,10 @@
       "region": "Akershus",
       "avgTempMax": 15.8,
       "avgFeelsLikeMax": 13.3,
-      "avgPrecipitation": 2.5,
+      "avgPrecipitation": 3,
       "avgWindSpeed": 18.2,
       "avgWeatherCode": 3,
-      "comfortScore": 46,
+      "comfortScore": 44,
       "bestYear": {
         "year": 2016,
         "comfortScore": 61,
@@ -797,12 +797,12 @@
         "weatherCode": 3
       },
       "worstYear": {
-        "year": 2017,
-        "comfortScore": 13,
-        "avgTempMax": 13.3,
-        "avgPrecipitation": 6,
-        "avgWindSpeed": 22,
-        "weatherCode": 61
+        "year": 2022,
+        "comfortScore": 10,
+        "avgTempMax": 14.7,
+        "avgPrecipitation": 13.7,
+        "avgWindSpeed": 22.7,
+        "weatherCode": 63
       },
       "tempTrend": 0.06,
       "dataYears": 10
@@ -831,11 +831,11 @@
         "year": 2018,
         "comfortScore": 5,
         "avgTempMax": 11.6,
-        "avgPrecipitation": 14.7,
+        "avgPrecipitation": 15,
         "avgWindSpeed": 20.2,
         "weatherCode": 63
       },
-      "tempTrend": -0.14,
+      "tempTrend": -0.13,
       "dataYears": 10
     },
     {
@@ -885,7 +885,7 @@
         "year": 2021,
         "comfortScore": 67,
         "avgTempMax": 17.2,
-        "avgPrecipitation": 0,
+        "avgPrecipitation": 0.1,
         "avgWindSpeed": 11.8,
         "weatherCode": 3
       },
@@ -893,7 +893,7 @@
         "year": 2025,
         "comfortScore": 11,
         "avgTempMax": 15.1,
-        "avgPrecipitation": 13.2,
+        "avgPrecipitation": 13.3,
         "avgWindSpeed": 18.9,
         "weatherCode": 63
       },
@@ -924,7 +924,7 @@
         "year": 2023,
         "comfortScore": 7,
         "avgTempMax": 12.8,
-        "avgPrecipitation": 20.3,
+        "avgPrecipitation": 20.1,
         "avgWindSpeed": 19.4,
         "weatherCode": 65
       },
@@ -939,10 +939,10 @@
       "region": "Trøndelag",
       "avgTempMax": 14.1,
       "avgFeelsLikeMax": 12.3,
-      "avgPrecipitation": 4.6,
+      "avgPrecipitation": 4.8,
       "avgWindSpeed": 15.8,
       "avgWeatherCode": 3,
-      "comfortScore": 41,
+      "comfortScore": 40,
       "bestYear": {
         "year": 2016,
         "comfortScore": 79,
@@ -959,7 +959,7 @@
         "avgWindSpeed": 16.4,
         "weatherCode": 61
       },
-      "tempTrend": 0.31,
+      "tempTrend": 0.32,
       "dataYears": 10
     },
     {
@@ -970,7 +970,7 @@
       "region": "Agder",
       "avgTempMax": 15.3,
       "avgFeelsLikeMax": 14,
-      "avgPrecipitation": 3.6,
+      "avgPrecipitation": 3.5,
       "avgWindSpeed": 19.9,
       "avgWeatherCode": 3,
       "comfortScore": 42,
@@ -986,7 +986,7 @@
         "year": 2023,
         "comfortScore": 12,
         "avgTempMax": 15,
-        "avgPrecipitation": 20,
+        "avgPrecipitation": 19.8,
         "avgWindSpeed": 26.3,
         "weatherCode": 63
       },
@@ -1001,7 +1001,7 @@
       "region": "Vestland",
       "avgTempMax": 12.9,
       "avgFeelsLikeMax": 10.7,
-      "avgPrecipitation": 5.6,
+      "avgPrecipitation": 5.5,
       "avgWindSpeed": 17.8,
       "avgWeatherCode": 51,
       "comfortScore": 22,
@@ -1017,7 +1017,7 @@
         "year": 2023,
         "comfortScore": 7,
         "avgTempMax": 12.4,
-        "avgPrecipitation": 27,
+        "avgPrecipitation": 26.8,
         "avgWindSpeed": 25.6,
         "weatherCode": 63
       },
@@ -1032,7 +1032,7 @@
       "region": "Buskerud",
       "avgTempMax": 9.8,
       "avgFeelsLikeMax": 7.2,
-      "avgPrecipitation": 2.9,
+      "avgPrecipitation": 3,
       "avgWindSpeed": 14.6,
       "avgWeatherCode": 1,
       "comfortScore": 39,
@@ -1048,7 +1048,7 @@
         "year": 2023,
         "comfortScore": 2,
         "avgTempMax": 8.4,
-        "avgPrecipitation": 12.7,
+        "avgPrecipitation": 12.5,
         "avgWindSpeed": 20.6,
         "weatherCode": 63
       },
@@ -1083,7 +1083,7 @@
         "avgWindSpeed": 18.7,
         "weatherCode": 63
       },
-      "tempTrend": 0.17,
+      "tempTrend": 0.16,
       "dataYears": 10
     },
     {
@@ -1094,7 +1094,7 @@
       "region": "Østfold",
       "avgTempMax": 15.5,
       "avgFeelsLikeMax": 13.1,
-      "avgPrecipitation": 2.3,
+      "avgPrecipitation": 2.4,
       "avgWindSpeed": 32.5,
       "avgWeatherCode": 3,
       "comfortScore": 43,
@@ -1110,7 +1110,7 @@
         "year": 2023,
         "comfortScore": 12,
         "avgTempMax": 16.9,
-        "avgPrecipitation": 14.4,
+        "avgPrecipitation": 14.5,
         "avgWindSpeed": 53.9,
         "weatherCode": 63
       },
@@ -1139,13 +1139,13 @@
       },
       "worstYear": {
         "year": 2018,
-        "comfortScore": 18,
+        "comfortScore": 19,
         "avgTempMax": 15.1,
-        "avgPrecipitation": 2.5,
+        "avgPrecipitation": 2,
         "avgWindSpeed": 35.6,
         "weatherCode": 61
       },
-      "tempTrend": 0.04,
+      "tempTrend": 0.05,
       "dataYears": 10
     },
     {
@@ -1203,7 +1203,7 @@
         "year": 2018,
         "comfortScore": 2,
         "avgTempMax": 9.2,
-        "avgPrecipitation": 12.2,
+        "avgPrecipitation": 11.6,
         "avgWindSpeed": 25.3,
         "weatherCode": 61
       },
@@ -1218,7 +1218,7 @@
       "region": "Buskerud",
       "avgTempMax": 14.9,
       "avgFeelsLikeMax": 13.5,
-      "avgPrecipitation": 1.3,
+      "avgPrecipitation": 1.4,
       "avgWindSpeed": 11.7,
       "avgWeatherCode": 3,
       "comfortScore": 59,
@@ -1232,9 +1232,9 @@
       },
       "worstYear": {
         "year": 2017,
-        "comfortScore": 19,
+        "comfortScore": 18,
         "avgTempMax": 9.3,
-        "avgPrecipitation": 7.3,
+        "avgPrecipitation": 7.8,
         "avgWindSpeed": 12,
         "weatherCode": 55
       },
@@ -1265,7 +1265,7 @@
         "year": 2025,
         "comfortScore": 16,
         "avgTempMax": 15.4,
-        "avgPrecipitation": 6.7,
+        "avgPrecipitation": 6.9,
         "avgWindSpeed": 24.9,
         "weatherCode": 61
       },
@@ -1280,14 +1280,14 @@
       "region": "Vestland",
       "avgTempMax": 7.5,
       "avgFeelsLikeMax": 5.3,
-      "avgPrecipitation": 8.2,
+      "avgPrecipitation": 8,
       "avgWindSpeed": 7.6,
       "avgWeatherCode": 3,
       "comfortScore": 26,
       "bestYear": {
         "year": 2024,
         "comfortScore": 71,
-        "avgTempMax": 13.6,
+        "avgTempMax": 13.7,
         "avgPrecipitation": 0,
         "avgWindSpeed": 3.6,
         "weatherCode": 3
@@ -1296,11 +1296,11 @@
         "year": 2018,
         "comfortScore": 5,
         "avgTempMax": 5.7,
-        "avgPrecipitation": 26.8,
+        "avgPrecipitation": 27.3,
         "avgWindSpeed": 12.3,
         "weatherCode": 63
       },
-      "tempTrend": -0.08,
+      "tempTrend": -0.07,
       "dataYears": 10
     },
     {
@@ -1311,7 +1311,7 @@
       "region": "Trøndelag",
       "avgTempMax": 12,
       "avgFeelsLikeMax": 9.6,
-      "avgPrecipitation": 5.1,
+      "avgPrecipitation": 5,
       "avgWindSpeed": 18.5,
       "avgWeatherCode": 51,
       "comfortScore": 21,
@@ -1327,7 +1327,7 @@
         "year": 2018,
         "comfortScore": 0,
         "avgTempMax": 7.4,
-        "avgPrecipitation": 16.4,
+        "avgPrecipitation": 15.5,
         "avgWindSpeed": 29,
         "weatherCode": 61
       },
@@ -1342,7 +1342,7 @@
       "region": "Innlandet",
       "avgTempMax": 12.5,
       "avgFeelsLikeMax": 10,
-      "avgPrecipitation": 4,
+      "avgPrecipitation": 4.1,
       "avgWindSpeed": 16.5,
       "avgWeatherCode": 3,
       "comfortScore": 36,
@@ -1362,7 +1362,7 @@
         "avgWindSpeed": 25.9,
         "weatherCode": 63
       },
-      "tempTrend": -0.15,
+      "tempTrend": -0.16,
       "dataYears": 10
     },
     {
@@ -1371,16 +1371,16 @@
       "discipline": "løping",
       "officialDate": "2026-09-26",
       "region": "Rogaland",
-      "avgTempMax": 15.4,
+      "avgTempMax": 15.5,
       "avgFeelsLikeMax": 12.8,
-      "avgPrecipitation": 5.8,
+      "avgPrecipitation": 5.1,
       "avgWindSpeed": 24.3,
       "avgWeatherCode": 61,
-      "comfortScore": 15,
+      "comfortScore": 16,
       "bestYear": {
         "year": 2025,
         "comfortScore": 66,
-        "avgTempMax": 17.4,
+        "avgTempMax": 17.5,
         "avgPrecipitation": 0,
         "avgWindSpeed": 18,
         "weatherCode": 0
@@ -1388,8 +1388,8 @@
       "worstYear": {
         "year": 2022,
         "comfortScore": 8,
-        "avgTempMax": 12.8,
-        "avgPrecipitation": 15.3,
+        "avgTempMax": 12.9,
+        "avgPrecipitation": 15.1,
         "avgWindSpeed": 20.8,
         "weatherCode": 61
       },
@@ -1404,10 +1404,10 @@
       "region": "Rogaland",
       "avgTempMax": 15.6,
       "avgFeelsLikeMax": 13,
-      "avgPrecipitation": 5.8,
+      "avgPrecipitation": 5.1,
       "avgWindSpeed": 24.3,
       "avgWeatherCode": 61,
-      "comfortScore": 16,
+      "comfortScore": 17,
       "bestYear": {
         "year": 2025,
         "comfortScore": 66,
@@ -1420,7 +1420,7 @@
         "year": 2022,
         "comfortScore": 8,
         "avgTempMax": 13,
-        "avgPrecipitation": 15.3,
+        "avgPrecipitation": 15.1,
         "avgWindSpeed": 20.8,
         "weatherCode": 61
       },
@@ -1435,7 +1435,7 @@
       "region": "Akershus",
       "avgTempMax": 13.4,
       "avgFeelsLikeMax": 11.1,
-      "avgPrecipitation": 4.3,
+      "avgPrecipitation": 4.2,
       "avgWindSpeed": 15.9,
       "avgWeatherCode": 3,
       "comfortScore": 39,
@@ -1451,11 +1451,11 @@
         "year": 2020,
         "comfortScore": 1,
         "avgTempMax": 8.6,
-        "avgPrecipitation": 32.4,
+        "avgPrecipitation": 32.2,
         "avgWindSpeed": 28.2,
         "weatherCode": 63
       },
-      "tempTrend": -0.3,
+      "tempTrend": -0.29,
       "dataYears": 10
     },
     {
@@ -1466,10 +1466,10 @@
       "region": "Rogaland",
       "avgTempMax": 14.1,
       "avgFeelsLikeMax": 11.7,
-      "avgPrecipitation": 10,
+      "avgPrecipitation": 9.3,
       "avgWindSpeed": 16.8,
       "avgWeatherCode": 63,
-      "comfortScore": 11,
+      "comfortScore": 12,
       "bestYear": {
         "year": 2025,
         "comfortScore": 76,
@@ -1482,7 +1482,7 @@
         "year": 2018,
         "comfortScore": 6,
         "avgTempMax": 11.8,
-        "avgPrecipitation": 59.1,
+        "avgPrecipitation": 57.6,
         "avgWindSpeed": 20.3,
         "weatherCode": 65
       },
@@ -1513,9 +1513,9 @@
         "year": 2020,
         "comfortScore": 0,
         "avgTempMax": 2.7,
-        "avgPrecipitation": 21.3,
+        "avgPrecipitation": 20.9,
         "avgWindSpeed": 23.4,
-        "weatherCode": 75
+        "weatherCode": 63
       },
       "tempTrend": -0.06,
       "dataYears": 10
@@ -1528,7 +1528,7 @@
       "region": "Telemark",
       "avgTempMax": 14.6,
       "avgFeelsLikeMax": 12.4,
-      "avgPrecipitation": 9.2,
+      "avgPrecipitation": 9.1,
       "avgWindSpeed": 17.6,
       "avgWeatherCode": 53,
       "comfortScore": 18,
@@ -1543,8 +1543,8 @@
       "worstYear": {
         "year": 2020,
         "comfortScore": 3,
-        "avgTempMax": 10.2,
-        "avgPrecipitation": 32.6,
+        "avgTempMax": 10.3,
+        "avgPrecipitation": 28.4,
         "avgWindSpeed": 27.8,
         "weatherCode": 63
       },
@@ -1559,10 +1559,10 @@
       "region": "Oslo",
       "avgTempMax": 14.2,
       "avgFeelsLikeMax": 11.9,
-      "avgPrecipitation": 5.3,
+      "avgPrecipitation": 5.1,
       "avgWindSpeed": 17.2,
       "avgWeatherCode": 51,
-      "comfortScore": 25,
+      "comfortScore": 26,
       "bestYear": {
         "year": 2025,
         "comfortScore": 70,
@@ -1574,8 +1574,8 @@
       "worstYear": {
         "year": 2020,
         "comfortScore": 2,
-        "avgTempMax": 9.5,
-        "avgPrecipitation": 31.9,
+        "avgTempMax": 9.6,
+        "avgPrecipitation": 31,
         "avgWindSpeed": 31.2,
         "weatherCode": 63
       },
@@ -1588,12 +1588,12 @@
       "discipline": "løping",
       "officialDate": "2026-09-26",
       "region": "Trøndelag",
-      "avgTempMax": 13.1,
-      "avgFeelsLikeMax": 10.9,
-      "avgPrecipitation": 4.9,
-      "avgWindSpeed": 18.1,
-      "avgWeatherCode": 3,
-      "comfortScore": 33,
+      "avgTempMax": 13.7,
+      "avgFeelsLikeMax": 11.8,
+      "avgPrecipitation": 2.4,
+      "avgWindSpeed": 16.4,
+      "avgWeatherCode": 1,
+      "comfortScore": 50,
       "bestYear": {
         "year": 2017,
         "comfortScore": 73,
@@ -1603,15 +1603,15 @@
         "weatherCode": 1
       },
       "worstYear": {
-        "year": 2018,
-        "comfortScore": 2,
-        "avgTempMax": 9.4,
-        "avgPrecipitation": 32.6,
-        "avgWindSpeed": 38.6,
-        "weatherCode": 63
+        "year": 2024,
+        "comfortScore": 9,
+        "avgTempMax": 10.2,
+        "avgPrecipitation": 5.7,
+        "avgWindSpeed": 19.8,
+        "weatherCode": 61
       },
-      "tempTrend": -0.22,
-      "dataYears": 10
+      "tempTrend": -0.88,
+      "dataYears": 6
     },
     {
       "id": "lierlopet-2026-09-27",
@@ -1637,11 +1637,11 @@
         "year": 2022,
         "comfortScore": 5,
         "avgTempMax": 10.3,
-        "avgPrecipitation": 37,
+        "avgPrecipitation": 35,
         "avgWindSpeed": 21,
         "weatherCode": 63
       },
-      "tempTrend": 0.05,
+      "tempTrend": 0.04,
       "dataYears": 10
     },
     {
@@ -1650,12 +1650,12 @@
       "discipline": "løping",
       "officialDate": "2026-09-27",
       "region": "Østfold",
-      "avgTempMax": 14,
+      "avgTempMax": 14.1,
       "avgFeelsLikeMax": 11.7,
-      "avgPrecipitation": 6.3,
+      "avgPrecipitation": 6.7,
       "avgWindSpeed": 22,
       "avgWeatherCode": 3,
-      "comfortScore": 29,
+      "comfortScore": 28,
       "bestYear": {
         "year": 2025,
         "comfortScore": 63,
@@ -1667,7 +1667,7 @@
       "worstYear": {
         "year": 2019,
         "comfortScore": 7,
-        "avgTempMax": 11.7,
+        "avgTempMax": 11.8,
         "avgPrecipitation": 30.8,
         "avgWindSpeed": 22.1,
         "weatherCode": 63
@@ -1683,14 +1683,14 @@
       "region": "Vestfold",
       "avgTempMax": 13.7,
       "avgFeelsLikeMax": 11.8,
-      "avgPrecipitation": 11.2,
+      "avgPrecipitation": 11.3,
       "avgWindSpeed": 20,
       "avgWeatherCode": 53,
       "comfortScore": 13,
       "bestYear": {
         "year": 2025,
         "comfortScore": 63,
-        "avgTempMax": 14.5,
+        "avgTempMax": 14.6,
         "avgPrecipitation": 0,
         "avgWindSpeed": 11.1,
         "weatherCode": 3
@@ -1699,7 +1699,7 @@
         "year": 2022,
         "comfortScore": 7,
         "avgTempMax": 11.7,
-        "avgPrecipitation": 27.7,
+        "avgPrecipitation": 26.5,
         "avgWindSpeed": 25,
         "weatherCode": 63
       },
@@ -1714,7 +1714,7 @@
       "region": "Vestland",
       "avgTempMax": 15.1,
       "avgFeelsLikeMax": 13.2,
-      "avgPrecipitation": 7.3,
+      "avgPrecipitation": 6.9,
       "avgWindSpeed": 18.9,
       "avgWeatherCode": 63,
       "comfortScore": 15,
@@ -1730,9 +1730,9 @@
         "year": 2024,
         "comfortScore": 2,
         "avgTempMax": 7.7,
-        "avgPrecipitation": 9.7,
+        "avgPrecipitation": 11.2,
         "avgWindSpeed": 18.4,
-        "weatherCode": 73
+        "weatherCode": 61
       },
       "tempTrend": -0.09,
       "dataYears": 10
@@ -1745,7 +1745,7 @@
       "region": "Rogaland",
       "avgTempMax": 13.6,
       "avgFeelsLikeMax": 10.6,
-      "avgPrecipitation": 9.6,
+      "avgPrecipitation": 9.5,
       "avgWindSpeed": 28.2,
       "avgWeatherCode": 61,
       "comfortScore": 8,
@@ -1761,7 +1761,7 @@
         "year": 2018,
         "comfortScore": 3,
         "avgTempMax": 10.8,
-        "avgPrecipitation": 10.1,
+        "avgPrecipitation": 10.5,
         "avgWindSpeed": 26.8,
         "weatherCode": 61
       },
@@ -1776,10 +1776,10 @@
       "region": "Rogaland",
       "avgTempMax": 13.3,
       "avgFeelsLikeMax": 10.4,
-      "avgPrecipitation": 8.3,
+      "avgPrecipitation": 8.1,
       "avgWindSpeed": 26.1,
       "avgWeatherCode": 63,
-      "comfortScore": 9,
+      "comfortScore": 10,
       "bestYear": {
         "year": 2024,
         "comfortScore": 54,
@@ -1790,9 +1790,9 @@
       },
       "worstYear": {
         "year": 2018,
-        "comfortScore": 4,
+        "comfortScore": 7,
         "avgTempMax": 9.9,
-        "avgPrecipitation": 8.9,
+        "avgPrecipitation": 6.8,
         "avgWindSpeed": 29,
         "weatherCode": 63
       },
@@ -1807,27 +1807,27 @@
       "region": "Rogaland",
       "avgTempMax": 7.6,
       "avgFeelsLikeMax": 3.7,
-      "avgPrecipitation": 6.9,
+      "avgPrecipitation": 7.3,
       "avgWindSpeed": 25.4,
       "avgWeatherCode": 3,
-      "comfortScore": 9,
+      "comfortScore": 8,
       "bestYear": {
-        "year": 2024,
+        "year": 2016,
         "comfortScore": 28,
-        "avgTempMax": 7.6,
-        "avgPrecipitation": 0,
-        "avgWindSpeed": 32.4,
-        "weatherCode": 3
+        "avgTempMax": 6.9,
+        "avgPrecipitation": 0.7,
+        "avgWindSpeed": 11.4,
+        "weatherCode": 51
       },
       "worstYear": {
         "year": 2017,
         "comfortScore": 1,
         "avgTempMax": 9.3,
-        "avgPrecipitation": 21.2,
+        "avgPrecipitation": 23.8,
         "avgWindSpeed": 36.4,
         "weatherCode": 63
       },
-      "tempTrend": 0.23,
+      "tempTrend": 0.22,
       "dataYears": 10
     },
     {
@@ -1836,9 +1836,9 @@
       "discipline": "løping",
       "officialDate": "2026-10-03",
       "region": "Trøndelag",
-      "avgTempMax": 11.2,
+      "avgTempMax": 11.3,
       "avgFeelsLikeMax": 8.6,
-      "avgPrecipitation": 2.9,
+      "avgPrecipitation": 3,
       "avgWindSpeed": 17.6,
       "avgWeatherCode": 53,
       "comfortScore": 24,
@@ -1869,7 +1869,7 @@
       "region": "Møre og Romsdal",
       "avgTempMax": 3.8,
       "avgFeelsLikeMax": 0.2,
-      "avgPrecipitation": 4.9,
+      "avgPrecipitation": 5.1,
       "avgWindSpeed": 17.3,
       "avgWeatherCode": 51,
       "comfortScore": 13,
@@ -1885,7 +1885,7 @@
         "year": 2017,
         "comfortScore": 3,
         "avgTempMax": 5.1,
-        "avgPrecipitation": 17.1,
+        "avgPrecipitation": 18.8,
         "avgWindSpeed": 14.4,
         "weatherCode": 75
       },
@@ -1898,9 +1898,9 @@
       "discipline": "løping",
       "officialDate": "2026-10-03",
       "region": "Vestland",
-      "avgTempMax": 13,
+      "avgTempMax": 13.1,
       "avgFeelsLikeMax": 10.7,
-      "avgPrecipitation": 8.3,
+      "avgPrecipitation": 8.5,
       "avgWindSpeed": 19.1,
       "avgWeatherCode": 51,
       "comfortScore": 15,
@@ -1915,8 +1915,8 @@
       "worstYear": {
         "year": 2021,
         "comfortScore": 7,
-        "avgTempMax": 12.7,
-        "avgPrecipitation": 15.7,
+        "avgTempMax": 12.8,
+        "avgPrecipitation": 16.5,
         "avgWindSpeed": 29.2,
         "weatherCode": 63
       },
@@ -1931,7 +1931,7 @@
       "region": "Trøndelag",
       "avgTempMax": 11.6,
       "avgFeelsLikeMax": 9.3,
-      "avgPrecipitation": 3,
+      "avgPrecipitation": 2.9,
       "avgWindSpeed": 19,
       "avgWeatherCode": 51,
       "comfortScore": 24,
@@ -1960,12 +1960,12 @@
       "discipline": "løping",
       "officialDate": "2026-10-04",
       "region": "Akershus",
-      "avgTempMax": 10.2,
+      "avgTempMax": 10.3,
       "avgFeelsLikeMax": 7.2,
-      "avgPrecipitation": 5.9,
+      "avgPrecipitation": 6.3,
       "avgWindSpeed": 16.2,
       "avgWeatherCode": 3,
-      "comfortScore": 25,
+      "comfortScore": 23,
       "bestYear": {
         "year": 2023,
         "comfortScore": 58,
@@ -1982,7 +1982,7 @@
         "avgWindSpeed": 32.3,
         "weatherCode": 63
       },
-      "tempTrend": 0.4,
+      "tempTrend": 0.37,
       "dataYears": 10
     },
     {
@@ -1993,7 +1993,7 @@
       "region": "Agder",
       "avgTempMax": 13.3,
       "avgFeelsLikeMax": 10,
-      "avgPrecipitation": 5.4,
+      "avgPrecipitation": 5.3,
       "avgWindSpeed": 23.6,
       "avgWeatherCode": 3,
       "comfortScore": 27,
@@ -2009,7 +2009,7 @@
         "year": 2022,
         "comfortScore": 9,
         "avgTempMax": 14.5,
-        "avgPrecipitation": 26.2,
+        "avgPrecipitation": 26,
         "avgWindSpeed": 38.7,
         "weatherCode": 63
       },
@@ -2071,7 +2071,7 @@
         "year": 2020,
         "comfortScore": 8,
         "avgTempMax": 8.9,
-        "avgPrecipitation": 30.5,
+        "avgPrecipitation": 31.1,
         "avgWindSpeed": 13.9,
         "weatherCode": 63
       },
@@ -2086,14 +2086,14 @@
       "region": "Vestland",
       "avgTempMax": 11.7,
       "avgFeelsLikeMax": 9.3,
-      "avgPrecipitation": 15.4,
+      "avgPrecipitation": 15.3,
       "avgWindSpeed": 20.7,
       "avgWeatherCode": 61,
       "comfortScore": 6,
       "bestYear": {
         "year": 2016,
         "comfortScore": 66,
-        "avgTempMax": 11.8,
+        "avgTempMax": 11.9,
         "avgPrecipitation": 0,
         "avgWindSpeed": 8.9,
         "weatherCode": 1
@@ -2102,11 +2102,11 @@
         "year": 2022,
         "comfortScore": 4,
         "avgTempMax": 11.7,
-        "avgPrecipitation": 40.8,
+        "avgPrecipitation": 41.3,
         "avgWindSpeed": 31.8,
         "weatherCode": 65
       },
-      "tempTrend": -0.01,
+      "tempTrend": -0.02,
       "dataYears": 10
     },
     {
@@ -2117,14 +2117,14 @@
       "region": "Buskerud",
       "avgTempMax": 11.1,
       "avgFeelsLikeMax": 9.1,
-      "avgPrecipitation": 5.6,
+      "avgPrecipitation": 5.7,
       "avgWindSpeed": 13.7,
       "avgWeatherCode": 3,
       "comfortScore": 33,
       "bestYear": {
         "year": 2018,
         "comfortScore": 61,
-        "avgTempMax": 18.1,
+        "avgTempMax": 18.2,
         "avgPrecipitation": 0,
         "avgWindSpeed": 14.7,
         "weatherCode": 3
@@ -2133,11 +2133,11 @@
         "year": 2020,
         "comfortScore": 6,
         "avgTempMax": 8.8,
-        "avgPrecipitation": 33.7,
+        "avgPrecipitation": 34.7,
         "avgWindSpeed": 16.1,
         "weatherCode": 63
       },
-      "tempTrend": 0.37,
+      "tempTrend": 0.38,
       "dataYears": 10
     },
     {
@@ -2164,7 +2164,7 @@
         "year": 2020,
         "comfortScore": 8,
         "avgTempMax": 8.9,
-        "avgPrecipitation": 30.5,
+        "avgPrecipitation": 31.1,
         "avgWindSpeed": 13.9,
         "weatherCode": 63
       },
@@ -2177,12 +2177,12 @@
       "discipline": "løping",
       "officialDate": "2026-10-10",
       "region": "Trøndelag",
-      "avgTempMax": 10.9,
+      "avgTempMax": 11,
       "avgFeelsLikeMax": 8.4,
-      "avgPrecipitation": 7.3,
+      "avgPrecipitation": 7.2,
       "avgWindSpeed": 17,
       "avgWeatherCode": 0,
-      "comfortScore": 26,
+      "comfortScore": 27,
       "bestYear": {
         "year": 2016,
         "comfortScore": 58,
@@ -2195,7 +2195,7 @@
         "year": 2025,
         "comfortScore": 4,
         "avgTempMax": 10.9,
-        "avgPrecipitation": 30.5,
+        "avgPrecipitation": 30.9,
         "avgWindSpeed": 40,
         "weatherCode": 63
       },
@@ -2217,7 +2217,7 @@
       "bestYear": {
         "year": 2016,
         "comfortScore": 44,
-        "avgTempMax": 11.9,
+        "avgTempMax": 12,
         "avgPrecipitation": 0,
         "avgWindSpeed": 17.7,
         "weatherCode": 3
@@ -2226,11 +2226,11 @@
         "year": 2019,
         "comfortScore": 5,
         "avgTempMax": 11.3,
-        "avgPrecipitation": 21.5,
+        "avgPrecipitation": 20.1,
         "avgWindSpeed": 20.9,
         "weatherCode": 63
       },
-      "tempTrend": 0.1,
+      "tempTrend": 0.09,
       "dataYears": 10
     },
     {
@@ -2239,7 +2239,7 @@
       "discipline": "løping",
       "officialDate": "2026-10-10",
       "region": "Innlandet",
-      "avgTempMax": 4.4,
+      "avgTempMax": 4.5,
       "avgFeelsLikeMax": 1.3,
       "avgPrecipitation": 3.8,
       "avgWindSpeed": 14.1,
@@ -2248,7 +2248,7 @@
       "bestYear": {
         "year": 2016,
         "comfortScore": 46,
-        "avgTempMax": 3,
+        "avgTempMax": 3.1,
         "avgPrecipitation": 0,
         "avgWindSpeed": 7.6,
         "weatherCode": 3
@@ -2256,8 +2256,8 @@
       "worstYear": {
         "year": 2024,
         "comfortScore": 1,
-        "avgTempMax": 5.2,
-        "avgPrecipitation": 17.8,
+        "avgTempMax": 5.3,
+        "avgPrecipitation": 17.7,
         "avgWindSpeed": 17.5,
         "weatherCode": 75
       },
@@ -2292,7 +2292,7 @@
         "avgWindSpeed": 25.1,
         "weatherCode": 61
       },
-      "tempTrend": 0.47,
+      "tempTrend": 0.46,
       "dataYears": 10
     },
     {
@@ -2303,10 +2303,10 @@
       "region": "Akershus",
       "avgTempMax": 9.7,
       "avgFeelsLikeMax": 7,
-      "avgPrecipitation": 2.1,
+      "avgPrecipitation": 2,
       "avgWindSpeed": 13.8,
       "avgWeatherCode": 3,
-      "comfortScore": 38,
+      "comfortScore": 39,
       "bestYear": {
         "year": 2018,
         "comfortScore": 65,
@@ -2319,7 +2319,7 @@
         "year": 2020,
         "comfortScore": 6,
         "avgTempMax": 8.8,
-        "avgPrecipitation": 11.2,
+        "avgPrecipitation": 9.5,
         "avgWindSpeed": 15.5,
         "weatherCode": 61
       },
@@ -2350,7 +2350,7 @@
         "year": 2017,
         "comfortScore": 9,
         "avgTempMax": 12.6,
-        "avgPrecipitation": 8.7,
+        "avgPrecipitation": 9.1,
         "avgWindSpeed": 24.6,
         "weatherCode": 61
       },
@@ -2365,7 +2365,7 @@
       "region": "Agder",
       "avgTempMax": 12.9,
       "avgFeelsLikeMax": 9.8,
-      "avgPrecipitation": 1.6,
+      "avgPrecipitation": 1.7,
       "avgWindSpeed": 24.5,
       "avgWeatherCode": 3,
       "comfortScore": 37,
@@ -2412,7 +2412,7 @@
         "year": 2017,
         "comfortScore": 13,
         "avgTempMax": 9.3,
-        "avgPrecipitation": 9.2,
+        "avgPrecipitation": 9.7,
         "avgWindSpeed": 8.6,
         "weatherCode": 61
       },
@@ -2427,7 +2427,7 @@
       "region": "Trøndelag",
       "avgTempMax": 9.6,
       "avgFeelsLikeMax": 7.2,
-      "avgPrecipitation": 5.7,
+      "avgPrecipitation": 5.8,
       "avgWindSpeed": 15.8,
       "avgWeatherCode": 61,
       "comfortScore": 12,
@@ -2443,11 +2443,11 @@
         "year": 2025,
         "comfortScore": 5,
         "avgTempMax": 11.2,
-        "avgPrecipitation": 25.9,
+        "avgPrecipitation": 26.2,
         "avgWindSpeed": 20.8,
         "weatherCode": 63
       },
-      "tempTrend": 0.13,
+      "tempTrend": 0.12,
       "dataYears": 10
     },
     {
@@ -2489,7 +2489,7 @@
       "region": "Rogaland",
       "avgTempMax": 11.4,
       "avgFeelsLikeMax": 8.5,
-      "avgPrecipitation": 5.8,
+      "avgPrecipitation": 5.9,
       "avgWindSpeed": 23.7,
       "avgWeatherCode": 51,
       "comfortScore": 16,
@@ -2497,15 +2497,15 @@
         "year": 2021,
         "comfortScore": 34,
         "avgTempMax": 9.1,
-        "avgPrecipitation": 0.2,
+        "avgPrecipitation": 0.1,
         "avgWindSpeed": 10.5,
         "weatherCode": 51
       },
       "worstYear": {
         "year": 2022,
-        "comfortScore": 7,
+        "comfortScore": 4,
         "avgTempMax": 10.6,
-        "avgPrecipitation": 8.2,
+        "avgPrecipitation": 10.3,
         "avgWindSpeed": 21.1,
         "weatherCode": 63
       },
@@ -2520,10 +2520,10 @@
       "region": "Vestfold",
       "avgTempMax": 11.1,
       "avgFeelsLikeMax": 8.9,
-      "avgPrecipitation": 2.1,
+      "avgPrecipitation": 2.3,
       "avgWindSpeed": 20.5,
       "avgWeatherCode": 3,
-      "comfortScore": 34,
+      "comfortScore": 33,
       "bestYear": {
         "year": 2020,
         "comfortScore": 46,
@@ -2551,10 +2551,10 @@
       "region": "Oslo",
       "avgTempMax": 8.8,
       "avgFeelsLikeMax": 6.3,
-      "avgPrecipitation": 1.4,
+      "avgPrecipitation": 1.2,
       "avgWindSpeed": 11.1,
       "avgWeatherCode": 3,
-      "comfortScore": 42,
+      "comfortScore": 43,
       "bestYear": {
         "year": 2018,
         "comfortScore": 52,
@@ -2567,11 +2567,11 @@
         "year": 2016,
         "comfortScore": 23,
         "avgTempMax": 7,
-        "avgPrecipitation": 5.4,
+        "avgPrecipitation": 5.3,
         "avgWindSpeed": 8.1,
         "weatherCode": 51
       },
-      "tempTrend": -0.15,
+      "tempTrend": -0.14,
       "dataYears": 10
     },
     {
@@ -2582,7 +2582,7 @@
       "region": "Vestland",
       "avgTempMax": 10.8,
       "avgFeelsLikeMax": 7.8,
-      "avgPrecipitation": 1.3,
+      "avgPrecipitation": 1.1,
       "avgWindSpeed": 20.4,
       "avgWeatherCode": 51,
       "comfortScore": 24,
@@ -2596,13 +2596,13 @@
       },
       "worstYear": {
         "year": 2024,
-        "comfortScore": 13,
+        "comfortScore": 15,
         "avgTempMax": 14.4,
-        "avgPrecipitation": 6.1,
+        "avgPrecipitation": 4.8,
         "avgWindSpeed": 26.9,
         "weatherCode": 63
       },
-      "tempTrend": -0.11,
+      "tempTrend": -0.12,
       "dataYears": 10
     },
     {
@@ -2613,7 +2613,7 @@
       "region": "Rogaland",
       "avgTempMax": 7.5,
       "avgFeelsLikeMax": 4,
-      "avgPrecipitation": 2.7,
+      "avgPrecipitation": 2.5,
       "avgWindSpeed": 20.2,
       "avgWeatherCode": 53,
       "comfortScore": 15,
@@ -2627,9 +2627,9 @@
       },
       "worstYear": {
         "year": 2022,
-        "comfortScore": 5,
+        "comfortScore": 7,
         "avgTempMax": 8.6,
-        "avgPrecipitation": 9.5,
+        "avgPrecipitation": 8,
         "avgWindSpeed": 16.3,
         "weatherCode": 61
       },
@@ -2642,9 +2642,9 @@
       "discipline": "løping",
       "officialDate": "2026-10-18",
       "region": "Trøndelag",
-      "avgTempMax": 8.2,
+      "avgTempMax": 8.3,
       "avgFeelsLikeMax": 5.4,
-      "avgPrecipitation": 4.1,
+      "avgPrecipitation": 3.9,
       "avgWindSpeed": 18.1,
       "avgWeatherCode": 3,
       "comfortScore": 23,
@@ -2660,7 +2660,7 @@
         "year": 2017,
         "comfortScore": 1,
         "avgTempMax": 8.6,
-        "avgPrecipitation": 25.7,
+        "avgPrecipitation": 25.1,
         "avgWindSpeed": 23,
         "weatherCode": 63
       },
@@ -2675,14 +2675,14 @@
       "region": "Buskerud",
       "avgTempMax": 7.9,
       "avgFeelsLikeMax": 5.1,
-      "avgPrecipitation": 1.3,
+      "avgPrecipitation": 1.2,
       "avgWindSpeed": 10.3,
       "avgWeatherCode": 3,
       "comfortScore": 41,
       "bestYear": {
         "year": 2025,
         "comfortScore": 50,
-        "avgTempMax": 7,
+        "avgTempMax": 7.1,
         "avgPrecipitation": 0,
         "avgWindSpeed": 4.9,
         "weatherCode": 3
@@ -2706,7 +2706,7 @@
       "region": "Møre og Romsdal",
       "avgTempMax": 9,
       "avgFeelsLikeMax": 7,
-      "avgPrecipitation": 2.5,
+      "avgPrecipitation": 2.3,
       "avgWindSpeed": 10.7,
       "avgWeatherCode": 3,
       "comfortScore": 42,
@@ -2720,11 +2720,11 @@
       },
       "worstYear": {
         "year": 2020,
-        "comfortScore": 6,
+        "comfortScore": 7,
         "avgTempMax": 4.7,
-        "avgPrecipitation": 14.5,
+        "avgPrecipitation": 13.8,
         "avgWindSpeed": 10,
-        "weatherCode": 73
+        "weatherCode": 61
       },
       "tempTrend": 0,
       "dataYears": 10
@@ -2735,7 +2735,7 @@
       "discipline": "løping",
       "officialDate": "2026-10-22",
       "region": "Akershus",
-      "avgTempMax": 7.5,
+      "avgTempMax": 7.6,
       "avgFeelsLikeMax": 4.3,
       "avgPrecipitation": 3.7,
       "avgWindSpeed": 14.7,
@@ -2753,7 +2753,7 @@
         "year": 2020,
         "comfortScore": 8,
         "avgTempMax": 7.7,
-        "avgPrecipitation": 13.4,
+        "avgPrecipitation": 13.7,
         "avgWindSpeed": 11.6,
         "weatherCode": 63
       },
@@ -2768,7 +2768,7 @@
       "region": "Oslo",
       "avgTempMax": 8.1,
       "avgFeelsLikeMax": 5.1,
-      "avgPrecipitation": 1.3,
+      "avgPrecipitation": 1.2,
       "avgWindSpeed": 16,
       "avgWeatherCode": 53,
       "comfortScore": 23,
@@ -2784,7 +2784,7 @@
         "year": 2016,
         "comfortScore": 7,
         "avgTempMax": 5,
-        "avgPrecipitation": 6.8,
+        "avgPrecipitation": 7.2,
         "avgWindSpeed": 19,
         "weatherCode": 53
       },
@@ -2797,9 +2797,9 @@
       "discipline": "løping",
       "officialDate": "2026-10-24",
       "region": "Vestfold",
-      "avgTempMax": 10.1,
+      "avgTempMax": 10.2,
       "avgFeelsLikeMax": 6.8,
-      "avgPrecipitation": 10.6,
+      "avgPrecipitation": 11,
       "avgWindSpeed": 26.2,
       "avgWeatherCode": 63,
       "comfortScore": 3,
@@ -2814,12 +2814,12 @@
       "worstYear": {
         "year": 2017,
         "comfortScore": 0,
-        "avgTempMax": 8.8,
-        "avgPrecipitation": 27.2,
+        "avgTempMax": 9.5,
+        "avgPrecipitation": 28,
         "avgWindSpeed": 40.3,
         "weatherCode": 63
       },
-      "tempTrend": 0.33,
+      "tempTrend": 0.3,
       "dataYears": 10
     },
     {
@@ -2830,7 +2830,7 @@
       "region": "Akershus",
       "avgTempMax": 8,
       "avgFeelsLikeMax": 5.4,
-      "avgPrecipitation": 9.2,
+      "avgPrecipitation": 9.5,
       "avgWindSpeed": 14.5,
       "avgWeatherCode": 3,
       "comfortScore": 13,
@@ -2846,11 +2846,11 @@
         "year": 2017,
         "comfortScore": 0,
         "avgTempMax": 4.2,
-        "avgPrecipitation": 28.2,
+        "avgPrecipitation": 28.6,
         "avgWindSpeed": 19.5,
-        "weatherCode": 73
+        "weatherCode": 61
       },
-      "tempTrend": 0.57,
+      "tempTrend": 0.56,
       "dataYears": 10
     },
     {
@@ -2861,10 +2861,10 @@
       "region": "Akershus",
       "avgTempMax": 7.9,
       "avgFeelsLikeMax": 5.3,
-      "avgPrecipitation": 4.1,
+      "avgPrecipitation": 3.6,
       "avgWindSpeed": 16.1,
       "avgWeatherCode": 3,
-      "comfortScore": 25,
+      "comfortScore": 27,
       "bestYear": {
         "year": 2018,
         "comfortScore": 42,
@@ -2874,14 +2874,14 @@
         "weatherCode": 3
       },
       "worstYear": {
-        "year": 2017,
-        "comfortScore": 3,
-        "avgTempMax": 5.2,
-        "avgPrecipitation": 9.2,
-        "avgWindSpeed": 15.7,
-        "weatherCode": 73
+        "year": 2020,
+        "comfortScore": 5,
+        "avgTempMax": 10.7,
+        "avgPrecipitation": 14.6,
+        "avgWindSpeed": 25.9,
+        "weatherCode": 63
       },
-      "tempTrend": 0.25,
+      "tempTrend": 0.26,
       "dataYears": 10
     },
     {
@@ -2890,12 +2890,12 @@
       "discipline": "løping",
       "officialDate": "2026-10-25",
       "region": "Innlandet",
-      "avgTempMax": 4.7,
+      "avgTempMax": 4.8,
       "avgFeelsLikeMax": 1.7,
-      "avgPrecipitation": 8.6,
+      "avgPrecipitation": 7.8,
       "avgWindSpeed": 15.9,
       "avgWeatherCode": 61,
-      "comfortScore": 5,
+      "comfortScore": 6,
       "bestYear": {
         "year": 2023,
         "comfortScore": 41,
@@ -2908,7 +2908,7 @@
         "year": 2020,
         "comfortScore": 1,
         "avgTempMax": 8.1,
-        "avgPrecipitation": 28,
+        "avgPrecipitation": 27.8,
         "avgWindSpeed": 22.2,
         "weatherCode": 63
       },
@@ -2921,9 +2921,9 @@
       "discipline": "løping",
       "officialDate": "2026-10-25",
       "region": "Agder",
-      "avgTempMax": 9,
+      "avgTempMax": 9.1,
       "avgFeelsLikeMax": 6.2,
-      "avgPrecipitation": 7.4,
+      "avgPrecipitation": 7,
       "avgWindSpeed": 21,
       "avgWeatherCode": 61,
       "comfortScore": 6,
@@ -2936,12 +2936,12 @@
         "weatherCode": 53
       },
       "worstYear": {
-        "year": 2023,
-        "comfortScore": 3,
-        "avgTempMax": 2.7,
-        "avgPrecipitation": 7.2,
-        "avgWindSpeed": 29.3,
-        "weatherCode": 73
+        "year": 2025,
+        "comfortScore": 4,
+        "avgTempMax": 8.3,
+        "avgPrecipitation": 10,
+        "avgWindSpeed": 21.3,
+        "weatherCode": 55
       },
       "tempTrend": -0.1,
       "dataYears": 10
@@ -2952,9 +2952,9 @@
       "discipline": "løping",
       "officialDate": "2026-10-31",
       "region": "Rogaland",
-      "avgTempMax": 10.3,
+      "avgTempMax": 10.4,
       "avgFeelsLikeMax": 7.1,
-      "avgPrecipitation": 3.3,
+      "avgPrecipitation": 3.7,
       "avgWindSpeed": 23.9,
       "avgWeatherCode": 61,
       "comfortScore": 12,
@@ -2969,12 +2969,12 @@
       "worstYear": {
         "year": 2018,
         "comfortScore": 6,
-        "avgTempMax": 8.8,
-        "avgPrecipitation": 6.1,
+        "avgTempMax": 8.9,
+        "avgPrecipitation": 5.9,
         "avgWindSpeed": 21.6,
         "weatherCode": 61
       },
-      "tempTrend": 0.11,
+      "tempTrend": 0.12,
       "dataYears": 10
     },
     {
@@ -2983,16 +2983,16 @@
       "discipline": "løping",
       "officialDate": "2026-10-31",
       "region": "Østfold",
-      "avgTempMax": 7.7,
+      "avgTempMax": 7.8,
       "avgFeelsLikeMax": 4.8,
-      "avgPrecipitation": 3.3,
+      "avgPrecipitation": 3.1,
       "avgWindSpeed": 17,
       "avgWeatherCode": 3,
-      "comfortScore": 25,
+      "comfortScore": 26,
       "bestYear": {
         "year": 2017,
         "comfortScore": 41,
-        "avgTempMax": 6.8,
+        "avgTempMax": 6.9,
         "avgPrecipitation": 0,
         "avgWindSpeed": 11.3,
         "weatherCode": 3
@@ -3000,12 +3000,12 @@
       "worstYear": {
         "year": 2018,
         "comfortScore": 2,
-        "avgTempMax": 7.8,
-        "avgPrecipitation": 13.9,
+        "avgTempMax": 7.9,
+        "avgPrecipitation": 13.8,
         "avgWindSpeed": 23.7,
         "weatherCode": 63
       },
-      "tempTrend": -0.08,
+      "tempTrend": -0.07,
       "dataYears": 10
     },
     {
@@ -3016,10 +3016,10 @@
       "region": "Rogaland",
       "avgTempMax": 9.3,
       "avgFeelsLikeMax": 6.9,
-      "avgPrecipitation": 3.6,
+      "avgPrecipitation": 2.9,
       "avgWindSpeed": 16.7,
       "avgWeatherCode": 3,
-      "comfortScore": 30,
+      "comfortScore": 32,
       "bestYear": {
         "year": 2024,
         "comfortScore": 60,
@@ -3030,9 +3030,9 @@
       },
       "worstYear": {
         "year": 2021,
-        "comfortScore": 6,
+        "comfortScore": 9,
         "avgTempMax": 9.9,
-        "avgPrecipitation": 9.5,
+        "avgPrecipitation": 7.1,
         "avgWindSpeed": 25.5,
         "weatherCode": 61
       },
@@ -3047,23 +3047,23 @@
       "region": "Finnmark",
       "avgTempMax": 0.2,
       "avgFeelsLikeMax": -3.8,
-      "avgPrecipitation": 2.4,
+      "avgPrecipitation": 2.6,
       "avgWindSpeed": 17.5,
       "avgWeatherCode": 73,
       "comfortScore": 10,
       "bestYear": {
         "year": 2019,
         "comfortScore": 47,
-        "avgTempMax": -6.6,
+        "avgTempMax": -6.5,
         "avgPrecipitation": 0,
         "avgWindSpeed": 6.7,
         "weatherCode": 3
       },
       "worstYear": {
         "year": 2024,
-        "comfortScore": 5,
+        "comfortScore": 3,
         "avgTempMax": 4.6,
-        "avgPrecipitation": 6.1,
+        "avgPrecipitation": 7.3,
         "avgWindSpeed": 32.5,
         "weatherCode": 73
       },
@@ -3076,7 +3076,7 @@
       "discipline": "løping",
       "officialDate": "2026-11-08",
       "region": "Akershus",
-      "avgTempMax": 3.3,
+      "avgTempMax": 3.6,
       "avgFeelsLikeMax": 0.6,
       "avgPrecipitation": 1,
       "avgWindSpeed": 10,
@@ -3093,12 +3093,12 @@
       "worstYear": {
         "year": 2019,
         "comfortScore": 11,
-        "avgTempMax": -1.2,
-        "avgPrecipitation": 2.6,
+        "avgTempMax": -1.1,
+        "avgPrecipitation": 2.8,
         "avgWindSpeed": 15.7,
         "weatherCode": 73
       },
-      "tempTrend": 0.57,
+      "tempTrend": 0.62,
       "dataYears": 10
     },
     {
@@ -3122,14 +3122,14 @@
         "weatherCode": 3
       },
       "worstYear": {
-        "year": 2022,
-        "comfortScore": 12,
-        "avgTempMax": 7.3,
-        "avgPrecipitation": 8,
-        "avgWindSpeed": 8.7,
-        "weatherCode": 61
+        "year": 2019,
+        "comfortScore": 11,
+        "avgTempMax": -2,
+        "avgPrecipitation": 3.4,
+        "avgWindSpeed": 13.6,
+        "weatherCode": 73
       },
-      "tempTrend": 0.73,
+      "tempTrend": 0.74,
       "dataYears": 10
     },
     {
@@ -3140,14 +3140,14 @@
       "region": "Vestfold",
       "avgTempMax": 2,
       "avgFeelsLikeMax": -1.9,
-      "avgPrecipitation": 4.8,
+      "avgPrecipitation": 4.6,
       "avgWindSpeed": 16.4,
       "avgWeatherCode": 71,
       "comfortScore": 8,
       "bestYear": {
         "year": 2025,
         "comfortScore": 42,
-        "avgTempMax": -1.5,
+        "avgTempMax": -1.4,
         "avgPrecipitation": 0,
         "avgWindSpeed": 10.2,
         "weatherCode": 3
@@ -3156,7 +3156,7 @@
         "year": 2019,
         "comfortScore": 2,
         "avgTempMax": 5.9,
-        "avgPrecipitation": 26.9,
+        "avgPrecipitation": 27.5,
         "avgWindSpeed": 17.2,
         "weatherCode": 63
       },
@@ -3169,12 +3169,12 @@
       "discipline": "løping",
       "officialDate": "2026-11-22",
       "region": "Rogaland",
-      "avgTempMax": 7.6,
+      "avgTempMax": 7.8,
       "avgFeelsLikeMax": 3.1,
-      "avgPrecipitation": 9,
+      "avgPrecipitation": 9.3,
       "avgWindSpeed": 30.8,
       "avgWeatherCode": 53,
-      "comfortScore": 2,
+      "comfortScore": 1,
       "bestYear": {
         "year": 2018,
         "comfortScore": 47,
@@ -3187,11 +3187,11 @@
         "year": 2025,
         "comfortScore": 0,
         "avgTempMax": 7.6,
-        "avgPrecipitation": 12.6,
+        "avgPrecipitation": 11.7,
         "avgWindSpeed": 27.5,
         "weatherCode": 61
       },
-      "tempTrend": -0.39,
+      "tempTrend": -0.42,
       "dataYears": 10
     },
     {
@@ -3202,10 +3202,10 @@
       "region": "Telemark",
       "avgTempMax": 3.5,
       "avgFeelsLikeMax": 0.1,
-      "avgPrecipitation": 6.2,
+      "avgPrecipitation": 6.6,
       "avgWindSpeed": 14.9,
       "avgWeatherCode": 3,
-      "comfortScore": 18,
+      "comfortScore": 17,
       "bestYear": {
         "year": 2018,
         "comfortScore": 40,
@@ -3218,11 +3218,11 @@
         "year": 2024,
         "comfortScore": 1,
         "avgTempMax": 3.2,
-        "avgPrecipitation": 23.6,
+        "avgPrecipitation": 26.7,
         "avgWindSpeed": 18.6,
         "weatherCode": 75
       },
-      "tempTrend": -0.02,
+      "tempTrend": -0.03,
       "dataYears": 10
     },
     {
@@ -3233,10 +3233,10 @@
       "region": "Møre og Romsdal",
       "avgTempMax": 2.3,
       "avgFeelsLikeMax": -1.2,
-      "avgPrecipitation": 4.1,
+      "avgPrecipitation": 4,
       "avgWindSpeed": 15.7,
-      "avgWeatherCode": 73,
-      "comfortScore": 9,
+      "avgWeatherCode": 3,
+      "comfortScore": 23,
       "bestYear": {
         "year": 2021,
         "comfortScore": 40,
@@ -3249,11 +3249,11 @@
         "year": 2022,
         "comfortScore": 0,
         "avgTempMax": 3,
-        "avgPrecipitation": 11.7,
+        "avgPrecipitation": 11.8,
         "avgWindSpeed": 22.5,
-        "weatherCode": 75
+        "weatherCode": 73
       },
-      "tempTrend": 0.14,
+      "tempTrend": 0.13,
       "dataYears": 10
     },
     {
@@ -3262,7 +3262,7 @@
       "discipline": "løping",
       "officialDate": "2026-12-27",
       "region": "Innlandet",
-      "avgTempMax": -1.3,
+      "avgTempMax": -1.2,
       "avgFeelsLikeMax": -5.5,
       "avgPrecipitation": 2.2,
       "avgWindSpeed": 14.8,
@@ -3278,13 +3278,13 @@
       },
       "worstYear": {
         "year": 2020,
-        "comfortScore": 1,
+        "comfortScore": 2,
         "avgTempMax": 1.8,
-        "avgPrecipitation": 19.1,
+        "avgPrecipitation": 19.4,
         "avgWindSpeed": 17.9,
-        "weatherCode": 75
+        "weatherCode": 55
       },
-      "tempTrend": -0.15,
+      "tempTrend": -0.14,
       "dataYears": 10
     },
     {
@@ -3295,10 +3295,10 @@
       "region": "Agder",
       "avgTempMax": 3.1,
       "avgFeelsLikeMax": -1.2,
-      "avgPrecipitation": 4.7,
+      "avgPrecipitation": 5,
       "avgWindSpeed": 25.1,
       "avgWeatherCode": 3,
-      "comfortScore": 15,
+      "comfortScore": 14,
       "bestYear": {
         "year": 2019,
         "comfortScore": 39,
@@ -3311,11 +3311,11 @@
         "year": 2020,
         "comfortScore": 0,
         "avgTempMax": 5.2,
-        "avgPrecipitation": 40.7,
+        "avgPrecipitation": 39.2,
         "avgWindSpeed": 41.6,
         "weatherCode": 71
       },
-      "tempTrend": -0.08,
+      "tempTrend": -0.09,
       "dataYears": 10
     },
     {
@@ -3326,10 +3326,10 @@
       "region": "Vestfold",
       "avgTempMax": 3.1,
       "avgFeelsLikeMax": -1.1,
-      "avgPrecipitation": 4.7,
+      "avgPrecipitation": 4.4,
       "avgWindSpeed": 20.5,
       "avgWeatherCode": 3,
-      "comfortScore": 15,
+      "comfortScore": 16,
       "bestYear": {
         "year": 2025,
         "comfortScore": 38,
@@ -3342,11 +3342,11 @@
         "year": 2023,
         "comfortScore": 0,
         "avgTempMax": -1.8,
-        "avgPrecipitation": 12.8,
+        "avgPrecipitation": 14.4,
         "avgWindSpeed": 20.8,
         "weatherCode": 75
       },
-      "tempTrend": -0.65,
+      "tempTrend": -0.67,
       "dataYears": 10
     },
     {
@@ -3357,7 +3357,7 @@
       "region": "Telemark",
       "avgTempMax": 2.3,
       "avgFeelsLikeMax": -1.5,
-      "avgPrecipitation": 4,
+      "avgPrecipitation": 3.8,
       "avgWindSpeed": 18.2,
       "avgWeatherCode": 3,
       "comfortScore": 20,
@@ -3373,7 +3373,7 @@
         "year": 2023,
         "comfortScore": 0,
         "avgTempMax": -2,
-        "avgPrecipitation": 10.5,
+        "avgPrecipitation": 11.6,
         "avgWindSpeed": 28.3,
         "weatherCode": 75
       },
@@ -3386,7 +3386,7 @@
       "discipline": "løping",
       "officialDate": "2027-01-09",
       "region": "Troms",
-      "avgTempMax": -2.2,
+      "avgTempMax": -2.1,
       "avgFeelsLikeMax": -6.3,
       "avgPrecipitation": 5.2,
       "avgWindSpeed": 15.3,
@@ -3403,12 +3403,12 @@
       "worstYear": {
         "year": 2020,
         "comfortScore": 0,
-        "avgTempMax": 2.3,
-        "avgPrecipitation": 18.9,
+        "avgTempMax": 2.4,
+        "avgPrecipitation": 19.1,
         "avgWindSpeed": 33.6,
-        "weatherCode": 75
+        "weatherCode": 63
       },
-      "tempTrend": -0.24,
+      "tempTrend": -0.25,
       "dataYears": 10
     },
     {
@@ -3417,7 +3417,7 @@
       "discipline": "løping",
       "officialDate": "2027-04-03",
       "region": "Vestfold",
-      "avgTempMax": 7.7,
+      "avgTempMax": 7.8,
       "avgFeelsLikeMax": 4.3,
       "avgPrecipitation": 0.5,
       "avgWindSpeed": 10.9,
@@ -3435,7 +3435,7 @@
         "year": 2018,
         "comfortScore": 15,
         "avgTempMax": 2.9,
-        "avgPrecipitation": 2.6,
+        "avgPrecipitation": 2.9,
         "avgWindSpeed": 8.4,
         "weatherCode": 73
       },
@@ -3464,9 +3464,9 @@
       },
       "worstYear": {
         "year": 2018,
-        "comfortScore": 16,
+        "comfortScore": 15,
         "avgTempMax": 1.6,
-        "avgPrecipitation": 2.3,
+        "avgPrecipitation": 2.6,
         "avgWindSpeed": 8.6,
         "weatherCode": 73
       },
@@ -3481,7 +3481,7 @@
       "region": "Oslo",
       "avgTempMax": 9.9,
       "avgFeelsLikeMax": 6.2,
-      "avgPrecipitation": 5.4,
+      "avgPrecipitation": 5.7,
       "avgWindSpeed": 18.4,
       "avgWeatherCode": 51,
       "comfortScore": 14,
@@ -3497,11 +3497,11 @@
         "year": 2023,
         "comfortScore": 0,
         "avgTempMax": 5.7,
-        "avgPrecipitation": 28.7,
+        "avgPrecipitation": 31.3,
         "avgWindSpeed": 22.5,
         "weatherCode": 73
       },
-      "tempTrend": 0.06,
+      "tempTrend": 0.05,
       "dataYears": 10
     },
     {
@@ -3512,10 +3512,10 @@
       "region": "Rogaland",
       "avgTempMax": 9.6,
       "avgFeelsLikeMax": 5.6,
-      "avgPrecipitation": 2.7,
+      "avgPrecipitation": 2.5,
       "avgWindSpeed": 27.2,
       "avgWeatherCode": 3,
-      "comfortScore": 24,
+      "comfortScore": 25,
       "bestYear": {
         "year": 2022,
         "comfortScore": 39,
@@ -3528,7 +3528,7 @@
         "year": 2018,
         "comfortScore": 1,
         "avgTempMax": 7.9,
-        "avgPrecipitation": 11,
+        "avgPrecipitation": 10.8,
         "avgWindSpeed": 22.8,
         "weatherCode": 55
       },
@@ -3543,7 +3543,7 @@
       "region": "Innlandet",
       "avgTempMax": 10.5,
       "avgFeelsLikeMax": 7.5,
-      "avgPrecipitation": 2.9,
+      "avgPrecipitation": 2.8,
       "avgWindSpeed": 13.3,
       "avgWeatherCode": 3,
       "comfortScore": 38,
@@ -3557,9 +3557,9 @@
       },
       "worstYear": {
         "year": 2018,
-        "comfortScore": 2,
+        "comfortScore": 1,
         "avgTempMax": 4.3,
-        "avgPrecipitation": 9.9,
+        "avgPrecipitation": 10.1,
         "avgWindSpeed": 17.5,
         "weatherCode": 75
       },
@@ -3574,7 +3574,7 @@
       "region": "Buskerud",
       "avgTempMax": 9.3,
       "avgFeelsLikeMax": 6.2,
-      "avgPrecipitation": 2.9,
+      "avgPrecipitation": 2.7,
       "avgWindSpeed": 10.2,
       "avgWeatherCode": 51,
       "comfortScore": 28,
@@ -3590,7 +3590,7 @@
         "year": 2018,
         "comfortScore": 6,
         "avgTempMax": 3.2,
-        "avgPrecipitation": 15.5,
+        "avgPrecipitation": 14.5,
         "avgWindSpeed": 9.1,
         "weatherCode": 75
       },
@@ -3605,10 +3605,10 @@
       "region": "Agder",
       "avgTempMax": 12.1,
       "avgFeelsLikeMax": 8.6,
-      "avgPrecipitation": 2.6,
+      "avgPrecipitation": 2.3,
       "avgWindSpeed": 19.4,
       "avgWeatherCode": 3,
-      "comfortScore": 33,
+      "comfortScore": 34,
       "bestYear": {
         "year": 2025,
         "comfortScore": 55,
@@ -3619,13 +3619,13 @@
       },
       "worstYear": {
         "year": 2018,
-        "comfortScore": 1,
-        "avgTempMax": 6.4,
-        "avgPrecipitation": 9.1,
+        "comfortScore": 2,
+        "avgTempMax": 6.5,
+        "avgPrecipitation": 7.9,
         "avgWindSpeed": 27.5,
         "weatherCode": 73
       },
-      "tempTrend": 0.92,
+      "tempTrend": 0.91,
       "dataYears": 10
     },
     {
@@ -3634,7 +3634,7 @@
       "discipline": "løping",
       "officialDate": "2027-05-01",
       "region": "Vestland",
-      "avgTempMax": 11,
+      "avgTempMax": 11.1,
       "avgFeelsLikeMax": 7.2,
       "avgPrecipitation": 3,
       "avgWindSpeed": 20.8,
@@ -3656,7 +3656,7 @@
         "avgWindSpeed": 29.8,
         "weatherCode": 63
       },
-      "tempTrend": 0.54,
+      "tempTrend": 0.55,
       "dataYears": 10
     },
     {
@@ -3665,7 +3665,7 @@
       "discipline": "løping",
       "officialDate": "2027-05-06",
       "region": "Vestfold",
-      "avgTempMax": 14.3,
+      "avgTempMax": 14.4,
       "avgFeelsLikeMax": 11.2,
       "avgPrecipitation": 0.5,
       "avgWindSpeed": 15.7,
@@ -3698,7 +3698,7 @@
       "region": "Agder",
       "avgTempMax": 15.3,
       "avgFeelsLikeMax": 13.6,
-      "avgPrecipitation": 6,
+      "avgPrecipitation": 5.9,
       "avgWindSpeed": 21.7,
       "avgWeatherCode": 3,
       "comfortScore": 34,
@@ -3718,7 +3718,7 @@
         "avgWindSpeed": 30.7,
         "weatherCode": 65
       },
-      "tempTrend": 0.18,
+      "tempTrend": 0.2,
       "dataYears": 10
     },
     {
@@ -3729,7 +3729,7 @@
       "region": "Buskerud",
       "avgTempMax": 14.2,
       "avgFeelsLikeMax": 11.8,
-      "avgPrecipitation": 6,
+      "avgPrecipitation": 6.3,
       "avgWindSpeed": 13.2,
       "avgWeatherCode": 3,
       "comfortScore": 39,
@@ -3745,7 +3745,7 @@
         "year": 2020,
         "comfortScore": 5,
         "avgTempMax": 10.4,
-        "avgPrecipitation": 9.5,
+        "avgPrecipitation": 13,
         "avgWindSpeed": 18.7,
         "weatherCode": 63
       },
@@ -3760,10 +3760,10 @@
       "region": "Nordland",
       "avgTempMax": 14.9,
       "avgFeelsLikeMax": 12.6,
-      "avgPrecipitation": 1,
+      "avgPrecipitation": 1.3,
       "avgWindSpeed": 16.6,
       "avgWeatherCode": 3,
-      "comfortScore": 51,
+      "comfortScore": 50,
       "bestYear": {
         "year": 2024,
         "comfortScore": 53,
@@ -3774,9 +3774,9 @@
       },
       "worstYear": {
         "year": 2023,
-        "comfortScore": 24,
-        "avgTempMax": 20.1,
-        "avgPrecipitation": 2.1,
+        "comfortScore": 23,
+        "avgTempMax": 20.2,
+        "avgPrecipitation": 3.5,
         "avgWindSpeed": 16.2,
         "weatherCode": 61
       },
@@ -3791,10 +3791,10 @@
       "region": "Buskerud",
       "avgTempMax": 17.7,
       "avgFeelsLikeMax": 16.3,
-      "avgPrecipitation": 4.9,
+      "avgPrecipitation": 5.1,
       "avgWindSpeed": 13.7,
       "avgWeatherCode": 3,
-      "comfortScore": 51,
+      "comfortScore": 50,
       "bestYear": {
         "year": 2018,
         "comfortScore": 60,
@@ -3804,14 +3804,14 @@
         "weatherCode": 3
       },
       "worstYear": {
-        "year": 2019,
+        "year": 2020,
         "comfortScore": 10,
-        "avgTempMax": 21.1,
-        "avgPrecipitation": 19.8,
-        "avgWindSpeed": 14,
+        "avgTempMax": 15.3,
+        "avgPrecipitation": 9.4,
+        "avgWindSpeed": 22.3,
         "weatherCode": 63
       },
-      "tempTrend": 0.02,
+      "tempTrend": 0.03,
       "dataYears": 10
     },
     {
@@ -3820,7 +3820,7 @@
       "discipline": "løping",
       "officialDate": "2027-05-29",
       "region": "Telemark",
-      "avgTempMax": 18,
+      "avgTempMax": 18.1,
       "avgFeelsLikeMax": 16.4,
       "avgPrecipitation": 1.4,
       "avgWindSpeed": 10.6,
@@ -3829,20 +3829,20 @@
       "bestYear": {
         "year": 2020,
         "comfortScore": 74,
-        "avgTempMax": 20.7,
+        "avgTempMax": 20.8,
         "avgPrecipitation": 0,
         "avgWindSpeed": 7.6,
         "weatherCode": 2
       },
       "worstYear": {
-        "year": 2019,
-        "comfortScore": 19,
-        "avgTempMax": 12.6,
-        "avgPrecipitation": 0.2,
-        "avgWindSpeed": 14.4,
-        "weatherCode": 71
+        "year": 2024,
+        "comfortScore": 26,
+        "avgTempMax": 17.3,
+        "avgPrecipitation": 3,
+        "avgWindSpeed": 13.7,
+        "weatherCode": 61
       },
-      "tempTrend": -0.22,
+      "tempTrend": -0.21,
       "dataYears": 10
     },
     {
@@ -3853,7 +3853,7 @@
       "region": "Akershus",
       "avgTempMax": 17.8,
       "avgFeelsLikeMax": 15.8,
-      "avgPrecipitation": 1.7,
+      "avgPrecipitation": 1.5,
       "avgWindSpeed": 14.1,
       "avgWeatherCode": 3,
       "comfortScore": 60,
@@ -3867,13 +3867,13 @@
       },
       "worstYear": {
         "year": 2022,
-        "comfortScore": 20,
+        "comfortScore": 18,
         "avgTempMax": 12.8,
-        "avgPrecipitation": 4.1,
+        "avgPrecipitation": 5.2,
         "avgWindSpeed": 12.2,
         "weatherCode": 61
       },
-      "tempTrend": -0.3,
+      "tempTrend": -0.31,
       "dataYears": 10
     },
     {
@@ -3884,14 +3884,14 @@
       "region": "Akershus",
       "avgTempMax": 19.8,
       "avgFeelsLikeMax": 18.1,
-      "avgPrecipitation": 2.6,
+      "avgPrecipitation": 2.5,
       "avgWindSpeed": 14.7,
       "avgWeatherCode": 3,
       "comfortScore": 52,
       "bestYear": {
         "year": 2020,
         "comfortScore": 57,
-        "avgTempMax": 22.8,
+        "avgTempMax": 22.9,
         "avgPrecipitation": 0,
         "avgWindSpeed": 12.8,
         "weatherCode": 3
@@ -3900,7 +3900,7 @@
         "year": 2024,
         "comfortScore": 20,
         "avgTempMax": 18,
-        "avgPrecipitation": 8.2,
+        "avgPrecipitation": 8.3,
         "avgWindSpeed": 10.5,
         "weatherCode": 61
       },
@@ -3931,7 +3931,7 @@
         "year": 2024,
         "comfortScore": 0,
         "avgTempMax": 6.3,
-        "avgPrecipitation": 28.6,
+        "avgPrecipitation": 28.4,
         "avgWindSpeed": 29,
         "weatherCode": 75
       },
@@ -3946,10 +3946,10 @@
       "region": "Agder",
       "avgTempMax": 16.2,
       "avgFeelsLikeMax": 14.8,
-      "avgPrecipitation": 8.4,
+      "avgPrecipitation": 7.9,
       "avgWindSpeed": 21.7,
       "avgWeatherCode": 3,
-      "comfortScore": 30,
+      "comfortScore": 31,
       "bestYear": {
         "year": 2016,
         "comfortScore": 65,
@@ -3961,8 +3961,8 @@
       "worstYear": {
         "year": 2020,
         "comfortScore": 6,
-        "avgTempMax": 11.6,
-        "avgPrecipitation": 39.3,
+        "avgTempMax": 11.7,
+        "avgPrecipitation": 36,
         "avgWindSpeed": 38.5,
         "weatherCode": 63
       },
@@ -3975,16 +3975,16 @@
       "discipline": "løping",
       "officialDate": "2027-06-06",
       "region": "Trøndelag",
-      "avgTempMax": 16.9,
+      "avgTempMax": 17,
       "avgFeelsLikeMax": 15.6,
-      "avgPrecipitation": 2.6,
+      "avgPrecipitation": 2.5,
       "avgWindSpeed": 12.6,
       "avgWeatherCode": 3,
       "comfortScore": 59,
       "bestYear": {
         "year": 2016,
         "comfortScore": 74,
-        "avgTempMax": 18.1,
+        "avgTempMax": 18.2,
         "avgPrecipitation": 0,
         "avgWindSpeed": 6.9,
         "weatherCode": 3
@@ -3992,12 +3992,12 @@
       "worstYear": {
         "year": 2024,
         "comfortScore": 14,
-        "avgTempMax": 14.2,
+        "avgTempMax": 14.6,
         "avgPrecipitation": 9,
         "avgWindSpeed": 16.5,
         "weatherCode": 63
       },
-      "tempTrend": -0.63,
+      "tempTrend": -0.62,
       "dataYears": 10
     },
     {
@@ -4008,7 +4008,7 @@
       "region": "Troms",
       "avgTempMax": 13.3,
       "avgFeelsLikeMax": 10.9,
-      "avgPrecipitation": 3.1,
+      "avgPrecipitation": 3.2,
       "avgWindSpeed": 14.2,
       "avgWeatherCode": 53,
       "comfortScore": 31,
@@ -4021,14 +4021,14 @@
         "weatherCode": 3
       },
       "worstYear": {
-        "year": 2018,
-        "comfortScore": 9,
-        "avgTempMax": 4.8,
-        "avgPrecipitation": 3.9,
-        "avgWindSpeed": 16.9,
-        "weatherCode": 73
+        "year": 2022,
+        "comfortScore": 14,
+        "avgTempMax": 13,
+        "avgPrecipitation": 6.3,
+        "avgWindSpeed": 21.5,
+        "weatherCode": 55
       },
-      "tempTrend": 0.83,
+      "tempTrend": 0.84,
       "dataYears": 10
     },
     {
@@ -4055,7 +4055,7 @@
         "year": 2019,
         "comfortScore": 12,
         "avgTempMax": 12.2,
-        "avgPrecipitation": 13.8,
+        "avgPrecipitation": 13,
         "avgWindSpeed": 14.6,
         "weatherCode": 61
       },
@@ -4068,9 +4068,9 @@
       "discipline": "løping",
       "officialDate": "2027-06-19",
       "region": "Troms",
-      "avgTempMax": 13.4,
+      "avgTempMax": 13.5,
       "avgFeelsLikeMax": 11.9,
-      "avgPrecipitation": 3.1,
+      "avgPrecipitation": 3,
       "avgWindSpeed": 12.8,
       "avgWeatherCode": 51,
       "comfortScore": 34,
@@ -4084,13 +4084,13 @@
       },
       "worstYear": {
         "year": 2021,
-        "comfortScore": 11,
+        "comfortScore": 12,
         "avgTempMax": 10.7,
-        "avgPrecipitation": 5.6,
+        "avgPrecipitation": 4.3,
         "avgWindSpeed": 20.7,
         "weatherCode": 61
       },
-      "tempTrend": 0.65,
+      "tempTrend": 0.66,
       "dataYears": 10
     },
     {
@@ -4101,7 +4101,7 @@
       "region": "Vestfold",
       "avgTempMax": 20.5,
       "avgFeelsLikeMax": 19.1,
-      "avgPrecipitation": 2.1,
+      "avgPrecipitation": 2.3,
       "avgWindSpeed": 15.2,
       "avgWeatherCode": 51,
       "comfortScore": 35,
@@ -4132,10 +4132,10 @@
       "region": "Buskerud",
       "avgTempMax": 16.4,
       "avgFeelsLikeMax": 14.3,
-      "avgPrecipitation": 3.6,
+      "avgPrecipitation": 3.7,
       "avgWindSpeed": 11.3,
       "avgWeatherCode": 53,
-      "comfortScore": 39,
+      "comfortScore": 38,
       "bestYear": {
         "year": 2025,
         "comfortScore": 61,
@@ -4147,12 +4147,12 @@
       "worstYear": {
         "year": 2021,
         "comfortScore": 16,
-        "avgTempMax": 12.4,
-        "avgPrecipitation": 16.7,
+        "avgTempMax": 12.5,
+        "avgPrecipitation": 16.8,
         "avgWindSpeed": 9.4,
         "weatherCode": 63
       },
-      "tempTrend": 0.02,
+      "tempTrend": 0.03,
       "dataYears": 10
     },
     {
@@ -4163,7 +4163,7 @@
       "region": "Oslo",
       "avgTempMax": 20.6,
       "avgFeelsLikeMax": 18.8,
-      "avgPrecipitation": 3,
+      "avgPrecipitation": 3.1,
       "avgWindSpeed": 16.3,
       "avgWeatherCode": 3,
       "comfortScore": 47,
@@ -4179,11 +4179,11 @@
         "year": 2021,
         "comfortScore": 9,
         "avgTempMax": 20.8,
-        "avgPrecipitation": 9.8,
+        "avgPrecipitation": 9.9,
         "avgWindSpeed": 16.6,
         "weatherCode": 61
       },
-      "tempTrend": 0.17,
+      "tempTrend": 0.16,
       "dataYears": 10
     },
     {
@@ -4194,10 +4194,10 @@
       "region": "Vestland",
       "avgTempMax": 14.7,
       "avgFeelsLikeMax": 13.8,
-      "avgPrecipitation": 10.8,
+      "avgPrecipitation": 10.7,
       "avgWindSpeed": 10.3,
-      "avgWeatherCode": 3,
-      "comfortScore": 37,
+      "avgWeatherCode": 63,
+      "comfortScore": 17,
       "bestYear": {
         "year": 2018,
         "comfortScore": 60,
@@ -4209,8 +4209,8 @@
       "worstYear": {
         "year": 2019,
         "comfortScore": 9,
-        "avgTempMax": 8.4,
-        "avgPrecipitation": 19.6,
+        "avgTempMax": 8.5,
+        "avgPrecipitation": 20,
         "avgWindSpeed": 10.1,
         "weatherCode": 61
       },
@@ -4225,14 +4225,14 @@
       "region": "Møre og Romsdal",
       "avgTempMax": 15.2,
       "avgFeelsLikeMax": 13.8,
-      "avgPrecipitation": 10.6,
+      "avgPrecipitation": 10.2,
       "avgWindSpeed": 9.9,
       "avgWeatherCode": 63,
       "comfortScore": 18,
       "bestYear": {
         "year": 2020,
         "comfortScore": 64,
-        "avgTempMax": 20.7,
+        "avgTempMax": 20.8,
         "avgPrecipitation": 0,
         "avgWindSpeed": 6.7,
         "weatherCode": 3
@@ -4241,11 +4241,11 @@
         "year": 2024,
         "comfortScore": 10,
         "avgTempMax": 12.1,
-        "avgPrecipitation": 20.4,
+        "avgPrecipitation": 20.3,
         "avgWindSpeed": 13.7,
         "weatherCode": 63
       },
-      "tempTrend": 0.22,
+      "tempTrend": 0.21,
       "dataYears": 10
     },
     {
@@ -4254,29 +4254,29 @@
       "discipline": "løping",
       "officialDate": "2027-08-14",
       "region": "Telemark",
-      "avgTempMax": 20.5,
+      "avgTempMax": 20.6,
       "avgFeelsLikeMax": 19.9,
-      "avgPrecipitation": 2.3,
+      "avgPrecipitation": 2.4,
       "avgWindSpeed": 11.2,
       "avgWeatherCode": 3,
       "comfortScore": 53,
       "bestYear": {
         "year": 2017,
-        "comfortScore": 67,
+        "comfortScore": 66,
         "avgTempMax": 17.1,
-        "avgPrecipitation": 0,
+        "avgPrecipitation": 0.1,
         "avgWindSpeed": 11.6,
         "weatherCode": 3
       },
       "worstYear": {
         "year": 2024,
         "comfortScore": 15,
-        "avgTempMax": 18.2,
-        "avgPrecipitation": 14.4,
+        "avgTempMax": 18.3,
+        "avgPrecipitation": 14.7,
         "avgWindSpeed": 10,
         "weatherCode": 63
       },
-      "tempTrend": 0.26,
+      "tempTrend": 0.27,
       "dataYears": 10
     },
     {
@@ -4287,7 +4287,7 @@
       "region": "Akershus",
       "avgTempMax": 19.7,
       "avgFeelsLikeMax": 18.4,
-      "avgPrecipitation": 1.5,
+      "avgPrecipitation": 1.6,
       "avgWindSpeed": 13.1,
       "avgWeatherCode": 51,
       "comfortScore": 40,
@@ -4303,7 +4303,7 @@
         "year": 2019,
         "comfortScore": 23,
         "avgTempMax": 16.1,
-        "avgPrecipitation": 6.2,
+        "avgPrecipitation": 6,
         "avgWindSpeed": 11.6,
         "weatherCode": 61
       },
@@ -4349,7 +4349,7 @@
       "region": "Rogaland",
       "avgTempMax": 16.9,
       "avgFeelsLikeMax": 15.4,
-      "avgPrecipitation": 9.1,
+      "avgPrecipitation": 9.2,
       "avgWindSpeed": 21.2,
       "avgWeatherCode": 51,
       "comfortScore": 21,
@@ -4395,7 +4395,7 @@
       "worstYear": {
         "year": 2024,
         "comfortScore": 10,
-        "avgTempMax": 14.1,
+        "avgTempMax": 14.2,
         "avgPrecipitation": 12.4,
         "avgWindSpeed": 22.3,
         "weatherCode": 63
@@ -4411,10 +4411,10 @@
       "region": "Oslo",
       "avgTempMax": 18.9,
       "avgFeelsLikeMax": 17.6,
-      "avgPrecipitation": 1.5,
+      "avgPrecipitation": 1.7,
       "avgWindSpeed": 15,
       "avgWeatherCode": 3,
-      "comfortScore": 56,
+      "comfortScore": 55,
       "bestYear": {
         "year": 2025,
         "comfortScore": 61,
@@ -4425,9 +4425,9 @@
       },
       "worstYear": {
         "year": 2024,
-        "comfortScore": 15,
-        "avgTempMax": 16.2,
-        "avgPrecipitation": 6.3,
+        "comfortScore": 13,
+        "avgTempMax": 16.3,
+        "avgPrecipitation": 8.2,
         "avgWindSpeed": 23,
         "weatherCode": 61
       },
@@ -4442,10 +4442,10 @@
       "region": "Buskerud",
       "avgTempMax": 17.5,
       "avgFeelsLikeMax": 16.3,
-      "avgPrecipitation": 6,
+      "avgPrecipitation": 5.7,
       "avgWindSpeed": 12.3,
       "avgWeatherCode": 3,
-      "comfortScore": 50,
+      "comfortScore": 51,
       "bestYear": {
         "year": 2016,
         "comfortScore": 71,
@@ -4458,7 +4458,7 @@
         "year": 2025,
         "comfortScore": 11,
         "avgTempMax": 20.3,
-        "avgPrecipitation": 22.6,
+        "avgPrecipitation": 17.6,
         "avgWindSpeed": 21.8,
         "weatherCode": 63
       },
@@ -4473,7 +4473,7 @@
       "region": "Flå",
       "avgTempMax": 7.8,
       "avgFeelsLikeMax": 5.3,
-      "avgPrecipitation": 7.4,
+      "avgPrecipitation": 7.3,
       "avgWindSpeed": 11.1,
       "avgWeatherCode": 3,
       "comfortScore": 23,
@@ -4488,8 +4488,8 @@
       "worstYear": {
         "year": 2017,
         "comfortScore": 4,
-        "avgTempMax": 9.1,
-        "avgPrecipitation": 37.7,
+        "avgTempMax": 9.2,
+        "avgPrecipitation": 37.6,
         "avgWindSpeed": 23.4,
         "weatherCode": 63
       },
@@ -4535,7 +4535,7 @@
       "region": "Agder",
       "avgTempMax": 16,
       "avgFeelsLikeMax": 13.9,
-      "avgPrecipitation": 6.4,
+      "avgPrecipitation": 6.1,
       "avgWindSpeed": 17.9,
       "avgWeatherCode": 53,
       "comfortScore": 26,
@@ -4550,8 +4550,8 @@
       "worstYear": {
         "year": 2021,
         "comfortScore": 4,
-        "avgTempMax": 10.3,
-        "avgPrecipitation": 15.5,
+        "avgTempMax": 10.4,
+        "avgPrecipitation": 16.8,
         "avgWindSpeed": 19.7,
         "weatherCode": 61
       },
@@ -4566,14 +4566,14 @@
       "region": "Akershus",
       "avgTempMax": 14.1,
       "avgFeelsLikeMax": 11.6,
-      "avgPrecipitation": 4.3,
+      "avgPrecipitation": 4.4,
       "avgWindSpeed": 17.9,
       "avgWeatherCode": 3,
       "comfortScore": 37,
       "bestYear": {
         "year": 2023,
         "comfortScore": 62,
-        "avgTempMax": 18.7,
+        "avgTempMax": 18.8,
         "avgPrecipitation": 0,
         "avgWindSpeed": 15.1,
         "weatherCode": 3
@@ -4595,7 +4595,7 @@
       "discipline": "terreng",
       "officialDate": "2026-01-24",
       "region": "Hol",
-      "avgTempMax": -0.8,
+      "avgTempMax": -0.6,
       "avgFeelsLikeMax": -4.7,
       "avgPrecipitation": 2.1,
       "avgWindSpeed": 12,
@@ -4611,13 +4611,13 @@
       },
       "worstYear": {
         "year": 2018,
-        "comfortScore": 3,
-        "avgTempMax": 1.1,
-        "avgPrecipitation": 7.1,
+        "comfortScore": 4,
+        "avgTempMax": 1.3,
+        "avgPrecipitation": 6.9,
         "avgWindSpeed": 22.9,
         "weatherCode": 75
       },
-      "tempTrend": 0.22,
+      "tempTrend": 0.26,
       "dataYears": 10
     },
     {
@@ -4626,12 +4626,12 @@
       "discipline": "landevei",
       "officialDate": "2027-05-01",
       "region": "Oslo",
-      "avgTempMax": 11.8,
+      "avgTempMax": 11.9,
       "avgFeelsLikeMax": 9,
-      "avgPrecipitation": 4.6,
+      "avgPrecipitation": 4.3,
       "avgWindSpeed": 15.3,
       "avgWeatherCode": 3,
-      "comfortScore": 34,
+      "comfortScore": 35,
       "bestYear": {
         "year": 2024,
         "comfortScore": 63,
@@ -4644,11 +4644,11 @@
         "year": 2018,
         "comfortScore": 0,
         "avgTempMax": 5.9,
-        "avgPrecipitation": 22.4,
+        "avgPrecipitation": 21.2,
         "avgWindSpeed": 20.4,
         "weatherCode": 75
       },
-      "tempTrend": 0.59,
+      "tempTrend": 0.58,
       "dataYears": 10
     },
     {
@@ -4657,9 +4657,9 @@
       "discipline": "landevei",
       "officialDate": "2027-06-06",
       "region": "Norge",
-      "avgTempMax": 19.3,
+      "avgTempMax": 19.4,
       "avgFeelsLikeMax": 18.2,
-      "avgPrecipitation": 4.6,
+      "avgPrecipitation": 4.9,
       "avgWindSpeed": 13.7,
       "avgWeatherCode": 3,
       "comfortScore": 47,
@@ -4674,8 +4674,8 @@
       "worstYear": {
         "year": 2020,
         "comfortScore": 13,
-        "avgTempMax": 11.5,
-        "avgPrecipitation": 20.2,
+        "avgTempMax": 11.6,
+        "avgPrecipitation": 20.8,
         "avgWindSpeed": 12.1,
         "weatherCode": 61
       },
@@ -4690,7 +4690,7 @@
       "region": "Vestland",
       "avgTempMax": 18.3,
       "avgFeelsLikeMax": 17.3,
-      "avgPrecipitation": 4.2,
+      "avgPrecipitation": 4.3,
       "avgWindSpeed": 12.1,
       "avgWeatherCode": 3,
       "comfortScore": 53,
@@ -4704,11 +4704,11 @@
       },
       "worstYear": {
         "year": 2024,
-        "comfortScore": 6,
+        "comfortScore": 7,
         "avgTempMax": 9.9,
-        "avgPrecipitation": 13.9,
+        "avgPrecipitation": 14.2,
         "avgWindSpeed": 15.2,
-        "weatherCode": 71
+        "weatherCode": 61
       },
       "tempTrend": -0.94,
       "dataYears": 10
@@ -4721,14 +4721,14 @@
       "region": "Norge",
       "avgTempMax": 12.7,
       "avgFeelsLikeMax": 9.7,
-      "avgPrecipitation": 6.2,
+      "avgPrecipitation": 6,
       "avgWindSpeed": 18.2,
       "avgWeatherCode": 3,
       "comfortScore": 27,
       "bestYear": {
         "year": 2021,
         "comfortScore": 71,
-        "avgTempMax": 18,
+        "avgTempMax": 18.1,
         "avgPrecipitation": 0,
         "avgWindSpeed": 14.3,
         "weatherCode": 1
@@ -4739,7 +4739,7 @@
         "avgTempMax": 6.1,
         "avgPrecipitation": 11,
         "avgWindSpeed": 24,
-        "weatherCode": 71
+        "weatherCode": 55
       },
       "tempTrend": 0.26,
       "dataYears": 10
@@ -4750,7 +4750,7 @@
       "discipline": "landevei",
       "officialDate": "2026-06-13",
       "region": "Troms",
-      "avgTempMax": 12.4,
+      "avgTempMax": 12.5,
       "avgFeelsLikeMax": 10.4,
       "avgPrecipitation": 1.8,
       "avgWindSpeed": 12.2,
@@ -4759,7 +4759,7 @@
       "bestYear": {
         "year": 2020,
         "comfortScore": 64,
-        "avgTempMax": 20.4,
+        "avgTempMax": 20.5,
         "avgPrecipitation": 0,
         "avgWindSpeed": 8.6,
         "weatherCode": 3
@@ -4768,7 +4768,7 @@
         "year": 2023,
         "comfortScore": 17,
         "avgTempMax": 9.1,
-        "avgPrecipitation": 3.2,
+        "avgPrecipitation": 3.1,
         "avgWindSpeed": 19.8,
         "weatherCode": 53
       },
@@ -4783,10 +4783,10 @@
       "region": "Norge",
       "avgTempMax": 16.8,
       "avgFeelsLikeMax": 14.5,
-      "avgPrecipitation": 2.5,
+      "avgPrecipitation": 2.6,
       "avgWindSpeed": 14,
       "avgWeatherCode": 3,
-      "comfortScore": 55,
+      "comfortScore": 54,
       "bestYear": {
         "year": 2016,
         "comfortScore": 68,
@@ -4797,9 +4797,9 @@
       },
       "worstYear": {
         "year": 2020,
-        "comfortScore": 16,
+        "comfortScore": 15,
         "avgTempMax": 15.9,
-        "avgPrecipitation": 5.9,
+        "avgPrecipitation": 7,
         "avgWindSpeed": 19.1,
         "weatherCode": 61
       },
@@ -4820,9 +4820,9 @@
       "comfortScore": 34,
       "bestYear": {
         "year": 2016,
-        "comfortScore": 55,
+        "comfortScore": 56,
         "avgTempMax": 13.7,
-        "avgPrecipitation": 0.1,
+        "avgPrecipitation": 0,
         "avgWindSpeed": 11.4,
         "weatherCode": 3
       },
@@ -4830,11 +4830,11 @@
         "year": 2018,
         "comfortScore": 6,
         "avgTempMax": 11.1,
-        "avgPrecipitation": 9.7,
+        "avgPrecipitation": 9.8,
         "avgWindSpeed": 23.8,
         "weatherCode": 51
       },
-      "tempTrend": 0.14,
+      "tempTrend": 0.15,
       "dataYears": 10
     },
     {
@@ -4845,7 +4845,7 @@
       "region": "Agder",
       "avgTempMax": 14.8,
       "avgFeelsLikeMax": 12.6,
-      "avgPrecipitation": 1.7,
+      "avgPrecipitation": 1.8,
       "avgWindSpeed": 16.2,
       "avgWeatherCode": 3,
       "comfortScore": 49,
@@ -4859,9 +4859,9 @@
       },
       "worstYear": {
         "year": 2024,
-        "comfortScore": 22,
+        "comfortScore": 20,
         "avgTempMax": 13.7,
-        "avgPrecipitation": 4.1,
+        "avgPrecipitation": 5.4,
         "avgWindSpeed": 22.1,
         "weatherCode": 51
       },
@@ -4883,7 +4883,7 @@
       "bestYear": {
         "year": 2025,
         "comfortScore": 63,
-        "avgTempMax": 16.7,
+        "avgTempMax": 16.8,
         "avgPrecipitation": 0,
         "avgWindSpeed": 14.1,
         "weatherCode": 3
@@ -4891,8 +4891,8 @@
       "worstYear": {
         "year": 2022,
         "comfortScore": 6,
-        "avgTempMax": 12.2,
-        "avgPrecipitation": 20.7,
+        "avgTempMax": 12.3,
+        "avgPrecipitation": 21.4,
         "avgWindSpeed": 24.4,
         "weatherCode": 63
       },
@@ -4907,10 +4907,10 @@
       "region": "Oslo",
       "avgTempMax": 15.7,
       "avgFeelsLikeMax": 13.7,
-      "avgPrecipitation": 6.7,
+      "avgPrecipitation": 6.1,
       "avgWindSpeed": 16.8,
       "avgWeatherCode": 51,
-      "comfortScore": 26,
+      "comfortScore": 27,
       "bestYear": {
         "year": 2017,
         "comfortScore": 70,
@@ -4923,7 +4923,7 @@
         "year": 2020,
         "comfortScore": 7,
         "avgTempMax": 12.1,
-        "avgPrecipitation": 20.2,
+        "avgPrecipitation": 17.1,
         "avgWindSpeed": 22.8,
         "weatherCode": 63
       },
@@ -4953,12 +4953,12 @@
       "worstYear": {
         "year": 2024,
         "comfortScore": 13,
-        "avgTempMax": 15.9,
-        "avgPrecipitation": 12,
+        "avgTempMax": 16,
+        "avgPrecipitation": 12.2,
         "avgWindSpeed": 19.9,
         "weatherCode": 63
       },
-      "tempTrend": 0.17,
+      "tempTrend": 0.18,
       "dataYears": 10
     },
     {
@@ -4985,7 +4985,7 @@
         "year": 2024,
         "comfortScore": 15,
         "avgTempMax": 15.9,
-        "avgPrecipitation": 8.7,
+        "avgPrecipitation": 8.9,
         "avgWindSpeed": 18.3,
         "weatherCode": 63
       },
@@ -5000,10 +5000,10 @@
       "region": "Innlandet",
       "avgTempMax": 15.2,
       "avgFeelsLikeMax": 13.8,
-      "avgPrecipitation": 4.9,
+      "avgPrecipitation": 5,
       "avgWindSpeed": 13,
       "avgWeatherCode": 51,
-      "comfortScore": 34,
+      "comfortScore": 33,
       "bestYear": {
         "year": 2021,
         "comfortScore": 72,
@@ -5016,7 +5016,7 @@
         "year": 2024,
         "comfortScore": 13,
         "avgTempMax": 15.9,
-        "avgPrecipitation": 12.7,
+        "avgPrecipitation": 12.8,
         "avgWindSpeed": 18.3,
         "weatherCode": 63
       },
@@ -5046,12 +5046,12 @@
       "worstYear": {
         "year": 2024,
         "comfortScore": 12,
-        "avgTempMax": 15.4,
-        "avgPrecipitation": 10.7,
+        "avgTempMax": 15.5,
+        "avgPrecipitation": 10.8,
         "avgWindSpeed": 19.5,
         "weatherCode": 63
       },
-      "tempTrend": 0.13,
+      "tempTrend": 0.14,
       "dataYears": 10
     },
     {
@@ -5062,10 +5062,10 @@
       "region": "Norge",
       "avgTempMax": 8.6,
       "avgFeelsLikeMax": 5.3,
-      "avgPrecipitation": 4.9,
+      "avgPrecipitation": 4.7,
       "avgWindSpeed": 20.5,
       "avgWeatherCode": 51,
-      "comfortScore": 12,
+      "comfortScore": 13,
       "bestYear": {
         "year": 2018,
         "comfortScore": 60,
@@ -5075,12 +5075,12 @@
         "weatherCode": 3
       },
       "worstYear": {
-        "year": 2023,
-        "comfortScore": 2,
-        "avgTempMax": 8.2,
-        "avgPrecipitation": 9.6,
-        "avgWindSpeed": 35.8,
-        "weatherCode": 61
+        "year": 2017,
+        "comfortScore": 3,
+        "avgTempMax": 7.3,
+        "avgPrecipitation": 8.4,
+        "avgWindSpeed": 24.9,
+        "weatherCode": 55
       },
       "tempTrend": -0.05,
       "dataYears": 10
@@ -5091,7 +5091,7 @@
       "discipline": "landevei",
       "officialDate": "2026-06-21",
       "region": "Agder",
-      "avgTempMax": 20.1,
+      "avgTempMax": 20.2,
       "avgFeelsLikeMax": 18.7,
       "avgPrecipitation": 1.3,
       "avgWindSpeed": 17.3,
@@ -5109,7 +5109,7 @@
         "year": 2020,
         "comfortScore": 19,
         "avgTempMax": 22.1,
-        "avgPrecipitation": 7.9,
+        "avgPrecipitation": 7.8,
         "avgWindSpeed": 14.2,
         "weatherCode": 51
       },
@@ -5124,14 +5124,14 @@
       "region": "Østfold",
       "avgTempMax": 11.1,
       "avgFeelsLikeMax": 7.6,
-      "avgPrecipitation": 0.4,
+      "avgPrecipitation": 0.6,
       "avgWindSpeed": 15.3,
       "avgWeatherCode": 51,
-      "comfortScore": 30,
+      "comfortScore": 29,
       "bestYear": {
         "year": 2020,
         "comfortScore": 55,
-        "avgTempMax": 13.6,
+        "avgTempMax": 13.7,
         "avgPrecipitation": 0,
         "avgWindSpeed": 14.1,
         "weatherCode": 3
@@ -5153,12 +5153,12 @@
       "discipline": "landevei",
       "officialDate": "2027-05-29",
       "region": "Innlandet",
-      "avgTempMax": 17.6,
+      "avgTempMax": 17.7,
       "avgFeelsLikeMax": 15.9,
-      "avgPrecipitation": 2,
+      "avgPrecipitation": 2.1,
       "avgWindSpeed": 11,
       "avgWeatherCode": 3,
-      "comfortScore": 64,
+      "comfortScore": 63,
       "bestYear": {
         "year": 2020,
         "comfortScore": 65,
@@ -5168,12 +5168,12 @@
         "weatherCode": 3
       },
       "worstYear": {
-        "year": 2019,
-        "comfortScore": 19,
-        "avgTempMax": 12.7,
-        "avgPrecipitation": 0.9,
-        "avgWindSpeed": 14.9,
-        "weatherCode": 71
+        "year": 2016,
+        "comfortScore": 21,
+        "avgTempMax": 15.7,
+        "avgPrecipitation": 10.4,
+        "avgWindSpeed": 8.5,
+        "weatherCode": 61
       },
       "tempTrend": -0.32,
       "dataYears": 10
@@ -5186,10 +5186,10 @@
       "region": "Rogaland",
       "avgTempMax": 17.3,
       "avgFeelsLikeMax": 16.2,
-      "avgPrecipitation": 5.6,
+      "avgPrecipitation": 5.5,
       "avgWindSpeed": 12.8,
       "avgWeatherCode": 2,
-      "comfortScore": 56,
+      "comfortScore": 57,
       "bestYear": {
         "year": 2021,
         "comfortScore": 67,
@@ -5199,12 +5199,12 @@
         "weatherCode": 2
       },
       "worstYear": {
-        "year": 2019,
-        "comfortScore": 12,
-        "avgTempMax": 11.4,
-        "avgPrecipitation": 7.1,
-        "avgWindSpeed": 15.8,
-        "weatherCode": 61
+        "year": 2024,
+        "comfortScore": 14,
+        "avgTempMax": 19.3,
+        "avgPrecipitation": 17.5,
+        "avgWindSpeed": 14.6,
+        "weatherCode": 63
       },
       "tempTrend": -0.33,
       "dataYears": 10
@@ -5215,7 +5215,7 @@
       "discipline": "landevei",
       "officialDate": "2026-05-09",
       "region": "Buskerud",
-      "avgTempMax": 14.7,
+      "avgTempMax": 14.8,
       "avgFeelsLikeMax": 12.7,
       "avgPrecipitation": 3.5,
       "avgWindSpeed": 13.5,
@@ -5237,7 +5237,7 @@
         "avgWindSpeed": 14.2,
         "weatherCode": 63
       },
-      "tempTrend": 0.05,
+      "tempTrend": 0.06,
       "dataYears": 10
     },
     {
@@ -5246,7 +5246,7 @@
       "discipline": "landevei",
       "officialDate": "2026-05-10",
       "region": "Ringerike",
-      "avgTempMax": 13.9,
+      "avgTempMax": 14,
       "avgFeelsLikeMax": 11.8,
       "avgPrecipitation": 4.1,
       "avgWindSpeed": 14.5,
@@ -5255,18 +5255,18 @@
       "bestYear": {
         "year": 2025,
         "comfortScore": 62,
-        "avgTempMax": 18.7,
+        "avgTempMax": 18.8,
         "avgPrecipitation": 0,
         "avgWindSpeed": 15.3,
         "weatherCode": 3
       },
       "worstYear": {
         "year": 2020,
-        "comfortScore": 5,
+        "comfortScore": 6,
         "avgTempMax": 8.2,
         "avgPrecipitation": 9,
         "avgWindSpeed": 16.6,
-        "weatherCode": 75
+        "weatherCode": 61
       },
       "tempTrend": 0.13,
       "dataYears": 10
@@ -5277,7 +5277,7 @@
       "discipline": "landevei",
       "officialDate": "2026-05-12",
       "region": "Innlandet",
-      "avgTempMax": 14.3,
+      "avgTempMax": 14.4,
       "avgFeelsLikeMax": 12,
       "avgPrecipitation": 2,
       "avgWindSpeed": 12.8,
@@ -5310,7 +5310,7 @@
       "region": "Rogaland",
       "avgTempMax": 17.8,
       "avgFeelsLikeMax": 16.3,
-      "avgPrecipitation": 8.2,
+      "avgPrecipitation": 8.4,
       "avgWindSpeed": 17.5,
       "avgWeatherCode": 3,
       "comfortScore": 36,
@@ -5326,11 +5326,11 @@
         "year": 2019,
         "comfortScore": 7,
         "avgTempMax": 12.1,
-        "avgPrecipitation": 19,
+        "avgPrecipitation": 17.1,
         "avgWindSpeed": 23.6,
         "weatherCode": 63
       },
-      "tempTrend": 0.71,
+      "tempTrend": 0.72,
       "dataYears": 10
     },
     {
@@ -5339,7 +5339,7 @@
       "discipline": "gravel",
       "officialDate": "2026-07-12",
       "region": "Møre og Romsdal",
-      "avgTempMax": 16.8,
+      "avgTempMax": 16.9,
       "avgFeelsLikeMax": 16.4,
       "avgPrecipitation": 5,
       "avgWindSpeed": 18.1,
@@ -5357,11 +5357,11 @@
         "year": 2020,
         "comfortScore": 6,
         "avgTempMax": 11.8,
-        "avgPrecipitation": 21.7,
+        "avgPrecipitation": 21.5,
         "avgWindSpeed": 30.5,
         "weatherCode": 63
       },
-      "tempTrend": 0.86,
+      "tempTrend": 0.87,
       "dataYears": 10
     },
     {
@@ -5370,12 +5370,12 @@
       "discipline": "landevei",
       "officialDate": "2027-05-09",
       "region": "Oslo",
-      "avgTempMax": 14.1,
+      "avgTempMax": 14.2,
       "avgFeelsLikeMax": 12.1,
-      "avgPrecipitation": 7,
+      "avgPrecipitation": 7.1,
       "avgWindSpeed": 16.5,
       "avgWeatherCode": 3,
-      "comfortScore": 33,
+      "comfortScore": 32,
       "bestYear": {
         "year": 2018,
         "comfortScore": 71,
@@ -5387,12 +5387,12 @@
       "worstYear": {
         "year": 2019,
         "comfortScore": 4,
-        "avgTempMax": 9.1,
-        "avgPrecipitation": 30.3,
+        "avgTempMax": 9.2,
+        "avgPrecipitation": 30.4,
         "avgWindSpeed": 22.4,
         "weatherCode": 63
       },
-      "tempTrend": -0.11,
+      "tempTrend": -0.1,
       "dataYears": 10
     },
     {
@@ -5403,7 +5403,7 @@
       "region": "Rogaland",
       "avgTempMax": 15.1,
       "avgFeelsLikeMax": 13.5,
-      "avgPrecipitation": 5.9,
+      "avgPrecipitation": 6,
       "avgWindSpeed": 18.4,
       "avgWeatherCode": 3,
       "comfortScore": 36,
@@ -5419,7 +5419,7 @@
         "year": 2023,
         "comfortScore": 11,
         "avgTempMax": 16,
-        "avgPrecipitation": 25.5,
+        "avgPrecipitation": 27.7,
         "avgWindSpeed": 30,
         "weatherCode": 61
       },
@@ -5434,10 +5434,10 @@
       "region": "Innlandet",
       "avgTempMax": 13,
       "avgFeelsLikeMax": 10.6,
-      "avgPrecipitation": 4.7,
+      "avgPrecipitation": 4.4,
       "avgWindSpeed": 12.8,
       "avgWeatherCode": 3,
-      "comfortScore": 41,
+      "comfortScore": 42,
       "bestYear": {
         "year": 2016,
         "comfortScore": 68,
@@ -5463,9 +5463,9 @@
       "discipline": "terreng",
       "officialDate": "2026-06-27",
       "region": "Troms",
-      "avgTempMax": 15.6,
+      "avgTempMax": 15.7,
       "avgFeelsLikeMax": 13.9,
-      "avgPrecipitation": 4.7,
+      "avgPrecipitation": 4.8,
       "avgWindSpeed": 13.6,
       "avgWeatherCode": 3,
       "comfortScore": 47,
@@ -5480,7 +5480,7 @@
       "worstYear": {
         "year": 2019,
         "comfortScore": 1,
-        "avgTempMax": 9.2,
+        "avgTempMax": 9.3,
         "avgPrecipitation": 14.3,
         "avgWindSpeed": 24.1,
         "weatherCode": 61
@@ -5496,7 +5496,7 @@
       "region": "Troms",
       "avgTempMax": 17.4,
       "avgFeelsLikeMax": 16.2,
-      "avgPrecipitation": 2.5,
+      "avgPrecipitation": 2.3,
       "avgWindSpeed": 12.7,
       "avgWeatherCode": 53,
       "comfortScore": 42,
@@ -5510,13 +5510,13 @@
       },
       "worstYear": {
         "year": 2019,
-        "comfortScore": 15,
+        "comfortScore": 16,
         "avgTempMax": 10.7,
-        "avgPrecipitation": 4,
+        "avgPrecipitation": 3.6,
         "avgWindSpeed": 21.1,
-        "weatherCode": 51
+        "weatherCode": 53
       },
-      "tempTrend": 1.25,
+      "tempTrend": 1.26,
       "dataYears": 10
     },
     {
@@ -5525,7 +5525,7 @@
       "discipline": "landevei",
       "officialDate": "2026-05-03",
       "region": "Innlandet",
-      "avgTempMax": 10.9,
+      "avgTempMax": 11,
       "avgFeelsLikeMax": 7.8,
       "avgPrecipitation": 1.8,
       "avgWindSpeed": 13.1,
@@ -5558,7 +5558,7 @@
       "region": "Rogaland",
       "avgTempMax": 12.7,
       "avgFeelsLikeMax": 9.2,
-      "avgPrecipitation": 1.3,
+      "avgPrecipitation": 1.2,
       "avgWindSpeed": 20.2,
       "avgWeatherCode": 3,
       "comfortScore": 37,
@@ -5574,7 +5574,7 @@
         "year": 2024,
         "comfortScore": 6,
         "avgTempMax": 8.3,
-        "avgPrecipitation": 5.3,
+        "avgPrecipitation": 5.1,
         "avgWindSpeed": 23.4,
         "weatherCode": 71
       },
@@ -5589,10 +5589,10 @@
       "region": "Møre og Romsdal",
       "avgTempMax": 14.4,
       "avgFeelsLikeMax": 12.1,
-      "avgPrecipitation": 3.5,
+      "avgPrecipitation": 3.7,
       "avgWindSpeed": 17.6,
       "avgWeatherCode": 3,
-      "comfortScore": 41,
+      "comfortScore": 40,
       "bestYear": {
         "year": 2018,
         "comfortScore": 71,
@@ -5605,7 +5605,7 @@
         "year": 2023,
         "comfortScore": 0,
         "avgTempMax": 9,
-        "avgPrecipitation": 17.1,
+        "avgPrecipitation": 18.2,
         "avgWindSpeed": 32.3,
         "weatherCode": 63
       },
@@ -5636,7 +5636,7 @@
         "year": 2017,
         "comfortScore": 2,
         "avgTempMax": 4,
-        "avgPrecipitation": 12.4,
+        "avgPrecipitation": 12.7,
         "avgWindSpeed": 16.8,
         "weatherCode": 73
       },
@@ -5651,14 +5651,14 @@
       "region": "Agder",
       "avgTempMax": 17.3,
       "avgFeelsLikeMax": 15.7,
-      "avgPrecipitation": 5,
+      "avgPrecipitation": 4.8,
       "avgWindSpeed": 18.7,
       "avgWeatherCode": 3,
       "comfortScore": 44,
       "bestYear": {
         "year": 2023,
         "comfortScore": 68,
-        "avgTempMax": 19.6,
+        "avgTempMax": 19.7,
         "avgPrecipitation": 0,
         "avgWindSpeed": 14.1,
         "weatherCode": 0
@@ -5667,11 +5667,11 @@
         "year": 2017,
         "comfortScore": 9,
         "avgTempMax": 12.9,
-        "avgPrecipitation": 33.6,
+        "avgPrecipitation": 31.8,
         "avgWindSpeed": 24.8,
         "weatherCode": 61
       },
-      "tempTrend": -0.41,
+      "tempTrend": -0.4,
       "dataYears": 10
     },
     {
@@ -5698,11 +5698,11 @@
         "year": 2024,
         "comfortScore": 12,
         "avgTempMax": 13.5,
-        "avgPrecipitation": 14.7,
+        "avgPrecipitation": 14.8,
         "avgWindSpeed": 17.4,
         "weatherCode": 61
       },
-      "tempTrend": -0.12,
+      "tempTrend": -0.13,
       "dataYears": 10
     },
     {
@@ -5729,11 +5729,11 @@
         "year": 2020,
         "comfortScore": 10,
         "avgTempMax": 10.7,
-        "avgPrecipitation": 23.5,
+        "avgPrecipitation": 22.6,
         "avgWindSpeed": 15.7,
         "weatherCode": 61
       },
-      "tempTrend": -0.25,
+      "tempTrend": -0.24,
       "dataYears": 10
     },
     {
@@ -5744,7 +5744,7 @@
       "region": "Vestland",
       "avgTempMax": 15.3,
       "avgFeelsLikeMax": 13.6,
-      "avgPrecipitation": 2.4,
+      "avgPrecipitation": 2.6,
       "avgWindSpeed": 18.1,
       "avgWeatherCode": 51,
       "comfortScore": 33,
@@ -5764,7 +5764,7 @@
         "avgWindSpeed": 16.7,
         "weatherCode": 61
       },
-      "tempTrend": -0.38,
+      "tempTrend": -0.39,
       "dataYears": 10
     },
     {
@@ -5821,7 +5821,7 @@
       "worstYear": {
         "year": 2019,
         "comfortScore": 11,
-        "avgTempMax": 14.6,
+        "avgTempMax": 14.7,
         "avgPrecipitation": 15.8,
         "avgWindSpeed": 19.9,
         "weatherCode": 63
@@ -5835,7 +5835,7 @@
       "discipline": "terreng",
       "officialDate": "2026-07-25",
       "region": "Trøndelag",
-      "avgTempMax": 19.1,
+      "avgTempMax": 19.2,
       "avgFeelsLikeMax": 18.2,
       "avgPrecipitation": 2,
       "avgWindSpeed": 13.6,
@@ -5844,7 +5844,7 @@
       "bestYear": {
         "year": 2024,
         "comfortScore": 69,
-        "avgTempMax": 17.3,
+        "avgTempMax": 17.4,
         "avgPrecipitation": 0.1,
         "avgWindSpeed": 10.7,
         "weatherCode": 3
@@ -5866,7 +5866,7 @@
       "discipline": "terreng",
       "officialDate": "2027-02-21",
       "region": "Finnmark",
-      "avgTempMax": -7.2,
+      "avgTempMax": -6.9,
       "avgFeelsLikeMax": -11.8,
       "avgPrecipitation": 0.5,
       "avgWindSpeed": 15.3,
@@ -5884,11 +5884,11 @@
         "year": 2021,
         "comfortScore": 10,
         "avgTempMax": -13.8,
-        "avgPrecipitation": 1.4,
+        "avgPrecipitation": 1.3,
         "avgWindSpeed": 24.5,
         "weatherCode": 71
       },
-      "tempTrend": -0.14,
+      "tempTrend": -0.17,
       "dataYears": 10
     },
     {
@@ -5897,12 +5897,12 @@
       "discipline": "landevei",
       "officialDate": "2026-04-26",
       "region": "Rogaland",
-      "avgTempMax": 10.1,
+      "avgTempMax": 10.2,
       "avgFeelsLikeMax": 6.8,
-      "avgPrecipitation": 2.3,
+      "avgPrecipitation": 2.6,
       "avgWindSpeed": 18.4,
       "avgWeatherCode": 53,
-      "comfortScore": 22,
+      "comfortScore": 21,
       "bestYear": {
         "year": 2022,
         "comfortScore": 51,
@@ -5914,7 +5914,7 @@
       "worstYear": {
         "year": 2024,
         "comfortScore": 13,
-        "avgTempMax": 10.6,
+        "avgTempMax": 10.8,
         "avgPrecipitation": 5.2,
         "avgWindSpeed": 14.3,
         "weatherCode": 73
@@ -5930,7 +5930,7 @@
       "region": "Rogaland",
       "avgTempMax": 11.9,
       "avgFeelsLikeMax": 9.4,
-      "avgPrecipitation": 11.1,
+      "avgPrecipitation": 10.9,
       "avgWindSpeed": 23.3,
       "avgWeatherCode": 61,
       "comfortScore": 6,
@@ -5946,7 +5946,7 @@
         "year": 2019,
         "comfortScore": 0,
         "avgTempMax": 8.3,
-        "avgPrecipitation": 10.7,
+        "avgPrecipitation": 10.2,
         "avgWindSpeed": 25.9,
         "weatherCode": 61
       },
@@ -5977,11 +5977,11 @@
         "year": 2023,
         "comfortScore": 11,
         "avgTempMax": 18.1,
-        "avgPrecipitation": 18.4,
+        "avgPrecipitation": 18.1,
         "avgWindSpeed": 20.7,
         "weatherCode": 63
       },
-      "tempTrend": 0.1,
+      "tempTrend": 0.09,
       "dataYears": 10
     },
     {
@@ -5992,10 +5992,10 @@
       "region": "Rogaland",
       "avgTempMax": 18,
       "avgFeelsLikeMax": 17.2,
-      "avgPrecipitation": 8.8,
+      "avgPrecipitation": 8.9,
       "avgWindSpeed": 21.4,
       "avgWeatherCode": 61,
-      "comfortScore": 14,
+      "comfortScore": 13,
       "bestYear": {
         "year": 2016,
         "comfortScore": 58,
@@ -6008,7 +6008,7 @@
         "year": 2024,
         "comfortScore": 12,
         "avgTempMax": 16.2,
-        "avgPrecipitation": 24.2,
+        "avgPrecipitation": 24.4,
         "avgWindSpeed": 28.4,
         "weatherCode": 63
       },
@@ -6023,10 +6023,10 @@
       "region": "Nordland",
       "avgTempMax": 15.2,
       "avgFeelsLikeMax": 13.9,
-      "avgPrecipitation": 6.6,
+      "avgPrecipitation": 6.3,
       "avgWindSpeed": 18.6,
       "avgWeatherCode": 3,
-      "comfortScore": 35,
+      "comfortScore": 36,
       "bestYear": {
         "year": 2018,
         "comfortScore": 70,
@@ -6039,7 +6039,7 @@
         "year": 2020,
         "comfortScore": 8,
         "avgTempMax": 13.7,
-        "avgPrecipitation": 10.5,
+        "avgPrecipitation": 10.2,
         "avgWindSpeed": 42.2,
         "weatherCode": 61
       },
@@ -6052,9 +6052,9 @@
       "discipline": "landevei",
       "officialDate": "2026-08-09",
       "region": "Nordland",
-      "avgTempMax": 18.5,
+      "avgTempMax": 18.6,
       "avgFeelsLikeMax": 18.1,
-      "avgPrecipitation": 10.3,
+      "avgPrecipitation": 10.4,
       "avgWindSpeed": 9.9,
       "avgWeatherCode": 53,
       "comfortScore": 27,
@@ -6070,7 +6070,7 @@
         "year": 2016,
         "comfortScore": 13,
         "avgTempMax": 12.3,
-        "avgPrecipitation": 27.6,
+        "avgPrecipitation": 26.7,
         "avgWindSpeed": 13.6,
         "weatherCode": 63
       },
@@ -6084,28 +6084,28 @@
       "officialDate": "2026-09-13",
       "region": "Akershus",
       "avgTempMax": 15.5,
-      "avgFeelsLikeMax": 13.2,
-      "avgPrecipitation": 3.6,
-      "avgWindSpeed": 15,
+      "avgFeelsLikeMax": 13.1,
+      "avgPrecipitation": 3.7,
+      "avgWindSpeed": 15.4,
       "avgWeatherCode": 3,
-      "comfortScore": 47,
+      "comfortScore": 46,
       "bestYear": {
         "year": 2021,
         "comfortScore": 62,
         "avgTempMax": 16.5,
         "avgPrecipitation": 0,
-        "avgWindSpeed": 13.1,
+        "avgWindSpeed": 13,
         "weatherCode": 3
       },
       "worstYear": {
         "year": 2022,
         "comfortScore": 9,
         "avgTempMax": 13.7,
-        "avgPrecipitation": 27,
-        "avgWindSpeed": 21.4,
+        "avgPrecipitation": 24.6,
+        "avgWindSpeed": 22,
         "weatherCode": 63
       },
-      "tempTrend": -0.27,
+      "tempTrend": -0.26,
       "dataYears": 10
     },
     {
@@ -6114,30 +6114,16 @@
       "discipline": "terreng",
       "officialDate": "2026-06-20",
       "region": "Innlandet",
-      "avgTempMax": 18.3,
-      "avgFeelsLikeMax": 16.2,
-      "avgPrecipitation": 5.2,
-      "avgWindSpeed": 15.7,
-      "avgWeatherCode": 51,
-      "comfortScore": 34,
-      "bestYear": {
-        "year": 2022,
-        "comfortScore": 63,
-        "avgTempMax": 20.6,
-        "avgPrecipitation": 0,
-        "avgWindSpeed": 10.6,
-        "weatherCode": 3
-      },
-      "worstYear": {
-        "year": 2019,
-        "comfortScore": 17,
-        "avgTempMax": 18.2,
-        "avgPrecipitation": 26.8,
-        "avgWindSpeed": 12.7,
-        "weatherCode": 63
-      },
-      "tempTrend": 0.36,
-      "dataYears": 10
+      "avgTempMax": null,
+      "avgFeelsLikeMax": null,
+      "avgPrecipitation": null,
+      "avgWindSpeed": null,
+      "avgWeatherCode": null,
+      "comfortScore": null,
+      "bestYear": null,
+      "worstYear": null,
+      "tempTrend": null,
+      "dataYears": 0
     },
     {
       "id": "tour-of-norway-for-kids-sundvollen",
@@ -6145,30 +6131,16 @@
       "discipline": "landevei",
       "officialDate": "2026-05-03",
       "region": "Buskerud",
-      "avgTempMax": 8.8,
-      "avgFeelsLikeMax": 5.7,
-      "avgPrecipitation": 1.6,
-      "avgWindSpeed": 12.5,
-      "avgWeatherCode": 3,
-      "comfortScore": 38,
-      "bestYear": {
-        "year": 2024,
-        "comfortScore": 77,
-        "avgTempMax": 17.5,
-        "avgPrecipitation": 0,
-        "avgWindSpeed": 5,
-        "weatherCode": 3
-      },
-      "worstYear": {
-        "year": 2018,
-        "comfortScore": 4,
-        "avgTempMax": 3.8,
-        "avgPrecipitation": 8.4,
-        "avgWindSpeed": 17,
-        "weatherCode": 61
-      },
-      "tempTrend": 0.63,
-      "dataYears": 10
+      "avgTempMax": null,
+      "avgFeelsLikeMax": null,
+      "avgPrecipitation": null,
+      "avgWindSpeed": null,
+      "avgWeatherCode": null,
+      "comfortScore": null,
+      "bestYear": null,
+      "worstYear": null,
+      "tempTrend": null,
+      "dataYears": 0
     },
     {
       "id": "sykkelkarusell-tromso-ritt-2",
@@ -6176,30 +6148,16 @@
       "discipline": "landevei",
       "officialDate": "2026-05-14",
       "region": "Troms",
-      "avgTempMax": 8.8,
-      "avgFeelsLikeMax": 6,
-      "avgPrecipitation": 2.6,
-      "avgWindSpeed": 12.4,
-      "avgWeatherCode": 53,
-      "comfortScore": 26,
-      "bestYear": {
-        "year": 2018,
-        "comfortScore": 48,
-        "avgTempMax": 19.5,
-        "avgPrecipitation": 0.2,
-        "avgWindSpeed": 6.1,
-        "weatherCode": 51
-      },
-      "worstYear": {
-        "year": 2019,
-        "comfortScore": 7,
-        "avgTempMax": 5.2,
-        "avgPrecipitation": 5.6,
-        "avgWindSpeed": 17.6,
-        "weatherCode": 73
-      },
-      "tempTrend": 0.19,
-      "dataYears": 10
+      "avgTempMax": null,
+      "avgFeelsLikeMax": null,
+      "avgPrecipitation": null,
+      "avgWindSpeed": null,
+      "avgWeatherCode": null,
+      "comfortScore": null,
+      "bestYear": null,
+      "worstYear": null,
+      "tempTrend": null,
+      "dataYears": 0
     },
     {
       "id": "sykkelkarusell-tromso-ritt-11",
@@ -6207,30 +6165,30 @@
       "discipline": "landevei",
       "officialDate": "2026-08-27",
       "region": "Troms",
-      "avgTempMax": 12.1,
-      "avgFeelsLikeMax": 10.1,
-      "avgPrecipitation": 6,
-      "avgWindSpeed": 16,
-      "avgWeatherCode": 51,
-      "comfortScore": 22,
+      "avgTempMax": 12,
+      "avgFeelsLikeMax": 9.7,
+      "avgPrecipitation": 5.8,
+      "avgWindSpeed": 18.5,
+      "avgWeatherCode": 3,
+      "comfortScore": 27,
       "bestYear": {
         "year": 2023,
-        "comfortScore": 64,
-        "avgTempMax": 14.8,
+        "comfortScore": 57,
+        "avgTempMax": 13.9,
         "avgPrecipitation": 0,
-        "avgWindSpeed": 10.7,
+        "avgWindSpeed": 13.5,
         "weatherCode": 3
       },
       "worstYear": {
         "year": 2024,
         "comfortScore": 4,
-        "avgTempMax": 11.1,
-        "avgPrecipitation": 15,
-        "avgWindSpeed": 32,
+        "avgTempMax": 11,
+        "avgPrecipitation": 16.3,
+        "avgWindSpeed": 33.3,
         "weatherCode": 61
       },
-      "tempTrend": 0.25,
-      "dataYears": 10
+      "tempTrend": -1.45,
+      "dataYears": 3
     },
     {
       "id": "uno-x-cup-i-glamdal-fellesstart-lordag",
@@ -6286,7 +6244,7 @@
       "worstYear": {
         "year": 2024,
         "comfortScore": 12,
-        "avgTempMax": 15.5,
+        "avgTempMax": 15.6,
         "avgPrecipitation": 17.5,
         "avgWindSpeed": 26.4,
         "weatherCode": 63
@@ -6302,7 +6260,7 @@
       "region": "Vestland",
       "avgTempMax": 11.3,
       "avgFeelsLikeMax": 8.7,
-      "avgPrecipitation": 2.8,
+      "avgPrecipitation": 2.7,
       "avgWindSpeed": 9.4,
       "avgWeatherCode": 51,
       "comfortScore": 33,
@@ -6318,7 +6276,7 @@
         "year": 2024,
         "comfortScore": 14,
         "avgTempMax": 5.8,
-        "avgPrecipitation": 4.4,
+        "avgPrecipitation": 3.8,
         "avgWindSpeed": 8,
         "weatherCode": 71
       },
@@ -6380,11 +6338,11 @@
         "year": 2021,
         "comfortScore": 19,
         "avgTempMax": 16.9,
-        "avgPrecipitation": 5.6,
+        "avgPrecipitation": 5.4,
         "avgWindSpeed": 19.4,
         "weatherCode": 61
       },
-      "tempTrend": 0.41,
+      "tempTrend": 0.42,
       "dataYears": 10
     },
     {
@@ -6415,7 +6373,7 @@
         "avgWindSpeed": 22,
         "weatherCode": 61
       },
-      "tempTrend": 0.21,
+      "tempTrend": 0.22,
       "dataYears": 10
     },
     {
@@ -6446,7 +6404,7 @@
         "avgWindSpeed": 17.5,
         "weatherCode": 53
       },
-      "tempTrend": 0,
+      "tempTrend": 0.01,
       "dataYears": 10
     },
     {
@@ -6473,7 +6431,7 @@
         "year": 2019,
         "comfortScore": 10,
         "avgTempMax": 10.4,
-        "avgPrecipitation": 17.2,
+        "avgPrecipitation": 17.1,
         "avgWindSpeed": 14.8,
         "weatherCode": 61
       },
@@ -6504,11 +6462,11 @@
         "year": 2018,
         "comfortScore": 9,
         "avgTempMax": 13.9,
-        "avgPrecipitation": 15.8,
+        "avgPrecipitation": 16,
         "avgWindSpeed": 26.4,
         "weatherCode": 63
       },
-      "tempTrend": -0.05,
+      "tempTrend": -0.04,
       "dataYears": 10
     },
     {
@@ -6526,7 +6484,7 @@
       "bestYear": {
         "year": 2017,
         "comfortScore": 66,
-        "avgTempMax": 17.1,
+        "avgTempMax": 17.2,
         "avgPrecipitation": 0,
         "avgWindSpeed": 16.9,
         "weatherCode": 2
@@ -6534,7 +6492,7 @@
       "worstYear": {
         "year": 2024,
         "comfortScore": 11,
-        "avgTempMax": 16.2,
+        "avgTempMax": 16.3,
         "avgPrecipitation": 14.8,
         "avgWindSpeed": 38.3,
         "weatherCode": 65
@@ -6570,7 +6528,7 @@
         "avgWindSpeed": 26.3,
         "weatherCode": 63
       },
-      "tempTrend": -0.01,
+      "tempTrend": 0,
       "dataYears": 10
     },
     {
@@ -6596,8 +6554,8 @@
       "worstYear": {
         "year": 2017,
         "comfortScore": 10,
-        "avgTempMax": 22.6,
-        "avgPrecipitation": 11.9,
+        "avgTempMax": 22.7,
+        "avgPrecipitation": 12.2,
         "avgWindSpeed": 13,
         "weatherCode": 63
       },
@@ -6627,8 +6585,8 @@
       "worstYear": {
         "year": 2017,
         "comfortScore": 10,
-        "avgTempMax": 22.6,
-        "avgPrecipitation": 11.9,
+        "avgTempMax": 22.7,
+        "avgPrecipitation": 12.2,
         "avgWindSpeed": 13,
         "weatherCode": 63
       },
@@ -6641,7 +6599,7 @@
       "discipline": "terreng",
       "officialDate": "2027-07-26",
       "region": "Finnmark",
-      "avgTempMax": 18.5,
+      "avgTempMax": 18.6,
       "avgFeelsLikeMax": 18.1,
       "avgPrecipitation": 1.3,
       "avgWindSpeed": 11.8,
@@ -6658,12 +6616,12 @@
       "worstYear": {
         "year": 2024,
         "comfortScore": 16,
-        "avgTempMax": 24.9,
+        "avgTempMax": 25.2,
         "avgPrecipitation": 2.1,
         "avgWindSpeed": 16.5,
         "weatherCode": 61
       },
-      "tempTrend": 0.58,
+      "tempTrend": 0.59,
       "dataYears": 10
     },
     {
@@ -6672,7 +6630,7 @@
       "discipline": "terreng",
       "officialDate": "2027-07-26",
       "region": "Finnmark",
-      "avgTempMax": 18.5,
+      "avgTempMax": 18.6,
       "avgFeelsLikeMax": 18.1,
       "avgPrecipitation": 1.3,
       "avgWindSpeed": 11.8,
@@ -6689,12 +6647,12 @@
       "worstYear": {
         "year": 2024,
         "comfortScore": 16,
-        "avgTempMax": 24.9,
+        "avgTempMax": 25.2,
         "avgPrecipitation": 2.1,
         "avgWindSpeed": 16.5,
         "weatherCode": 61
       },
-      "tempTrend": 0.58,
+      "tempTrend": 0.59,
       "dataYears": 10
     },
     {
@@ -6718,11 +6676,11 @@
         "weatherCode": 3
       },
       "worstYear": {
-        "year": 2018,
-        "comfortScore": 32,
-        "avgTempMax": 23.4,
-        "avgPrecipitation": 2.7,
-        "avgWindSpeed": 9.7,
+        "year": 2024,
+        "comfortScore": 31,
+        "avgTempMax": 18.8,
+        "avgPrecipitation": 3,
+        "avgWindSpeed": 17.7,
         "weatherCode": 53
       },
       "tempTrend": -0.54,
@@ -6756,7 +6714,7 @@
         "avgWindSpeed": 21.3,
         "weatherCode": 53
       },
-      "tempTrend": 0.29,
+      "tempTrend": 0.3,
       "dataYears": 10
     },
     {
@@ -6765,9 +6723,9 @@
       "discipline": "landevei",
       "officialDate": "2026-06-18",
       "region": "Trøndelag",
-      "avgTempMax": 17.1,
+      "avgTempMax": 17.2,
       "avgFeelsLikeMax": 15.9,
-      "avgPrecipitation": 6.6,
+      "avgPrecipitation": 6.5,
       "avgWindSpeed": 16.8,
       "avgWeatherCode": 55,
       "comfortScore": 30,
@@ -6783,11 +6741,11 @@
         "year": 2017,
         "comfortScore": 10,
         "avgTempMax": 14.5,
-        "avgPrecipitation": 15.4,
+        "avgPrecipitation": 15.5,
         "avgWindSpeed": 22.6,
         "weatherCode": 63
       },
-      "tempTrend": 0.59,
+      "tempTrend": 0.6,
       "dataYears": 10
     },
     {
@@ -6812,13 +6770,13 @@
       },
       "worstYear": {
         "year": 2025,
-        "comfortScore": 7,
+        "comfortScore": 8,
         "avgTempMax": 13.3,
-        "avgPrecipitation": 10.9,
+        "avgPrecipitation": 9.1,
         "avgWindSpeed": 23.4,
         "weatherCode": 61
       },
-      "tempTrend": -0.01,
+      "tempTrend": -0.02,
       "dataYears": 10
     },
     {
@@ -6827,29 +6785,29 @@
       "discipline": "landevei",
       "officialDate": "2026-09-05",
       "region": "Agder",
-      "avgTempMax": 18.7,
+      "avgTempMax": 18.8,
       "avgFeelsLikeMax": 17.6,
-      "avgPrecipitation": 1.3,
+      "avgPrecipitation": 1.2,
       "avgWindSpeed": 17.3,
       "avgWeatherCode": 51,
-      "comfortScore": 37,
+      "comfortScore": 38,
       "bestYear": {
         "year": 2016,
         "comfortScore": 62,
-        "avgTempMax": 18.9,
+        "avgTempMax": 19,
         "avgPrecipitation": 0,
         "avgWindSpeed": 12.6,
         "weatherCode": 3
       },
       "worstYear": {
         "year": 2024,
-        "comfortScore": 15,
+        "comfortScore": 18,
         "avgTempMax": 23.5,
-        "avgPrecipitation": 2.4,
+        "avgPrecipitation": 0,
         "avgWindSpeed": 20.9,
         "weatherCode": 61
       },
-      "tempTrend": 0.44,
+      "tempTrend": 0.42,
       "dataYears": 10
     },
     {
@@ -6880,7 +6838,7 @@
         "avgWindSpeed": 26.1,
         "weatherCode": 63
       },
-      "tempTrend": 0.15,
+      "tempTrend": 0.14,
       "dataYears": 10
     },
     {
@@ -6891,14 +6849,14 @@
       "region": "Akershus",
       "avgTempMax": 19.4,
       "avgFeelsLikeMax": 18,
-      "avgPrecipitation": 6.1,
+      "avgPrecipitation": 6,
       "avgWindSpeed": 16.7,
       "avgWeatherCode": 51,
       "comfortScore": 28,
       "bestYear": {
         "year": 2022,
         "comfortScore": 67,
-        "avgTempMax": 17.6,
+        "avgTempMax": 17.7,
         "avgPrecipitation": 0,
         "avgWindSpeed": 12.2,
         "weatherCode": 3
@@ -6907,7 +6865,7 @@
         "year": 2023,
         "comfortScore": 13,
         "avgTempMax": 16.2,
-        "avgPrecipitation": 44.9,
+        "avgPrecipitation": 43.3,
         "avgWindSpeed": 24.5,
         "weatherCode": 63
       },
@@ -6935,14 +6893,14 @@
         "weatherCode": 3
       },
       "worstYear": {
-        "year": 2024,
-        "comfortScore": 13,
-        "avgTempMax": 12.7,
-        "avgPrecipitation": 3.6,
-        "avgWindSpeed": 20,
-        "weatherCode": 71
+        "year": 2016,
+        "comfortScore": 15,
+        "avgTempMax": 15.2,
+        "avgPrecipitation": 8.3,
+        "avgWindSpeed": 14.8,
+        "weatherCode": 61
       },
-      "tempTrend": 0.32,
+      "tempTrend": 0.33,
       "dataYears": 10
     },
     {
@@ -6969,7 +6927,7 @@
         "year": 2017,
         "comfortScore": 14,
         "avgTempMax": 14.1,
-        "avgPrecipitation": 7.5,
+        "avgPrecipitation": 7.4,
         "avgWindSpeed": 18.2,
         "weatherCode": 63
       },
@@ -6984,10 +6942,10 @@
       "region": "Östergötland",
       "avgTempMax": 19.6,
       "avgFeelsLikeMax": 18,
-      "avgPrecipitation": 1.4,
+      "avgPrecipitation": 1.2,
       "avgWindSpeed": 17.9,
       "avgWeatherCode": 3,
-      "comfortScore": 51,
+      "comfortScore": 52,
       "bestYear": {
         "year": 2016,
         "comfortScore": 70,
@@ -7015,10 +6973,10 @@
       "region": "Östergötland",
       "avgTempMax": 19.6,
       "avgFeelsLikeMax": 17.9,
-      "avgPrecipitation": 1.4,
+      "avgPrecipitation": 1.2,
       "avgWindSpeed": 18.5,
       "avgWeatherCode": 3,
-      "comfortScore": 50,
+      "comfortScore": 51,
       "bestYear": {
         "year": 2016,
         "comfortScore": 71,
@@ -7063,7 +7021,7 @@
       "region": "Telemark",
       "avgTempMax": -2.2,
       "avgFeelsLikeMax": -6.3,
-      "avgPrecipitation": 1.9,
+      "avgPrecipitation": 2,
       "avgWindSpeed": 13,
       "avgWeatherCode": 3,
       "comfortScore": 33,
@@ -7079,11 +7037,11 @@
         "year": 2019,
         "comfortScore": 5,
         "avgTempMax": -3.3,
-        "avgPrecipitation": 8.8,
+        "avgPrecipitation": 9.1,
         "avgWindSpeed": 13.1,
         "weatherCode": 73
       },
-      "tempTrend": 0.76,
+      "tempTrend": 0.75,
       "dataYears": 10
     },
     {
@@ -7094,14 +7052,14 @@
       "region": "Norge",
       "avgTempMax": -5.4,
       "avgFeelsLikeMax": -9.6,
-      "avgPrecipitation": 2,
+      "avgPrecipitation": 2.1,
       "avgWindSpeed": 11.2,
       "avgWeatherCode": 3,
       "comfortScore": 35,
       "bestYear": {
         "year": 2018,
         "comfortScore": 48,
-        "avgTempMax": -9.1,
+        "avgTempMax": -9,
         "avgPrecipitation": 0,
         "avgWindSpeed": 5.8,
         "weatherCode": 3
@@ -7110,11 +7068,11 @@
         "year": 2016,
         "comfortScore": 0,
         "avgTempMax": 0.2,
-        "avgPrecipitation": 15.7,
+        "avgPrecipitation": 15.6,
         "avgWindSpeed": 19.5,
         "weatherCode": 75
       },
-      "tempTrend": 0.03,
+      "tempTrend": 0.02,
       "dataYears": 10
     },
     {
@@ -7123,9 +7081,9 @@
       "discipline": "langrenn",
       "officialDate": "2026-04-18",
       "region": "Longyearbyen",
-      "avgTempMax": -3.9,
+      "avgTempMax": -3.8,
       "avgFeelsLikeMax": -7.8,
-      "avgPrecipitation": 1.6,
+      "avgPrecipitation": 1.7,
       "avgWindSpeed": 11.4,
       "avgWeatherCode": 73,
       "comfortScore": 15,
@@ -7141,11 +7099,11 @@
         "year": 2023,
         "comfortScore": 7,
         "avgTempMax": 0.2,
-        "avgPrecipitation": 4.8,
+        "avgPrecipitation": 5.2,
         "avgWindSpeed": 18.3,
         "weatherCode": 75
       },
-      "tempTrend": 0.84,
+      "tempTrend": 0.87,
       "dataYears": 10
     },
     {
@@ -7156,14 +7114,14 @@
       "region": "Innlandet",
       "avgTempMax": -4.1,
       "avgFeelsLikeMax": -8.6,
-      "avgPrecipitation": 0.6,
+      "avgPrecipitation": 0.5,
       "avgWindSpeed": 15.8,
       "avgWeatherCode": 3,
       "comfortScore": 33,
       "bestYear": {
         "year": 2023,
         "comfortScore": 37,
-        "avgTempMax": -9.3,
+        "avgTempMax": -9.2,
         "avgPrecipitation": 0,
         "avgWindSpeed": 14,
         "weatherCode": 3
@@ -7172,7 +7130,7 @@
         "year": 2016,
         "comfortScore": 12,
         "avgTempMax": -1.9,
-        "avgPrecipitation": 2.2,
+        "avgPrecipitation": 1.9,
         "avgWindSpeed": 15,
         "weatherCode": 73
       },
@@ -7187,10 +7145,10 @@
       "region": "Finnmark",
       "avgTempMax": -6.5,
       "avgFeelsLikeMax": -11,
-      "avgPrecipitation": 1.2,
+      "avgPrecipitation": 1.1,
       "avgWindSpeed": 12.8,
       "avgWeatherCode": 73,
-      "comfortScore": 14,
+      "comfortScore": 15,
       "bestYear": {
         "year": 2018,
         "comfortScore": 51,
@@ -7203,11 +7161,11 @@
         "year": 2024,
         "comfortScore": 11,
         "avgTempMax": -1.4,
-        "avgPrecipitation": 2.7,
+        "avgPrecipitation": 2.4,
         "avgWindSpeed": 15.9,
         "weatherCode": 73
       },
-      "tempTrend": 0.69,
+      "tempTrend": 0.67,
       "dataYears": 10
     },
     {
@@ -7233,8 +7191,8 @@
       "worstYear": {
         "year": 2024,
         "comfortScore": 0,
-        "avgTempMax": 5.9,
-        "avgPrecipitation": 26.7,
+        "avgTempMax": 6,
+        "avgPrecipitation": 26.4,
         "avgWindSpeed": 33.4,
         "weatherCode": 63
       },
@@ -7247,16 +7205,16 @@
       "discipline": "langrenn",
       "officialDate": "2026-02-14",
       "region": "Innlandet",
-      "avgTempMax": -2.8,
+      "avgTempMax": -2.6,
       "avgFeelsLikeMax": -6.6,
-      "avgPrecipitation": 1.4,
+      "avgPrecipitation": 1.6,
       "avgWindSpeed": 11.8,
       "avgWeatherCode": 3,
-      "comfortScore": 36,
+      "comfortScore": 35,
       "bestYear": {
         "year": 2025,
         "comfortScore": 49,
-        "avgTempMax": -5.4,
+        "avgTempMax": -5.2,
         "avgPrecipitation": 0,
         "avgWindSpeed": 5.7,
         "weatherCode": 3
@@ -7265,7 +7223,7 @@
         "year": 2022,
         "comfortScore": 2,
         "avgTempMax": 1.5,
-        "avgPrecipitation": 12.7,
+        "avgPrecipitation": 14.2,
         "avgWindSpeed": 16.9,
         "weatherCode": 75
       },
@@ -7282,7 +7240,7 @@
       "avgFeelsLikeMax": -1.3,
       "avgPrecipitation": 7.2,
       "avgWindSpeed": 14,
-      "avgWeatherCode": 75,
+      "avgWeatherCode": 73,
       "comfortScore": 7,
       "bestYear": {
         "year": 2022,
@@ -7296,11 +7254,11 @@
         "year": 2021,
         "comfortScore": 0,
         "avgTempMax": 4.5,
-        "avgPrecipitation": 25.1,
+        "avgPrecipitation": 24.4,
         "avgWindSpeed": 24.5,
-        "weatherCode": 75
+        "weatherCode": 63
       },
-      "tempTrend": 0.22,
+      "tempTrend": 0.21,
       "dataYears": 10
     },
     {
@@ -7311,23 +7269,23 @@
       "region": "Troms",
       "avgTempMax": -0.8,
       "avgFeelsLikeMax": -4.9,
-      "avgPrecipitation": 2.2,
+      "avgPrecipitation": 2.6,
       "avgWindSpeed": 13.6,
       "avgWeatherCode": 73,
-      "comfortScore": 13,
+      "comfortScore": 12,
       "bestYear": {
         "year": 2017,
         "comfortScore": 48,
-        "avgTempMax": -2.1,
+        "avgTempMax": -2,
         "avgPrecipitation": 0,
         "avgWindSpeed": 11.4,
         "weatherCode": 0
       },
       "worstYear": {
         "year": 2025,
-        "comfortScore": 7,
+        "comfortScore": 4,
         "avgTempMax": 2.6,
-        "avgPrecipitation": 6.9,
+        "avgPrecipitation": 10.4,
         "avgWindSpeed": 13.4,
         "weatherCode": 75
       },
@@ -7340,16 +7298,16 @@
       "discipline": "langrenn",
       "officialDate": "2026-03-15",
       "region": "Nordland",
-      "avgTempMax": 1.6,
+      "avgTempMax": 1.7,
       "avgFeelsLikeMax": -2.8,
-      "avgPrecipitation": 2.1,
+      "avgPrecipitation": 1.9,
       "avgWindSpeed": 22.4,
       "avgWeatherCode": 73,
       "comfortScore": 9,
       "bestYear": {
         "year": 2019,
         "comfortScore": 46,
-        "avgTempMax": 0.2,
+        "avgTempMax": 0.3,
         "avgPrecipitation": 0,
         "avgWindSpeed": 7.3,
         "weatherCode": 3
@@ -7357,7 +7315,7 @@
       "worstYear": {
         "year": 2017,
         "comfortScore": 4,
-        "avgTempMax": 3.8,
+        "avgTempMax": 3.9,
         "avgPrecipitation": 6.3,
         "avgWindSpeed": 35.4,
         "weatherCode": 73
@@ -7371,16 +7329,16 @@
       "discipline": "langrenn",
       "officialDate": "2026-02-07",
       "region": "Innlandet",
-      "avgTempMax": -4,
+      "avgTempMax": -3.9,
       "avgFeelsLikeMax": -8,
-      "avgPrecipitation": 1.6,
+      "avgPrecipitation": 1.7,
       "avgWindSpeed": 11.9,
       "avgWeatherCode": 3,
       "comfortScore": 35,
       "bestYear": {
         "year": 2025,
         "comfortScore": 49,
-        "avgTempMax": -2.4,
+        "avgTempMax": -2.1,
         "avgPrecipitation": 0,
         "avgWindSpeed": 5.7,
         "weatherCode": 3
@@ -7389,11 +7347,11 @@
         "year": 2016,
         "comfortScore": 1,
         "avgTempMax": 1.8,
-        "avgPrecipitation": 12,
+        "avgPrecipitation": 11.9,
         "avgWindSpeed": 18.7,
         "weatherCode": 75
       },
-      "tempTrend": -0.08,
+      "tempTrend": -0.07,
       "dataYears": 10
     },
     {
@@ -7402,7 +7360,7 @@
       "discipline": "langrenn",
       "officialDate": "2027-02-20",
       "region": "Trøndelag",
-      "avgTempMax": -4.4,
+      "avgTempMax": -4.3,
       "avgFeelsLikeMax": -8.5,
       "avgPrecipitation": 5.2,
       "avgWindSpeed": 13.4,
@@ -7411,7 +7369,7 @@
       "bestYear": {
         "year": 2018,
         "comfortScore": 18,
-        "avgTempMax": -10.1,
+        "avgTempMax": -10,
         "avgPrecipitation": 0.2,
         "avgWindSpeed": 8.2,
         "weatherCode": 71
@@ -7420,11 +7378,11 @@
         "year": 2023,
         "comfortScore": 2,
         "avgTempMax": -3,
-        "avgPrecipitation": 20.8,
+        "avgPrecipitation": 21,
         "avgWindSpeed": 17.1,
         "weatherCode": 75
       },
-      "tempTrend": 0.18,
+      "tempTrend": 0.19,
       "dataYears": 10
     },
     {
@@ -7451,11 +7409,11 @@
         "year": 2019,
         "comfortScore": 10,
         "avgTempMax": 6.4,
-        "avgPrecipitation": 4.8,
+        "avgPrecipitation": 4.6,
         "avgWindSpeed": 13.8,
         "weatherCode": 73
       },
-      "tempTrend": -0.14,
+      "tempTrend": -0.13,
       "dataYears": 10
     },
     {
@@ -7466,7 +7424,7 @@
       "region": "Innlandet",
       "avgTempMax": -0.2,
       "avgFeelsLikeMax": -4.4,
-      "avgPrecipitation": 2.9,
+      "avgPrecipitation": 3,
       "avgWindSpeed": 16.7,
       "avgWeatherCode": 71,
       "comfortScore": 10,
@@ -7482,11 +7440,11 @@
         "year": 2025,
         "comfortScore": 4,
         "avgTempMax": 2.8,
-        "avgPrecipitation": 6.7,
+        "avgPrecipitation": 6.6,
         "avgWindSpeed": 23.9,
         "weatherCode": 71
       },
-      "tempTrend": 0.32,
+      "tempTrend": 0.33,
       "dataYears": 10
     },
     {
@@ -7499,7 +7457,7 @@
       "avgFeelsLikeMax": -0.1,
       "avgPrecipitation": 10.2,
       "avgWindSpeed": 17.4,
-      "avgWeatherCode": 75,
+      "avgWeatherCode": 73,
       "comfortScore": 2,
       "bestYear": {
         "year": 2016,
@@ -7512,12 +7470,12 @@
       "worstYear": {
         "year": 2025,
         "comfortScore": 0,
-        "avgTempMax": 4.9,
-        "avgPrecipitation": 39.1,
+        "avgTempMax": 5,
+        "avgPrecipitation": 39.3,
         "avgWindSpeed": 24.1,
-        "weatherCode": 75
+        "weatherCode": 73
       },
-      "tempTrend": 0.24,
+      "tempTrend": 0.25,
       "dataYears": 10
     },
     {
@@ -7542,9 +7500,9 @@
       },
       "worstYear": {
         "year": 2024,
-        "comfortScore": 11,
+        "comfortScore": 12,
         "avgTempMax": -6.2,
-        "avgPrecipitation": 6.5,
+        "avgPrecipitation": 5.6,
         "avgWindSpeed": 7.7,
         "weatherCode": 73
       },
@@ -7559,7 +7517,7 @@
       "region": "Trøndelag",
       "avgTempMax": -2.5,
       "avgFeelsLikeMax": -6.5,
-      "avgPrecipitation": 1,
+      "avgPrecipitation": 1.1,
       "avgWindSpeed": 13.9,
       "avgWeatherCode": 3,
       "comfortScore": 34,
@@ -7575,7 +7533,7 @@
         "year": 2022,
         "comfortScore": 6,
         "avgTempMax": -0.2,
-        "avgPrecipitation": 4.7,
+        "avgPrecipitation": 4.9,
         "avgWindSpeed": 24.2,
         "weatherCode": 75
       },
@@ -7590,7 +7548,7 @@
       "region": "Nordland",
       "avgTempMax": 4.4,
       "avgFeelsLikeMax": 1.6,
-      "avgPrecipitation": 2.1,
+      "avgPrecipitation": 2.3,
       "avgWindSpeed": 10.5,
       "avgWeatherCode": 51,
       "comfortScore": 25,
@@ -7605,12 +7563,12 @@
       "worstYear": {
         "year": 2020,
         "comfortScore": 6,
-        "avgTempMax": 4,
-        "avgPrecipitation": 6.3,
+        "avgTempMax": 4.1,
+        "avgPrecipitation": 6.2,
         "avgWindSpeed": 17.1,
-        "weatherCode": 73
+        "weatherCode": 71
       },
-      "tempTrend": 0.23,
+      "tempTrend": 0.22,
       "dataYears": 10
     },
     {
@@ -7621,7 +7579,7 @@
       "region": "Trøndelag",
       "avgTempMax": -1.5,
       "avgFeelsLikeMax": -5.6,
-      "avgPrecipitation": 2.1,
+      "avgPrecipitation": 2.2,
       "avgWindSpeed": 13.2,
       "avgWeatherCode": 73,
       "comfortScore": 13,
@@ -7641,7 +7599,7 @@
         "avgWindSpeed": 22.2,
         "weatherCode": 73
       },
-      "tempTrend": -0.33,
+      "tempTrend": -0.31,
       "dataYears": 10
     },
     {
@@ -7650,12 +7608,12 @@
       "discipline": "langrenn",
       "officialDate": "2026-02-08",
       "region": "Vestfold",
-      "avgTempMax": 0.5,
+      "avgTempMax": 0.6,
       "avgFeelsLikeMax": -3.8,
-      "avgPrecipitation": 4.2,
+      "avgPrecipitation": 4.3,
       "avgWindSpeed": 17.9,
-      "avgWeatherCode": 75,
-      "comfortScore": 8,
+      "avgWeatherCode": 3,
+      "comfortScore": 19,
       "bestYear": {
         "year": 2024,
         "comfortScore": 44,
@@ -7667,12 +7625,12 @@
       "worstYear": {
         "year": 2016,
         "comfortScore": 0,
-        "avgTempMax": 4.4,
-        "avgPrecipitation": 18.5,
+        "avgTempMax": 4.6,
+        "avgPrecipitation": 18.9,
         "avgWindSpeed": 22.8,
-        "weatherCode": 75
+        "weatherCode": 61
       },
-      "tempTrend": -0.25,
+      "tempTrend": -0.27,
       "dataYears": 10
     },
     {
@@ -7683,7 +7641,7 @@
       "region": "Vestland",
       "avgTempMax": 3,
       "avgFeelsLikeMax": -0.4,
-      "avgPrecipitation": 10.3,
+      "avgPrecipitation": 10.5,
       "avgWindSpeed": 11.3,
       "avgWeatherCode": 75,
       "comfortScore": 5,
@@ -7699,11 +7657,11 @@
         "year": 2017,
         "comfortScore": 1,
         "avgTempMax": 1.9,
-        "avgPrecipitation": 22.2,
+        "avgPrecipitation": 21.7,
         "avgWindSpeed": 17.9,
         "weatherCode": 75
       },
-      "tempTrend": 0.34,
+      "tempTrend": 0.35,
       "dataYears": 10
     },
     {
@@ -7712,7 +7670,7 @@
       "discipline": "langrenn",
       "officialDate": "2026-01-24",
       "region": "Innlandet",
-      "avgTempMax": -1,
+      "avgTempMax": -0.9,
       "avgFeelsLikeMax": -5.1,
       "avgPrecipitation": 2.5,
       "avgWindSpeed": 15.9,
@@ -7730,9 +7688,9 @@
         "year": 2025,
         "comfortScore": 0,
         "avgTempMax": 0.1,
-        "avgPrecipitation": 10.8,
+        "avgPrecipitation": 9.8,
         "avgWindSpeed": 24.6,
-        "weatherCode": 75
+        "weatherCode": 73
       },
       "tempTrend": 0.24,
       "dataYears": 10
@@ -7761,7 +7719,7 @@
         "year": 2016,
         "comfortScore": 10,
         "avgTempMax": 1.6,
-        "avgPrecipitation": 6.2,
+        "avgPrecipitation": 6.3,
         "avgWindSpeed": 10.8,
         "weatherCode": 73
       },
@@ -7776,25 +7734,25 @@
       "region": "Telemark",
       "avgTempMax": 3.4,
       "avgFeelsLikeMax": -0.2,
-      "avgPrecipitation": 4.2,
+      "avgPrecipitation": 4,
       "avgWindSpeed": 16.6,
       "avgWeatherCode": 3,
-      "comfortScore": 21,
+      "comfortScore": 22,
       "bestYear": {
-        "year": 2019,
-        "comfortScore": 46,
-        "avgTempMax": 0.2,
+        "year": 2016,
+        "comfortScore": 47,
+        "avgTempMax": 4.4,
         "avgPrecipitation": 0,
-        "avgWindSpeed": 7.3,
+        "avgWindSpeed": 6.9,
         "weatherCode": 3
       },
       "worstYear": {
         "year": 2023,
         "comfortScore": 0,
         "avgTempMax": 2.9,
-        "avgPrecipitation": 22.3,
+        "avgPrecipitation": 20.6,
         "avgWindSpeed": 24.3,
-        "weatherCode": 75
+        "weatherCode": 61
       },
       "tempTrend": 0.36,
       "dataYears": 10
@@ -7805,7 +7763,7 @@
       "discipline": "langrenn",
       "officialDate": "2026-02-07",
       "region": "Akershus",
-      "avgTempMax": -1.8,
+      "avgTempMax": -1.7,
       "avgFeelsLikeMax": -5.6,
       "avgPrecipitation": 1.5,
       "avgWindSpeed": 12.9,
@@ -7814,20 +7772,20 @@
       "bestYear": {
         "year": 2025,
         "comfortScore": 48,
-        "avgTempMax": -3.5,
+        "avgTempMax": -3.4,
         "avgPrecipitation": 0,
         "avgWindSpeed": 6.4,
         "weatherCode": 3
       },
       "worstYear": {
         "year": 2016,
-        "comfortScore": 1,
+        "comfortScore": 2,
         "avgTempMax": 4.4,
-        "avgPrecipitation": 9.2,
+        "avgPrecipitation": 8.7,
         "avgWindSpeed": 23,
         "weatherCode": 61
       },
-      "tempTrend": -0.28,
+      "tempTrend": -0.27,
       "dataYears": 10
     },
     {
@@ -7845,7 +7803,7 @@
       "bestYear": {
         "year": 2017,
         "comfortScore": 48,
-        "avgTempMax": 0.7,
+        "avgTempMax": 0.8,
         "avgPrecipitation": 0,
         "avgWindSpeed": 5.8,
         "weatherCode": 3
@@ -7853,8 +7811,8 @@
       "worstYear": {
         "year": 2022,
         "comfortScore": 6,
-        "avgTempMax": -1,
-        "avgPrecipitation": 5,
+        "avgTempMax": -0.9,
+        "avgPrecipitation": 5.1,
         "avgWindSpeed": 26.4,
         "weatherCode": 73
       },
@@ -7867,7 +7825,7 @@
       "discipline": "langrenn",
       "officialDate": "2026-01-31",
       "region": "Oslo",
-      "avgTempMax": -0.8,
+      "avgTempMax": -0.6,
       "avgFeelsLikeMax": -4.6,
       "avgPrecipitation": 2.9,
       "avgWindSpeed": 14.9,
@@ -7876,7 +7834,7 @@
       "bestYear": {
         "year": 2017,
         "comfortScore": 45,
-        "avgTempMax": -1.3,
+        "avgTempMax": -1.1,
         "avgPrecipitation": 0,
         "avgWindSpeed": 7.9,
         "weatherCode": 3
@@ -7885,11 +7843,11 @@
         "year": 2018,
         "comfortScore": 0,
         "avgTempMax": 2.3,
-        "avgPrecipitation": 17,
+        "avgPrecipitation": 17.6,
         "avgWindSpeed": 20.5,
-        "weatherCode": 75
+        "weatherCode": 71
       },
-      "tempTrend": 0.04,
+      "tempTrend": 0.05,
       "dataYears": 10
     },
     {
@@ -7898,9 +7856,9 @@
       "discipline": "langrenn",
       "officialDate": "2026-01-25",
       "region": "Innlandet",
-      "avgTempMax": -2.6,
+      "avgTempMax": -2.5,
       "avgFeelsLikeMax": -6.6,
-      "avgPrecipitation": 0.3,
+      "avgPrecipitation": 0.5,
       "avgWindSpeed": 11.7,
       "avgWeatherCode": 3,
       "comfortScore": 39,
@@ -7914,9 +7872,9 @@
       },
       "worstYear": {
         "year": 2025,
-        "comfortScore": 11,
+        "comfortScore": 10,
         "avgTempMax": 3,
-        "avgPrecipitation": 1.1,
+        "avgPrecipitation": 1.9,
         "avgWindSpeed": 19.5,
         "weatherCode": 73
       },
@@ -7931,7 +7889,7 @@
       "region": "Norge",
       "avgTempMax": -1.1,
       "avgFeelsLikeMax": -4.3,
-      "avgPrecipitation": 4.3,
+      "avgPrecipitation": 4.5,
       "avgWindSpeed": 7.7,
       "avgWeatherCode": 73,
       "comfortScore": 14,
@@ -7947,7 +7905,7 @@
         "year": 2016,
         "comfortScore": 3,
         "avgTempMax": -2.2,
-        "avgPrecipitation": 13.5,
+        "avgPrecipitation": 13.1,
         "avgWindSpeed": 15,
         "weatherCode": 75
       },
@@ -7960,9 +7918,9 @@
       "discipline": "langrenn",
       "officialDate": "2026-02-21",
       "region": "Innlandet",
-      "avgTempMax": -4.4,
+      "avgTempMax": -4.3,
       "avgFeelsLikeMax": -8.5,
-      "avgPrecipitation": 2.4,
+      "avgPrecipitation": 2.3,
       "avgWindSpeed": 12.9,
       "avgWeatherCode": 3,
       "comfortScore": 32,
@@ -7978,11 +7936,11 @@
         "year": 2017,
         "comfortScore": 8,
         "avgTempMax": -3.4,
-        "avgPrecipitation": 8.5,
+        "avgPrecipitation": 8.2,
         "avgWindSpeed": 9.5,
         "weatherCode": 75
       },
-      "tempTrend": 0.27,
+      "tempTrend": 0.28,
       "dataYears": 10
     },
     {
@@ -7991,16 +7949,16 @@
       "discipline": "langrenn",
       "officialDate": "2026-01-04",
       "region": "Vestland",
-      "avgTempMax": -2.7,
+      "avgTempMax": -2.6,
       "avgFeelsLikeMax": -6.6,
-      "avgPrecipitation": 6.6,
+      "avgPrecipitation": 6.3,
       "avgWindSpeed": 9.8,
       "avgWeatherCode": 75,
       "comfortScore": 10,
       "bestYear": {
         "year": 2021,
         "comfortScore": 55,
-        "avgTempMax": -4.7,
+        "avgTempMax": -4.6,
         "avgPrecipitation": 0,
         "avgWindSpeed": 5.1,
         "weatherCode": 1
@@ -8009,11 +7967,11 @@
         "year": 2022,
         "comfortScore": 4,
         "avgTempMax": 0.1,
-        "avgPrecipitation": 21.1,
+        "avgPrecipitation": 20.6,
         "avgWindSpeed": 13.8,
         "weatherCode": 75
       },
-      "tempTrend": -0.65,
+      "tempTrend": -0.64,
       "dataYears": 10
     },
     {
@@ -8044,7 +8002,7 @@
         "avgWindSpeed": 11.9,
         "weatherCode": 75
       },
-      "tempTrend": 0.98,
+      "tempTrend": 0.99,
       "dataYears": 10
     },
     {
@@ -8062,7 +8020,7 @@
       "bestYear": {
         "year": 2018,
         "comfortScore": 50,
-        "avgTempMax": -3.2,
+        "avgTempMax": -3.1,
         "avgPrecipitation": 0,
         "avgWindSpeed": 8.3,
         "weatherCode": 1
@@ -8071,11 +8029,11 @@
         "year": 2025,
         "comfortScore": 0,
         "avgTempMax": -0.8,
-        "avgPrecipitation": 18.8,
+        "avgPrecipitation": 18.5,
         "avgWindSpeed": 22.2,
         "weatherCode": 75
       },
-      "tempTrend": -0.28,
+      "tempTrend": -0.29,
       "dataYears": 10
     },
     {
@@ -8086,7 +8044,7 @@
       "region": "Vestland",
       "avgTempMax": 0.7,
       "avgFeelsLikeMax": -2.5,
-      "avgPrecipitation": 14.4,
+      "avgPrecipitation": 15.1,
       "avgWindSpeed": 9.3,
       "avgWeatherCode": 75,
       "comfortScore": 6,
@@ -8102,7 +8060,7 @@
         "year": 2023,
         "comfortScore": 2,
         "avgTempMax": 2.4,
-        "avgPrecipitation": 36.5,
+        "avgPrecipitation": 40.9,
         "avgWindSpeed": 16.4,
         "weatherCode": 75
       },
@@ -8117,14 +8075,14 @@
       "region": "Rollag",
       "avgTempMax": -1.5,
       "avgFeelsLikeMax": -5.3,
-      "avgPrecipitation": 1.4,
+      "avgPrecipitation": 1.5,
       "avgWindSpeed": 11.6,
       "avgWeatherCode": 71,
       "comfortScore": 15,
       "bestYear": {
         "year": 2018,
         "comfortScore": 19,
-        "avgTempMax": -3.2,
+        "avgTempMax": -3.1,
         "avgPrecipitation": 0.1,
         "avgWindSpeed": 6.5,
         "weatherCode": 71
@@ -8133,7 +8091,7 @@
         "year": 2025,
         "comfortScore": 11,
         "avgTempMax": 0.1,
-        "avgPrecipitation": 6.6,
+        "avgPrecipitation": 6.5,
         "avgWindSpeed": 7.9,
         "weatherCode": 75
       },
@@ -8146,16 +8104,16 @@
       "discipline": "langrenn",
       "officialDate": "2026-01-18",
       "region": "Vestland",
-      "avgTempMax": -0.5,
+      "avgTempMax": -0.4,
       "avgFeelsLikeMax": -3.6,
-      "avgPrecipitation": 9.5,
+      "avgPrecipitation": 9.6,
       "avgWindSpeed": 8.4,
       "avgWeatherCode": 73,
       "comfortScore": 7,
       "bestYear": {
         "year": 2023,
         "comfortScore": 17,
-        "avgTempMax": -2.8,
+        "avgTempMax": -2.7,
         "avgPrecipitation": 1.2,
         "avgWindSpeed": 8,
         "weatherCode": 73
@@ -8164,7 +8122,7 @@
         "year": 2020,
         "comfortScore": 6,
         "avgTempMax": 3.5,
-        "avgPrecipitation": 17.5,
+        "avgPrecipitation": 19,
         "avgWindSpeed": 10.2,
         "weatherCode": 75
       },
@@ -8177,16 +8135,16 @@
       "discipline": "langrenn",
       "officialDate": "2026-01-31",
       "region": "Norge",
-      "avgTempMax": -3.6,
+      "avgTempMax": -3.4,
       "avgFeelsLikeMax": -7.8,
-      "avgPrecipitation": 4.7,
+      "avgPrecipitation": 4.8,
       "avgWindSpeed": 15.5,
       "avgWeatherCode": 73,
       "comfortScore": 9,
       "bestYear": {
         "year": 2019,
         "comfortScore": 43,
-        "avgTempMax": -9.6,
+        "avgTempMax": -9.2,
         "avgPrecipitation": 0,
         "avgWindSpeed": 9.8,
         "weatherCode": 3
@@ -8195,11 +8153,11 @@
         "year": 2024,
         "comfortScore": 0,
         "avgTempMax": 2.4,
-        "avgPrecipitation": 14.5,
+        "avgPrecipitation": 13.8,
         "avgWindSpeed": 34.5,
         "weatherCode": 75
       },
-      "tempTrend": 0.48,
+      "tempTrend": 0.47,
       "dataYears": 10
     },
     {
@@ -8208,7 +8166,7 @@
       "discipline": "langrenn",
       "officialDate": "2026-01-20",
       "region": "Akershus",
-      "avgTempMax": -3.8,
+      "avgTempMax": -3.7,
       "avgFeelsLikeMax": -8,
       "avgPrecipitation": 1.8,
       "avgWindSpeed": 13.2,
@@ -8217,7 +8175,7 @@
       "bestYear": {
         "year": 2025,
         "comfortScore": 51,
-        "avgTempMax": -2.5,
+        "avgTempMax": -2.4,
         "avgPrecipitation": 0,
         "avgWindSpeed": 4,
         "weatherCode": 3
@@ -8225,12 +8183,12 @@
       "worstYear": {
         "year": 2021,
         "comfortScore": 3,
-        "avgTempMax": -0.9,
-        "avgPrecipitation": 13.5,
+        "avgTempMax": -0.8,
+        "avgPrecipitation": 13.9,
         "avgWindSpeed": 14.8,
         "weatherCode": 75
       },
-      "tempTrend": -0.06,
+      "tempTrend": -0.05,
       "dataYears": 10
     },
     {
@@ -8241,14 +8199,14 @@
       "region": "Møre og Romsdal",
       "avgTempMax": 4.9,
       "avgFeelsLikeMax": 0.1,
-      "avgPrecipitation": 16.7,
+      "avgPrecipitation": 16.3,
       "avgWindSpeed": 33.7,
-      "avgWeatherCode": 71,
+      "avgWeatherCode": 63,
       "comfortScore": 0,
       "bestYear": {
         "year": 2025,
         "comfortScore": 36,
-        "avgTempMax": 4.3,
+        "avgTempMax": 4.4,
         "avgPrecipitation": 0,
         "avgWindSpeed": 14.5,
         "weatherCode": 3
@@ -8257,7 +8215,7 @@
         "year": 2024,
         "comfortScore": 0,
         "avgTempMax": 8.4,
-        "avgPrecipitation": 19.2,
+        "avgPrecipitation": 16.6,
         "avgWindSpeed": 52.4,
         "weatherCode": 63
       },
@@ -8270,12 +8228,12 @@
       "discipline": "langrenn",
       "officialDate": "2026-02-14",
       "region": "Gol",
-      "avgTempMax": -4.7,
+      "avgTempMax": -4.6,
       "avgFeelsLikeMax": -8.7,
-      "avgPrecipitation": 1.6,
+      "avgPrecipitation": 1.8,
       "avgWindSpeed": 10.8,
       "avgWeatherCode": 3,
-      "comfortScore": 37,
+      "comfortScore": 36,
       "bestYear": {
         "year": 2017,
         "comfortScore": 51,
@@ -8287,12 +8245,12 @@
       "worstYear": {
         "year": 2022,
         "comfortScore": 2,
-        "avgTempMax": -1.6,
-        "avgPrecipitation": 14.8,
+        "avgTempMax": -1.5,
+        "avgPrecipitation": 16.4,
         "avgWindSpeed": 17.2,
         "weatherCode": 75
       },
-      "tempTrend": -0.07,
+      "tempTrend": -0.05,
       "dataYears": 10
     },
     {
@@ -8301,17 +8259,17 @@
       "discipline": "langrenn",
       "officialDate": "2026-01-25",
       "region": "Vestland",
-      "avgTempMax": 2,
+      "avgTempMax": 2.1,
       "avgFeelsLikeMax": -1.1,
-      "avgPrecipitation": 18.6,
+      "avgPrecipitation": 18.9,
       "avgWindSpeed": 12.2,
       "avgWeatherCode": 75,
       "comfortScore": 5,
       "bestYear": {
         "year": 2024,
         "comfortScore": 31,
-        "avgTempMax": 2.1,
-        "avgPrecipitation": 0.8,
+        "avgTempMax": 2.2,
+        "avgPrecipitation": 0.7,
         "avgWindSpeed": 7.4,
         "weatherCode": 51
       },
@@ -8319,11 +8277,11 @@
         "year": 2025,
         "comfortScore": 0,
         "avgTempMax": 2.5,
-        "avgPrecipitation": 62.8,
+        "avgPrecipitation": 63.5,
         "avgWindSpeed": 24.2,
         "weatherCode": 75
       },
-      "tempTrend": -0.3,
+      "tempTrend": -0.29,
       "dataYears": 10
     },
     {
@@ -8332,7 +8290,7 @@
       "discipline": "langrenn",
       "officialDate": "2026-02-01",
       "region": "Vestland",
-      "avgTempMax": -0.7,
+      "avgTempMax": -0.6,
       "avgFeelsLikeMax": -4.2,
       "avgPrecipitation": 9.6,
       "avgWindSpeed": 10.8,
@@ -8341,20 +8299,20 @@
       "bestYear": {
         "year": 2025,
         "comfortScore": 46,
-        "avgTempMax": -0.8,
+        "avgTempMax": -0.7,
         "avgPrecipitation": 0,
         "avgWindSpeed": 7.7,
         "weatherCode": 3
       },
       "worstYear": {
         "year": 2024,
-        "comfortScore": 2,
+        "comfortScore": 3,
         "avgTempMax": 0.4,
-        "avgPrecipitation": 8.5,
+        "avgPrecipitation": 7.5,
         "avgWindSpeed": 26.8,
         "weatherCode": 75
       },
-      "tempTrend": -0.02,
+      "tempTrend": -0.03,
       "dataYears": 10
     },
     {
@@ -8365,27 +8323,27 @@
       "region": "Buskerud",
       "avgTempMax": -2,
       "avgFeelsLikeMax": -5.8,
-      "avgPrecipitation": 1.8,
+      "avgPrecipitation": 1.7,
       "avgWindSpeed": 10.7,
       "avgWeatherCode": 3,
-      "comfortScore": 36,
+      "comfortScore": 37,
       "bestYear": {
         "year": 2018,
         "comfortScore": 49,
-        "avgTempMax": -5.2,
+        "avgTempMax": -5.1,
         "avgPrecipitation": 0,
         "avgWindSpeed": 5.7,
         "weatherCode": 3
       },
       "worstYear": {
         "year": 2016,
-        "comfortScore": 4,
+        "comfortScore": 5,
         "avgTempMax": 3,
-        "avgPrecipitation": 7.5,
+        "avgPrecipitation": 6.3,
         "avgWindSpeed": 18.4,
         "weatherCode": 73
       },
-      "tempTrend": -0.01,
+      "tempTrend": 0,
       "dataYears": 10
     },
     {
@@ -8396,10 +8354,10 @@
       "region": "Buskerud",
       "avgTempMax": 1.6,
       "avgFeelsLikeMax": -2.7,
-      "avgPrecipitation": 3.1,
+      "avgPrecipitation": 2.7,
       "avgWindSpeed": 14.3,
       "avgWeatherCode": 3,
-      "comfortScore": 28,
+      "comfortScore": 29,
       "bestYear": {
         "year": 2018,
         "comfortScore": 44,
@@ -8412,7 +8370,7 @@
         "year": 2016,
         "comfortScore": 1,
         "avgTempMax": 3.2,
-        "avgPrecipitation": 18.3,
+        "avgPrecipitation": 15.6,
         "avgWindSpeed": 18.1,
         "weatherCode": 75
       },
@@ -8427,10 +8385,10 @@
       "region": "Akershus",
       "avgTempMax": -0.2,
       "avgFeelsLikeMax": -3.9,
-      "avgPrecipitation": 2.4,
+      "avgPrecipitation": 2.5,
       "avgWindSpeed": 11.4,
       "avgWeatherCode": 3,
-      "comfortScore": 34,
+      "comfortScore": 33,
       "bestYear": {
         "year": 2017,
         "comfortScore": 53,
@@ -8443,7 +8401,7 @@
         "year": 2022,
         "comfortScore": 1,
         "avgTempMax": 4.1,
-        "avgPrecipitation": 22.7,
+        "avgPrecipitation": 23.6,
         "avgWindSpeed": 17.5,
         "weatherCode": 75
       },
@@ -8456,16 +8414,16 @@
       "discipline": "langrenn",
       "officialDate": "2027-02-13",
       "region": "Innlandet",
-      "avgTempMax": -3.7,
+      "avgTempMax": -3.6,
       "avgFeelsLikeMax": -7.8,
-      "avgPrecipitation": 0.8,
+      "avgPrecipitation": 0.7,
       "avgWindSpeed": 12.5,
       "avgWeatherCode": 71,
       "comfortScore": 15,
       "bestYear": {
         "year": 2020,
         "comfortScore": 43,
-        "avgTempMax": -4.3,
+        "avgTempMax": -4.2,
         "avgPrecipitation": 0,
         "avgWindSpeed": 9.8,
         "weatherCode": 3
@@ -8474,11 +8432,11 @@
         "year": 2024,
         "comfortScore": 11,
         "avgTempMax": -8.8,
-        "avgPrecipitation": 6.6,
+        "avgPrecipitation": 6,
         "avgWindSpeed": 8.6,
         "weatherCode": 73
       },
-      "tempTrend": -0.13,
+      "tempTrend": -0.14,
       "dataYears": 10
     },
     {
@@ -8489,14 +8447,14 @@
       "region": "Norge",
       "avgTempMax": -0.2,
       "avgFeelsLikeMax": -3.9,
-      "avgPrecipitation": 3.8,
+      "avgPrecipitation": 3.9,
       "avgWindSpeed": 11.8,
       "avgWeatherCode": 73,
       "comfortScore": 12,
       "bestYear": {
         "year": 2018,
         "comfortScore": 47,
-        "avgTempMax": -3,
+        "avgTempMax": -2.9,
         "avgPrecipitation": 0,
         "avgWindSpeed": 7,
         "weatherCode": 3
@@ -8509,7 +8467,7 @@
         "avgWindSpeed": 19.8,
         "weatherCode": 75
       },
-      "tempTrend": 0.24,
+      "tempTrend": 0.23,
       "dataYears": 10
     },
     {
@@ -8520,14 +8478,14 @@
       "region": "Trøndelag",
       "avgTempMax": 2.7,
       "avgFeelsLikeMax": -1.2,
-      "avgPrecipitation": 3.6,
+      "avgPrecipitation": 3.5,
       "avgWindSpeed": 17,
       "avgWeatherCode": 73,
       "comfortScore": 9,
       "bestYear": {
         "year": 2022,
         "comfortScore": 55,
-        "avgTempMax": 5,
+        "avgTempMax": 5.1,
         "avgPrecipitation": 0,
         "avgWindSpeed": 7.3,
         "weatherCode": 0
@@ -8535,8 +8493,8 @@
       "worstYear": {
         "year": 2021,
         "comfortScore": 1,
-        "avgTempMax": -0.8,
-        "avgPrecipitation": 9.5,
+        "avgTempMax": -0.6,
+        "avgPrecipitation": 9,
         "avgWindSpeed": 25.9,
         "weatherCode": 73
       },
@@ -8551,10 +8509,10 @@
       "region": "Troms",
       "avgTempMax": -1.1,
       "avgFeelsLikeMax": -5,
-      "avgPrecipitation": 5.1,
+      "avgPrecipitation": 4.6,
       "avgWindSpeed": 12.4,
       "avgWeatherCode": 73,
-      "comfortScore": 10,
+      "comfortScore": 11,
       "bestYear": {
         "year": 2023,
         "comfortScore": 44,
@@ -8567,9 +8525,9 @@
         "year": 2019,
         "comfortScore": 0,
         "avgTempMax": 0.4,
-        "avgPrecipitation": 11.4,
+        "avgPrecipitation": 10,
         "avgWindSpeed": 23.1,
-        "weatherCode": 75
+        "weatherCode": 73
       },
       "tempTrend": -0.11,
       "dataYears": 10
@@ -8582,14 +8540,14 @@
       "region": "Nordland",
       "avgTempMax": -2.4,
       "avgFeelsLikeMax": -6.5,
-      "avgPrecipitation": 5.1,
+      "avgPrecipitation": 4.9,
       "avgWindSpeed": 14.8,
       "avgWeatherCode": 73,
       "comfortScore": 9,
       "bestYear": {
         "year": 2023,
         "comfortScore": 50,
-        "avgTempMax": -9,
+        "avgTempMax": -8.8,
         "avgPrecipitation": 0,
         "avgWindSpeed": 10.2,
         "weatherCode": 0
@@ -8598,11 +8556,11 @@
         "year": 2019,
         "comfortScore": 0,
         "avgTempMax": 2.1,
-        "avgPrecipitation": 23.3,
+        "avgPrecipitation": 20.3,
         "avgWindSpeed": 28.9,
         "weatherCode": 75
       },
-      "tempTrend": -0.2,
+      "tempTrend": -0.19,
       "dataYears": 10
     },
     {
@@ -8620,7 +8578,7 @@
       "bestYear": {
         "year": 2018,
         "comfortScore": 53,
-        "avgTempMax": -15.2,
+        "avgTempMax": -15.1,
         "avgPrecipitation": 0,
         "avgWindSpeed": 8.2,
         "weatherCode": 0
@@ -8633,7 +8591,7 @@
         "avgWindSpeed": 14.2,
         "weatherCode": 75
       },
-      "tempTrend": 0.83,
+      "tempTrend": 0.84,
       "dataYears": 10
     },
     {
@@ -8642,7 +8600,7 @@
       "discipline": "langrenn",
       "officialDate": "2026-04-02",
       "region": "Innlandet",
-      "avgTempMax": 2.1,
+      "avgTempMax": 2.2,
       "avgFeelsLikeMax": -2.1,
       "avgPrecipitation": 1,
       "avgWindSpeed": 13.8,
@@ -8651,7 +8609,7 @@
       "bestYear": {
         "year": 2023,
         "comfortScore": 54,
-        "avgTempMax": 0.7,
+        "avgTempMax": 0.8,
         "avgPrecipitation": 0,
         "avgWindSpeed": 7.9,
         "weatherCode": 0
@@ -8659,7 +8617,7 @@
       "worstYear": {
         "year": 2020,
         "comfortScore": 6,
-        "avgTempMax": -0.1,
+        "avgTempMax": 0,
         "avgPrecipitation": 5,
         "avgWindSpeed": 20.9,
         "weatherCode": 75
@@ -8673,9 +8631,9 @@
       "discipline": "langrenn",
       "officialDate": "2026-02-21",
       "region": "Trøndelag",
-      "avgTempMax": 2.5,
+      "avgTempMax": 2.6,
       "avgFeelsLikeMax": -1.1,
-      "avgPrecipitation": 3.8,
+      "avgPrecipitation": 3.7,
       "avgWindSpeed": 17,
       "avgWeatherCode": 73,
       "comfortScore": 9,
@@ -8690,12 +8648,12 @@
       "worstYear": {
         "year": 2025,
         "comfortScore": 0,
-        "avgTempMax": 5.5,
+        "avgTempMax": 6.3,
         "avgPrecipitation": 13.3,
         "avgWindSpeed": 21.3,
-        "weatherCode": 75
+        "weatherCode": 63
       },
-      "tempTrend": 0.42,
+      "tempTrend": 0.46,
       "dataYears": 10
     },
     {
@@ -8704,16 +8662,30 @@
       "discipline": "langrenn",
       "officialDate": "2026-03-29",
       "region": "Trøndelag",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 0.4,
+      "avgFeelsLikeMax": -4.1,
+      "avgPrecipitation": 2.8,
+      "avgWindSpeed": 19.2,
+      "avgWeatherCode": 71,
+      "comfortScore": 9,
+      "bestYear": {
+        "year": 2023,
+        "comfortScore": 45,
+        "avgTempMax": -5.3,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 11.8,
+        "weatherCode": 2
+      },
+      "worstYear": {
+        "year": 2020,
+        "comfortScore": 0,
+        "avgTempMax": -2.5,
+        "avgPrecipitation": 11.3,
+        "avgWindSpeed": 25.9,
+        "weatherCode": 75
+      },
+      "tempTrend": 0.19,
+      "dataYears": 10
     },
     {
       "id": "romjulsrennet-sjusjoen",
@@ -8721,16 +8693,30 @@
       "discipline": "langrenn",
       "officialDate": "2026-12-30",
       "region": "Innlandet",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": -4.2,
+      "avgFeelsLikeMax": -8.4,
+      "avgPrecipitation": 2.1,
+      "avgWindSpeed": 14,
+      "avgWeatherCode": 73,
+      "comfortScore": 13,
+      "bestYear": {
+        "year": 2017,
+        "comfortScore": 48,
+        "avgTempMax": -7.8,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 5.9,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2022,
+        "comfortScore": 3,
+        "avgTempMax": -2.3,
+        "avgPrecipitation": 7.3,
+        "avgWindSpeed": 24.2,
+        "weatherCode": 73
+      },
+      "tempTrend": -0.4,
+      "dataYears": 10
     },
     {
       "id": "bossekop-langlop",
@@ -8738,16 +8724,30 @@
       "discipline": "langrenn",
       "officialDate": "2026-03-22",
       "region": "Finnmark",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": -0.5,
+      "avgFeelsLikeMax": -4.4,
+      "avgPrecipitation": 1.2,
+      "avgWindSpeed": 12.7,
+      "avgWeatherCode": 73,
+      "comfortScore": 15,
+      "bestYear": {
+        "year": 2016,
+        "comfortScore": 46,
+        "avgTempMax": -7.2,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 7.3,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2022,
+        "comfortScore": 9,
+        "avgTempMax": 2.8,
+        "avgPrecipitation": 6.9,
+        "avgWindSpeed": 10.3,
+        "weatherCode": 73
+      },
+      "tempTrend": 0.68,
+      "dataYears": 10
     },
     {
       "id": "jomfruslettfjellet-rundt",
@@ -8755,16 +8755,30 @@
       "discipline": "langrenn",
       "officialDate": "2026-03-29",
       "region": "Innlandet",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 0.2,
+      "avgFeelsLikeMax": -4.4,
+      "avgPrecipitation": 2.5,
+      "avgWindSpeed": 17,
+      "avgWeatherCode": 73,
+      "comfortScore": 11,
+      "bestYear": {
+        "year": 2018,
+        "comfortScore": 47,
+        "avgTempMax": -5.4,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 10.2,
+        "weatherCode": 1
+      },
+      "worstYear": {
+        "year": 2016,
+        "comfortScore": 0,
+        "avgTempMax": 2,
+        "avgPrecipitation": 11.1,
+        "avgWindSpeed": 21,
+        "weatherCode": 75
+      },
+      "tempTrend": 0.08,
+      "dataYears": 10
     },
     {
       "id": "jomfruslettfjellet-rundt-2026-trimklasse",
@@ -8772,16 +8786,30 @@
       "discipline": "langrenn",
       "officialDate": "2026-03-29",
       "region": "Norge",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 3.1,
+      "avgFeelsLikeMax": -0.4,
+      "avgPrecipitation": 2.8,
+      "avgWindSpeed": 11.4,
+      "avgWeatherCode": 51,
+      "comfortScore": 23,
+      "bestYear": {
+        "year": 2018,
+        "comfortScore": 51,
+        "avgTempMax": -3.3,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 7.6,
+        "weatherCode": 2
+      },
+      "worstYear": {
+        "year": 2016,
+        "comfortScore": 2,
+        "avgTempMax": 3.9,
+        "avgPrecipitation": 13.1,
+        "avgWindSpeed": 18.4,
+        "weatherCode": 55
+      },
+      "tempTrend": 0.24,
+      "dataYears": 10
     },
     {
       "id": "sirdalslami",
@@ -8789,16 +8817,30 @@
       "discipline": "langrenn",
       "officialDate": "2027-03-13",
       "region": "Agder",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 1.4,
+      "avgFeelsLikeMax": -2.3,
+      "avgPrecipitation": 4.6,
+      "avgWindSpeed": 14.6,
+      "avgWeatherCode": 3,
+      "comfortScore": 23,
+      "bestYear": {
+        "year": 2025,
+        "comfortScore": 48,
+        "avgTempMax": -0.9,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 6.2,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2023,
+        "comfortScore": 1,
+        "avgTempMax": 2.4,
+        "avgPrecipitation": 21.6,
+        "avgWindSpeed": 18.2,
+        "weatherCode": 75
+      },
+      "tempTrend": -0.04,
+      "dataYears": 10
     },
     {
       "id": "jomfruslettfjellet-rundt-2026-trimklasse-test",
@@ -8806,16 +8848,30 @@
       "discipline": "langrenn",
       "officialDate": "2026-03-24",
       "region": "Norge",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 4.6,
+      "avgFeelsLikeMax": 0.8,
+      "avgPrecipitation": 0.3,
+      "avgWindSpeed": 9.8,
+      "avgWeatherCode": 3,
+      "comfortScore": 42,
+      "bestYear": {
+        "year": 2022,
+        "comfortScore": 49,
+        "avgTempMax": 7.2,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 6.2,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2019,
+        "comfortScore": 15,
+        "avgTempMax": 3.8,
+        "avgPrecipitation": 1.3,
+        "avgWindSpeed": 11.6,
+        "weatherCode": 71
+      },
+      "tempTrend": 0.39,
+      "dataYears": 10
     },
     {
       "id": "hattrennet",
@@ -8823,16 +8879,30 @@
       "discipline": "langrenn",
       "officialDate": "2026-04-11",
       "region": "Nordland",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 2,
+      "avgFeelsLikeMax": -2,
+      "avgPrecipitation": 2.4,
+      "avgWindSpeed": 13.4,
+      "avgWeatherCode": 73,
+      "comfortScore": 13,
+      "bestYear": {
+        "year": 2019,
+        "comfortScore": 50,
+        "avgTempMax": -1.8,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 8.2,
+        "weatherCode": 1
+      },
+      "worstYear": {
+        "year": 2017,
+        "comfortScore": 9,
+        "avgTempMax": 0.6,
+        "avgPrecipitation": 4.1,
+        "avgWindSpeed": 16.6,
+        "weatherCode": 75
+      },
+      "tempTrend": 0.22,
+      "dataYears": 10
     },
     {
       "id": "skjaervikrennet",
@@ -8840,16 +8910,30 @@
       "discipline": "langrenn",
       "officialDate": "2026-04-18",
       "region": "Vestland",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 10.6,
+      "avgFeelsLikeMax": 7.2,
+      "avgPrecipitation": 2.3,
+      "avgWindSpeed": 20.9,
+      "avgWeatherCode": 3,
+      "comfortScore": 29,
+      "bestYear": {
+        "year": 2021,
+        "comfortScore": 59,
+        "avgTempMax": 13.6,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 14.6,
+        "weatherCode": 1
+      },
+      "worstYear": {
+        "year": 2016,
+        "comfortScore": 0,
+        "avgTempMax": 6.9,
+        "avgPrecipitation": 15.7,
+        "avgWindSpeed": 27.8,
+        "weatherCode": 61
+      },
+      "tempTrend": 0.24,
+      "dataYears": 10
     },
     {
       "id": "janteloppet",
@@ -8857,16 +8941,30 @@
       "discipline": "langrenn",
       "officialDate": "2026-04-11",
       "region": "Innlandet",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 2.9,
+      "avgFeelsLikeMax": -1,
+      "avgPrecipitation": 2.7,
+      "avgWindSpeed": 13,
+      "avgWeatherCode": 3,
+      "comfortScore": 31,
+      "bestYear": {
+        "year": 2019,
+        "comfortScore": 51,
+        "avgTempMax": 0,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 7.7,
+        "weatherCode": 1
+      },
+      "worstYear": {
+        "year": 2023,
+        "comfortScore": 3,
+        "avgTempMax": 2.6,
+        "avgPrecipitation": 17.1,
+        "avgWindSpeed": 14.3,
+        "weatherCode": 75
+      },
+      "tempTrend": 0.4,
+      "dataYears": 10
     },
     {
       "id": "svalbard-skimaraton-17-april",
@@ -8874,16 +8972,30 @@
       "discipline": "langrenn",
       "officialDate": "2027-04-17",
       "region": "Longyearbyen",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": -4.5,
+      "avgFeelsLikeMax": -8.6,
+      "avgPrecipitation": 1.2,
+      "avgWindSpeed": 11.8,
+      "avgWeatherCode": 3,
+      "comfortScore": 37,
+      "bestYear": {
+        "year": 2025,
+        "comfortScore": 46,
+        "avgTempMax": -8.3,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 7.5,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2021,
+        "comfortScore": 9,
+        "avgTempMax": -2.8,
+        "avgPrecipitation": 2.1,
+        "avgWindSpeed": 21.7,
+        "weatherCode": 73
+      },
+      "tempTrend": 0.23,
+      "dataYears": 10
     },
     {
       "id": "slarverennet-3-april",
@@ -8891,16 +9003,30 @@
       "discipline": "langrenn",
       "officialDate": "2027-04-03",
       "region": "Buskerud",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 2.7,
+      "avgFeelsLikeMax": -1.4,
+      "avgPrecipitation": 0.8,
+      "avgWindSpeed": 11,
+      "avgWeatherCode": 3,
+      "comfortScore": 39,
+      "bestYear": {
+        "year": 2023,
+        "comfortScore": 49,
+        "avgTempMax": 1.6,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 5.6,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2018,
+        "comfortScore": 11,
+        "avgTempMax": -3.6,
+        "avgPrecipitation": 4.5,
+        "avgWindSpeed": 12.5,
+        "weatherCode": 73
+      },
+      "tempTrend": 0.03,
+      "dataYears": 10
     },
     {
       "id": "spanstind-rundt",
@@ -8908,16 +9034,30 @@
       "discipline": "langrenn",
       "officialDate": "2027-03-25",
       "region": "Troms",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": -2.6,
+      "avgFeelsLikeMax": -6.7,
+      "avgPrecipitation": 7.1,
+      "avgWindSpeed": 12,
+      "avgWeatherCode": 73,
+      "comfortScore": 8,
+      "bestYear": {
+        "year": 2023,
+        "comfortScore": 46,
+        "avgTempMax": -8.7,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 7.6,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2025,
+        "comfortScore": 0,
+        "avgTempMax": -1.7,
+        "avgPrecipitation": 15.5,
+        "avgWindSpeed": 19.2,
+        "weatherCode": 75
+      },
+      "tempTrend": -0.18,
+      "dataYears": 10
     },
     {
       "id": "reistadlopet-2027-sc",
@@ -8925,16 +9065,30 @@
       "discipline": "langrenn",
       "officialDate": "2027-04-03",
       "region": "Norge",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": 0.5,
+      "avgFeelsLikeMax": -3.5,
+      "avgPrecipitation": 4.9,
+      "avgWindSpeed": 12.8,
+      "avgWeatherCode": 73,
+      "comfortScore": 10,
+      "bestYear": {
+        "year": 2018,
+        "comfortScore": 54,
+        "avgTempMax": -2.5,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 6.1,
+        "weatherCode": 1
+      },
+      "worstYear": {
+        "year": 2025,
+        "comfortScore": 0,
+        "avgTempMax": 5.9,
+        "avgPrecipitation": 12.6,
+        "avgWindSpeed": 20,
+        "weatherCode": 61
+      },
+      "tempTrend": -0.04,
+      "dataYears": 10
     }
   ]
 }
