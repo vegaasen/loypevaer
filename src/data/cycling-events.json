@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T12:42:09.270Z",
+  "generatedAt": "2026-10-19T10:28:25.690Z",
   "source": "eqtiming.com / Norges Cykleforbund (organizationId=13)",
   "events": [
     {
@@ -71,7 +71,7 @@
       "distance": 50,
       "distanceLabel": "50 km",
       "sportLevel": "Tur",
-      "region": "Hol",
+      "region": "Buskerud",
       "url": "https://www.fat-viking.com/en",
       "waypoints": [
         {
@@ -907,7 +907,7 @@
       "distance": 158,
       "distanceLabel": "158 km",
       "sportLevel": "UCI",
-      "region": "Buskerud",
+      "region": "Hole",
       "url": " ",
       "waypoints": [
         {
@@ -1428,9 +1428,9 @@
     },
     {
       "id": "bukkene-bruse",
-      "name": "Bukkene Bruse 2026",
+      "name": "Bukkene Bruse 2027",
       "discipline": "landevei",
-      "officialDate": "2026-06-07",
+      "officialDate": "2027-05-23",
       "distance": 77,
       "distanceLabel": "77 km",
       "sportLevel": "Tur",
@@ -2562,6 +2562,24 @@
           "label": "Start/Mål – Skistuavegen 1, 2074 Eidsvoll Verk",
           "lat": 60.3146376,
           "lon": 11.1441232
+        }
+      ]
+    },
+    {
+      "id": "telemark-tours-2027-50-ar",
+      "name": "Telemark Tours 2027 - 50 år",
+      "discipline": "landevei",
+      "officialDate": "2027-06-05",
+      "distance": 180,
+      "distanceLabel": "180 km",
+      "sportLevel": "Tur",
+      "region": "Telemark",
+      "url": "www.telemark-tours.no",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Skien",
+          "lat": 59.2662883,
+          "lon": 9.5311354
         }
       ]
     }
