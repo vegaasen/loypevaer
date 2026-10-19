@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T14:59:19.121Z",
+  "generatedAt": "2026-10-19T12:43:44.449Z",
   "source": "eqtiming.com / Norges Skiforbund (organizationId=32)",
   "events": [
     {
@@ -60,7 +60,7 @@
       "id": "budorrennet",
       "name": "Budorrennet 2027",
       "discipline": "langrenn",
-      "officialDate": "2027-01-02",
+      "officialDate": "2027-01-09",
       "distance": 41,
       "distanceLabel": "41 km",
       "sportLevel": "",
@@ -406,7 +406,7 @@
       "distance": 21,
       "distanceLabel": "21 km",
       "sportLevel": "",
-      "region": "Buskerud",
+      "region": "Ringerike",
       "url": "",
       "waypoints": [
         {
@@ -447,8 +447,8 @@
       "waypoints": [
         {
           "label": "Start/Mål – Sørum skole",
-          "lat": 60.011497,
-          "lon": 11.236423
+          "lat": 60.012318,
+          "lon": 11.235529
         }
       ]
     },
@@ -622,13 +622,13 @@
       "distance": 32,
       "distanceLabel": "32 km",
       "sportLevel": "",
-      "region": "Rollag",
+      "region": "Buskerud",
       "url": "https://www.facebook.com/VegglifjellRennet/?notif_id=1673356192761370&notif_t=page_fan&ref=notif",
       "waypoints": [
         {
           "label": "Start/Mål – Vegglifjell",
-          "lat": 60.0464314,
-          "lon": 8.9842441
+          "lat": 60.0468569,
+          "lon": 8.9862576
         }
       ]
     },
@@ -712,13 +712,13 @@
       "distance": 10,
       "distanceLabel": "10 km",
       "sportLevel": "",
-      "region": "Gol",
+      "region": "Buskerud",
       "url": "",
       "waypoints": [
         {
           "label": "Start/Mål – Golsfjellet",
-          "lat": 60.8271603,
-          "lon": 8.9882065
+          "lat": 60.7808466,
+          "lon": 9.0022096
         }
       ]
     },
@@ -766,7 +766,7 @@
       "distance": 25,
       "distanceLabel": "25 km",
       "sportLevel": "",
-      "region": "Buskerud",
+      "region": "Lier",
       "url": "www.hauern.no",
       "waypoints": [
         {
@@ -1119,24 +1119,6 @@
       ]
     },
     {
-      "id": "janteloppet",
-      "name": "Janteloppet 2026",
-      "discipline": "langrenn",
-      "officialDate": "2026-04-11",
-      "distance": 20,
-      "distanceLabel": "20 km",
-      "sportLevel": "",
-      "region": "Innlandet",
-      "url": "https://www.janteloppet.com",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Mosetertoppen skistadion",
-          "lat": 61.252917,
-          "lon": 10.509584
-        }
-      ]
-    },
-    {
       "id": "svalbard-skimaraton-17-april",
       "name": "Svalbard skimaraton 17.april 2027",
       "discipline": "langrenn",
@@ -1205,6 +1187,24 @@
           "label": "Start/Mål – Setermoen-Bardufoss",
           "lat": 69.0551673,
           "lon": 18.4741254
+        }
+      ]
+    },
+    {
+      "id": "hakadalsrennet-klassisk",
+      "name": "Hakadalsrennet Klassisk",
+      "discipline": "langrenn",
+      "officialDate": "2026-12-13",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "sportLevel": "",
+      "region": "Akershus",
+      "url": " ",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Varingskollen",
+          "lat": 60.0933308,
+          "lon": 10.8360771
         }
       ]
     }
