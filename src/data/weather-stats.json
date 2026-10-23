@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T08:57:51.147Z",
+  "generatedAt": "2026-10-23T08:57:29.036Z",
   "events": [
     {
       "id": "birkebeinerrennet",
@@ -2626,11 +2626,11 @@
         "weatherCode": 3
       },
       "worstYear": {
-        "year": 2022,
+        "year": 2021,
         "comfortScore": 7,
-        "avgTempMax": 8.6,
-        "avgPrecipitation": 8,
-        "avgWindSpeed": 16.3,
+        "avgTempMax": 5.6,
+        "avgPrecipitation": 5.1,
+        "avgWindSpeed": 30.8,
         "weatherCode": 61
       },
       "tempTrend": -0.06,
@@ -8673,12 +8673,12 @@
       "discipline": "langrenn",
       "officialDate": "2026-04-02",
       "region": "Innlandet",
-      "avgTempMax": 2.2,
-      "avgFeelsLikeMax": -2.1,
-      "avgPrecipitation": 1,
-      "avgWindSpeed": 13.8,
+      "avgTempMax": 1.6,
+      "avgFeelsLikeMax": -2.8,
+      "avgPrecipitation": 1.2,
+      "avgWindSpeed": 14.2,
       "avgWeatherCode": 3,
-      "comfortScore": 34,
+      "comfortScore": 33,
       "bestYear": {
         "year": 2023,
         "comfortScore": 54,
@@ -8695,8 +8695,8 @@
         "avgWindSpeed": 20.9,
         "weatherCode": 75
       },
-      "tempTrend": 0.03,
-      "dataYears": 10
+      "tempTrend": -0.6,
+      "dataYears": 8
     },
     {
       "id": "granasfjellrennet",
