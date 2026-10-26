@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T10:28:25.690Z",
+  "generatedAt": "2026-10-26T10:43:37.841Z",
   "source": "eqtiming.com / Norges Cykleforbund (organizationId=13)",
   "events": [
     {
@@ -65,13 +65,13 @@
     },
     {
       "id": "fat-viking",
-      "name": "Fat Viking 2026",
+      "name": "Fat Viking 2027",
       "discipline": "terreng",
-      "officialDate": "2026-01-24",
-      "distance": 50,
-      "distanceLabel": "50 km",
+      "officialDate": "2027-01-30",
+      "distance": 100,
+      "distanceLabel": "100 km",
       "sportLevel": "Tur",
-      "region": "Buskerud",
+      "region": "Hol",
       "url": "https://www.fat-viking.com/en",
       "waypoints": [
         {
@@ -907,7 +907,7 @@
       "distance": 158,
       "distanceLabel": "158 km",
       "sportLevel": "UCI",
-      "region": "Hole",
+      "region": "Buskerud",
       "url": " ",
       "waypoints": [
         {
@@ -925,7 +925,7 @@
       "distance": 171.6,
       "distanceLabel": "171.6 km",
       "sportLevel": "UCI",
-      "region": "Ringerike",
+      "region": "Buskerud",
       "url": " ",
       "waypoints": [
         {
@@ -1606,7 +1606,7 @@
       "distance": 90,
       "distanceLabel": "90 km",
       "sportLevel": "Trim",
-      "region": "Buskerud",
+      "region": "Øvre Eiker",
       "url": "http://eikerrittet.no/",
       "waypoints": [
         {
@@ -2577,9 +2577,9 @@
       "url": "www.telemark-tours.no",
       "waypoints": [
         {
-          "label": "Start/Mål – Skien",
-          "lat": 59.2662883,
-          "lon": 9.5311354
+          "label": "Start/Mål – Vrådal",
+          "lat": 59.3278299,
+          "lon": 8.4157026
         }
       ]
     }
