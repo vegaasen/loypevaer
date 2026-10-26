@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T12:43:44.449Z",
+  "generatedAt": "2026-10-26T12:37:20.730Z",
   "source": "eqtiming.com / Norges Skiforbund (organizationId=32)",
   "events": [
     {
@@ -112,9 +112,9 @@
     },
     {
       "id": "trysil-skimaraton",
-      "name": "Trysil Skimaraton 2026",
+      "name": "Trysil Skimaraton 2027",
       "discipline": "langrenn",
-      "officialDate": "2026-02-14",
+      "officialDate": "2027-02-20",
       "distance": 42,
       "distanceLabel": "42 km",
       "sportLevel": "",
@@ -226,7 +226,7 @@
       "distance": 11,
       "distanceLabel": "11 km",
       "sportLevel": "",
-      "region": "Buskerud",
+      "region": "Gol",
       "url": "www.slarverennet.no",
       "waypoints": [
         {
@@ -406,7 +406,7 @@
       "distance": 21,
       "distanceLabel": "21 km",
       "sportLevel": "",
-      "region": "Ringerike",
+      "region": "Buskerud",
       "url": "",
       "waypoints": [
         {
@@ -622,13 +622,13 @@
       "distance": 32,
       "distanceLabel": "32 km",
       "sportLevel": "",
-      "region": "Buskerud",
+      "region": "Rollag",
       "url": "https://www.facebook.com/VegglifjellRennet/?notif_id=1673356192761370&notif_t=page_fan&ref=notif",
       "waypoints": [
         {
           "label": "Start/Mål – Vegglifjell",
-          "lat": 60.0468569,
-          "lon": 8.9862576
+          "lat": 60.0464314,
+          "lon": 8.9842441
         }
       ]
     },
@@ -712,13 +712,13 @@
       "distance": 10,
       "distanceLabel": "10 km",
       "sportLevel": "",
-      "region": "Buskerud",
+      "region": "Gol",
       "url": "",
       "waypoints": [
         {
           "label": "Start/Mål – Golsfjellet",
-          "lat": 60.7808466,
-          "lon": 9.0022096
+          "lat": 60.8271603,
+          "lon": 8.9882065
         }
       ]
     },
@@ -766,7 +766,7 @@
       "distance": 25,
       "distanceLabel": "25 km",
       "sportLevel": "",
-      "region": "Lier",
+      "region": "Buskerud",
       "url": "www.hauern.no",
       "waypoints": [
         {
@@ -1119,6 +1119,24 @@
       ]
     },
     {
+      "id": "janteloppet",
+      "name": "Janteloppet 2026",
+      "discipline": "langrenn",
+      "officialDate": "2026-04-11",
+      "distance": 20,
+      "distanceLabel": "20 km",
+      "sportLevel": "",
+      "region": "Innlandet",
+      "url": "https://www.janteloppet.com",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Mosetertoppen skistadion",
+          "lat": 61.252917,
+          "lon": 10.509584
+        }
+      ]
+    },
+    {
       "id": "svalbard-skimaraton-17-april",
       "name": "Svalbard skimaraton 17.april 2027",
       "discipline": "langrenn",
@@ -1144,7 +1162,7 @@
       "distance": 27,
       "distanceLabel": "27 km",
       "sportLevel": "",
-      "region": "Buskerud",
+      "region": "Gol",
       "url": "www.slarverennet.no",
       "waypoints": [
         {
