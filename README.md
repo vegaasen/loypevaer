@@ -21,7 +21,6 @@ Pick a Norwegian race, choose a date, and get weather conditions at key waypoint
   <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-brightgreen?style=for-the-badge" alt="License"></a>
 </p>
 
-
 ---
 
 <p align="center">
@@ -58,86 +57,86 @@ Pick a Norwegian race, choose a date, and get weather conditions at key waypoint
 
 ### Sykkel — Terreng
 
-| Arrangement | Distance | Region |
-|---|---|---|
-| Birkebeinerrittet | 88 km | Innlandet |
-| GravelBirken | 92 km | Innlandet |
-| HalvBirken Sykkel | 46 km | Innlandet |
-| UltraBirken | 110 km | Innlandet |
-| Rallarvegen | 82 km | Vestland / Viken |
-| Garborgriket Rundt | 70 km | Rogaland |
-| Øyungen Rundt | 45 km | Trøndelag |
-| OBOS Terrengsykkelrittet | 28 km | Oslo |
-| Stenhoggerrittet | 46 km | Viken |
-| Elgrittet | 54 km | Viken |
-| Grenserittet | 80 km | Østfold / Sverige |
-| Skjebergrittet | 38 km | Østfold |
-| Valdresrittet | 54 km | Innlandet |
-| Sjusjørittet | 56 km | Innlandet |
-| Trysil-Knut / Osensjøen Rundt Gravel | 60 km | Innlandet |
+| Arrangement                          | Distance | Region            |
+| ------------------------------------ | -------- | ----------------- |
+| Birkebeinerrittet                    | 88 km    | Innlandet         |
+| GravelBirken                         | 92 km    | Innlandet         |
+| HalvBirken Sykkel                    | 46 km    | Innlandet         |
+| UltraBirken                          | 110 km   | Innlandet         |
+| Rallarvegen                          | 82 km    | Vestland / Viken  |
+| Garborgriket Rundt                   | 70 km    | Rogaland          |
+| Øyungen Rundt                        | 45 km    | Trøndelag         |
+| OBOS Terrengsykkelrittet             | 28 km    | Oslo              |
+| Stenhoggerrittet                     | 46 km    | Viken             |
+| Elgrittet                            | 54 km    | Viken             |
+| Grenserittet                         | 80 km    | Østfold / Sverige |
+| Skjebergrittet                       | 38 km    | Østfold           |
+| Valdresrittet                        | 54 km    | Innlandet         |
+| Sjusjørittet                         | 56 km    | Innlandet         |
+| Trysil-Knut / Osensjøen Rundt Gravel | 60 km    | Innlandet         |
 
 ### Sykkel — Landevei
 
-| Arrangement | Distance | Region |
-|---|---|---|
-| Styrkeprøven | 540 km | Trøndelag / Innlandet |
-| Jotunheimen Rundt | 430 km | Innlandet / Vestland |
-| Vätternrundan | 300 km | Östergötland |
-| Color Line Tour | 210 km | Agder |
-| Haugastøl–Bergen | 182 km | Vestland |
-| Mjøsrittet | 167 km | Innlandet |
-| Lysebotn-Bryne Rittet | 147 km | Rogaland |
-| Halvvätternrundan | 150 km | Östergötland |
-| Tyrifjorden Rundt | 145 km | Viken |
-| Randsfjorden Rundt | 152 km | Viken |
-| L'Étape Trondheim | 130 km | Trøndelag |
-| Victoriarunden | 120 km | Trøndelag |
-| Haugesund-Sauda | 107 km | Rogaland / Vestland |
-| Nordmarka Rundt | 148 km | Oslo / Viken |
-| Nordsjørittet (Egersund–Flekkefjord) | 91 km | Rogaland |
-| Eikerrittet | 90 km | Viken |
-| Nordsjørittet (Jæren, Egersund–Sandnes) | 88 km | Rogaland |
-| Skjærgårdsrittet | 75 km | Vestland |
-| Tour de Lyngen | 94 km | Troms |
-| Bergen-Voss | 78 km | Vestland |
-| Midnattsolrittet | 46 km | Nordland |
-| Tour de Frøya | 44 km | Trøndelag |
-| Lysebotn Opp | 14 km | Rogaland |
+| Arrangement                             | Distance | Region                |
+| --------------------------------------- | -------- | --------------------- |
+| Styrkeprøven                            | 540 km   | Trøndelag / Innlandet |
+| Jotunheimen Rundt                       | 430 km   | Innlandet / Vestland  |
+| Vätternrundan                           | 300 km   | Östergötland          |
+| Color Line Tour                         | 210 km   | Agder                 |
+| Haugastøl–Bergen                        | 182 km   | Vestland              |
+| Mjøsrittet                              | 167 km   | Innlandet             |
+| Lysebotn-Bryne Rittet                   | 147 km   | Rogaland              |
+| Halvvätternrundan                       | 150 km   | Östergötland          |
+| Tyrifjorden Rundt                       | 145 km   | Viken                 |
+| Randsfjorden Rundt                      | 152 km   | Viken                 |
+| L'Étape Trondheim                       | 130 km   | Trøndelag             |
+| Victoriarunden                          | 120 km   | Trøndelag             |
+| Haugesund-Sauda                         | 107 km   | Rogaland / Vestland   |
+| Nordmarka Rundt                         | 148 km   | Oslo / Viken          |
+| Nordsjørittet (Egersund–Flekkefjord)    | 91 km    | Rogaland              |
+| Eikerrittet                             | 90 km    | Viken                 |
+| Nordsjørittet (Jæren, Egersund–Sandnes) | 88 km    | Rogaland              |
+| Skjærgårdsrittet                        | 75 km    | Vestland              |
+| Tour de Lyngen                          | 94 km    | Troms                 |
+| Bergen-Voss                             | 78 km    | Vestland              |
+| Midnattsolrittet                        | 46 km    | Nordland              |
+| Tour de Frøya                           | 44 km    | Trøndelag             |
+| Lysebotn Opp                            | 14 km    | Rogaland              |
 
 ### Langrenn
 
-| Arrangement | Distance | Region |
-|---|---|---|
-| Birkebeinerrennet | 53 km | Innlandet |
-| SkøyteBirken | 53 km | Innlandet |
-| Holmenkollmarsjen | 52 km | Oslo |
-| Skarverennet | 44 km | Viken / Vestland |
+| Arrangement       | Distance | Region           |
+| ----------------- | -------- | ---------------- |
+| Birkebeinerrennet | 53 km    | Innlandet        |
+| SkøyteBirken      | 53 km    | Innlandet        |
+| Holmenkollmarsjen | 52 km    | Oslo             |
+| Skarverennet      | 44 km    | Viken / Vestland |
 
 ### Triathlon
 
-| Arrangement | Region |
-|---|---|
-| Norseman Xtreme Triathlon | Vestland |
-| *(+ auto-synced Norwegian triathlon events)* | — |
+| Arrangement                                  | Region   |
+| -------------------------------------------- | -------- |
+| Norseman Xtreme Triathlon                    | Vestland |
+| _(+ auto-synced Norwegian triathlon events)_ | —        |
 
 ### Ultraløp
 
-| Arrangement | Distance | Region |
-|---|---|---|
-| Lofoten Ultra-Trail 100M | 162 km | Nordland |
-| Blefjellsbeste | 96 km | Numedal |
-| Lofoten Ultra-Trail 50M | 88 km | Nordland |
-| Ecotrail Oslo | 80 km | Oslo / Viken |
-| Jotunheimen Trail Run Ultra | 73 km | Innlandet |
-| UltraBirken Løp | 60 km | Innlandet |
+| Arrangement                 | Distance | Region       |
+| --------------------------- | -------- | ------------ |
+| Lofoten Ultra-Trail 100M    | 162 km   | Nordland     |
+| Blefjellsbeste              | 96 km    | Numedal      |
+| Lofoten Ultra-Trail 50M     | 88 km    | Nordland     |
+| Ecotrail Oslo               | 80 km    | Oslo / Viken |
+| Jotunheimen Trail Run Ultra | 73 km    | Innlandet    |
+| UltraBirken Løp             | 60 km    | Innlandet    |
 
 ### Løping
 
-| Arrangement | Distance | Region |
-|---|---|---|
-| Birkebeinerløpet | 21 km | Innlandet |
-| Sentrumsløpet | 10 km | Oslo |
-| *(+ auto-synced Norwegian road races and trail runs)* | — | — |
+| Arrangement                                           | Distance | Region    |
+| ----------------------------------------------------- | -------- | --------- |
+| Birkebeinerløpet                                      | 21 km    | Innlandet |
+| Sentrumsløpet                                         | 10 km    | Oslo      |
+| _(+ auto-synced Norwegian road races and trail runs)_ | —        | —         |
 
 ---
 
@@ -268,16 +267,16 @@ scripts/
 
 ## Tech stack
 
-| | |
-|---|---|
-| Framework | ![React](https://img.shields.io/badge/-React_19-61DAFB?logo=react&logoColor=black&style=flat-square) ![TypeScript](https://img.shields.io/badge/-TypeScript_6-3178C6?logo=typescript&logoColor=white&style=flat-square) |
-| Build | ![Vite](https://img.shields.io/badge/-Vite_8-646CFF?logo=vite&logoColor=white&style=flat-square) ![Bun](https://img.shields.io/badge/-Bun-F9F1E1?logo=bun&logoColor=black&style=flat-square) |
-| Routing | ![React Router](https://img.shields.io/badge/-React_Router_v7-CA4245?logo=reactrouter&logoColor=white&style=flat-square) |
-| Data fetching | ![TanStack Query](https://img.shields.io/badge/-TanStack_Query_v5-FF4154?logo=reactquery&logoColor=white&style=flat-square) |
-| Map | ![Leaflet](https://img.shields.io/badge/-Leaflet-199900?logo=leaflet&logoColor=white&style=flat-square) |
-| PWA | ![PWA](https://img.shields.io/badge/-vite--plugin--pwa-5A0FC8?logo=pwa&logoColor=white&style=flat-square) |
-| Testing | ![Vitest](https://img.shields.io/badge/-Vitest_4-6E9F18?logo=vitest&logoColor=white&style=flat-square) ![Testing Library](https://img.shields.io/badge/-Testing_Library-E33332?logo=testinglibrary&logoColor=white&style=flat-square) ![MSW](https://img.shields.io/badge/-MSW-FF6A33?style=flat-square) |
-| Weather API | ![Open-Meteo](https://img.shields.io/badge/-Open--Meteo-00B4D8?style=flat-square) — free, no auth required |
+|               |                                                                                                                                                                                                                                                                                                          |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Framework     | ![React](https://img.shields.io/badge/-React_19-61DAFB?logo=react&logoColor=black&style=flat-square) ![TypeScript](https://img.shields.io/badge/-TypeScript_6-3178C6?logo=typescript&logoColor=white&style=flat-square)                                                                                  |
+| Build         | ![Vite](https://img.shields.io/badge/-Vite_8-646CFF?logo=vite&logoColor=white&style=flat-square) ![Bun](https://img.shields.io/badge/-Bun-F9F1E1?logo=bun&logoColor=black&style=flat-square)                                                                                                             |
+| Routing       | ![React Router](https://img.shields.io/badge/-React_Router_v7-CA4245?logo=reactrouter&logoColor=white&style=flat-square)                                                                                                                                                                                 |
+| Data fetching | ![TanStack Query](https://img.shields.io/badge/-TanStack_Query_v5-FF4154?logo=reactquery&logoColor=white&style=flat-square)                                                                                                                                                                              |
+| Map           | ![Leaflet](https://img.shields.io/badge/-Leaflet-199900?logo=leaflet&logoColor=white&style=flat-square)                                                                                                                                                                                                  |
+| PWA           | ![PWA](https://img.shields.io/badge/-vite--plugin--pwa-5A0FC8?logo=pwa&logoColor=white&style=flat-square)                                                                                                                                                                                                |
+| Testing       | ![Vitest](https://img.shields.io/badge/-Vitest_4-6E9F18?logo=vitest&logoColor=white&style=flat-square) ![Testing Library](https://img.shields.io/badge/-Testing_Library-E33332?logo=testinglibrary&logoColor=white&style=flat-square) ![MSW](https://img.shields.io/badge/-MSW-FF6A33?style=flat-square) |
+| Weather API   | ![Open-Meteo](https://img.shields.io/badge/-Open--Meteo-00B4D8?style=flat-square) — free, no auth required                                                                                                                                                                                               |
 
 ---
 

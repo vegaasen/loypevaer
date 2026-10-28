@@ -58,9 +58,9 @@ The conventional commit prefixes themselves are standard and widely understood â
 
 ## Alternatives considered
 
-| Option | Why rejected |
-|--------|-------------|
-| Manual JSON editing | High friction for automation; easy to forget; inconsistent with CI-generated data files pattern |
-| `Changelog: <message>` trailer | Non-standard; not understood by existing tools; harder to enforce |
-| Full git log (no filter) | Too noisy; bot commits (`data:`, `chore:`) dominate the history |
-| Time-bounded (last 6 months) | Arbitrary cutoff; 50-entry limit is simpler and more predictable |
+| Option                         | Why rejected                                                                                    |
+| ------------------------------ | ----------------------------------------------------------------------------------------------- |
+| Manual JSON editing            | High friction for automation; easy to forget; inconsistent with CI-generated data files pattern |
+| `Changelog: <message>` trailer | Non-standard; not understood by existing tools; harder to enforce                               |
+| Full git log (no filter)       | Too noisy; bot commits (`data:`, `chore:`) dominate the history                                 |
+| Time-bounded (last 6 months)   | Arbitrary cutoff; 50-entry limit is simpler and more predictable                                |

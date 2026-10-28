@@ -19,28 +19,28 @@ Both `lint` and `build` must pass before submitting a PR.
 
 Which file to edit depends on the discipline and whether the event is auto-fetched:
 
-| Discipline | Auto-fetched? | File to edit |
-|---|---|---|
-| Langrenn, or any discipline without an auto-sync script | No | `src/data/arrangements.json` |
-| Cycling — **not** listed in the NCF/EQ Timing API | No | `src/data/cycling-manual.json` |
-| Cycling — already fetched by NCF/EQ Timing, but missing waypoints | Yes (auto) | `src/data/cycling-waypoints.json` via `enrich-cycling-waypoints.ts` |
-| Triathlon, running | Yes (auto) | Do not edit — fix the fetch script or source data |
+| Discipline                                                        | Auto-fetched? | File to edit                                                        |
+| ----------------------------------------------------------------- | ------------- | ------------------------------------------------------------------- |
+| Langrenn, or any discipline without an auto-sync script           | No            | `src/data/arrangements.json`                                        |
+| Cycling — **not** listed in the NCF/EQ Timing API                 | No            | `src/data/cycling-manual.json`                                      |
+| Cycling — already fetched by NCF/EQ Timing, but missing waypoints | Yes (auto)    | `src/data/cycling-waypoints.json` via `enrich-cycling-waypoints.ts` |
+| Triathlon, running                                                | Yes (auto)    | Do not edit — fix the fetch script or source data                   |
 
 Each manually curated entry must follow this schema:
 
 ```jsonc
 {
-  "id": "kebab-case-id",           // used in the URL: /arrangement/<id>
+  "id": "kebab-case-id", // used in the URL: /arrangement/<id>
   "name": "Event Name",
-  "discipline": "landevei",        // "langrenn", "landevei", "terreng", etc.
-  "distance": 88,                  // km
-  "elevationGain": 1200,           // metres
+  "discipline": "landevei", // "langrenn", "landevei", "terreng", etc.
+  "distance": 88, // km
+  "elevationGain": 1200, // metres
   "region": "Innlandet",
-  "officialDate": "2025-08-23",    // ISO date — update each season
-  "officialStartTime": "08:00",    // optional HH:MM
-  "url": "https://example.no/",   // optional race website
+  "officialDate": "2025-08-23", // ISO date — update each season
+  "officialStartTime": "08:00", // optional HH:MM
+  "url": "https://example.no/", // optional race website
   "waypoints": [
-    { "label": "Start – Rena", "lat": 60.123, "lon": 10.456, "altitude": 200 },
+    { "label": "Start – Rena", "lat": 60.123, "lon": 10.456, "altitude": 200 }
     // ...
   ]
 }
@@ -64,12 +64,12 @@ Use the [suggest a ritt](https://github.com/vegaasen/loypevaer/issues/new?templa
 
 Do **not** manually edit these files — they are overwritten by scheduled GitHub Actions workflows:
 
-| File | Source script | Workflow |
-|---|---|---|
-| `src/data/cycling-events.json` | `scripts/fetch-cycling-events.ts` | Weekly |
-| `src/data/weather-cache.json` | `scripts/fetch-weather-cache.ts` | Nightly |
-| `src/data/triathlon-events.json` | `scripts/fetch-triathlon-events.ts` | Scheduled |
-| `src/data/running-events.json` | `scripts/fetch-running-events.ts` | Monday 04:30 UTC |
+| File                             | Source script                       | Workflow         |
+| -------------------------------- | ----------------------------------- | ---------------- |
+| `src/data/cycling-events.json`   | `scripts/fetch-cycling-events.ts`   | Weekly           |
+| `src/data/weather-cache.json`    | `scripts/fetch-weather-cache.ts`    | Nightly          |
+| `src/data/triathlon-events.json` | `scripts/fetch-triathlon-events.ts` | Scheduled        |
+| `src/data/running-events.json`   | `scripts/fetch-running-events.ts`   | Monday 04:30 UTC |
 
 ## Code conventions
 

@@ -19,16 +19,16 @@ Show a per-waypoint historical climate badge ("Typisk regnvær", "Vått og blås
 
 ## Label Table
 
-| Rain | Wind | Cold | Norwegian label |
-|---|---|---|---|
-| ✓ | | | Typisk regnvær |
-| | ✓ | | Kjent for kraftig vind |
-| | | ✓ | Historisk kaldt |
-| ✓ | ✓ | | Vått og blåsende |
-| ✓ | | ✓ | Kaldt og vått |
-| | ✓ | ✓ | Kaldt og blåsende |
-| ✓ | ✓ | ✓ | Krevende forhold |
-| | | | Variert vær |
+| Rain | Wind | Cold | Norwegian label        |
+| ---- | ---- | ---- | ---------------------- |
+| ✓    |      |      | Typisk regnvær         |
+|      | ✓    |      | Kjent for kraftig vind |
+|      |      | ✓    | Historisk kaldt        |
+| ✓    | ✓    |      | Vått og blåsende       |
+| ✓    |      | ✓    | Kaldt og vått          |
+|      | ✓    | ✓    | Kaldt og blåsende      |
+| ✓    | ✓    | ✓    | Krevende forhold       |
+|      |      |      | Variert vær            |
 
 ---
 
@@ -45,7 +45,7 @@ export type ClimateStoryInput = {
   tempMax: number;
 }[];
 
-export function getClimateStoryLabel(years: ClimateStoryInput): string
+export function getClimateStoryLabel(years: ClimateStoryInput): string;
 ```
 
 Takes up to 10 historical data points for a waypoint, returns a Norwegian label string.
@@ -96,4 +96,4 @@ The "Historisk" label is muted/small. The badge pill matches the card's existing
 
 - No new API calls — 100% derived from already-cached data
 - No tooltip or expand interaction in v1
-- The existing "Klimasnitt" badge is unchanged — it signals the *current forecast* is historical, not the summary
+- The existing "Klimasnitt" badge is unchanged — it signals the _current forecast_ is historical, not the summary

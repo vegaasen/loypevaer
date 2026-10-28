@@ -12,13 +12,13 @@
 
 ## File Map
 
-| File | Change |
-|---|---|
-| `src/App.tsx` | Move `<ErrorBoundary>` inside `<BrowserRouter>` (and inside `<QueryClientProvider>`) |
-| `src/components/ErrorBoundary.tsx` | Import `NavBar`; redesign default fallback with `.status-card` layout + NavBar + two action buttons |
-| `src/pages/EventPage.tsx` | Add "no waypoints" render state after the not-found guard; guard JSON-LD block; redesign not-found render with `.status-card` |
-| `src/pages/NotFoundPage.tsx` | Redesign with `.status-card` classes |
-| `src/index.css` | Replace `.error-boundary` block with new `.status-page` / `.status-card` / `.status-card__*` classes; keep `.error-boundary__message` (used as inline fallback in EventPage weather section) |
+| File                               | Change                                                                                                                                                                                       |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `src/App.tsx`                      | Move `<ErrorBoundary>` inside `<BrowserRouter>` (and inside `<QueryClientProvider>`)                                                                                                         |
+| `src/components/ErrorBoundary.tsx` | Import `NavBar`; redesign default fallback with `.status-card` layout + NavBar + two action buttons                                                                                          |
+| `src/pages/EventPage.tsx`          | Add "no waypoints" render state after the not-found guard; guard JSON-LD block; redesign not-found render with `.status-card`                                                                |
+| `src/pages/NotFoundPage.tsx`       | Redesign with `.status-card` classes                                                                                                                                                         |
+| `src/index.css`                    | Replace `.error-boundary` block with new `.status-page` / `.status-card` / `.status-card__*` classes; keep `.error-boundary__message` (used as inline fallback in EventPage weather section) |
 
 ---
 
@@ -516,11 +516,7 @@ export class ErrorBoundary extends Component<Props, State> {
       );
     }
 
-    return (
-      <ChildrenContainer key={this.state.resetKey}>
-        {this.props.children}
-      </ChildrenContainer>
-    );
+    return <ChildrenContainer key={this.state.resetKey}>{this.props.children}</ChildrenContainer>;
   }
 }
 ```

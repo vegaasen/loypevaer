@@ -34,14 +34,14 @@ In the event page header area, near the event title/meta row. Icon: chain-link o
 
 Dynamic `<meta>` tags injected via a new `<EventPageMeta>` component using `react-helmet-async` on `EventPage`, replacing the existing `<PageMeta>` call for this page:
 
-| Tag | Value |
-|---|---|
-| `og:title` | `{event.name} · {formattedDate}` e.g. "Birkebeinerrittet · 14. juni 2025" |
+| Tag              | Value                                                                                                                                                     |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `og:title`       | `{event.name} · {formattedDate}` e.g. "Birkebeinerrittet · 14. juni 2025"                                                                                 |
 | `og:description` | Weather summary string, e.g. "Start: 12°C, lett bris · Rødsjølia: 9°C, sterk vind · Mål: 15°C" — falls back to existing description if weather not loaded |
-| `og:url` | Canonical URL including current `?date=` param (not start/finish — too noisy) |
-| `og:image` | Static per-discipline image from `public/og/{discipline}.jpg` with fallback to `public/og/default.jpg` |
-| `og:type` | `website` |
-| `twitter:card` | `summary_large_image` |
+| `og:url`         | Canonical URL including current `?date=` param (not start/finish — too noisy)                                                                             |
+| `og:image`       | Static per-discipline image from `public/og/{discipline}.jpg` with fallback to `public/og/default.jpg`                                                    |
+| `og:type`        | `website`                                                                                                                                                 |
+| `twitter:card`   | `summary_large_image`                                                                                                                                     |
 
 **Note on og:image:** Social crawlers fetch og:image server-side and cannot run JS on an SPA. Use static branded discipline images. One image per discipline group: `sykkel.jpg` (landevei/terreng/cx/gravel), `langrenn.jpg`, `triathlon.jpg`, `lop.jpg` (løping/ultraløp), `default.jpg` fallback. Simple: blurred outdoor backdrop + Løypevær wordmark as text overlay (can be created with CSS/SVG or simple image editor).
 
@@ -60,13 +60,13 @@ A compact status block on EventPage showing how far away the race is and whether
 
 ### Display rules
 
-| Condition | Shows |
-|---|---|
-| Event has no date set, or `selectedDate` is empty | Hidden (returns null) |
-| Event date is in the past | Hidden |
-| Event is today | "Det er i dag! Lykke til!" (no forecast summary) |
-| Event is 1–16 days away | "{N} dager til start" + "Prognose klar!" + start waypoint: temp + wind description |
-| Event is 17+ days away | "{N} dager til start" + "Prognose tilgjengelig om ca. {N-16} dager" + climate note |
+| Condition                                         | Shows                                                                              |
+| ------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| Event has no date set, or `selectedDate` is empty | Hidden (returns null)                                                              |
+| Event date is in the past                         | Hidden                                                                             |
+| Event is today                                    | "Det er i dag! Lykke til!" (no forecast summary)                                   |
+| Event is 1–16 days away                           | "{N} dager til start" + "Prognose klar!" + start waypoint: temp + wind description |
+| Event is 17+ days away                            | "{N} dager til start" + "Prognose tilgjengelig om ca. {N-16} dager" + climate note |
 
 "1 dag" / "dager" grammatical handling: singular for 1, plural otherwise.
 
@@ -87,7 +87,7 @@ New component: `src/components/RaceDayCountdown.tsx`
 
 ```ts
 type Props = {
-  selectedDate: string;          // "YYYY-MM-DD"
+  selectedDate: string; // "YYYY-MM-DD"
   startWaypointWeather: WeatherData | null;
 };
 ```

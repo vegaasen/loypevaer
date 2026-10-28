@@ -57,15 +57,15 @@ trackFeedback(value: 1 | 5, eventId: string): void
 
 ## Files
 
-| File | Action |
-|---|---|
-| `src/lib/analytics.ts` | Add `trackFeedback()` |
-| `src/hooks/useFeedbackPrompt.ts` | New hook — trigger logic + localStorage cooldown |
+| File                                  | Action                                             |
+| ------------------------------------- | -------------------------------------------------- |
+| `src/lib/analytics.ts`                | Add `trackFeedback()`                              |
+| `src/hooks/useFeedbackPrompt.ts`      | New hook — trigger logic + localStorage cooldown   |
 | `src/components/FeedbackSnackbar.tsx` | New component — renders UI, calls hook + analytics |
-| `src/components/EventCard.tsx` | Pass `state={{ from: "/" }}` on `<Link>` |
-| `src/components/RunningEventRow.tsx` | Pass `state={{ from: "/lop" }}` on `<Link>` |
-| `src/pages/EventPage.tsx` | Mount `<FeedbackSnackbar eventId={id} />` |
-| `src/index.css` | Snackbar styles + slide-up animation |
+| `src/components/EventCard.tsx`        | Pass `state={{ from: "/" }}` on `<Link>`           |
+| `src/components/RunningEventRow.tsx`  | Pass `state={{ from: "/lop" }}` on `<Link>`        |
+| `src/pages/EventPage.tsx`             | Mount `<FeedbackSnackbar eventId={id} />`          |
+| `src/index.css`                       | Snackbar styles + slide-up animation               |
 
 ---
 

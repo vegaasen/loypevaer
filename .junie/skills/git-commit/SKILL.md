@@ -14,14 +14,14 @@ Use this skill whenever you are about to write a commit message for this reposit
 
 ## Types
 
-| Type | Changelog visible | When to use |
-|------|:-----------------:|-------------|
-| `feat` | ✅ | A new feature or capability added to the app or its data. |
-| `fix` | ✅ | A bug fix or correction (wrong data, broken UI, incorrect calculation). |
-| `chore` | ❌ | Routine maintenance: dependency bumps, CI tweaks, config changes. |
-| `data` | ❌ | Automated data refresh (weather cache, event lists). Usually written by bots. |
-| `refactor` | ❌ | Code restructuring with no observable behaviour change. |
-| `docs` | ❌ | Documentation-only changes (README, CONTEXT.md, ADRs, comments). |
+| Type       | Changelog visible | When to use                                                                   |
+| ---------- | :---------------: | ----------------------------------------------------------------------------- |
+| `feat`     |        ✅         | A new feature or capability added to the app or its data.                     |
+| `fix`      |        ✅         | A bug fix or correction (wrong data, broken UI, incorrect calculation).       |
+| `chore`    |        ❌         | Routine maintenance: dependency bumps, CI tweaks, config changes.             |
+| `data`     |        ❌         | Automated data refresh (weather cache, event lists). Usually written by bots. |
+| `refactor` |        ❌         | Code restructuring with no observable behaviour change.                       |
+| `docs`     |        ❌         | Documentation-only changes (README, CONTEXT.md, ADRs, comments).              |
 
 > **Only `feat` and `fix` appear in the auto-generated changelog** (`/endringslogg`).
 > Choose them deliberately — they signal to users that something meaningful changed.
@@ -30,19 +30,19 @@ Use this skill whenever you are about to write a commit message for this reposit
 
 Scopes are short, lowercase, and map to a domain concept or file area:
 
-| Scope | Examples of commits |
-|-------|---------------------|
-| `birkebeiner` | Waypoint updates, data corrections for Birkebeinerrittet |
-| `triathlon` | Changes to triathlon event fetching or display |
-| `langrenn` | Additions to `arrangements.json` for cross-country ski events |
-| `ultraløp` | Changes affecting ultra-running events |
-| `weather` | Weather card, cache, or API integration changes |
-| `sitemap` | Changes to `generate-sitemap.ts` or sitemap output |
-| `changelog` | Changes to the changelog generator or `/endringslogg` page |
-| `footer` | Changes to `SiteFooter.tsx` |
-| `gpx` | GPX upload or waypoint enrichment scripts |
-| `ci` | GitHub Actions workflow changes |
-| `infra` | Terraform / AWS infrastructure changes |
+| Scope         | Examples of commits                                           |
+| ------------- | ------------------------------------------------------------- |
+| `birkebeiner` | Waypoint updates, data corrections for Birkebeinerrittet      |
+| `triathlon`   | Changes to triathlon event fetching or display                |
+| `langrenn`    | Additions to `arrangements.json` for cross-country ski events |
+| `ultraløp`    | Changes affecting ultra-running events                        |
+| `weather`     | Weather card, cache, or API integration changes               |
+| `sitemap`     | Changes to `generate-sitemap.ts` or sitemap output            |
+| `changelog`   | Changes to the changelog generator or `/endringslogg` page    |
+| `footer`      | Changes to `SiteFooter.tsx`                                   |
+| `gpx`         | GPX upload or waypoint enrichment scripts                     |
+| `ci`          | GitHub Actions workflow changes                               |
+| `infra`       | Terraform / AWS infrastructure changes                        |
 
 ## Subject line rules
 
@@ -50,7 +50,7 @@ Scopes are short, lowercase, and map to a domain concept or file area:
 2. Lowercase first letter
 3. ≤ 72 characters total (type + scope + subject)
 4. No trailing period
-5. Describe *what*, not *why* (the body is for why)
+5. Describe _what_, not _why_ (the body is for why)
 
 ## Type disambiguation guide
 

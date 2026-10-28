@@ -17,12 +17,11 @@ Approach is additive and low-risk — no routing, data model, or dependency chan
 
 ### 1.1 Hero headings (`h1`)
 
-| Breakpoint | Current | New |
-|---|---|---|
-| Desktop (≥1024px) | 64px | 88px |
-| Tablet (640–1023px) | 40px | 52px |
-| Mobile (<640px) | 32px | 36px |
-
+| Breakpoint          | Current | New  |
+| ------------------- | ------- | ---- |
+| Desktop (≥1024px)   | 64px    | 88px |
+| Tablet (640–1023px) | 40px    | 52px |
+| Mobile (<640px)     | 32px    | 36px |
 - `letter-spacing`: `-2px` (from `-1.5px`)
 - Font: Playfair Display 800 — unchanged
 - Allow natural 2-line wrap; do not force single line
@@ -120,19 +119,19 @@ Mobile (<640px):
 
 While touching `index.css`, define the currently-undefined tokens that appear in the codebase. This prevents silent `unset` fallbacks:
 
-| Token | Suggested value |
-|---|---|
-| `--text-muted` | `color-mix(in srgb, var(--text) 60%, transparent)` |
+| Token              | Suggested value                                    |
+| ------------------ | -------------------------------------------------- |
+| `--text-muted`     | `color-mix(in srgb, var(--text) 60%, transparent)` |
 | `--text-secondary` | `color-mix(in srgb, var(--text) 75%, transparent)` |
-| `--text-sm` | `0.875rem` |
-| `--surface` | `var(--code-bg)` |
-| `--surface-2` | `color-mix(in srgb, var(--bg) 60%, var(--border))` |
-| `--bg-card` | `#ffffff` (dark: `#1a2414`) |
-| `--bg-subtle` | `color-mix(in srgb, var(--bg) 80%, var(--border))` |
-| `--space-xs` | `0.5rem` |
-| `--space-lg` | `2rem` |
-| `--space-xl` | `3.5rem` |
-| `--warning` | `#c0542a` (reuse `--accent-warm`) |
+| `--text-sm`        | `0.875rem`                                         |
+| `--surface`        | `var(--code-bg)`                                   |
+| `--surface-2`      | `color-mix(in srgb, var(--bg) 60%, var(--border))` |
+| `--bg-card`        | `#ffffff` (dark: `#1a2414`)                        |
+| `--bg-subtle`      | `color-mix(in srgb, var(--bg) 80%, var(--border))` |
+| `--space-xs`       | `0.5rem`                                           |
+| `--space-lg`       | `2rem`                                             |
+| `--space-xl`       | `3.5rem`                                           |
+| `--warning`        | `#c0542a` (reuse `--accent-warm`)                  |
 
 Dark mode overrides for `--bg-card` and `--surface` should be added inside the existing `prefers-color-scheme: dark` block.
 
@@ -152,14 +151,14 @@ Dark mode overrides for `--bg-card` and `--surface` should be added inside the e
 
 ## 5. Files Changed
 
-| File | Change |
-|---|---|
-| `src/index.css` | Typography token updates, year/month heading styles, card title font, featured grid CSS, new token definitions |
-| `src/pages/HomePage.tsx` | Add `FeaturedEventCard` section, remove "Kommer snart" section, remove CTA banner |
-| `src/components/FeaturedEventCard.tsx` | New component |
-| `src/lib/arrangements.ts` | Add `getNextPerDiscipline` utility alongside existing `getNextRitt` |
-| `src/components/EventCard.tsx` | Switch card title to `--heading` font |
-| `src/pages/LopPage.tsx` | Hero `h1` size bump only |
+| File                                   | Change                                                                                                         |
+| -------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `src/index.css`                        | Typography token updates, year/month heading styles, card title font, featured grid CSS, new token definitions |
+| `src/pages/HomePage.tsx`               | Add `FeaturedEventCard` section, remove "Kommer snart" section, remove CTA banner                              |
+| `src/components/FeaturedEventCard.tsx` | New component                                                                                                  |
+| `src/lib/arrangements.ts`              | Add `getNextPerDiscipline` utility alongside existing `getNextRitt`                                            |
+| `src/components/EventCard.tsx`         | Switch card title to `--heading` font                                                                          |
+| `src/pages/LopPage.tsx`                | Hero `h1` size bump only                                                                                       |
 
 ---
 

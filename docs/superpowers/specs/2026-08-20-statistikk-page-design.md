@@ -14,13 +14,13 @@ A new `/statistikk` route (linked from the nav) showing weather-based rankings f
 
 Per event it computes a **weather profile** averaged across all waypoints and all available years:
 
-| Field | Description |
-|---|---|
-| `avgTempMax` | Mean daily max temp (°C) |
-| `avgPrecipitation` | Mean precipitation (mm) |
-| `avgWindSpeed` | Mean wind speed (m/s) |
-| `comfortScore` | Composite: warm+dry+low wind (higher = better) |
-| `dataYears` | Number of years with data (0 = no data) |
+| Field              | Description                                    |
+| ------------------ | ---------------------------------------------- |
+| `avgTempMax`       | Mean daily max temp (°C)                       |
+| `avgPrecipitation` | Mean precipitation (mm)                        |
+| `avgWindSpeed`     | Mean wind speed (m/s)                          |
+| `comfortScore`     | Composite: warm+dry+low wind (higher = better) |
+| `dataYears`        | Number of years with data (0 = no data)        |
 
 Output: `src/data/weather-stats.json` — one entry per event ID.
 

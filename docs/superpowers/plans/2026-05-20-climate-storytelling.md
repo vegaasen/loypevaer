@@ -12,16 +12,16 @@
 
 ## File Map
 
-| File | Action | Purpose |
-|---|---|---|
-| `src/lib/climateStory.ts` | **Create** | Pure classification function |
-| `src/lib/climateStory.test.ts` | **Create** | Unit tests for all 8 label combinations |
-| `src/lib/weather.ts` | **Modify** | Add `getHistoricalYears()` helper |
-| `src/components/ClimateHistoryBadge.tsx` | **Create** | Badge UI component |
-| `src/components/WeatherCard.tsx` | **Modify** | Accept + render `historicalYears` prop |
-| `src/components/WeatherCard.test.tsx` | **Modify** | Test badge renders/absent |
-| `src/components/WeatherStrip.tsx` | **Modify** | Load cache, extract years, pass to WeatherCard |
-| `src/index.css` | **Modify** | Styles for divider + badge |
+| File                                     | Action     | Purpose                                        |
+| ---------------------------------------- | ---------- | ---------------------------------------------- |
+| `src/lib/climateStory.ts`                | **Create** | Pure classification function                   |
+| `src/lib/climateStory.test.ts`           | **Create** | Unit tests for all 8 label combinations        |
+| `src/lib/weather.ts`                     | **Modify** | Add `getHistoricalYears()` helper              |
+| `src/components/ClimateHistoryBadge.tsx` | **Create** | Badge UI component                             |
+| `src/components/WeatherCard.tsx`         | **Modify** | Accept + render `historicalYears` prop         |
+| `src/components/WeatherCard.test.tsx`    | **Modify** | Test badge renders/absent                      |
+| `src/components/WeatherStrip.tsx`        | **Modify** | Load cache, extract years, pass to WeatherCard |
+| `src/index.css`                          | **Modify** | Styles for divider + badge                     |
 
 ---
 
@@ -40,7 +40,12 @@ import { describe, it, expect } from "vitest";
 import { getClimateStoryLabel } from "./climateStory";
 import type { ClimateStoryInput } from "./climateStory";
 
-function makeYears(count: number, precip: number, windSpeed: number, tempMax: number): ClimateStoryInput {
+function makeYears(
+  count: number,
+  precip: number,
+  windSpeed: number,
+  tempMax: number,
+): ClimateStoryInput {
   return Array.from({ length: count }, () => ({ precipitation: precip, windSpeed, tempMax }));
 }
 
@@ -145,12 +150,12 @@ export function getClimateStoryLabel(years: ClimateStoryInput): string {
   const cold = coldCount / n >= MAJORITY;
 
   if (rain && wind && cold) return "Krevende forhold";
-  if (rain && wind)         return "Vått og blåsende";
-  if (rain && cold)         return "Kaldt og vått";
-  if (wind && cold)         return "Kaldt og blåsende";
-  if (rain)                 return "Typisk regnvær";
-  if (wind)                 return "Kjent for kraftig vind";
-  if (cold)                 return "Historisk kaldt";
+  if (rain && wind) return "Vått og blåsende";
+  if (rain && cold) return "Kaldt og vått";
+  if (wind && cold) return "Kaldt og blåsende";
+  if (rain) return "Typisk regnvær";
+  if (wind) return "Kjent for kraftig vind";
+  if (cold) return "Historisk kaldt";
   return "Variert vær";
 }
 ```
@@ -209,7 +214,7 @@ export function getHistoricalYears(
   cache: WeatherCacheData,
   lat: number,
   lon: number,
-  date: string
+  date: string,
 ): ClimateStoryInput {
   const [, , mm, dd] = date.split("-");
   const years: ClimateStoryInput = [];
@@ -379,12 +384,14 @@ export const WeatherCard = memo(function WeatherCard({
 
 4. Add the badge after the `{data && <WeatherCardContent ... />}` block (around line 246), before the hourly toggle:
 ```tsx
-{historicalYears && historicalYears.length > 0 && (
-  <>
-    <hr className="weather-card__climate-divider" />
-    <ClimateHistoryBadge years={historicalYears} />
-  </>
-)}
+{
+  historicalYears && historicalYears.length > 0 && (
+    <>
+      <hr className="weather-card__climate-divider" />
+      <ClimateHistoryBadge years={historicalYears} />
+    </>
+  );
+}
 ```
 
 - [ ] Apply all four changes to `src/components/WeatherCard.tsx`
@@ -410,7 +417,7 @@ it("renders ClimateHistoryBadge when historicalYears is provided", () => {
       isLoading={false}
       isError={false}
       historicalYears={years}
-    />
+    />,
   );
   expect(screen.getByText("Historisk")).toBeInTheDocument();
   expect(screen.getByText("Krevende forhold")).toBeInTheDocument();
@@ -423,7 +430,7 @@ it("does not render ClimateHistoryBadge when historicalYears is absent", () => {
       data={undefined}
       isLoading={false}
       isError={false}
-    />
+    />,
   );
   expect(screen.queryByText("Historisk")).not.toBeInTheDocument();
 });
@@ -487,7 +494,14 @@ type Props = {
   onWaypointClick?: (waypoint: Waypoint, index: number) => void;
 };
 
-export function WeatherStrip({ waypoints, date, startTime, finishTime, externalResults, onWaypointClick }: Props) {
+export function WeatherStrip({
+  waypoints,
+  date,
+  startTime,
+  finishTime,
+  externalResults,
+  onWaypointClick,
+}: Props) {
   const timingActive =
     date != null &&
     startTime != null &&
@@ -496,10 +510,7 @@ export function WeatherStrip({ waypoints, date, startTime, finishTime, externalR
     finishTime !== "";
 
   const n = waypoints.length;
-  const dynamicFractions = Array.from(
-    { length: n },
-    (_, i) => (n === 1 ? 0 : i / (n - 1))
-  );
+  const dynamicFractions = Array.from({ length: n }, (_, i) => (n === 1 ? 0 : i / (n - 1)));
 
   const datetimes = timingActive
     ? calcWaypointTimes(date, startTime, finishTime, dynamicFractions)
@@ -508,28 +519,25 @@ export function WeatherStrip({ waypoints, date, startTime, finishTime, externalR
   const internalResults = useWeather(externalResults ? [] : waypoints, date, datetimes);
   const results = externalResults ?? internalResults;
 
-  const mode =
-    date == null
-      ? null
-      : isForecastRange(date)
-      ? "forecast"
-      : "climate-average";
+  const mode = date == null ? null : isForecastRange(date) ? "forecast" : "climate-average";
 
-  const [historicalYearsPerWaypoint, setHistoricalYearsPerWaypoint] = useState<ClimateStoryInput[]>([]);
+  const [historicalYearsPerWaypoint, setHistoricalYearsPerWaypoint] = useState<ClimateStoryInput[]>(
+    [],
+  );
 
   useEffect(() => {
     if (!date) {
       setHistoricalYearsPerWaypoint([]);
       return;
     }
-    getWeatherCache().then((cache) => {
-      const all = waypoints.map((wp) =>
-        getHistoricalYears(cache, wp.lat, wp.lon, date)
-      );
-      setHistoricalYearsPerWaypoint(all);
-    }).catch(() => {
-      setHistoricalYearsPerWaypoint([]);
-    });
+    getWeatherCache()
+      .then((cache) => {
+        const all = waypoints.map((wp) => getHistoricalYears(cache, wp.lat, wp.lon, date));
+        setHistoricalYearsPerWaypoint(all);
+      })
+      .catch(() => {
+        setHistoricalYearsPerWaypoint([]);
+      });
   }, [waypoints, date]);
 
   return (

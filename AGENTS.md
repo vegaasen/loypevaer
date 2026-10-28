@@ -66,12 +66,12 @@ infra/                       # Terraform configuration for AWS (S3, CloudFront, 
 
 Which file to edit depends on the discipline and whether the event is auto-fetched:
 
-| Discipline | Auto-fetched? | File to edit |
-|---|---|---|
-| Langrenn, or any discipline without an auto-sync script | No | `src/data/arrangements.json` |
-| Cycling — **not** listed in the NCF/EQ Timing API | No | `src/data/cycling-manual.json` |
-| Cycling — already fetched by NCF/EQ Timing, but missing waypoints | Yes (auto) | `src/data/cycling-waypoints.json` via `enrich-cycling-waypoints.ts` |
-| Triathlon, running | Yes (auto) | Do not edit — fix the fetch script or source data |
+| Discipline                                                        | Auto-fetched? | File to edit                                                        |
+| ----------------------------------------------------------------- | ------------- | ------------------------------------------------------------------- |
+| Langrenn, or any discipline without an auto-sync script           | No            | `src/data/arrangements.json`                                        |
+| Cycling — **not** listed in the NCF/EQ Timing API                 | No            | `src/data/cycling-manual.json`                                      |
+| Cycling — already fetched by NCF/EQ Timing, but missing waypoints | Yes (auto)    | `src/data/cycling-waypoints.json` via `enrich-cycling-waypoints.ts` |
+| Triathlon, running                                                | Yes (auto)    | Do not edit — fix the fetch script or source data                   |
 
 ### `arrangements.json` — langrenn and other manual events
 
@@ -125,17 +125,17 @@ Waypoint coordinates should be verified against GPX files or race maps — many 
 
 ## CI / deploy
 
-| Workflow | Trigger | What it does |
-|---|---|---|
-| `ci.yml` | push/PR (non-doc files) | lint + test + build |
-| `pages.yml` | push to `main` (non-doc files) | build + deploy to GitHub Pages |
-| `deploy-aws.yml` | push to `main` (non-doc files) | build + deploy to AWS (S3 + CloudFront) |
-| `refresh-weather.yml` | nightly 03:00 UTC + manual | fetch weather cache + commit |
-| `refresh-triathlon.yml` | scheduled + manual | fetch triathlon events + commit |
-| `refresh-running.yml` | Monday 04:30 UTC + manual | fetch running events + commit |
-| `refresh-cycling.yml` | Monday 05:00 UTC + manual | fetch cycling events + commit |
-| `refresh-changelog.yml` | push to `main` + manual | generate changelog + commit |
-| `infra.yml` | manual | Terraform plan/apply/destroy for AWS infra |
-| `dependabot-automerge.yml` | Dependabot PRs | auto-merge Dependabot updates via squash |
+| Workflow                   | Trigger                        | What it does                               |
+| -------------------------- | ------------------------------ | ------------------------------------------ |
+| `ci.yml`                   | push/PR (non-doc files)        | lint + test + build                        |
+| `pages.yml`                | push to `main` (non-doc files) | build + deploy to GitHub Pages             |
+| `deploy-aws.yml`           | push to `main` (non-doc files) | build + deploy to AWS (S3 + CloudFront)    |
+| `refresh-weather.yml`      | nightly 03:00 UTC + manual     | fetch weather cache + commit               |
+| `refresh-triathlon.yml`    | scheduled + manual             | fetch triathlon events + commit            |
+| `refresh-running.yml`      | Monday 04:30 UTC + manual      | fetch running events + commit              |
+| `refresh-cycling.yml`      | Monday 05:00 UTC + manual      | fetch cycling events + commit              |
+| `refresh-changelog.yml`    | push to `main` + manual        | generate changelog + commit                |
+| `infra.yml`                | manual                         | Terraform plan/apply/destroy for AWS infra |
+| `dependabot-automerge.yml` | Dependabot PRs                 | auto-merge Dependabot updates via squash   |
 
 Markdown files and issue templates are excluded from triggering CI and deploy via `paths-ignore`.

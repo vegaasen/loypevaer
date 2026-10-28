@@ -12,18 +12,18 @@
 
 ## File Map
 
-| File | Action | Purpose |
-|---|---|---|
-| `src/lib/og.ts` | **Create** | `buildOgDescription` + `getOgImagePath` utilities |
-| `src/lib/og.test.ts` | **Create** | Unit tests for the two utilities |
-| `src/components/ShareButton.tsx` | **Create** | "Del" button with clipboard/Web Share API + snackbar |
-| `src/components/ShareButton.css` | **Create** | Styles for share button and "Kopiert!" snackbar |
-| `src/components/RaceDayCountdown.tsx` | **Create** | Countdown + forecast status widget |
-| `src/components/RaceDayCountdown.css` | **Create** | Styles for the countdown banner |
-| `src/components/RaceDayCountdown.test.tsx` | **Create** | Unit tests for all display rule branches |
-| `src/pages/EventPage.tsx` | **Modify** | Add ShareButton, RaceDayCountdown, dynamic og: tags |
-| `src/components/PageMeta.tsx` | **Modify** | Accept optional `ogImage` prop to allow per-page override |
-| `public/og/` | **Create** | Static discipline og:images (placeholder PNGs initially) |
+| File                                       | Action     | Purpose                                                   |
+| ------------------------------------------ | ---------- | --------------------------------------------------------- |
+| `src/lib/og.ts`                            | **Create** | `buildOgDescription` + `getOgImagePath` utilities         |
+| `src/lib/og.test.ts`                       | **Create** | Unit tests for the two utilities                          |
+| `src/components/ShareButton.tsx`           | **Create** | "Del" button with clipboard/Web Share API + snackbar      |
+| `src/components/ShareButton.css`           | **Create** | Styles for share button and "Kopiert!" snackbar           |
+| `src/components/RaceDayCountdown.tsx`      | **Create** | Countdown + forecast status widget                        |
+| `src/components/RaceDayCountdown.css`      | **Create** | Styles for the countdown banner                           |
+| `src/components/RaceDayCountdown.test.tsx` | **Create** | Unit tests for all display rule branches                  |
+| `src/pages/EventPage.tsx`                  | **Modify** | Add ShareButton, RaceDayCountdown, dynamic og: tags       |
+| `src/components/PageMeta.tsx`              | **Modify** | Accept optional `ogImage` prop to allow per-page override |
+| `public/og/`                               | **Create** | Static discipline og:images (placeholder PNGs initially)  |
 
 ---
 
@@ -147,7 +147,7 @@ export type WeatherResult = {
  */
 export function buildOgDescription(
   waypoints: Waypoint[],
-  weatherResults: WeatherResult[]
+  weatherResults: WeatherResult[],
 ): string | null {
   const parts: string[] = [];
 
@@ -378,8 +378,14 @@ git commit -m "feat: add optional ogImage prop to PageMeta"
 }
 
 @keyframes share-snackbar-in {
-  from { opacity: 0; transform: translateX(-50%) translateY(8px); }
-  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 }
 ```
 
@@ -418,12 +424,23 @@ export function ShareButton({ url, label = "Del" }: Props) {
   return (
     <>
       <button className="share-button" onClick={() => void handleShare()} aria-label={label}>
-        <svg className="share-button__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+        <svg
+          className="share-button__icon"
+          viewBox="0 0 16 16"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          aria-hidden="true"
+        >
           <path d="M11 2.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM5 5.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM11 8.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM8.5 6.5l-3 2M8.5 9.5l-3-2" />
         </svg>
         {label}
       </button>
-      {copied && <div className="share-snackbar" role="status" aria-live="polite">Kopiert!</div>}
+      {copied && (
+        <div className="share-snackbar" role="status" aria-live="polite">
+          Kopiert!
+        </div>
+      )}
     </>
   );
 }
@@ -615,9 +632,7 @@ export function RaceDayCountdown({ selectedDate, startWaypointWeather }: Props) 
   let statusClass = "race-day-countdown__status";
 
   if (forecastAvailable) {
-    const summary = startWaypointWeather
-      ? buildStartSummary(startWaypointWeather)
-      : "";
+    const summary = startWaypointWeather ? buildStartSummary(startWaypointWeather) : "";
     statusText = `Prognose klar!${summary ? `  –  Start: ${summary}` : ""}`;
     statusClass += " race-day-countdown__status--ready";
   } else {
@@ -730,7 +745,7 @@ Find the existing `<PageMeta ... />` call in EventPage and add the `ogImage` and
   canonicalUrl={canonicalUrl}
   ogType="website"
   ogImage={ogImage}
-/>
+/>;
 ```
 
 (Replace existing `<PageMeta>` — keep the `canonicalUrl` and `pageTitle` variables as they are currently computed.)
@@ -740,7 +755,7 @@ Find the existing `<PageMeta ... />` call in EventPage and add the `ogImage` and
 Find the section in EventPage that renders the event name / meta info (the header area). Add the ShareButton after the event title or meta row:
 
 ```tsx
-<ShareButton url={shareUrl} />
+<ShareButton url={shareUrl} />;
 ```
 
 - [ ] **Step 6: Add RaceDayCountdown above WeatherStrip**

@@ -1,6 +1,6 @@
 ---
-description: Enrich a cycling event with waypoints from a GPX file
----
+
+## description: Enrich a cycling event with waypoints from a GPX file
 
 Run the waypoint enrichment script for a cycling event.
 
@@ -9,7 +9,7 @@ Usage: /enrich-waypoints <event-id> <path-to-gpx>
 Arguments provided: $ARGUMENTS
 
 Please run:
-  bun scripts/enrich-cycling-waypoints.ts $ARGUMENTS
+bun scripts/enrich-cycling-waypoints.ts $ARGUMENTS
 
 Then confirm the enriched waypoints look correct, and remind the user to run
 `bun run fetch-weather` afterwards to update the historical weather cache for

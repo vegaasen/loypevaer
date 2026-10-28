@@ -34,7 +34,7 @@ Listens for `beforeinstallprompt`, stores the deferred event in a ref, exposes:
 
 ```ts
 {
-  canInstall: boolean;      // true when deferred event is available
+  canInstall: boolean; // true when deferred event is available
   promptInstall: () => void; // calls deferred.prompt(), resets state on completion
 }
 ```
@@ -84,8 +84,8 @@ type WeatherSnapshot = {
 
 function hasSignificantChange(
   prev: WeatherSnapshot,
-  next: WeatherSnapshot
-): { changed: boolean; summary: string }
+  next: WeatherSnapshot,
+): { changed: boolean; summary: string };
 ```
 
 Thresholds:
@@ -101,6 +101,7 @@ Returns `changed: true` + a Norwegian summary string (e.g. "Temperaturen har fal
 - For each bookmarked event where the selected date is within the 16-day forecast window, fetches live weather for the **first and last waypoint** (lightweight: 2 API calls per event)
 - Compares against stored snapshots in `localStorage["weather-alert-snapshots"]`
 - If `hasSignificantChange` returns true AND `Notification.permission === "granted"`, fires:
+
   ```ts
   new Notification(`Værvarsel endret – ${eventName}`, {
     body: summary,
@@ -135,10 +136,7 @@ Every event page has the same static `pageDescription` shape. Crawlers see no un
 Pure function that takes an `Arrangement` and the loaded weather cache, and returns a 1–2 sentence Norwegian summary:
 
 ```ts
-function buildClimateNarrative(
-  event: Arrangement,
-  cache: WeatherCache
-): string | null
+function buildClimateNarrative(event: Arrangement, cache: WeatherCache): string | null;
 ```
 
 Uses:
@@ -218,15 +216,12 @@ Data model:
 type PackingColumn = "wear" | "carry" | "skip";
 
 type PackingItem = {
-  item: string;       // e.g. "Vindjakke"
-  reason: string;     // e.g. "Sterk motvind ved km 45"
+  item: string; // e.g. "Vindjakke"
+  reason: string; // e.g. "Sterk motvind ved km 45"
   column: PackingColumn;
 };
 
-function buildPackingList(
-  results: WaypointWeather[],
-  discipline: string
-): PackingItem[]
+function buildPackingList(results: WaypointWeather[], discipline: string): PackingItem[];
 ```
 
 Column assignment rules:
@@ -240,10 +235,10 @@ Discipline-aware: cycling drop-bag items differ from running vest items (e.g. "l
 
 Rendered inside the existing `<details>` in `GearSuggestion`. Shows a three-column table:
 
-| Ha på deg | Ha med deg | Trenger ikke |
-|---|---|---|
-| Vindjakke | Regnjakke | Dunjakke |
-| Langfingrede hansker | Votter | Vintersko |
+| Ha på deg            | Ha med deg | Trenger ikke |
+| -------------------- | ---------- | ------------ |
+| Vindjakke            | Regnjakke  | Dunjakke     |
+| Langfingrede hansker | Votter     | Vintersko    |
 
 Each item shows its `reason` on hover/expand. Collapsed by default behind a "Pakkeliste" toggle inside the existing details element.
 
@@ -255,29 +250,29 @@ Each item shows its `reason` on hover/expand. Collapsed by default behind a "Pak
 
 These features are independent and can be built in parallel, but this sequence maximises early user impact and dependency flow:
 
-| Phase | Feature | Effort estimate | Dependency |
-|---|---|---|---|
-| 1 | PWA install prompt | Small (~1 day) | None — prerequisite for alerts |
-| 2 | SEO climate narrative | Medium (~2 days) | None — parallel with phase 1 |
-| 3 | Forecast change alerts | Medium (~2 days) | Phase 1 (install → higher permission grant rate) |
-| 4 | Smarter gear / packing list | Medium (~2 days) | None — parallel with any phase |
+| Phase | Feature                     | Effort estimate  | Dependency                                       |
+| ----- | --------------------------- | ---------------- | ------------------------------------------------ |
+| 1     | PWA install prompt          | Small (~1 day)   | None — prerequisite for alerts                   |
+| 2     | SEO climate narrative       | Medium (~2 days) | None — parallel with phase 1                     |
+| 3     | Forecast change alerts      | Medium (~2 days) | Phase 1 (install → higher permission grant rate) |
+| 4     | Smarter gear / packing list | Medium (~2 days) | None — parallel with any phase                   |
 
 ---
 
 ## Files affected (summary)
 
-| File | Change type |
-|---|---|
-| `src/hooks/useInstallPrompt.ts` | New |
-| `src/components/InstallBanner.tsx` | New |
-| `src/lib/alertDiff.ts` | New |
-| `src/hooks/useWeatherAlerts.ts` | New |
-| `src/components/AlertsOptIn.tsx` | New |
-| `src/lib/climateNarrative.ts` | New |
-| `src/lib/packingList.ts` | New |
-| `src/components/PackingList.tsx` | New |
-| `src/components/GearSuggestion.tsx` | Extend |
-| `src/pages/EventPage.tsx` | Extend (description + ld+json + AlertsOptIn) |
-| `src/App.tsx` | Extend (InstallBanner) |
+| File                                | Change type                                  |
+| ----------------------------------- | -------------------------------------------- |
+| `src/hooks/useInstallPrompt.ts`     | New                                          |
+| `src/components/InstallBanner.tsx`  | New                                          |
+| `src/lib/alertDiff.ts`              | New                                          |
+| `src/hooks/useWeatherAlerts.ts`     | New                                          |
+| `src/components/AlertsOptIn.tsx`    | New                                          |
+| `src/lib/climateNarrative.ts`       | New                                          |
+| `src/lib/packingList.ts`            | New                                          |
+| `src/components/PackingList.tsx`    | New                                          |
+| `src/components/GearSuggestion.tsx` | Extend                                       |
+| `src/pages/EventPage.tsx`           | Extend (description + ld+json + AlertsOptIn) |
+| `src/App.tsx`                       | Extend (InstallBanner)                       |
 
 All changes are additive — no existing behaviour is removed or broken.

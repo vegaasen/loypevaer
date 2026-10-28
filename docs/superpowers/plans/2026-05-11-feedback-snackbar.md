@@ -298,8 +298,7 @@ interface FeedbackPromptState {
 
 export function useFeedbackPrompt(): FeedbackPromptState {
   const location = useLocation();
-  const from =
-    (location.state as { from?: string } | null)?.from ?? null;
+  const from = (location.state as { from?: string } | null)?.from ?? null;
 
   const shouldShow = from !== null && LIST_ROUTES.has(from) && isCooledDown();
 
@@ -310,7 +309,7 @@ export function useFeedbackPrompt(): FeedbackPromptState {
       setVisible(true);
       recordShown();
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // intentionally run once on mount
 
   return {
@@ -385,9 +384,7 @@ describe("FeedbackSnackbar", () => {
   it("renders question and buttons when visible=true", () => {
     makeMock(true);
     render(<FeedbackSnackbar eventId="test" />);
-    expect(
-      screen.getByText(/Er værmeldingen nyttig/i),
-    ).toBeInTheDocument();
+    expect(screen.getByText(/Er værmeldingen nyttig/i)).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /👍/i })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /👎/i })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /×/i })).toBeInTheDocument();
@@ -470,29 +467,15 @@ export function FeedbackSnackbar({ eventId }: Props) {
 
   return (
     <div className="feedback-snackbar" role="status" aria-live="polite">
-      <p className="feedback-snackbar__question">
-        Er værmeldingen nyttig for planleggingen din?
-      </p>
+      <p className="feedback-snackbar__question">Er værmeldingen nyttig for planleggingen din?</p>
       <div className="feedback-snackbar__actions">
-        <button
-          className="feedback-snackbar__btn"
-          onClick={() => handleVote(5)}
-          aria-label="👍"
-        >
+        <button className="feedback-snackbar__btn" onClick={() => handleVote(5)} aria-label="👍">
           👍
         </button>
-        <button
-          className="feedback-snackbar__btn"
-          onClick={() => handleVote(1)}
-          aria-label="👎"
-        >
+        <button className="feedback-snackbar__btn" onClick={() => handleVote(1)} aria-label="👎">
           👎
         </button>
-        <button
-          className="feedback-snackbar__dismiss"
-          onClick={dismiss}
-          aria-label="×"
-        >
+        <button className="feedback-snackbar__dismiss" onClick={dismiss} aria-label="×">
           ×
         </button>
       </div>

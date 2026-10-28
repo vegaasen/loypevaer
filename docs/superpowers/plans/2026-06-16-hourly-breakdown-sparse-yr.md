@@ -41,7 +41,7 @@ it("marks sentinel rows (hours with no Yr data) as hasData: false", async () => 
         },
       }));
       return HttpResponse.json({ properties: { timeseries: sparse } });
-    })
+    }),
   );
 
   const entries = await fetchHourlyBreakdown(waypoint, YR_DATE);
@@ -86,7 +86,7 @@ In `src/lib/weather.ts`, find the `HourlyEntry` type (~line 798) and add the fie
 ```typescript
 export type HourlyEntry = {
   hour: number;
-  hasData: boolean;        // true = real measurement; false = no Yr data for this hour
+  hasData: boolean; // true = real measurement; false = no Yr data for this hour
   temp: number;
   feelsLike?: number;
   precipitation: number;
@@ -123,7 +123,8 @@ async function fetchYrHourlyBreakdown(waypoint: Waypoint, date: string): Promise
     const next1 = item.data.next_1_hours;
     const next6 = item.data.next_6_hours;
     const symbolCode = next1?.summary.symbol_code ?? next6?.summary.symbol_code ?? "";
-    const precip = next1?.details.precipitation_amount ?? (next6 ? next6.details.precipitation_amount / 6 : 0);
+    const precip =
+      next1?.details.precipitation_amount ?? (next6 ? next6.details.precipitation_amount / 6 : 0);
 
     return {
       hour,

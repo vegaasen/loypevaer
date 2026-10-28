@@ -23,7 +23,14 @@ type Discipline = "alle" | "landevei" | "terreng" | "langrenn" | "triathlon" | "
 ```
 to:
 ```ts
-type Discipline = "alle" | "landevei" | "terreng" | "langrenn" | "triathlon" | "ultraløp" | "løping";
+type Discipline =
+  | "alle"
+  | "landevei"
+  | "terreng"
+  | "langrenn"
+  | "triathlon"
+  | "ultraløp"
+  | "løping";
 ```
 
 - [ ] **Step 2: Add "løping" to the pill array**
@@ -57,67 +64,69 @@ Expected: no type errors.
 In `src/pages/HomePage.tsx`, replace lines 281–325 (the entire `<main className="home-page__sections">` block) with:
 
 ```tsx
-      {/* ── All ritt grid / Løping promo ──────────────────────────────── */}
-      {discipline === "løping" ? (
-        <section className="home-page__lop-promo" aria-label="Løping har egen side">
-          <div className="home-page__lop-promo-content">
-            <div className="home-page__feature-eyebrow">Løping</div>
-            <h2>Kortere løp har sin egen side</h2>
-            <p>
-              Sentrumsløpet, Birkebeinerløpet og mange andre kortere løp finner du på løpesiden.
-              Der viser vi sanntidsvarsler for løpsdagen — temperatur, vind og nedbør der det teller.
-            </p>
-            <Link to="/lop" className="home-page__lop-teaser-btn">
-              Se alle løp →
-            </Link>
-          </div>
-        </section>
-      ) : (
-        <main className="home-page__sections">
-          {filtered.length === 0 && (
-            <p className="home-page__empty">Ingen arrangement funnet.</p>
-          )}
-          {years.map((year) => {
-            const byMonth = grouped.get(year)!;
-            const months = [...byMonth.keys()].sort((a, b) => a - b);
-            return (
-              <section key={year} className="home-page__year-section">
-                <h2 className="home-page__year-heading">{year}</h2>
-                {months.map((month) => (
-                  <div key={month} id={`month-${year}-${month}`} className="home-page__month-section">
-                    <h3 className="home-page__month-heading">
-                      <a href={`#month-${year}-${month}`} className="home-page__month-anchor">
-                        {monthName(month)}
-                      </a>
-                      {byMonth.get(month)!.length > 1 && (
-                        <span className="month-count-badge">{byMonth.get(month)!.length}</span>
-                      )}
-                    </h3>
-                    <div className="home-page__grid">
-                      {byMonth.get(month)!.map((r) => (
-                        <EventCard
-                          key={r.id}
-                          id={r.id}
-                          name={r.name}
-                          officialDate={r.officialDate}
-                          distance={r.distance}
-                          distanceLabel={r.distanceLabel}
-                          region={r.region}
-                          discipline={r.discipline}
-                          planned={isPlanned(r.id)}
-                          isPast={daysUntil(r.officialDate) < 0}
-                          dateStatus={r.dateStatus}
-                          onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </section>
-            );
-          })}
-        </main>
-      )}
+{
+  /* ── All ritt grid / Løping promo ──────────────────────────────── */
+}
+{
+  discipline === "løping" ? (
+    <section className="home-page__lop-promo" aria-label="Løping har egen side">
+      <div className="home-page__lop-promo-content">
+        <div className="home-page__feature-eyebrow">Løping</div>
+        <h2>Kortere løp har sin egen side</h2>
+        <p>
+          Sentrumsløpet, Birkebeinerløpet og mange andre kortere løp finner du på løpesiden. Der
+          viser vi sanntidsvarsler for løpsdagen — temperatur, vind og nedbør der det teller.
+        </p>
+        <Link to="/lop" className="home-page__lop-teaser-btn">
+          Se alle løp →
+        </Link>
+      </div>
+    </section>
+  ) : (
+    <main className="home-page__sections">
+      {filtered.length === 0 && <p className="home-page__empty">Ingen arrangement funnet.</p>}
+      {years.map((year) => {
+        const byMonth = grouped.get(year)!;
+        const months = [...byMonth.keys()].sort((a, b) => a - b);
+        return (
+          <section key={year} className="home-page__year-section">
+            <h2 className="home-page__year-heading">{year}</h2>
+            {months.map((month) => (
+              <div key={month} id={`month-${year}-${month}`} className="home-page__month-section">
+                <h3 className="home-page__month-heading">
+                  <a href={`#month-${year}-${month}`} className="home-page__month-anchor">
+                    {monthName(month)}
+                  </a>
+                  {byMonth.get(month)!.length > 1 && (
+                    <span className="month-count-badge">{byMonth.get(month)!.length}</span>
+                  )}
+                </h3>
+                <div className="home-page__grid">
+                  {byMonth.get(month)!.map((r) => (
+                    <EventCard
+                      key={r.id}
+                      id={r.id}
+                      name={r.name}
+                      officialDate={r.officialDate}
+                      distance={r.distance}
+                      distanceLabel={r.distanceLabel}
+                      region={r.region}
+                      discipline={r.discipline}
+                      planned={isPlanned(r.id)}
+                      isPast={daysUntil(r.officialDate) < 0}
+                      dateStatus={r.dateStatus}
+                      onTogglePlanned={(e) => handleToggle(r.id, r.officialDate, e)}
+                    />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </section>
+        );
+      })}
+    </main>
+  );
+}
 ```
 
 - [ ] **Step 2: Add CSS for the promo block**

@@ -38,9 +38,9 @@ New file `src/data/races.json` — hand-authored, same spirit as `arrangements.j
       "name": "Lille → Lille Métropole",
       "date": "2025-07-05",
       "distance": 184,
-      "type": "flat",  // flat | hills | mountain | itt | team-tt
+      "type": "flat", // flat | hills | mountain | itt | team-tt
       "waypoints": [
-        { "label": "Start – Lille", "lat": 50.63, "lon": 3.07, "altitude": 30 },
+        { "label": "Start – Lille", "lat": 50.63, "lon": 3.07, "altitude": 30 }
         // ~5 waypoints: start, KOM/sprint points, finish
       ]
     }

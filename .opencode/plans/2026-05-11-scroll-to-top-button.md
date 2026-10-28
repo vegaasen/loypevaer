@@ -12,12 +12,12 @@
 
 ## File Map
 
-| Action | File | Responsibility |
-|--------|------|----------------|
-| Create | `src/components/ScrollToTopButton.tsx` | Component logic + markup |
-| Create | `src/components/ScrollToTopButton.test.tsx` | Unit tests |
-| Modify | `src/App.css` | Styles for the button |
-| Modify | `src/App.tsx` | Mount the component |
+| Action | File                                        | Responsibility           |
+| ------ | ------------------------------------------- | ------------------------ |
+| Create | `src/components/ScrollToTopButton.tsx`      | Component logic + markup |
+| Create | `src/components/ScrollToTopButton.test.tsx` | Unit tests               |
+| Modify | `src/App.css`                               | Styles for the button    |
+| Modify | `src/App.tsx`                               | Mount the component      |
 
 ---
 
@@ -194,7 +194,9 @@ git commit -m "feat: add ScrollToTopButton component with scroll listener"
 
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.15s, transform 0.15s;
+  transition:
+    opacity 0.15s,
+    transform 0.15s;
 
   &:hover {
     opacity: 0.88;

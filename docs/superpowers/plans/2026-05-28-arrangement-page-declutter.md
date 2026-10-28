@@ -71,7 +71,7 @@ Replace lines 219–265 with:
     </button>
     <ShareButton url={shareUrl} />
   </div>
-</header>
+</header>;
 ```
 
 - [ ] **Step 2: Add/update CSS for the new header rows in `src/index.css`**
@@ -158,119 +158,131 @@ Move the date section and weather section to appear directly after the header, a
 Replace the current section order (lines 266–367) with the new order:
 
 ```tsx
-      {/* ── Date & time pickers ── */}
-      <section className="ritt-page__date-section">
-        <DatePicker
-          value={selectedDate}
-          onChange={setSelectedDate}
-          officialDate={rittData.officialDate}
-        />
-        <TimePicker
-          startTime={startTime}
-          finishTime={finishTime}
-          onStartChange={setStartTime}
-          onFinishChange={setFinishTime}
-          onClear={() => {
-            setStartTime("");
-            setFinishTime("");
-          }}
-          distanceKm={rittData.distance}
-          officialStartTime={rittData.officialStartTime}
-          discipline={rittData.discipline}
-        />
-      </section>
+{
+  /* ── Date & time pickers ── */
+}
+<section className="ritt-page__date-section">
+  <DatePicker
+    value={selectedDate}
+    onChange={setSelectedDate}
+    officialDate={rittData.officialDate}
+  />
+  <TimePicker
+    startTime={startTime}
+    finishTime={finishTime}
+    onStartChange={setStartTime}
+    onFinishChange={setFinishTime}
+    onClear={() => {
+      setStartTime("");
+      setFinishTime("");
+    }}
+    distanceKm={rittData.distance}
+    officialStartTime={rittData.officialStartTime}
+    discipline={rittData.discipline}
+  />
+</section>;
 
-      {/* ── Weather ── */}
-      <section className="ritt-page__weather-section">
-        <ErrorBoundary
-          fallback={
-            <p className="error-boundary__message">
-              Kunne ikke laste værmeldingen. Sjekk nettverkstilkoblingen og prøv igjen.
-            </p>
-          }
-        >
-          {forecastOnly && selectedDate && !isForecastRange(selectedDate) ? (
-            <p className="ritt-page__forecast-only-note">
-              Værmeldingen er ikke klar ennå — sjekk igjen nærmere løpsdagen.
-            </p>
+{
+  /* ── Weather ── */
+}
+<section className="ritt-page__weather-section">
+  <ErrorBoundary
+    fallback={
+      <p className="error-boundary__message">
+        Kunne ikke laste værmeldingen. Sjekk nettverkstilkoblingen og prøv igjen.
+      </p>
+    }
+  >
+    {forecastOnly && selectedDate && !isForecastRange(selectedDate) ? (
+      <p className="ritt-page__forecast-only-note">
+        Værmeldingen er ikke klar ennå — sjekk igjen nærmere løpsdagen.
+      </p>
+    ) : (
+      <>
+        <RaceDayCountdown
+          selectedDate={selectedDate}
+          startWaypointWeather={weatherResults[0]?.data ?? null}
+        />
+        <WeatherStrip
+          waypoints={rittData.waypoints}
+          date={selectedDate || null}
+          startTime={startTime || null}
+          finishTime={finishTime || null}
+          externalResults={weatherResults}
+          onWaypointClick={(wp, i) => trackWaypointSelected(rittData.id, wp.label, i)}
+        />
+      </>
+    )}
+    {!forecastOnly && selectedDate && (
+      <div className="dag-vurdering">
+        {adjDifficulty &&
+          physDifficulty &&
+          (adjDifficulty.level !== physDifficulty.level ? (
+            <>
+              <span className="dag-vurdering__label">Dag-vurdering:</span>
+              <span
+                className={`dag-vurdering__badge dag-vurdering__badge--${physDifficulty.level}`}
+              >
+                {physDifficulty.label}
+              </span>
+              <span className="dag-vurdering__arrow">→</span>
+              <span className={`dag-vurdering__badge dag-vurdering__badge--${adjDifficulty.level}`}>
+                {adjDifficulty.label}
+              </span>
+              <span className="dag-vurdering__note">pga. vær</span>
+            </>
           ) : (
             <>
-              <RaceDayCountdown
-                selectedDate={selectedDate}
-                startWaypointWeather={weatherResults[0]?.data ?? null}
-              />
-              <WeatherStrip
-                waypoints={rittData.waypoints}
-                date={selectedDate || null}
-                startTime={startTime || null}
-                finishTime={finishTime || null}
-                externalResults={weatherResults}
-                onWaypointClick={(wp, i) =>
-                  trackWaypointSelected(rittData.id, wp.label, i)
-                }
-              />
+              <span className="dag-vurdering__label">Dag-vurdering:</span>
+              <span className={`dag-vurdering__badge dag-vurdering__badge--${adjDifficulty.level}`}>
+                {adjDifficulty.label}
+              </span>
             </>
-          )}
-          {!forecastOnly && selectedDate && (
-            <div className="dag-vurdering">
-              {adjDifficulty && physDifficulty && (
-                adjDifficulty.level !== physDifficulty.level ? (
-                  <>
-                    <span className="dag-vurdering__label">Dag-vurdering:</span>
-                    <span className={`dag-vurdering__badge dag-vurdering__badge--${physDifficulty.level}`}>
-                      {physDifficulty.label}
-                    </span>
-                    <span className="dag-vurdering__arrow">→</span>
-                    <span className={`dag-vurdering__badge dag-vurdering__badge--${adjDifficulty.level}`}>
-                      {adjDifficulty.label}
-                    </span>
-                    <span className="dag-vurdering__note">pga. vær</span>
-                  </>
-                ) : (
-                  <>
-                    <span className="dag-vurdering__label">Dag-vurdering:</span>
-                    <span className={`dag-vurdering__badge dag-vurdering__badge--${adjDifficulty.level}`}>
-                      {adjDifficulty.label}
-                    </span>
-                  </>
-                )
-              )}
-            </div>
-          )}
-        </ErrorBoundary>
-      </section>
+          ))}
+      </div>
+    )}
+  </ErrorBoundary>
+</section>;
 
-      {/* ── Map (collapsible — already collapsed by default) ── */}
-      <section className="ritt-page__map-section">
-        <EventMap waypoints={rittData.waypoints} name={rittData.name} discipline={rittData.discipline} />
-      </section>
+{
+  /* ── Map (collapsible — already collapsed by default) ── */
+}
+<section className="ritt-page__map-section">
+  <EventMap waypoints={rittData.waypoints} name={rittData.name} discipline={rittData.discipline} />
+</section>;
 
-      {/* ── Elevation profile (collapsible) ── */}
-      {!forecastOnly && (
-        <section className="ritt-page__elevation-section">
-          <ElevationProfile waypoints={rittData.waypoints} distanceKm={rittData.distance} />
-        </section>
-      )}
+{
+  /* ── Elevation profile (collapsible) ── */
+}
+{
+  !forecastOnly && (
+    <section className="ritt-page__elevation-section">
+      <ElevationProfile waypoints={rittData.waypoints} distanceKm={rittData.distance} />
+    </section>
+  );
+}
 
-      {/* ── Gear suggestion (collapsible) ── */}
-      {!forecastOnly && selectedDate && (
-        <section className="ritt-page__gear-section">
-          <GearSuggestion
-            results={weatherResults}
-            waypoints={rittData.waypoints}
-          />
-        </section>
-      )}
+{
+  /* ── Gear suggestion (collapsible) ── */
+}
+{
+  !forecastOnly && selectedDate && (
+    <section className="ritt-page__gear-section">
+      <GearSuggestion results={weatherResults} waypoints={rittData.waypoints} />
+    </section>
+  );
+}
 
-      {/* ── Historical weather table (collapsible — already) ── */}
-      {!forecastOnly && (
-        <section className="ritt-page__history-section">
-          <HistoricalWeatherTable
-            waypoints={rittData.waypoints}
-            officialDate={rittData.officialDate}
-          />
-        </section>
-      )}
+{
+  /* ── Historical weather table (collapsible — already) ── */
+}
+{
+  !forecastOnly && (
+    <section className="ritt-page__history-section">
+      <HistoricalWeatherTable waypoints={rittData.waypoints} officialDate={rittData.officialDate} />
+    </section>
+  );
+}
 ```
 
 Note: `GearSuggestion` is moved out of the `ErrorBoundary` — it doesn't do network fetches itself (it derives from already-fetched `weatherResults`), so it doesn't need the error boundary. Also add a `gear-section` CSS class (same padding pattern as other sections).
@@ -384,7 +396,9 @@ Add after `.ritt-page__history-section` block. Use the same pattern as `.ritt-ma
   background: var(--code-bg);
   transition: background 0.12s;
 
-  &::-webkit-details-marker { display: none; }
+  &::-webkit-details-marker {
+    display: none;
+  }
 
   &::before {
     content: "▶";
@@ -429,7 +443,9 @@ details[open] .elevation-profile__summary::before {
   background: var(--code-bg);
   transition: background 0.12s;
 
-  &::-webkit-details-marker { display: none; }
+  &::-webkit-details-marker {
+    display: none;
+  }
 
   &::before {
     content: "▶";

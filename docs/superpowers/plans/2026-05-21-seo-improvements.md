@@ -12,13 +12,13 @@
 
 ## File Map
 
-| Action | File | What changes |
-|---|---|---|
-| Modify | `src/components/PageMeta.tsx` | Fix OG image URL and twitter:card type |
-| Modify | `src/pages/NotFoundPage.tsx` | Add `noindex` via PageMeta |
-| Create | `scripts/copy-spa-routes.ts` | Postbuild script: copy index.html to all route paths |
-| Modify | `package.json` | Add `postbuild` script entry |
-| Create | `src/components/PageMeta.test.tsx` | Tests for PageMeta output |
+| Action | File                               | What changes                                         |
+| ------ | ---------------------------------- | ---------------------------------------------------- |
+| Modify | `src/components/PageMeta.tsx`      | Fix OG image URL and twitter:card type               |
+| Modify | `src/pages/NotFoundPage.tsx`       | Add `noindex` via PageMeta                           |
+| Create | `scripts/copy-spa-routes.ts`       | Postbuild script: copy index.html to all route paths |
+| Modify | `package.json`                     | Add `postbuild` script entry                         |
+| Create | `src/components/PageMeta.test.tsx` | Tests for PageMeta output                            |
 
 ---
 
@@ -214,19 +214,15 @@ if (!existsSync(SRC)) {
 }
 
 // Static routes (excluding "/" which is already dist/index.html)
-const staticRoutes = [
-  "hva-er-rittvaer",
-  "lop",
-  "gpx",
-];
+const staticRoutes = ["hva-er-rittvaer", "lop", "gpx"];
 
 // All event IDs from every data source
 const allEvents: HasId[] = [
   ...(arrangements as HasId[]),
-  ...((cyclingData as { events: HasId[] }).events),
+  ...(cyclingData as { events: HasId[] }).events,
   ...((cyclingManual as { events: HasId[] }).events ?? (cyclingManual as HasId[])),
-  ...((triathlonData as { events: HasId[] }).events),
-  ...((runningData as { events: HasId[] }).events),
+  ...(triathlonData as { events: HasId[] }).events,
+  ...(runningData as { events: HasId[] }).events,
 ];
 
 const eventRoutes = allEvents.map((e) => `arrangement/${e.id}`);
@@ -354,6 +350,7 @@ git commit -m "fix(seo): final build verification fixups"
 ## Notes
 
 ### When a proper 1200×630 OG image is created
+
 Place it at `public/og-image.png`. Then update the single constant in `src/components/PageMeta.tsx`:
 
 ```ts
@@ -368,7 +365,9 @@ And restore `index.html` to:
 ```
 
 ### CloudFront configuration
+
 No changes needed if the existing catch-all error rule (`403/404 → /index.html`) is in place. Real files now take precedence. If the CloudFront distribution does **not** have this rule, unknown routes (e.g. deep links the script didn't cover) will 403 — verify the Terraform config in `infra/` if in doubt.
 
 ### Future events
+
 As new events are added to the data JSON files, the postbuild script picks them up automatically — no maintenance required.

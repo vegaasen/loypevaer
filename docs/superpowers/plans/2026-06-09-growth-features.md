@@ -12,21 +12,21 @@
 
 ## File Map
 
-| File | Change |
-|---|---|
-| `src/hooks/useInstallPrompt.ts` | Create |
-| `src/components/InstallBanner.tsx` | Create |
-| `src/App.tsx` | Modify — add `<InstallBanner />` |
-| `src/lib/alertDiff.ts` | Create |
-| `src/hooks/useWeatherAlerts.ts` | Create |
-| `src/components/AlertsOptIn.tsx` | Create |
-| `src/pages/EventPage.tsx` | Modify — add `<AlertsOptIn />`, ld+json, climate narrative |
-| `src/lib/climateNarrative.ts` | Create |
-| `src/lib/packingList.ts` | Create |
-| `src/components/PackingList.tsx` | Create |
-| `src/components/GearSuggestion.tsx` | Modify — range-aware advice + `<PackingList />` |
-| `src/index.css` | Modify — styles for InstallBanner, AlertsOptIn, PackingList |
-| `src/test/handlers.ts` | Modify — add weather-cache mock with data for narrative tests |
+| File                                | Change                                                        |
+| ----------------------------------- | ------------------------------------------------------------- |
+| `src/hooks/useInstallPrompt.ts`     | Create                                                        |
+| `src/components/InstallBanner.tsx`  | Create                                                        |
+| `src/App.tsx`                       | Modify — add `<InstallBanner />`                              |
+| `src/lib/alertDiff.ts`              | Create                                                        |
+| `src/hooks/useWeatherAlerts.ts`     | Create                                                        |
+| `src/components/AlertsOptIn.tsx`    | Create                                                        |
+| `src/pages/EventPage.tsx`           | Modify — add `<AlertsOptIn />`, ld+json, climate narrative    |
+| `src/lib/climateNarrative.ts`       | Create                                                        |
+| `src/lib/packingList.ts`            | Create                                                        |
+| `src/components/PackingList.tsx`    | Create                                                        |
+| `src/components/GearSuggestion.tsx` | Modify — range-aware advice + `<PackingList />`               |
+| `src/index.css`                     | Modify — styles for InstallBanner, AlertsOptIn, PackingList   |
+| `src/test/handlers.ts`              | Modify — add weather-cache mock with data for narrative tests |
 
 ---
 
@@ -61,7 +61,9 @@ describe("useInstallPrompt", () => {
   it("canInstall becomes true when beforeinstallprompt fires", () => {
     const { result } = renderHook(() => useInstallPrompt());
     const event = new Event("beforeinstallprompt") as BeforeInstallPromptEvent;
-    (event as unknown as Record<string, unknown>).prompt = vi.fn().mockResolvedValue({ outcome: "accepted" });
+    (event as unknown as Record<string, unknown>).prompt = vi
+      .fn()
+      .mockResolvedValue({ outcome: "accepted" });
     act(() => {
       window.dispatchEvent(event);
     });
@@ -72,7 +74,9 @@ describe("useInstallPrompt", () => {
     localStorage.setItem("pwa-install-dismissed", "1");
     const { result } = renderHook(() => useInstallPrompt());
     const event = new Event("beforeinstallprompt") as BeforeInstallPromptEvent;
-    (event as unknown as Record<string, unknown>).prompt = vi.fn().mockResolvedValue({ outcome: "accepted" });
+    (event as unknown as Record<string, unknown>).prompt = vi
+      .fn()
+      .mockResolvedValue({ outcome: "accepted" });
     act(() => {
       window.dispatchEvent(event);
     });
@@ -96,7 +100,9 @@ describe("useInstallPrompt", () => {
   it("dismiss sets localStorage and clears canInstall", () => {
     const { result } = renderHook(() => useInstallPrompt());
     const event = new Event("beforeinstallprompt") as BeforeInstallPromptEvent;
-    (event as unknown as Record<string, unknown>).prompt = vi.fn().mockResolvedValue({ outcome: "dismissed" });
+    (event as unknown as Record<string, unknown>).prompt = vi
+      .fn()
+      .mockResolvedValue({ outcome: "dismissed" });
     act(() => {
       window.dispatchEvent(event);
     });
@@ -199,7 +205,10 @@ function isIos(): boolean {
 }
 
 function isInStandaloneMode(): boolean {
-  return "standalone" in navigator && (navigator as unknown as Record<string, unknown>).standalone === true;
+  return (
+    "standalone" in navigator &&
+    (navigator as unknown as Record<string, unknown>).standalone === true
+  );
 }
 
 export function InstallBanner() {
@@ -215,11 +224,7 @@ export function InstallBanner() {
         <span className="install-banner__text">
           Trykk Del ⬆ → <strong>Legg til på hjemskjermen</strong> for raskere tilgang
         </span>
-        <button
-          className="install-banner__dismiss"
-          aria-label="Lukk"
-          onClick={dismiss}
-        >
+        <button className="install-banner__dismiss" aria-label="Lukk" onClick={dismiss}>
           ✕
         </button>
       </div>
@@ -454,30 +459,25 @@ type DiffResult = {
   summary: string;
 };
 
-const TEMP_THRESHOLD = 4;       // °C
-const PRECIP_THRESHOLD = 25;    // percentage points
-const WIND_THRESHOLD = 5;       // m/s
+const TEMP_THRESHOLD = 4; // °C
+const PRECIP_THRESHOLD = 25; // percentage points
+const WIND_THRESHOLD = 5; // m/s
 
-export function hasSignificantChange(
-  prev: WeatherSnapshot,
-  next: WeatherSnapshot
-): DiffResult {
+export function hasSignificantChange(prev: WeatherSnapshot, next: WeatherSnapshot): DiffResult {
   const parts: string[] = [];
 
   const tempDiff = Math.abs(next.tempMax - prev.tempMax);
   if (tempDiff > TEMP_THRESHOLD) {
     const dir = next.tempMax < prev.tempMax ? "falt" : "steget";
     parts.push(
-      `Temperaturen har ${dir} ${Math.round(tempDiff)}°C — nå ${Math.round(next.tempMax)}°C`
+      `Temperaturen har ${dir} ${Math.round(tempDiff)}°C — nå ${Math.round(next.tempMax)}°C`,
     );
   }
 
   const precipDiff = Math.abs(next.precipProbability - prev.precipProbability);
   if (precipDiff > PRECIP_THRESHOLD) {
     const dir = next.precipProbability > prev.precipProbability ? "økt" : "sunket";
-    parts.push(
-      `Nedbørssannsynlighet har ${dir} til ${Math.round(next.precipProbability)}%`
-    );
+    parts.push(`Nedbørssannsynlighet har ${dir} til ${Math.round(next.precipProbability)}%`);
   }
 
   const windDiff = Math.abs(next.windSpeed - prev.windSpeed);
@@ -564,7 +564,7 @@ export function useWeatherAlerts() {
     const snapshots = readJson<Snapshots>(SNAPSHOTS_KEY, {});
 
     const eligible = Object.entries(store).filter(
-      ([id, entry]) => optedIn[id] && entry.date && isForecastRange(entry.date)
+      ([id, entry]) => optedIn[id] && entry.date && isForecastRange(entry.date),
     );
 
     if (eligible.length === 0) return;
@@ -613,8 +613,8 @@ export function useWeatherAlerts() {
 
       localStorage.setItem(SNAPSHOTS_KEY, JSON.stringify(snapshots));
     })();
-  // Run once on mount
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // Run once on mount
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 }
 ```
@@ -643,7 +643,7 @@ type Props = {
 export function AlertsOptIn({ eventId }: Props) {
   const [enabled, setEnabled] = useState(() => readOptedIn()[eventId] ?? false);
   const [permissionState, setPermissionState] = useState<NotificationPermission>(
-    "Notification" in window ? Notification.permission : "denied"
+    "Notification" in window ? Notification.permission : "denied",
   );
 
   useEffect(() => {
@@ -689,9 +689,7 @@ export function AlertsOptIn({ eventId }: Props) {
         />
         <span>Få varsel hvis værmeldingen endrer seg</span>
       </label>
-      <p className="alerts-opt-in__note">
-        Varsel sendes neste gang du åpner appen.
-      </p>
+      <p className="alerts-opt-in__note">Varsel sendes neste gang du åpner appen.</p>
     </div>
   );
 }
@@ -753,7 +751,9 @@ Locate the section that renders the bookmark/planned indicator — it looks appr
 Inside whatever block shows actions for a planned event, add after the bookmark button:
 
 ```tsx
-{planned && <AlertsOptIn eventId={rittData.id} />}
+{
+  planned && <AlertsOptIn eventId={rittData.id} />;
+}
 ```
 
 Place this after the bookmark toggle button in the event header actions area.
@@ -878,10 +878,7 @@ describe("buildClimateNarrative", () => {
   });
 
   it("returns null when event has no waypoints", () => {
-    const result = buildClimateNarrative(
-      { ...baseEvent, waypoints: [] },
-      cacheWithData
-    );
+    const result = buildClimateNarrative({ ...baseEvent, waypoints: [] }, cacheWithData);
     expect(result).toBeNull();
   });
 });
@@ -914,10 +911,7 @@ type WeatherCacheShape = {
  *
  * Returns null if the cache has no data for the first waypoint.
  */
-export function buildClimateNarrative(
-  event: RittEntry,
-  cache: WeatherCacheShape
-): string | null {
+export function buildClimateNarrative(event: RittEntry, cache: WeatherCacheShape): string | null {
   if (event.waypoints.length === 0) return null;
 
   const first = event.waypoints[0];
@@ -951,8 +945,18 @@ export function buildClimateNarrative(
   // Build sentence 1: temperature at start waypoint
   const [monthNum] = [parseInt(mm, 10)];
   const monthNames = [
-    "januar", "februar", "mars", "april", "mai", "juni",
-    "juli", "august", "september", "oktober", "november", "desember",
+    "januar",
+    "februar",
+    "mars",
+    "april",
+    "mai",
+    "juni",
+    "juli",
+    "august",
+    "september",
+    "oktober",
+    "november",
+    "desember",
   ];
   const monthName = monthNames[monthNum - 1] ?? "";
 
@@ -1017,23 +1021,23 @@ useEffect(() => {
 Find the existing `pageDescription` definition:
 
 ```tsx
-  const pageDescription = rittData
-    ? `Skal du ${disciplineVerb(rittData.discipline)} ${rittData.name} ${rittYear ?? ""}? Sjekk timebasert værmelding og historiske klimasnitt for alle veipunkter langs løypa – temperatur, vind og nedbør for ${rittData.distanceLabel ?? `${rittData.distance} km`} og ${rittData.elevationGain} hm i ${rittData.region}.`
-    : undefined;
+const pageDescription = rittData
+  ? `Skal du ${disciplineVerb(rittData.discipline)} ${rittData.name} ${rittYear ?? ""}? Sjekk timebasert værmelding og historiske klimasnitt for alle veipunkter langs løypa – temperatur, vind og nedbør for ${rittData.distanceLabel ?? `${rittData.distance} km`} og ${rittData.elevationGain} hm i ${rittData.region}.`
+  : undefined;
 ```
 
 Replace with:
 
 ```tsx
-  const pageDescription = rittData
-    ? [
-        `Skal du ${disciplineVerb(rittData.discipline)} ${rittData.name} ${rittYear ?? ""}?`,
-        climateNarrative,
-        `Sjekk timebasert værmelding og historiske klimasnitt for alle veipunkter langs løypa – temperatur, vind og nedbør for ${rittData.distanceLabel ?? `${rittData.distance} km`}${rittData.elevationGain ? ` og ${rittData.elevationGain} hm` : ""} i ${rittData.region}.`,
-      ]
-        .filter(Boolean)
-        .join(" ")
-    : undefined;
+const pageDescription = rittData
+  ? [
+      `Skal du ${disciplineVerb(rittData.discipline)} ${rittData.name} ${rittYear ?? ""}?`,
+      climateNarrative,
+      `Sjekk timebasert værmelding og historiske klimasnitt for alle veipunkter langs løypa – temperatur, vind og nedbør for ${rittData.distanceLabel ?? `${rittData.distance} km`}${rittData.elevationGain ? ` og ${rittData.elevationGain} hm` : ""} i ${rittData.region}.`,
+    ]
+      .filter(Boolean)
+      .join(" ")
+  : undefined;
 ```
 
 - [ ] **Step 3: Add `ld+json` SportsEvent structured data**
@@ -1041,32 +1045,34 @@ Replace with:
 In `EventPage.tsx`, find the main `<Helmet>` block (it will have `<meta name="keywords" ...>` or similar). After the existing `PageMeta` call (or inside the existing `<Helmet>` block), add a `ld+json` script. Look for where the `Helmet` block ends and add:
 
 ```tsx
-{rittData && (
-  <Helmet>
-    <script type="application/ld+json">
-      {JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "SportsEvent",
-        name: `${rittData.name} ${rittYear ?? ""}`,
-        startDate: rittData.officialDate,
-        location: {
-          "@type": "Place",
-          name: rittData.waypoints[0]?.label ?? rittData.region,
-          geo: rittData.waypoints[0]
-            ? {
-                "@type": "GeoCoordinates",
-                latitude: rittData.waypoints[0].lat,
-                longitude: rittData.waypoints[0].lon,
-              }
-            : undefined,
-        },
-        sport: disciplineToSport(rittData.discipline),
-        url: pageUrl,
-        description: pageDescription,
-      })}
-    </script>
-  </Helmet>
-)}
+{
+  rittData && (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "SportsEvent",
+          name: `${rittData.name} ${rittYear ?? ""}`,
+          startDate: rittData.officialDate,
+          location: {
+            "@type": "Place",
+            name: rittData.waypoints[0]?.label ?? rittData.region,
+            geo: rittData.waypoints[0]
+              ? {
+                  "@type": "GeoCoordinates",
+                  latitude: rittData.waypoints[0].lat,
+                  longitude: rittData.waypoints[0].lon,
+                }
+              : undefined,
+          },
+          sport: disciplineToSport(rittData.discipline),
+          url: pageUrl,
+          description: pageDescription,
+        })}
+      </script>
+    </Helmet>
+  );
+}
 ```
 
 Note: `disciplineToSport` is already imported in `EventPage.tsx`.
@@ -1120,26 +1126,20 @@ describe("buildPackingList", () => {
   it("returns empty list when no data", () => {
     const result = buildPackingList(
       [{ data: undefined, isLoading: true, isError: false }],
-      "landevei"
+      "landevei",
     );
     expect(result).toHaveLength(0);
   });
 
   it("puts rain jacket in 'wear' for heavy rain at all waypoints", () => {
-    const results = [
-      makeResult({ precipitation: 3 }),
-      makeResult({ precipitation: 3 }),
-    ];
+    const results = [makeResult({ precipitation: 3 }), makeResult({ precipitation: 3 })];
     const list = buildPackingList(results, "landevei");
     const rainJacket = list.find((i) => i.item === "Regnjakke");
     expect(rainJacket?.column).toBe("wear");
   });
 
   it("puts rain jacket in 'carry' when only one waypoint has rain", () => {
-    const results = [
-      makeResult({ precipitation: 0 }),
-      makeResult({ precipitation: 3 }),
-    ];
+    const results = [makeResult({ precipitation: 0 }), makeResult({ precipitation: 3 })];
     const list = buildPackingList(results, "landevei");
     const rainJacket = list.find((i) => i.item === "Regnjakke");
     expect(rainJacket?.column).toBe("carry");
@@ -1148,7 +1148,9 @@ describe("buildPackingList", () => {
   it("puts warm gloves in 'wear' for freezing conditions", () => {
     const results = [makeResult({ tempMin: -2, tempMax: 0 })];
     const list = buildPackingList(results, "landevei");
-    const gloves = list.find((i) => i.item.toLowerCase().includes("hansker") || i.item.toLowerCase().includes("votter"));
+    const gloves = list.find(
+      (i) => i.item.toLowerCase().includes("hansker") || i.item.toLowerCase().includes("votter"),
+    );
     expect(gloves?.column).toBe("wear");
   });
 
@@ -1211,10 +1213,7 @@ function carryLabel(discipline: string): string {
   }
 }
 
-export function buildPackingList(
-  results: WaypointWeather[],
-  discipline: string
-): PackingItem[] {
+export function buildPackingList(results: WaypointWeather[], discipline: string): PackingItem[] {
   const loaded = results.filter((r) => r.data != null);
   if (loaded.length === 0) return [];
 
@@ -1226,42 +1225,82 @@ export function buildPackingList(
   const maxTemp = Math.max(...temps);
   const allWet = loaded.every((r) => resolveWeatherValues(r.data!).precipitation > PRECIP_LIGHT);
   const anyWet = loaded.some((r) => resolveWeatherValues(r.data!).precipitation > PRECIP_LIGHT);
-  const allHeavyRain = loaded.every((r) => resolveWeatherValues(r.data!).precipitation > PRECIP_HEAVY);
-  const anyHeavyRain = loaded.some((r) => resolveWeatherValues(r.data!).precipitation > PRECIP_HEAVY);
+  const allHeavyRain = loaded.every(
+    (r) => resolveWeatherValues(r.data!).precipitation > PRECIP_HEAVY,
+  );
+  const anyHeavyRain = loaded.some(
+    (r) => resolveWeatherValues(r.data!).precipitation > PRECIP_HEAVY,
+  );
   const maxWind = Math.max(...loaded.map((r) => resolveWeatherValues(r.data!).windSpeed));
 
   // Rain jacket
   if (allHeavyRain) {
     items.push({ item: "Regnjakke", reason: "Kraftig nedbør langs hele løypa", column: "wear" });
   } else if (anyHeavyRain || allWet) {
-    items.push({ item: "Regnjakke", reason: `Nedbør på deler av løypa — ${carry.toLowerCase()}`, column: "carry" });
+    items.push({
+      item: "Regnjakke",
+      reason: `Nedbør på deler av løypa — ${carry.toLowerCase()}`,
+      column: "carry",
+    });
   } else if (anyWet) {
-    items.push({ item: "Regnjakke", reason: `Lett nedbør mulig — ${carry.toLowerCase()}`, column: "carry" });
+    items.push({
+      item: "Regnjakke",
+      reason: `Lett nedbør mulig — ${carry.toLowerCase()}`,
+      column: "carry",
+    });
   } else {
     items.push({ item: "Regnjakke", reason: "Tørt langs hele løypa", column: "skip" });
   }
 
   // Windproof
   if (maxWind > WIND_STRONG || minTemp < TEMP_COLD) {
-    items.push({ item: "Vindjakke", reason: maxWind > WIND_STRONG ? "Sterk vind langs løypa" : "Kalde forhold", column: "wear" });
+    items.push({
+      item: "Vindjakke",
+      reason: maxWind > WIND_STRONG ? "Sterk vind langs løypa" : "Kalde forhold",
+      column: "wear",
+    });
   } else {
-    items.push({ item: "Vindjakke", reason: "Laber vind og akseptabel temperatur", column: "skip" });
+    items.push({
+      item: "Vindjakke",
+      reason: "Laber vind og akseptabel temperatur",
+      column: "skip",
+    });
   }
 
   // Gloves / handwear
   if (minTemp < TEMP_FREEZE) {
-    items.push({ item: "Votter", reason: `Under 0°C ved start (${Math.round(minTemp)}°C)`, column: "wear" });
+    items.push({
+      item: "Votter",
+      reason: `Under 0°C ved start (${Math.round(minTemp)}°C)`,
+      column: "wear",
+    });
   } else if (minTemp < TEMP_VERY_COLD) {
-    items.push({ item: "Langfingrede hansker", reason: `Under 5°C (${Math.round(minTemp)}°C)`, column: "wear" });
+    items.push({
+      item: "Langfingrede hansker",
+      reason: `Under 5°C (${Math.round(minTemp)}°C)`,
+      column: "wear",
+    });
   } else if (minTemp < TEMP_COLD) {
-    items.push({ item: "Langfingrede hansker", reason: `Friskt ved start (${Math.round(minTemp)}°C)`, column: "carry" });
+    items.push({
+      item: "Langfingrede hansker",
+      reason: `Friskt ved start (${Math.round(minTemp)}°C)`,
+      column: "carry",
+    });
   } else {
-    items.push({ item: "Langfingrede hansker", reason: "Temperaturen er behagelig", column: "skip" });
+    items.push({
+      item: "Langfingrede hansker",
+      reason: "Temperaturen er behagelig",
+      column: "skip",
+    });
   }
 
   // Warm base layer — only add if cold
   if (minTemp < TEMP_VERY_COLD) {
-    items.push({ item: "Ekstra varmende lag", reason: `Kaldt ved start (${Math.round(minTemp)}°C)`, column: "wear" });
+    items.push({
+      item: "Ekstra varmende lag",
+      reason: `Kaldt ved start (${Math.round(minTemp)}°C)`,
+      column: "wear",
+    });
   }
 
   // Range advisory item
@@ -1396,9 +1435,15 @@ details[open] .packing-list__summary::before {
   opacity: 0.7;
 }
 
-.packing-list__col--wear .packing-list__col-heading { color: #c0392b; }
-.packing-list__col--carry .packing-list__col-heading { color: #e67e22; }
-.packing-list__col--skip .packing-list__col-heading { color: #7f8c8d; }
+.packing-list__col--wear .packing-list__col-heading {
+  color: #c0392b;
+}
+.packing-list__col--carry .packing-list__col-heading {
+  color: #e67e22;
+}
+.packing-list__col--skip .packing-list__col-heading {
+  color: #7f8c8d;
+}
 
 .packing-list__col-list {
   list-style: none;
@@ -1448,10 +1493,7 @@ type Suggestion = {
   severity: "info" | "warn" | "danger";
 };
 
-function buildSuggestions(
-  results: WaypointWeather[],
-  waypoints: Waypoint[]
-): Suggestion[] {
+function buildSuggestions(results: WaypointWeather[], waypoints: Waypoint[]): Suggestion[] {
   const loaded = results.filter((r) => r.data != null);
   if (loaded.length === 0) return [];
 
@@ -1606,9 +1648,7 @@ export function GearSuggestion({ results, waypoints, discipline = "landevei" }: 
 
   return (
     <details className="gear-suggestion__details">
-      <summary className="gear-suggestion__summary">
-        Utstyrstips
-      </summary>
+      <summary className="gear-suggestion__summary">Utstyrstips</summary>
       <div className="gear-suggestion__body">
         <div className="gear-suggestion">
           <div className="gear-suggestion__heading">Bekledningsråd</div>
@@ -1636,7 +1676,11 @@ export function GearSuggestion({ results, waypoints, discipline = "landevei" }: 
 In `src/pages/EventPage.tsx`, find the `<GearSuggestion` usage and add the `discipline` prop:
 
 ```tsx
-<GearSuggestion results={weatherResults} waypoints={rittData.waypoints} discipline={rittData.discipline} />
+<GearSuggestion
+  results={weatherResults}
+  waypoints={rittData.waypoints}
+  discipline={rittData.discipline}
+/>;
 ```
 
 - [ ] **Step 5: Run all tests + lint + build**
@@ -1708,10 +1752,10 @@ git commit -m "fix: post-review polish from smoke test"
 
 ## Summary
 
-| Feature | Tasks | New files | Tests |
-|---|---|---|---|
-| PWA install prompt | 1–2 | `useInstallPrompt.ts`, `InstallBanner.tsx` | 5 |
-| Forecast alerts | 3–4 | `alertDiff.ts`, `useWeatherAlerts.ts`, `AlertsOptIn.tsx` | 8 |
-| SEO climate narrative | 5–6 | `climateNarrative.ts` | 5 |
-| Gear / packing list | 7–8 | `packingList.ts`, `PackingList.tsx` | 6 |
-| Verification | 9 | — | — |
+| Feature               | Tasks | New files                                                | Tests |
+| --------------------- | ----- | -------------------------------------------------------- | ----- |
+| PWA install prompt    | 1–2   | `useInstallPrompt.ts`, `InstallBanner.tsx`               | 5     |
+| Forecast alerts       | 3–4   | `alertDiff.ts`, `useWeatherAlerts.ts`, `AlertsOptIn.tsx` | 8     |
+| SEO climate narrative | 5–6   | `climateNarrative.ts`                                    | 5     |
+| Gear / packing list   | 7–8   | `packingList.ts`, `PackingList.tsx`                      | 6     |
+| Verification          | 9     | —                                                        | —     |
