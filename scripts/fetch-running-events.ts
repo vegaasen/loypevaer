@@ -176,9 +176,15 @@ function metersToLabel(meters: number): string {
 async function main() {
   console.log("Fetching running events from racedays.run…");
 
+  const apiKey = process.env.RACEDAYS_API_KEY;
+  if (!apiKey) {
+    throw new Error("RACEDAYS_API_KEY environment variable is not set");
+  }
+
   const res = await fetch(RACEDAYS_API, {
     headers: {
       "User-Agent": "loypevaer-running-sync/1.0 (github.com/vegaasen/loypevaer)",
+      "X-Api-Key": apiKey,
     },
   });
   if (!res.ok) {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T09:39:43.722Z",
+  "generatedAt": "2026-10-28T07:40:46.780Z",
   "source": "racedays.run",
   "events": [
     {
@@ -339,23 +339,6 @@
           "label": "Start/Mål – Gjesdal",
           "lat": 58.8312089,
           "lon": 6.2770851
-        }
-      ]
-    },
-    {
-      "id": "lierlopet",
-      "name": "Lierløpet",
-      "discipline": "løping",
-      "officialDate": "2026-09-20",
-      "distance": 21.1,
-      "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Buskerud",
-      "url": "https://www.racedays.run/event/lierlopet-2026-09-20",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Lier",
-          "lat": 59.8453135,
-          "lon": 10.2115525
         }
       ]
     },
@@ -1363,6 +1346,23 @@
       ]
     },
     {
+      "id": "lierlopet",
+      "name": "Lierløpet",
+      "discipline": "løping",
+      "officialDate": "2026-11-08",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Buskerud",
+      "url": "https://www.racedays.run/event/lierlopet-2026-11-08",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Lier",
+          "lat": 59.8453135,
+          "lon": 10.2115525
+        }
+      ]
+    },
+    {
       "id": "jessheim-vintermaraton-2026",
       "name": "Jessheim vintermaraton 2026",
       "discipline": "løping",
@@ -1376,23 +1376,6 @@
           "label": "Start/Mål – Ullensaker",
           "lat": 60.1541072,
           "lon": 11.1984296
-        }
-      ]
-    },
-    {
-      "id": "lierlopet-2026-11-08",
-      "name": "Lierløpet",
-      "discipline": "løping",
-      "officialDate": "2026-11-08",
-      "distance": 21.1,
-      "distanceLabel": "Halvmaraton (21,1 km)",
-      "region": "Buskerud",
-      "url": "https://www.racedays.run/event/lierlopet-2026-11-08",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Lier",
-          "lat": 59.8453135,
-          "lon": 10.2115525
         }
       ]
     },
@@ -1499,6 +1482,23 @@
       ]
     },
     {
+      "id": "nyttarslopet-i-egersund-2026",
+      "name": "Nyttårsløpet i Egersund 2026",
+      "discipline": "løping",
+      "officialDate": "2026-12-31",
+      "distance": 5.1,
+      "distanceLabel": "5.1 km",
+      "region": "Rogaland",
+      "url": "https://www.racedays.run/event/nyttaarslopet-i-egersund-2026",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Eigersund",
+          "lat": 58.403436,
+          "lon": 5.9258203
+        }
+      ]
+    },
+    {
       "id": "nyttarslopet-tonsberg-2026",
       "name": "Nyttårsløpet Tønsberg 2026",
       "discipline": "løping",
@@ -1512,6 +1512,23 @@
           "label": "Start/Mål – Tønsberg",
           "lat": 59.3549795,
           "lon": 10.2820491
+        }
+      ]
+    },
+    {
+      "id": "nyttarslopet-trondheim-2026",
+      "name": "Nyttårsløpet, Trondheim 2026",
+      "discipline": "løping",
+      "officialDate": "2026-12-31",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "region": "Trøndelag",
+      "url": "https://www.racedays.run/event/nyttaarslopet-trondheim-2026",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Trondheim",
+          "lat": 63.4304475,
+          "lon": 10.3952118
         }
       ]
     },
@@ -1550,6 +1567,74 @@
       ]
     },
     {
+      "id": "hoka-solastranden-halvmaraton-2027",
+      "name": "HOKA Solastranden halvmaraton 2027",
+      "discipline": "løping",
+      "officialDate": "2027-01-09",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Rogaland",
+      "url": "https://www.racedays.run/event/hoka-solastranden-halvmaraton-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Sola",
+          "lat": 58.8820823,
+          "lon": 5.3562542
+        }
+      ]
+    },
+    {
+      "id": "bislett-indoor-marathon-2027",
+      "name": "Bislett Indoor Marathon 2027",
+      "discipline": "løping",
+      "officialDate": "2027-02-12",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Oslo",
+      "url": "https://www.racedays.run/event/bislett-indoor-marathon-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Oslo",
+          "lat": 59.9133301,
+          "lon": 10.7389701
+        }
+      ]
+    },
+    {
+      "id": "brooks-winterrun-trondheim-2027",
+      "name": "Brooks Winterrun Trondheim 2027",
+      "discipline": "løping",
+      "officialDate": "2027-02-13",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "region": "Trøndelag",
+      "url": "https://www.racedays.run/event/brooks-winterrun-trondheim-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Trondheim",
+          "lat": 63.4304475,
+          "lon": 10.3952118
+        }
+      ]
+    },
+    {
+      "id": "robust-lopet-2027",
+      "name": "Robust-løpet 2027",
+      "discipline": "løping",
+      "officialDate": "2027-02-13",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Rogaland",
+      "url": "https://www.racedays.run/event/robust-lopet-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Time",
+          "lat": 58.7074226,
+          "lon": 5.7512222
+        }
+      ]
+    },
+    {
       "id": "holmestrand-maraton-2027",
       "name": "Holmestrand Maraton 2027",
       "discipline": "løping",
@@ -1580,6 +1665,23 @@
           "label": "Start/Mål – Drammen",
           "lat": 59.6964936,
           "lon": 10.175642
+        }
+      ]
+    },
+    {
+      "id": "perselopet-2027-1",
+      "name": "Perseløpet 2027 #1",
+      "discipline": "løping",
+      "officialDate": "2027-04-18",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Akershus",
+      "url": "https://www.racedays.run/event/perselopet-2027-1",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Eidsvoll",
+          "lat": 60.4162965,
+          "lon": 11.2555442
         }
       ]
     },
@@ -1622,8 +1724,8 @@
       "name": "Grue Halvmaraton 2027",
       "discipline": "løping",
       "officialDate": "2027-05-01",
-      "distance": 21.1,
-      "distanceLabel": "Halvmaraton (21,1 km)",
+      "distance": 31.1,
+      "distanceLabel": "31.1 km",
       "region": "Innlandet",
       "url": "https://www.racedays.run/event/grue-halvmaraton-2027",
       "waypoints": [
@@ -1703,6 +1805,23 @@
       ]
     },
     {
+      "id": "perselopet-2027-2",
+      "name": "Perseløpet 2027 #2",
+      "discipline": "løping",
+      "officialDate": "2027-05-16",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "region": "Akershus",
+      "url": "https://www.racedays.run/event/perselopet-2027-2-2027-05-16",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Eidsvoll",
+          "lat": 60.4162965,
+          "lon": 11.2555442
+        }
+      ]
+    },
+    {
       "id": "4625lopet",
       "name": "4625Løpet",
       "discipline": "løping",
@@ -1767,6 +1886,23 @@
           "label": "Start/Mål – Modum",
           "lat": 60.0105117,
           "lon": 10.0191632
+        }
+      ]
+    },
+    {
+      "id": "perselopet-2027-3",
+      "name": "Perseløpet 2027 #3",
+      "discipline": "løping",
+      "officialDate": "2027-05-23",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Akershus",
+      "url": "https://www.racedays.run/event/perselopet-2027-3-2027-05-23",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Eidsvoll",
+          "lat": 60.4162965,
+          "lon": 11.2555442
         }
       ]
     },
@@ -1839,6 +1975,23 @@
       ]
     },
     {
+      "id": "lofoten-ultra-trail-2027",
+      "name": "Lofoten Ultra-Trail 2027",
+      "discipline": "løping",
+      "officialDate": "2027-06-05",
+      "distance": 24,
+      "distanceLabel": "24 km",
+      "region": "Nordland",
+      "url": "https://www.racedays.run/event/lofoten-ultra-trail-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Moskenes",
+          "lat": 67.9023396,
+          "lon": 13.0418706
+        }
+      ]
+    },
+    {
       "id": "sommerlopet-2027",
       "name": "Sommerløpet 2027",
       "discipline": "løping",
@@ -1907,6 +2060,40 @@
       ]
     },
     {
+      "id": "perselopet-2027-4",
+      "name": "Perseløpet 2027 #4",
+      "discipline": "løping",
+      "officialDate": "2027-06-13",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Akershus",
+      "url": "https://www.racedays.run/event/perselopet-2027-4",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Eidsvoll",
+          "lat": 60.4162965,
+          "lon": 11.2555442
+        }
+      ]
+    },
+    {
+      "id": "hoka-norefjell-trail-2027",
+      "name": "HOKA Norefjell Trail 2027",
+      "discipline": "løping",
+      "officialDate": "2027-06-19",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Buskerud",
+      "url": "https://www.racedays.run/event/norefjell-trail-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Krødsherad",
+          "lat": 60.1924956,
+          "lon": 9.6715142
+        }
+      ]
+    },
+    {
       "id": "midnight-sun-marathon-2027",
       "name": "Midnight Sun Marathon 2027",
       "discipline": "løping",
@@ -1941,23 +2128,6 @@
       ]
     },
     {
-      "id": "hoka-norefjell-trail-2027",
-      "name": "HOKA Norefjell Trail 2027",
-      "discipline": "løping",
-      "officialDate": "2027-06-19",
-      "distance": 30,
-      "distanceLabel": "30 km",
-      "region": "Buskerud",
-      "url": "https://www.racedays.run/event/norefjell-trail-2027",
-      "waypoints": [
-        {
-          "label": "Start/Mål – Krødsherad",
-          "lat": 60.1924956,
-          "lon": 9.6715142
-        }
-      ]
-    },
-    {
       "id": "nordmarka-skogsmaraton-2027",
       "name": "Nordmarka Skogsmaraton 2027",
       "discipline": "løping",
@@ -1966,6 +2136,23 @@
       "distanceLabel": "Halvmaraton (21,1 km)",
       "region": "Oslo",
       "url": "https://www.racedays.run/event/nordmarka-skogsmaraton-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Oslo",
+          "lat": 59.9133301,
+          "lon": 10.7389701
+        }
+      ]
+    },
+    {
+      "id": "sommernattslopet-oslo-2027",
+      "name": "Sommernattsløpet Oslo 2027",
+      "discipline": "løping",
+      "officialDate": "2027-06-19",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "region": "Oslo",
+      "url": "https://www.racedays.run/event/sommernattslopet-oslo-2027",
       "waypoints": [
         {
           "label": "Start/Mål – Oslo",
@@ -1988,6 +2175,91 @@
           "label": "Start/Mål – Sunnfjord",
           "lat": 61.4685824,
           "lon": 6.0491718
+        }
+      ]
+    },
+    {
+      "id": "jotunheimen-trail-run-2027",
+      "name": "Jotunheimen Trail Run 2027",
+      "discipline": "løping",
+      "officialDate": "2027-07-03",
+      "distance": 21,
+      "distanceLabel": "Halvmaraton (~21.0 km)",
+      "region": "Innlandet",
+      "url": "https://www.racedays.run/event/jotunheimen-trail-run-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Vang",
+          "lat": 61.1922086,
+          "lon": 8.4695189
+        }
+      ]
+    },
+    {
+      "id": "perselopet-2027-5",
+      "name": "Perseløpet 2027 #5",
+      "discipline": "løping",
+      "officialDate": "2027-07-04",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Akershus",
+      "url": "https://www.racedays.run/event/perselopet-2027-5-2027-07-04",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Eidsvoll",
+          "lat": 60.4162965,
+          "lon": 11.2555442
+        }
+      ]
+    },
+    {
+      "id": "hestane-skyrace-2027",
+      "name": "Hestane Skyrace 2027",
+      "discipline": "løping",
+      "officialDate": "2027-07-10",
+      "distance": 32,
+      "distanceLabel": "32 km",
+      "region": "Vestland",
+      "url": "https://www.racedays.run/event/hestane-skyrace-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Sunnfjord",
+          "lat": 61.4685824,
+          "lon": 6.0491718
+        }
+      ]
+    },
+    {
+      "id": "yttersia-skyrace-senja-2027",
+      "name": "Yttersia Skyrace Senja 2027",
+      "discipline": "løping",
+      "officialDate": "2027-07-17",
+      "distance": 12,
+      "distanceLabel": "12 km",
+      "region": "Norge",
+      "url": "https://www.racedays.run/event/yttersia-skyrace-senja-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Senja",
+          "lat": 69.3039795,
+          "lon": 17.4590833
+        }
+      ]
+    },
+    {
+      "id": "perselopet-2027-6",
+      "name": "Perseløpet 2027 #6",
+      "discipline": "løping",
+      "officialDate": "2027-08-08",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Akershus",
+      "url": "https://www.racedays.run/event/perselopet-2027-6",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Eidsvoll",
+          "lat": 60.4162965,
+          "lon": 11.2555442
         }
       ]
     },
@@ -2039,6 +2311,23 @@
           "label": "Start/Mål – Nannestad",
           "lat": 60.2267034,
           "lon": 10.9409407
+        }
+      ]
+    },
+    {
+      "id": "vikerfjell-challenge-2027",
+      "name": "Vikerfjell Challenge 2027",
+      "discipline": "løping",
+      "officialDate": "2027-08-21",
+      "distance": 21,
+      "distanceLabel": "Halvmaraton (~21.0 km)",
+      "region": "Buskerud",
+      "url": "https://www.racedays.run/event/vikerfjell-challenge-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Ringerike",
+          "lat": 60.3274063,
+          "lon": 10.0217635
         }
       ]
     },
@@ -2111,6 +2400,40 @@
       ]
     },
     {
+      "id": "sognefjord-trail-run-2027",
+      "name": "Sognefjord Trail Run 2027",
+      "discipline": "løping",
+      "officialDate": "2027-08-28",
+      "distance": 27,
+      "distanceLabel": "27 km",
+      "region": "Vestland",
+      "url": "https://www.racedays.run/event/sognefjord-trail-run-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Sogndal",
+          "lat": 61.329791,
+          "lon": 6.7203648
+        }
+      ]
+    },
+    {
+      "id": "jentemila-2027",
+      "name": "Jentemila 2027",
+      "discipline": "løping",
+      "officialDate": "2027-09-04",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "region": "Oslo",
+      "url": "https://www.racedays.run/event/jentemila-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Oslo",
+          "lat": 59.9133301,
+          "lon": 10.7389701
+        }
+      ]
+    },
+    {
       "id": "drammen-halvmaraton-2027",
       "name": "Drammen halvmaraton 2027",
       "discipline": "løping",
@@ -2128,19 +2451,240 @@
       ]
     },
     {
+      "id": "trondheim-marathon-2027",
+      "name": "Trondheim Marathon 2027",
+      "discipline": "løping",
+      "officialDate": "2027-09-05",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Trøndelag",
+      "url": "https://www.racedays.run/event/trondheim-marathon-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Trondheim",
+          "lat": 63.4304475,
+          "lon": 10.3952118
+        }
+      ]
+    },
+    {
+      "id": "dnb-oslo-marathon-2027",
+      "name": "DNB Oslo Marathon 2027",
+      "discipline": "løping",
+      "officialDate": "2027-09-18",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Oslo",
+      "url": "https://www.racedays.run/event/oslo-marathon-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Oslo",
+          "lat": 59.9133301,
+          "lon": 10.7389701
+        }
+      ]
+    },
+    {
+      "id": "gjesdalmila-2027",
+      "name": "Gjesdalmilå 2027",
+      "discipline": "løping",
+      "officialDate": "2027-09-19",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "region": "Rogaland",
+      "url": "https://www.racedays.run/event/gjesdalmilaa-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Gjesdal",
+          "lat": 58.8312089,
+          "lon": 6.2770851
+        }
+      ]
+    },
+    {
+      "id": "runfest-2027",
+      "name": "Runfest 2027",
+      "discipline": "løping",
+      "officialDate": "2027-09-30",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Rogaland",
+      "url": "https://www.racedays.run/event/runfest-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Sandnes",
+          "lat": 58.9831321,
+          "lon": 6.394641
+        }
+      ]
+    },
+    {
       "id": "turufjell-trail-2027",
       "name": "Turufjell Trail 2027",
       "discipline": "løping",
       "officialDate": "2027-10-02",
       "distance": 13,
       "distanceLabel": "13 km",
-      "region": "Flå",
+      "region": "Buskerud",
       "url": "https://www.racedays.run/event/turufjell-trail-2027",
       "waypoints": [
         {
           "label": "Start/Mål – Flå",
           "lat": 60.4343238,
           "lon": 9.5403716
+        }
+      ]
+    },
+    {
+      "id": "sorfjorden-halvmaraton-2027",
+      "name": "Sørfjorden halvmaraton 2027",
+      "discipline": "løping",
+      "officialDate": "2027-10-02",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Vestland",
+      "url": "https://www.racedays.run/event/sorfjorden-halvmaraton-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Bergen",
+          "lat": 60.3943055,
+          "lon": 5.3259192
+        }
+      ]
+    },
+    {
+      "id": "perselopet-2027-7",
+      "name": "Perseløpet 2027 #7",
+      "discipline": "løping",
+      "officialDate": "2027-10-03",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Akershus",
+      "url": "https://www.racedays.run/event/perselopet-2027-7-2027-10-03",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Eidsvoll",
+          "lat": 60.4162965,
+          "lon": 11.2555442
+        }
+      ]
+    },
+    {
+      "id": "norgeslopet-2027",
+      "name": "Norgesløpet 2027",
+      "discipline": "løping",
+      "officialDate": "2027-10-03",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "region": "Akershus",
+      "url": "https://www.racedays.run/event/norgeslopet-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Ullensaker",
+          "lat": 60.1541072,
+          "lon": 11.1984296
+        }
+      ]
+    },
+    {
+      "id": "bergenslopet-host-2027",
+      "name": "Bergensløpet Høst 2027",
+      "discipline": "løping",
+      "officialDate": "2027-10-09",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "region": "Vestland",
+      "url": "https://www.racedays.run/event/bergenslopet-host-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Bergen",
+          "lat": 60.3943055,
+          "lon": 5.3259192
+        }
+      ]
+    },
+    {
+      "id": "ivar-formos-minnelop-2027",
+      "name": "Ivar Formos Minneløp 2027",
+      "discipline": "løping",
+      "officialDate": "2027-10-16",
+      "distance": 17,
+      "distanceLabel": "17 km",
+      "region": "Oslo",
+      "url": "https://www.racedays.run/event/ivar-formos-minnelop-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Oslo",
+          "lat": 59.9133301,
+          "lon": 10.7389701
+        }
+      ]
+    },
+    {
+      "id": "gjesdal-trailrun-2027",
+      "name": "Gjesdal Trailrun 2027",
+      "discipline": "løping",
+      "officialDate": "2027-10-17",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "region": "Rogaland",
+      "url": "https://www.racedays.run/event/gjesdal-trailrun-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Gjesdal",
+          "lat": 58.8312089,
+          "lon": 6.2770851
+        }
+      ]
+    },
+    {
+      "id": "oktobermila-2027",
+      "name": "Oktobermila 2027",
+      "discipline": "løping",
+      "officialDate": "2027-10-17",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "region": "Møre og Romsdal",
+      "url": "https://www.racedays.run/event/oktobermila-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Ålesund",
+          "lat": 62.4802364,
+          "lon": 6.5550739
+        }
+      ]
+    },
+    {
+      "id": "ottestad-lopsfestival-2027",
+      "name": "Ottestad løpsfestival 2027",
+      "discipline": "løping",
+      "officialDate": "2027-10-24",
+      "distance": 17,
+      "distanceLabel": "17 km",
+      "region": "Innlandet",
+      "url": "https://www.racedays.run/event/ottestad-lopsfestival-2027",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Hamar",
+          "lat": 61.0014937,
+          "lon": 11.1647964
+        }
+      ]
+    },
+    {
+      "id": "perselopet-2027-8",
+      "name": "Perseløpet 2027 #8",
+      "discipline": "løping",
+      "officialDate": "2027-10-31",
+      "distance": 21.1,
+      "distanceLabel": "Halvmaraton (21,1 km)",
+      "region": "Akershus",
+      "url": "https://www.racedays.run/event/perselopet-2027-8-2027-10-31",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Eidsvoll",
+          "lat": 60.4162965,
+          "lon": 11.2555442
         }
       ]
     },

@@ -24,6 +24,8 @@ jobs:
 
       - name: Fetch running events
         run: bun run fetch-running
+        env:
+          RACEDAYS_API_KEY: ${{ secrets.RACEDAYS_API_KEY }}
 
       - name: Commit updated events
         run: |
