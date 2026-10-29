@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T10:00:48.941Z",
+  "generatedAt": "2026-10-29T10:00:59.338Z",
   "events": [
     {
       "id": "birkebeinerrennet",
@@ -4689,7 +4689,7 @@
       "officialDate": "2027-08-08",
       "region": "Akershus",
       "avgTempMax": 19,
-      "avgFeelsLikeMax": 18.1,
+      "avgFeelsLikeMax": 18,
       "avgPrecipitation": 4.8,
       "avgWindSpeed": 13.6,
       "avgWeatherCode": 3,
@@ -7850,7 +7850,7 @@
       "discipline": "landevei",
       "officialDate": "2026-09-19",
       "region": "Agder",
-      "avgTempMax": 15.4,
+      "avgTempMax": 15.5,
       "avgFeelsLikeMax": 14,
       "avgPrecipitation": 2.8,
       "avgWindSpeed": 16.8,
@@ -8254,12 +8254,12 @@
         "weatherCode": 3
       },
       "worstYear": {
-        "year": 2024,
+        "year": 2023,
         "comfortScore": 0,
-        "avgTempMax": 6,
-        "avgPrecipitation": 26.4,
-        "avgWindSpeed": 33.4,
-        "weatherCode": 63
+        "avgTempMax": 1.1,
+        "avgPrecipitation": 14.7,
+        "avgWindSpeed": 36,
+        "weatherCode": 75
       },
       "tempTrend": 0.06,
       "dataYears": 10
@@ -8990,16 +8990,30 @@
       "discipline": "langrenn",
       "officialDate": "2026-01-31",
       "region": "Norge",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
+      "avgTempMax": 2.1,
+      "avgFeelsLikeMax": -1.9,
+      "avgPrecipitation": 10.4,
+      "avgWindSpeed": 26.6,
+      "avgWeatherCode": 73,
+      "comfortScore": 0,
+      "bestYear": {
+        "year": 2025,
+        "comfortScore": 4,
+        "avgTempMax": 1.9,
+        "avgPrecipitation": 6.9,
+        "avgWindSpeed": 21,
+        "weatherCode": 73
+      },
+      "worstYear": {
+        "year": 2024,
+        "comfortScore": 0,
+        "avgTempMax": 2.2,
+        "avgPrecipitation": 13.8,
+        "avgWindSpeed": 32.1,
+        "weatherCode": 75
+      },
       "tempTrend": null,
-      "dataYears": 0
+      "dataYears": 2
     },
     {
       "id": "hestehovkarusellen-hodelyktrennet",
@@ -9007,16 +9021,30 @@
       "discipline": "langrenn",
       "officialDate": "2026-01-20",
       "region": "Akershus",
-      "avgTempMax": null,
-      "avgFeelsLikeMax": null,
-      "avgPrecipitation": null,
-      "avgWindSpeed": null,
-      "avgWeatherCode": null,
-      "comfortScore": null,
-      "bestYear": null,
-      "worstYear": null,
-      "tempTrend": null,
-      "dataYears": 0
+      "avgTempMax": -3.7,
+      "avgFeelsLikeMax": -8,
+      "avgPrecipitation": 1.8,
+      "avgWindSpeed": 13.2,
+      "avgWeatherCode": 3,
+      "comfortScore": 33,
+      "bestYear": {
+        "year": 2025,
+        "comfortScore": 51,
+        "avgTempMax": -2.4,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 4,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2021,
+        "comfortScore": 3,
+        "avgTempMax": -0.8,
+        "avgPrecipitation": 13.9,
+        "avgWindSpeed": 14.8,
+        "weatherCode": 75
+      },
+      "tempTrend": -0.04,
+      "dataYears": 10
     },
     {
       "id": "montebellonatta",
@@ -9024,10 +9052,10 @@
       "discipline": "langrenn",
       "officialDate": "2026-01-29",
       "region": "Møre og Romsdal",
-      "avgTempMax": 6.6,
-      "avgFeelsLikeMax": 1.9,
-      "avgPrecipitation": 28,
-      "avgWindSpeed": 40.5,
+      "avgTempMax": 4.8,
+      "avgFeelsLikeMax": 0.1,
+      "avgPrecipitation": 16.3,
+      "avgWindSpeed": 33,
       "avgWeatherCode": 63,
       "comfortScore": 0,
       "bestYear": {
@@ -9046,8 +9074,8 @@
         "avgWindSpeed": 49.2,
         "weatherCode": 63
       },
-      "tempTrend": -0.73,
-      "dataYears": 4
+      "tempTrend": 0.13,
+      "dataYears": 10
     },
     {
       "id": "fakkelskituren",
