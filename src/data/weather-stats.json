@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T10:01:14.287Z",
+  "generatedAt": "2026-10-31T10:00:57.404Z",
   "events": [
     {
       "id": "birkebeinerrennet",
@@ -8837,30 +8837,16 @@
       "discipline": "langrenn",
       "officialDate": "2026-01-25",
       "region": "Innlandet",
-      "avgTempMax": 1.1,
-      "avgFeelsLikeMax": -3.7,
-      "avgPrecipitation": 1,
-      "avgWindSpeed": 16.2,
-      "avgWeatherCode": 3,
-      "comfortScore": 31,
-      "bestYear": {
-        "year": 2024,
-        "comfortScore": 39,
-        "avgTempMax": -0.8,
-        "avgPrecipitation": 0,
-        "avgWindSpeed": 12.8,
-        "weatherCode": 3
-      },
-      "worstYear": {
-        "year": 2025,
-        "comfortScore": 10,
-        "avgTempMax": 3,
-        "avgPrecipitation": 1.9,
-        "avgWindSpeed": 19.5,
-        "weatherCode": 73
-      },
+      "avgTempMax": null,
+      "avgFeelsLikeMax": null,
+      "avgPrecipitation": null,
+      "avgWindSpeed": null,
+      "avgWeatherCode": null,
+      "comfortScore": null,
+      "bestYear": null,
+      "worstYear": null,
       "tempTrend": null,
-      "dataYears": 2
+      "dataYears": 0
     },
     {
       "id": "brokke-skirace",
@@ -8868,30 +8854,16 @@
       "discipline": "langrenn",
       "officialDate": "2027-02-20",
       "region": "Norge",
-      "avgTempMax": -1,
-      "avgFeelsLikeMax": -4.3,
-      "avgPrecipitation": 4.5,
-      "avgWindSpeed": 7.8,
-      "avgWeatherCode": 73,
-      "comfortScore": 14,
-      "bestYear": {
-        "year": 2018,
-        "comfortScore": 36,
-        "avgTempMax": -4.5,
-        "avgPrecipitation": 0.1,
-        "avgWindSpeed": 4.1,
-        "weatherCode": 51
-      },
-      "worstYear": {
-        "year": 2016,
-        "comfortScore": 3,
-        "avgTempMax": -2.2,
-        "avgPrecipitation": 13.1,
-        "avgWindSpeed": 15,
-        "weatherCode": 75
-      },
-      "tempTrend": -0.32,
-      "dataYears": 10
+      "avgTempMax": null,
+      "avgFeelsLikeMax": null,
+      "avgPrecipitation": null,
+      "avgWindSpeed": null,
+      "avgWeatherCode": null,
+      "comfortScore": null,
+      "bestYear": null,
+      "worstYear": null,
+      "tempTrend": null,
+      "dataYears": 0
     },
     {
       "id": "kjolen-hematt",
@@ -8899,30 +8871,16 @@
       "discipline": "langrenn",
       "officialDate": "2026-02-21",
       "region": "Innlandet",
-      "avgTempMax": -4.3,
-      "avgFeelsLikeMax": -8.4,
-      "avgPrecipitation": 2.3,
-      "avgWindSpeed": 13.3,
-      "avgWeatherCode": 71,
-      "comfortScore": 13,
-      "bestYear": {
-        "year": 2016,
-        "comfortScore": 46,
-        "avgTempMax": -7.5,
-        "avgPrecipitation": 0,
-        "avgWindSpeed": 7.4,
-        "weatherCode": 3
-      },
-      "worstYear": {
-        "year": 2017,
-        "comfortScore": 8,
-        "avgTempMax": -3.4,
-        "avgPrecipitation": 8.2,
-        "avgWindSpeed": 10.4,
-        "weatherCode": 75
-      },
-      "tempTrend": 0.3,
-      "dataYears": 10
+      "avgTempMax": null,
+      "avgFeelsLikeMax": null,
+      "avgPrecipitation": null,
+      "avgWindSpeed": null,
+      "avgWeatherCode": null,
+      "comfortScore": null,
+      "bestYear": null,
+      "worstYear": null,
+      "tempTrend": null,
+      "dataYears": 0
     },
     {
       "id": "cuprenn-04-01-26-klassisk",
@@ -8930,30 +8888,16 @@
       "discipline": "langrenn",
       "officialDate": "2026-01-04",
       "region": "Vestland",
-      "avgTempMax": -2.7,
-      "avgFeelsLikeMax": -6.6,
-      "avgPrecipitation": 6.3,
-      "avgWindSpeed": 9.8,
-      "avgWeatherCode": 75,
-      "comfortScore": 10,
-      "bestYear": {
-        "year": 2021,
-        "comfortScore": 55,
-        "avgTempMax": -4.6,
-        "avgPrecipitation": 0,
-        "avgWindSpeed": 5.1,
-        "weatherCode": 1
-      },
-      "worstYear": {
-        "year": 2022,
-        "comfortScore": 4,
-        "avgTempMax": 0.1,
-        "avgPrecipitation": 20.6,
-        "avgWindSpeed": 13.8,
-        "weatherCode": 75
-      },
-      "tempTrend": -0.62,
-      "dataYears": 10
+      "avgTempMax": null,
+      "avgFeelsLikeMax": null,
+      "avgPrecipitation": null,
+      "avgWindSpeed": null,
+      "avgWeatherCode": null,
+      "comfortScore": null,
+      "bestYear": null,
+      "worstYear": null,
+      "tempTrend": null,
+      "dataYears": 0
     },
     {
       "id": "skeikampenrennet",
@@ -8961,30 +8905,16 @@
       "discipline": "langrenn",
       "officialDate": "2026-01-17",
       "region": "Innlandet",
-      "avgTempMax": -8.9,
-      "avgFeelsLikeMax": -13.7,
-      "avgPrecipitation": 1.9,
-      "avgWindSpeed": 14.8,
-      "avgWeatherCode": 3,
-      "comfortScore": 30,
-      "bestYear": {
-        "year": 2021,
-        "comfortScore": 46,
-        "avgTempMax": -14.5,
-        "avgPrecipitation": 0,
-        "avgWindSpeed": 7.6,
-        "weatherCode": 3
-      },
-      "worstYear": {
-        "year": 2023,
-        "comfortScore": 5,
-        "avgTempMax": -6,
-        "avgPrecipitation": 12.6,
-        "avgWindSpeed": 11.9,
-        "weatherCode": 75
-      },
-      "tempTrend": 0.99,
-      "dataYears": 10
+      "avgTempMax": null,
+      "avgFeelsLikeMax": null,
+      "avgPrecipitation": null,
+      "avgWindSpeed": null,
+      "avgWeatherCode": null,
+      "comfortScore": null,
+      "bestYear": null,
+      "worstYear": null,
+      "tempTrend": null,
+      "dataYears": 0
     },
     {
       "id": "valnesfjord-rundt",
@@ -8992,30 +8922,16 @@
       "discipline": "langrenn",
       "officialDate": "2026-03-15",
       "region": "Nordland",
-      "avgTempMax": 1.3,
-      "avgFeelsLikeMax": -2.3,
-      "avgPrecipitation": 6.6,
-      "avgWindSpeed": 14.6,
-      "avgWeatherCode": 73,
-      "comfortScore": 7,
-      "bestYear": {
-        "year": 2018,
-        "comfortScore": 50,
-        "avgTempMax": -3.1,
-        "avgPrecipitation": 0,
-        "avgWindSpeed": 8.3,
-        "weatherCode": 1
-      },
-      "worstYear": {
-        "year": 2025,
-        "comfortScore": 0,
-        "avgTempMax": -0.8,
-        "avgPrecipitation": 18.5,
-        "avgWindSpeed": 22.2,
-        "weatherCode": 75
-      },
-      "tempTrend": -0.29,
-      "dataYears": 10
+      "avgTempMax": null,
+      "avgFeelsLikeMax": null,
+      "avgPrecipitation": null,
+      "avgWindSpeed": null,
+      "avgWeatherCode": null,
+      "comfortScore": null,
+      "bestYear": null,
+      "worstYear": null,
+      "tempTrend": null,
+      "dataYears": 0
     },
     {
       "id": "cuprenn-11-01-26-fristil",
@@ -9023,30 +8939,16 @@
       "discipline": "langrenn",
       "officialDate": "2026-01-11",
       "region": "Vestland",
-      "avgTempMax": 0.7,
-      "avgFeelsLikeMax": -2.5,
-      "avgPrecipitation": 15.1,
-      "avgWindSpeed": 9.4,
-      "avgWeatherCode": 75,
-      "comfortScore": 6,
-      "bestYear": {
-        "year": 2025,
-        "comfortScore": 50,
-        "avgTempMax": -4.1,
-        "avgPrecipitation": 0,
-        "avgWindSpeed": 5,
-        "weatherCode": 3
-      },
-      "worstYear": {
-        "year": 2023,
-        "comfortScore": 2,
-        "avgTempMax": 2.4,
-        "avgPrecipitation": 40.9,
-        "avgWindSpeed": 16.4,
-        "weatherCode": 75
-      },
-      "tempTrend": -0.18,
-      "dataYears": 10
+      "avgTempMax": null,
+      "avgFeelsLikeMax": null,
+      "avgPrecipitation": null,
+      "avgWindSpeed": null,
+      "avgWeatherCode": null,
+      "comfortScore": null,
+      "bestYear": null,
+      "worstYear": null,
+      "tempTrend": null,
+      "dataYears": 0
     },
     {
       "id": "vegglifjell-rennet",
@@ -9054,30 +8956,16 @@
       "discipline": "langrenn",
       "officialDate": "2026-02-21",
       "region": "Rollag",
-      "avgTempMax": -1.5,
-      "avgFeelsLikeMax": -5.3,
-      "avgPrecipitation": 1.5,
-      "avgWindSpeed": 11.6,
-      "avgWeatherCode": 71,
-      "comfortScore": 15,
-      "bestYear": {
-        "year": 2023,
-        "comfortScore": 28,
-        "avgTempMax": -0.6,
-        "avgPrecipitation": 0,
-        "avgWindSpeed": 21.4,
-        "weatherCode": 3
-      },
-      "worstYear": {
-        "year": 2025,
-        "comfortScore": 11,
-        "avgTempMax": 0.1,
-        "avgPrecipitation": 6.5,
-        "avgWindSpeed": 7.9,
-        "weatherCode": 75
-      },
-      "tempTrend": 0.38,
-      "dataYears": 10
+      "avgTempMax": null,
+      "avgFeelsLikeMax": null,
+      "avgPrecipitation": null,
+      "avgWindSpeed": null,
+      "avgWeatherCode": null,
+      "comfortScore": null,
+      "bestYear": null,
+      "worstYear": null,
+      "tempTrend": null,
+      "dataYears": 0
     },
     {
       "id": "cuprenn-18-01-26-klassisk",
@@ -9085,30 +8973,16 @@
       "discipline": "langrenn",
       "officialDate": "2026-01-18",
       "region": "Vestland",
-      "avgTempMax": -0.5,
-      "avgFeelsLikeMax": -3.7,
-      "avgPrecipitation": 9.6,
-      "avgWindSpeed": 8.3,
-      "avgWeatherCode": 73,
-      "comfortScore": 7,
-      "bestYear": {
-        "year": 2023,
-        "comfortScore": 17,
-        "avgTempMax": -2.7,
-        "avgPrecipitation": 1.2,
-        "avgWindSpeed": 8,
-        "weatherCode": 73
-      },
-      "worstYear": {
-        "year": 2020,
-        "comfortScore": 5,
-        "avgTempMax": 2.4,
-        "avgPrecipitation": 19,
-        "avgWindSpeed": 10.7,
-        "weatherCode": 75
-      },
-      "tempTrend": 0.21,
-      "dataYears": 10
+      "avgTempMax": null,
+      "avgFeelsLikeMax": null,
+      "avgPrecipitation": null,
+      "avgWindSpeed": null,
+      "avgWeatherCode": null,
+      "comfortScore": null,
+      "bestYear": null,
+      "worstYear": null,
+      "tempTrend": null,
+      "dataYears": 0
     },
     {
       "id": "sonerenn-tromso-skistadion",
@@ -9116,30 +8990,16 @@
       "discipline": "langrenn",
       "officialDate": "2026-01-31",
       "region": "Norge",
-      "avgTempMax": -3.1,
-      "avgFeelsLikeMax": -7.7,
-      "avgPrecipitation": 4.8,
-      "avgWindSpeed": 15.3,
-      "avgWeatherCode": 73,
-      "comfortScore": 9,
-      "bestYear": {
-        "year": 2019,
-        "comfortScore": 43,
-        "avgTempMax": -6.6,
-        "avgPrecipitation": 0,
-        "avgWindSpeed": 9.8,
-        "weatherCode": 3
-      },
-      "worstYear": {
-        "year": 2024,
-        "comfortScore": 0,
-        "avgTempMax": 2.2,
-        "avgPrecipitation": 13.8,
-        "avgWindSpeed": 32.1,
-        "weatherCode": 75
-      },
-      "tempTrend": 0.42,
-      "dataYears": 10
+      "avgTempMax": null,
+      "avgFeelsLikeMax": null,
+      "avgPrecipitation": null,
+      "avgWindSpeed": null,
+      "avgWeatherCode": null,
+      "comfortScore": null,
+      "bestYear": null,
+      "worstYear": null,
+      "tempTrend": null,
+      "dataYears": 0
     },
     {
       "id": "hestehovkarusellen-hodelyktrennet",
@@ -9147,30 +9007,16 @@
       "discipline": "langrenn",
       "officialDate": "2026-01-20",
       "region": "Akershus",
-      "avgTempMax": -3.7,
-      "avgFeelsLikeMax": -8,
-      "avgPrecipitation": 1.8,
-      "avgWindSpeed": 13.2,
-      "avgWeatherCode": 3,
-      "comfortScore": 33,
-      "bestYear": {
-        "year": 2025,
-        "comfortScore": 51,
-        "avgTempMax": -2.4,
-        "avgPrecipitation": 0,
-        "avgWindSpeed": 4,
-        "weatherCode": 3
-      },
-      "worstYear": {
-        "year": 2021,
-        "comfortScore": 3,
-        "avgTempMax": -0.8,
-        "avgPrecipitation": 13.9,
-        "avgWindSpeed": 14.8,
-        "weatherCode": 75
-      },
-      "tempTrend": -0.04,
-      "dataYears": 10
+      "avgTempMax": null,
+      "avgFeelsLikeMax": null,
+      "avgPrecipitation": null,
+      "avgWindSpeed": null,
+      "avgWeatherCode": null,
+      "comfortScore": null,
+      "bestYear": null,
+      "worstYear": null,
+      "tempTrend": null,
+      "dataYears": 0
     },
     {
       "id": "montebellonatta",
