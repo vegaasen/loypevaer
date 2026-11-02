@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T10:43:37.841Z",
+  "generatedAt": "2026-11-02T13:01:54.506Z",
   "source": "eqtiming.com / Norges Cykleforbund (organizationId=13)",
   "events": [
     {
@@ -912,8 +912,8 @@
       "waypoints": [
         {
           "label": "Start/Mål – Sundvolden",
-          "lat": 60.0624765,
-          "lon": 10.311344
+          "lat": 60.0624665,
+          "lon": 10.3108062
         }
       ]
     },
@@ -1606,7 +1606,7 @@
       "distance": 90,
       "distanceLabel": "90 km",
       "sportLevel": "Trim",
-      "region": "Øvre Eiker",
+      "region": "Buskerud",
       "url": "http://eikerrittet.no/",
       "waypoints": [
         {
