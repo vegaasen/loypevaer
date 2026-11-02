@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T12:37:20.730Z",
+  "generatedAt": "2026-11-02T15:18:15.637Z",
   "source": "eqtiming.com / Norges Skiforbund (organizationId=32)",
   "events": [
     {
@@ -292,9 +292,9 @@
     },
     {
       "id": "markatrimmen",
-      "name": "Markatrimmen 2026",
+      "name": "Markatrimmen 2027",
       "discipline": "langrenn",
-      "officialDate": "2026-02-07",
+      "officialDate": "2027-02-06",
       "distance": 12,
       "distanceLabel": "12 km",
       "sportLevel": "",
@@ -406,7 +406,7 @@
       "distance": 21,
       "distanceLabel": "21 km",
       "sportLevel": "",
-      "region": "Buskerud",
+      "region": "Ringerike",
       "url": "",
       "waypoints": [
         {
@@ -436,9 +436,9 @@
     },
     {
       "id": "stomperudrennet",
-      "name": "Stomperudrennet 2026",
+      "name": "Stomperudrennet 2027",
       "discipline": "langrenn",
-      "officialDate": "2026-02-07",
+      "officialDate": "2027-02-06",
       "distance": 25,
       "distanceLabel": "25 km",
       "sportLevel": "",
@@ -622,13 +622,13 @@
       "distance": 32,
       "distanceLabel": "32 km",
       "sportLevel": "",
-      "region": "Rollag",
+      "region": "Buskerud",
       "url": "https://www.facebook.com/VegglifjellRennet/?notif_id=1673356192761370&notif_t=page_fan&ref=notif",
       "waypoints": [
         {
           "label": "Start/Mål – Vegglifjell",
-          "lat": 60.0464314,
-          "lon": 8.9842441
+          "lat": 60.0468569,
+          "lon": 8.9862576
         }
       ]
     },
@@ -712,13 +712,13 @@
       "distance": 10,
       "distanceLabel": "10 km",
       "sportLevel": "",
-      "region": "Gol",
+      "region": "Buskerud",
       "url": "",
       "waypoints": [
         {
           "label": "Start/Mål – Golsfjellet",
-          "lat": 60.8271603,
-          "lon": 8.9882065
+          "lat": 60.8569305,
+          "lon": 8.9128477
         }
       ]
     },
@@ -1131,8 +1131,8 @@
       "waypoints": [
         {
           "label": "Start/Mål – Mosetertoppen skistadion",
-          "lat": 61.252917,
-          "lon": 10.509584
+          "lat": 61.2531244,
+          "lon": 10.5103047
         }
       ]
     },
@@ -1205,6 +1205,24 @@
           "label": "Start/Mål – Setermoen-Bardufoss",
           "lat": 69.0551673,
           "lon": 18.4741254
+        }
+      ]
+    },
+    {
+      "id": "vester-gyllen",
+      "name": "Vester-Gyllen 2027",
+      "discipline": "langrenn",
+      "officialDate": "2027-01-31",
+      "distance": 20,
+      "distanceLabel": "20 km",
+      "sportLevel": "",
+      "region": "Akershus",
+      "url": "https://www.asker-skiklubb.no/arrangement/vester-gyllen/",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Solli Skistadion - Asker",
+          "lat": 59.850371,
+          "lon": 10.344502
         }
       ]
     },
