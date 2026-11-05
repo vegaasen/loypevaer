@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T11:02:07.589Z",
+  "generatedAt": "2026-11-05T11:02:42.708Z",
   "events": [
     {
       "id": "birkebeinerrennet",
@@ -4843,7 +4843,7 @@
       "discipline": "løping",
       "officialDate": "2027-08-06",
       "region": "Trøndelag",
-      "avgTempMax": 17.9,
+      "avgTempMax": 17.8,
       "avgFeelsLikeMax": 17.2,
       "avgPrecipitation": 3.5,
       "avgWindSpeed": 13.3,
@@ -8704,12 +8704,12 @@
       "discipline": "langrenn",
       "officialDate": "2027-04-10",
       "region": "Trøndelag",
-      "avgTempMax": 2.9,
-      "avgFeelsLikeMax": -0.8,
-      "avgPrecipitation": 5.6,
-      "avgWindSpeed": 15.9,
+      "avgTempMax": 3.5,
+      "avgFeelsLikeMax": -0.1,
+      "avgPrecipitation": 10.2,
+      "avgWindSpeed": 17.4,
       "avgWeatherCode": 73,
-      "comfortScore": 8,
+      "comfortScore": 2,
       "bestYear": {
         "year": 2016,
         "comfortScore": 50,
@@ -8719,15 +8719,15 @@
         "weatherCode": 2
       },
       "worstYear": {
-        "year": 2022,
+        "year": 2025,
         "comfortScore": 0,
-        "avgTempMax": 3,
-        "avgPrecipitation": 18.8,
-        "avgWindSpeed": 27.2,
-        "weatherCode": 61
+        "avgTempMax": 5,
+        "avgPrecipitation": 39.3,
+        "avgWindSpeed": 24.1,
+        "weatherCode": 73
       },
-      "tempTrend": -0.09,
-      "dataYears": 8
+      "tempTrend": 0.25,
+      "dataYears": 10
     },
     {
       "id": "grenaderlopet",
@@ -8905,30 +8905,30 @@
       "discipline": "langrenn",
       "officialDate": "2026-02-15",
       "region": "Trøndelag",
-      "avgTempMax": 1.3,
-      "avgFeelsLikeMax": -2.5,
-      "avgPrecipitation": 2,
-      "avgWindSpeed": 17.2,
-      "avgWeatherCode": 3,
-      "comfortScore": 27,
+      "avgTempMax": -0.1,
+      "avgFeelsLikeMax": -4.1,
+      "avgPrecipitation": 1.5,
+      "avgWindSpeed": 18.3,
+      "avgWeatherCode": 2,
+      "comfortScore": 30,
       "bestYear": {
-        "year": 2017,
-        "comfortScore": 48,
-        "avgTempMax": 0.8,
+        "year": 2025,
+        "comfortScore": 32,
+        "avgTempMax": -1.4,
         "avgPrecipitation": 0,
-        "avgWindSpeed": 5.8,
-        "weatherCode": 3
+        "avgWindSpeed": 22.9,
+        "weatherCode": 2
       },
       "worstYear": {
-        "year": 2022,
-        "comfortScore": 6,
-        "avgTempMax": -0.9,
-        "avgPrecipitation": 5.1,
-        "avgWindSpeed": 26.4,
-        "weatherCode": 73
+        "year": 2024,
+        "comfortScore": 12,
+        "avgTempMax": 1.2,
+        "avgPrecipitation": 3,
+        "avgWindSpeed": 13.6,
+        "weatherCode": 75
       },
-      "tempTrend": -0.08,
-      "dataYears": 10
+      "tempTrend": null,
+      "dataYears": 2
     },
     {
       "id": "musialonga-max-50-deltagere",
