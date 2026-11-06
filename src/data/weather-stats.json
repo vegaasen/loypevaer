@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T11:02:42.708Z",
+  "generatedAt": "2026-11-06T11:01:26.975Z",
   "events": [
     {
       "id": "birkebeinerrennet",
@@ -4009,7 +4009,7 @@
       "avgTempMax": 15.3,
       "avgFeelsLikeMax": 13.6,
       "avgPrecipitation": 5.9,
-      "avgWindSpeed": 21.5,
+      "avgWindSpeed": 21.4,
       "avgWeatherCode": 3,
       "comfortScore": 34,
       "bestYear": {
@@ -4843,7 +4843,7 @@
       "discipline": "løping",
       "officialDate": "2027-08-06",
       "region": "Trøndelag",
-      "avgTempMax": 17.8,
+      "avgTempMax": 17.9,
       "avgFeelsLikeMax": 17.2,
       "avgPrecipitation": 3.5,
       "avgWindSpeed": 13.3,
@@ -8905,30 +8905,16 @@
       "discipline": "langrenn",
       "officialDate": "2026-02-15",
       "region": "Trøndelag",
-      "avgTempMax": -0.1,
-      "avgFeelsLikeMax": -4.1,
-      "avgPrecipitation": 1.5,
-      "avgWindSpeed": 18.3,
-      "avgWeatherCode": 2,
-      "comfortScore": 30,
-      "bestYear": {
-        "year": 2025,
-        "comfortScore": 32,
-        "avgTempMax": -1.4,
-        "avgPrecipitation": 0,
-        "avgWindSpeed": 22.9,
-        "weatherCode": 2
-      },
-      "worstYear": {
-        "year": 2024,
-        "comfortScore": 12,
-        "avgTempMax": 1.2,
-        "avgPrecipitation": 3,
-        "avgWindSpeed": 13.6,
-        "weatherCode": 75
-      },
+      "avgTempMax": null,
+      "avgFeelsLikeMax": null,
+      "avgPrecipitation": null,
+      "avgWindSpeed": null,
+      "avgWeatherCode": null,
+      "comfortScore": null,
+      "bestYear": null,
+      "worstYear": null,
       "tempTrend": null,
-      "dataYears": 2
+      "dataYears": 0
     },
     {
       "id": "musialonga-max-50-deltagere",
@@ -8936,30 +8922,16 @@
       "discipline": "langrenn",
       "officialDate": "2026-01-31",
       "region": "Oslo",
-      "avgTempMax": -0.6,
-      "avgFeelsLikeMax": -4.5,
-      "avgPrecipitation": 2.9,
-      "avgWindSpeed": 14.6,
-      "avgWeatherCode": 3,
-      "comfortScore": 28,
-      "bestYear": {
-        "year": 2017,
-        "comfortScore": 45,
-        "avgTempMax": -0.9,
-        "avgPrecipitation": 0,
-        "avgWindSpeed": 7.9,
-        "weatherCode": 3
-      },
-      "worstYear": {
-        "year": 2018,
-        "comfortScore": 0,
-        "avgTempMax": 2.3,
-        "avgPrecipitation": 17.6,
-        "avgWindSpeed": 20.5,
-        "weatherCode": 71
-      },
-      "tempTrend": 0.02,
-      "dataYears": 10
+      "avgTempMax": null,
+      "avgFeelsLikeMax": null,
+      "avgPrecipitation": null,
+      "avgWindSpeed": null,
+      "avgWeatherCode": null,
+      "comfortScore": null,
+      "bestYear": null,
+      "worstYear": null,
+      "tempTrend": null,
+      "dataYears": 0
     },
     {
       "id": "kjoldilten",
@@ -8967,30 +8939,16 @@
       "discipline": "langrenn",
       "officialDate": "2026-01-25",
       "region": "Innlandet",
-      "avgTempMax": -2.5,
-      "avgFeelsLikeMax": -6.6,
-      "avgPrecipitation": 0.5,
-      "avgWindSpeed": 11.8,
-      "avgWeatherCode": 3,
-      "comfortScore": 39,
-      "bestYear": {
-        "year": 2016,
-        "comfortScore": 49,
-        "avgTempMax": -2.5,
-        "avgPrecipitation": 0,
-        "avgWindSpeed": 5.2,
-        "weatherCode": 3
-      },
-      "worstYear": {
-        "year": 2025,
-        "comfortScore": 10,
-        "avgTempMax": 3,
-        "avgPrecipitation": 1.9,
-        "avgWindSpeed": 19.5,
-        "weatherCode": 73
-      },
-      "tempTrend": 0.31,
-      "dataYears": 10
+      "avgTempMax": null,
+      "avgFeelsLikeMax": null,
+      "avgPrecipitation": null,
+      "avgWindSpeed": null,
+      "avgWeatherCode": null,
+      "comfortScore": null,
+      "bestYear": null,
+      "worstYear": null,
+      "tempTrend": null,
+      "dataYears": 0
     },
     {
       "id": "brokke-skirace",
