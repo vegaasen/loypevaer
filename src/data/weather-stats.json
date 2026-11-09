@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T10:08:46.718Z",
+  "generatedAt": "2026-11-09T11:11:33.549Z",
   "events": [
     {
       "id": "birkebeinerrennet",
@@ -8426,7 +8426,7 @@
       "officialDate": "2027-03-13",
       "region": "Vestland",
       "avgTempMax": 3.9,
-      "avgFeelsLikeMax": -1,
+      "avgFeelsLikeMax": -0.9,
       "avgPrecipitation": 8.8,
       "avgWindSpeed": 28.9,
       "avgWeatherCode": 73,
