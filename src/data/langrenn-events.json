@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T15:18:15.637Z",
+  "generatedAt": "2026-11-09T15:47:48.046Z",
   "source": "eqtiming.com / Norges Skiforbund (organizationId=32)",
   "events": [
     {
@@ -226,7 +226,7 @@
       "distance": 11,
       "distanceLabel": "11 km",
       "sportLevel": "",
-      "region": "Gol",
+      "region": "Buskerud",
       "url": "www.slarverennet.no",
       "waypoints": [
         {
@@ -406,7 +406,7 @@
       "distance": 21,
       "distanceLabel": "21 km",
       "sportLevel": "",
-      "region": "Ringerike",
+      "region": "Buskerud",
       "url": "",
       "waypoints": [
         {
@@ -622,13 +622,13 @@
       "distance": 32,
       "distanceLabel": "32 km",
       "sportLevel": "",
-      "region": "Buskerud",
+      "region": "Rollag",
       "url": "https://www.facebook.com/VegglifjellRennet/?notif_id=1673356192761370&notif_t=page_fan&ref=notif",
       "waypoints": [
         {
           "label": "Start/Mål – Vegglifjell",
-          "lat": 60.0468569,
-          "lon": 8.9862576
+          "lat": 60.0464314,
+          "lon": 8.9842441
         }
       ]
     },
@@ -717,8 +717,8 @@
       "waypoints": [
         {
           "label": "Start/Mål – Golsfjellet",
-          "lat": 60.8569305,
-          "lon": 8.9128477
+          "lat": 60.7808466,
+          "lon": 9.0022096
         }
       ]
     },
@@ -1162,7 +1162,7 @@
       "distance": 27,
       "distanceLabel": "27 km",
       "sportLevel": "",
-      "region": "Gol",
+      "region": "Buskerud",
       "url": "www.slarverennet.no",
       "waypoints": [
         {
@@ -1241,6 +1241,24 @@
           "label": "Start/Mål – Varingskollen",
           "lat": 60.0933308,
           "lon": 10.8360771
+        }
+      ]
+    },
+    {
+      "id": "ssk-rulleskirenn-2026-rogaland-sparebank-arena",
+      "name": "SSK Rulleskirenn 2026 (Rogaland Sparebank Arena)",
+      "discipline": "langrenn",
+      "officialDate": "2026-11-05",
+      "distance": 10,
+      "distanceLabel": "10 km",
+      "sportLevel": "KR",
+      "region": "Rogaland",
+      "url": "",
+      "waypoints": [
+        {
+          "label": "Start/Mål – Melshei",
+          "lat": 58.82626184,
+          "lon": 5.78422666
         }
       ]
     }
