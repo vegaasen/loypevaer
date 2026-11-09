@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T13:01:54.506Z",
+  "generatedAt": "2026-11-09T13:34:05.012Z",
   "source": "eqtiming.com / Norges Cykleforbund (organizationId=13)",
   "events": [
     {
@@ -71,7 +71,7 @@
       "distance": 100,
       "distanceLabel": "100 km",
       "sportLevel": "Tur",
-      "region": "Hol",
+      "region": "Buskerud",
       "url": "https://www.fat-viking.com/en",
       "waypoints": [
         {
@@ -907,13 +907,13 @@
       "distance": 158,
       "distanceLabel": "158 km",
       "sportLevel": "UCI",
-      "region": "Buskerud",
+      "region": "Hole",
       "url": " ",
       "waypoints": [
         {
           "label": "Start/Mål – Sundvolden",
-          "lat": 60.0624665,
-          "lon": 10.3108062
+          "lat": 60.0624765,
+          "lon": 10.311344
         }
       ]
     },
@@ -925,7 +925,7 @@
       "distance": 171.6,
       "distanceLabel": "171.6 km",
       "sportLevel": "UCI",
-      "region": "Buskerud",
+      "region": "Ringerike",
       "url": " ",
       "waypoints": [
         {
