@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T11:11:33.549Z",
+  "generatedAt": "2026-11-10T11:04:00.749Z",
   "events": [
     {
       "id": "birkebeinerrennet",
@@ -5772,7 +5772,7 @@
       "name": "Fat Viking 2027",
       "discipline": "terreng",
       "officialDate": "2027-01-30",
-      "region": "Hol",
+      "region": "Buskerud",
       "avgTempMax": -4.4,
       "avgFeelsLikeMax": -8.9,
       "avgPrecipitation": 1.5,
@@ -6392,7 +6392,7 @@
       "name": "Sundvolden Grand Prix 2026",
       "discipline": "landevei",
       "officialDate": "2026-05-09",
-      "region": "Buskerud",
+      "region": "Hole",
       "avgTempMax": 14.8,
       "avgFeelsLikeMax": 12.7,
       "avgPrecipitation": 3.5,
@@ -6423,7 +6423,7 @@
       "name": "Ringerike Grand Prix 2026",
       "discipline": "landevei",
       "officialDate": "2026-05-10",
-      "region": "Buskerud",
+      "region": "Ringerike",
       "avgTempMax": 13.9,
       "avgFeelsLikeMax": 11.8,
       "avgPrecipitation": 4.1,
@@ -8426,7 +8426,7 @@
       "officialDate": "2027-03-13",
       "region": "Vestland",
       "avgTempMax": 3.9,
-      "avgFeelsLikeMax": -0.9,
+      "avgFeelsLikeMax": -1,
       "avgPrecipitation": 8.8,
       "avgWindSpeed": 28.9,
       "avgWeatherCode": 73,
@@ -8440,12 +8440,12 @@
         "weatherCode": 3
       },
       "worstYear": {
-        "year": 2024,
+        "year": 2023,
         "comfortScore": 0,
-        "avgTempMax": 6,
-        "avgPrecipitation": 26.4,
-        "avgWindSpeed": 33.4,
-        "weatherCode": 63
+        "avgTempMax": 1.1,
+        "avgPrecipitation": 14.7,
+        "avgWindSpeed": 36,
+        "weatherCode": 75
       },
       "tempTrend": 0.06,
       "dataYears": 10
@@ -8641,7 +8641,7 @@
       "name": "Slarverennet 21. mars 2026",
       "discipline": "langrenn",
       "officialDate": "2026-03-21",
-      "region": "Gol",
+      "region": "Buskerud",
       "avgTempMax": 1.7,
       "avgFeelsLikeMax": -2.5,
       "avgPrecipitation": 1,
@@ -8951,7 +8951,7 @@
       "name": "Kvaløya Skimaraton 2027",
       "discipline": "langrenn",
       "officialDate": "2027-03-06",
-      "region": "Ringerike",
+      "region": "Buskerud",
       "avgTempMax": 2.6,
       "avgFeelsLikeMax": -1,
       "avgPrecipitation": 1.2,
@@ -9323,9 +9323,9 @@
       "name": "Vegglifjell-rennet 2026",
       "discipline": "langrenn",
       "officialDate": "2026-02-21",
-      "region": "Buskerud",
-      "avgTempMax": -1.6,
-      "avgFeelsLikeMax": -5.4,
+      "region": "Rollag",
+      "avgTempMax": -1.5,
+      "avgFeelsLikeMax": -5.3,
       "avgPrecipitation": 1.5,
       "avgWindSpeed": 11.6,
       "avgWeatherCode": 71,
@@ -9341,7 +9341,7 @@
       "worstYear": {
         "year": 2025,
         "comfortScore": 11,
-        "avgTempMax": 0,
+        "avgTempMax": 0.1,
         "avgPrecipitation": 6.5,
         "avgWindSpeed": 7.9,
         "weatherCode": 75
@@ -9479,29 +9479,29 @@
       "discipline": "langrenn",
       "officialDate": "2026-02-14",
       "region": "Buskerud",
-      "avgTempMax": -4.3,
-      "avgFeelsLikeMax": -8.3,
-      "avgPrecipitation": 1.8,
-      "avgWindSpeed": 10.8,
+      "avgTempMax": -4.5,
+      "avgFeelsLikeMax": -8.4,
+      "avgPrecipitation": 1.7,
+      "avgWindSpeed": 8.8,
       "avgWeatherCode": 3,
-      "comfortScore": 36,
+      "comfortScore": 39,
       "bestYear": {
         "year": 2017,
-        "comfortScore": 51,
-        "avgTempMax": 1.1,
+        "comfortScore": 59,
+        "avgTempMax": 0.1,
         "avgPrecipitation": 0,
-        "avgWindSpeed": 7.7,
+        "avgWindSpeed": 2.8,
         "weatherCode": 1
       },
       "worstYear": {
         "year": 2022,
         "comfortScore": 2,
-        "avgTempMax": -1.2,
-        "avgPrecipitation": 16.4,
-        "avgWindSpeed": 17.2,
+        "avgTempMax": -0.7,
+        "avgPrecipitation": 16,
+        "avgWindSpeed": 16.3,
         "weatherCode": 75
       },
-      "tempTrend": -0.04,
+      "tempTrend": -0.08,
       "dataYears": 10
     },
     {
@@ -10253,7 +10253,7 @@
       "name": "Slarverennet 3. april 2027",
       "discipline": "langrenn",
       "officialDate": "2027-04-03",
-      "region": "Gol",
+      "region": "Buskerud",
       "avgTempMax": 2.7,
       "avgFeelsLikeMax": -1.4,
       "avgPrecipitation": 0.8,
@@ -10401,6 +10401,37 @@
         "weatherCode": 61
       },
       "tempTrend": 0.17,
+      "dataYears": 10
+    },
+    {
+      "id": "ssk-rulleskirenn-2026-rogaland-sparebank-arena",
+      "name": "SSK Rulleskirenn 2026 (Rogaland Sparebank Arena)",
+      "discipline": "langrenn",
+      "officialDate": "2026-11-05",
+      "region": "Rogaland",
+      "avgTempMax": 8.1,
+      "avgFeelsLikeMax": 5.6,
+      "avgPrecipitation": 8.6,
+      "avgWindSpeed": 17.3,
+      "avgWeatherCode": 3,
+      "comfortScore": 12,
+      "bestYear": {
+        "year": 2024,
+        "comfortScore": 56,
+        "avgTempMax": 9.2,
+        "avgPrecipitation": 0,
+        "avgWindSpeed": 7.6,
+        "weatherCode": 3
+      },
+      "worstYear": {
+        "year": 2023,
+        "comfortScore": 2,
+        "avgTempMax": 7.3,
+        "avgPrecipitation": 9.4,
+        "avgWindSpeed": 18.9,
+        "weatherCode": 73
+      },
+      "tempTrend": 0.5,
       "dataYears": 10
     }
   ]
